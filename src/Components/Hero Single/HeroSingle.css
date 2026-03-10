@@ -1,0 +1,151 @@
+.hero_single {
+  border-radius: 50px;
+  height: 515px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 80px;
+  overflow: hidden;
+}
+.hero_single h2 {
+  font-size: 70px;
+  width: 340px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  margin-top: 20px;
+  opacity: 0;
+}
+.hero_single.animate h2 {
+  animation: animate_h2 var(--slow-transition) 0.1s forwards ease-out;
+}
+@keyframes animate_h2 {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero_single p {
+  font-size: var(--font-18);
+  color: var(--white-color);
+  margin-bottom: 30px;
+  text-transform: capitalize;
+  opacity: 0;
+}
+.hero_single.animate p {
+  animation: animate_p var(--slow-transition) 0.2s forwards ease-out;
+}
+@keyframes animate_p {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero_single > button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  color: var(--orange-color);
+  font-size: var(--font-18);
+  font-weight: var(--bold-font);
+  margin-top: 15px;
+  cursor: pointer;
+  opacity: 0;
+}
+.hero_single.animate button {
+  animation: animate_btn var(--slow-transition) 0.3s forwards ease-out;
+}
+@keyframes animate_btn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero_single > .img_box {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  right: 100px;
+  bottom: -100px;
+  opacity: 0;
+}
+.hero_single.animate > .img_box {
+  animation: animate_img var(--slow-transition) 0.4s forwards ease-out;
+}
+@keyframes animate_img {
+  from {
+    opacity: 0;
+    bottom: -200px;
+  }
+  to {
+    opacity: 1;
+    bottom: -100px;
+  }
+}
+.hero_single > .img_box img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.hero_single > button:hover {
+  color: var(--white-color);
+  background-color: var(--orange-color);
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+/* ===================== Start Media =================== */
+@media (max-width: 1150px) {
+  .hero_single > .img_box {
+    width: 500px;
+  }
+}
+@media (max-width: 1030px) {
+  .hero_single h2 {
+    font-size: 50px;
+  }
+  .hero_single > .img_box {
+    width: 450px;
+    right: 50px;
+  }
+}
+@media (max-width: 850px) {
+  .hero_single h2 {
+    font-size: max(45px , 6vw);
+    max-width: 100%;
+  }
+  .hero_single {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 400px;
+    padding: 80px 30px;
+  }
+  .hero_single > .img_box {
+    display: none;
+  }
+  .hero_single h2 {
+    margin-top: 0;
+  }
+  .hero_single > button{
+    font-size: var(--font-16);
+  }
+}

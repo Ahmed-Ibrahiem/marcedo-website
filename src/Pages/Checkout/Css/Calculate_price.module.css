@@ -1,0 +1,24 @@
+.calculate_area{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calculate_area > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.total{
+    margin-top: 15px;
+    font-size: 18px !important;
+    font-weight: 600;
+}
+
+.discount{
+    color: var(--green-color);
+}

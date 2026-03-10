@@ -1,0 +1,17 @@
+.checkbox_header{
+    width: 100%;
+    padding: 20px 0 ;
+    border-bottom: 1px solid #ccc;
+}
+.checkbox_header > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart_btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--orange-color);
+    font-size: 24px;
+}

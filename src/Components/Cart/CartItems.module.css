@@ -1,0 +1,191 @@
+.cart_items_contaner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  display: none;
+  justify-content: flex-end;
+  cursor: crosshair;
+  animation: cart_container_anime var(--slow-transition) both;
+}
+.cart_items_contaner.show_menu {
+  display: flex;
+}
+.cart_items_contaner.menu_hide {
+  animation: cart_container_hide var(--slow-transition) both;
+}
+@keyframes cart_container_anime {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes cart_container_hide {
+  0% {
+    display: flex;
+    transform: translateX(0);
+  }
+  99% {
+    transform: translateX(100%);
+  }
+  100% {
+    display: none;
+  }
+}
+.cart_items {
+  width: 400px;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  cursor: auto;
+}
+.cart_items .cart_items_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+.cart_items .cart_items_header > h1 {
+  font-size: var(--font-20);
+  font-weight: var(--bold-font);
+  > span {
+    color: var(--orange-color);
+  }
+}
+.cart_items .cart_items_header .exit_btn {
+  width: 35px;
+  height: 35px;
+  border: 2px solid var(--border-color);
+  font-size: var(--font-18);
+}
+.cart_items .cart_items_header .exit_btn:hover {
+  color: var(--orange-color);
+  border-color: var(--orange-color);
+}
+.cart_items_body {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+.items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 465px;
+  height: 465px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.item {
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 100px;
+}
+.item .image_box {
+  max-width: 80px;
+  max-height: 80px;
+  overflow: hidden;
+  > img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+.item .item_details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 180px;
+}
+.item .item_details .title {
+  font-size: var(--font-14);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--gray-color);
+}
+.item .item_details .item_price {
+  font-size: var(--font-14);
+  color: var(--orange-color);
+  font-weight: var(--bold-font);
+}
+.item .item_details .item_counter_prograss {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.item .item_details .item_counter_prograss > button {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-14);
+  border: 2px solid var(--border-color);
+}
+.item .item_details .item_counter_prograss > .plus,
+.item .item_details .item_counter_prograss > .minus {
+  background-color: var(--border-color);
+  color: var(--gray-color);
+}
+.item .item_details .item_counter_prograss > .plus.clickable,
+.item .item_details .item_counter_prograss > .minus.clickable {
+  background-color: transparent;
+  color: var(--black-color);
+}
+.delete_item {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-18);
+  color: var(--gray-color);
+  background-color: transparent;
+  border: none;
+}
+.delete_item:hover {
+  color: var(--orange-color);
+}
+.cart_items_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  > h3 {
+    font-size: var(--font-18);
+    font-weight: var(--bold-font);
+    color: var(--black-color);
+  }
+}
+.cart_items_footer > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cart_items_footer > div > button , .checkout_btn {
+  font-size: var(--font-14);
+  font-weight: var(--bold-font);
+  text-transform: uppercase;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 2px solid var(--orange-color);
+  background-color: var(--orange-color);
+  color: var(--white-color);
+}
+.cart_items_footer > div > button:hover , .checkout_btn:hover {
+  background-color: transparent;
+  color: var(--orange-color);
+}

@@ -1,0 +1,125 @@
+.address_info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+    margin-top: 10px;
+}
+
+.full_name {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 10px;
+
+    >div {
+        width: 100%;
+    }
+
+    >div input {
+        width: 100%;
+    }
+}
+
+.more_info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+
+    >div {
+        width: auto;
+
+        >input {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.address_box {
+    >div {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+}
+
+.address_box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.suggestions {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+}
+
+.suggestions.open_menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.suggestions button {
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.suggestions .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.suggestions .title p {
+    font-size: 14px;
+}
+
+.suggestion_span {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+    overflow: auto;
+    text-transform: capitalize;
+
+    >span {
+        cursor: pointer;
+        width: 100%;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    >span:hover {
+        background-color: var(--gray-light-color);
+    }
+}
+
+.save_to_next {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    >label {
+        cursor: pointer;
+        font-size: 14px;
+    }
+}

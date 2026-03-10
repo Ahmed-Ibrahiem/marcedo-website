@@ -1,0 +1,9 @@
+.hero_section {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+.swiper-slide {
+  padding: 10px;
+}

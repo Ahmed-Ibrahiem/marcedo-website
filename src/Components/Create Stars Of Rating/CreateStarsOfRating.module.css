@@ -1,0 +1,10 @@
+.stars {
+  display: flex;
+  gap: 5px;
+  > i {
+    color: var(--gray-light-color);
+  }
+}
+.stars i.active {
+  color: var(--gold-color);
+}

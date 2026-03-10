@@ -1,0 +1,6 @@
+.swiper {
+    cursor: grab;
+}
+.swiper:active {
+    cursor: grabbing;
+}

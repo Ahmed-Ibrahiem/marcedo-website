@@ -1,0 +1,72 @@
+.items_area {
+    position: sticky;
+    top: 20px;
+    left: 0;
+    width: 475px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.items_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 280px;
+    overflow: auto;
+    padding: 10px 5px;
+}
+
+.discount_code {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.discount_code input {
+    flex-grow: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--white-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: 1px solid transparent;
+}
+
+.discount_code button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.discount_code button.disabled {
+    background-color: #CCC;
+    color: var(--gray-color);
+    cursor: auto;
+}
+
+.discount_code button.active:active {
+    scale: 0.9;
+}
+
+.discount_code input:focus {
+    outline-color: var(--blue-color);
+    border-color: var(--blue-color);
+}
+
+@media (max-width: 1025px) {
+    .items_area {
+        width: 100%;
+        position: relative;
+        top: 0;
+        height: fit-content;
+    }
+}

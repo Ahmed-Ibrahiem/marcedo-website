@@ -1,0 +1,22 @@
+/* logo part style */
+ .logo_part {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+ .logo_part .box_img {
+  width: 45px;
+}
+ .logo_part .box_img img {
+  max-width: 100%;
+  object-fit: contain;
+}
+ .logo_part h2 {
+  font-family: "Playfair Display", serif;
+  font-size: var(--font-26);
+  font-style: italic;
+  color: var(--orange-color);
+  font-weight: var(--bold-font);
+}
+/* Nav menu style */

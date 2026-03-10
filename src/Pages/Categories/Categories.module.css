@@ -1,0 +1,257 @@
+.categories_area_content {
+  display: flex;
+  gap: 50px;
+  justify-content: start;
+  align-items: start;
+  margin: 50px 0;
+  padding: 0 50px;
+}
+
+.sidebar {
+  width: 300px;
+  position: relative;
+}
+
+.sidebar .sidebar_content{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+.section .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  > i{
+    transition: 0.6s;
+  }
+}
+.section h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.section_options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.4s ease-out;
+  margin: 20px 0;
+  transition: 0.6s;
+}
+
+.section_options li{
+  margin: 10px;
+  margin-left: 2px;
+}
+
+.section_options li a {
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.check_selection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.check_selection input , .color_options {
+  outline: none;
+  border: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.check_selection input::after,
+.check_selection input::before , 
+.color_options::after , .color_options::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+}
+.check_selection input::before {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+}
+
+.check_selection input::after {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  background-color: var(--orange-color);
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
+  scale: 0;
+  rotate: 360deg;
+  transition: 0.3s linear;
+  font-size: 12px;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check_selection input:checked::after {
+  scale: 1;
+  rotate: 0deg;
+}
+
+.section li a span {
+  color: var(--gray-color);
+}
+
+.color_li{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.section label{
+  cursor: pointer;
+}
+
+.color_options{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.color_options::after , .color_options::before{ 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.color_options::before{
+  border: 2px solid var(--border-color);
+}
+
+.color_options:hover::before{
+  border-color: var(--black-color);
+}
+
+.color_options::after{
+  background-color: var(--bg-color);
+  width: 80%;
+  height: 80%;
+}
+
+.color_li:hover .color_options::after , .color_options:checked::after {
+  width: 70%;
+  height: 70%;
+} 
+
+.color_options:checked + label , .color_options:checked + label + span{
+  color: rgb(192, 0, 0);
+}
+
+.close_sidebar{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border: 1px solid var(--black-color);
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.close_sidebar:hover{
+  background-color: var(--white-color);
+  border-color: var(--gray-color);
+  color: var(--black-color);
+}
+
+.not_available {
+  color: var(--gray-color);
+  text-decoration:  solid line-through var(--gray-color);
+  pointer-events: none;
+  cursor: not-allowed;
+  input::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 1px;
+    height: 100%;
+    rotate: 45deg !important;
+    scale: 1;
+    background-color: var(--border-color);
+  }
+}
+
+@media (max-width: 1350px) {
+    .sidebar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      border-right: 1px solid var(--border-color);
+      z-index: 100;
+      background-color: var(--white-color);
+      max-width: 0;
+    }
+    .sidebar_content{
+      max-height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 50px 0;
+      padding-top: 70px;
+    }
+    .sidebar_open{
+      max-width: 300px;
+    }
+    .sidebar_open .sidebar_content{
+    padding: 50px 20px;
+      padding-top: 70px;
+    }
+    .close_sidebar{
+      display: flex;
+    }
+}
+
+@media (max-width: 768px){
+  .categories_area_content{
+    padding: 20px;
+    margin: 30px 0;
+    margin-top: 0;
+  }
+}
+

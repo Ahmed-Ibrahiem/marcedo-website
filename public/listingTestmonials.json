@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "rating": 5,
+    "title": "Fast shipping and flexiable price!",
+    "content": "I Used To Have Experience Shopping On Much Platform As Amozon, Eboy, Esto, Etc. And Se Tahp Mercado Market Really Great. It'll Be My 1st Choice For Any Shopping Experience.",
+    "author_name": "Ahmed K.",
+    "verified": true,
+    "location": "Cairo, Egypt",
+    "avatar": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/user%20image/Ellipse%2020.png?raw=true"
+  },
+  {
+    "id": 2,
+    "rating": 4,
+    "title": "Good quality product",
+    "content": "The product is really good for the price. Delivery was a bit late, but overall I’m satisfied with the purchase.",
+    "author_name": "Sara M.",
+    "verified": true,
+    "location": "Alexandria, Egypt",
+    "avatar": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/user%20image/Ellipse%2020-2.png?raw=true"
+  },
+  {
+    "id": 3,
+    "rating": 5,
+    "title": "Excellent customer service",
+    "content": "I had an issue with my order but the support team solved it quickly. Very professional and polite.",
+    "author_name": "Mohamed A.",
+    "verified": true,
+    "location": "Giza, Egypt",
+    "avatar": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/user%20image/user%201.png?raw=true"
+  },
+  {
+    "id": 4,
+    "rating": 4,
+    "title": "Average experience",
+    "content": "The item quality is okay but not as expected. Might try again with a different product.",
+    "author_name": "Laila H.",
+    "verified": false,
+    "location": "Mansoura, Egypt",
+    "avatar": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/user%20image/Ellipse%2020-1.png?raw=true"
+  },
+  {
+    "id": 5,
+    "rating": 5,
+    "title": "Fast shipping and flexiable price!",
+    "content": "I Used To Have Experience Shopping On Much Platform As Amozon, Eboy, Esto, Etc. And Se Tahp Mercado Market Really Great. It'll Be My 1st Choice For Any Shopping Experience.",
+    "author_name": "Ahmed K.",
+    "verified": true,
+    "location": "Cairo, Egypt",
+    "avatar": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/user%20image/Ellipse%2020.png?raw=true"
+  },
+  {
+    "id": 6,
+    "rating": 4,
+    "title": "Good quality product",
+    "content": "The product is really good for the price. Delivery was a bit late, but overall I’m satisfied with the purchase.",
+    "author_name": "Sara M.",
+    "verified": true,
+    "location": "Alexandria, Egypt",
+    "avatar": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/user%20image/Ellipse%2020-2.png?raw=true"
+  },
+  {
+    "id": 7,
+    "rating": 5,
+    "title": "Excellent customer service",
+    "content": "I had an issue with my order but the support team solved it quickly. Very professional and polite.",
+    "author_name": "Mohamed A.",
+    "verified": true,
+    "location": "Giza, Egypt",
+    "avatar": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/user%20image/user%201.png?raw=true"
+  },
+  {
+    "id": 8,
+    "rating": 4,
+    "title": "Average experience",
+    "content": "The item quality is okay but not as expected. Might try again with a different product.",
+    "author_name": "Laila H.",
+    "verified": false,
+    "location": "Mansoura, Egypt",
+    "avatar": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/user%20image/Ellipse%2020-1.png?raw=true"
+  }
+]

@@ -1,0 +1,654 @@
+[
+  {
+    "id": 1,
+    "title": "Dresses",
+    "slug": "dresses",
+    "image": "/src/assets/Collection/dress.png",
+    "description": "Explore elegant and casual dresses for all occasions.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500 , "highest_price" : 1500},
+      "colors": [],
+      "size": [],
+      "brands" : []
+    },
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "title": "Shirt",
+    "slug": "shirt",
+    "image": "/src/assets/Collection/shirt.png",
+    "description": "Discover stylish and comfortable shirts for every occasion.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 3,
+    "title": "T-shirt",
+    "slug": "t-shirt",
+    "image": "/src/assets/Collection/t-shirt.png",
+    "description": "Find trendy and comfortable t-shirts for daily wear.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 4,
+    "title": "Blazer",
+    "slug": "blazer",
+    "image": "/src/assets/Collection/blazer.png",
+    "description": "Elegant blazers for formal and smart casual occasions.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 5,
+    "title": "Sport",
+    "slug": "sport",
+    "image": "/src/assets/Collection/sport.png",
+    "description": "Performance sportswear for your active lifestyle.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 6,
+    "title": "Sweeter",
+    "slug": "sweeter",
+    "image": "/src/assets/Collection/sweeter.png",
+    "description": "Warm and cozy sweaters for cold weather comfort.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 7,
+    "title": "Wristwatch",
+    "slug": "wristwatch",
+    "image": "/src/assets/Collection/wristwatch.png",
+    "description": "Elegant timepieces combining style and functionality.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 8,
+    "title": "Perfume",
+    "slug": "perfume",
+    "image": "/src/assets/Collection/perfume.png",
+    "description": "Exquisite fragrances for every personality and occasion.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 9,
+    "title": "Accessories",
+    "slug": "accessories_device",
+    "image": "/src/assets/Collection/accessories_device.png",
+    "description": "Essential accessories to complement your devices.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 10,
+    "title": "Electronics",
+    "slug": "electronics",
+    "image": "/src/assets/Collection/electronics.png",
+    "description": "Cutting-edge electronic gadgets and devices.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 11,
+    "title": "Handbags",
+    "slug": "handbags",
+    "image": "/src/assets/Collection/handbags.png",
+    "description": "Stylish handbags for every occasion and outfit.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 12,
+    "title": "Laptops",
+    "slug": "laptops",
+    "image": "/src/assets/Collection/laptops.png",
+    "description": "High-performance laptops for work and entertainment.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 13,
+    "title": "Apple",
+    "slug": "apple",
+    "image": "/src/assets/Collection/apple.png",
+    "description": "Premium Apple products and accessories.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 14,
+    "title": "Shoes",
+    "slug": "shoes",
+    "image": "/src/assets/Collection/shoes.png",
+    "description": "Comfortable and fashionable footwear for all occasions.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 15,
+    "title": "Jeans",
+    "slug": "jeans",
+    "image": "/src/assets/Collection/jeans.png",
+    "description": "Classic and trendy denim jeans for everyday wear.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 16,
+    "title": "Jackets",
+    "slug": "jackets",
+    "image": "/src/assets/Collection/jackets.png",
+    "description": "Stylish jackets for different seasons and occasions.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 17,
+    "title": "Hoodies",
+    "slug": "hoodies",
+    "image": "/src/assets/Collection/hoodies.png",
+    "description": "Comfortable hoodies for casual and relaxed style.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 18,
+    "title": "Shorts",
+    "slug": "shorts",
+    "image": "/src/assets/Collection/shorts.png",
+    "description": "Casual and sporty shorts for warm weather comfort.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 19,
+    "title": "Smartphones",
+    "slug": "smartphones",
+    "image": "/src/assets/Collection/smartphones.png",
+    "description": "Latest smartphones with advanced features and technology.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 20,
+    "title": "Tablets",
+    "slug": "tablets",
+    "image": "/src/assets/Collection/tablets.png",
+    "description": "Versatile tablets for work, study, and entertainment.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 21,
+    "title": "Smart Watches",
+    "slug": "smart_watches",
+    "image": "/src/assets/Collection/smartwatch.png",
+    "description": "Smart watches with health tracking and connectivity features.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 22,
+    "title": "Headphones",
+    "slug": "headphones",
+    "image": "/src/assets/Collection/headphones.png",
+    "description": "High-quality headphones for immersive audio experience.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 23,
+    "title": "Speakers",
+    "slug": "speakers",
+    "image": "/src/assets/Collection/speakers.png",
+    "description": "Powerful speakers for home entertainment and parties.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 24,
+    "title": "Gaming Consoles",
+    "slug": "gaming_consoles",
+    "image": "/src/assets/Collection/gaming_console.png",
+    "description": "Latest gaming consoles for ultimate gaming experience.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 25,
+    "title": "Gaming Accessories",
+    "slug": "gaming_accessories",
+    "image": "/src/assets/Collection/gaming_accessories.png",
+    "description": "Essential accessories for enhanced gaming performance.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 26,
+    "title": "Cameras",
+    "slug": "cameras",
+    "image": "/src/assets/Collection/cameras.png",
+    "description": "Professional and hobbyist cameras for photography enthusiasts.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 27,
+    "title": "TV & Screens",
+    "slug": "tv_screens",
+    "image": "/src/assets/Collection/tv.png",
+    "description": "High-definition TVs and screens for home entertainment.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 28,
+    "title": "Home Appliances",
+    "slug": "home_appliances",
+    "image": "/src/assets/Collection/home_appliances.png",
+    "description": "Essential home appliances for modern living.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 29,
+    "title": "Kitchen Tools",
+    "slug": "kitchen_tools",
+    "image": "/src/assets/Collection/kitchen_tools.png",
+    "description": "Practical kitchen tools and utensils for cooking enthusiasts.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 30,
+    "title": "Furniture",
+    "slug": "furniture",
+    "image": "/src/assets/Collection/furniture.png",
+    "description": "Modern and classic furniture for home and office.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 31,
+    "title": "Home Decor",
+    "slug": "home_decor",
+    "image": "/src/assets/Collection/home_decor.png",
+    "description": "Beautiful home decor items to personalize your space.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 32,
+    "title": "Lighting",
+    "slug": "lighting",
+    "image": "/src/assets/Collection/lighting.png",
+    "description": "Decorative and functional lighting solutions for every room.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 33,
+    "title": "Kids Clothing",
+    "slug": "kids_clothing",
+    "image": "/src/assets/Collection/kids_clothing.png",
+    "description": "Comfortable and cute clothing for children of all ages.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 34,
+    "title": "Baby Products",
+    "slug": "baby_products",
+    "image": "/src/assets/Collection/baby_products.png",
+    "description": "Essential products for baby care and development.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 35,
+    "title": "Toys",
+    "slug": "toys",
+    "image": "/src/assets/Collection/toys.png",
+    "description": "Educational and fun toys for children's entertainment.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 36,
+    "title": "Skincare",
+    "slug": "skincare",
+    "image": "/src/assets/Collection/skincare.png",
+    "description": "Premium skincare products for healthy and radiant skin.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 37,
+    "title": "Makeup",
+    "slug": "makeup",
+    "image": "/src/assets/Collection/makeup.png",
+    "description": "High-quality makeup products for beauty enhancement.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 38,
+    "title": "Hair Care",
+    "slug": "hair_care",
+    "image": "/src/assets/Collection/haircare.png",
+    "description": "Effective hair care products for all hair types.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 39,
+    "title": "Men Care",
+    "slug": "men_care",
+    "image": "/src/assets/Collection/men_care.png",
+    "description": "Grooming and care products specifically for men.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 40,
+    "title": "Sunglasses",
+    "slug": "sunglasses",
+    "image": "/src/assets/Collection/sunglasses.png",
+    "description": "Stylish sunglasses for sun protection and fashion.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 41,
+    "title": "Wallets",
+    "slug": "wallets",
+    "image": "/src/assets/Collection/wallets.png",
+    "description": "Sleek and functional wallets for everyday use.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 42,
+    "title": "Belts",
+    "slug": "belts",
+    "image": "/src/assets/Collection/belts.png",
+    "description": "Fashionable belts to complete your outfit.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 43,
+    "title": "Backpacks",
+    "slug": "backpacks",
+    "image": "/src/assets/Collection/backpacks.png",
+    "description": "Durable and stylish backpacks for travel and daily use.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 44,
+    "title": "Office Supplies",
+    "slug": "office_supplies",
+    "image": "/src/assets/Collection/office_supplies.png",
+    "description": "Essential supplies for office productivity.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 45,
+    "title": "Books",
+    "slug": "books",
+    "image": "/src/assets/Collection/books.png",
+    "description": "Wide selection of books across various genres.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 46,
+    "title": "Stationery",
+    "slug": "stationery",
+    "image": "/src/assets/Collection/stationery.png",
+    "description": "Quality stationery for writing and creative projects.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 47,
+    "title": "Fitness Equipment",
+    "slug": "fitness_equipment",
+    "image": "/src/assets/Collection/fitness.png",
+    "description": "Equipment for home workouts and fitness training.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 48,
+    "title": "Outdoor & Camping",
+    "slug": "outdoor_camping",
+    "image": "/src/assets/Collection/outdoor.png",
+    "description": "Gear and equipment for outdoor adventures and camping.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 49,
+    "title": "Car Accessories",
+    "slug": "car_accessories",
+    "image": "/src/assets/Collection/car_accessories.png",
+    "description": "Accessories to enhance and personalize your vehicle.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  },
+  {
+    "id": 50,
+    "title": "Gift Items",
+    "slug": "gift_items",
+    "image": "/src/assets/Collection/gifts.png",
+    "description": "Thoughtful gift items for all occasions and recipients.",
+    "filters": {
+      "availability": ["in-stock", "out-stock"],
+      "price": {"min": 0, "max": 1500},
+      "colors": [1, 3, 5]
+    },
+    "is_active": false
+  }
+]

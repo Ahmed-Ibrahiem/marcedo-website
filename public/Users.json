@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Ahmed Mohamed",
+        "username": "AhmedM",
+        "email": "ahmed.m@example.com",
+        "password": "Ahmed123!",
+        "phone": "01012345678"
+    },
+    {
+        "id": 2,
+        "name": "Sara Ali",
+        "username": "SaraA",
+        "email": "sara.ali@example.com",
+        "password": "Sara123!",
+        "phone": "01123456789"
+    },
+    {
+        "id": 3,
+        "name": "Mohamed Hassan",
+        "username": "MoH",
+        "email": "mohamed.h@example.com",
+        "password": "MoH123!",
+        "phone": "01234567890"
+    },
+    {
+        "id": 4,
+        "name": "Laila Ibrahim",
+        "username": "LailaI",
+        "email": "laila.ibrahim@example.com",
+        "password": "Laila123!",
+        "phone": "01098765432"
+    },
+    {
+        "id": 5,
+        "name": "Omar Fathy",
+        "username": "OmarF",
+        "email": "omar.fathy@example.com",
+        "password": "Omar123!",
+        "phone": "01187654321"
+    },
+    {
+        "id": 6,
+        "name": "Yara Samir",
+        "username": "YaraS",
+        "email": "yara.samir@example.com",
+        "password": "Yara123!",
+        "phone": "01234567891"
+    },
+    {
+        "id": 7,
+        "name": "Hussein Adel",
+        "username": "HusseinA",
+        "email": "hussein.adel@example.com",
+        "password": "Hussein123!",
+        "phone": "01023456789"
+    },
+    {
+        "id": 8,
+        "name": "Nourhan Magdy",
+        "username": "NourhanM",
+        "email": "nourhan.magdy@example.com",
+        "password": "Nourhan123!",
+        "phone": "01134567890"
+    },
+    {
+        "id": 9,
+        "name": "Khaled Saad",
+        "username": "KhaledS",
+        "email": "khaled.saad@example.com",
+        "password": "Khaled123!",
+        "phone": "01245678901"
+    },
+    {
+        "id": 10,
+        "name": "Mona Nabil",
+        "username": "MonaN",
+        "email": "mona.nabil@example.com",
+        "password": "Mona123!",
+        "phone": "01056789012"
+    },
+    {
+        "id": 11,
+        "name": "Ali Fawzy",
+        "username": "AliF",
+        "email": "ali.fawzy@example.com",
+        "password": "Ali123!",
+        "phone": "01167890123"
+    },
+    {
+        "id": 12,
+        "name": "Salma Youssef",
+        "username": "SalmaY",
+        "email": "salma.youssef@example.com",
+        "password": "Salma123!",
+        "phone": "01278901234"
+    },
+    {
+        "id": 13,
+        "name": "Mostafa Naguib",
+        "username": "MostafaN",
+        "email": "mostafa.naguib@example.com",
+        "password": "Mostafa123!",
+        "phone": "01089012345"
+    },
+    {
+        "id": 14,
+        "name": "Dina Tamer",
+        "username": "DinaT",
+        "email": "dina.tamer@example.com",
+        "password": "Dina123!",
+        "phone": "01190123456"
+    },
+    {
+        "id": 15,
+        "name": "Mahmoud Karim",
+        "username": "MahmoudK",
+        "email": "mahmoud.karim@example.com",
+        "password": "Mahmoud123!",
+        "phone": "01201234567"  
+    }
+]

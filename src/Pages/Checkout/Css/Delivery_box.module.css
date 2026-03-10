@@ -1,0 +1,46 @@
+.delivery_box{
+    margin-bottom: 20px;
+}
+
+.options{
+    margin: 10px 0;
+}
+
+.input_box{
+    padding: 15px 20px ;
+    border: 1.5px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.input_box label , .input_box input{
+    cursor: pointer;
+}
+
+.input_box i{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.input_box:first-of-type{
+    border-radius: 10px 10px 0 0 ;
+}
+
+.input_box:last-of-type{
+    border-radius: 0 0 10px 10px ;
+}
+
+.input_box.active{
+    border-color: var(--orange-color);
+    > i{
+        color: var(--orange-color);
+    }
+}

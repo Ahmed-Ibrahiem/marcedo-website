@@ -1,0 +1,64 @@
+.couter_template {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 160px;
+  gap: 30px;
+}
+
+.couter_template .section {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.couter_template .section::after,
+.couter_template .section::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 3px;
+  background-color: var(--orange-color);
+  transition: 0.3s ease-out;
+}
+.couter_template .section:hover::after,
+.couter_template .section:hover::before {
+  height: 100%;
+}
+.couter_template .section::before {
+  top: 0;
+  left: 0;
+}
+.couter_template .section::after {
+  bottom: 0;
+  right: 0;
+}
+.couter_template .section > h2 {
+  font-size: 42px;
+  font-weight: 500;
+}
+.couter_template .section > p {
+  font-size: 16px;
+}
+@media (max-width: 999px) {
+  .couter_template{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .couter_template .section h2{
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .couter_template{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .couter_template .section h2{
+    font-size: 30px;
+  }
+}

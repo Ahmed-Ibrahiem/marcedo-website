@@ -1,0 +1,27 @@
+.fevoraite_icon_btn,
+.cart_icon_btn {
+  position: relative;
+  border: none;
+  color: var(--gray-light-color);
+  font-size: var(--font-22);
+  > P {
+    display: none;
+  }
+  > i {
+    color: var(--gray-light-color);
+  }
+}
+.fevoraite_icon_btn.has_products,
+.cart_icon_btn.has_products {
+  color: var(--orange-color);
+  > i {
+    color: var(--orange-color);
+  }
+  > p {
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: -5px;
+    font-size: var(--font-14);
+  }
+}

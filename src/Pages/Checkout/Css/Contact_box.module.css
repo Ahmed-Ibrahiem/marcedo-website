@@ -1,0 +1,41 @@
+.contact_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact_box > input{
+    outline: none;
+}
+
+.use_email{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    > span{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: var(--border-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.email_offers{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    label{
+        font-size: 14px;
+        font-weight: 300;
+        cursor: pointer;
+    }
+}

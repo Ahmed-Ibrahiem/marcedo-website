@@ -1,0 +1,55 @@
+.country_region_box{
+    position: relative;
+    cursor: pointer;
+}
+
+.country_region_box > span {
+    font-size: 12px;
+    color: var(--gray-color);
+}
+
+.country_region_box > p{
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+.country_region_box > i{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--gray-color);
+}
+
+.options{
+    background-color: var(--white-color);
+    padding: 10px 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--gray-light-color);
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-30px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.options.open_menu{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.options > span{
+    padding: 5px;
+}
+
+.options > span:hover{
+    background-color: var(--gray-light-color);
+}

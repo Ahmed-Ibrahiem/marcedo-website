@@ -1,0 +1,9 @@
+.testimonials {
+  margin-top: 50px;
+  width: 100%;
+}
+.testimonials .container h1 {
+  font-size: var(--font-32);
+  font-weight: var(--bold-font);
+  margin-bottom: 30px;
+}

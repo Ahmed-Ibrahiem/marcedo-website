@@ -1,0 +1,274 @@
+/* Overlay */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 40;
+    transition:  0.5s ease-in-out;
+}
+
+.overlay.close_popup{
+    right: -100%;
+}
+
+/* Side Panel Container */
+.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    max-width: 30rem;
+    background-color: var(--white-color);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 50;
+    overflow-y: auto;
+    transition: 0.5s ease-in;
+}
+
+.container.close_popup{
+    right: -100%;
+    transition: 0.5s ease-out;
+}
+
+
+
+/* Close Button */
+.close_btn {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    background: transparent;
+    border: none;
+    color: var(--gray-color);
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition:all 0.2s ease;
+    z-index: 10;
+    border: 1px solid var(--border-color);
+}
+
+.close_btn:hover {
+    color: var(--black-color);
+    border-color: var(--black-color);
+}
+
+/* Content Wrapper */
+.content {
+    padding: 56px 28px 28px;
+}
+
+/* Title Section */
+.title_section {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--black-color);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Form Group */
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    font-size: 14px;
+    color: var(--black-color);
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input::placeholder {
+    color: var(--gray-color);
+}
+
+.input:hover {
+    border-color: var(--gray-color);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--black-color);
+}
+
+.input.error {
+    border-color: var(--orange-color);
+}
+
+/* Password Input Wrapper */
+.password_wrapper {
+    position: relative;
+}
+
+.toggle_passward_btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--gray-color);
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.toggle_passward_btn:hover {
+    color: var(--black-color);
+}
+
+/* Forgot Password Link */
+.forgot_password_container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 8px;
+}
+
+.forgot_password_link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-color);
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.forgot_password_link:hover {
+    color: var(--black-color);
+}
+
+/* Submit Button */
+.main_btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main_btn:hover:not(:disabled) {
+    background-color: var(--two-color);
+}
+
+.main_btn:disabled {
+    background-color: var(--gray-light-color);
+    cursor: not-allowed;
+    color: var(--gray-color);
+}
+
+/* Spinner */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--white-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Divider */
+.divider {
+    position: relative;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.divider_line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.divider_text {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 12px;
+    background-color: var(--white-color);
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+/* Create Account Button */
+.submain_btn {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    background-color: transparent;
+    color: var(--black-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submain_btn:hover {
+    border-color: var(--black-color);
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .content {
+        padding: 48px 24px 24px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .closeBtn {
+        top: 24px;
+        right: 24px;
+    }
+}

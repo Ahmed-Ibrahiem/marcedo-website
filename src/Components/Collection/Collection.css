@@ -1,0 +1,246 @@
+.collection {
+  width: 100%;
+  margin-top: 50px;
+}
+.collection .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.collection .container h1 {
+  font-size: var(--font-26);
+  font-weight: var(--bold-font);
+}
+.collection .container > a {
+  font-weight: var(--bold-font);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  > i,
+  p {
+    color: var(--orange-color);
+  }
+}
+.collection .collection_grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-template-rows: 300px 300px;
+  gap: 30px;
+}
+.collection .collection_grid .dress_shirt {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  grid-column: 1/4;
+}
+.collection .collection_grid .dress_shirt > .dress,
+.collection .collection_grid .dress_shirt > .shirt,
+.collection .collection_grid .sweeter,
+.collection .collection_grid .blazer,
+.collection .collection_grid .t_shirt,
+.collection .collection_grid .sport {
+  overflow: hidden;
+  border-radius: 15px;
+  width: 60%;
+  height: 100%;
+  background-color: var(--gray-light-color);
+  position: relative;
+  cursor: pointer;
+}
+.collection .collection_grid .sweeter,
+.collection .collection_grid .blazer,
+.collection .collection_grid .t_shirt,
+.collection .collection_grid .sport {
+  width: 100%;
+}
+.collection .collection_grid .sweeter {
+  grid-column: 4/5;
+  grid-row: 1/3;
+}
+
+.collection .collection_grid .dress_shirt > .dress .dark_style,
+.collection .collection_grid .dress_shirt > .shirt .dark_style,
+.collection .collection_grid .sweeter .dark_style,
+.collection .collection_grid .blazer .dark_style,
+.collection .collection_grid .t_shirt .dark_style,
+.collection .collection_grid .sport .dark_style {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: transparent;
+  z-index: 4;
+}
+.collection .collection_grid .dress_shirt > .dress:hover .dark_style,
+.collection .collection_grid .dress_shirt > .shirt:hover .dark_style,
+.collection .collection_grid .sweeter:hover .dark_style,
+.collection .collection_grid .blazer:hover .dark_style,
+.collection .collection_grid .t_shirt:hover .dark_style,
+.collection .collection_grid .sport:hover .dark_style {
+  background-color: hsla(0, 0%, 0%, 0.2);
+}
+.collection .collection_grid .dress_shirt > .dress .style,
+.collection .collection_grid .dress_shirt > .shirt .style,
+.collection .collection_grid .sweeter .style,
+.collection .collection_grid .blazer .style,
+.collection .collection_grid .t_shirt .style,
+.collection .collection_grid .sport .style {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 5;
+}
+.collection .collection_grid .dress_shirt > .dress .style::before,
+.collection .collection_grid .dress_shirt > .shirt .style::before,
+.collection .collection_grid .sweeter .style::before,
+.collection .collection_grid .blazer .style::before,
+.collection .collection_grid .t_shirt .style::before,
+.collection .collection_grid .sport .style::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0 0 100% 0;
+  border-right: 20px solid white;
+  border-bottom: 20px solid white;
+  z-index: 5;
+}
+.collection .collection_grid .dress_shirt > .dress .style::after,
+.collection .collection_grid .dress_shirt > .shirt .style::after,
+.collection .collection_grid .sweeter .style::after,
+.collection .collection_grid .blazer .style::after,
+.collection .collection_grid .t_shirt .style::after,
+.collection .collection_grid .sport .style::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0 0 100% 0;
+  border-right: 20px solid white;
+  border-bottom: 20px solid white;
+  z-index: 5;
+}
+.collection .collection_grid .dress_shirt > .dress > .collection_btn,
+.collection .collection_grid .dress_shirt > .shirt > .collection_btn,
+.collection .collection_grid .sweeter > .collection_btn,
+.collection .collection_grid .blazer > .collection_btn,
+.collection .collection_grid .t_shirt > .collection_btn,
+.collection .collection_grid .sport > .collection_btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--orange-color);
+  z-index: 10;
+  outline: 10px solid white;
+  background-color: var(--white-color);
+  > img {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+  }
+}
+
+.collection .collection_grid .dress_shirt > div.shirt {
+  width: 45%;
+}
+.collection .collection_grid .dress_shirt > .dress > img,
+.collection .collection_grid .dress_shirt > .shirt > img,
+.collection .collection_grid .sweeter > img,
+.collection .collection_grid .blazer > img,
+.collection .collection_grid .t_shirt > img,
+.collection .collection_grid .sport > img {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.collection .collection_grid .dress_shirt > .dress > h1,
+.collection .collection_grid .dress_shirt > .shirt > h1,
+.collection .collection_grid .sweeter > h1,
+.collection .collection_grid .blazer > h1,
+.collection .collection_grid .t_shirt > h1,
+.collection .collection_grid .sport > h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+  color: var(--white-color);
+  font-size: var(--font-26);
+  max-width: 100px;
+}
+
+@media (max-width: 1350px) {
+  .collection .collection_grid {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+  .collection .collection_grid .dress_shirt {
+    grid-column: 1/3;
+  }
+  .collection .collection_grid .dress_shirt > .dress,
+  .collection .collection_grid .dress_shirt > .shirt {
+    width: 50%;
+  }
+  .collection .collection_grid .sweeter {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+@media (max-width: 1050px) {
+  .collection .collection_grid {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, 300px);
+  }
+  .collection .collection_grid .sweeter {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+@media (max-width: 800px) {
+  .collection .collection_grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 30px;
+    grid-template-rows: 620px repeat(4, 300px);
+  }
+  .collection .collection_grid .dress_shirt {
+    flex-direction: column;
+  }
+  .collection .collection_grid .dress_shirt > .dress,
+  .collection .collection_grid .dress_shirt > .shirt {
+    width: 100% !important;
+  }
+  .collection .collection_grid .sweeter {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .collection .collection_grid .blazer {
+    grid-row: 3/4;
+  }
+  .collection .collection_grid .t_shirt {
+    grid-row: 4/5;
+  }
+  .collection .collection_grid .sport {
+    grid-row: 5/6;
+  }
+}

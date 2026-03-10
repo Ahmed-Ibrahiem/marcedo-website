@@ -1,0 +1,37 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+import FavoriteProvider from "./Context/favoriteMenuContext.jsx";
+import CartMenuProvider from "./Context/CartMenuContext.jsx";
+import FetchAllProductsProvider from "./Context/FetchAllProducts.jsx";
+import Notification_provider from "./Context/Notification_provider.jsx";
+import Shop_provider from "./Context/Shop_provider.jsx";
+import Categories_provider from "./Context/Categories_provider.jsx";
+import Auth_provider from "./Context/Auth_provider.jsx";
+import Checkout_provider from "./Context/Checkout_provider.jsx";
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <BrowserRouter>
+      <Auth_provider>
+        <CartMenuProvider>
+          <Checkout_provider>
+            <Notification_provider>
+              <FetchAllProductsProvider>
+                <FavoriteProvider>
+                  <Shop_provider>
+                    <Categories_provider>
+                      <App />
+                    </Categories_provider>
+                  </Shop_provider>
+                </FavoriteProvider>
+              </FetchAllProductsProvider>
+            </Notification_provider>
+          </Checkout_provider>
+        </CartMenuProvider>
+      </Auth_provider>
+    </BrowserRouter>
+  </StrictMode>,
+);

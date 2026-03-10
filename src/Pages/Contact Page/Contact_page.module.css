@@ -1,0 +1,128 @@
+.contact_wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 50px;
+  margin: 100px 0;
+  width: 100%;
+}
+
+.contact_wrap > div {
+  background-color: var(--gray-light-color);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 10px;
+  padding: 70px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--black-color);
+}
+
+.desc {
+  font-size: 15px;
+  color: var(--black-color);
+  line-height: 1.8;
+}
+
+.contact_wrap .form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field label {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.field input,
+.field textarea {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: var(--white-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--black-color);
+}
+
+.field textarea {
+  height: 100px;
+}
+
+.form button {
+  width: fit-content;
+  padding: 15px 35px;
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 30px 0;
+}
+
+.info li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  > i {
+    font-size: 24px;
+  }
+}
+
+.social_media {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social_media a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--gray-color);
+}
+
+.social_media a:hover {
+  background-color: var(--three-color);
+  color: var(--white-color);
+}
+
+@media (max-width: 750px) {
+  .contact_wrap {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .contact_wrap > div {
+    padding: 40px 30px;
+  }
+}

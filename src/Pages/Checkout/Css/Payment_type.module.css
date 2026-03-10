@@ -1,0 +1,71 @@
+.payment_type{
+    width: 100%;
+    margin-bottom: 30px ;
+}
+
+.title{
+    margin-bottom: 20px;
+}
+
+.title h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.title p {
+    font-size: 14px;
+    color: var(--gray-color);
+}
+
+.payment_options section{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.payment_options section:first-of-type{
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.payment_options section:last-of-type{
+    border-radius: 0 0 10px 10px ;
+}
+
+.payment_options section label{
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--gray-color);
+}
+
+.payment_options section.active{
+    border-color: var(--orange-color);
+    > label{
+        color: var(--black-color);
+    }
+}
+
+.credit_card_form{
+    padding: 0 !important;
+    overflow: hidden;
+    max-height:0 ;
+    border-top: none !important;
+    border-bottom: none !important;
+    transition: 0.4s ease-out;
+}
+
+.credit_card_form.show_credit_form{
+    max-height: 300px;
+}
+
+.payment_image{
+    width: 35px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}

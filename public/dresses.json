@@ -1,0 +1,1386 @@
+[
+  {
+    "id": 101,
+    "installment": 10,
+    "image": "/src/assets/dresses/zara1.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/zara51.png"},
+      {"id": 5, "image": "/src/assets/dresses/zara52.png"}
+    ],
+    "offers": 24,
+    "title": "Denim Skirt With A Short Sleeve Shirt And Tie Detail",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 128,
+    "price": 2500,
+    "discount": 17,
+    "old_price": 3000,
+    "brand": "Nike",
+    "category": ["dresses"],
+    "available_quantity": 42,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 102,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara2.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/zara53.png"}
+    ],
+    "offers": 0,
+    "title": "Satin Slip Dress Blue",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 95,
+    "price": 1000,
+    "discount": 52,
+    "old_price": 2100,
+    "brand": "Adidas",
+    "category": ["dresses"],
+    "available_quantity": 18,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 103,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara3.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/zara54.png"},
+      {"id": 3, "image": "/src/assets/dresses/zara55.png"}
+    ],
+    "offers": 10,
+    "title": "Floral Blue Mini Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 203,
+    "price": 3000,
+    "discount": 0,
+    "old_price": 2100,
+    "brand": "Zara",
+    "category": ["dresses"],
+    "available_quantity": 7,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"},
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 104,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara4.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/zara56.png"},
+      {"id": 5, "image": "/src/assets/dresses/zara57.png"},
+      {"id": 2, "image": "/src/assets/dresses/zara58.png"}
+    ],
+    "offers": 15,
+    "title": "Casual T-Shirt Dress",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 187,
+    "price": 2500,
+    "discount": 17,
+    "old_price": 3000,
+    "brand": "H&M",
+    "category": ["dresses"],
+    "available_quantity": 35,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"},
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"}
+    ],
+    "size": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 105,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara5.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/zara59.png"}
+    ],
+    "offers": 20,
+    "title": "Sporty Hoodie Dress",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 312,
+    "price": 4000,
+    "discount": 27,
+    "old_price": 5499,
+    "brand": "Tommy Hilfiger",
+    "category": ["dresses"],
+    "available_quantity": 22,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 106,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara6.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/zara60.png"},
+      {"id": 1, "image": "/src/assets/dresses/zara61.png"}
+    ],
+    "offers": 30,
+    "title": "Linen Blend Wrap Dress",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 156,
+    "price": 3500,
+    "discount": 22,
+    "old_price": 4499,
+    "brand": "Levi's",
+    "category": ["dresses"],
+    "available_quantity": 29,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"},
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 107,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara7.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/zara62.png"},
+      {"id": 3, "image": "/src/assets/dresses/zara63.png"}
+    ],
+    "offers": 15,
+    "title": "Ribbed Bodycon Dress",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 89,
+    "price": 6000,
+    "discount": 8,
+    "old_price": 6499,
+    "brand": "Uniqlo",
+    "category": ["dresses"],
+    "available_quantity": 12,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 108,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara8.png",
+    "gallary": [
+      {"id": 5, "image": "/src/assets/dresses/zara64.png"}
+    ],
+    "offers": 18,
+    "title": "Ribbed Bodycon Dress",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 234,
+    "price": 4550,
+    "discount": 14,
+    "old_price": 5299,
+    "brand": "Nike",
+    "category": ["dresses"],
+    "available_quantity": 19,
+    "colors": [
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 109,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara9.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/zara65.png"},
+      {"id": 4, "image": "/src/assets/dresses/zara66.png"}
+    ],
+    "offers": 21,
+    "title": "Puff Sleeve Mini Dress",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 178,
+    "price": 5500,
+    "discount": 8,
+    "old_price": 5999,
+    "brand": "Adidas",
+    "category": ["dresses"],
+    "available_quantity": 15,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 110,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara10.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/zara67.png"},
+      {"id": 3, "image": "/src/assets/dresses/zara68.png"},
+      {"id": 5, "image": "/src/assets/dresses/zara69.png"}
+    ],
+    "offers": 35,
+    "title": "Velvet Wrap Dress",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 267,
+    "price": 4299,
+    "discount": 17,
+    "old_price": 5199,
+    "brand": "Zara",
+    "category": ["dresses"],
+    "available_quantity": 27,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 111,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara11.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/zara70.png"}
+    ],
+    "offers": 12,
+    "title": "Elegant Silk Dress",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 142,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "H&M",
+    "category": ["dresses"],
+    "available_quantity": 31,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 112,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara12.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/zara71.png"},
+      {"id": 5, "image": "/src/assets/dresses/zara72.png"}
+    ],
+    "offers": 8,
+    "title": "Casual Linen Dress",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 76,
+    "price": 3200,
+    "discount": 0,
+    "old_price": 3200,
+    "brand": "Tommy Hilfiger",
+    "category": ["dresses"],
+    "available_quantity": 44,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 113,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance1.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/nb51.png"},
+      {"id": 2, "image": "/src/assets/dresses/nb52.png"}
+    ],
+    "offers": 25,
+    "title": "Party Sequins Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 198,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Levi's",
+    "category": ["dresses"],
+    "available_quantity": 8,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"},
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 114,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance2.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/nb53.png"},
+      {"id": 1, "image": "/src/assets/dresses/nb54.png"},
+      {"id": 5, "image": "/src/assets/dresses/nb55.png"}
+    ],
+    "offers": 10,
+    "title": "Casual Cotton Dress",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 112,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "Uniqlo",
+    "category": ["dresses"],
+    "available_quantity": 52,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"},
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 115,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance3.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/nb56.png"}
+    ],
+    "offers": 40,
+    "title": "Elegant Evening Gown",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 345,
+    "price": 8000,
+    "discount": 20,
+    "old_price": 9999,
+    "brand": "Nike",
+    "category": ["dresses"],
+    "available_quantity": 5,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 116,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance4.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/nb57.png"}
+    ],
+    "offers": 5,
+    "title": "Casual Denim Dress",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 67,
+    "price": 2200,
+    "discount": 0,
+    "old_price": 2200,
+    "brand": "Adidas",
+    "category": ["dresses"],
+    "available_quantity": 38,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["S", "M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 117,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance5.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/nb58.png"},
+      {"id": 1, "image": "/src/assets/dresses/nb59.png"}
+    ],
+    "offers": 18,
+    "title": "Summer Floral Dress",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 189,
+    "price": 3600,
+    "discount": 20,
+    "old_price": 4500,
+    "brand": "Zara",
+    "category": ["dresses"],
+    "available_quantity": 41,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"},
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 118,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance6.png",
+    "gallary": [
+      {"id": 5, "image": "/src/assets/dresses/nb60.png"}
+    ],
+    "offers": 22,
+    "title": "Formal Blazer Dress",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 223,
+    "price": 6500,
+    "discount": 19,
+    "old_price": 7999,
+    "brand": "H&M",
+    "category": ["dresses"],
+    "available_quantity": 14,
+    "colors": [
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 119,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance7.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/nb61.png"},
+      {"id": 3, "image": "/src/assets/dresses/nb62.png"},
+      {"id": 4, "image": "/src/assets/dresses/nb63.png"}
+    ],
+    "offers": 15,
+    "title": "Casual Knit Dress",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 98,
+    "price": 2700,
+    "discount": 16,
+    "old_price": 3200,
+    "brand": "Tommy Hilfiger",
+    "category": ["dresses"],
+    "available_quantity": 47,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"},
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 120,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance8.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/nb64.png"}
+    ],
+    "offers": 30,
+    "title": "Elegant Silk Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 176,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "Levi's",
+    "category": ["dresses"],
+    "available_quantity": 21,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"}
+    ],
+    "size": ["M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 121,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance9.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/nb65.png"},
+      {"id": 5, "image": "/src/assets/dresses/nb66.png"}
+    ],
+    "offers": 10,
+    "title": "Casual Linen Dress",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 81,
+    "price": 2800,
+    "discount": 0,
+    "old_price": 2800,
+    "brand": "Uniqlo",
+    "category": ["dresses"],
+    "available_quantity": 33,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 122,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance10.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/nb67.png"},
+      {"id": 2, "image": "/src/assets/dresses/nb68.png"}
+    ],
+    "offers": 20,
+    "title": "Party Sequins Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 201,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Nike",
+    "category": ["dresses"],
+    "available_quantity": 9,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"},
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 123,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance11.png",
+    "gallary": [
+      {"id": 5, "image": "/src/assets/dresses/nb69.png"}
+    ],
+    "offers": 12,
+    "title": "Casual Cotton Dress",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 119,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "Adidas",
+    "category": ["dresses"],
+    "available_quantity": 50,
+    "colors": [
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 124,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance12.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/nb70.png"},
+      {"id": 3, "image": "/src/assets/dresses/nb71.png"}
+    ],
+    "offers": 25,
+    "title": "Elegant Evening Gown",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 289,
+    "price": 8000,
+    "discount": 20,
+    "old_price": 9999,
+    "brand": "Zara",
+    "category": ["dresses"],
+    "available_quantity": 6,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 125,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M1.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/hm51.png"},
+      {"id": 4, "image": "/src/assets/dresses/hm52.png"},
+      {"id": 5, "image": "/src/assets/dresses/hm53.png"}
+    ],
+    "offers": 5,
+    "title": "Sports Denim Dress",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 73,
+    "price": 2200,
+    "discount": 0,
+    "old_price": 2200,
+    "brand": "H&M",
+    "category": ["dresses"],
+    "available_quantity": 39,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 126,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M2.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/hm54.png"}
+    ],
+    "offers": 18,
+    "title": "Summer Floral Dress",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 154,
+    "price": 3600,
+    "discount": 20,
+    "old_price": 4500,
+    "brand": "Tommy Hilfiger",
+    "category": ["dresses"],
+    "available_quantity": 43,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 127,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M3.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/hm55.png"},
+      {"id": 5, "image": "/src/assets/dresses/hm56.png"}
+    ],
+    "offers": 22,
+    "title": "Formal Blazer Dress",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 192,
+    "price": 6500,
+    "discount": 19,
+    "old_price": 7999,
+    "brand": "Levi's",
+    "category": ["dresses"],
+    "available_quantity": 16,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 128,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M4.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/hm57.png"}
+    ],
+    "offers": 15,
+    "title": "Sports Knit Dress",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 105,
+    "price": 2700,
+    "discount": 16,
+    "old_price": 3200,
+    "brand": "Uniqlo",
+    "category": ["dresses"],
+    "available_quantity": 48,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 129,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M5.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/hm58.png"},
+      {"id": 3, "image": "/src/assets/dresses/hm59.png"}
+    ],
+    "offers": 30,
+    "title": "Elegant Silk Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 168,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "Nike",
+    "category": ["dresses"],
+    "available_quantity": 23,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["S", "M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 130,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M6.png",
+    "gallary": [
+      {"id": 5, "image": "/src/assets/dresses/hm60.png"},
+      {"id": 1, "image": "/src/assets/dresses/hm61.png"},
+      {"id": 4, "image": "/src/assets/dresses/hm62.png"}
+    ],
+    "offers": 10,
+    "title": "Sports Linen Dress",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 88,
+    "price": 2800,
+    "discount": 0,
+    "old_price": 2800,
+    "brand": "Adidas",
+    "category": ["dresses"],
+    "available_quantity": 36,
+    "colors": [
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"},
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 131,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M7.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/hm63.png"}
+    ],
+    "offers": 20,
+    "title": "Party Sequins Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 211,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Zara",
+    "category": ["dresses"],
+    "available_quantity": 11,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 132,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M8.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/hm64.png"},
+      {"id": 4, "image": "/src/assets/dresses/hm65.png"}
+    ],
+    "offers": 12,
+    "title": "Sports Cotton Dress",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 124,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "H&M",
+    "category": ["dresses"],
+    "available_quantity": 51,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 133,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M9.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/hm66.png"}
+    ],
+    "offers": 25,
+    "title": "Elegant Evening Gown",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 276,
+    "price": 8000,
+    "discount": 20,
+    "old_price": 9999,
+    "brand": "Tommy Hilfiger",
+    "category": ["dresses"],
+    "available_quantity": 4,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"}
+    ],
+    "size": ["M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 134,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M10.png",
+    "gallary": [
+      {"id": 5, "image": "/src/assets/dresses/hm67.png"},
+      {"id": 3, "image": "/src/assets/dresses/hm68.png"}
+    ],
+    "offers": 5,
+    "title": "Sports Denim Dress",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 69,
+    "price": 2200,
+    "discount": 0,
+    "old_price": 2200,
+    "brand": "Levi's",
+    "category": ["dresses"],
+    "available_quantity": 40,
+    "colors": [
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"},
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 135,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M11.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/hm69.png"}
+    ],
+    "offers": 18,
+    "title": "Summer Floral Dress",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 147,
+    "price": 3600,
+    "discount": 20,
+    "old_price": 4500,
+    "brand": "Uniqlo",
+    "category": ["dresses"],
+    "available_quantity": 45,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 136,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange1.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/m51.png"},
+      {"id": 1, "image": "/src/assets/dresses/m52.png"}
+    ],
+    "offers": 22,
+    "title": "Formal Blazer Dress",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 205,
+    "price": 6500,
+    "discount": 19,
+    "old_price": 7999,
+    "brand": "Nike",
+    "category": ["dresses"],
+    "available_quantity": 17,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"}
+    ],
+    "size": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 137,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange2.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/m53.png"},
+      {"id": 5, "image": "/src/assets/dresses/m54.png"},
+      {"id": 4, "image": "/src/assets/dresses/m55.png"}
+    ],
+    "offers": 15,
+    "title": "Sports Knit Dress",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 92,
+    "price": 2700,
+    "discount": 16,
+    "old_price": 3200,
+    "brand": "Adidas",
+    "category": ["dresses"],
+    "available_quantity": 49,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"},
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 138,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange3.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/m56.png"}
+    ],
+    "offers": 30,
+    "title": "Elegant Silk Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 183,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "Zara",
+    "category": ["dresses"],
+    "available_quantity": 24,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 139,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange4.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/m57.png"},
+      {"id": 2, "image": "/src/assets/dresses/m58.png"}
+    ],
+    "offers": 10,
+    "title": "Sports Leather Dress",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 78,
+    "price": 2800,
+    "discount": 0,
+    "old_price": 2800,
+    "brand": "H&M",
+    "category": ["dresses"],
+    "available_quantity": 34,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"},
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"}
+    ],
+    "size": ["S", "M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 140,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange5.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/m59.png"}
+    ],
+    "offers": 20,
+    "title": "Party Sequins Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 216,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Tommy Hilfiger",
+    "category": ["dresses"],
+    "available_quantity": 13,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 141,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange6.png",
+    "gallary": [
+      {"id": 5, "image": "/src/assets/dresses/m60.png"},
+      {"id": 1, "image": "/src/assets/dresses/m61.png"}
+    ],
+    "offers": 12,
+    "title": "Casual Cotton Dress",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 134,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "Levi's",
+    "category": ["dresses"],
+    "available_quantity": 53,
+    "colors": [
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"},
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 142,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange7.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/m62.png"},
+      {"id": 4, "image": "/src/assets/dresses/m63.png"}
+    ],
+    "offers": 25,
+    "title": "Elegant Evening Gown",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 298,
+    "price": 8000,
+    "discount": 20,
+    "old_price": 9999,
+    "brand": "Uniqlo",
+    "category": ["dresses"],
+    "available_quantity": 3,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 143,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange8.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/m64.png"}
+    ],
+    "offers": 5,
+    "title": "Sports Leather Dress",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 84,
+    "price": 2200,
+    "discount": 0,
+    "old_price": 2200,
+    "brand": "Nike",
+    "category": ["dresses"],
+    "available_quantity": 37,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["M", "L", "XL", "2XL"]
+  },
+  {
+    "id": 144,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange9.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/m65.png"},
+      {"id": 5, "image": "/src/assets/dresses/m66.png"}
+    ],
+    "offers": 18,
+    "title": "Summer Floral Dress",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 162,
+    "price": 3600,
+    "discount": 20,
+    "old_price": 4500,
+    "brand": "Adidas",
+    "category": ["dresses"],
+    "available_quantity": 46,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 145,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange10.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/m67.png"}
+    ],
+    "offers": 22,
+    "title": "Formal Blazer Dress",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 194,
+    "price": 6500,
+    "discount": 19,
+    "old_price": 7999,
+    "brand": "Zara",
+    "category": ["dresses"],
+    "available_quantity": 20,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M"]
+  },
+  {
+    "id": 146,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange11.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/m68.png"},
+      {"id": 3, "image": "/src/assets/dresses/m69.png"}
+    ],
+    "offers": 15,
+    "title": "Sports Knit Dress",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 101,
+    "price": 2700,
+    "discount": 16,
+    "old_price": 3200,
+    "brand": "H&M",
+    "category": ["dresses"],
+    "available_quantity": 54,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 147,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange12.png",
+    "gallary": [
+      {"id": 1, "image": "/src/assets/dresses/m70.png"},
+      {"id": 5, "image": "/src/assets/dresses/m71.png"},
+      {"id": 4, "image": "/src/assets/dresses/m72.png"}
+    ],
+    "offers": 30,
+    "title": "Elegant Silk Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 172,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "Tommy Hilfiger",
+    "category": ["dresses"],
+    "available_quantity": 26,
+    "colors": [
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"},
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"}
+    ],
+    "size": ["S", "M", "L", "XL"]
+  },
+  {
+    "id": 148,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange13.png",
+    "gallary": [
+      {"id": 3, "image": "/src/assets/dresses/m73.png"}
+    ],
+    "offers": 10,
+    "title": "Sports Linen Dress",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 71,
+    "price": 2800,
+    "discount": 0,
+    "old_price": 2800,
+    "brand": "Levi's",
+    "category": ["dresses"],
+    "available_quantity": 32,
+    "colors": [
+      {"id": 3, "name": "Mustard Yellow", "quantity": 7, "code": "#FFDB58"}
+    ],
+    "size": ["M", "L", "XL"]
+  },
+  {
+    "id": 149,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange14.png",
+    "gallary": [
+      {"id": 2, "image": "/src/assets/dresses/m74.png"},
+      {"id": 1, "image": "/src/assets/dresses/m75.png"}
+    ],
+    "offers": 20,
+    "title": "Party Sequins Dress",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 209,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Uniqlo",
+    "category": ["dresses"],
+    "available_quantity": 10,
+    "colors": [
+      {"id": 2, "name": "Terracotta", "quantity": 5, "code": "#E2725B"},
+      {"id": 1, "name": "Camel", "quantity": 2, "code": "#C19A6B"}
+    ],
+    "size": ["S", "M", "L"]
+  },
+  {
+    "id": 150,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M12.png",
+    "gallary": [
+      {"id": 4, "image": "/src/assets/dresses/hm70.png"},
+      {"id": 5, "image": "/src/assets/dresses/hm71.png"}
+    ],
+    "offers": 12,
+    "title": "Sports Cotton Dress",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 129,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "Nike",
+    "category": ["dresses"],
+    "available_quantity": 55,
+    "colors": [
+      {"id": 4, "name": "Sage Green", "quantity": 4, "code": "#8A9A5B"},
+      {"id": 5, "name": "Beige / Sand", "quantity": 1, "code": "#F5F5DC"}
+    ],
+    "size": ["S", "M", "L", "XL", "2XL"]
+  }, {
+    "id": 1,
+    "title": "Apple Watch Series 8 GPS + Cellular Stainless Steel Case With Milanese Loop",
+    "image": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20watch.png?raw=true",
+    "rating_value": 4.8,
+    "rating_count": 120,
+    "price": 167,
+    "old_price": 220,
+    "discount": 24,
+    "installment": 0,
+    "offers": 24,
+    "category": "wristwatch"
+  },
+  {
+    "id": 2,
+    "title": "iSmart24v Charger",
+    "image": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20charger.png?raw=true",
+    "rating_value": 4.8,
+    "rating_count": 80,
+    "price": 220,
+    "old_price": 250,
+    "discount": 10,
+    "installment": 7,
+    "offers": 10,
+    "category": "Electronics",
+    "available_quantity": 10
+  },
+  {
+    "id": 3,
+    "title": "TCL Ogled 4k Ultra HD, 47 Smart Tv",
+    "image": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20tv.png?raw=true",
+    "rating_value": 4.8,
+    "rating_count": 95,
+    "price": 20000,
+    "old_price": 25000,
+    "discount": 20,
+    "installment": 0,
+    "offers": 20,
+    "category": "Electronics",
+    "available_quantity": 10
+  },
+  {
+    "id": 4,
+    "title": "Montblanc Explorer Eau De Parfum, 100 ml",
+    "image": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/perfume%202.png?raw=true",
+    "rating_value": 4.6,
+    "rating_count": 65,
+    "price": 4040,
+    "old_price": 4040,
+    "discount": 0,
+    "installment": 6,
+    "offers": 0,
+    "category": "parfum",
+    "available_quantity": 10
+  },
+  {
+    "id": 5,
+    "title": "AirPods Pro Headset Compatible With iPhone And Android-Semi Original",
+    "image": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/Airpods.png?raw=true",
+    "rating_value": 4.8,
+    "rating_count": 200,
+    "price": 290,
+    "old_price": 360,
+    "discount": 19,
+    "installment": 0,
+    "offers": 19,
+    "category": "Apple",
+    "available_quantity": 10
+  },
+  {
+    "id": 6,
+    "title": "Apple iPhone 15 (128 GB)",
+    "image": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/iphone%2015%20pro%20-%20Copy.png?raw=true",
+    "rating_value": 4.8,
+    "rating_count": 300,
+    "price": 36000,
+    "old_price": 38299,
+    "discount": 3,
+    "installment": 5,
+    "offers": 3,
+    "category": "Apple",
+    "available_quantity": 10,
+    "quantity": 1
+  },
+  {
+    "id": 7,
+    "title": "Brone 2021 iMac All-in-one Desktop Computer With M1",
+    "image": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/desktop%20computer.png?raw=true",
+    "rating_value": 5,
+    "rating_count": 50,
+    "price": 15000,
+    "old_price": 15000,
+    "discount": 0,
+    "installment": 0,
+    "offers": 0,
+    "category": "Apple",
+    "available_quantity": 10
+  },
+  {
+    "id": 8,
+    "title": "Apple 2023 MacBook Pro Laptop M3",
+    "image": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/lap%20top.png?raw=true",
+    "rating_value": 5,
+    "rating_count": 140,
+    "price": 25000,
+    "old_price": 36000,
+    "discount": 31,
+    "installment": 10,
+    "offers": 31,
+    "category": "Apple",
+    "available_quantity": 10
+  },
+  {
+    "id": 9,
+    "title": "Apple Watch Ultra GPS + Cellular 49mm",
+    "image": "src/assets/products image/wristwatchs/product1/main.jpg",
+    "rating_value": 4.8,
+    "rating_count": 95,
+    "price": 17000,
+    "old_price": 17000,
+    "discount": 0,
+    "installment": 0,
+    "offers": 0,
+    "category": "Smartwatch",
+    "available_quantity": 15,
+    "quantity": 1
+  },
+  {
+    "id": 10,
+    "title": "Apple Watch Series 11 GPS 46mm",
+    "image": "/src/assets/products image/wristwatchs/product2/main.jpg",
+    "rating_value": 4.7,
+    "rating_count": 95,
+    "price": 11000,
+    "old_price": 11000,
+    "discount": 0,
+    "installment": 0,
+    "offers": 0,
+    "category": "Smartwatch",
+    "available_quantity": 12,
+    "quantity": 1
+  },
+  {
+    "id": 12,
+    "title": "Apple Watch Ultra 2 GPS + Cellular 49mm",
+    "image": "/src/assets/products image/wristwatchs/product3/main.jpg",
+    "rating_value": 4.9,
+    "rating_count": 1270,
+    "price": 27999,
+    "old_price": 30999,
+    "discount": 10,
+    "installment": 5,
+    "offers": 10,
+    "category": "Smartwatch",
+    "available_quantity": 8,
+    "quantity": 1
+  }
+]

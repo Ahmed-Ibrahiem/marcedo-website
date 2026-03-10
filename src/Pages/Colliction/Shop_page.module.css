@@ -1,0 +1,97 @@
+.collections_grid {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30.33%, 1fr));
+  gap: 40px;
+}
+.collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-light-color);
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  aspect-ratio: 1/1;
+  animation: FadeIn 0.3s ease-out;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.collection > img {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+  position: relative;
+  transition: 0.5s ease-out;
+}
+
+.collection span {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-size: 18px;
+  padding: 10px 35px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 50px;
+  margin: auto;
+}
+
+.collection button {
+  position: absolute;
+  margin: auto;
+  border: none;
+  outline: none;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+  > img {
+    width: 15px;
+  }
+}
+
+.collection span,
+.collection button {
+  transition: 0.4s ease-out;
+}
+
+.collection button:hover {
+  background-color: var(--three-color);
+}
+
+.collection:hover > img {
+  scale: 1.1;
+}
+.collection:hover > span {
+  opacity: 0;
+}
+.collection:hover > button {
+  opacity: 1;
+  scale: 1;
+}
+
+@media (max-width: 768px) {
+  .collections_grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .collection span {
+    font-size: 16px;
+    bottom: 30px;
+  }
+}

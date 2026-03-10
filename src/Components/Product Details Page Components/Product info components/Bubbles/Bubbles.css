@@ -1,0 +1,80 @@
+/* Start bubbles Style */
+.bubbles-container {
+  width: 630px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bubbles-container > span {
+  color: var(--orange-color);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bubbles-container .bubbles-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.bubbles-container .bubbles-box button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.bubbles-container .bubbles-box button > i {
+  font-size: 35px;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.bubbles-container .bubbles-box button.active > i {
+  color: var(--orange-color);
+}
+.bubbles-container .bubbles-box .bubbles {
+  width: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  > div.bubble {
+    font-size: 18px;
+    min-width: 30px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+}
+.bubbles-container .bubbles-box .bubbles > div.current-bubble {
+  color: white;
+  background-color: var(--orange-color);
+  border: 2px solid var(--orange-color);
+}
+@media (max-width: 767px) {
+  .bubbles-container {
+    width: 100%;
+  }
+  .bubbles-container .bubbles-box button i {
+    font-size: 22px;
+  }
+  .bubbles-container > span {
+    font-size: 14px;
+  }
+  .bubbles-container .bubbles-box {
+    gap: 10px;
+  }
+  .bubbles-container .bubbles-box .bubbles {
+    width: fit-content;
+    gap: 5px;
+  }
+  .bubbles-container .bubbles-box .bubbles > div.bubble {
+    font-size: 12px;
+    min-width: 20px;
+    height: 20px;
+  }
+}

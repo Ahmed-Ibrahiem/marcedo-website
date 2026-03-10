@@ -1,0 +1,31 @@
+.hero {
+  height: 250px;
+  width: 100%;
+  background-image: radial-gradient(circle at center, #f7f7f7 0%, #ffff 100%);
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.hero h1 {
+  font-size: 42px;
+  font-weight: 500;
+}
+.hero > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--black-color);
+  font-size: 16px;
+  z-index: 10;
+}
+.hero > div > a:first-child:hover {
+  color: var(--orange-color);
+}
+

@@ -1,0 +1,55 @@
+.popular_categorais {
+  margin-top: 20px;
+  width: 100%;
+}
+.popular_categorais .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+.popular_categorais .container h3 {
+  width: max(200px, 40vw);
+  text-align: center;
+  font-size: max(var(--font-24), 2vw);
+  color: var(--black-color);
+  font-weight: 800;
+}
+.popular_categorais .container h3 > span {
+  color: var(--orange-color);
+}
+.box_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 100%;
+  width: 80%;
+}
+.box_container .box {
+  min-width: 300px;
+  height: 80px;
+}
+.box_container .box a {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--gray-light-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.box_container .box a:hover{
+    background-color: var(--border-color);
+    border-color: var(--border-color);
+}
+.box_container .box img {
+  max-width: 50px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+.box_container .box p {
+  font-size: var(--font-20);
+  font-weight: var(--bold-font);
+}
