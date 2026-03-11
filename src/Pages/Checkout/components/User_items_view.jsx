@@ -4,8 +4,8 @@ import style from "../Css/User_items_view.module.css";
 import Calculate_price from "./Calculate_price";
 import Item from "./Item";
 import { discount_codes } from "../../../assets/assets";
-import Form_errors_message from "../../../Components/Errors/Form_errors_message";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
+import Form_errors_message from "../../../Components/ui/Errors/Form_errors_message";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
 
 const User_items_view = () => {
   // Get cart items from cart context

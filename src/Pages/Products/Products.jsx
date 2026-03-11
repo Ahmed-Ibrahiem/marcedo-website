@@ -1,7 +1,7 @@
 import "./Products.css";
-import ProductInformation from "../../Components/Product Details Page Components/product-info-components/productInformation";
-import Product_details_Provider from "../../Context/Product_details_context";
+import Product_details_Provider from "../../Context/ProductDetailsContext";
 import { useLayoutEffect } from "react";
+import ProductInformation from "./components/product-info-components/ProductInformation";
 
 const Products = () => {
   useLayoutEffect(() => {

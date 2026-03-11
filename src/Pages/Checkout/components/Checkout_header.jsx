@@ -1,5 +1,5 @@
 import style from "../Css/Checkout_header.module.css";
-import Logo from "../../../Components/Logo/Logo";
+import Logo from "../../../Components/ui/Logo/Logo";
 import { useCartContext } from "../../../Context/CartMenuContext";
 
 const Checkout_header = () => {

@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { use_product_detials_context } from "./Product_details_context";
+import { use_product_detials_context } from "./ProductDetailsContext";
 
 // Create Reviews Context
 const reviews_context = createContext();

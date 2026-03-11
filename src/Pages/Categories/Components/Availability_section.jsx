@@ -1,6 +1,6 @@
 import { useState } from "react";
 import style from "../Categories.module.css";
-import { use_categories_context } from "../../../Context/Categories_provider";
+import { use_categories_context } from "../../../Context/CategoriesProvider";
 
 const Availability_section = () => {
   // State to control the visibility of the availability filter menu

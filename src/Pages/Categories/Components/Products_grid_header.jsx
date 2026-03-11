@@ -1,8 +1,8 @@
 import { useState } from "react";
 import style from "../CSS/Products_grid.module.css";
 import { display_image } from "../../../assets/assets";
-import { use_products_grid_context } from "../../../Context/Products_grid_provider";
-import { use_categories_context } from "../../../Context/Categories_provider";
+import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
+import { use_categories_context } from "../../../Context/CategoriesProvider";
 
 const Products_grid_header = () => {
   const [is_sort_open, set_is_sort_open] = useState(false);

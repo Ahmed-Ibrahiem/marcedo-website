@@ -1,5 +1,5 @@
 import React from "react";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
 
 const Pay_now_btn = () => {
   const {

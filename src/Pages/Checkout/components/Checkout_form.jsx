@@ -1,7 +1,7 @@
 import Contact_box from "./Contact_box";
 import Delivery_box from "./Delivery_box";
 import Address_box from "./Address_box";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
 import { useWatch } from "react-hook-form";
 
 const Checkout_form = () => {

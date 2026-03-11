@@ -5,8 +5,8 @@ import Colors_section from "./Colors_section";
 import Size_section from "./Size_section";
 import Brand_section from "./Brand_section";
 import style from "../Categories.module.css";
-import { use_products_grid_context } from "../../../Context/Products_grid_provider";
-import { use_categories_context } from "../../../Context/Categories_provider";
+import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
+import { use_categories_context } from "../../../Context/CategoriesProvider";
 
 /**
  * Sidebar component for product filtering

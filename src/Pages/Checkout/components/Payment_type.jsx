@@ -1,7 +1,7 @@
 import style from "../Css/Payment_type.module.css";
 import Credit_card_form from "./Credit_card_form";
 import image from "../../../assets/credit_card.svg";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
 import { useWatch } from "react-hook-form";
 
 const Payment_type = () => {

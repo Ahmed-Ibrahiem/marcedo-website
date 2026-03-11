@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { UpdateCartItemsStorage } from "../server/UpdateLocalStorage";
+import { UpdateCartItemsStorage } from "../services/UpdateLocalStorage";
 import { toast } from "react-toastify";
-import Success_Toast from "../Components/confirm-message/Success_Toast";
+import Success_Toast from "../Components/ui/confirm-message/Success_Toast";
 const CartContext = createContext();
 
 const CartMenuProvider = ({ children }) => {
@@ -112,7 +112,7 @@ const CartMenuProvider = ({ children }) => {
     SubtotalItemsPrice,
     find_data_from_cart,
     setCartItemsData,
-    clearCartItems
+    clearCartItems,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

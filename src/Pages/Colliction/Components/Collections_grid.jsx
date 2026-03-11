@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "../Shop_page.module.css";
-import { use_shop_context } from "../../../Context/Shop_provider";
-import { use_pagination_context } from "../../../Context/Pagination_provider";
+import { use_shop_context } from "../../../Context/ShopProvider";
+import { use_pagination_context } from "../../../Context/PaginationProvider";
 import { Link } from "react-router-dom";
 
 export const Collections_grid = () => {

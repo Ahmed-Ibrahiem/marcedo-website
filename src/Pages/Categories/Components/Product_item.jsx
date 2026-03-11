@@ -2,15 +2,14 @@ import { Link } from "react-router-dom";
 import style from "../CSS/Product_item.module.css";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import { useFavoriteContext } from "../../../Context/favoriteMenuContext";
-import { use_products_grid_context } from "../../../Context/Products_grid_provider";
-import {useState } from "react";
+import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
+import { useState } from "react";
 import Colors_and_size_section from "./Colors_and_size_section";
 import Add_to_cart_btn from "./Add_to_cart_btn";
 
 const Product_item = ({ data }) => {
   // Access cart state and actions from Cart Context
-  const { handleCatItemsPrograss,  cartItemsData } =
-    useCartContext();
+  const { handleCatItemsPrograss, cartItemsData } = useCartContext();
 
   // Access wishlist state and actions from Favorite Context
   const { favoriteItemsId, handleFavoriteItems } = useFavoriteContext();
