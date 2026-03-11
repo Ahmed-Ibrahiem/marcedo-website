@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "../CSS/Quick_view.module.css";
-import { use_products_grid_context } from "../../../Context/Products_grid_provider";
+import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
 import main_style from "../Categories.module.css";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import Add_to_cart_btn from "./Add_to_cart_btn";

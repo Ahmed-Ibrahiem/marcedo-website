@@ -1,21 +1,21 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home.jsx";
-import Scroll_button from "./Components/Scroll button/Scroll_button.jsx";
+import Scroll_button from "./Components/ui/scroll-button/Scroll_button.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
 import "./App.css";
 import Products from "./Pages/Products/Products.jsx";
-import CartItems from "./Components/Cart/CartItems.jsx";
-import Custom_message_toast from "./Components/Coming Soon/Custom_message_toast.jsx";
+import Cart_popup from "./Components/Cart/Cart_popup.jsx";
+import Custom_message_toast from "./Components/ui/coming-soon/Custom_message_toast.jsx";
 import Wishlist_page from "./Pages/Wishlist/Wishlist_page.jsx";
-import About_us from "./Pages/About us Page/About_us.jsx";
-import Contact_page from "./Pages/Contact Page/Contact_page.jsx";
+import About_us from "./Pages/about-us-page/About_us.jsx";
+import Contact_page from "./Pages/contact-page/Contact_page.jsx";
 import Shop_page from "./Pages/Colliction/Shop_page.jsx";
 import Categories from "./Pages/Categories/Categories.jsx";
 import Checkout_page from "./Pages/Checkout/Checkout_page.jsx";
 import MainLayout from "./Pages/Layout/MainLayout.jsx";
-import Order_successfull from "./Pages/Order Successfull/Order_successfull.jsx";
-import Auth_popup from "./Pages/Auth_popup/Auth_popup.jsx";
+import Order_successfull from "./Pages/order-seccessfull/Order_successfull.jsx";
+import Auth_popup from "./Pages/auth-popup/Auth_popup.jsx";
 
 const App = () => {
   return (
@@ -43,7 +43,7 @@ const App = () => {
       </Routes>
 
       <Scroll_button />
-      <CartItems />
+      <Cart_popup />
       <Auth_popup />
     </div>
   );

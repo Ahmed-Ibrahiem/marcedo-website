@@ -1,5 +1,5 @@
-import Form_errors_message from "../../../Components/Errors/Form_errors_message";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
+import Form_errors_message from "../../../Components/ui/Errors/Form_errors_message";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
 import style from "../Css/Address_box.module.css";
 
 const Location_details = () => {

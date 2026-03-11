@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "../Css/Credit_card_form.module.css";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
-import Form_errors_message from "../../../Components/Errors/Form_errors_message";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
+import Form_errors_message from "../../../Components/ui/Errors/Form_errors_message";
 
 const Credit_card_form = () => {
   const { payment_form } = use_checkout_context();

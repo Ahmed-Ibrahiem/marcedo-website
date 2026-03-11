@@ -1,8 +1,8 @@
 import style from "../CSS/Products_grid.module.css";
 import product_item_style from "../CSS/Product_item.module.css";
 import Product_item from "./Product_item";
-import { use_products_grid_context } from "../../../Context/Products_grid_provider";
-import { use_pagination_context } from "../../../Context/Pagination_provider";
+import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
+import { use_pagination_context } from "../../../Context/PaginationProvider";
 import { useEffect } from "react";
 
 // Component that displays products in a responsive grid layout with dynamic column sizing

@@ -4,7 +4,7 @@ import Checkout_header from "./components/Checkout_header";
 import Payment_type from "./components/Payment_type";
 import Pay_now_btn from "./components/Pay_now_btn";
 import User_items_view from "./components/User_items_view";
-import { use_checkout_context } from "../../Context/Checkout_provider";
+import { use_checkout_context } from "../../Context/CheckoutProvider";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useCartContext } from "../../Context/CartMenuContext";

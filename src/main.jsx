@@ -6,11 +6,11 @@ import App from "./App.jsx";
 import FavoriteProvider from "./Context/favoriteMenuContext.jsx";
 import CartMenuProvider from "./Context/CartMenuContext.jsx";
 import FetchAllProductsProvider from "./Context/FetchAllProducts.jsx";
-import Notification_provider from "./Context/Notification_provider.jsx";
-import Shop_provider from "./Context/Shop_provider.jsx";
-import Categories_provider from "./Context/Categories_provider.jsx";
-import Auth_provider from "./Context/Auth_provider.jsx";
-import Checkout_provider from "./Context/Checkout_provider.jsx";
+import Notification_provider from "./Context/NotificationProvider.jsx";
+import Shop_provider from "./Context/ShopProvider.jsx";
+import Categories_provider from "./Context/CategoriesProvider.jsx";
+import Auth_provider from "./Context/AuthProvider.jsx";
+import Checkout_provider from "./Context/CheckoutProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

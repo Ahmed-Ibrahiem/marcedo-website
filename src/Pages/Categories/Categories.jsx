@@ -1,14 +1,14 @@
 import style from "./Categories.module.css";
-import Our_banner from "../../Components/Our Banner/Our_banner";
-import { use_categories_context } from "../../Context/Categories_provider";
+import Our_banner from "../../Components/ui/our-banner/Our_banner";
+import { use_categories_context } from "../../Context/CategoriesProvider";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Loading } from "../../Components/Loading/Loading";
+import { Loading } from "../../Components/ui/Loading/Loading";
 import Products_grid from "./Components/Products_grid";
-import Products_grid_provider from "../../Context/Products_grid_provider";
+import Products_grid_provider from "../../Context/ProductsGridProvider";
 import Sidebar from "./Components/Sidebar";
-import Pagination_provider from "../../Context/Pagination_provider";
+import Pagination_provider from "../../Context/PaginationProvider";
 
 /**
  * Main Categories Page Component

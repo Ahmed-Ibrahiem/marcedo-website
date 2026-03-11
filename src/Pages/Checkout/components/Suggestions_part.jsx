@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import style from "../Css/Address_box.module.css";
 import axios from "axios";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
-import Form_errors_message from "../../../Components/Errors/Form_errors_message";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
+import Form_errors_message from "../../../Components/ui/Errors/Form_errors_message";
 
 const Suggestions_part = () => {
   // --- State Management ---

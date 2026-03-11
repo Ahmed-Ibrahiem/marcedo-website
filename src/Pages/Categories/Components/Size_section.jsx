@@ -1,4 +1,4 @@
-import { use_categories_context } from "../../../Context/Categories_provider";
+import { use_categories_context } from "../../../Context/CategoriesProvider";
 import main_style from "../Categories.module.css";
 import size_style from "../CSS/Size_section.module.css";
 import { useState } from "react";

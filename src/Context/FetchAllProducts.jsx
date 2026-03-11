@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createContext, useContext } from "react";
-import FetchData from "../server/fetchData";
+import FetchData from "../services/fetchData";
 
 const allProductsContext = createContext([]);
 

@@ -2,10 +2,10 @@ import style from "../CSS/Products_grid.module.css";
 import Products_grid_header from "./Products_grid_header";
 import Products_grid_content from "./Products_grid_content";
 import { useEffect } from "react";
-import { use_products_grid_context } from "../../../Context/Products_grid_provider";
-import { use_categories_context } from "../../../Context/Categories_provider";
-import Bubbles from "../../../Components/Product Details Page Components/Product info components/Bubbles/Bubbles";
-import { use_pagination_context } from "../../../Context/Pagination_provider";
+import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
+import { use_categories_context } from "../../../Context/CategoriesProvider";
+import Bubbles from "../../../Components/ui/Bubbles/Bubbles";
+import { use_pagination_context } from "../../../Context/PaginationProvider";
 import Quick_view from "./Quick_view";
 
 const Products_grid = () => {

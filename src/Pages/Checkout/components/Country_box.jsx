@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "../Css/Country_box.module.css";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
-import Form_errors_message from "../../../Components/Errors/Form_errors_message";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
+import Form_errors_message from "../../../Components/ui/Errors/Form_errors_message";
 
 const Country_box = () => {
   // Track whether the country dropdown menu is open or closed

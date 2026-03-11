@@ -1,12 +1,12 @@
-import BestSeller from "../../Components/Best Seller/BestSeller";
-import Brands from "../../Components/Brands/Brands";
-import { Collection } from "../../Components/Collection/Collection";
-import Deals from "../../Components/Deals/Deals";
-import FeaturedProducts from "../../Components/Featured Products/FeaturedProducts";
-import HeroSection from "../../Components/Hero Section/HeroSection";
-import PopularCategories from "../../Components/Popular Categories/PopularCategories";
-import PerOrder from "../../Components/Pre Order/PerOrder";
-import Testimonials from "../../Components/Testimonials/Testimonials";
+import BestSeller from "../../Components/home/best-seller/BestSeller";
+import Brands from "../../Components/home/brands/Brands";
+import { Collection } from "../../Components/home/collection/Collection";
+import Deals from "../../Components/home/Deals/Deals";
+import FeaturedProducts from "../../Components/home/featured-products/FeaturedProducts";
+import HeroSection from "../../Components/home/hero-section/HeroSection";
+import PopularCategories from "../../Components/home/popular-categories/PopularCategories";
+import PerOrder from "../../Components/home/pre-order/PerOrder";
+import Testimonials from "../../Components/home/Testimonials/Testimonials";
 
 const Home = () => {
   return (

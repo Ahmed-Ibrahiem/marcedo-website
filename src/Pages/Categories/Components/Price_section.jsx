@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import section_style from "../CSS/Price_section.module.css";
 import main_style from "../Categories.module.css";
-import { use_categories_context } from "../../../Context/Categories_provider";
+import { use_categories_context } from "../../../Context/CategoriesProvider";
 
 const Price_section = () => {
   // State to control opening and closing the price menu

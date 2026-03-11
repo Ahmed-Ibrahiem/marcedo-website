@@ -1,9 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import style from "../Css/Calculate_price.module.css";
-import { use_checkout_context } from "../../../Context/Checkout_provider";
+import { use_checkout_context } from "../../../Context/CheckoutProvider";
 import { useWatch } from "react-hook-form";
-import { address_15_shopping_cost, address_20_shopping_cost } from "../../../assets/assets";
+import {
+  address_15_shopping_cost,
+  address_20_shopping_cost,
+} from "../../../assets/assets";
 
 const Calculate_price = () => {
   // Get cart items and subtotal price from cart context
@@ -38,7 +41,9 @@ const Calculate_price = () => {
     ) {
       set_shopping_cost(15);
       set_shopping("$15");
-    } else if (address_20_shopping_cost.includes(shopping_address.toLowerCase())) {
+    } else if (
+      address_20_shopping_cost.includes(shopping_address.toLowerCase())
+    ) {
       // Address matches 20% shopping_cost zone
       set_shopping_cost(20);
       set_shopping("$20");

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import style from "../Categories.module.css";
-import { use_categories_context } from "../../../Context/Categories_provider";
+import { use_categories_context } from "../../../Context/CategoriesProvider";
 import { dresses_brands } from "../../../assets/assets";
 
 const Brand_section = () => {
