@@ -1,0 +1,2452 @@
+[
+  {
+    "id": 101,
+    "installment": 10,
+    "image": "/src/assets/dresses/zara1.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/zara51.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/zara52.png"
+      }
+    ],
+    "offers": 24,
+    "title": "Denim Skirt With A Short Sleeve Shirt And Tie Detail",
+    "description": "Elevate your style with this classic denim skirt paired with a crisp short sleeve shirt and sophisticated tie detail. Perfect for both casual and professional settings.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 128,
+    "price": 2500,
+    "discount": 17,
+    "old_price": 3000,
+    "brand": "Nike",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 42,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1845,
+    "date": "2025-12-15"
+  },
+  {
+    "id": 102,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara2.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/zara53.png"
+      }
+    ],
+    "offers": 0,
+    "title": "Satin Slip Dress Blue",
+    "description": "Experience luxury with this elegant satin slip dress in a stunning blue shade. The smooth fabric drapes beautifully for a sophisticated and timeless look.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 95,
+    "price": 1000,
+    "discount": 52,
+    "old_price": 2100,
+    "brand": "Adidas",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 18,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 3240,
+    "date": "2026-01-20"
+  },
+  {
+    "id": 103,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara3.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/zara54.png"
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/zara55.png"
+      }
+    ],
+    "offers": 10,
+    "title": "Floral Blue Mini Dress",
+    "description": "A vibrant floral mini dress featuring beautiful blue tones and delicate floral patterns. Perfect for summer outings and creating a fresh, feminine look.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 203,
+    "price": 3000,
+    "discount": 0,
+    "old_price": 2100,
+    "brand": "Zara",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 7,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      },
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "in-stock",
+    "sales_count": 2790,
+    "date": "2025-11-05"
+  },
+  {
+    "id": 104,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara4.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/zara56.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/zara57.png"
+      },
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/zara58.png"
+      }
+    ],
+    "offers": 15,
+    "title": "Casual T-Shirt Dress",
+    "description": "Comfort meets style in this casual t-shirt dress. Made from soft, breathable fabric, it's ideal for everyday wear and effortless styling.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 187,
+    "price": 2500,
+    "discount": 17,
+    "old_price": 3000,
+    "brand": "H&M",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 35,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      },
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 2250,
+    "date": "2025-10-28"
+  },
+  {
+    "id": 105,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara5.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/zara59.png"
+      }
+    ],
+    "offers": 20,
+    "title": "Sporty Hoodie Dress",
+    "description": "Combine athletic style with fashion in this trendy hoodie dress. Perfect for workouts, casual outings, or lounging at home in ultimate comfort.",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 312,
+    "price": 4000,
+    "discount": 27,
+    "old_price": 5499,
+    "brand": "Tommy Hilfiger",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 22,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 4120,
+    "date": "2026-02-01"
+  },
+  {
+    "id": 106,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara6.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/zara60.png"
+      },
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/zara61.png"
+      }
+    ],
+    "offers": 30,
+    "title": "Linen Blend Wrap Dress",
+    "description": "A breathable linen blend wrap dress that flatters every figure. The classic wrap style and natural fabric make it an essential piece for warm seasons.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 156,
+    "price": 3500,
+    "discount": 22,
+    "old_price": 4499,
+    "brand": "Levi's",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 29,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      },
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1980,
+    "date": "2025-09-14"
+  },
+  {
+    "id": 107,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara7.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/zara62.png"
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/zara63.png"
+      }
+    ],
+    "offers": 15,
+    "title": "Ribbed Bodycon Dress",
+    "description": "Show off your curves in this form-fitting ribbed bodycon dress. A versatile piece that works for nights out or layering with jackets.",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 89,
+    "price": 6000,
+    "discount": 8,
+    "old_price": 6499,
+    "brand": "Uniqlo",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 12,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1240,
+    "date": "2025-08-19"
+  },
+  {
+    "id": 108,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara8.png",
+    "gallary": [
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/zara64.png"
+      }
+    ],
+    "offers": 18,
+    "title": "Ribbed Bodycon Dress",
+    "description": "This sleek ribbed bodycon dress features premium fabric that hugs your silhouette beautifully. A wardrobe staple for confident, chic styling.",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 234,
+    "price": 4550,
+    "discount": 14,
+    "old_price": 5299,
+    "brand": "Nike",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 19,
+    "colors": [
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 2850,
+    "date": "2025-12-03"
+  },
+  {
+    "id": 109,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara9.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/zara65.png"
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/zara66.png"
+      }
+    ],
+    "offers": 21,
+    "title": "Puff Sleeve Mini Dress",
+    "description": "Romantic and playful, this mini dress features charming puff sleeves. Perfect for creating a feminine statement at parties and special occasions.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 178,
+    "price": 5500,
+    "discount": 8,
+    "old_price": 5999,
+    "brand": "Adidas",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 15,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 2150,
+    "date": "2025-11-11"
+  },
+  {
+    "id": 110,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara10.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/zara67.png"
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/zara68.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/zara69.png"
+      }
+    ],
+    "offers": 35,
+    "title": "Velvet Wrap Dress",
+    "description": "Luxurious velvet wrap dress that exudes elegance and sophistication. The soft texture and flattering wrap style make it perfect for formal events.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 267,
+    "price": 4299,
+    "discount": 17,
+    "old_price": 5199,
+    "brand": "Zara",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 27,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 3580,
+    "date": "2026-01-05"
+  },
+  {
+    "id": 111,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara11.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/zara70.png"
+      }
+    ],
+    "offers": 12,
+    "title": "Elegant Silk Dress",
+    "description": "Pure elegance in silk form. This timeless dress drapes beautifully and works for both professional and social occasions with its understated sophistication.",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 142,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "H&M",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 31,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1890,
+    "date": "2025-07-22"
+  },
+  {
+    "id": 112,
+    "installment": 0,
+    "image": "/src/assets/dresses/zara12.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/zara71.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/zara72.png"
+      }
+    ],
+    "offers": 8,
+    "title": "Casual Linen Dress",
+    "description": "Stay cool and comfortable in this classic linen dress. The relaxed fit and breathable fabric make it ideal for casual everyday wear.",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 76,
+    "price": 3200,
+    "discount": 0,
+    "old_price": 3200,
+    "brand": "Tommy Hilfiger",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 44,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 980,
+    "date": "2025-06-30"
+  },
+  {
+    "id": 113,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance1.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/nb51.png"
+      },
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/nb52.png"
+      }
+    ],
+    "offers": 25,
+    "title": "Party Sequins Dress",
+    "description": "Dazzle everyone at the party with this stunning sequins dress. Sparkly details catch the light beautifully for an unforgettable evening look.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 198,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Levi's",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 8,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      },
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "out-stock",
+    "sales_count": 3250,
+    "date": "2025-09-08"
+  },
+  {
+    "id": 114,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance2.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/nb53.png"
+      },
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/nb54.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/nb55.png"
+      }
+    ],
+    "offers": 10,
+    "title": "Casual Cotton Dress",
+    "description": "Soft and versatile cotton dress perfect for everyday wear. Easy to style with any accessories for a polished casual look.",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 112,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "Uniqlo",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 52,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      },
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1750,
+    "date": "2025-10-17"
+  },
+  {
+    "id": 115,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance3.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/nb56.png"
+      }
+    ],
+    "offers": 40,
+    "title": "Elegant Evening Gown",
+    "description": "Turn heads in this stunning evening gown. The sophisticated silhouette and premium materials make it the perfect choice for gala events.",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 345,
+    "price": 8000,
+    "discount": 20,
+    "old_price": 9999,
+    "brand": "Nike",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 5,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 5230,
+    "date": "2025-11-25"
+  },
+  {
+    "id": 116,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance4.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/nb57.png"
+      }
+    ],
+    "offers": 5,
+    "title": "Casual Denim Dress",
+    "description": "Classic denim dress with a modern twist. Perfect for a relaxed weekend vibe paired with sneakers or boots.",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 67,
+    "price": 2200,
+    "discount": 0,
+    "old_price": 2200,
+    "brand": "Adidas",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 38,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 850,
+    "date": "2025-05-12"
+  },
+  {
+    "id": 117,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance5.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/nb58.png"
+      },
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/nb59.png"
+      }
+    ],
+    "offers": 18,
+    "title": "Summer Floral Dress",
+    "description": "Brighten your summer wardrobe with this vibrant floral dress. The lightweight fabric and cheerful prints are perfect for warm weather adventures.",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 189,
+    "price": 3600,
+    "discount": 20,
+    "old_price": 4500,
+    "brand": "Zara",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 41,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      },
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "in-stock",
+    "sales_count": 2480,
+    "date": "2025-11-30"
+  },
+  {
+    "id": 118,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance6.png",
+    "gallary": [
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/nb60.png"
+      }
+    ],
+    "offers": 22,
+    "title": "Formal Blazer Dress",
+    "description": "Professional and polished, this formal blazer dress is ideal for business meetings and formal occasions. Command respect with timeless elegance.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 223,
+    "price": 6500,
+    "discount": 19,
+    "old_price": 7999,
+    "brand": "H&M",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 14,
+    "colors": [
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 2960,
+    "date": "2025-08-05"
+  },
+  {
+    "id": 119,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance7.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/nb61.png"
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/nb62.png"
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/nb63.png"
+      }
+    ],
+    "offers": 15,
+    "title": "Casual Knit Dress",
+    "description": "Cozy and comfortable knit dress perfect for layering or wearing on its own. The stretchy fabric provides a flattering fit for all body types.",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 98,
+    "price": 2700,
+    "discount": 16,
+    "old_price": 3200,
+    "brand": "Tommy Hilfiger",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 47,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      },
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1340,
+    "date": "2025-07-15"
+  },
+  {
+    "id": 120,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance8.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/nb64.png"
+      }
+    ],
+    "offers": 30,
+    "title": "Elegant Silk Dress",
+    "description": "Luxurious silk dress that feels as good as it looks. The flowing silhouette and premium quality make it a investment piece.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 176,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "Levi's",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 21,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 2350,
+    "date": "2025-09-20"
+  },
+  {
+    "id": 121,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance9.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/nb65.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/nb66.png"
+      }
+    ],
+    "offers": 10,
+    "title": "Casual Linen Dress",
+    "description": "Breathable and light, this linen dress is your go-to for hot weather. The natural fabric is gentle on skin while keeping you cool.",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 81,
+    "price": 2800,
+    "discount": 0,
+    "old_price": 2800,
+    "brand": "Uniqlo",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 33,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1050,
+    "date": "2025-06-10"
+  },
+  {
+    "id": 122,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance10.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/nb67.png"
+      },
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/nb68.png"
+      }
+    ],
+    "offers": 20,
+    "title": "Party Sequins Dress",
+    "description": "Get ready to shine at your next celebration with this sparkly sequins dress. The shimmering details and flattering cut make it a showstopper.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 201,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Nike",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 9,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      },
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "out-stock",
+    "sales_count": 3120,
+    "date": "2025-10-02"
+  },
+  {
+    "id": 123,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance11.png",
+    "gallary": [
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/nb69.png"
+      }
+    ],
+    "offers": 12,
+    "title": "Casual Cotton Dress",
+    "description": "Simple yet stylish cotton dress for everyday wear. The versatile design pairs well with any accessories for endless styling options.",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 119,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "Adidas",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 50,
+    "colors": [
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1680,
+    "date": "2025-07-28"
+  },
+  {
+    "id": 124,
+    "installment": 0,
+    "image": "/src/assets/dresses/new balance12.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/nb70.png"
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/nb71.png"
+      }
+    ],
+    "offers": 25,
+    "title": "Elegant Evening Gown",
+    "description": "Make a grand entrance with this exquisite evening gown. The premium craftsmanship and elegant design ensure you'll be the star of the evening.",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 289,
+    "price": 8000,
+    "discount": 20,
+    "old_price": 9999,
+    "brand": "Zara",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 6,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 4480,
+    "date": "2026-01-15"
+  },
+  {
+    "id": 125,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M1.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/hm51.png"
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/hm52.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/hm53.png"
+      }
+    ],
+    "offers": 5,
+    "title": "Sports Denim Dress",
+    "description": "Athletic meets fashion in this sporty denim dress. Perfect for active lifestyles while maintaining a stylish appearance.",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 73,
+    "price": 2200,
+    "discount": 0,
+    "old_price": 2200,
+    "brand": "H&M",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 39,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 920,
+    "date": "2025-05-05"
+  },
+  {
+    "id": 126,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M2.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/hm54.png"
+      }
+    ],
+    "offers": 18,
+    "title": "Summer Floral Dress",
+    "description": "Capture the essence of summer with this charming floral dress. The fresh prints and light fabric are perfect for beach days and outdoor gatherings.",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 154,
+    "price": 3600,
+    "discount": 20,
+    "old_price": 4500,
+    "brand": "Tommy Hilfiger",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 43,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "in-stock",
+    "sales_count": 2050,
+    "date": "2025-10-10"
+  },
+  {
+    "id": 127,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M3.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/hm55.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/hm56.png"
+      }
+    ],
+    "offers": 22,
+    "title": "Formal Blazer Dress",
+    "description": "Sophisticated and powerful, this formal blazer dress is perfect for the workplace or formal dinners. Exude confidence and style.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 192,
+    "price": 6500,
+    "discount": 19,
+    "old_price": 7999,
+    "brand": "Levi's",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 16,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "out-stock",
+    "sales_count": 2580,
+    "date": "2025-08-25"
+  },
+  {
+    "id": 128,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M4.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/hm57.png"
+      }
+    ],
+    "offers": 15,
+    "title": "Sports Knit Dress",
+    "description": "Combine comfort and style with this sports knit dress. The stretchy material allows full range of motion while keeping you looking great.",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 105,
+    "price": 2700,
+    "discount": 16,
+    "old_price": 3200,
+    "brand": "Uniqlo",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 48,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1420,
+    "date": "2025-08-01"
+  },
+  {
+    "id": 129,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M5.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/hm58.png"
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/hm59.png"
+      }
+    ],
+    "offers": 30,
+    "title": "Elegant Silk Dress",
+    "description": "Experience ultimate luxury with this elegant silk dress. The smooth drape and refined details make it suitable for any sophisticated occasion.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 168,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "Nike",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 23,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 2250,
+    "date": "2025-09-15"
+  },
+  {
+    "id": 130,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M6.png",
+    "gallary": [
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/hm60.png"
+      },
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/hm61.png"
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/hm62.png"
+      }
+    ],
+    "offers": 10,
+    "title": "Sports Linen Dress",
+    "description": "A perfect blend of athletic and casual style. This linen dress provides comfort for active days while looking put-together.",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 88,
+    "price": 2800,
+    "discount": 0,
+    "old_price": 2800,
+    "brand": "Adidas",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 36,
+    "colors": [
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      },
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1150,
+    "date": "2025-06-25"
+  },
+  {
+    "id": 131,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M7.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/hm63.png"
+      }
+    ],
+    "offers": 20,
+    "title": "Party Sequins Dress",
+    "description": "Stand out at any celebration in this glittery sequins dress. The eye-catching sparkle ensures you'll be remembered long after the party.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 211,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Zara",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 11,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 3350,
+    "date": "2025-10-20"
+  },
+  {
+    "id": 132,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M8.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/hm64.png"
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/hm65.png"
+      }
+    ],
+    "offers": 12,
+    "title": "Sports Cotton Dress",
+    "description": "Achieve the perfect balance of comfort and style with this cotton sports dress. Great for workouts or casual outings.",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 124,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "H&M",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 51,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1780,
+    "date": "2025-07-05"
+  },
+  {
+    "id": 133,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M9.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/hm66.png"
+      }
+    ],
+    "offers": 25,
+    "title": "Elegant Evening Gown",
+    "description": "Be the vision of grace and elegance in this stunning evening gown. Perfect for formal events and memorable occasions.",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 276,
+    "price": 8000,
+    "discount": 20,
+    "old_price": 9999,
+    "brand": "Tommy Hilfiger",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 4,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 4950,
+    "date": "2026-02-10"
+  },
+  {
+    "id": 134,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M10.png",
+    "gallary": [
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/hm67.png"
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/hm68.png"
+      }
+    ],
+    "offers": 5,
+    "title": "Sports Denim Dress",
+    "description": "Casual denim dress with a sporty edge. Perfect for weekend activities or relaxed social gatherings.",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 69,
+    "price": 2200,
+    "discount": 0,
+    "old_price": 2200,
+    "brand": "Levi's",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 40,
+    "colors": [
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      },
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "out-stock",
+    "sales_count": 890,
+    "date": "2025-04-18"
+  },
+  {
+    "id": 135,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M11.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/hm69.png"
+      }
+    ],
+    "offers": 18,
+    "title": "Summer Floral Dress",
+    "description": "Embrace the warmth of summer in this beautiful floral dress. The breathable fabric and cheerful design make it a wardrobe essential.",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 147,
+    "price": 3600,
+    "discount": 20,
+    "old_price": 4500,
+    "brand": "Uniqlo",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 45,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1950,
+    "date": "2025-08-12"
+  },
+  {
+    "id": 136,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange1.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/m51.png"
+      },
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/m52.png"
+      }
+    ],
+    "offers": 22,
+    "title": "Formal Blazer Dress",
+    "description": "Polished and professional, this formal blazer dress is your answer to looking sharp at work or formal events. A timeless classic.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 205,
+    "price": 6500,
+    "discount": 19,
+    "old_price": 7999,
+    "brand": "Nike",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 17,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 2780,
+    "date": "2025-09-28"
+  },
+  {
+    "id": 137,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange2.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/m53.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/m54.png"
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/m55.png"
+      }
+    ],
+    "offers": 15,
+    "title": "Sports Knit Dress",
+    "description": "Comfort is key in this sports knit dress. The flexible fabric adapts to your body while maintaining a sleek appearance.",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 92,
+    "price": 2700,
+    "discount": 16,
+    "old_price": 3200,
+    "brand": "Adidas",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 49,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      },
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1250,
+    "date": "2025-06-15"
+  },
+  {
+    "id": 138,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange3.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/m56.png"
+      }
+    ],
+    "offers": 30,
+    "title": "Elegant Silk Dress",
+    "description": "Pure sophistication in silk. This dress flows beautifully and feels luxurious against the skin.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 183,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "Zara",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 24,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 2420,
+    "date": "2025-11-18"
+  },
+  {
+    "id": 139,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange4.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/m57.png"
+      },
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/m58.png"
+      }
+    ],
+    "offers": 10,
+    "title": "Sports Leather Dress",
+    "description": "Edgy and modern, this sports leather dress combines athletic functionality with bold fashion. Make a statement.",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 78,
+    "price": 2800,
+    "discount": 0,
+    "old_price": 2800,
+    "brand": "H&M",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 34,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      },
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1020,
+    "date": "2025-05-20"
+  },
+  {
+    "id": 140,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange5.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/m59.png"
+      }
+    ],
+    "offers": 20,
+    "title": "Party Sequins Dress",
+    "description": "Shine bright in this dazzling sequins dress. Perfect for parties, celebrations, and moments when you want to be noticed.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 216,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Tommy Hilfiger",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 13,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "in-stock",
+    "sales_count": 3480,
+    "date": "2025-12-20"
+  },
+  {
+    "id": 141,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange6.png",
+    "gallary": [
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/m60.png"
+      },
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/m61.png"
+      }
+    ],
+    "offers": 12,
+    "title": "Casual Cotton Dress",
+    "description": "Effortless and comfortable, this casual cotton dress is perfect for everyday adventures. Pair with sneakers or sandals.",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 134,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "Levi's",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 53,
+    "colors": [
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      },
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1880,
+    "date": "2025-07-30"
+  },
+  {
+    "id": 142,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange7.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/m62.png"
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/m63.png"
+      }
+    ],
+    "offers": 25,
+    "title": "Elegant Evening Gown",
+    "description": "Make an unforgettable entrance in this sophisticated evening gown. Designed for those who appreciate true elegance.",
+    "num_star": 4,
+    "rating_value": 4.9,
+    "rating_count": 298,
+    "price": 8000,
+    "discount": 20,
+    "old_price": 9999,
+    "brand": "Uniqlo",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 3,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "in-stock",
+    "sales_count": 5150,
+    "date": "2026-01-28"
+  },
+  {
+    "id": 143,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange8.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/m64.png"
+      }
+    ],
+    "offers": 5,
+    "title": "Sports Leather Dress",
+    "description": "Bold and daring, this sports leather dress blends urban style with athletic comfort. Perfect for trendsetting fashion lovers.",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 84,
+    "price": 2200,
+    "discount": 0,
+    "old_price": 2200,
+    "brand": "Nike",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 37,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1080,
+    "date": "2025-04-05"
+  },
+  {
+    "id": 144,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange9.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/m65.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/m66.png"
+      }
+    ],
+    "offers": 18,
+    "title": "Summer Floral Dress",
+    "description": "Celebrate the season with this vibrant summer floral dress. Its light weave and fresh patterns are perfect for hot days.",
+    "num_star": 4,
+    "rating_value": 4.6,
+    "rating_count": 162,
+    "price": 3600,
+    "discount": 20,
+    "old_price": 4500,
+    "brand": "Adidas",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 46,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "in-stock",
+    "sales_count": 2150,
+    "date": "2025-10-05"
+  },
+  {
+    "id": 145,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange10.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/m67.png"
+      }
+    ],
+    "offers": 22,
+    "title": "Formal Blazer Dress",
+    "description": "Command respect and admiration in this impeccably tailored formal blazer dress. A power piece for professionals.",
+    "num_star": 4,
+    "rating_value": 4.8,
+    "rating_count": 194,
+    "price": 6500,
+    "discount": 19,
+    "old_price": 7999,
+    "brand": "Zara",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 20,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M"
+    ],
+    "stock": "out-stock",
+    "sales_count": 2650,
+    "date": "2025-09-10"
+  },
+  {
+    "id": 146,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange11.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/m68.png"
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/m69.png"
+      }
+    ],
+    "offers": 15,
+    "title": "Sports Knit Dress",
+    "description": "Versatile and comfortable, this sports knit dress transitions from gym to street effortlessly. Your new favorite piece.",
+    "num_star": 4,
+    "rating_value": 4.4,
+    "rating_count": 101,
+    "price": 2700,
+    "discount": 16,
+    "old_price": 3200,
+    "brand": "H&M",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 54,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 1380,
+    "date": "2025-07-08"
+  },
+  {
+    "id": 147,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange12.png",
+    "gallary": [
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/m70.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/m71.png"
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/m72.png"
+      }
+    ],
+    "offers": 30,
+    "title": "Elegant Silk Dress",
+    "description": "Indulge in luxury with this premium silk dress. The elegant silhouette and premium craftsmanship make it an investment piece.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 172,
+    "price": 5000,
+    "discount": 17,
+    "old_price": 6000,
+    "brand": "Tommy Hilfiger",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 26,
+    "colors": [
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      },
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 2320,
+    "date": "2025-08-28"
+  },
+  {
+    "id": 148,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange8.png",
+    "gallary": [
+      {
+        "id": 3,
+        "image": "/src/assets/dresses/m73.png"
+      }
+    ],
+    "offers": 10,
+    "title": "Sports Linen Dress",
+    "description": "The perfect blend of performance and style. This sports linen dress keeps you cool while looking chic.",
+    "num_star": 4,
+    "rating_value": 4.3,
+    "rating_count": 71,
+    "price": 2800,
+    "discount": 0,
+    "old_price": 2800,
+    "brand": "Levi's",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 32,
+    "colors": [
+      {
+        "id": 3,
+        "name": "Mustard Yellow",
+        "quantity": 7,
+        "code": "#FFDB58"
+      }
+    ],
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": "in-stock",
+    "sales_count": 950,
+    "date": "2025-06-05"
+  },
+  {
+    "id": 149,
+    "installment": 0,
+    "image": "/src/assets/dresses/mange14.png",
+    "gallary": [
+      {
+        "id": 2,
+        "image": "/src/assets/dresses/m74.png"
+      },
+      {
+        "id": 1,
+        "image": "/src/assets/dresses/m75.png"
+      }
+    ],
+    "offers": 20,
+    "title": "Party Sequins Dress",
+    "description": "Be the star of the show in this shimmering sequins dress. Perfect for any celebration or special night out.",
+    "num_star": 4,
+    "rating_value": 4.7,
+    "rating_count": 209,
+    "price": 7000,
+    "discount": 22,
+    "old_price": 8999,
+    "brand": "Uniqlo",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 10,
+    "colors": [
+      {
+        "id": 2,
+        "name": "Terracotta",
+        "quantity": 5,
+        "code": "#E2725B"
+      },
+      {
+        "id": 1,
+        "name": "Camel",
+        "quantity": 2,
+        "code": "#C19A6B"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": "out-stock",
+    "sales_count": 3420,
+    "date": "2025-11-08"
+  },
+  {
+    "id": 150,
+    "installment": 0,
+    "image": "/src/assets/dresses/H&M12.png",
+    "gallary": [
+      {
+        "id": 4,
+        "image": "/src/assets/dresses/hm70.png"
+      },
+      {
+        "id": 5,
+        "image": "/src/assets/dresses/hm71.png"
+      }
+    ],
+    "offers": 12,
+    "title": "Sports Cotton Dress",
+    "description": "Combine athletic performance with casual style in this sports cotton dress. A reliable choice for active individuals.",
+    "num_star": 4,
+    "rating_value": 4.5,
+    "rating_count": 129,
+    "price": 2800,
+    "discount": 20,
+    "old_price": 3500,
+    "brand": "Nike",
+    "category": [
+      "dresses"
+    ],
+    "available_quantity": 55,
+    "colors": [
+      {
+        "id": 4,
+        "name": "Sage Green",
+        "quantity": 4,
+        "code": "#8A9A5B"
+      },
+      {
+        "id": 5,
+        "name": "Beige / Sand",
+        "quantity": 1,
+        "code": "#F5F5DC"
+      }
+    ],
+    "size": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "stock": "out-stock",
+    "sales_count": 1850,
+    "date": "2025-07-18"
+  }
+]

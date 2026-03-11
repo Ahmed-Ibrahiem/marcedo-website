@@ -1,0 +1,1241 @@
+[
+  {
+    "id": "1",
+    "name": "Apple Watch Series 8",
+    "full_name": "Apple Watch Series 8 GPS + Cellular Stainless Steel Case With Milanese Loop",
+    "brand": "Apple",
+    "category": "Wristwatch",
+    "condition": "New",
+    "material": "Stainless Steel And Glass",
+    "weight_grams": 51,
+    "available_quantity": 15,
+    "quantity": 1,
+    "price": 167,
+
+    "brand_info": {
+      "brand_name": "Visit Apple Store",
+      "link": "https://www.apple.com/watch/"
+    },
+
+    "pricing": {
+      "price": 167,
+      "installment": 0,
+      "currency": "USD",
+      "discount_percentage": 24,
+      "original_price": 220,
+      "offer_note": "24",
+      "offer_expiry": "2026-12-31"
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "total_reviews": 120,
+      "total_ratings": 120,
+      "sold": 1200,
+      "distribution": {
+        "5": 90,
+        "4": 20,
+        "3": 7,
+        "2": 2,
+        "1": 1
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "connectivity",
+        "label": "Connectivity",
+        "values": [
+          { "label": "GPS", "price_modifier": 0 },
+          { "label": "GPS + Cellular", "price_modifier": 500 }
+        ]
+      },
+      "colors": [
+        { "name": "Silver", "hex": "#CFCFCF", "available": true },
+        { "name": "Graphite", "hex": "#2B2B2B", "available": true },
+        { "name": "Gold", "hex": "#D4AF37", "available": true }
+      ]
+    },
+
+    "selected_options": {
+      "specification": "GPS",
+      "color": "Silver"
+    },
+
+    "images": {
+      "main": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20watch.png?raw=true",
+      "gallery": [
+        "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20watch.png?raw=true"
+      ]
+    },
+
+    "description": [
+      "Always-On Retina Display With Edge-To-Edge Screen.",
+      "Advanced Health Sensors Including ECG And Blood Oxygen.",
+      "Crash Detection And Fall Detection For Enhanced Safety.",
+      "GPS + Cellular Connectivity For Calls And Messages Without iPhone.",
+      "Water Resistant Up To 50 Meters.",
+      "watchOS With Advanced Fitness And Health Tracking Features."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "Apple Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Ahmed S****d",
+        "rating": 5,
+        "date": "2026-01-18T10:00",
+        "tags": ["Excellent quality", "Smooth performance"],
+        "user_image": "/src/assets/users/user 1.png",
+        "type": "global",
+        "comment": "Premium build quality and very accurate health tracking. Totally worth it."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "2",
+    "name": "iSmart 24V Charger",
+    "full_name": "iSmart 24V Fast Charger",
+    "brand": "iSmart",
+    "category": "Electronics",
+    "condition": "New",
+    "material": "ABS Plastic",
+    "weight_grams": 180,
+    "sold": "800",
+    "available_quantity": 10,
+    "quantity": 1,
+    "price": 220,
+
+    "brand_info": {
+      "brand_name": "Visit iSmart",
+      "link": "https://www.ismartproducts.com"
+    },
+
+    "pricing": {
+      "price": 220,
+      "installment": 7,
+      "currency": "EGP",
+      "discount_percentage": 10,
+      "original_price": 250,
+      "offer_note": "10",
+      "offer_expiry": "2026-12-31"
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "total_reviews": 80,
+      "total_ratings": 80,
+      "sold": 800,
+      "distribution": {
+        "5": 60,
+        "4": 15,
+        "3": 4,
+        "2": 1,
+        "1": 0
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "voltage",
+        "label": "Voltage",
+        "values": [
+          { "label": "24V", "price_modifier": 0 },
+          { "label": "32V", "price_modifier": 0 }
+        ]
+      },
+      "colors": [{ "name": "Black", "hex": "#000000", "available": true }]
+    },
+
+    "selected_options": {
+      "specification": "24V",
+      "color": "Black"
+    },
+
+    "images": {
+      "main": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20charger.png?raw=true",
+      "gallery": [
+        "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20charger.png?raw=true"
+      ]
+    },
+
+    "description": [
+      "24V Fast Charging Technology For Efficient Power Delivery.",
+      "Built-In Smart Protection Against Overcharging And Overheating.",
+      "Compact And Lightweight Design For Easy Portability.",
+      "Compatible With Multiple Electronic Devices.",
+      "Durable ABS Plastic Housing For Long-Term Use."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "iSmart Official Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Mohamed A****d",
+        "rating": 5,
+        "date": "2026-01-19T14:20",
+        "tags": ["Fast charging", "Good quality"],
+        "user_image": "/src/assets/users/user 2.png",
+        "type": "global",
+        "comment": "Very reliable charger, works perfectly and charges fast."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "3",
+    "name": "TCL Ogled Smart TV",
+    "full_name": "TCL Ogled 4K Ultra HD 47-inch Smart TV",
+    "brand": "TCL",
+    "category": "Electronics",
+    "condition": "New",
+    "material": "Plastic And Metal",
+    "weight_grams": 9800,
+    "available_quantity": 10,
+    "quantity": 1,
+    "price": 20000,
+
+    "brand_info": {
+      "brand_name": "Visit TCL",
+      "link": "https://www.tcl.com"
+    },
+
+    "pricing": {
+      "price": 20000,
+      "installment": 0,
+      "currency": "EGP",
+      "discount_percentage": 20,
+      "original_price": 25000,
+      "offer_note": "20",
+      "offer_expiry": null
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "total_reviews": 95,
+      "total_ratings": 95,
+      "sold": 900,
+      "distribution": {
+        "5": 70,
+        "4": 18,
+        "3": 6,
+        "2": 1,
+        "1": 0
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "screen_size",
+        "label": "Screen Size",
+        "values": [
+          { "label": "47 inch", "price_modifier": 0 },
+          { "label": "55 inch", "price_modifier": 4000 }
+        ]
+      },
+      "colors": [{ "name": "Black", "hex": "#000000", "available": true }]
+    },
+
+    "selected_options": {
+      "specification": "47 inch",
+      "color": "Black"
+    },
+
+    "images": {
+      "main": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20tv.png?raw=true",
+      "gallery": [
+        "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/smart%20tv.png?raw=true"
+      ]
+    },
+
+    "description": [
+      "47-inch 4K Ultra HD Display With Sharp And Vivid Picture Quality.",
+      "Ogled Technology For Enhanced Contrast And Color Accuracy.",
+      "Smart TV With Built-in Apps And Streaming Services.",
+      "Multiple HDMI And USB Ports For External Devices.",
+      "Slim Bezel Design For A Modern Home Entertainment Setup."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "3 - 5 Business Days"
+    },
+
+    "seller": {
+      "name": "TCL Official Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Mahmoud A****d",
+        "rating": 5,
+        "date": "2026-01-20T18:10",
+        "tags": ["Great picture quality", "Excellent value"],
+        "user_image": "/src/assets/users/user-3.png",
+        "type": "global",
+        "comment": "Very clear picture and smooth performance for streaming and movies."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "4",
+    "name": "Montblanc Explorer",
+    "full_name": "Montblanc Explorer Eau De Parfum 100 ml",
+    "brand": "Montblanc",
+    "category": "Parfum",
+    "condition": "New",
+    "material": "Glass Bottle",
+    "weight_grams": 450,
+    "available_quantity": 10,
+    "quantity": 1,
+    "price": 4040,
+
+    "brand_info": {
+      "brand_name": "Visit Montblanc",
+      "link": "https://www.montblanc.com"
+    },
+
+    "pricing": {
+      "price": 4040,
+      "installment": 6,
+      "currency": "EGP",
+      "discount_percentage": 0,
+      "original_price": 4040,
+      "offer_note": null,
+      "offer_expiry": null
+    },
+
+    "ratings": {
+      "average": 4.6,
+      "total_reviews": 65,
+      "total_ratings": 65,
+      "sold": 600,
+      "distribution": {
+        "5": 42,
+        "4": 16,
+        "3": 5,
+        "2": 2,
+        "1": 0
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "size",
+        "label": "Size",
+        "values": [{ "label": "100 ml", "price_modifier": 0 }]
+      },
+      "colors": [{ "name": "Transparent", "hex": "#FFFFFF", "available": true }]
+    },
+
+    "selected_options": {
+      "specification": "100 ml",
+      "color": "Transparent"
+    },
+
+    "images": {
+      "main": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/perfume%202.png?raw=true",
+      "gallery": [
+        "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/perfume%202.png?raw=true"
+      ]
+    },
+
+    "description": [
+      "Eau De Parfum With A Fresh And Woody Scent Profile.",
+      "Top Notes Of Bergamot And Pink Pepper.",
+      "Heart Notes Of Vetiver And Leather.",
+      "Base Notes Of Patchouli, Ambroxan, And Cocoa.",
+      "Long-Lasting Fragrance Suitable For Daily And Evening Wear."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "Authorized Perfume Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Omar H****n",
+        "rating": 5,
+        "date": "2026-01-21T12:40",
+        "tags": ["Long lasting", "Elegant scent"],
+        "user_image": "/src/assets/users/user-4.png",
+        "type": "global",
+        "comment": "Very elegant fragrance with great longevity. Perfect for daily use."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "5",
+    "name": "AirPods Pro",
+    "full_name": "AirPods Pro Wireless Headset Compatible With iPhone And Android",
+    "brand": "Apple",
+    "category": "Electronics",
+    "condition": "New",
+    "material": "Plastic",
+    "weight_grams": 56,
+    "available_quantity": 10,
+    "quantity": 1,
+
+    "brand_info": {
+      "brand_name": "Visit Apple Store",
+      "link": "https://www.apple.com/airpods-pro/"
+    },
+
+    "pricing": {
+      "price": 290,
+      "installment": 0,
+      "currency": "EGP",
+      "discount_percentage": 19,
+      "original_price": 360,
+      "offer_note": "19",
+      "offer_expiry": null
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "total_reviews": 200,
+      "total_ratings": 200,
+      "sold": 1800,
+      "distribution": {
+        "5": 160,
+        "4": 30,
+        "3": 8,
+        "2": 2,
+        "1": 0
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "noise_control",
+        "label": "Noise Control",
+        "values": [
+          { "label": "Active Noise Cancellation", "price_modifier": 0 },
+          { "label": "Transparency Mode", "price_modifier": 0 }
+        ]
+      },
+      "colors": [{ "name": "White", "hex": "#FFFFFF", "available": true }]
+    },
+
+    "selected_options": {
+      "specification": "Active Noise Cancellation",
+      "color": "White"
+    },
+
+    "images": {
+      "main": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/Airpods.png?raw=true",
+      "gallery": [
+        "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/Airpods.png?raw=true"
+      ]
+    },
+
+    "description": [
+      "Wireless Bluetooth Earbuds With Active Noise Cancellation.",
+      "Transparency Mode For Hearing Surroundings Clearly.",
+      "Adaptive EQ For Rich And Balanced Sound.",
+      "Comfortable In-Ear Design With Silicone Tips.",
+      "Compatible With iPhone, Android, And Other Bluetooth Devices."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "Authorized Accessories Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Sara M****y",
+        "rating": 5,
+        "date": "2026-01-22T16:15",
+        "tags": ["Great sound", "Noise cancelling"],
+        "user_image": "/src/assets/users/user-5.png",
+        "type": "global",
+        "comment": "Very good sound quality and effective noise cancellation for the price."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "6",
+    "name": "Apple iPhone 15",
+    "full_name": "Apple iPhone 15 (128 GB) - Black",
+    "brand": "Apple",
+    "category": "Electronics",
+    "condition": "New",
+    "material": "Aluminum And Glass",
+    "weight_grams": 171,
+    "available_quantity": 10,
+    "quantity": 1,
+    "price": 30000,
+
+    "brand_info": {
+      "brand_name": "Visit Apple Store",
+      "link": "https://www.apple.com/store"
+    },
+
+    "pricing": {
+      "price": 30000,
+      "installment": 5,
+      "currency": "EGP",
+      "discount_percentage": 25,
+      "original_price": 40000,
+      "offer_note": "25",
+      "offer_expiry": "2025-12-30"
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "total_reviews": 2300,
+      "total_ratings": 4800,
+      "sold": 2900,
+      "distribution": {
+        "5": 1500,
+        "4": 710,
+        "3": 140,
+        "2": 10,
+        "1": 4
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "storage",
+        "label": "Storage",
+        "values": [
+          { "label": "128 GB", "price_modifier": 0 },
+          { "label": "256 GB", "price_modifier": 3000 },
+          { "label": "512 GB", "price_modifier": 3000 }
+        ]
+      },
+      "colors": [
+        { "name": "Black", "hex": "#000000", "available": true },
+        { "name": "Yellow", "hex": "#F5E14B", "available": true },
+        { "name": "Pink", "hex": "#F3A1B3", "available": true },
+        { "name": "Green", "hex": "#6DAA7F", "available": true },
+        { "name": "Blue", "hex": "#4A7BD0", "available": true }
+      ]
+    },
+
+    "selected_options": {
+      "specification": "128 GB",
+      "color": "Black"
+    },
+
+    "images": {
+      "main": "/src/assets/iphone 14.png",
+      "gallery": [
+        "/src/assets/iphone 14.png",
+        "/src/assets/iphone 14pro.png",
+        "/src/assets/iphone 15.png"
+      ]
+    },
+
+    "description": [
+      "A16 Bionic Chip For Lightning-Fast Performance.",
+      "Advanced Dual-Camera System With Stunning Photo And Video Quality.",
+      "6.1-inch Super Retina XDR Display For A Brighter And More Vibrant Screen.",
+      "Designed With 100% Recycled Aluminum For Sustainability.",
+      "Water And Dust Resistance (IP68 Rated).",
+      "iOS 17 For The Latest Features And Updates."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "Apple Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 9,
+        "user_name": "Noha M******d",
+        "rating": 5,
+        "date": "2026-01-17T03:30",
+        "tags": [
+          "Excellent quality",
+          "Super fast shipping",
+          "Great communication"
+        ],
+        "user_image": "/src/assets/users/user 7.png",
+        "type": "global",
+        "comment": "Absolutely worth it! The product exceeded my expectations. Highly recommend!"
+      },
+      {
+        "id": 10,
+        "user_name": "Noha M******d",
+        "rating": 5,
+        "date": "2026-01-17T03:30",
+        "tags": [
+          "Excellent quality",
+          "Super fast shipping",
+          "Great communication"
+        ],
+        "user_image": "/src/assets/users/user 7.png",
+        "type": "global",
+        "comment": "Absolutely worth it! The product exceeded my expectations. Highly recommend!"
+      },
+      {
+        "id": 11,
+        "user_name": "Noha M******d",
+        "rating": 5,
+        "date": "2026-01-17T03:30",
+        "tags": [
+          "Excellent quality",
+          "Super fast shipping",
+          "Great communication"
+        ],
+        "user_image": "/src/assets/users/user 7.png",
+        "type": "global",
+        "comment": "Absolutely worth it! The product exceeded my expectations. Highly recommend!"
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "7",
+    "name": "iMac 2021 M1",
+    "full_name": "Apple iMac 2021 All-in-One Desktop Computer With M1 Chip",
+    "brand": "Apple",
+    "category": "Electronics",
+    "condition": "New",
+    "material": "Aluminum",
+    "weight_grams": 4480,
+    "available_quantity": 10,
+    "quantity": 1,
+    "price": 15000,
+
+    "brand_info": {
+      "brand_name": "Visit Apple Store",
+      "link": "https://www.apple.com/imac/"
+    },
+
+    "pricing": {
+      "price": 15000,
+      "installment": 0,
+      "currency": "EGP",
+      "discount_percentage": 0,
+      "original_price": 15000,
+      "offer_note": null,
+      "offer_expiry": null
+    },
+
+    "ratings": {
+      "average": 5,
+      "total_reviews": 50,
+      "total_ratings": 50,
+      "sold": 500,
+      "distribution": {
+        "5": 48,
+        "4": 2,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "memory",
+        "label": "Memory",
+        "values": [
+          { "label": "8 GB Unified Memory", "price_modifier": 0 },
+          { "label": "16 GB Unified Memory", "price_modifier": 3000 }
+        ]
+      },
+      "colors": [
+        { "name": "Silver", "hex": "#CFCFCF", "available": true },
+        { "name": "Blue", "hex": "#4A7BD0", "available": true },
+        { "name": "Green", "hex": "#6DAA7F", "available": true }
+      ]
+    },
+
+    "selected_options": {
+      "specification": "8 GB Unified Memory",
+      "color": "Silver"
+    },
+    "images": {
+      "main": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/desktop%20computer.png?raw=true",
+      "gallery": [
+        "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/desktop%20computer.png?raw=true"
+      ]
+    },
+
+    "description": [
+      "Apple M1 Chip For Powerful Performance And Energy Efficiency.",
+      "24-inch 4.5K Retina Display With P3 Wide Color Gamut.",
+      "Ultra-Thin All-in-One Aluminum Design.",
+      "Fast SSD Storage And Unified Memory Architecture.",
+      "macOS With Optimized Apps For M1 Architecture."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "3 - 5 Business Days"
+    },
+
+    "seller": {
+      "name": "Apple Authorized Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Khaled M****d",
+        "rating": 5,
+        "date": "2026-01-23T11:30",
+        "tags": ["Very fast", "Beautiful display"],
+        "user_image": "/src/assets/users/user 6.png",
+        "type": "global",
+        "comment": "Excellent performance with the M1 chip and an amazing screen quality."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "8",
+    "name": "MacBook Pro M3",
+    "full_name": "Apple 2023 MacBook Pro Laptop With M3 Chip",
+    "brand": "Apple",
+    "category": "Electronics",
+    "condition": "New",
+    "material": "Aluminum",
+    "weight_grams": 1600,
+    "available_quantity": 10,
+    "quantity": 1,
+    "price": 25000,
+
+    "brand_info": {
+      "brand_name": "Visit Apple Store",
+      "link": "https://www.apple.com/macbook-pro/"
+    },
+
+    "pricing": {
+      "price": 25000,
+      "installment": 10,
+      "currency": "EGP",
+      "discount_percentage": 31,
+      "original_price": 36000,
+      "offer_note": "Limited Time Offer",
+      "offer_expiry": null
+    },
+
+    "ratings": {
+      "average": 5,
+      "total_reviews": 140,
+      "total_ratings": 140,
+      "sold": 1400,
+      "distribution": {
+        "5": 132,
+        "4": 8,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "memory",
+        "label": "Memory",
+        "values": [
+          { "label": "8 GB Unified Memory", "price_modifier": 0 },
+          { "label": "16 GB Unified Memory", "price_modifier": 4000 },
+          { "label": "24 GB Unified Memory", "price_modifier": 8000 }
+        ]
+      },
+      "colors": [
+        { "name": "Space Black", "hex": "#1C1C1E", "available": true },
+        { "name": "Silver", "hex": "#D1D1D6", "available": true }
+      ]
+    },
+
+    "selected_options": {
+      "specification": "8 GB Unified Memory",
+      "color": "Space Black"
+    },
+
+    "images": {
+      "main": "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/lap%20top.png?raw=true",
+      "gallery": [
+        "https://github.com/Ahmed-Ibrahiem/Assets_Products/blob/main/products%20image/lap%20top.png?raw=true"
+      ]
+    },
+
+    "description": [
+      "Powered by the new Apple M3 chip for extreme performance and efficiency.",
+      "Liquid Retina XDR display with incredible brightness and contrast.",
+      "All-day battery life optimized for macOS.",
+      "Professional-grade performance for developers, designers, and creators.",
+      "Premium aluminum body with advanced thermal management."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "Apple Authorized Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Ahmed S****d",
+        "rating": 5,
+        "date": "2026-01-22T19:10",
+        "tags": ["Very powerful", "Excellent battery"],
+        "user_image": "/src/assets/users/user 7.png",
+        "type": "global",
+        "comment": "The M3 chip is insanely fast. Perfect for heavy development and design work."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "9",
+    "name": "Apple Watch Ultra",
+    "full_name": "Apple Watch Ultra GPS + Cellular 49mm",
+    "brand": "Apple",
+    "category": "Smartwatch",
+    "condition": "New",
+    "material": "Titanium",
+    "weight_grams": 460,
+    "available_quantity": 15,
+    "quantity": 1,
+    "price": 17000,
+
+    "brand_info": {
+      "brand_name": "Visit Apple Store",
+      "link": "https://www.apple.com/watch/ultra/"
+    },
+
+    "pricing": {
+      "price": 17000,
+      "installment": 0,
+      "currency": "EGP",
+      "discount_percentage": 0,
+      "original_price": 17000,
+      "offer_note": null,
+      "offer_expiry": null
+    },
+
+    "ratings": {
+      "average": 4.8,
+      "total_reviews": 95,
+      "total_ratings": 95,
+      "sold": 1000,
+      "distribution": {
+        "5": 75,
+        "4": 15,
+        "3": 4,
+        "2": 1,
+        "1": 0
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "screen_size",
+        "label": "Screen Size",
+        "values": [{ "label": "49 mm", "price_modifier": 0 }]
+      },
+      "colors": [
+        { "name": "Black Titanium", "hex": "#1C1C1E", "available": true }
+      ]
+    },
+
+    "selected_options": {
+      "specification": "49 mm",
+      "color": "Black Titanium"
+    },
+
+    "images": {
+      "main": "/src/assets/products image/wristwatchs/product1/main.jpg",
+      "gallery": [
+        "/src/assets/products image/wristwatchs/product1/gallary_1.jpg",
+        "/src/assets/products image/wristwatchs/product1/gallary_2.jpg",
+        "/src/assets/products image/wristwatchs/product1/gallary_3.jpg",
+        "/src/assets/products image/wristwatchs/product1/gallary_4.jpg",
+        "/src/assets/products image/wristwatchs/product1/gallary_5.jpg"
+      ]
+    },
+
+    "description": [
+      "Ultimate Adventure Smartwatch With Rugged Titanium Case.",
+      "49mm Always-On Retina Display With Precision GPS.",
+      "Dual-Frequency GPS For Accurate Tracking.",
+      "GPS + Cellular Connectivity For Calls And Messages.",
+      "Designed For Fitness, Outdoor, And Sports Enthusiasts."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "Apple Official Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Hassan A****m",
+        "rating": 5,
+        "date": "2026-01-25T10:20",
+        "tags": ["Strong build", "Excellent GPS"],
+        "user_image": "/src/assets/users/user 8.png",
+        "type": "global",
+        "comment": "Great outdoor watch, super accurate GPS and robust design."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "10",
+    "name": "Apple Watch Series 11",
+    "full_name": "Apple Watch Series 11 GPS 46mm Aluminium Smartwatch",
+    "brand": "Apple",
+    "category": "Smartwatch",
+    "condition": "New",
+    "material": "Aluminium",
+    "weight_grams": 470,
+    "sold": "800",
+    "available_quantity": 12,
+    "quantity": 1,
+    "price": 11000,
+
+    "brand_info": {
+      "brand_name": "Visit Apple Store",
+      "link": "https://www.apple.com/watch/"
+    },
+
+    "pricing": {
+      "price": 11000,
+      "installment": 0,
+      "currency": "EGP",
+      "discount_percentage": 0,
+      "original_price": 11000,
+      "offer_note": null,
+      "offer_expiry": null
+    },
+
+    "ratings": {
+      "average": 4.7,
+      "total_reviews": 95,
+      "total_ratings": 95,
+      "sold": 800,
+      "distribution": {
+        "5": 70,
+        "4": 18,
+        "3": 6,
+        "2": 1,
+        "1": 0
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "screen_size",
+        "label": "Screen Size",
+        "values": [{ "label": "46 mm", "price_modifier": 0 }]
+      },
+      "colors": [
+        { "name": "Jet Black Aluminium", "hex": "#2B2B2F", "available": true },
+        { "name": "Rose Gold Aluminium", "hex": "#D9A6A0", "available": true },
+        { "name": "Space Grey Aluminium", "hex": "#ccc", "available": true }
+      ]
+    },
+
+    "selected_options": {
+      "specification": "46 mm",
+      "color": "Jet Black Aluminium"
+    },
+
+    "images": {
+      "main": "/src/assets/products image/wristwatchs/product2/main.jpg",
+      "gallery": [
+        "/src/assets/products image/wristwatchs/product2/gallary_1.jpg",
+        "/src/assets/products image/wristwatchs/product2/gallary_2.jpg",
+        "/src/assets/products image/wristwatchs/product2/gallary_3.jpg",
+        "/src/assets/products image/wristwatchs/product2/gallary_4.jpg",
+        "/src/assets/products image/wristwatchs/product2/gallary_5.jpg"
+      ]
+    },
+
+    "description": [
+      "Apple Watch Series 11 Smartwatch with GPS and Aluminium Case.",
+      "46mm Always-On Display with Fitness & Health Monitoring.",
+      "Tracks Sleep, Heart Rate, Activity, and More.",
+      "Lightweight Sport Band and Durable Design for Daily Wear."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "Apple Official Store",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Mona A****r",
+        "rating": 5,
+        "date": "2026-01-20T15:40",
+        "tags": ["Great fitness tracking", "Comfortable fit"],
+        "user_image": "/src/assets/users/user 9.png",
+        "type": "global",
+        "comment": "Very reliable daily smartwatch with excellent health tracking."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  },
+  {
+    "id": "12",
+    "name": "Apple Watch Ultra 2",
+    "full_name": "Apple Watch Ultra 2 GPS + Cellular 49mm Titanium Smartwatch",
+    "brand": "Apple",
+    "category": "Smartwatch",
+    "condition": "New",
+    "material": "Titanium",
+    "weight_grams": 485,
+    "available_quantity": 8,
+    "quantity": 1,
+    "price": 27999,
+
+    "brand_info": {
+      "brand_name": "Visit Apple Store",
+      "link": "https://www.apple.com/watch/ultra/"
+    },
+
+    "pricing": {
+      "price": 27999,
+      "installment": 5,
+      "currency": "EGP",
+      "discount_percentage": 10,
+      "original_price": 30999,
+      "offer_note": "10%",
+      "offer_expiry": null
+    },
+
+    "ratings": {
+      "average": 4.9,
+      "total_reviews": 1270,
+      "total_ratings": 2500,
+      "sold": 1500,
+      "distribution": {
+        "5": 2100,
+        "4": 300,
+        "3": 80,
+        "2": 15,
+        "1": 5
+      }
+    },
+
+    "options": {
+      "specification": {
+        "key": "screen_size",
+        "label": "Screen Size",
+        "values": [{ "label": "49 mm", "price_modifier": 0 }]
+      },
+      "colors": [
+        { "name": "Black Titanium", "hex": "#1C1C1E", "available": true }
+      ]
+    },
+
+    "selected_options": {
+      "specification": "49 mm",
+      "color": "Black Titanium"
+    },
+
+    "images": {
+      "main": "/src/assets/products image/wristwatchs/product3/main.jpg",
+      "gallery": [
+        "/src/assets/products image/wristwatchs/product3/gallary_1.jpg",
+        "/src/assets/products image/wristwatchs/product3/gallary_2.jpg",
+        "/src/assets/products image/wristwatchs/product3/gallary_3.jpg",
+        "/src/assets/products image/wristwatchs/product3/gallary_4.jpg",
+        "/src/assets/products image/wristwatchs/product3/gallary_5.jpg"
+      ]
+    },
+
+    "description": [
+      "Apple Watch Ultra 2 with GPS + Cellular connectivity for calls, messages, and notifications on the go.",
+      "Rugged Titanium Case Designed for Extreme Sports and Outdoor Adventurers.",
+      "Large 49mm Always-On Retina Display for Clear Visibility.",
+      "Comprehensive Fitness and Health Tracking Including Heart Rate, Activity, and Sleep.",
+      "Durable Design With Long-Lasting Battery and Advanced Sensors."
+    ],
+
+    "shipping": {
+      "from": "Cairo, Egypt",
+      "type": "FREE Domestic Shipping",
+      "estimated_delivery_days": "2 - 4 Business Days"
+    },
+
+    "seller": {
+      "name": "Apple Store Egypt",
+      "chat_available": true,
+      "response_speed": "Fast"
+    },
+
+    "reviews": [
+      {
+        "id": 1,
+        "user_name": "Sara A****y",
+        "rating": 5,
+        "date": "2026-01-24T13:25",
+        "tags": ["Excellent battery", "Very clear display"],
+        "user_image": "/src/assets/users/user 11.png",
+        "type": "global",
+        "comment": "Love this watch — the display is beautiful and battery lasts all day even with workouts."
+      }
+    ],
+
+    "actions": {
+      "can_add_to_cart": true,
+      "can_buy_now": true,
+      "can_chat_seller": true,
+      "can_share": true,
+      "can_report": true
+    }
+  }
+]
