@@ -1,7 +1,7 @@
-import { assets } from "../../assets/assets";
-import ProductItem from "../Product item/ProductItem";
+import { assets } from "../../assets/assets.js";
+import ProductItem from "../product-item/ProductItem.jsx";
 import "./FeaturedProducts.css";
-import CustomSwiper from "../Custom Swiper/CustomSwiper.jsx";
+import CustomSwiper from "../custom-swiper/CustomSwiper.jsx";
 import { SwiperSlide } from "swiper/react";
 import { useFetchAllProducts } from "../../Context/FetchAllProducts.jsx";
 

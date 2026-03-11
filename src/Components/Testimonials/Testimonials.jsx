@@ -1,6 +1,6 @@
 import { SwiperSlide } from "swiper/react";
-import CustomSwiper from "../Custom Swiper/CustomSwiper";
-import TestimonialCard from "../Selling Speakers/TestimonialCard.jsx";
+import CustomSwiper from "../custom-swiper/CustomSwiper";
+import TestimonialCard from "../selling-speakers/TestimonialCard.jsx";
 import "./Testimonials.css";
 import { useFetch } from "../../server/fetchData.js";
 

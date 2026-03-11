@@ -1,6 +1,6 @@
-import Auth_menu_btn from "../Auth menu btn/Auth_menu_btn";
-import CartAndFavoriteBtns from "../Cart and fevorite btns/CartAndFavoriteBtns";
-import NavbarMenu from "../Navbar Menu/NavbarMenu";
+import Auth_menu_btn from "../auth-menu-btn/Auth_menu_btn";
+import CartAndFavoriteBtns from "../cart-and-fevorite-btns/CartAndFavoriteBtns";
+import NavbarMenu from "../navbar-menu/NavbarMenu";
 import styles from "./ResNavMenu.module.css";
 
 const ResNavMenu = ({ isresNavMenuActive }) => {

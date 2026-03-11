@@ -1,4 +1,4 @@
-import Our_banner from "../../Components/Our Banner/Our_banner";
+import Our_banner from "../../Components/our-banner/Our_banner";
 import style from "./Contact_page.module.css";
 
 const Contact_page = () => {

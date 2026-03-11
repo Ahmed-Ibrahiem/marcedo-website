@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { UpdateCartItemsStorage } from "../server/UpdateLocalStorage";
 import { toast } from "react-toastify";
-import Success_Toast from "../Components/Confirm Message/Success_Toast";
+import Success_Toast from "../Components/confirm-message/Success_Toast";
 const CartContext = createContext();
 
 const CartMenuProvider = ({ children }) => {

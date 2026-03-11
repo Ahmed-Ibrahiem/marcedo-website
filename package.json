@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Ahmed-Ibrahiem.github.io/marcedo-website",
+  "homepage": "https://ahmed-ibrahim.github.io/marcedo-website",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

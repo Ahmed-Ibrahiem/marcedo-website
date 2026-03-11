@@ -1,8 +1,8 @@
 import style from "./Wishlist.module.css";
 import { useFavoriteContext } from "../../Context/favoriteMenuContext";
-import ProductItem from "../../Components/Product item/ProductItem";
+import ProductItem from "../../Components/product-item/ProductItem";
 import { useLayoutEffect } from "react";
-import Our_banner from "../../Components/Our Banner/Our_banner";
+import Our_banner from "../../Components/our-banner/Our_banner";
 
 const Wishlist_page = () => {
   const { favoriteItems } = useFavoriteContext();

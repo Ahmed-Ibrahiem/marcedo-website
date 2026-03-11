@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 import { use_product_detials_context } from "../../../../Context/Product_details_context";
-import Success_Toast from "../../../Confirm Message/Success_Toast";
+import Success_Toast from "../../../confirm-message/Success_Toast";
 
 const Main_Section = () => {
   const { data, handle_despatch_options, selected_options, is_in_a_cart } =

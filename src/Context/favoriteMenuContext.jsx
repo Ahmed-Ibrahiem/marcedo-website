@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { UpdateFavoriteStorage } from "../server/UpdateLocalStorage.js";
 import { toast } from "react-toastify";
-import Success_Toast from "../Components/Confirm Message/Success_Toast.jsx";
+import Success_Toast from "../Components/confirm-message/Success_Toast.jsx";
 const favoriteContext = createContext([]);
 
 const FavoriteProvider = ({ children }) => {

@@ -1,7 +1,7 @@
 import styles from "./ProductItem.module.css";
 import { useFavoriteContext } from "../../Context/favoriteMenuContext";
 import { useCartContext } from "../../Context/CartMenuContext";
-import CreateStarsOfRating from "../Create Stars Of Rating/CreateStarsOfRating";
+import CreateStarsOfRating from "../create-stars-of-rating/CreateStarsOfRating";
 import { Link } from "react-router-dom";
 
 const ProductItem = ({ product_data }) => {

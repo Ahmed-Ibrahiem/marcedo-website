@@ -1,4 +1,4 @@
-import ProductItem from "../Product item/ProductItem";
+import ProductItem from "../product-item/ProductItem";
 import "./BestSeller.css";
 import { useFetchAllProducts } from "../../Context/FetchAllProducts";
 import { useState } from "react";
@@ -13,10 +13,7 @@ const BestSeller = () => {
         <h1>
           Best <span>Seller</span>
         </h1>
-        <div
-          className="products"
-          
-        >
+        <div className="products">
           {all_products &&
             all_products.map((product_data, index) => {
               if (see_all_products) {

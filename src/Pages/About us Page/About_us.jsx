@@ -1,7 +1,7 @@
 import { use, useLayoutEffect, useState } from "react";
-import Counter_template from "../../Components/Counter Component/Counter_template";
-import Our_banner from "../../Components/Our Banner/Our_banner";
-import Our_video_component from "../../Components/Our Video Component/Our_video_component";
+import Counter_template from "../../Components/counter-component/Counter_template";
+import Our_banner from "../../Components/our-banner/Our_banner";
+import Our_video_component from "../../Components/our-video-component/Our_video_component";
 import style from "./About_us.module.css";
 const About_us = () => {
   const our_team = [

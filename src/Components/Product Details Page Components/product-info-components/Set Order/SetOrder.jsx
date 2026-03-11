@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { use_product_detials_context } from "../../../../Context/Product_details_context";
 import { useCartContext } from "../../../../Context/CartMenuContext";
 import { toast } from "react-toastify";
-import Success_Toast from "../../../Confirm Message/Success_Toast";
+import Success_Toast from "../../../confirm-message/Success_Toast";
 
 const SetOrder = () => {
   const { data } = use_product_detials_context();

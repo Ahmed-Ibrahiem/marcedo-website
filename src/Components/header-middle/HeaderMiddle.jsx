@@ -1,7 +1,7 @@
 import { useCountriesAndLanguagesContext } from "../../Context/CountriesAndLaguagesContext";
 import "./HeaderMiddle.css";
-import Country_menu from "../Header Menues/Country_menu";
-import Language_menu from "../Header Menues/Language_menu";
+import Country_menu from "../header-menus/Country_menu";
+import Language_menu from "../header-menus/Language_menu";
 
 const HeaderMiddle = () => {
   const {

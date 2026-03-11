@@ -4,7 +4,7 @@ import Products_grid_content from "./Products_grid_content";
 import { useEffect } from "react";
 import { use_products_grid_context } from "../../../Context/Products_grid_provider";
 import { use_categories_context } from "../../../Context/Categories_provider";
-import Bubbles from "../../../Components/Product Details Page Components/Product info components/Bubbles/Bubbles";
+import Bubbles from "../../../Components/Product Details Page Components/product-info-components/Bubbles/Bubbles";
 import { use_pagination_context } from "../../../Context/Pagination_provider";
 import Quick_view from "./Quick_view";
 

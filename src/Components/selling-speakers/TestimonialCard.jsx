@@ -1,4 +1,4 @@
-import CreateStarsOfRating from "../Create Stars Of Rating/CreateStarsOfRating";
+import CreateStarsOfRating from "../create-stars-of-rating/CreateStarsOfRating";
 import "./TestimonialCard.css";
 
 const TestimonialCard = ({ testimonial_data }) => {

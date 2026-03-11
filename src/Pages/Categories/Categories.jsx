@@ -1,5 +1,5 @@
 import style from "./Categories.module.css";
-import Our_banner from "../../Components/Our Banner/Our_banner";
+import Our_banner from "../../Components/our-banner/Our_banner";
 import { use_categories_context } from "../../Context/Categories_provider";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";

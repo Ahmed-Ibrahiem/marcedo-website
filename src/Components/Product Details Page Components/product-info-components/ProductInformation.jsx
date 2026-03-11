@@ -8,7 +8,7 @@ import { use_product_detials_context } from "../../../Context/Product_details_co
 import ReviewsProvider from "../../../Context/ReviewsProvider";
 import Recommendations from "./ProductDetailsComponents.jsx/Recommendations/Recommendations";
 import PathPage from "../PathPage";
-import Coming_soon from "../../Coming Soon/Coming_soon";
+import Coming_soon from "../../coming-soon/Coming_soon";
 
 const ProductInformation = () => {
   const { data } = use_product_detials_context();

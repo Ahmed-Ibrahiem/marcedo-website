@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home.jsx";
-import Scroll_button from "./Components/Scroll button/Scroll_button.jsx";
+import Scroll_button from "./Components/scroll-button/Scroll_button.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
 import "./App.css";
 import Products from "./Pages/Products/Products.jsx";
 import CartItems from "./Components/Cart/CartItems.jsx";
-import Custom_message_toast from "./Components/Coming Soon/Custom_message_toast.jsx";
+import Custom_message_toast from "./Components/coming-soon/Custom_message_toast.jsx";
 import Wishlist_page from "./Pages/Wishlist/Wishlist_page.jsx";
 import About_us from "./Pages/About us Page/About_us.jsx";
 import Contact_page from "./Pages/Contact Page/Contact_page.jsx";

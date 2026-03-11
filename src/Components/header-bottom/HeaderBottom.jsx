@@ -1,14 +1,14 @@
 import { assets } from "../../assets/assets";
 import "./HeaderBottom.css";
 import { useHeaderBottomContext } from "../../Context/HeaderBottomContext";
-import ResNavMenu from "../Responsive Navbar Menu/ResNavMenu";
+import ResNavMenu from "../responsive-navbar-menu/ResNavMenu";
 import { useState } from "react";
-import CartAndFavoriteBtns from "../Cart and fevorite btns/CartAndFavoriteBtns";
-import NavbarMenu from "../Navbar Menu/NavbarMenu";
+import CartAndFavoriteBtns from "../cart-and-fevorite-btns/CartAndFavoriteBtns";
+import NavbarMenu from "../navbar-menu/NavbarMenu";
 import { useSearchContext } from "../../Context/SearchContext";
-import Categoties_menu from "../Header Menues/Categoties_menu";
+import Categoties_menu from "../header-menus/Categoties_menu";
 import Logo from "../Logo/Logo";
-import Auth_menu_btn from "../Auth menu btn/Auth_menu_btn";
+import Auth_menu_btn from "../auth-menu-btn/Auth_menu_btn";
 
 const HeaderBottom = () => {
   const {

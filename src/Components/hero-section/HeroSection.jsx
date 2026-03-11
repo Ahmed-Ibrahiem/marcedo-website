@@ -5,7 +5,7 @@ import "./HeroSection.css";
 import { swiper_slider_info } from "../../assets/assets";
 import { useState } from "react";
 import HeroSingle from "../Hero Single/HeroSingle";
-import CustomSwiper from "../Custom Swiper/CustomSwiper";
+import CustomSwiper from "../custom-swiper/CustomSwiper";
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
