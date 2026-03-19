@@ -1,0 +1,15 @@
+#supporter{
+    height: 100px;
+    width: 100%;
+}
+header{
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+header.stickyHeader{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

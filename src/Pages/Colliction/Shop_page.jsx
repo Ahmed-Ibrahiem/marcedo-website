@@ -3,8 +3,13 @@ import style from "./Shop_page.module.css";
 import Bubbles from "../../Components/ui/Bubbles/Bubbles";
 import Pagination_provider from "../../Context/PaginationProvider";
 import { Collections_grid } from "./Components/Collections_grid";
+import { useLayoutEffect } from "react";
 
 const Shop_page = () => {
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <div className={style.shop_area}>
       <div className="container">

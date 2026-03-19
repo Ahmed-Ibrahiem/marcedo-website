@@ -2,7 +2,7 @@ import style from "./Categories.module.css";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
 import { use_categories_context } from "../../Context/CategoriesProvider";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import axios from "axios";
 import { Loading } from "../../Components/ui/Loading/Loading";
 import Products_grid from "./Components/Products_grid";
@@ -52,6 +52,12 @@ const Categories = () => {
       set_is_worning(true);
     }
   }, [collection_slug.category_type]);
+
+  useLayoutEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, []);
 
   return (
     <div className={style.categories_page}>

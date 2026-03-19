@@ -1,7 +1,12 @@
+import { useLayoutEffect } from "react";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
 import style from "./Contact_page.module.css";
 
 const Contact_page = () => {
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <div className="contact_area">
       <div className="container">
