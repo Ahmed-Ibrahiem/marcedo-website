@@ -12,7 +12,7 @@ const Quick_view = () => {
     use_products_grid_context();
 
   // Get cart management functions and cart data from context
-  const { handleCatItemsPrograss, setCartItemsData, cartItemsData } =
+  const {  toggleItem , setCartItemsData, cartItemsData } =
     useCartContext();
 
   // Check if the current product is already in the cart
@@ -90,7 +90,7 @@ const Quick_view = () => {
       size: selectedSize,
       quantity_review,
     };
-    handleCatItemsPrograss(format_data);
+     toggleItem (format_data);
   };
 
   return (

@@ -9,7 +9,7 @@ import Add_to_cart_btn from "./Add_to_cart_btn";
 
 const Product_item = ({ data }) => {
   // Access cart state and actions from Cart Context
-  const { handleCatItemsPrograss, cartItemsData } = useCartContext();
+  const { toggleItem, cartItemsData } = useCartContext();
 
   // Access wishlist state and actions from Favorite Context
   const { favoriteItemsId, handleFavoriteItems } = useFavoriteContext();
@@ -37,7 +37,7 @@ const Product_item = ({ data }) => {
     };
 
     // Send formatted product data to the cart handler
-    handleCatItemsPrograss(format_data);
+    toggleItem(format_data);
   };
 
   return (

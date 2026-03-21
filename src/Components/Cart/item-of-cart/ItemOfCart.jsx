@@ -2,7 +2,7 @@ import { useCartContext } from "../../../Context/CartMenuContext";
 import styles from "../Cart_popup.module.css";
 
 const ItemOfCart = ({ item_data }) => {
-  const { icreaseOrReduceProQuantity, removeFromCart } = useCartContext();
+  const { updateProductQuantity, removeItem } = useCartContext();
   return (
     <div className={styles.item}>
       <div className={styles.image_box}>
@@ -21,14 +21,14 @@ const ItemOfCart = ({ item_data }) => {
         <div className={styles.item_counter_prograss}>
           <button
             className={styles.plus}
-            onClick={() => icreaseOrReduceProQuantity("plus", item_data.id)}
+            onClick={() => updateProductQuantity("plus", item_data.id)}
           >
             <i className="fa-solid fa-plus"></i>
           </button>
           <button className={styles.count}>{item_data.quantity}</button>
           <button
             className={styles.minus}
-            onClick={() => icreaseOrReduceProQuantity("minus", item_data.id)}
+            onClick={() => updateProductQuantity("minus", item_data.id)}
           >
             <i className="fa-solid fa-minus"></i>
           </button>
@@ -36,7 +36,7 @@ const ItemOfCart = ({ item_data }) => {
       </div>
       <button
         className={styles.delete_item}
-        onClick={() => removeFromCart(item_data)}
+        onClick={() => removeItem(item_data)}
       >
         <i className="fa-solid fa-trash"></i>
       </button>

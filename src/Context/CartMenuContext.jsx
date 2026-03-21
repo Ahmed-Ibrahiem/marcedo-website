@@ -23,50 +23,68 @@ const CartMenuProvider = ({ children }) => {
   const [SubtotalItemsPrice, setSubtotalItemsPrice] = useState(0);
 
   // Create function to add the new product id to cartItems
-  const addToCart = (data) => {
+  const addItem = (data) => {
     setCartItemsData([...cartItemsData, data]);
   };
 
   // Create function to remove the product id has already exist from cartItems
-  const removeFromCart = (data) => {
+  const removeItem = (data) => {
     setCartItemsData((prev) =>
       prev.filter((item_data) => +item_data.id !== +data.id),
     );
   };
 
   // Create function to handle all cartItems prograss
-  const handleCatItemsPrograss = (data) => {
+  const toggleItem = (data) => {
     if (cartItemsId.includes(+data.id)) {
-      removeFromCart(data);
+      removeItem(data);
       toast(
         <Success_Toast message={"The Product Has Been Deleted From Cart"} />,
       );
     } else {
-      addToCart(data);
+      addItem(data);
       toast(<Success_Toast message={"The Product Has Been Added To Cart"} />);
     }
   };
 
   // Get the Product Data By Id
-  const find_data_from_cart = (id) => {
+  const findItem = (id) => {
     const final_data = cartItemsData.find((data) => data.id == id);
     return final_data;
   };
 
-  // Increase product quantity
-  const icreaseOrReduceProQuantity = (prograss, id) => {
-    setCartItemsData((prev) => {
-      return prev.map((data) => {
-        if (+data.id == +id) {
-          if (prograss == "plus" && data.quantity < data.available_quantity) {
-            return { ...data, quantity: data.quantity + 1 };
-          } else if (prograss == "minus" && data.quantity >= 2) {
-            return { ...data, quantity: data.quantity - 1 };
-          }
-        }
-        return data;
-      });
-    });
+  /*
+  updateProductQuantity function
+  [1] find item data
+  [2] if item is not exist then: return
+  [3] else item is exist then:
+    [3.1] if type is "plus" && quantity < available_quantity: increase quantity
+    [3.2] if type is "minus" && quantity >= 2: decrease quantity
+  [4] update the cartItems
+*/
+  const updateProductQuantity = (type, id) => {
+    // [1] find item data
+    const item = cartItemsData.find((data) => +data.id === +id);
+    // [2] if item is not exist then: return "don't do nothing"
+    if (!item) return;
+    // [3] else item is exist then:
+    let updateItem = null;
+    // if type is "plus" && quantity < available_quantity: increase quantity
+    if (type === "plus" && item.quantity < item.available_quantity) {
+      // increase quintity number.
+      updateItem = { ...item, quantity: item.quantity + 1 };
+    }
+    // [3.2] if type is "minus" && quantity >= 2: decrease quantity
+    else if (type === "minus" && item.quantity >= 2) {
+      // decrease quintity number.
+      updateItem = { ...item, quantity: item.quantity - 1 };
+    }
+    // [4] update the cartItem
+    if (!updateItem) return;
+    const newCart = cartItemsData.map((data) =>
+      data.id === item.id ? updateItem : data,
+    );
+    setCartItemsData(newCart);
   };
 
   // Clear All Items From Card
@@ -102,15 +120,15 @@ const CartMenuProvider = ({ children }) => {
 
   const value = {
     cartItemsId,
-    handleCatItemsPrograss,
+    toggleItem,
     isHasProducts,
     isOpenCart,
     setIsOpenCart,
     cartItemsData,
-    icreaseOrReduceProQuantity,
-    removeFromCart,
+    updateProductQuantity,
+    removeItem,
     SubtotalItemsPrice,
-    find_data_from_cart,
+    findItem,
     setCartItemsData,
     clearCartItems,
   };

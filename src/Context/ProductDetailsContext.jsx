@@ -18,7 +18,7 @@ const Product_details_Provider = ({ children }) => {
   const [data, set_data] = useState(null);
 
   // Access cart context
-  const { cartItemsData, setCartItemsData, find_data_from_cart } =
+  const { cartItemsData, setCartItemsData, findItem } =
     useCartContext();
 
   // All products data loaded from JSON
@@ -105,7 +105,7 @@ const Product_details_Provider = ({ children }) => {
 
     if (is_in_a_cart()) {
       // If product is in cart, use cart values
-      const cartItem = find_data_from_cart(product_params.product_id);
+      const cartItem = findItem(product_params.product_id);
       if (!cartItem) return;
 
       dispatch_selected_options({

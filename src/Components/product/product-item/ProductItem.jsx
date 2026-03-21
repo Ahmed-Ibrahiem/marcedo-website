@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ProductItem = ({ product_data }) => {
   const { favoriteItemsId, handleFavoriteItems } = useFavoriteContext();
-  const { cartItemsId, handleCatItemsPrograss, isClickable } = useCartContext();
+  const { cartItemsId, toggleItem, isClickable } = useCartContext();
 
   return (
     <div className={`product ${styles.product}`} data-id={product_data.id}>
@@ -71,7 +71,7 @@ const ProductItem = ({ product_data }) => {
       <button
         disabled={isClickable}
         onClick={() => {
-          handleCatItemsPrograss(product_data); // // add and remove from cartItems menu
+          toggleItem(product_data); // // add and remove from cartItems menu
         }}
         className={`${styles.add_to_cart} ${
           // After adding product to cartItems , change the style of cart button

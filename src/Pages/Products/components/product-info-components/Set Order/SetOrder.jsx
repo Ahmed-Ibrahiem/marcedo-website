@@ -8,11 +8,11 @@ const SetOrder = () => {
   const { data } = use_product_detials_context();
   const { selected_options, is_in_a_cart } = use_product_detials_context();
   const {
-    handleCatItemsPrograss,
+    toggleItem,
     cartItemsData,
     cartItemsId,
-    icreaseOrReduceProQuantity,
-    find_data_from_cart,
+    updateProductQuantity,
+    findItem,
   } = useCartContext();
 
   const formate_date = () => {
@@ -31,7 +31,7 @@ const SetOrder = () => {
       set_actial_data({ ...actial_data, quantity: actial_data.quantity + 1 }); // Update local state
       if (cartItemsId.includes(+data.id)) {
         // If product already in cart
-        icreaseOrReduceProQuantity("plus", data.id); // Update cart quantity
+        updateProductQuantity("plus", data.id); // Update cart quantity
       }
     }
   };
@@ -43,7 +43,7 @@ const SetOrder = () => {
       set_actial_data({ ...actial_data, quantity: actial_data.quantity - 1 }); // Update local state
       if (cartItemsId.includes(+data.id)) {
         // If product already in cart
-        icreaseOrReduceProQuantity("minus", data.id); // Update cart quantity
+        updateProductQuantity("minus", data.id); // Update cart quantity
       }
     }
   };
@@ -72,7 +72,7 @@ const SetOrder = () => {
       quantity: actial_data.quantity,
     };
 
-    handleCatItemsPrograss(handle_data); // Call function to handle adding/updating cart
+    toggleItem(handle_data); // Call function to handle adding/updating cart
   };
 
   // Update local state when cart data changes
@@ -80,7 +80,7 @@ const SetOrder = () => {
     const data_id = cartItemsData.map((data) => +data.id); // Get all IDs in the cart
     if (data_id.includes(+data.id)) {
       // If current product is in the cart
-      set_actial_data(find_data_from_cart(data.id)); // Use cart data for this product
+      set_actial_data(findItem(data.id)); // Use cart data for this product
     } else {
       set_actial_data(data); // Otherwise, use default product data
     }
