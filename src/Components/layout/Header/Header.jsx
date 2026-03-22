@@ -9,14 +9,19 @@ import "./Header.css";
 const Header = () => {
   const headerRef = useRef(null);
   useEffect(() => {
-    if (!headerRef.current) return;
-    window.addEventListener("scroll", () => {
+    const handleScrolling = () => {
+      if (!headerRef.current) return;
+
       if (window.scrollY > 100) {
         headerRef.current.classList.add("stickyHeader");
       } else {
         headerRef.current.classList.remove("stickyHeader");
       }
-    });
+    };
+
+    window.addEventListener("scroll", handleScrolling);
+
+    return () => window.removeEventListener("scroll", handleScrolling);
   }, []);
 
   return (

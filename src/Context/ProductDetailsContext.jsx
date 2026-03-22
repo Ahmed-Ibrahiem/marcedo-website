@@ -18,13 +18,10 @@ const Product_details_Provider = ({ children }) => {
   const [data, set_data] = useState(null);
 
   // Access cart context
-  const { cartItemsData, setCartItemsData, findItem } =
-    useCartContext();
+  const { cartItemsData, setCartItemsData, findItem } = useCartContext();
 
   // All products data loaded from JSON
   const [all_products, set_all_products] = useState([]);
-
-  const [is_pro_details_found, set_is_pro_details_found] = useState(true);
 
   // Selected options for this product
   const [color_choose, set_color_choose] = useState(null);
@@ -54,9 +51,6 @@ const Product_details_Provider = ({ children }) => {
     const product = all_products.find((p) => p.id == product_params.product_id);
     if (product) {
       set_data(product);
-      set_is_pro_details_found(true);
-    } else {
-      set_is_pro_details_found(false);
     }
   }, [all_products, product_params.product_id]);
 
@@ -87,7 +81,7 @@ const Product_details_Provider = ({ children }) => {
     selected_options_reducer,
     {
       color: "",
-      storage: "",
+      specification: "",
     },
   );
 
@@ -159,7 +153,6 @@ const Product_details_Provider = ({ children }) => {
     handle_despatch_options,
     selected_options,
     is_in_a_cart,
-    is_pro_details_found,
   };
 
   return (

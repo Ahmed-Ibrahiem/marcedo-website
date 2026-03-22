@@ -20,12 +20,11 @@ const Order_successfull = () => {
     }
   }, [navigate]);
 
-  // Render nothing while order data is loading
-  if (!order) return null;
-
   useLayoutEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
+  // Render nothing while order data is loading
+  if (!order) return null;
 
   return (
     <div className="success_container">

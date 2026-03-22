@@ -10,7 +10,8 @@
     "discount": 24,
     "installment": 0,
     "offers": 24,
-    "category": "wristwatch"
+    "category": "wristwatch",
+    "available_quantity": 10
   },
   {
     "id": 2,

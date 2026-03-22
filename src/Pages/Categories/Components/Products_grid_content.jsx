@@ -31,9 +31,11 @@ const Products_grid_content = () => {
         ${current_display === 8 ? product_item_style.grid_4 : ""}`}
     >
       {/* Map through paginated products and render each product as a Product_item component */}
-      {display_data.map((pro) => (
-        <Product_item key={pro.id} data={pro} />
-      ))}
+      {display_data.length > 0 &&
+        display_data.map((pro) => <Product_item key={pro.id} data={pro} />)}
+      {display_data.length === 0 &&
+          <div className={style.no_products}>No Products Here</div>
+        }
     </div>
   );
 };

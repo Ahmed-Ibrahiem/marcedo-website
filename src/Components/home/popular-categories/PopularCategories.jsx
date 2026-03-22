@@ -20,7 +20,10 @@ const PopularCategories = () => {
                     add_message({
                       title:
                         "This Page Will Coming Soon , You Can Visit This Page",
-                      link: { url: "/dresses", name: "Dresses Page" },
+                      link: {
+                        url: "/categories/dresses",
+                        name: "Dresses Page",
+                      },
                     });
                 }}
                 key={index}

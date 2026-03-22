@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { createContext, useContext } from "react";
 import FetchData from "../services/fetchData";
 
@@ -10,7 +10,8 @@ const FetchAllProductsProvider = ({ children }) => {
 
   useEffect(() => {
     const getProductsData = async () => {
-      set_all_products(await FetchData(Url));
+      const data = await FetchData(Url);
+      set_all_products(data);
     };
     getProductsData();
   }, []);

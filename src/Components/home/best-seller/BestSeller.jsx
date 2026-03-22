@@ -31,7 +31,8 @@ const BestSeller = () => {
                   );
                 }
               }
-            })}
+            })
+            }
         </div>
         <button
           onClick={() => set_see_all_products((prev) => !prev)}

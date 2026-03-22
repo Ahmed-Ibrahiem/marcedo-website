@@ -25,8 +25,6 @@ const Checkout_page = () => {
     } else set_threre_items(true);
   }, [navigate]);
 
-  console.log(there_items);
-
   return (
     <>
       {there_items && (

@@ -89,6 +89,12 @@
     gap: 20px;
 }
 
+.no_products{
+    font-size: 32px;
+    color: var(--gray-color);
+    width: 100%;
+    text-align: center;
+}
 
 @media (max-width: 765px) {
     .display_options{
@@ -101,7 +107,7 @@
     }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1350px) {
     .filter_menu_btn{
         display: flex;
     }

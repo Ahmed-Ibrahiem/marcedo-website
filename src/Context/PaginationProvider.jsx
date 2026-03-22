@@ -16,15 +16,18 @@ const Pagination_provider = ({ children }) => {
 
   // Number of items to display per page
   const [number_of_items_in_package, set_number_of_items_in_package] =
-    useState(6);
+    useState(9);
 
   // Data that will actually be displayed on the UI (current page)
   const [display_data, set_display_data] = useState([]);
 
   // Calculate total number of pages whenever data or items per page change
   useEffect(() => {
-    // Prevent execution if no data exists
-    if (pagination_data.length == 0) return;
+    // make number of packages and current package is 1
+    if (pagination_data.length == 0) {
+      set_number_of_packages(1);
+      set_current_package_index(1);
+    }
 
     // Calculate total number of pages
     let num_of_pack = Math.ceil(
@@ -36,6 +39,7 @@ const Pagination_provider = ({ children }) => {
 
     // Reset current page to the first page when data changes
     set_current_package_index(1);
+    console.log(pagination_data);
   }, [pagination_data, number_of_items_in_package]);
 
   // Update the displayed data whenever page or pagination settings change

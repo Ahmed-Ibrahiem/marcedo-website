@@ -270,7 +270,6 @@ const Categories_provider = ({ children }) => {
     const group3 = [...get_products_matching_brands()];
     const group4 = [...get_products_in_price_range()];
     const group5 = [...get_products_matching_stock()];
-
     let final_data = [];
     if (current_collection.slug == "dresses") {
       final_data = group4.filter(
@@ -308,15 +307,16 @@ const Categories_provider = ({ children }) => {
     } else if (sort_option === "Date, old to new") {
       data.sort((a, b) => new Date(a.date) - new Date(b.date));
     }
-
     return data;
   };
+
   useEffect(() => {
     if (all_products.length == 0) return;
     const filter_ids = get_filter_products();
     const filter_data = all_products.filter((pro) =>
       filter_ids.includes(pro.id),
     );
+
     set_filter_products(sort_products(filter_data));
   }, [filter_options, all_products]);
 
@@ -324,7 +324,7 @@ const Categories_provider = ({ children }) => {
     if (all_products.length <= 0) return;
     set_filter_products(sort_products(filter_products));
   }, [sort_option]);
-
+  
   // Context value object to be consumed by components
   const value = {
     filter_options,

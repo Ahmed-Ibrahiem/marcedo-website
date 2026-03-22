@@ -16,7 +16,6 @@ const Products_grid = () => {
   const { filter_products } = use_categories_context();
 
   useEffect(() => {
-    if (filter_products.length == 0) return;
     set_pagination_data(filter_products);
   }, [filter_products]);
 

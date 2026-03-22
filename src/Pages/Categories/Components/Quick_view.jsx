@@ -93,6 +93,8 @@ const Quick_view = () => {
      toggleItem (format_data);
   };
 
+  console.log(quick_view_data.gallary[currentImageIndex].image)
+
   return (
     <div className={styles.overlay}>
       {/* Modal Container - Quick view popup */}
@@ -107,7 +109,7 @@ const Quick_view = () => {
           <div className={styles.image_section}>
             <div className={styles.image_box}>
               <img
-                src={quick_view_data.gallary[currentImageIndex]}
+                src={quick_view_data.image}
                 alt={quick_view_data.title}
                 className={styles.image}
               />

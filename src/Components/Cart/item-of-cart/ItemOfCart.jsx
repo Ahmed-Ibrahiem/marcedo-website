@@ -15,7 +15,6 @@ const ItemOfCart = ({ item_data }) => {
       <div className={styles.item_details}>
         <div className={styles.title}>{item_data.title}</div>
         <div className={styles.item_price}>
-          {" "}
           {item_data.quantity} x {+item_data.quantity * +item_data.price}$
         </div>
         <div className={styles.item_counter_prograss}>

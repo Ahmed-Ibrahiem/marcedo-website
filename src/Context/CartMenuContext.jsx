@@ -65,6 +65,7 @@ const CartMenuProvider = ({ children }) => {
   const updateProductQuantity = (type, id) => {
     // [1] find item data
     const item = cartItemsData.find((data) => +data.id === +id);
+
     // [2] if item is not exist then: return "don't do nothing"
     if (!item) return;
     // [3] else item is exist then:

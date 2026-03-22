@@ -3,6 +3,7 @@ import { use_product_detials_context } from "../../../../../Context/ProductDetai
 import { useCartContext } from "../../../../../Context/CartMenuContext";
 import { toast } from "react-toastify";
 import Success_Toast from "../../../../../Components/ui/confirm-message/Success_Toast";
+import { formate_date } from "../../../../../services/formatsDate";
 
 const SetOrder = () => {
   const { data } = use_product_detials_context();
@@ -15,14 +16,7 @@ const SetOrder = () => {
     findItem,
   } = useCartContext();
 
-  const formate_date = () => {
-    const date = new Date(data.pricing.offer_expiry); // Convert string to Date object
-    return date.toLocaleDateString("en", {
-      month: "short", // Short month name (e.g., Jan, Feb)
-      day: "numeric", // Day of the month
-      year: "numeric", // Full year
-    });
-  };
+  const [actial_data, set_actial_data] = useState({}); // Local state to manage product quantity & options
 
   // Function to increase product quantity
   const increment_count = () => {
@@ -47,8 +41,6 @@ const SetOrder = () => {
       }
     }
   };
-
-  const [actial_data, set_actial_data] = useState({}); // Local state to manage product quantity & options
 
   // Function to add the product to the cart
   const handle_send_to_bag = () => {
@@ -94,7 +86,7 @@ const SetOrder = () => {
             <p>{data.pricing.discount_percentage}% Off</p>
             <span>if order over {data.pricing.price} EGP</span>
           </div>
-          <span>Until {formate_date()}</span>
+          <span>Until {formate_date(data.pricing.offer_expiry)}</span>
         </div>
         <div className="body">
           <div className="top">

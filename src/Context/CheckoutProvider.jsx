@@ -59,7 +59,7 @@ const payment_schema = yup.object({
         cvv: yup
           .string()
           .required("This Filed is Required")
-          .matches(/^\d{3,4}$/, "CVV must be 15 or 16 digits"),
+          .matches(/^\d{3,4}$/, "CVV must be 3 or 4 digits"),
         card_name: yup.string().required("This Field is Required"),
       }),
     otherwise: () => yup.object().strip(),
