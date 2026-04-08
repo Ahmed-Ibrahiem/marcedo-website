@@ -39,7 +39,6 @@ const Pagination_provider = ({ children }) => {
 
     // Reset current page to the first page when data changes
     set_current_package_index(1);
-    console.log(pagination_data);
   }, [pagination_data, number_of_items_in_package]);
 
   // Update the displayed data whenever page or pagination settings change

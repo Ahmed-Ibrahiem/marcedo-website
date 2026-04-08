@@ -2,10 +2,10 @@
   {
     "id": 101,
     "installment": 10,
-    "image": "/src/assets/dresses/zara1.png",
+    "image": "/assets/dresses/zara1.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/zara51.png"},
-      {"id": 5, "image": "/src/assets/dresses/zara52.png"}
+      {"id": 1, "image": "/assets/dresses/zara51.png"},
+      {"id": 5, "image": "/assets/dresses/zara52.png"}
     ],
     "offers": 24,
     "title": "Denim Skirt With A Short Sleeve Shirt And Tie Detail",
@@ -27,9 +27,9 @@
   {
     "id": 102,
     "installment": 0,
-    "image": "/src/assets/dresses/zara2.png",
+    "image": "/assets/dresses/zara2.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/zara53.png"}
+      {"id": 2, "image": "/assets/dresses/zara53.png"}
     ],
     "offers": 0,
     "title": "Satin Slip Dress Blue",
@@ -50,10 +50,10 @@
   {
     "id": 103,
     "installment": 0,
-    "image": "/src/assets/dresses/zara3.png",
+    "image": "/assets/dresses/zara3.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/zara54.png"},
-      {"id": 3, "image": "/src/assets/dresses/zara55.png"}
+      {"id": 4, "image": "/assets/dresses/zara54.png"},
+      {"id": 3, "image": "/assets/dresses/zara55.png"}
     ],
     "offers": 10,
     "title": "Floral Blue Mini Dress",
@@ -75,11 +75,11 @@
   {
     "id": 104,
     "installment": 0,
-    "image": "/src/assets/dresses/zara4.png",
+    "image": "/assets/dresses/zara4.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/zara56.png"},
-      {"id": 5, "image": "/src/assets/dresses/zara57.png"},
-      {"id": 2, "image": "/src/assets/dresses/zara58.png"}
+      {"id": 1, "image": "/assets/dresses/zara56.png"},
+      {"id": 5, "image": "/assets/dresses/zara57.png"},
+      {"id": 2, "image": "/assets/dresses/zara58.png"}
     ],
     "offers": 15,
     "title": "Casual T-Shirt Dress",
@@ -102,9 +102,9 @@
   {
     "id": 105,
     "installment": 0,
-    "image": "/src/assets/dresses/zara5.png",
+    "image": "/assets/dresses/zara5.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/zara59.png"}
+      {"id": 3, "image": "/assets/dresses/zara59.png"}
     ],
     "offers": 20,
     "title": "Sporty Hoodie Dress",
@@ -125,10 +125,10 @@
   {
     "id": 106,
     "installment": 0,
-    "image": "/src/assets/dresses/zara6.png",
+    "image": "/assets/dresses/zara6.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/zara60.png"},
-      {"id": 1, "image": "/src/assets/dresses/zara61.png"}
+      {"id": 4, "image": "/assets/dresses/zara60.png"},
+      {"id": 1, "image": "/assets/dresses/zara61.png"}
     ],
     "offers": 30,
     "title": "Linen Blend Wrap Dress",
@@ -150,10 +150,10 @@
   {
     "id": 107,
     "installment": 0,
-    "image": "/src/assets/dresses/zara7.png",
+    "image": "/assets/dresses/zara7.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/zara62.png"},
-      {"id": 3, "image": "/src/assets/dresses/zara63.png"}
+      {"id": 2, "image": "/assets/dresses/zara62.png"},
+      {"id": 3, "image": "/assets/dresses/zara63.png"}
     ],
     "offers": 15,
     "title": "Ribbed Bodycon Dress",
@@ -175,9 +175,9 @@
   {
     "id": 108,
     "installment": 0,
-    "image": "/src/assets/dresses/zara8.png",
+    "image": "/assets/dresses/zara8.png",
     "gallary": [
-      {"id": 5, "image": "/src/assets/dresses/zara64.png"}
+      {"id": 5, "image": "/assets/dresses/zara64.png"}
     ],
     "offers": 18,
     "title": "Ribbed Bodycon Dress",
@@ -198,10 +198,10 @@
   {
     "id": 109,
     "installment": 0,
-    "image": "/src/assets/dresses/zara9.png",
+    "image": "/assets/dresses/zara9.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/zara65.png"},
-      {"id": 4, "image": "/src/assets/dresses/zara66.png"}
+      {"id": 1, "image": "/assets/dresses/zara65.png"},
+      {"id": 4, "image": "/assets/dresses/zara66.png"}
     ],
     "offers": 21,
     "title": "Puff Sleeve Mini Dress",
@@ -223,11 +223,11 @@
   {
     "id": 110,
     "installment": 0,
-    "image": "/src/assets/dresses/zara10.png",
+    "image": "/assets/dresses/zara10.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/zara67.png"},
-      {"id": 3, "image": "/src/assets/dresses/zara68.png"},
-      {"id": 5, "image": "/src/assets/dresses/zara69.png"}
+      {"id": 2, "image": "/assets/dresses/zara67.png"},
+      {"id": 3, "image": "/assets/dresses/zara68.png"},
+      {"id": 5, "image": "/assets/dresses/zara69.png"}
     ],
     "offers": 35,
     "title": "Velvet Wrap Dress",
@@ -250,9 +250,9 @@
   {
     "id": 111,
     "installment": 0,
-    "image": "/src/assets/dresses/zara11.png",
+    "image": "/assets/dresses/zara11.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/zara70.png"}
+      {"id": 4, "image": "/assets/dresses/zara70.png"}
     ],
     "offers": 12,
     "title": "Elegant Silk Dress",
@@ -273,10 +273,10 @@
   {
     "id": 112,
     "installment": 0,
-    "image": "/src/assets/dresses/zara12.png",
+    "image": "/assets/dresses/zara12.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/zara71.png"},
-      {"id": 5, "image": "/src/assets/dresses/zara72.png"}
+      {"id": 1, "image": "/assets/dresses/zara71.png"},
+      {"id": 5, "image": "/assets/dresses/zara72.png"}
     ],
     "offers": 8,
     "title": "Casual Linen Dress",
@@ -298,10 +298,10 @@
   {
     "id": 113,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance1.png",
+    "image": "/assets/dresses/new balance1.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/nb51.png"},
-      {"id": 2, "image": "/src/assets/dresses/nb52.png"}
+      {"id": 3, "image": "/assets/dresses/nb51.png"},
+      {"id": 2, "image": "/assets/dresses/nb52.png"}
     ],
     "offers": 25,
     "title": "Party Sequins Dress",
@@ -323,11 +323,11 @@
   {
     "id": 114,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance2.png",
+    "image": "/assets/dresses/new balance2.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/nb53.png"},
-      {"id": 1, "image": "/src/assets/dresses/nb54.png"},
-      {"id": 5, "image": "/src/assets/dresses/nb55.png"}
+      {"id": 4, "image": "/assets/dresses/nb53.png"},
+      {"id": 1, "image": "/assets/dresses/nb54.png"},
+      {"id": 5, "image": "/assets/dresses/nb55.png"}
     ],
     "offers": 10,
     "title": "Casual Cotton Dress",
@@ -350,9 +350,9 @@
   {
     "id": 115,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance3.png",
+    "image": "/assets/dresses/new balance3.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/nb56.png"}
+      {"id": 2, "image": "/assets/dresses/nb56.png"}
     ],
     "offers": 40,
     "title": "Elegant Evening Gown",
@@ -373,9 +373,9 @@
   {
     "id": 116,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance4.png",
+    "image": "/assets/dresses/new balance4.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/nb57.png"}
+      {"id": 3, "image": "/assets/dresses/nb57.png"}
     ],
     "offers": 5,
     "title": "Casual Denim Dress",
@@ -396,10 +396,10 @@
   {
     "id": 117,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance5.png",
+    "image": "/assets/dresses/new balance5.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/nb58.png"},
-      {"id": 1, "image": "/src/assets/dresses/nb59.png"}
+      {"id": 4, "image": "/assets/dresses/nb58.png"},
+      {"id": 1, "image": "/assets/dresses/nb59.png"}
     ],
     "offers": 18,
     "title": "Summer Floral Dress",
@@ -421,9 +421,9 @@
   {
     "id": 118,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance6.png",
+    "image": "/assets/dresses/new balance6.png",
     "gallary": [
-      {"id": 5, "image": "/src/assets/dresses/nb60.png"}
+      {"id": 5, "image": "/assets/dresses/nb60.png"}
     ],
     "offers": 22,
     "title": "Formal Blazer Dress",
@@ -444,11 +444,11 @@
   {
     "id": 119,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance7.png",
+    "image": "/assets/dresses/new balance7.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/nb61.png"},
-      {"id": 3, "image": "/src/assets/dresses/nb62.png"},
-      {"id": 4, "image": "/src/assets/dresses/nb63.png"}
+      {"id": 2, "image": "/assets/dresses/nb61.png"},
+      {"id": 3, "image": "/assets/dresses/nb62.png"},
+      {"id": 4, "image": "/assets/dresses/nb63.png"}
     ],
     "offers": 15,
     "title": "Casual Knit Dress",
@@ -471,9 +471,9 @@
   {
     "id": 120,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance8.png",
+    "image": "/assets/dresses/new balance8.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/nb64.png"}
+      {"id": 1, "image": "/assets/dresses/nb64.png"}
     ],
     "offers": 30,
     "title": "Elegant Silk Dress",
@@ -494,10 +494,10 @@
   {
     "id": 121,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance9.png",
+    "image": "/assets/dresses/new balance9.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/nb65.png"},
-      {"id": 5, "image": "/src/assets/dresses/nb66.png"}
+      {"id": 3, "image": "/assets/dresses/nb65.png"},
+      {"id": 5, "image": "/assets/dresses/nb66.png"}
     ],
     "offers": 10,
     "title": "Casual Linen Dress",
@@ -519,10 +519,10 @@
   {
     "id": 122,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance10.png",
+    "image": "/assets/dresses/new balance10.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/nb67.png"},
-      {"id": 2, "image": "/src/assets/dresses/nb68.png"}
+      {"id": 4, "image": "/assets/dresses/nb67.png"},
+      {"id": 2, "image": "/assets/dresses/nb68.png"}
     ],
     "offers": 20,
     "title": "Party Sequins Dress",
@@ -544,9 +544,9 @@
   {
     "id": 123,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance11.png",
+    "image": "/assets/dresses/new balance11.png",
     "gallary": [
-      {"id": 5, "image": "/src/assets/dresses/nb69.png"}
+      {"id": 5, "image": "/assets/dresses/nb69.png"}
     ],
     "offers": 12,
     "title": "Casual Cotton Dress",
@@ -567,10 +567,10 @@
   {
     "id": 124,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance12.png",
+    "image": "/assets/dresses/new balance12.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/nb70.png"},
-      {"id": 3, "image": "/src/assets/dresses/nb71.png"}
+      {"id": 1, "image": "/assets/dresses/nb70.png"},
+      {"id": 3, "image": "/assets/dresses/nb71.png"}
     ],
     "offers": 25,
     "title": "Elegant Evening Gown",
@@ -592,11 +592,11 @@
   {
     "id": 125,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M1.png",
+    "image": "/assets/dresses/H&M1.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/hm51.png"},
-      {"id": 4, "image": "/src/assets/dresses/hm52.png"},
-      {"id": 5, "image": "/src/assets/dresses/hm53.png"}
+      {"id": 2, "image": "/assets/dresses/hm51.png"},
+      {"id": 4, "image": "/assets/dresses/hm52.png"},
+      {"id": 5, "image": "/assets/dresses/hm53.png"}
     ],
     "offers": 5,
     "title": "Sports Denim Dress",
@@ -619,9 +619,9 @@
   {
     "id": 126,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M2.png",
+    "image": "/assets/dresses/H&M2.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/hm54.png"}
+      {"id": 3, "image": "/assets/dresses/hm54.png"}
     ],
     "offers": 18,
     "title": "Summer Floral Dress",
@@ -642,10 +642,10 @@
   {
     "id": 127,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M3.png",
+    "image": "/assets/dresses/H&M3.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/hm55.png"},
-      {"id": 5, "image": "/src/assets/dresses/hm56.png"}
+      {"id": 1, "image": "/assets/dresses/hm55.png"},
+      {"id": 5, "image": "/assets/dresses/hm56.png"}
     ],
     "offers": 22,
     "title": "Formal Blazer Dress",
@@ -667,9 +667,9 @@
   {
     "id": 128,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M4.png",
+    "image": "/assets/dresses/H&M4.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/hm57.png"}
+      {"id": 4, "image": "/assets/dresses/hm57.png"}
     ],
     "offers": 15,
     "title": "Sports Knit Dress",
@@ -690,10 +690,10 @@
   {
     "id": 129,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M5.png",
+    "image": "/assets/dresses/H&M5.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/hm58.png"},
-      {"id": 3, "image": "/src/assets/dresses/hm59.png"}
+      {"id": 2, "image": "/assets/dresses/hm58.png"},
+      {"id": 3, "image": "/assets/dresses/hm59.png"}
     ],
     "offers": 30,
     "title": "Elegant Silk Dress",
@@ -715,11 +715,11 @@
   {
     "id": 130,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M6.png",
+    "image": "/assets/dresses/H&M6.png",
     "gallary": [
-      {"id": 5, "image": "/src/assets/dresses/hm60.png"},
-      {"id": 1, "image": "/src/assets/dresses/hm61.png"},
-      {"id": 4, "image": "/src/assets/dresses/hm62.png"}
+      {"id": 5, "image": "/assets/dresses/hm60.png"},
+      {"id": 1, "image": "/assets/dresses/hm61.png"},
+      {"id": 4, "image": "/assets/dresses/hm62.png"}
     ],
     "offers": 10,
     "title": "Sports Linen Dress",
@@ -742,9 +742,9 @@
   {
     "id": 131,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M7.png",
+    "image": "/assets/dresses/H&M7.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/hm63.png"}
+      {"id": 3, "image": "/assets/dresses/hm63.png"}
     ],
     "offers": 20,
     "title": "Party Sequins Dress",
@@ -765,10 +765,10 @@
   {
     "id": 132,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M8.png",
+    "image": "/assets/dresses/H&M8.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/hm64.png"},
-      {"id": 4, "image": "/src/assets/dresses/hm65.png"}
+      {"id": 2, "image": "/assets/dresses/hm64.png"},
+      {"id": 4, "image": "/assets/dresses/hm65.png"}
     ],
     "offers": 12,
     "title": "Sports Cotton Dress",
@@ -790,9 +790,9 @@
   {
     "id": 133,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M9.png",
+    "image": "/assets/dresses/H&M9.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/hm66.png"}
+      {"id": 1, "image": "/assets/dresses/hm66.png"}
     ],
     "offers": 25,
     "title": "Elegant Evening Gown",
@@ -813,10 +813,10 @@
   {
     "id": 134,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M10.png",
+    "image": "/assets/dresses/H&M10.png",
     "gallary": [
-      {"id": 5, "image": "/src/assets/dresses/hm67.png"},
-      {"id": 3, "image": "/src/assets/dresses/hm68.png"}
+      {"id": 5, "image": "/assets/dresses/hm67.png"},
+      {"id": 3, "image": "/assets/dresses/hm68.png"}
     ],
     "offers": 5,
     "title": "Sports Denim Dress",
@@ -838,9 +838,9 @@
   {
     "id": 135,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M11.png",
+    "image": "/assets/dresses/H&M11.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/hm69.png"}
+      {"id": 4, "image": "/assets/dresses/hm69.png"}
     ],
     "offers": 18,
     "title": "Summer Floral Dress",
@@ -861,10 +861,10 @@
   {
     "id": 136,
     "installment": 0,
-    "image": "/src/assets/dresses/mange1.png",
+    "image": "/assets/dresses/mange1.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/m51.png"},
-      {"id": 1, "image": "/src/assets/dresses/m52.png"}
+      {"id": 2, "image": "/assets/dresses/m51.png"},
+      {"id": 1, "image": "/assets/dresses/m52.png"}
     ],
     "offers": 22,
     "title": "Formal Blazer Dress",
@@ -886,11 +886,11 @@
   {
     "id": 137,
     "installment": 0,
-    "image": "/src/assets/dresses/mange2.png",
+    "image": "/assets/dresses/mange2.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/m53.png"},
-      {"id": 5, "image": "/src/assets/dresses/m54.png"},
-      {"id": 4, "image": "/src/assets/dresses/m55.png"}
+      {"id": 3, "image": "/assets/dresses/m53.png"},
+      {"id": 5, "image": "/assets/dresses/m54.png"},
+      {"id": 4, "image": "/assets/dresses/m55.png"}
     ],
     "offers": 15,
     "title": "Sports Knit Dress",
@@ -913,9 +913,9 @@
   {
     "id": 138,
     "installment": 0,
-    "image": "/src/assets/dresses/mange3.png",
+    "image": "/assets/dresses/mange3.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/m56.png"}
+      {"id": 1, "image": "/assets/dresses/m56.png"}
     ],
     "offers": 30,
     "title": "Elegant Silk Dress",
@@ -936,10 +936,10 @@
   {
     "id": 139,
     "installment": 0,
-    "image": "/src/assets/dresses/mange4.png",
+    "image": "/assets/dresses/mange4.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/m57.png"},
-      {"id": 2, "image": "/src/assets/dresses/m58.png"}
+      {"id": 4, "image": "/assets/dresses/m57.png"},
+      {"id": 2, "image": "/assets/dresses/m58.png"}
     ],
     "offers": 10,
     "title": "Sports Leather Dress",
@@ -961,9 +961,9 @@
   {
     "id": 140,
     "installment": 0,
-    "image": "/src/assets/dresses/mange5.png",
+    "image": "/assets/dresses/mange5.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/m59.png"}
+      {"id": 3, "image": "/assets/dresses/m59.png"}
     ],
     "offers": 20,
     "title": "Party Sequins Dress",
@@ -984,10 +984,10 @@
   {
     "id": 141,
     "installment": 0,
-    "image": "/src/assets/dresses/mange6.png",
+    "image": "/assets/dresses/mange6.png",
     "gallary": [
-      {"id": 5, "image": "/src/assets/dresses/m60.png"},
-      {"id": 1, "image": "/src/assets/dresses/m61.png"}
+      {"id": 5, "image": "/assets/dresses/m60.png"},
+      {"id": 1, "image": "/assets/dresses/m61.png"}
     ],
     "offers": 12,
     "title": "Casual Cotton Dress",
@@ -1009,10 +1009,10 @@
   {
     "id": 142,
     "installment": 0,
-    "image": "/src/assets/dresses/mange7.png",
+    "image": "/assets/dresses/mange7.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/m62.png"},
-      {"id": 4, "image": "/src/assets/dresses/m63.png"}
+      {"id": 2, "image": "/assets/dresses/m62.png"},
+      {"id": 4, "image": "/assets/dresses/m63.png"}
     ],
     "offers": 25,
     "title": "Elegant Evening Gown",
@@ -1034,9 +1034,9 @@
   {
     "id": 143,
     "installment": 0,
-    "image": "/src/assets/dresses/mange8.png",
+    "image": "/assets/dresses/mange8.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/m64.png"}
+      {"id": 3, "image": "/assets/dresses/m64.png"}
     ],
     "offers": 5,
     "title": "Sports Leather Dress",
@@ -1057,10 +1057,10 @@
   {
     "id": 144,
     "installment": 0,
-    "image": "/src/assets/dresses/mange9.png",
+    "image": "/assets/dresses/mange9.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/m65.png"},
-      {"id": 5, "image": "/src/assets/dresses/m66.png"}
+      {"id": 1, "image": "/assets/dresses/m65.png"},
+      {"id": 5, "image": "/assets/dresses/m66.png"}
     ],
     "offers": 18,
     "title": "Summer Floral Dress",
@@ -1082,9 +1082,9 @@
   {
     "id": 145,
     "installment": 0,
-    "image": "/src/assets/dresses/mange10.png",
+    "image": "/assets/dresses/mange10.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/m67.png"}
+      {"id": 4, "image": "/assets/dresses/m67.png"}
     ],
     "offers": 22,
     "title": "Formal Blazer Dress",
@@ -1105,10 +1105,10 @@
   {
     "id": 146,
     "installment": 0,
-    "image": "/src/assets/dresses/mange11.png",
+    "image": "/assets/dresses/mange11.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/m68.png"},
-      {"id": 3, "image": "/src/assets/dresses/m69.png"}
+      {"id": 2, "image": "/assets/dresses/m68.png"},
+      {"id": 3, "image": "/assets/dresses/m69.png"}
     ],
     "offers": 15,
     "title": "Sports Knit Dress",
@@ -1130,11 +1130,11 @@
   {
     "id": 147,
     "installment": 0,
-    "image": "/src/assets/dresses/mange12.png",
+    "image": "/assets/dresses/mange12.png",
     "gallary": [
-      {"id": 1, "image": "/src/assets/dresses/m70.png"},
-      {"id": 5, "image": "/src/assets/dresses/m71.png"},
-      {"id": 4, "image": "/src/assets/dresses/m72.png"}
+      {"id": 1, "image": "/assets/dresses/m70.png"},
+      {"id": 5, "image": "/assets/dresses/m71.png"},
+      {"id": 4, "image": "/assets/dresses/m72.png"}
     ],
     "offers": 30,
     "title": "Elegant Silk Dress",
@@ -1157,9 +1157,9 @@
   {
     "id": 148,
     "installment": 0,
-    "image": "/src/assets/dresses/mange13.png",
+    "image": "/assets/dresses/mange13.png",
     "gallary": [
-      {"id": 3, "image": "/src/assets/dresses/m73.png"}
+      {"id": 3, "image": "/assets/dresses/m73.png"}
     ],
     "offers": 10,
     "title": "Sports Linen Dress",
@@ -1180,10 +1180,10 @@
   {
     "id": 149,
     "installment": 0,
-    "image": "/src/assets/dresses/mange14.png",
+    "image": "/assets/dresses/mange14.png",
     "gallary": [
-      {"id": 2, "image": "/src/assets/dresses/m74.png"},
-      {"id": 1, "image": "/src/assets/dresses/m75.png"}
+      {"id": 2, "image": "/assets/dresses/m74.png"},
+      {"id": 1, "image": "/assets/dresses/m75.png"}
     ],
     "offers": 20,
     "title": "Party Sequins Dress",
@@ -1205,10 +1205,10 @@
   {
     "id": 150,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M12.png",
+    "image": "/assets/dresses/H&M12.png",
     "gallary": [
-      {"id": 4, "image": "/src/assets/dresses/hm70.png"},
-      {"id": 5, "image": "/src/assets/dresses/hm71.png"}
+      {"id": 4, "image": "/assets/dresses/hm70.png"},
+      {"id": 5, "image": "/assets/dresses/hm71.png"}
     ],
     "offers": 12,
     "title": "Sports Cotton Dress",
@@ -1356,7 +1356,7 @@
   {
     "id": 10,
     "title": "Apple Watch Series 11 GPS 46mm",
-    "image": "/src/assets/products image/wristwatchs/product2/main.jpg",
+    "image": "/assets/products image/wristwatchs/product2/main.jpg",
     "rating_value": 4.7,
     "rating_count": 95,
     "price": 11000,
@@ -1371,7 +1371,7 @@
   {
     "id": 12,
     "title": "Apple Watch Ultra 2 GPS + Cellular 49mm",
-    "image": "/src/assets/products image/wristwatchs/product3/main.jpg",
+    "image": "/assets/products image/wristwatchs/product3/main.jpg",
     "rating_value": 4.9,
     "rating_count": 1270,
     "price": 27999,

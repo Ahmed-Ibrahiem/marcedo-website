@@ -2,15 +2,15 @@
   {
     "id": 101,
     "installment": 10,
-    "image": "/src/assets/dresses/zara1.png",
+    "image": "/assets/dresses/zara1.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/zara51.png"
+        "image": "/assets/dresses/zara51.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/zara52.png"
+        "image": "/assets/dresses/zara52.png"
       }
     ],
     "offers": 24,
@@ -53,11 +53,11 @@
   {
     "id": 102,
     "installment": 0,
-    "image": "/src/assets/dresses/zara2.png",
+    "image": "/assets/dresses/zara2.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/zara53.png"
+        "image": "/assets/dresses/zara53.png"
       }
     ],
     "offers": 0,
@@ -94,15 +94,15 @@
   {
     "id": 103,
     "installment": 0,
-    "image": "/src/assets/dresses/zara3.png",
+    "image": "/assets/dresses/zara3.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/zara54.png"
+        "image": "/assets/dresses/zara54.png"
       },
       {
         "id": 3,
-        "image": "/src/assets/dresses/zara55.png"
+        "image": "/assets/dresses/zara55.png"
       }
     ],
     "offers": 10,
@@ -144,19 +144,19 @@
   {
     "id": 104,
     "installment": 0,
-    "image": "/src/assets/dresses/zara4.png",
+    "image": "/assets/dresses/zara4.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/zara56.png"
+        "image": "/assets/dresses/zara56.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/zara57.png"
+        "image": "/assets/dresses/zara57.png"
       },
       {
         "id": 2,
-        "image": "/src/assets/dresses/zara58.png"
+        "image": "/assets/dresses/zara58.png"
       }
     ],
     "offers": 15,
@@ -206,11 +206,11 @@
   {
     "id": 105,
     "installment": 0,
-    "image": "/src/assets/dresses/zara5.png",
+    "image": "/assets/dresses/zara5.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/zara59.png"
+        "image": "/assets/dresses/zara59.png"
       }
     ],
     "offers": 20,
@@ -248,15 +248,15 @@
   {
     "id": 106,
     "installment": 0,
-    "image": "/src/assets/dresses/zara6.png",
+    "image": "/assets/dresses/zara6.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/zara60.png"
+        "image": "/assets/dresses/zara60.png"
       },
       {
         "id": 1,
-        "image": "/src/assets/dresses/zara61.png"
+        "image": "/assets/dresses/zara61.png"
       }
     ],
     "offers": 30,
@@ -299,15 +299,15 @@
   {
     "id": 107,
     "installment": 0,
-    "image": "/src/assets/dresses/zara7.png",
+    "image": "/assets/dresses/zara7.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/zara62.png"
+        "image": "/assets/dresses/zara62.png"
       },
       {
         "id": 3,
-        "image": "/src/assets/dresses/zara63.png"
+        "image": "/assets/dresses/zara63.png"
       }
     ],
     "offers": 15,
@@ -349,11 +349,11 @@
   {
     "id": 108,
     "installment": 0,
-    "image": "/src/assets/dresses/zara8.png",
+    "image": "/assets/dresses/zara8.png",
     "gallary": [
       {
         "id": 5,
-        "image": "/src/assets/dresses/zara64.png"
+        "image": "/assets/dresses/zara64.png"
       }
     ],
     "offers": 18,
@@ -390,15 +390,15 @@
   {
     "id": 109,
     "installment": 0,
-    "image": "/src/assets/dresses/zara9.png",
+    "image": "/assets/dresses/zara9.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/zara65.png"
+        "image": "/assets/dresses/zara65.png"
       },
       {
         "id": 4,
-        "image": "/src/assets/dresses/zara66.png"
+        "image": "/assets/dresses/zara66.png"
       }
     ],
     "offers": 21,
@@ -443,19 +443,19 @@
   {
     "id": 110,
     "installment": 0,
-    "image": "/src/assets/dresses/zara10.png",
+    "image": "/assets/dresses/zara10.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/zara67.png"
+        "image": "/assets/dresses/zara67.png"
       },
       {
         "id": 3,
-        "image": "/src/assets/dresses/zara68.png"
+        "image": "/assets/dresses/zara68.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/zara69.png"
+        "image": "/assets/dresses/zara69.png"
       }
     ],
     "offers": 35,
@@ -504,11 +504,11 @@
   {
     "id": 111,
     "installment": 0,
-    "image": "/src/assets/dresses/zara11.png",
+    "image": "/assets/dresses/zara11.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/zara70.png"
+        "image": "/assets/dresses/zara70.png"
       }
     ],
     "offers": 12,
@@ -545,15 +545,15 @@
   {
     "id": 112,
     "installment": 0,
-    "image": "/src/assets/dresses/zara12.png",
+    "image": "/assets/dresses/zara12.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/zara71.png"
+        "image": "/assets/dresses/zara71.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/zara72.png"
+        "image": "/assets/dresses/zara72.png"
       }
     ],
     "offers": 8,
@@ -597,15 +597,15 @@
   {
     "id": 113,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance1.png",
+    "image": "/assets/dresses/new balance1.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/nb51.png"
+        "image": "/assets/dresses/nb51.png"
       },
       {
         "id": 2,
-        "image": "/src/assets/dresses/nb52.png"
+        "image": "/assets/dresses/nb52.png"
       }
     ],
     "offers": 25,
@@ -648,19 +648,19 @@
   {
     "id": 114,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance2.png",
+    "image": "/assets/dresses/new balance2.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/nb53.png"
+        "image": "/assets/dresses/nb53.png"
       },
       {
         "id": 1,
-        "image": "/src/assets/dresses/nb54.png"
+        "image": "/assets/dresses/nb54.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/nb55.png"
+        "image": "/assets/dresses/nb55.png"
       }
     ],
     "offers": 10,
@@ -708,11 +708,11 @@
   {
     "id": 115,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance3.png",
+    "image": "/assets/dresses/new balance3.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/nb56.png"
+        "image": "/assets/dresses/nb56.png"
       }
     ],
     "offers": 40,
@@ -749,11 +749,11 @@
   {
     "id": 116,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance4.png",
+    "image": "/assets/dresses/new balance4.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/nb57.png"
+        "image": "/assets/dresses/nb57.png"
       }
     ],
     "offers": 5,
@@ -792,15 +792,15 @@
   {
     "id": 117,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance5.png",
+    "image": "/assets/dresses/new balance5.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/nb58.png"
+        "image": "/assets/dresses/nb58.png"
       },
       {
         "id": 1,
-        "image": "/src/assets/dresses/nb59.png"
+        "image": "/assets/dresses/nb59.png"
       }
     ],
     "offers": 18,
@@ -843,11 +843,11 @@
   {
     "id": 118,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance6.png",
+    "image": "/assets/dresses/new balance6.png",
     "gallary": [
       {
         "id": 5,
-        "image": "/src/assets/dresses/nb60.png"
+        "image": "/assets/dresses/nb60.png"
       }
     ],
     "offers": 22,
@@ -884,19 +884,19 @@
   {
     "id": 119,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance7.png",
+    "image": "/assets/dresses/new balance7.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/nb61.png"
+        "image": "/assets/dresses/nb61.png"
       },
       {
         "id": 3,
-        "image": "/src/assets/dresses/nb62.png"
+        "image": "/assets/dresses/nb62.png"
       },
       {
         "id": 4,
-        "image": "/src/assets/dresses/nb63.png"
+        "image": "/assets/dresses/nb63.png"
       }
     ],
     "offers": 15,
@@ -944,11 +944,11 @@
   {
     "id": 120,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance8.png",
+    "image": "/assets/dresses/new balance8.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/nb64.png"
+        "image": "/assets/dresses/nb64.png"
       }
     ],
     "offers": 30,
@@ -986,15 +986,15 @@
   {
     "id": 121,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance9.png",
+    "image": "/assets/dresses/new balance9.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/nb65.png"
+        "image": "/assets/dresses/nb65.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/nb66.png"
+        "image": "/assets/dresses/nb66.png"
       }
     ],
     "offers": 10,
@@ -1037,15 +1037,15 @@
   {
     "id": 122,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance10.png",
+    "image": "/assets/dresses/new balance10.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/nb67.png"
+        "image": "/assets/dresses/nb67.png"
       },
       {
         "id": 2,
-        "image": "/src/assets/dresses/nb68.png"
+        "image": "/assets/dresses/nb68.png"
       }
     ],
     "offers": 20,
@@ -1087,11 +1087,11 @@
   {
     "id": 123,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance11.png",
+    "image": "/assets/dresses/new balance11.png",
     "gallary": [
       {
         "id": 5,
-        "image": "/src/assets/dresses/nb69.png"
+        "image": "/assets/dresses/nb69.png"
       }
     ],
     "offers": 12,
@@ -1128,15 +1128,15 @@
   {
     "id": 124,
     "installment": 0,
-    "image": "/src/assets/dresses/new balance12.png",
+    "image": "/assets/dresses/new balance12.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/nb70.png"
+        "image": "/assets/dresses/nb70.png"
       },
       {
         "id": 3,
-        "image": "/src/assets/dresses/nb71.png"
+        "image": "/assets/dresses/nb71.png"
       }
     ],
     "offers": 25,
@@ -1180,19 +1180,19 @@
   {
     "id": 125,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M1.png",
+    "image": "/assets/dresses/H&M1.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/hm51.png"
+        "image": "/assets/dresses/hm51.png"
       },
       {
         "id": 4,
-        "image": "/src/assets/dresses/hm52.png"
+        "image": "/assets/dresses/hm52.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/hm53.png"
+        "image": "/assets/dresses/hm53.png"
       }
     ],
     "offers": 5,
@@ -1242,11 +1242,11 @@
   {
     "id": 126,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M2.png",
+    "image": "/assets/dresses/H&M2.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/hm54.png"
+        "image": "/assets/dresses/hm54.png"
       }
     ],
     "offers": 18,
@@ -1283,15 +1283,15 @@
   {
     "id": 127,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M3.png",
+    "image": "/assets/dresses/H&M3.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/hm55.png"
+        "image": "/assets/dresses/hm55.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/hm56.png"
+        "image": "/assets/dresses/hm56.png"
       }
     ],
     "offers": 22,
@@ -1333,11 +1333,11 @@
   {
     "id": 128,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M4.png",
+    "image": "/assets/dresses/H&M4.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/hm57.png"
+        "image": "/assets/dresses/hm57.png"
       }
     ],
     "offers": 15,
@@ -1374,15 +1374,15 @@
   {
     "id": 129,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M5.png",
+    "image": "/assets/dresses/H&M5.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/hm58.png"
+        "image": "/assets/dresses/hm58.png"
       },
       {
         "id": 3,
-        "image": "/src/assets/dresses/hm59.png"
+        "image": "/assets/dresses/hm59.png"
       }
     ],
     "offers": 30,
@@ -1427,19 +1427,19 @@
   {
     "id": 130,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M6.png",
+    "image": "/assets/dresses/H&M6.png",
     "gallary": [
       {
         "id": 5,
-        "image": "/src/assets/dresses/hm60.png"
+        "image": "/assets/dresses/hm60.png"
       },
       {
         "id": 1,
-        "image": "/src/assets/dresses/hm61.png"
+        "image": "/assets/dresses/hm61.png"
       },
       {
         "id": 4,
-        "image": "/src/assets/dresses/hm62.png"
+        "image": "/assets/dresses/hm62.png"
       }
     ],
     "offers": 10,
@@ -1488,11 +1488,11 @@
   {
     "id": 131,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M7.png",
+    "image": "/assets/dresses/H&M7.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/hm63.png"
+        "image": "/assets/dresses/hm63.png"
       }
     ],
     "offers": 20,
@@ -1529,15 +1529,15 @@
   {
     "id": 132,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M8.png",
+    "image": "/assets/dresses/H&M8.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/hm64.png"
+        "image": "/assets/dresses/hm64.png"
       },
       {
         "id": 4,
-        "image": "/src/assets/dresses/hm65.png"
+        "image": "/assets/dresses/hm65.png"
       }
     ],
     "offers": 12,
@@ -1579,11 +1579,11 @@
   {
     "id": 133,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M9.png",
+    "image": "/assets/dresses/H&M9.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/hm66.png"
+        "image": "/assets/dresses/hm66.png"
       }
     ],
     "offers": 25,
@@ -1621,15 +1621,15 @@
   {
     "id": 134,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M10.png",
+    "image": "/assets/dresses/H&M10.png",
     "gallary": [
       {
         "id": 5,
-        "image": "/src/assets/dresses/hm67.png"
+        "image": "/assets/dresses/hm67.png"
       },
       {
         "id": 3,
-        "image": "/src/assets/dresses/hm68.png"
+        "image": "/assets/dresses/hm68.png"
       }
     ],
     "offers": 5,
@@ -1672,11 +1672,11 @@
   {
     "id": 135,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M11.png",
+    "image": "/assets/dresses/H&M11.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/hm69.png"
+        "image": "/assets/dresses/hm69.png"
       }
     ],
     "offers": 18,
@@ -1713,15 +1713,15 @@
   {
     "id": 136,
     "installment": 0,
-    "image": "/src/assets/dresses/mange1.png",
+    "image": "/assets/dresses/mange1.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/m51.png"
+        "image": "/assets/dresses/m51.png"
       },
       {
         "id": 1,
-        "image": "/src/assets/dresses/m52.png"
+        "image": "/assets/dresses/m52.png"
       }
     ],
     "offers": 22,
@@ -1765,19 +1765,19 @@
   {
     "id": 137,
     "installment": 0,
-    "image": "/src/assets/dresses/mange2.png",
+    "image": "/assets/dresses/mange2.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/m53.png"
+        "image": "/assets/dresses/m53.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/m54.png"
+        "image": "/assets/dresses/m54.png"
       },
       {
         "id": 4,
-        "image": "/src/assets/dresses/m55.png"
+        "image": "/assets/dresses/m55.png"
       }
     ],
     "offers": 15,
@@ -1825,11 +1825,11 @@
   {
     "id": 138,
     "installment": 0,
-    "image": "/src/assets/dresses/mange3.png",
+    "image": "/assets/dresses/mange3.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/m56.png"
+        "image": "/assets/dresses/m56.png"
       }
     ],
     "offers": 30,
@@ -1866,15 +1866,15 @@
   {
     "id": 139,
     "installment": 0,
-    "image": "/src/assets/dresses/mange4.png",
+    "image": "/assets/dresses/mange4.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/m57.png"
+        "image": "/assets/dresses/m57.png"
       },
       {
         "id": 2,
-        "image": "/src/assets/dresses/m58.png"
+        "image": "/assets/dresses/m58.png"
       }
     ],
     "offers": 10,
@@ -1919,11 +1919,11 @@
   {
     "id": 140,
     "installment": 0,
-    "image": "/src/assets/dresses/mange5.png",
+    "image": "/assets/dresses/mange5.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/m59.png"
+        "image": "/assets/dresses/m59.png"
       }
     ],
     "offers": 20,
@@ -1960,15 +1960,15 @@
   {
     "id": 141,
     "installment": 0,
-    "image": "/src/assets/dresses/mange6.png",
+    "image": "/assets/dresses/mange6.png",
     "gallary": [
       {
         "id": 5,
-        "image": "/src/assets/dresses/m60.png"
+        "image": "/assets/dresses/m60.png"
       },
       {
         "id": 1,
-        "image": "/src/assets/dresses/m61.png"
+        "image": "/assets/dresses/m61.png"
       }
     ],
     "offers": 12,
@@ -2011,15 +2011,15 @@
   {
     "id": 142,
     "installment": 0,
-    "image": "/src/assets/dresses/mange7.png",
+    "image": "/assets/dresses/mange7.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/m62.png"
+        "image": "/assets/dresses/m62.png"
       },
       {
         "id": 4,
-        "image": "/src/assets/dresses/m63.png"
+        "image": "/assets/dresses/m63.png"
       }
     ],
     "offers": 25,
@@ -2061,11 +2061,11 @@
   {
     "id": 143,
     "installment": 0,
-    "image": "/src/assets/dresses/mange8.png",
+    "image": "/assets/dresses/mange8.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/m64.png"
+        "image": "/assets/dresses/m64.png"
       }
     ],
     "offers": 5,
@@ -2103,15 +2103,15 @@
   {
     "id": 144,
     "installment": 0,
-    "image": "/src/assets/dresses/mange9.png",
+    "image": "/assets/dresses/mange9.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/m65.png"
+        "image": "/assets/dresses/m65.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/m66.png"
+        "image": "/assets/dresses/m66.png"
       }
     ],
     "offers": 18,
@@ -2154,11 +2154,11 @@
   {
     "id": 145,
     "installment": 0,
-    "image": "/src/assets/dresses/mange10.png",
+    "image": "/assets/dresses/mange10.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/m67.png"
+        "image": "/assets/dresses/m67.png"
       }
     ],
     "offers": 22,
@@ -2194,15 +2194,15 @@
   {
     "id": 146,
     "installment": 0,
-    "image": "/src/assets/dresses/mange11.png",
+    "image": "/assets/dresses/mange11.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/m68.png"
+        "image": "/assets/dresses/m68.png"
       },
       {
         "id": 3,
-        "image": "/src/assets/dresses/m69.png"
+        "image": "/assets/dresses/m69.png"
       }
     ],
     "offers": 15,
@@ -2245,19 +2245,19 @@
   {
     "id": 147,
     "installment": 0,
-    "image": "/src/assets/dresses/mange12.png",
+    "image": "/assets/dresses/mange12.png",
     "gallary": [
       {
         "id": 1,
-        "image": "/src/assets/dresses/m70.png"
+        "image": "/assets/dresses/m70.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/m71.png"
+        "image": "/assets/dresses/m71.png"
       },
       {
         "id": 4,
-        "image": "/src/assets/dresses/m72.png"
+        "image": "/assets/dresses/m72.png"
       }
     ],
     "offers": 30,
@@ -2307,11 +2307,11 @@
   {
     "id": 148,
     "installment": 0,
-    "image": "/src/assets/dresses/mange8.png",
+    "image": "/assets/dresses/mange8.png",
     "gallary": [
       {
         "id": 3,
-        "image": "/src/assets/dresses/m73.png"
+        "image": "/assets/dresses/m73.png"
       }
     ],
     "offers": 10,
@@ -2348,15 +2348,15 @@
   {
     "id": 149,
     "installment": 0,
-    "image": "/src/assets/dresses/mange14.png",
+    "image": "/assets/dresses/mange14.png",
     "gallary": [
       {
         "id": 2,
-        "image": "/src/assets/dresses/m74.png"
+        "image": "/assets/dresses/m74.png"
       },
       {
         "id": 1,
-        "image": "/src/assets/dresses/m75.png"
+        "image": "/assets/dresses/m75.png"
       }
     ],
     "offers": 20,
@@ -2399,15 +2399,15 @@
   {
     "id": 150,
     "installment": 0,
-    "image": "/src/assets/dresses/H&M12.png",
+    "image": "/assets/dresses/H&M12.png",
     "gallary": [
       {
         "id": 4,
-        "image": "/src/assets/dresses/hm70.png"
+        "image": "/assets/dresses/hm70.png"
       },
       {
         "id": 5,
-        "image": "/src/assets/dresses/hm71.png"
+        "image": "/assets/dresses/hm71.png"
       }
     ],
     "offers": 12,

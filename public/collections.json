@@ -3,11 +3,11 @@
     "id": 1,
     "title": "Dresses",
     "slug": "dresses",
-    "image": "/src/assets/Collection/dress.png",
+    "image": "/assets/Collection/dress.png",
     "description": "Explore elegant and casual dresses for all occasions.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
-      "price": {"min": 0, "max": 1500 , "highest_price" : 1500},
+      "price": {"min": 0, "max": 8000 , "highest_price" : 8000},
       "colors": [],
       "size": [],
       "brands" : []
@@ -18,7 +18,7 @@
     "id": 2,
     "title": "Shirt",
     "slug": "shirt",
-    "image": "/src/assets/Collection/shirt.png",
+    "image": "/assets/Collection/shirt.png",
     "description": "Discover stylish and comfortable shirts for every occasion.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -31,7 +31,7 @@
     "id": 3,
     "title": "T-shirt",
     "slug": "t-shirt",
-    "image": "/src/assets/Collection/t-shirt.png",
+    "image": "/assets/Collection/t-shirt.png",
     "description": "Find trendy and comfortable t-shirts for daily wear.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -44,7 +44,7 @@
     "id": 4,
     "title": "Blazer",
     "slug": "blazer",
-    "image": "/src/assets/Collection/blazer.png",
+    "image": "/assets/Collection/blazer.png",
     "description": "Elegant blazers for formal and smart casual occasions.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -57,7 +57,7 @@
     "id": 5,
     "title": "Sport",
     "slug": "sport",
-    "image": "/src/assets/Collection/sport.png",
+    "image": "/assets/Collection/sport.png",
     "description": "Performance sportswear for your active lifestyle.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -70,7 +70,7 @@
     "id": 6,
     "title": "Sweeter",
     "slug": "sweeter",
-    "image": "/src/assets/Collection/sweeter.png",
+    "image": "/assets/Collection/sweeter.png",
     "description": "Warm and cozy sweaters for cold weather comfort.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -83,7 +83,7 @@
     "id": 7,
     "title": "Wristwatch",
     "slug": "wristwatch",
-    "image": "/src/assets/Collection/wristwatch.png",
+    "image": "/assets/Collection/wristwatch.png",
     "description": "Elegant timepieces combining style and functionality.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -96,7 +96,7 @@
     "id": 8,
     "title": "Perfume",
     "slug": "perfume",
-    "image": "/src/assets/Collection/perfume.png",
+    "image": "/assets/Collection/perfume.png",
     "description": "Exquisite fragrances for every personality and occasion.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -109,7 +109,7 @@
     "id": 9,
     "title": "Accessories",
     "slug": "accessories_device",
-    "image": "/src/assets/Collection/accessories_device.png",
+    "image": "/assets/Collection/accessories_device.png",
     "description": "Essential accessories to complement your devices.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -122,7 +122,7 @@
     "id": 10,
     "title": "Electronics",
     "slug": "electronics",
-    "image": "/src/assets/Collection/electronics.png",
+    "image": "/assets/Collection/electronics.png",
     "description": "Cutting-edge electronic gadgets and devices.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -135,7 +135,7 @@
     "id": 11,
     "title": "Handbags",
     "slug": "handbags",
-    "image": "/src/assets/Collection/handbags.png",
+    "image": "/assets/Collection/handbags.png",
     "description": "Stylish handbags for every occasion and outfit.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -148,7 +148,7 @@
     "id": 12,
     "title": "Laptops",
     "slug": "laptops",
-    "image": "/src/assets/Collection/laptops.png",
+    "image": "/assets/Collection/laptops.png",
     "description": "High-performance laptops for work and entertainment.",
     "filters": {
       "availability": ["in-stock", "out-stock"],
@@ -161,7 +161,7 @@
     "id": 13,
     "title": "Apple",
     "slug": "apple",
-    "image": "/src/assets/Collection/apple.png",
+    "image": "/assets/Collection/apple.png",
     "description": "Premium Apple products and accessories.",
     "filters": {
       "availability": ["in-stock", "out-stock"],

@@ -33,13 +33,75 @@ const Categories_provider = ({ children }) => {
   const [available_brands, set_available_brands] = useState([]);
   const [stock_nums, set_stock_nums] = useState({ in_stock: 0, out_stock: 0 });
 
+  // Default filter values — used on initial load and when resetting filters
+
+  const initial_filter = {
+    availability: [],
+    price: {
+      highest_price: 8000,
+      min: 0,
+      max: 8000,
+    },
+    colors: [],
+    size: [],
+    brands: [],
+  };
+
   /**
-   * Effect: Fetch products whenever the current_collection changes.
-   * Filters the API response based on the collection's slug.
+   * Reducer to manage filter state updates.
+   * Each action type maps to a specific filter key in the state.
+   * The RESET action restores all filters to their initial values.
+   */
+  const reducer_filter = (state, action) => {
+    const updates = {
+      TOGGLE_AVAILIBILITY: "availability",
+      UPDATE_PRICE: "price",
+      UPDATE_COLORS: "colors",
+      UPDATE_SIZE: "size",
+      UPDATE_BRANDS: "brands",
+    };
+
+    if (action.type === "RESET") return initial_filter;
+    if (updates[action.type]) {
+      return { ...state, [updates[action.type]]: action.payload };
+    }
+    return state;
+  };
+
+  /**
+   * Runs when current_collection changes.
+   * Steps:
+   *  1. Syncs filter state with the collection's preset filters (or resets to defaults).
+   *  2. Fetches products from the JSON file and filters by collection slug.
+   * Combining both steps in one effect ensures filters are set before products arrive,
+   * preventing the filter useEffect from running with stale filter values.
    */
   useEffect(() => {
     if (!current_collection) return;
 
+    // Step 1: Apply collection-specific filters or reset to defaults
+    if (current_collection.filters) {
+      const action_map = {
+        availability: "TOGGLE_AVAILIBILITY",
+        price: "UPDATE_PRICE",
+        colors: "UPDATE_COLORS",
+        size: "UPDATE_SIZE",
+        brands: "UPDATE_BRANDS",
+      };
+
+      for (const key in current_collection.filters) {
+        if (action_map[key]) {
+          dispatch_filter({
+            type: action_map[key],
+            payload: current_collection.filters[key],
+          });
+        }
+      }
+    } else {
+      dispatch_filter({ type: "RESET", payload: initial_filter });
+    }
+
+    // Step 2. Fetches products from the JSON file and filters by collection slug.
     const get_data = async () => {
       try {
         const req = await axios.get("/all_products.json");
@@ -116,37 +178,6 @@ const Categories_provider = ({ children }) => {
 
   /* --- Filter Logic Section --- */
 
-  // Default state for filters
-  const initial_filter = {
-    availability: [],
-    price: {
-      highest_price: 8000,
-      min: 0,
-      max: 8000,
-    },
-    colors: [],
-    size: [],
-    brands: [],
-  };
-
-  /**
-   * Reducer function to handle complex filter state updates.
-   */
-  const reducer_filter = (state, action) => {
-    const updates = {
-      TOGGLE_AVAILIBILITY: "availability",
-      UPDATE_PRICE: "price",
-      UPDATE_COLORS: "colors",
-      UPDATE_SIZE: "size",
-      UPDATE_BRANDS: "brands",
-    };
-
-    if (updates[action.type]) {
-      return { ...state, [updates[action.type]]: action.payload };
-    }
-    return state;
-  };
-
   /**
    * Helper function to toggle values in filter arrays (e.g., adding/removing a size).
    */
@@ -170,31 +201,6 @@ const Categories_provider = ({ children }) => {
   );
 
   const [filter_products, set_filter_products] = useState([]);
-
-  /**
-   * Effect: Sync local filter state with the current_collection's default filters
-   * when the collection changes.
-   */
-  useEffect(() => {
-    if (!current_collection || !current_collection.filters) return;
-
-    const action_map = {
-      availability: "TOGGLE_AVAILIBILITY",
-      price: "UPDATE_PRICE",
-      colors: "UPDATE_COLORS",
-      size: "UPDATE_SIZE",
-      brands: "UPDATE_BRANDS",
-    };
-
-    for (const key in current_collection.filters) {
-      if (action_map[key]) {
-        dispatch_filter({
-          type: action_map[key],
-          payload: current_collection.filters[key],
-        });
-      }
-    }
-  }, [current_collection]);
 
   /* Start Filter Products */
 
@@ -324,7 +330,7 @@ const Categories_provider = ({ children }) => {
     if (all_products.length <= 0) return;
     set_filter_products(sort_products(filter_products));
   }, [sort_option]);
-  
+
   // Context value object to be consumed by components
   const value = {
     filter_options,

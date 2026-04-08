@@ -97,7 +97,7 @@
         "rating": 5,
         "date": "2026-01-18T10:00",
         "tags": ["Excellent quality", "Smooth performance"],
-        "user_image": "/src/assets/users/user 1.png",
+        "user_image": "/assets/users/user 1.png",
         "type": "global",
         "comment": "Premium build quality and very accurate health tracking. Totally worth it."
       }
@@ -205,7 +205,7 @@
         "rating": 5,
         "date": "2026-01-19T14:20",
         "tags": ["Fast charging", "Good quality"],
-        "user_image": "/src/assets/users/user 2.png",
+        "user_image": "/assets/users/user 2.png",
         "type": "global",
         "comment": "Very reliable charger, works perfectly and charges fast."
       }
@@ -312,7 +312,7 @@
         "rating": 5,
         "date": "2026-01-20T18:10",
         "tags": ["Great picture quality", "Excellent value"],
-        "user_image": "/src/assets/users/user-3.png",
+        "user_image": "/assets/users/user-3.png",
         "type": "global",
         "comment": "Very clear picture and smooth performance for streaming and movies."
       }
@@ -416,7 +416,7 @@
         "rating": 5,
         "date": "2026-01-21T12:40",
         "tags": ["Long lasting", "Elegant scent"],
-        "user_image": "/src/assets/users/user-4.png",
+        "user_image": "/assets/users/user-4.png",
         "type": "global",
         "comment": "Very elegant fragrance with great longevity. Perfect for daily use."
       }
@@ -522,7 +522,7 @@
         "rating": 5,
         "date": "2026-01-22T16:15",
         "tags": ["Great sound", "Noise cancelling"],
-        "user_image": "/src/assets/users/user-5.png",
+        "user_image": "/assets/users/user-5.png",
         "type": "global",
         "comment": "Very good sound quality and effective noise cancellation for the price."
       }
@@ -603,11 +603,11 @@
     },
 
     "images": {
-      "main": "/src/assets/iphone 14.png",
+      "main": "/assets/iphone 14.png",
       "gallery": [
-        "/src/assets/iphone 14.png",
-        "/src/assets/iphone 14pro.png",
-        "/src/assets/iphone 15.png"
+        "/assets/iphone 14.png",
+        "/assets/iphone 14pro.png",
+        "/assets/iphone 15.png"
       ]
     },
 
@@ -643,7 +643,7 @@
           "Super fast shipping",
           "Great communication"
         ],
-        "user_image": "/src/assets/users/user 7.png",
+        "user_image": "/assets/users/user 7.png",
         "type": "global",
         "comment": "Absolutely worth it! The product exceeded my expectations. Highly recommend!"
       },
@@ -657,7 +657,7 @@
           "Super fast shipping",
           "Great communication"
         ],
-        "user_image": "/src/assets/users/user 7.png",
+        "user_image": "/assets/users/user 7.png",
         "type": "global",
         "comment": "Absolutely worth it! The product exceeded my expectations. Highly recommend!"
       },
@@ -671,7 +671,7 @@
           "Super fast shipping",
           "Great communication"
         ],
-        "user_image": "/src/assets/users/user 7.png",
+        "user_image": "/assets/users/user 7.png",
         "type": "global",
         "comment": "Absolutely worth it! The product exceeded my expectations. Highly recommend!"
       }
@@ -781,7 +781,7 @@
         "rating": 5,
         "date": "2026-01-23T11:30",
         "tags": ["Very fast", "Beautiful display"],
-        "user_image": "/src/assets/users/user 6.png",
+        "user_image": "/assets/users/user 6.png",
         "type": "global",
         "comment": "Excellent performance with the M1 chip and an amazing screen quality."
       }
@@ -892,7 +892,7 @@
         "rating": 5,
         "date": "2026-01-22T19:10",
         "tags": ["Very powerful", "Excellent battery"],
-        "user_image": "/src/assets/users/user 7.png",
+        "user_image": "/assets/users/user 7.png",
         "type": "global",
         "comment": "The M3 chip is insanely fast. Perfect for heavy development and design work."
       }
@@ -965,13 +965,13 @@
     },
 
     "images": {
-      "main": "/src/assets/products image/wristwatchs/product1/main.jpg",
+      "main": "/assets/products image/wristwatchs/product1/main.jpg",
       "gallery": [
-        "/src/assets/products image/wristwatchs/product1/gallary_1.jpg",
-        "/src/assets/products image/wristwatchs/product1/gallary_2.jpg",
-        "/src/assets/products image/wristwatchs/product1/gallary_3.jpg",
-        "/src/assets/products image/wristwatchs/product1/gallary_4.jpg",
-        "/src/assets/products image/wristwatchs/product1/gallary_5.jpg"
+        "/assets/products image/wristwatchs/product1/gallary_1.jpg",
+        "/assets/products image/wristwatchs/product1/gallary_2.jpg",
+        "/assets/products image/wristwatchs/product1/gallary_3.jpg",
+        "/assets/products image/wristwatchs/product1/gallary_4.jpg",
+        "/assets/products image/wristwatchs/product1/gallary_5.jpg"
       ]
     },
 
@@ -1002,7 +1002,7 @@
         "rating": 5,
         "date": "2026-01-25T10:20",
         "tags": ["Strong build", "Excellent GPS"],
-        "user_image": "/src/assets/users/user 8.png",
+        "user_image": "/assets/users/user 8.png",
         "type": "global",
         "comment": "Great outdoor watch, super accurate GPS and robust design."
       }
@@ -1078,13 +1078,13 @@
     },
 
     "images": {
-      "main": "/src/assets/products image/wristwatchs/product2/main.jpg",
+      "main": "/assets/products image/wristwatchs/product2/main.jpg",
       "gallery": [
-        "/src/assets/products image/wristwatchs/product2/gallary_1.jpg",
-        "/src/assets/products image/wristwatchs/product2/gallary_2.jpg",
-        "/src/assets/products image/wristwatchs/product2/gallary_3.jpg",
-        "/src/assets/products image/wristwatchs/product2/gallary_4.jpg",
-        "/src/assets/products image/wristwatchs/product2/gallary_5.jpg"
+        "/assets/products image/wristwatchs/product2/gallary_1.jpg",
+        "/assets/products image/wristwatchs/product2/gallary_2.jpg",
+        "/assets/products image/wristwatchs/product2/gallary_3.jpg",
+        "/assets/products image/wristwatchs/product2/gallary_4.jpg",
+        "/assets/products image/wristwatchs/product2/gallary_5.jpg"
       ]
     },
 
@@ -1114,7 +1114,7 @@
         "rating": 5,
         "date": "2026-01-20T15:40",
         "tags": ["Great fitness tracking", "Comfortable fit"],
-        "user_image": "/src/assets/users/user 9.png",
+        "user_image": "/assets/users/user 9.png",
         "type": "global",
         "comment": "Very reliable daily smartwatch with excellent health tracking."
       }
@@ -1187,13 +1187,13 @@
     },
 
     "images": {
-      "main": "/src/assets/products image/wristwatchs/product3/main.jpg",
+      "main": "/assets/products image/wristwatchs/product3/main.jpg",
       "gallery": [
-        "/src/assets/products image/wristwatchs/product3/gallary_1.jpg",
-        "/src/assets/products image/wristwatchs/product3/gallary_2.jpg",
-        "/src/assets/products image/wristwatchs/product3/gallary_3.jpg",
-        "/src/assets/products image/wristwatchs/product3/gallary_4.jpg",
-        "/src/assets/products image/wristwatchs/product3/gallary_5.jpg"
+        "/assets/products image/wristwatchs/product3/gallary_1.jpg",
+        "/assets/products image/wristwatchs/product3/gallary_2.jpg",
+        "/assets/products image/wristwatchs/product3/gallary_3.jpg",
+        "/assets/products image/wristwatchs/product3/gallary_4.jpg",
+        "/assets/products image/wristwatchs/product3/gallary_5.jpg"
       ]
     },
 
@@ -1224,7 +1224,7 @@
         "rating": 5,
         "date": "2026-01-24T13:25",
         "tags": ["Excellent battery", "Very clear display"],
-        "user_image": "/src/assets/users/user 11.png",
+        "user_image": "/assets/users/user 11.png",
         "type": "global",
         "comment": "Love this watch — the display is beautiful and battery lasts all day even with workouts."
       }

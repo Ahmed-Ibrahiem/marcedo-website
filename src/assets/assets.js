@@ -21,7 +21,6 @@ import deals_side_banner2 from "./deals_side_banner2.jpg";
 import arrow_up_right_orange from "./right-up-orange.png";
 import arrow_up_right_white from "./right-up.png";
 import gaming_monitor from "./gaming monitor.png";
-import smart_watch from "./products image/smart watch.png";
 import brand_one from "./brand_one.png";
 import brand_two from "./brand_two.png";
 import brand_three1 from "./brand_three1.png";
@@ -94,7 +93,6 @@ export const assets = {
   arrow_up_right_orange,
   arrow_up_right_white,
   gaming_monitor,
-  smart_watch,
   brand_one,
   brand_two,
   brand_three1,

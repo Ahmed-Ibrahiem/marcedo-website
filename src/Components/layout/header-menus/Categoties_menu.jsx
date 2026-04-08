@@ -73,7 +73,7 @@ const Categoties_menu = ({ assets }) => {
                 if (option.title != "Dress") {
                   add_message({
                     title: "This Category Will Coming Soon",
-                    link: { url: "/dresses", name: "Category Dresses" },
+                    link: { url: "/categories/dresses", name: "Category Dresses" },
                   });
                 }
               }}
