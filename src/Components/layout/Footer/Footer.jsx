@@ -1,5 +1,6 @@
 import "./Footer.css";
 import { assets } from "../../../assets/assets.js";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer>
@@ -39,19 +40,16 @@ const Footer = () => {
           <h2>Quick Links</h2>
           <ul>
             <li>
-              <a href="##">Home</a>
+              <Link to={"/Home"}>Home</Link>
             </li>
             <li>
-              <a href="##">Shop</a>
+              <Link to={"/Shop"}>Shop</Link>
             </li>
             <li>
-              <a href="##">Offers</a>
+              <Link to={"/contact-us"}>Contact</Link>
             </li>
             <li>
-              <a href="##">Contact</a>
-            </li>
-            <li>
-              <a href="##">About</a>
+              <Link to={"/about-us"}>About</Link>
             </li>
           </ul>
         </div>
@@ -61,19 +59,19 @@ const Footer = () => {
             <li>
               <a href="##">
                 <i className="fa-solid fa-location-dot"></i>
-                <span>Cairo, Downtown Street</span>
+                <span>Cairo , Egypt</span>
               </a>
             </li>
             <li>
-              <a href="##">
+              <a href="tel:01011560550">
                 <i className="fa-brands fa-whatsapp"></i>
-                <span>+20 115 013 0229</span>
+                <span>+20 101 156 0550</span>
               </a>
             </li>
             <li>
-              <a href="##">
+              <a href="mailto:ahmedebrhihem935@gmail.com">
                 <i className="fa-solid fa-envelope"></i>
-                <span>Sales@example.com</span>
+                <span>ahmedebrhihem935@gmail.com</span>
               </a>
             </li>
           </ul>

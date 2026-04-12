@@ -52,15 +52,15 @@ const Contact_page = () => {
             <ul className={style.info}>
               <li>
                 <i className="fa-solid fa-location-dot"></i>
-                <p>No 40 Baria Sreet 133/2 NewYork City, NY, USD.</p>
+                <p>Cairo , Egypt</p>
               </li>
               <li>
                 <i className="fa-regular fa-envelope"></i>
-                <p>contact@entrytheme.Com</p>
+                <p>ahmedebrhihem935@gmail.com</p>
               </li>
               <li>
                 <i className="fa-solid fa-phone"></i>
-                <p>+20 01011560550</p>
+                <p>+20 101 156 0550</p>
               </li>
               <li>
                 <i className="fa-regular fa-clock"></i>
