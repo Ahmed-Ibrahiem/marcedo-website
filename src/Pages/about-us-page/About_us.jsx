@@ -8,12 +8,12 @@ const About_us = () => {
     {
       name: "Ahmed Ibrahiem",
       job_desc: "Web Developer",
-      img: "/src/assets/developer.jpg",
+      img: "/assets/developer.jpg",
     },
     {
       name: "Mahmoud Amara",
       job_desc: "UI/UX Designer",
-      img: "/src/assets/designer.jpg",
+      img: "/assets/designer.jpg",
     },
   ];
   const counter_data = [
@@ -52,7 +52,7 @@ const About_us = () => {
 
           {/* Start Intro (Just Image)  */}
           <div className={style.intro}>
-            <img src="/src/assets/banner2.png" alt="" />
+            <img src="/assets/banner2.png" alt="" />
           </div>
 
           {/* Start Discription */}
@@ -74,7 +74,7 @@ const About_us = () => {
       </div>
       {/* Start Video Section */}
       <div className={style.video_section}>
-        <img src="/src/assets/modern1.jpg" className={style.poster} alt="" />
+        <img src="/assets/modern1.jpg" className={style.poster} alt="" />
         <button onClick={() => set_start_video(true)}>
           <i className="fa-solid fa-play"></i>
         </button>

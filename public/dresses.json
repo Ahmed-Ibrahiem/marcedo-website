@@ -1341,7 +1341,7 @@
   {
     "id": 9,
     "title": "Apple Watch Ultra GPS + Cellular 49mm",
-    "image": "src/assets/products image/wristwatchs/product1/main.jpg",
+    "image": "/assets/products image/wristwatchs/product1/main.jpg",
     "rating_value": 4.8,
     "rating_count": 95,
     "price": 17000,
