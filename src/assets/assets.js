@@ -1,42 +1,36 @@
-import ARB_flag from "./egypt.png";
-import amr_flag from "./america.png";
-import fra_flag from "./france.png";
-import logo_img from "./Group 2.png";
-import user_img from "./account.png";
-import dress_img from "./dress.png";
-import apple_img from "./apple-logo.png";
-import t_shirt_img from "./baby-boy-dress-stroke-rounded 1.png";
-import electronic_img from "./electronic.png";
-import perfume_img from "./perfume.png";
-import wrist_Watch from "./wristwatch.png";
-import hero_single1_img from "./hero_single1_img.png";
-import hero_single2_img from "./hero_single2_img.png";
-import hero_single3_img from "./hero_single3_img.png";
-import hero_single2_background from "./hero_single2_background.jpg";
-import iphone_14 from "./iphone 14.png";
-import iphone_14_pro from "./iphone 14pro.png";
-import iphone_15 from "./iphone 15.png";
-import deals_side_banner1 from "./deals_side_banner1.jpg";
-import deals_side_banner2 from "./deals_side_banner2.jpg";
-import arrow_up_right_orange from "./right-up-orange.png";
-import arrow_up_right_white from "./right-up.png";
-import gaming_monitor from "./gaming monitor.png";
-import brand_one from "./brand_one.png";
-import brand_two from "./brand_two.png";
-import brand_three1 from "./brand_three1.png";
-import brand_three2 from "./brand_three2.png";
-import dress_collection from "./dress_collection.png";
-import shirt_collection from "./shirt.png";
-import sweeter_collection from "./sweeter.png";
-import sport_collectoin from "./sport.png";
-import t_shirt_collection from "./t-shirt.png";
-import blazer_collection from "./blazer.png";
-import featur_product from "./feature_product_image.png";
-import salling_user1 from "./salling_user1.png";
-import display_2 from './display_2.png'
-import display_4 from './display_4.png'
-import display_6 from './display_6.png'
-import display_8 from './display_8.png'
+import ARB_flag from "/assets/images/egypt.png";
+import amr_flag from "/assets/images/america.png";
+import fra_flag from "/assets/images/france.png";
+import logo_img from "/assets/images/Group 2.png";
+import user_img from "/assets/images/account.png";
+import dress_img from "/assets/images/dress.png";
+import apple_img from "/assets/images/apple-logo.png";
+import t_shirt_img from "/assets/images/baby-boy-dress-stroke-rounded 1.png";
+import electronic_img from "/assets/images/electronic.png";
+import perfume_img from "/assets/images/perfume.png";
+import wrist_Watch from "/assets/images/wristwatch.png";
+import hero_single1_img from "/assets/images/hero_single1_img.png";
+import hero_single2_img from "/assets/images/hero_single2_img.png";
+import hero_single3_img from "/assets/images/hero_single3_img.png";
+import hero_single2_background from "/assets/images/hero_single2_background.jpg";
+import iphone_14 from "/assets/images/iphone 14.png";
+import iphone_14_pro from "/assets/images/iphone 14pro.png";
+import iphone_15 from "/assets/images/iphone 15.png";
+import deals_side_banner1 from "/assets/images/deals_side_banner1.jpg";
+import deals_side_banner2 from "/assets/images/deals_side_banner2.jpg";
+import gaming_monitor from "/assets/images/gaming monitor.png";
+import dress_collection from "/assets/images/dress_collection.png";
+import shirt_collection from "/assets/images/shirt.png";
+import sweeter_collection from "/assets/images/sweeter.png";
+import sport_collectoin from "/assets/images/sport.png";
+import t_shirt_collection from "/assets/images/t-shirt.png";
+import blazer_collection from "/assets/images/blazer.png";
+import featur_product from "/assets/images/feature_product_image.png";
+import salling_user1 from "/assets/users/salling_user1.png";
+import display_2 from "/assets/images/display_2.png";
+import display_4 from "/assets/images/display_4.png";
+import display_6 from "/assets/images/display_6.png";
+import display_8 from "/assets/images/display_8.png";
 
 export const countries = ["EGP", "AMR", "FRE"];
 export const languages = [
@@ -57,21 +51,21 @@ export const languages = [
 export const display_image = [
   {
     count: 2,
-    image: display_2
+    image: display_2,
   },
   {
     count: 4,
-    image: display_4
+    image: display_4,
   },
   {
-    count: 6 ,
-    image: display_6
+    count: 6,
+    image: display_6,
   },
   {
     count: 8,
-    image: display_8
+    image: display_8,
   },
-]
+];
 
 export const assets = {
   logo_img,
@@ -90,13 +84,7 @@ export const assets = {
   iphone_15,
   deals_side_banner1,
   deals_side_banner2,
-  arrow_up_right_orange,
-  arrow_up_right_white,
   gaming_monitor,
-  brand_one,
-  brand_two,
-  brand_three1,
-  brand_three2,
   dress_collection,
   shirt_collection,
   sweeter_collection,
@@ -107,7 +95,15 @@ export const assets = {
   salling_user1,
 };
 
-export const dresses_brands = ["Nike" ,"Zara" , 'H&M' , "Adidas" , "Tommy Hilfiger" , "Levi's" , "Uniqlo"] 
+export const dresses_brands = [
+  "Nike",
+  "Zara",
+  "H&M",
+  "Adidas",
+  "Tommy Hilfiger",
+  "Levi's",
+  "Uniqlo",
+];
 
 export const swiper_slider_info = [
   {
@@ -204,22 +200,22 @@ export const deals_data = {
   ],
 };
 
- export const address_20_shopping_cost = [
-    "New Cairo, Cairo",
-    "Fifth Settlement, New Cairo",
-    "Nasr City, Cairo",
-    "Maadi, Cairo",
-  ].map((word) => word.toLowerCase());
+export const address_20_shopping_cost = [
+  "New Cairo, Cairo",
+  "Fifth Settlement, New Cairo",
+  "Nasr City, Cairo",
+  "Maadi, Cairo",
+].map((word) => word.toLowerCase());
 
-  export const address_15_shopping_cost = [
-    "Heliopolis, Cairo",
-    "Zamalek, Cairo",
-    "Downtown, Cairo",
-    "Madinaty, Cairo",
-    "Al Rehab City, Cairo",
-  ].map((word) => word.toLowerCase());
+export const address_15_shopping_cost = [
+  "Heliopolis, Cairo",
+  "Zamalek, Cairo",
+  "Downtown, Cairo",
+  "Madinaty, Cairo",
+  "Al Rehab City, Cairo",
+].map((word) => word.toLowerCase());
 
-  export const  discount_codes = [
+export const discount_codes = [
   { code: "WELCOME10", type: "percentage", value: 10 },
   { code: "SAVE20", type: "percentage", value: 20 },
   { code: "DISCOUNT15", type: "percentage", value: 15 },
@@ -234,5 +230,5 @@ export const deals_data = {
   { code: "VIP100", type: "fixed", value: 100 },
   { code: "STUDENT15", type: "percentage", value: 15 },
   { code: "FIRSTORDER20", type: "percentage", value: 20 },
-  { code: "TRYME5", type: "fixed", value: 5 }
+  { code: "TRYME5", type: "fixed", value: 5 },
 ];

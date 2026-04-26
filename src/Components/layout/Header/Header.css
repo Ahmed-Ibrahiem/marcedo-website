@@ -1,15 +1,33 @@
-#supporter{
+#supporter {
     height: 100px;
     width: 100%;
 }
-header{
+
+header {
     background-color: var(--white-color);
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 30;
+    transition: 0.3s;
 }
-header.stickyHeader{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+header.stickyHeader {
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fade-in-bottom 0.5s both;
+}
+
+@keyframes fade-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
 }

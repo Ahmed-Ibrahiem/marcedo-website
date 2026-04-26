@@ -3,7 +3,7 @@ import style from "./Loading.module.css";
 export const Loading = () => {
   return (
     <div className={style.loading}>
-      <img src="/src/assets/loading.png"  alt="" />
+      <img src="/assest/images/loading.png"  alt="" />
       <p>Loading...</p>
     </div>
   );

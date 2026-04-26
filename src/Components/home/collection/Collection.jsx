@@ -57,7 +57,7 @@ export const Collection = () => {
           className="collection_btn"
           href="##"
         >
-          <img src={assets.arrow_up_right_orange} alt="" />
+          <i className="fa-solid fa-arrow-right"></i>
         </button>
       </Link>
     );

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import CountriesAndLanguagesProvider from "../../../Context/CountriesAndLaguagesContext";
 import HeaderBottomProvider from "../../../Context/HeaderBottomContext";
 import HeaderBottom from "../header-bottom/HeaderBottom";
@@ -6,28 +6,10 @@ import HeaderMiddle from "../header-middle/HeaderMiddle";
 import HeaderTop from "../header-top/HeaderTop";
 import "./Header.css";
 
-const Header = () => {
-  const headerRef = useRef(null);
-  useEffect(() => {
-    const handleScrolling = () => {
-      if (!headerRef.current) return;
-
-      if (window.scrollY > 100) {
-        headerRef.current.classList.add("stickyHeader");
-      } else {
-        headerRef.current.classList.remove("stickyHeader");
-      }
-    };
-
-    window.addEventListener("scroll", handleScrolling);
-
-    return () => window.removeEventListener("scroll", handleScrolling);
-  }, []);
-
+const Header = ({ setIsSearchOverlayOpen, isSticky }) => {
   return (
     <>
-      <div id="supporter"></div>
-      <header ref={headerRef}>
+      <header className={isSticky ? "stickyHeader" : ""}>
         <HeaderTop />
         {/* cover the HeaderMiddel By CountriesAndLanguagesProvider context  */}
         {/* <CountriesAndLanguagesProvider>
@@ -35,7 +17,7 @@ const Header = () => {
       </CountriesAndLanguagesProvider> */}
         {/* cover the HeaderBottom By HeaderBottomProvider context  */}
         <HeaderBottomProvider>
-          <HeaderBottom />
+          <HeaderBottom setIsSearchOverlayOpen={setIsSearchOverlayOpen} />
         </HeaderBottomProvider>
       </header>
     </>

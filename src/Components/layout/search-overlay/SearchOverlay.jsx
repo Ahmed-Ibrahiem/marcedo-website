@@ -1,8 +1,6 @@
-import { useSearchContext } from "../../../Context/SearchContext";
 import styles from "./SearchOverlay.module.css";
 
-const SearchOverlay = () => {
-  const { isSearchOverlayOpen, setIsSearchOverlayOpen } = useSearchContext();
+const SearchOverlay = ({isSearchOverlayOpen, setIsSearchOverlayOpen}) => {
   return (
     <div
       className={`${styles.search_overlay} ${

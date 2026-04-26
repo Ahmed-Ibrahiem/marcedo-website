@@ -1,10 +1,11 @@
 import { useContext, createContext, useState } from "react";
-import ARB_flag from "../assets/egypt.png";
+import { languages } from "../assets/assets";
+
 const countriesAndLanguagesContext = createContext();
 
 const CountriesAndLanguagesProvider = ({ children }) => {
   const default_language = {
-    language_flag: ARB_flag,
+    language_flag: languages[1].language_flag,
     language_name: "ARB",
   };
   const [currentCountry, setCurrentCountry] = useState("EGP");

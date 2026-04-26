@@ -4,14 +4,13 @@ import { useHeaderBottomContext } from "../../../Context/HeaderBottomContext";
 import ResNavMenu from "../responsive-navbar-menu/ResNavMenu";
 import { useState } from "react";
 import CartAndFavoriteBtns from "../../ui/cart-and-fevorite-btns/CartAndFavoriteBtns";
-import { useSearchContext } from "../../../Context/SearchContext";
 import Logo from "../../ui/Logo/Logo";
 import Auth_menu_btn from "../../ui/auth-menu-btn/Auth_menu_btn";
 import NavbarMenu from "../navbar-menu/NavbarMenu";
 import Categoties_menu from "../header-menus/Categoties_menu";
 
 // Bottom section of the header — contains the logo, search bar, nav menu, and action buttons
-const HeaderBottom = () => {
+const HeaderBottom = ({ setIsSearchOverlayOpen }) => {
   // Get search category state and controls from context
   const {
     current_category,
@@ -19,9 +18,6 @@ const HeaderBottom = () => {
     categories_menu,
     setCategories_menu,
   } = useHeaderBottomContext();
-
-  // Controls whether the search overlay is open
-  const { setIsSearchOverlayOpen } = useSearchContext();
 
   // Controls whether the responsive (mobile) nav menu is open
   const [isresNavMenuActive, setIsresNavMenuActive] = useState(false);
