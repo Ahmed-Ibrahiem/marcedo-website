@@ -4,7 +4,16 @@
 }
 
 .intro {
+  position: relative;
   margin: 100px 0;
+}
+
+.intro div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .intro img {
@@ -34,7 +43,8 @@
   position: relative;
   margin: 100px 0;
 }
-.video_section > img {
+
+.video_section>img {
   min-width: 100%;
   object-fit: cover;
   position: absolute;
@@ -43,11 +53,12 @@
   transform: translateX(-50%);
   transition: 0.5s ease-in-out;
 }
-.video_section:hover > img {
+
+.video_section:hover>img {
   min-width: 110%;
 }
 
-.video_section > button {
+.video_section>button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +72,8 @@
   z-index: 10px;
   font-size: 35px;
 }
-.video_section > button:hover {
+
+.video_section>button:hover {
   color: var(--orange-color);
   border-color: var(--orange-color);
 }
@@ -106,7 +118,8 @@
   justify-content: baseline;
   border-radius: 50%;
   overflow: hidden;
-  > img {
+
+  >img {
     width: 100%;
     height: 100%;
     object-fit: cover;

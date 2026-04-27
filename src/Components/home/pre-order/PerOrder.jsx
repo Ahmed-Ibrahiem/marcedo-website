@@ -10,7 +10,6 @@ const PerOrder = () => {
           <p>FROM 35,000 EGP</p>
         </div>
         <div className="image_container">
-          <div></div>
           <img src={assets.gaming_monitor} alt="" />
         </div>
         <div className="text2">

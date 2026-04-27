@@ -1,13 +1,17 @@
+import { useState } from "react";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import styles from "../Cart_popup.module.css";
+import Skeleton from "react-loading-skeleton";
 
 const ItemOfCart = ({ item_data }) => {
   const { updateProductQuantity, removeItem } = useCartContext();
+  const [loaded, setLoaded] = useState(false);
   return (
     <div className={styles.item}>
       <div className={styles.image_box}>
         <img
           loading="lazy"
+          onLoad={() => setLoaded(true)}
           src={item_data.image}
           alt={`The Image Of Product ${item_data.id}`}
         />

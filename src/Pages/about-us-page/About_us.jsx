@@ -3,7 +3,11 @@ import Counter_template from "./components/counter-component/Counter_template";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
 import Our_video_component from "./components/our-video-component/Our_video_component";
 import style from "./About_us.module.css";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const About_us = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const our_team = [
     {
       name: "Ahmed Ibrahiem",
@@ -52,7 +56,18 @@ const About_us = () => {
 
           {/* Start Intro (Just Image)  */}
           <div className={style.intro}>
-            <img src="/assets/banner2.png" alt="" />
+            {!imageLoaded && (
+              <div style={{ width: "100%", height: "100%" }}>
+                <Skeleton width="100%" height="100%" />
+              </div>
+            )}
+            <img
+              src="/assets/banner2.png"
+              onLoad={() => setImageLoaded(true)}
+              style={{ opacity: imageLoaded ? 1 : 0 }}
+              loading="lazy"
+              alt=""
+            />
           </div>
 
           {/* Start Discription */}

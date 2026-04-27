@@ -6,10 +6,12 @@ import { use_products_grid_context } from "../../../Context/ProductsGridProvider
 import { useState } from "react";
 import Colors_and_size_section from "./Colors_and_size_section";
 import Add_to_cart_btn from "./Add_to_cart_btn";
+import Skeleton from "react-loading-skeleton";
 
 const Product_item = ({ data }) => {
   // Access cart state and actions from Cart Context
   const { toggleItem, cartItemsData } = useCartContext();
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Access wishlist state and actions from Favorite Context
   const { favoriteItemsId, handleFavoriteItems } = useFavoriteContext();
@@ -43,14 +45,26 @@ const Product_item = ({ data }) => {
   return (
     <div className={style.product_item}>
       {/* Product Image Section */}
-      <div className={style.img_box}>
+      <div
+        className={style.img_box}
+        style={{ display: imageLoaded ? "flex" : "block" }}
+      >
         {/* Secondary image used for hover effect */}
-        <div className={style.second_img}>
-          <img src={data.image} alt="" />
-        </div>
+        {imageLoaded && (
+          <div className={style.second_img}>
+            <img src={data.image} alt="" />
+          </div>
+        )}
 
         {/* Main product image */}
-        <img src={data.image} alt="" />
+        {!imageLoaded && <Skeleton width="100%" height="100%" />}
+        <img
+          src={data.image}
+          loading="lazy"
+          onLoad={() => setImageLoaded(true)}
+          style={{ opacity: imageLoaded ? 1 : 0 }}
+          alt=""
+        />
 
         {/* Action buttons overlay (wishlist / quick view) */}
         <div className={style.action_area}>

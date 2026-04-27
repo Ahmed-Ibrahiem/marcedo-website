@@ -6,6 +6,7 @@
   grid-template-columns: repeat(auto-fill, minmax(30.33%, 1fr));
   gap: 40px;
 }
+
 .collection {
   display: flex;
   flex-direction: column;
@@ -23,20 +24,36 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
-.collection > img {
-  max-width: 60%;
-  max-height: 60%;
+.collection div {
+  width: 60%;
+  height: 60%;
+}
+
+.collection div>img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   position: relative;
   transition: 0.5s ease-out;
 }
 
-.collection span {
+
+.collection>div.skeletonImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+}
+
+.collection .title {
   background-color: var(--white-color);
   color: var(--black-color);
   font-size: 18px;
@@ -61,8 +78,17 @@
   border-radius: 50%;
   opacity: 0;
   scale: 0;
-  > img {
-    width: 15px;
+
+  >i {
+    font-size: 24px;
+    font-weight: 900;
+    rotate: -45deg;
+  }
+}
+
+.collection button:hover {
+  >i {
+    color: white;
   }
 }
 
@@ -75,13 +101,15 @@
   background-color: var(--three-color);
 }
 
-.collection:hover > img {
+.collection:hover>img {
   scale: 1.1;
 }
-.collection:hover > span {
+
+.collection:hover>span {
   opacity: 0;
 }
-.collection:hover > button {
+
+.collection:hover>button {
   opacity: 1;
   scale: 1;
 }
@@ -90,6 +118,7 @@
   .collections_grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
+
   .collection span {
     font-size: 16px;
     bottom: 30px;

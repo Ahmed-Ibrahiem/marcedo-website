@@ -35,20 +35,11 @@
   width: 165px;
   position: relative;
 }
-.pre_order .image_container > div {
-  width: 33px;
-  height: 33px;
-  border-radius: 50%;
-  box-shadow: 0 0 57px 21px var(--green-lite-color);
-  position: absolute;
-  top: 27%;
-  right: 33%;
-  z-index: 0;
-}
 .pre_order .image_container img {
   position: relative;
   max-width: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 0 25px #67fffaa3);
 }
 .pre_order .text2 div p {
   font-size: var(--font-20);

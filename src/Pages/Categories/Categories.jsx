@@ -23,14 +23,12 @@ const Categories = () => {
   const [is_worning, set_is_worning] = useState(false);
 
   // Extract the category type from the URL parameters
-  const collection_slug = useParams();
+  const { category_type } = useParams();
 
   // Logic to find and set the specific collection from the fetched list
   const get_current_collection = (arr) => {
     if (!arr) set_is_worning(true);
-    const collection = arr.find(
-      (col) => col.slug === collection_slug.category_type,
-    );
+    const collection = arr.find((col) => col.slug === category_type);
     set_current_collection(collection);
   };
 
@@ -51,7 +49,7 @@ const Categories = () => {
       set_is_loading(false);
       set_is_worning(true);
     }
-  }, [collection_slug.category_type]);
+  }, [category_type]);
 
   useLayoutEffect(() => {
     window.scrollTo({

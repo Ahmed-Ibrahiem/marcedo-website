@@ -13,6 +13,7 @@ Marcedo is a fully responsive e-commerce web application built with React and Vi
 - React Hook Form + Yup
 - Swiper.js
 - React Toastify
+- Skeleton
 
 ---
 
@@ -22,15 +23,15 @@ Marcedo is a fully responsive e-commerce web application built with React and Vi
 - Product listing with advanced filters (brand, price, color, size, availability)
 - Dresses collection with brand-specific filtering
 - Product detail page with image gallery, reviews, and recommendations
-- Shopping cart with quantity control and price calculation
+- Shopping cart with quantity control and price calculation.
+- Categories page with filter and sorting products
 - Wishlist to save favorite products
 - Full checkout flow with address, delivery options, and credit card form
 - User authentication (login / register) with form validation
-- Real-time search overlay
-- Multi-language and multi-country support
 - Order success confirmation page
 - Contact page and About us page
 - Fully responsive design with mobile navbar
+- Skeleton loading.
 
 ---
 
@@ -41,7 +42,7 @@ src/
 ├── assets/         # Images, icons, and brand assets
 ├── Components/     # 30+ reusable UI components
 ├── Pages/          # Application pages and routes
-├── Context/        # Global state management (15+ context providers)
+├── Context/        # Global state management (12 context providers)
 ├── Hooks/          # Custom React hooks
 └── server/         # Data fetching and localStorage utilities
 ```

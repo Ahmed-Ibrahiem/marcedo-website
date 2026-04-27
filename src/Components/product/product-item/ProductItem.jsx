@@ -3,10 +3,14 @@ import { useFavoriteContext } from "../../../Context/favoriteMenuContext";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import CreateStarsOfRating from "../create-stars-of-rating/CreateStarsOfRating";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const ProductItem = ({ product_data }) => {
   const { favoriteItemsId, handleFavoriteItems } = useFavoriteContext();
   const { cartItemsId, toggleItem, isClickable } = useCartContext();
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div className={`product ${styles.product}`} data-id={product_data.id}>
@@ -18,7 +22,6 @@ const ProductItem = ({ product_data }) => {
           <button
             onClick={() => {
               handleFavoriteItems(product_data);
-             
             }} // add to favorite menu
             className={` favorite_btn ${styles.favorite} ${
               // set the state of favorite btn depend on the favoriteItems content
@@ -30,9 +33,17 @@ const ProductItem = ({ product_data }) => {
         </div>
         <div className={` product_image ${styles.product_image}`}>
           <div className={styles.img_box}>
+            {!imageLoaded && (
+              <div style={{ height: "100%", width: "100%" }}>
+                {" "}
+                <Skeleton height="100%" width="100%" />
+              </div>
+            )}
             <img
               alt={`The Image Of Product ${product_data.id}`}
+              style={{ opacity: imageLoaded ? 1 : 0 }}
               loading="lazy"
+              onLoad={() => setImageLoaded(true)}
               src={product_data.image}
             />
           </div>
