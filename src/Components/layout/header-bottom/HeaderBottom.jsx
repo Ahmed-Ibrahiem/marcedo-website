@@ -8,6 +8,7 @@ import Logo from "../../ui/Logo/Logo";
 import Auth_menu_btn from "../../ui/auth-menu-btn/Auth_menu_btn";
 import NavbarMenu from "../navbar-menu/NavbarMenu";
 import Categoties_menu from "../header-menus/Categoties_menu";
+import { motion } from "framer-motion";
 
 // Bottom section of the header — contains the logo, search bar, nav menu, and action buttons
 const HeaderBottom = ({ setIsSearchOverlayOpen }) => {
@@ -23,7 +24,12 @@ const HeaderBottom = ({ setIsSearchOverlayOpen }) => {
   const [isresNavMenuActive, setIsresNavMenuActive] = useState(false);
 
   return (
-    <div className="header_bottom">
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.2, ease: "easeOut" }}
+      className="header_bottom"
+    >
       <div className="container">
         {/* Site logo */}
         <Logo />
@@ -82,7 +88,7 @@ const HeaderBottom = ({ setIsSearchOverlayOpen }) => {
         {/* Responsive nav menu for mobile screens */}
         <ResNavMenu isresNavMenuActive={isresNavMenuActive} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -7,6 +7,7 @@ import Brand_section from "./Brand_section";
 import style from "../Categories.module.css";
 import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
 import { use_categories_context } from "../../../Context/CategoriesProvider";
+import { motion } from "framer-motion";
 
 /**
  * Sidebar component for product filtering
@@ -24,7 +25,9 @@ const Sidebar = () => {
      * Main sidebar container
      * Dynamically applies the 'sidebar_open' class based on state
      **/
-    <aside
+    <motion.aside
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
       className={`${style.sidebar} ${is_sidebar_open ? style.sidebar_open : ""}`}
     >
       {/* Close button to hide the sidebar */}
@@ -47,7 +50,7 @@ const Sidebar = () => {
         {available_size.length != 0 && <Size_section />}
         {available_brands.length != 0 && <Brand_section />}
       </div>
-    </aside>
+    </motion.aside>
   );
 };
 

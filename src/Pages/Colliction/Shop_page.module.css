@@ -17,7 +17,6 @@
   position: relative;
   cursor: pointer;
   aspect-ratio: 1/1;
-  animation: FadeIn 0.3s ease-out;
 }
 
 @keyframes FadeIn {
@@ -34,6 +33,7 @@
   width: 60%;
   height: 60%;
 }
+
 
 .collection div>img {
   max-width: 100%;

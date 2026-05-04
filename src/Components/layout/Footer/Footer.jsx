@@ -1,9 +1,14 @@
 import "./Footer.css";
 import { assets } from "../../../assets/assets.js";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
-    <footer>
+    <motion.footer
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1, transition: { delay: 0.4 } }}
+      viewport={{ amount: 0.2, once: true }}
+    >
       <div className="head">
         <div className="part">
           <i className="fa-solid fa-truck"></i>
@@ -96,7 +101,7 @@ const Footer = () => {
         </div>
       </div>
       <p> &copy; COPYright 2021. All rights reserved </p>
-    </footer>
+    </motion.footer>
   );
 };
 

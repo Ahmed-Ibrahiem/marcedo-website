@@ -4,14 +4,25 @@ import "./FeaturedProducts.css";
 import CustomSwiper from "../custom-swiper/CustomSwiper.jsx";
 import { SwiperSlide } from "swiper/react";
 import { useFetchAllProducts } from "../../../Context/FetchAllProducts.jsx";
+import { motion } from "framer-motion";
 
 const FeaturedProducts = () => {
   const { all_products } = useFetchAllProducts();
 
   return (
-    <div className="feature_Product">
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1, transition: { delay: 0.2 } }}
+      viewport={{ amount: 0.2, once: true }}
+      className="feature_Product"
+    >
       <div className="container">
-        <div className="right">
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, transition: { delay: 0.6 } }}
+          viewport={{ amount: 0.2, once: true }}
+          className="right"
+        >
           <h1>
             Devialet Phantom II <span>Speaker</span>
           </h1>
@@ -21,9 +32,14 @@ const FeaturedProducts = () => {
             <p className="sell">77,496</p>
           </div>
           <img src={assets.featur_product} alt="" />
-        </div>
+        </motion.div>
 
-        <div className="left">
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, transition: { delay: 0.6 } }}
+          viewport={{ amount: 0.2, once: true }}
+          className="left"
+        >
           <CustomSwiper
             className="swiper_"
             loop={true}
@@ -48,9 +64,9 @@ const FeaturedProducts = () => {
                 }
               })}
           </CustomSwiper>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

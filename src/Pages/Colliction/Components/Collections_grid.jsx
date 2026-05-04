@@ -5,6 +5,7 @@ import { use_pagination_context } from "../../../Context/PaginationProvider";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { motion } from "framer-motion";
 
 export const Collections_grid = () => {
   const [loaded, setLoaded] = useState(false);
@@ -29,42 +30,49 @@ export const Collections_grid = () => {
   }, [all_collections]);
 
   return (
-    <div className={style.collections_grid}>
+    <motion.div className={style.collections_grid}>
       {/* Render collections only if display data exists */}
       {display_data &&
         display_data.map((data) => {
           return (
-            <Link key={data.id} to={data.slug} className={style.collection}>
-              {/* Collection image */}
-              {!loaded && (
-                <div className={style.skeletonImage}>
-                  <Skeleton height="100%" width="100%" />
+            <motion.div
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 0.3, once: true }}
+              key={data.id}
+            >
+              <Link to={data.slug} className={style.collection}>
+                {/* Collection image */}
+                {!loaded && (
+                  <div className={style.skeletonImage}>
+                    <Skeleton height="100%" width="100%" />
+                  </div>
+                )}
+                <div>
+                  <img
+                    onLoad={() => setLoaded(true)}
+                    src={data.image}
+                    alt={`This Image Of ${data.title}`}
+                    loading="lazy"
+                    style={{ opacity: loaded ? 1 : 0 }}
+                  />
                 </div>
-              )}
-              <div>
-                <img
-                  onLoad={() => setLoaded(true)}
-                  src={data.image}
-                  alt={`This Image Of ${data.title}`}
-                  loading="lazy"
-                  style={{ opacity: loaded ? 1 : 0 }}
-                />
-              </div>
 
-              {/* Collection title */}
-              <span className={style.title}>{data.title}</span>
+                {/* Collection title */}
+                <span className={style.title}>{data.title}</span>
 
-              {/* Action button with hover effect */}
-              <button
-                onMouseEnter={() => set_has_hover(true)} // Trigger hover state
-                onMouseLeave={() => set_has_hover(false)} // Remove hover state
-                className="action"
-              >
-                <i className="fa-solid fa-arrow-right"></i>
-              </button>
-            </Link>
+                {/* Action button with hover effect */}
+                <button
+                  onMouseEnter={() => set_has_hover(true)} // Trigger hover state
+                  onMouseLeave={() => set_has_hover(false)} // Remove hover state
+                  className="action"
+                >
+                  <i className="fa-solid fa-arrow-right"></i>
+                </button>
+              </Link>
+            </motion.div>
           );
         })}
-    </div>
+    </motion.div>
   );
 };

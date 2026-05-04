@@ -14,7 +14,7 @@
   font-weight: var(--bold-font);
 }
 
-.collection .container>a {
+.collection .container>a>div {
   font-weight: var(--bold-font);
   display: flex;
   align-items: center;

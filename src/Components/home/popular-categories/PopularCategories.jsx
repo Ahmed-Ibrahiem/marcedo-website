@@ -2,19 +2,58 @@ import { Link } from "react-router-dom";
 import { popular_categories } from "../../../assets/assets";
 import "./PopularCategories.css";
 import { use_notification_context } from "../../../Context/NotificationProvider";
+import { motion } from "framer-motion";
+
+const boxVeriants = {
+  hidden: {
+    opacity: 0,
+    y: -30,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "linear",
+    },
+  },
+};
+
+const containerVeriants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      ease: "linear",
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const PopularCategories = () => {
   const { add_message } = use_notification_context();
   return (
     <section className="popular_categorais">
       <div className="container">
-        <h3>
+        <motion.h3
+          initial={{ y: -30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ amount: 0.8, once: true }}
+        >
           Popular <span>Categories</span>
-        </h3>
-        <div className="box_container">
+        </motion.h3>
+        <motion.div
+          variants={containerVeriants}
+          initial="hidden"
+          whileInView={"visible"}
+          viewport={{ amount: 0.8, once: true }}
+          className="box_container"
+        >
           {popular_categories.map((category, index) => {
             return (
-              <div
+              <motion.div
+                variants={boxVeriants}
                 onClick={() => {
                   if (index != 2)
                     add_message({
@@ -35,10 +74,10 @@ const PopularCategories = () => {
                   </div>
                   <p>{category.category_name}</p>
                 </Link>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

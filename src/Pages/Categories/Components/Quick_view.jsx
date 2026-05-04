@@ -4,6 +4,7 @@ import { use_products_grid_context } from "../../../Context/ProductsGridProvider
 import main_style from "../Categories.module.css";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import Add_to_cart_btn from "./Add_to_cart_btn";
+import { motion } from "framer-motion";
 
 // Component that displays a quick view modal for product details
 const Quick_view = () => {
@@ -12,8 +13,7 @@ const Quick_view = () => {
     use_products_grid_context();
 
   // Get cart management functions and cart data from context
-  const {  toggleItem , setCartItemsData, cartItemsData } =
-    useCartContext();
+  const { toggleItem, setCartItemsData, cartItemsData } = useCartContext();
 
   // Check if the current product is already in the cart
   const cartItem = cartItemsData.find((data) => data.id == quick_view_data.id);
@@ -90,15 +90,23 @@ const Quick_view = () => {
       size: selectedSize,
       quantity_review,
     };
-     toggleItem (format_data);
+    toggleItem(format_data);
   };
 
-  console.log(quick_view_data.gallary[currentImageIndex].image)
+  console.log(quick_view_data.gallary[currentImageIndex].image);
 
   return (
     <div className={styles.overlay}>
       {/* Modal Container - Quick view popup */}
-      <div className={styles.modal}>
+      <motion.div
+        initial={{ opacity: 0, y: -150 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { ease: "linear", duration: 0.5 },
+        }}
+        className={styles.modal}
+      >
         {/* Close Button - Closes the quick view modal */}
         <button className={styles.close_btn} onClick={close_quick_view_popup}>
           <i className="fa-solid fa-xmark"></i>
@@ -269,7 +277,7 @@ const Quick_view = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

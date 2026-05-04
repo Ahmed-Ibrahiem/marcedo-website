@@ -9,6 +9,8 @@
   color: var(--white-color);
   font-size: var(--font-14);
   font-weight: var(--regular-font);
+  position: relative;
+  z-index: 10;
 }
 .special {
   color: var(--black-color);

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { assets, deals_data } from "../../../assets/assets";
 import "./Deals.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // Section that displays a featured deal with a countdown timer and side banners
 const Deals = () => {
@@ -48,7 +49,19 @@ const Deals = () => {
     <div className="deals_section">
       <div className="container deals_container">
         {/* Main deal card section */}
-        <div className="deals_card_part">
+        <motion.div
+          initial={{
+            x: -100,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { ease: "linear", duration: 0.5 },
+          }}
+          viewport={{ amount: 0.2, once: true }}
+          className="deals_card_part"
+        >
           <h2>Deals Of The Day</h2>
           <div className="deals_card_box">
             <div className="deals_card">
@@ -140,10 +153,22 @@ const Deals = () => {
           <Link to={`/product_detials/6`} className="button_product_nav">
             <i className="fa-solid fa-long-arrow-up"></i>
           </Link>
-        </div>
+        </motion.div>
 
         {/* Side banners linking to other products */}
-        <div className="deals_side_banner">
+        <motion.div
+          initial={{
+            x: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { ease: "linear", duration: 0.5 },
+          }}
+          viewport={{ amount: 0.2, once: true }}
+          className="deals_side_banner"
+        >
           <div className="side_banner1">
             <div className="img_box">
               <img
@@ -172,7 +197,7 @@ const Deals = () => {
               <i className="fa-solid fa-long-arrow-up icon"></i>
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

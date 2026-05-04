@@ -2,6 +2,28 @@ import ProductItem from "../../product/product-item/ProductItem";
 import "./BestSeller.css";
 import { useFetchAllProducts } from "../../../Context/FetchAllProducts";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "linear",
+    },
+  },
+};
 
 const BestSeller = () => {
   const { all_products } = useFetchAllProducts();
@@ -10,30 +32,53 @@ const BestSeller = () => {
   return (
     <div className="prodcuts_grid">
       <div className="container">
-        <h1>
+        <motion.h1
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { delay: 0.5, ease: "linear" },
+          }}
+          viewport={{ amount: 0.9, once: true }}
+        >
           Best <span>Seller</span>
-        </h1>
-        <div className="products">
+        </motion.h1>
+        <motion.div
+          key={see_all_products}
+          className="products"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.1, once: true }}
+        >
           {all_products &&
             all_products.map((product_data, index) => {
+              const isNew = see_all_products && index >= 8;
               if (see_all_products) {
                 return (
-                  <div key={index} className="col">
+                  <motion.div
+                    variants={isNew ? cardVariants : {}}
+                    key={index}
+                    className="col"
+                  >
                     <ProductItem product_data={product_data} />
-                  </div>
+                  </motion.div>
                 );
               } else {
                 if (index < 8) {
                   return (
-                    <div key={index} className="col">
+                    <motion.div
+                      variants={cardVariants}
+                      key={index}
+                      className="col"
+                    >
                       <ProductItem product_data={product_data} />
-                    </div>
+                    </motion.div>
                   );
                 }
               }
-            })
-            }
-        </div>
+            })}
+        </motion.div>
         <button
           onClick={() => set_see_all_products((prev) => !prev)}
           className="see_all_products"

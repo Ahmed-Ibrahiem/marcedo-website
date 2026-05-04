@@ -3,6 +3,7 @@ import style from "../CSS/Products_grid.module.css";
 import { display_image } from "../../../assets/assets";
 import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
 import { use_categories_context } from "../../../Context/CategoriesProvider";
+import { motion } from "framer-motion";
 
 const Products_grid_header = () => {
   const [is_sort_open, set_is_sort_open] = useState(false);
@@ -28,7 +29,11 @@ const Products_grid_header = () => {
   const { set_sort_option } = use_categories_context();
 
   return (
-    <div className={style.head}>
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      className={style.head}
+    >
       <div
         className={style.filter_menu_btn}
         onClick={() => set_is_sidebar_open((pre) => !pre)}
@@ -81,7 +86,7 @@ const Products_grid_header = () => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import style from "./Counter_template.module.css";
+import { motion } from "framer-motion";
 
 // Section component responsible for a single counter item
 const Section = ({ data, counter_ref }) => {
@@ -82,12 +83,18 @@ const Counter_template = ({ counter_data }) => {
   const counter_ref = useRef();
 
   return (
-    <div ref={counter_ref} className={style.couter_template}>
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ amount: 0.3, once: true }}
+      ref={counter_ref}
+      className={style.couter_template}
+    >
       {counter_data.map((data, index) => {
         // Pass shared ref to each section
         return <Section key={index} data={data} counter_ref={counter_ref} />;
       })}
-    </div>
+    </motion.div>
   );
 };
 

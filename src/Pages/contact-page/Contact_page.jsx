@@ -1,6 +1,7 @@
 import { useLayoutEffect } from "react";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
 import style from "./Contact_page.module.css";
+import { motion } from "framer-motion";
 
 const Contact_page = () => {
   useLayoutEffect(() => {
@@ -16,7 +17,16 @@ const Contact_page = () => {
           }}
         />
         <div className={style.contact_wrap}>
-          <div className={style.form_contact}>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { ease: "linear", duration: 0.5 },
+            }}
+            viewport={{ amount: 0.2, once: true }}
+            className={style.form_contact}
+          >
             <h1 className={style.title}>Ask Us Anything</h1>
             <p className={style.desc}>
               Have a question or comment? Use the form below to send us a
@@ -41,8 +51,17 @@ const Contact_page = () => {
               </div>
               <button>Submit Now</button>
             </form>
-          </div>
-          <div className={style.contact_info}>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { ease: "linear", duration: 0.5 },
+            }}
+            viewport={{ amount: 0.2, once: true }}
+            className={style.contact_info}
+          >
             <h1 className={style.title}>Get In Touch!</h1>
             <p className={style.desc}>
               We'd love to hear from you - please use the form to send us your
@@ -84,10 +103,15 @@ const Contact_page = () => {
                 <i className="fa-brands fa-youtube"></i>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-      <div className={style.map}>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ amount: 0.3, once: true }}
+        className={style.map}
+      >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13737.185997412802!2d31.0797021016437!3d30.597399114533022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7d097745e2f7b%3A0x39ff2bf9d14bb528!2z2KfZhNiv2KjYp9mK2KjYqdiMINin2YTYr9io2KfYqNmK2KnYjCDZhdix2YPYsiDYqNix2YPYqSDYp9mE2LPYqNi52Iwg2YXYrdin2YHYuNipINin2YTZhdmG2YjZgdmK2Kk!5e0!3m2!1sar!2seg!4v1769699654080!5m2!1sar!2seg"
           width="100%"
@@ -97,7 +121,7 @@ const Contact_page = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
+      </motion.div>
     </div>
   );
 };

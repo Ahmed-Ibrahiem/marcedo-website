@@ -7,6 +7,7 @@ import { useState } from "react";
 import Colors_and_size_section from "./Colors_and_size_section";
 import Add_to_cart_btn from "./Add_to_cart_btn";
 import Skeleton from "react-loading-skeleton";
+import { motion } from "framer-motion";
 
 const Product_item = ({ data }) => {
   // Access cart state and actions from Cart Context
@@ -57,7 +58,9 @@ const Product_item = ({ data }) => {
         )}
 
         {/* Main product image */}
-        {!imageLoaded && <Skeleton width="100%" height="100%" />}
+        {!imageLoaded && (
+          <Skeleton width="100%" height="100%" style={{ minHeight: "300px" }} />
+        )}
         <img
           src={data.image}
           loading="lazy"

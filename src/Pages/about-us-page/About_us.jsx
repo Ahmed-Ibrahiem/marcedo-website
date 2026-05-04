@@ -5,6 +5,8 @@ import Our_video_component from "./components/our-video-component/Our_video_comp
 import style from "./About_us.module.css";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { motion } from "framer-motion";
+
 const About_us = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -55,7 +57,12 @@ const About_us = () => {
           <Our_banner page_data={{ title: "About Us" }} />
 
           {/* Start Intro (Just Image)  */}
-          <div className={style.intro}>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3, once: true }}
+            className={style.intro}
+          >
             {!imageLoaded && (
               <div style={{ width: "100%", height: "100%" }}>
                 <Skeleton width="100%" height="100%" />
@@ -68,10 +75,15 @@ const About_us = () => {
               loading="lazy"
               alt=""
             />
-          </div>
+          </motion.div>
 
           {/* Start Discription */}
-          <p className={style.text}>
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3, once: true }}
+            className={style.text}
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis est
             aut, rem consequatur quod eos nam incidunt exercitationem
             blanditiis. Harum incidunt delectus quibusdam nam quas ipsam
@@ -81,14 +93,19 @@ const About_us = () => {
             dolorem quas vero incidunt reiciendis, qui animi error voluptas
             maxime, excepturi laborum temporibus quibusdam accusantium, deserunt
             accusamus. Aut repellendus consequuntur quisquam nemo.
-          </p>
+          </motion.p>
 
           {/* Our Counter Template */}
           <Counter_template counter_data={counter_data} />
         </div>
       </div>
       {/* Start Video Section */}
-      <div className={style.video_section}>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ amount: 0.3, once: true }}
+        className={style.video_section}
+      >
         <img src="/assets/modern1.jpg" className={style.poster} alt="" />
         <button onClick={() => set_start_video(true)}>
           <i className="fa-solid fa-play"></i>
@@ -101,24 +118,44 @@ const About_us = () => {
             stop_video={stop_video}
           />
         )}
-      </div>
+      </motion.div>
 
       {/* Start Show Our Team */}
       <div className={style.page_container}>
         <div className={style.our_team_area}>
-          <h1 className={style.title}>Meet Our Team</h1>
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.8, once: true }}
+            className={style.title}
+          >
+            Meet Our Team
+          </motion.h1>
           <div className={style.members}>
-            {our_team.map((user, index) => {
-              return (
-                <div key={index} className={style.member}>
-                  <div className={style.image_box}>
-                    <img src={user.img} alt={use.name} />
-                  </div>
-                  <h3>{user.name}</h3>
-                  <p>{user.job_desc}</p>
-                </div>
-              );
-            })}
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ amount: 0.3, once: true }}
+              className={style.member}
+            >
+              <div className={style.image_box}>
+                <img src={our_team[0].img} alt={our_team[0].name} />
+              </div>
+              <h3>{our_team[0].name}</h3>
+              <p>{our_team[0].job_desc}</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ amount: 0.3, once: true }}
+              className={style.member}
+            >
+              <div className={style.image_box}>
+                <img src={our_team[1].img} alt={our_team[1].name} />
+              </div>
+              <h3>{our_team[1].name}</h3>
+              <p>{our_team[1].job_desc}</p>
+            </motion.div>
           </div>
         </div>
       </div>

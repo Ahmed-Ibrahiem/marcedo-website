@@ -1,8 +1,14 @@
 import { assets } from "../../../assets/assets";
 import "./PerOrder.css";
-const PerOrder = () => {
+import { motion } from "framer-motion";
+const PreOrder = () => {
   return (
-    <div className="pre_order">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 0.8, delay: 0.3 } }}
+      viewport={{ once: true }}
+      className="pre_order"
+    >
       <div className="container">
         <div className="text1">
           <h2>PRE ORDER</h2>
@@ -21,8 +27,8 @@ const PerOrder = () => {
         </div>
         <a href="##">Discover Now</a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
-export default PerOrder;
+export default PreOrder;

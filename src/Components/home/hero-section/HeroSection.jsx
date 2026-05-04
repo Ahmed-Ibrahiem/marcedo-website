@@ -6,11 +6,17 @@ import { swiper_slider_info } from "../../../assets/assets";
 import { useState } from "react";
 import HeroSingle from "../Hero Single/HeroSingle";
 import CustomSwiper from "../custom-swiper/CustomSwiper";
+import { motion } from "framer-motion";
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="container">
+    <motion.div
+      className="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6, ease: "easeInOut" , duration: 0.5 }}
+    >
       <CustomSwiper
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         navigation
@@ -30,7 +36,7 @@ const HeroSection = () => {
           );
         })}
       </CustomSwiper>
-    </div>
+    </motion.div>
   );
 };
 

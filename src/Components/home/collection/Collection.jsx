@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { assets } from "../../../assets/assets";
 import "./Collection.css";
 import { use_notification_context } from "../../../Context/NotificationProvider";
+import { motion } from "framer-motion";
 
 export const Collection = () => {
   const { add_message } = use_notification_context();
@@ -55,7 +56,6 @@ export const Collection = () => {
               add_message({ title: "This Feature Will Coming Soon" });
           }}
           className="collection_btn"
-          href="##"
         >
           <i className="fa-solid fa-arrow-right"></i>
         </button>
@@ -66,20 +66,42 @@ export const Collection = () => {
   return (
     <div className="collection">
       <div className="container">
-        <h1>Our Collection</h1>
-        <p>
+        <motion.h1
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ amount: 0.1, once: true }}
+        >
+          Our Collection
+        </motion.h1>
+        <motion.p
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, transition: { delay: 0.4 } }}
+          viewport={{ amount: 0.5, once: true }}
+        >
           By having categories of colthes, we ensure that every customer can
           find the right choice for their style and needs, so that they can look
           confident and appropriate for different occasions or moods.
-        </p>
+        </motion.p>
         <Link
           onClick={() =>
             add_message({ title: "This Feature Will Coming Soon" })
           }
         >
-          <p>View All Collection</p> <i className="fa-solid fa-arrow-right"></i>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1, transition: { delay: 0.6 } }}
+            viewport={{ amount: 0.5, once: true }}
+          >
+            <p>View All Collection</p>{" "}
+            <i className="fa-solid fa-arrow-right"></i>
+          </motion.div>
         </Link>
-        <div className="collection_grid">
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { delay: 0.8 } }}
+          viewport={{ amount: 0.3, once: true }}
+          className="collection_grid"
+        >
           <div className="dress_shirt">
             {collection_list.map((coll, index) => {
               if (index < 2) return create_collection(coll);
@@ -88,7 +110,7 @@ export const Collection = () => {
           {collection_list.map((coll, index) => {
             if (index >= 2) return create_collection(coll);
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

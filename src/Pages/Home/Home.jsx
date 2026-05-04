@@ -5,7 +5,7 @@ import Deals from "../../Components/home/Deals/Deals";
 import FeaturedProducts from "../../Components/home/featured-products/FeaturedProducts";
 import HeroSection from "../../Components/home/hero-section/HeroSection";
 import PopularCategories from "../../Components/home/popular-categories/PopularCategories";
-import PerOrder from "../../Components/home/pre-order/PerOrder";
+import PreOrder from "../../Components/home/pre-order/PreOrder";
 import Testimonials from "../../Components/home/Testimonials/Testimonials";
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
       <HeroSection />
       <PopularCategories />
       <Deals />
-      <PerOrder />
+      <PreOrder />
       <BestSeller />
       <Brands />
       <Collection />
