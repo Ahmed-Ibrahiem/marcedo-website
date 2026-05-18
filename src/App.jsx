@@ -16,7 +16,7 @@ import Checkout_page from "./Pages/Checkout/Checkout_page.jsx";
 import MainLayout from "./Pages/Layout/MainLayout.jsx";
 import Order_successfull from "./Pages/order-seccessfull/Order_successfull.jsx";
 import Auth_popup from "./Pages/auth-popup/Auth_popup.jsx";
-import AdminLayout from "./Pages/Layout/adminLayout.jsx";
+import AdminLayout from "./Pages/Layout/AdminLayout.jsx";
 import Dashboard from "./Pages/Admin/Dashboard.jsx";
 import Orders from "./Pages/Admin/Orders.jsx";
 import ProductsAdmin from "./Pages/Admin/ProductsAdmin.jsx";
