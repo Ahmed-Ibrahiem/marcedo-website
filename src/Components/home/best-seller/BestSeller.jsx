@@ -26,7 +26,7 @@ const cardVariants = {
 };
 
 const BestSeller = () => {
-  const { all_products } = useFetchAllProducts();
+  const { listingProducts } = useFetchAllProducts();
   const [see_all_products, set_see_all_products] = useState(false);
 
   return (
@@ -51,8 +51,8 @@ const BestSeller = () => {
           whileInView="visible"
           viewport={{ amount: 0.1, once: true }}
         >
-          {all_products &&
-            all_products.map((product_data, index) => {
+          {listingProducts &&
+            listingProducts.map((product_data, index) => {
               const isNew = see_all_products && index >= 8;
               if (see_all_products) {
                 return (

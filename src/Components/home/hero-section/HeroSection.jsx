@@ -15,7 +15,7 @@ const HeroSection = () => {
       className="container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.6, ease: "easeInOut" , duration: 0.5 }}
+      transition={{ delay: 0.4, ease: "easeInOut", duration: 0.5 }}
     >
       <CustomSwiper
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}

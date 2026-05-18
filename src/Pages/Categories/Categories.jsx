@@ -9,6 +9,7 @@ import Products_grid from "./Components/Products_grid";
 import Products_grid_provider from "../../Context/ProductsGridProvider";
 import Sidebar from "./Components/Sidebar";
 import Pagination_provider from "../../Context/PaginationProvider";
+import { getCollectionBySlag } from "../../services/collectionsServices";
 
 /**
  * Main Categories Page Component
@@ -25,30 +26,22 @@ const Categories = () => {
   // Extract the category type from the URL parameters
   const { category_type } = useParams();
 
-  // Logic to find and set the specific collection from the fetched list
-  const get_current_collection = (arr) => {
-    if (!arr) set_is_worning(true);
-    const collection = arr.find((col) => col.slug === category_type);
-    set_current_collection(collection);
-  };
-
   // Fetch collections data whenever the URL category changes
   useEffect(() => {
-    try {
-      set_is_loading(true);
-      const get_data = async () => {
-        const req = await axios.get("/collections.json");
-        if (req.status === 200) {
-          set_is_loading(false);
-          const collections = req.data;
-          get_current_collection(collections);
+    set_is_loading(true);
+    const get_data = async () => {
+      try {
+        const currentColl = await getCollectionBySlag(category_type);
+        if (currentColl) {
+          set_current_collection(currentColl);
         }
-      };
-      get_data();
-    } catch {
-      set_is_loading(false);
-      set_is_worning(true);
-    }
+      } catch {
+        set_is_worning(true);
+      } finally {
+        set_is_loading(false);
+      }
+    };
+    get_data();
   }, [category_type]);
 
   useLayoutEffect(() => {

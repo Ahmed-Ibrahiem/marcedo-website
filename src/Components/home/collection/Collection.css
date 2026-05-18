@@ -122,6 +122,7 @@
 .collection .collection_grid .blazer .style::before,
 .collection .collection_grid .t_shirt .style::before,
 .collection .collection_grid .sport .style::before {
+  box-sizing: content-box !important;
   content: "";
   position: absolute;
   top: -20px;
@@ -140,6 +141,7 @@
 .collection .collection_grid .blazer .style::after,
 .collection .collection_grid .t_shirt .style::after,
 .collection .collection_grid .sport .style::after {
+  box-sizing: content-box !important;
   content: "";
   position: absolute;
   left: -20px;

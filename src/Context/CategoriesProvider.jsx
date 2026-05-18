@@ -6,6 +6,7 @@ import {
   useReducer,
   useState,
 } from "react";
+import { getDressesData } from "../services/dressesServices";
 
 // Initialize the context for categories
 const categories_context = createContext();
@@ -16,6 +17,7 @@ const Categories_provider = ({ children }) => {
 
   // State to store the full list of products fetched from the server
   const [all_products, set_all_products] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Mock data for available colors in the system
   const dome_color = [
@@ -104,10 +106,10 @@ const Categories_provider = ({ children }) => {
     // Step 2. Fetches products from the JSON file and filters by collection slug.
     const get_data = async () => {
       try {
-        const req = await axios.get("/all_products.json");
+        setIsLoading(true);
+        const data = await getDressesData();
 
-        if (req.status === 200) {
-          let data = req.data;
+        if (data) {
           // Filter products that belong to the current collection
           let products = data.filter((item) =>
             item.category.includes(current_collection.slug),
@@ -116,6 +118,8 @@ const Categories_provider = ({ children }) => {
         }
       } catch (error) {
         console.error("Error fetching products:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -317,13 +321,20 @@ const Categories_provider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (all_products.length == 0) return;
-    const filter_ids = get_filter_products();
-    const filter_data = all_products.filter((pro) =>
-      filter_ids.includes(pro.id),
-    );
+    setIsLoading(true);
 
-    set_filter_products(sort_products(filter_data));
+    const timer = setTimeout(() => {
+      if (all_products.length == 0) return;
+      const filter_ids = get_filter_products();
+      const filter_data = all_products.filter((pro) =>
+        filter_ids.includes(pro.id),
+      );
+
+      set_filter_products(sort_products(filter_data));
+      setIsLoading(false);
+    }, 0);
+
+    () => clearTimeout(timer);
   }, [filter_options, all_products]);
 
   useEffect(() => {
@@ -344,6 +355,7 @@ const Categories_provider = ({ children }) => {
     stock_nums,
     filter_products,
     set_sort_option,
+    isLoading,
   };
 
   return (

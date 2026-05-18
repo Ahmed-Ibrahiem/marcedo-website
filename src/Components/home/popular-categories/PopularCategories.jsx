@@ -38,8 +38,8 @@ const PopularCategories = () => {
       <div className="container">
         <motion.h3
           initial={{ y: -30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ amount: 0.8, once: true }}
+          whileInView={{ y: 0, opacity: 1 , transition: {delay: 0.6} }}
+          viewport={{ amount: 0.9, once: true }}
         >
           Popular <span>Categories</span>
         </motion.h3>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { motion } from "framer-motion";
+import { Loading } from "../../../Components/ui/Loading/Loading";
 
 export const Collections_grid = () => {
   const [loaded, setLoaded] = useState(false);
@@ -15,7 +16,7 @@ export const Collections_grid = () => {
     use_pagination_context();
 
   // Get all collections data from shop context
-  const { all_collections } = use_shop_context();
+  const { all_collections, loading, isError } = use_shop_context();
 
   // Effect runs when collections data changes
   useEffect(() => {
@@ -28,6 +29,10 @@ export const Collections_grid = () => {
     // Define how many items to show per page
     set_number_of_items_in_package(9);
   }, [all_collections]);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <motion.div className={style.collections_grid}>

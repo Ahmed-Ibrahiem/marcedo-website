@@ -13,7 +13,7 @@ const Products_grid = () => {
   const { current_display, set_current_display, is_quick_view_open } =
     use_products_grid_context();
   const { set_pagination_data } = use_pagination_context();
-  const { filter_products } = use_categories_context();
+  const { filter_products, isLoading } = use_categories_context();
 
   useEffect(() => {
     set_pagination_data(filter_products);
@@ -51,7 +51,10 @@ const Products_grid = () => {
   return (
     <div className={style.products_grid}>
       <Products_grid_header />
-      <Products_grid_content />
+      {!isLoading && filter_products && <Products_grid_content />}
+      {isLoading && (
+        <div className="min-h-75 w-full flex-center">Loading...</div>
+      )}
       <Bubbles />
       {is_quick_view_open && <Quick_view />}
     </div>

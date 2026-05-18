@@ -25,30 +25,32 @@ const Products_grid_content = () => {
   }, [display_data, set_number_of_items_in_package]); // Re-run when display_data or setter function changes
 
   return (
-    <div
-      className={`${style.products_grid_content}
+    <>
+      <div
+        className={`${style.products_grid_content}
         ${current_display === 4 ? product_item_style.grid_2 : ""}
         ${current_display === 6 ? product_item_style.grid_3 : ""}
         ${current_display === 8 ? product_item_style.grid_4 : ""}`}
-    >
-      {/* Map through paginated products and render each product as a Product_item component */}
-      {display_data.length > 0 &&
-        display_data.map((pro, index) => (
-          <motion.div
-            // start animation
-            key={pro.id}
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.3, once: true }}
-            // end animation
-          >
-            <Product_item key={pro.id} data={pro} />
-          </motion.div>
-        ))}
+      >
+        {/* Map through paginated products and render each product as a Product_item component */}
+        {display_data.length > 0 &&
+          display_data.map((pro, index) => (
+            <motion.div
+              // start animation
+              key={pro.id}
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 0.3, once: true }}
+              // end animation
+            >
+              <Product_item key={pro.id} data={pro} />
+            </motion.div>
+          ))}
+      </div>
       {display_data.length === 0 && (
         <div className={style.no_products}>No Products Here</div>
       )}
-    </div>
+    </>
   );
 };
 

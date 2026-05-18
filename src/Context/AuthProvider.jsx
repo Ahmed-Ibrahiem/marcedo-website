@@ -3,6 +3,11 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from "axios";
+import {
+  addNewUser,
+  getUserByEmailOrPhone,
+  getUsers,
+} from "../services/usersServices";
 
 // Create a context for authentication
 const auth_context = createContext();
@@ -57,94 +62,83 @@ const Auth_provider = ({ children }) => {
 
   // Function to handle form submission
   const onSubmit = async (data) => {
-    const api_url = "/Users.json"; // API endpoint
-    let res = [];
+    set_is_loading(true); // Start loading
     try {
-      set_is_loading(true); // Start loading
-      const req = await axios.get(api_url); // Fetch existing users
-      if (req.status === 200) {
-        set_is_loading(false); // Stop loading
-        res = [...req.data]; // Store fetched users
+      const getUser = await getUserByEmailOrPhone(data.email);
+
+      // Sign in logic
+      if (sign_mode === "sign_in") {
+        if (!getUser) {
+          // If user does not exist, set error
+          setError("email", {
+            type: "manual",
+            message: "This Email Not Exist",
+          });
+          return;
+        }
+
+        if (getUser.password.trim() !== data.password.trim()) {
+          // If password is incorrect, set error
+          setError("password", {
+            type: "manual",
+            message: "The Password Is Not Correct",
+          });
+          return;
+        }
+
+        // Save user info and close auth modal
+        set_user_info(getUser);
+        set_auth_open(false);
+      }
+
+      // Create account logic
+      if (sign_mode === "create_account") {
+        const email_regext = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
+        if (!email_regext.test(data.email.trim())) {
+          setError("email", {
+            type: "manual",
+            message: "This email is not correct",
+          });
+          return;
+        }
+
+        if (getUser) {
+          setError("email", {
+            type: "manual",
+            message: "This email is already exist",
+          });
+          return;
+        }
+
+        // Validate Egyptian phone number
+        const phone_regex =
+          /^(?:01[0125][0-9]{8}|(?:\+20|0020)1[0125][0-9]{8})$/;
+        if (data.phone.trim() === "" || !phone_regex.test(data.phone)) {
+          setError("phone", {
+            type: "manual",
+            message: "Please enter the correct number",
+          });
+          return;
+        }
+
+        // Set new user info
+        const newUser = await addNewUser({
+          name: `${data.first_name} ${data.last_name}`,
+          username: `${data.first_name}${data.last_name.charAt(0)}`,
+          email: data.email,
+          password: data.password,
+          phone: data.phone,
+        });
+
+        set_user_info(newUser);
+        set_auth_open(false); // Close auth modal
       }
     } catch (error) {
       // Handle error silently
+      throw new Error("Something went wrong");
+    } finally {
+      set_is_loading(false); // Stop loading
     }
-
-    // Find user by email or phone
-    const get_user = res.find(
-      (user) =>
-        user.email.trim().toLowerCase() === data.email.trim().toLowerCase() ||
-        user.phone.trim().toLowerCase() === data.email.trim().toLowerCase(),
-    );
-
-    // Sign in logic
-    if (sign_mode === "sign_in") {
-      if (!get_user) {
-        // If user does not exist, set error
-        setError("email", {
-          type: "manual",
-          message: "This Email Not Exist",
-        });
-        return;
-      }
-
-      if (get_user.password.trim() !== data.password.trim()) {
-        // If password is incorrect, set error
-        setError("password", {
-          type: "manual",
-          message: "The Password Is Not Correct",
-        });
-        return;
-      }
-
-      // Save user info and close auth modal
-      set_user_info(get_user);
-      set_auth_open(false);
-    }
-
-    // Create account logic
-    if (sign_mode === "create_account") {
-      const email_regext = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
-      if (!email_regext.test(data.email.trim())) {
-        setError("email", {
-          type: "manual",
-          message: "This email is not correct",
-        });
-        return;
-      }
-
-      if (get_user) {
-        setError("email", {
-          type: "manual",
-          message: "This email is already exist",
-        });
-        return;
-      }
-
-      // Validate Egyptian phone number
-      const phone_regex = /^(?:01[0125][0-9]{8}|(?:\+20|0020)1[0125][0-9]{8})$/;
-      if (data.phone.trim() === "" || !phone_regex.test(data.phone)) {
-        setError("phone", {
-          type: "manual",
-          message: "Please enter the correct number",
-        });
-        return;
-      }
-
-      // Set new user info
-      set_user_info({
-        id: res.length, // Assign an id based on existing users length
-        name: `${data.first_name} ${data.last_name}`,
-        username: `${data.first_name}${data.last_name.charAt(0)}`,
-        email: data.email,
-        password: data.password,
-        phone: data.phone,
-      });
-
-      set_auth_open(false); // Close auth modal
-    }
-
-    console.log("Submitted Data", data); // Debug submitted data
   };
 
   // Save user info to local storage whenever it changes

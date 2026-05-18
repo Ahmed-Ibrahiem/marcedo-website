@@ -249,7 +249,7 @@
   border-right: 2px solid var(--gray-light-color);
   border-bottom: 2px solid var(--gray-light-color);
   position: absolute;
-  top: -16.5px !important;
+  top: -15px !important;
   right: -15px !important;
 }
 
@@ -262,7 +262,7 @@
   border-bottom: 2px solid var(--gray-light-color);
   position: absolute;
   bottom: -15px !important;
-  left: -17px !important;
+  left: -15px !important;
 }
 
 @media (max-width: 768px) {

@@ -1,23 +1,37 @@
 import { useEffect, useState } from "react";
 import { createContext, useContext } from "react";
 import FetchData from "../services/fetchData";
+import { getListingProducts } from "../services/listingProductsSevices";
 
 const allProductsContext = createContext([]);
 
 const FetchAllProductsProvider = ({ children }) => {
-  const Url = "/listingProducts.json";
-  const [all_products, set_all_products] = useState([]);
+  const [listingProducts, setListingProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    const getProductsData = async () => {
-      const data = await FetchData(Url);
-      set_all_products(data);
-    };
-    getProductsData();
+    try {
+      setIsLoading(true);
+      const fetchData = async () => {
+        const data = await getListingProducts();
+        if (data) {
+          setListingProducts(data);
+        }
+      };
+
+      fetchData();
+    } catch {
+      setIsError(true);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   const value = {
-    all_products,
+    listingProducts,
+    isLoading,
+    isError,
   };
 
   return (

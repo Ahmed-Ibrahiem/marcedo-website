@@ -7,7 +7,7 @@ import { useFetchAllProducts } from "../../../Context/FetchAllProducts.jsx";
 import { motion } from "framer-motion";
 
 const FeaturedProducts = () => {
-  const { all_products } = useFetchAllProducts();
+  const { listingProducts } = useFetchAllProducts();
 
   return (
     <motion.div
@@ -53,8 +53,8 @@ const FeaturedProducts = () => {
             }}
             pagination={{ type: "fraction" }}
           >
-            {all_products &&
-              all_products.map((product_data, index) => {
+            {listingProducts &&
+              listingProducts.map((product_data, index) => {
                 if (index < 4) {
                   return (
                     <SwiperSlide key={product_data.id}>

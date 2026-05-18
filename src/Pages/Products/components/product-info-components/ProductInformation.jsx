@@ -6,12 +6,14 @@ import ReviewsProvider from "../../../../Context/ReviewsProvider";
 import Recommendations from "./ProductDetailsComponents/Recommendations/Recommendations";
 import PathPage from "../PathPage";
 import Coming_soon from "../../../../Components/ui/coming-soon/Coming_soon";
-
 // Context for product details
 import { use_product_detials_context } from "../../../../Context/ProductDetailsContext";
+import { Loading } from "../../../../Components/ui/Loading/Loading";
 
 const ProductInformation = () => {
-  const { data } = use_product_detials_context();
+  const { data, loading, isError } = use_product_detials_context();
+
+  if (loading) return <Loading />;
 
   if (data) {
     return (

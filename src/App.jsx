@@ -16,6 +16,11 @@ import Checkout_page from "./Pages/Checkout/Checkout_page.jsx";
 import MainLayout from "./Pages/Layout/MainLayout.jsx";
 import Order_successfull from "./Pages/order-seccessfull/Order_successfull.jsx";
 import Auth_popup from "./Pages/auth-popup/Auth_popup.jsx";
+import AdminLayout from "./Pages/Layout/adminLayout.jsx";
+import Dashboard from "./Pages/Admin/Dashboard.jsx";
+import Orders from "./Pages/Admin/Orders.jsx";
+import ProductsAdmin from "./Pages/Admin/ProductsAdmin.jsx";
+import Customers from "./Pages/Admin/Customers.jsx";
 
 const App = () => {
   return (
@@ -38,6 +43,12 @@ const App = () => {
           <Route path="/categories/:category_type" element={<Categories />} />
           <Route path="/shop/:category_type" element={<Categories />} />
           <Route path="/order-success" element={<Order_successfull />} />
+        </Route>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="products" element={<ProductsAdmin />} />
+          <Route path="customers" element={<Customers />} />
         </Route>
         <Route path="/checkout" element={<Checkout_page />} />
       </Routes>

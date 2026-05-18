@@ -9,6 +9,7 @@ import {
 import { useParams } from "react-router-dom";
 import { useCartContext } from "./CartMenuContext";
 import { UpdateCartItemsStorage } from "../services/UpdateLocalStorage";
+import { getProductDetails } from "../services/electronicsProductsServices";
 
 // Create Product Details Context
 const Product_details_context = createContext();
@@ -16,43 +17,35 @@ const Product_details_context = createContext();
 const Product_details_Provider = ({ children }) => {
   // Current product data
   const [data, set_data] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   // Access cart context
   const { cartItemsData, setCartItemsData, findItem } = useCartContext();
-
-  // All products data loaded from JSON
-  const [all_products, set_all_products] = useState([]);
 
   // Selected options for this product
   const [color_choose, set_color_choose] = useState(null);
   const product_params = useParams();
 
-  // Fetch products data when component mounts or product_id changes
-  useEffect(() => {
-    const get_products_data = async () => {
-      // Fetch products from local JSON file
-      const req = await fetch("/ProductData.json");
-      if (req.status == 200) {
-        const res = await req.json();
-
-        // Add default quantity to each product
-        const data = res.map((data) => ({ ...data, quantity: 1 }));
-
-        // Save products into state
-        set_all_products(data);
-      }
-    };
-
-    get_products_data();
-  }, [product_params]);
-
   // Find the current product based on product_id and store in state
   useEffect(() => {
-    const product = all_products.find((p) => p.id == product_params.product_id);
-    if (product) {
-      set_data(product);
-    }
-  }, [all_products, product_params.product_id]);
+    setLoading(true);
+    const getData = async () => {
+      try {
+        const productDetails = await getProductDetails(
+          product_params.product_id,
+        );
+        if (productDetails) {
+          set_data(productDetails);
+        }
+      } catch {
+        setIsError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getData();
+  }, [product_params.product_id]);
 
   // Check if this product is already in the cart
   const is_in_a_cart = () => {
@@ -147,12 +140,13 @@ const Product_details_Provider = ({ children }) => {
   const value = {
     data,
     set_data,
-    set_all_products,
     color_choose,
     set_color_choose,
     handle_despatch_options,
     selected_options,
     is_in_a_cart,
+    loading,
+    isError,
   };
 
   return (

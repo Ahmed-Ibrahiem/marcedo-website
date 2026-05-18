@@ -11,6 +11,9 @@ import Shop_provider from "./Context/ShopProvider.jsx";
 import Categories_provider from "./Context/CategoriesProvider.jsx";
 import Auth_provider from "./Context/AuthProvider.jsx";
 import Checkout_provider from "./Context/CheckoutProvider.jsx";
+// import { seedAllData } from "./services/seedData.js";
+
+// seedAllData()
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

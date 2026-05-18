@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import { assets } from "../../../assets/assets";
 import style from "./Logo.module.css";
 
-const Logo = () => {
+const Logo = ({ logoStyle }) => {
   return (
-    <Link to={"/"} className={`logo ${style.logo_part}`}>
+    <Link
+      to={"/"}
+      className={`logo ${style.logo_part} ${logoStyle ? logoStyle : ""}`}
+    >
       <div className={style.box_img}>
         <img src={assets.logo_img} alt="" />
       </div>
