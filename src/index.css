@@ -242,7 +242,6 @@ a {
 button {
   outline: none;
   cursor: pointer;
-  /* background-color: transparent; */
 }
 
 @keyframes FadeInAndTranslate {
@@ -355,7 +354,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .feature_Product .swiper {
-  padding-bottom: 30px ;
+  padding-bottom: 30px;
 }
 
 .feature_Product .swiper-pagination {

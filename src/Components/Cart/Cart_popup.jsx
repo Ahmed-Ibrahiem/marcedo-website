@@ -3,7 +3,6 @@ import { useCartContext } from "../../Context/CartMenuContext";
 import ItemOfCart from "./item-of-cart/ItemOfCart";
 import styles from "./Cart_popup.module.css";
 import { FaXmark } from "react-icons/fa6";
-import { AnimatePresence, motion } from "framer-motion";
 
 const Cart_popup = () => {
   const { isOpenCart, cartItemsData, setIsOpenCart, SubtotalItemsPrice } =
@@ -19,8 +18,8 @@ const Cart_popup = () => {
       onClick={(e) => {
         if (e.target == e.currentTarget) closeCartItems();
       }}
-      className={`fixed not-last: w-full h-full top-0 left-0 bg-black/60 z-30 justify-end cursor-crosshair overflow-hidden
-        ${isOpenCart ? "show_cart_animate flex" : "hide_cart_animate"}`}
+      className={`fixed not-last: hidden w-full h-full top-0 left-0 bg-black/60 z-30 justify-end cursor-crosshair overflow-hidden
+        ${isOpenCart ? "show_cart_animate flex!" : "hide_cart_animate "}`}
     >
       <div className="w-100 bg-white flex-start-col gap-5 p-5 cursor-auto">
         {/* Start Cart Header */}
