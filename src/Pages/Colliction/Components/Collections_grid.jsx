@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState, memo } from "react";
 import style from "../Shop_page.module.css";
-import { use_shop_context } from "../../../Context/ShopProvider";
 import { use_pagination_context } from "../../../Context/PaginationProvider";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { motion } from "framer-motion";
 import { Loading } from "../../../Components/ui/Loading/Loading";
+import { getCollections } from "../../../services/collectionsServices";
+import { RiArrowRightUpLongLine } from "react-icons/ri";
 
 export const Collections_grid = () => {
   const [loaded, setLoaded] = useState(false);
@@ -15,8 +16,42 @@ export const Collections_grid = () => {
   const { set_pagination_data, display_data, set_number_of_items_in_package } =
     use_pagination_context();
 
-  // Get all collections data from shop context
-  const { all_collections, loading, isError } = use_shop_context();
+  // State to store all collections data
+  const [all_collections, set_all_collections] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+
+  // Ref used to prevent multiple API calls (simulate componentDidMount behavior)
+  const is_render_done = useRef(false);
+
+  // Fetch collections data once when the component mounts
+  useEffect(() => {
+    // Prevent re-running the effect on re-renders
+    if (is_render_done.current) return;
+
+    is_render_done.current = true;
+
+    // Async function to fetch data from API
+    const get_data = async () => {
+      setLoading(true);
+      try {
+        const data = await getCollections();
+
+        // Check if request is successful
+        if (data) {
+          // Update state with fetched data
+          set_all_collections(data);
+        }
+      } catch (error) {
+        console.log(error);
+        setIsError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+    // Call the async function
+    get_data();
+  }, []);
 
   // Effect runs when collections data changes
   useEffect(() => {
@@ -67,12 +102,8 @@ export const Collections_grid = () => {
                 <span className={style.title}>{data.title}</span>
 
                 {/* Action button with hover effect */}
-                <button
-                  onMouseEnter={() => set_has_hover(true)} // Trigger hover state
-                  onMouseLeave={() => set_has_hover(false)} // Remove hover state
-                  className="action"
-                >
-                  <i className="fa-solid fa-arrow-right"></i>
+                <button className="action hover:text-white!">
+                  <RiArrowRightUpLongLine size={25} />
                 </button>
               </Link>
             </motion.div>
@@ -81,3 +112,5 @@ export const Collections_grid = () => {
     </motion.div>
   );
 };
+
+export default React.memo(Collections_grid);

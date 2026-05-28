@@ -1,47 +1,52 @@
 import { useState } from "react";
 import { useCartContext } from "../../../Context/CartMenuContext";
-import styles from "../Cart_popup.module.css";
 import Skeleton from "react-loading-skeleton";
+import { FaMinus, FaPlus, FaTrashAlt } from "react-icons/fa";
 
 const ItemOfCart = ({ item_data }) => {
-  const { updateProductQuantity, removeItem } = useCartContext();
+  const { addItem, removeItem, decrementItemCount } = useCartContext();
   const [loaded, setLoaded] = useState(false);
+
   return (
-    <div className={styles.item}>
-      <div className={styles.image_box}>
+    <div className="w-full flex items-center gap-5 relative">
+      <div className="min-w-17.5 w-17.5  h-18 bg-gray-light rounded-sm flex-center">
         <img
+          className="max-w-[80%] max-h-[90%] object-contain"
           loading="lazy"
           onLoad={() => setLoaded(true)}
-          src={item_data.image}
+          src={item_data.thumbnail}
           alt={`The Image Of Product ${item_data.id}`}
         />
       </div>
-      <div className={styles.item_details}>
-        <div className={styles.title}>{item_data.title}</div>
-        <div className={styles.item_price}>
-          {item_data.quantity} x {+item_data.quantity * +item_data.price}$
+      <div className="flex-start-col gap-1.5 max-w-45 text-sm!">
+        <div className="line-clamp-1 text-gray">{item_data.name}</div>
+        <div className="text-orange font-semibold">
+          {item_data.quantity} x{" "}
+          {+item_data.quantity * +item_data.current_price}$
         </div>
-        <div className={styles.item_counter_prograss}>
+        <div className="flex-center gap-1.5">
           <button
-            className={styles.plus}
-            onClick={() => updateProductQuantity("plus", item_data.id)}
+            className="w-6 h-6 bg-gray-light! text-[10px]! flex-center border border-border text-gray"
+            onClick={() => addItem(item_data)}
           >
-            <i className="fa-solid fa-plus"></i>
+            <FaPlus />
           </button>
-          <button className={styles.count}>{item_data.quantity}</button>
+          <span className="w-6 h-6 bg-white text-center border border-border">
+            {item_data.quantity}
+          </span>
           <button
-            className={styles.minus}
-            onClick={() => updateProductQuantity("minus", item_data.id)}
+            className="w-6 h-6 bg-gray-light! text-[10px]! flex-center border border-border text-gray"
+            onClick={() => decrementItemCount(item_data)}
           >
-            <i className="fa-solid fa-minus"></i>
+            <FaMinus />
           </button>
         </div>
       </div>
       <button
-        className={styles.delete_item}
+        className="absolute right-5 top-[50%] translate-y-[-50%] text-lg text-gray hover:text-orange"
         onClick={() => removeItem(item_data)}
       >
-        <i className="fa-solid fa-trash"></i>
+        <FaTrashAlt />
       </button>
     </div>
   );

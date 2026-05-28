@@ -10,7 +10,7 @@ const MainLayout = () => {
 
   useEffect(() => {
     const handleScrolling = () => {
-      if (window.scrollY > 120) {
+      if (window.scrollY > 90) {
         setIsSticky(true);
       } else {
         setIsSticky(false);

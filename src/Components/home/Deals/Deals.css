@@ -63,7 +63,7 @@
 .deals_card_box .supporter::before {
   content: "";
   position: absolute;
-  top: -18px;
+  top: -17px;
   right: -15px;
   width: 15px;
   height: 16px;
@@ -76,7 +76,7 @@
   content: "";
   position: absolute;
   bottom: -15px;
-  left: -17px;
+  left: -16px;
   width: 15.5px;
   height: 15px;
   border-radius: 0 0 100% 0;
@@ -325,31 +325,29 @@
 }
 
 .side_banner1::after,
-.side_banner2::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  bottom: 39px;
-  right: -20px;
-  border-radius: 0 0 100% 0;
-  border-bottom: 20px solid white;
-  border-right: 20px solid white;
-}
-
+.side_banner2::after,
 .side_banner1::before,
 .side_banner2::before {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 30px;
   background-color: transparent;
-  bottom: -20px;
-  right: 39px;
+  border-bottom: 15px solid white;
+  border-right: 15px solid white;
   border-radius: 0 0 100% 0;
-  border-bottom: 20px solid white;
-  border-right: 20px solid white;
+}
+
+.side_banner1::after,
+.side_banner2::after {
+  bottom: 45px;
+  right: -15px;
+}
+
+.side_banner1::before,
+.side_banner2::before {
+  bottom: -15px;
+  right: 44px;
   z-index: 2;
 }
 

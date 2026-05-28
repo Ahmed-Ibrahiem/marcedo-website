@@ -4,7 +4,6 @@ import Scroll_button from "./Components/ui/scroll-button/Scroll_button.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
 import "./App.css";
-import Products from "./Pages/Products/Products.jsx";
 import Cart_popup from "./Components/Cart/Cart_popup.jsx";
 import Custom_message_toast from "./Components/ui/coming-soon/Custom_message_toast.jsx";
 import Wishlist_page from "./Pages/Wishlist/Wishlist_page.jsx";
@@ -21,6 +20,7 @@ import Dashboard from "./Pages/Admin/Dashboard.jsx";
 import Orders from "./Pages/Admin/Orders.jsx";
 import ProductsAdmin from "./Pages/Admin/ProductsAdmin.jsx";
 import Customers from "./Pages/Admin/Customers.jsx";
+import ProductDetailsPage from "./Pages/product-details/ProductDetailsPage.jsx";
 
 const App = () => {
   return (
@@ -35,7 +35,10 @@ const App = () => {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/product_detials/:product_id" element={<Products />} />
+          <Route
+            path="/product_detials/:productSlug"
+            element={<ProductDetailsPage />}
+          />
           <Route path="/wishlist" element={<Wishlist_page />} />
           <Route path="/about-us" element={<About_us />} />
           <Route path="/contact-us" element={<Contact_page />} />

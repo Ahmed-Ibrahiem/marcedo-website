@@ -1,8 +1,8 @@
-import style from "./Wishlist.module.css";
 import { useFavoriteContext } from "../../Context/favoriteMenuContext";
-import ProductItem from "../../Components/product/product-item/ProductItem";
 import { useLayoutEffect } from "react";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
+import ProductCard from "../../Components/product/product-item/ProductCard";
+import FavoriteItem from "./FavoriteItem";
 
 const Wishlist_page = () => {
   const { favoriteItems } = useFavoriteContext();
@@ -14,12 +14,12 @@ const Wishlist_page = () => {
       <div className="container">
         <Our_banner page_data={{ title: "Wishlist" }} />
 
-        <div className={style.products_container}>
-          <div className={style.products_grid}>
+        <div className="container">
+          <div className="w-full">
             {favoriteItems.map((pro) => {
               return (
                 <div key={pro.id}>
-                  <ProductItem product_data={pro} />
+                  <FavoriteItem />
                 </div>
               );
             })}

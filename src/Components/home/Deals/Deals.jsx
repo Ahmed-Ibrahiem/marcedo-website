@@ -3,6 +3,7 @@ import { assets, deals_data } from "../../../assets/assets";
 import "./Deals.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { RiArrowRightUpLongLine } from "react-icons/ri";
 
 // Section that displays a featured deal with a countdown timer and side banners
 const Deals = () => {
@@ -62,7 +63,7 @@ const Deals = () => {
           viewport={{ amount: 0.2, once: true }}
           className="deals_card_part"
         >
-          <h2>Deals Of The Day</h2>
+          <h2 className="font-semibold">Deals Of The Day</h2>
           <div className="deals_card_box">
             <div className="deals_card">
               {/* Thumbnail gallery — clicking a thumbnail switches the main image */}
@@ -150,8 +151,11 @@ const Deals = () => {
           </div>
 
           {/* Button to navigate to the full product details page */}
-          <Link to={`/product_detials/6`} className="button_product_nav">
-            <i className="fa-solid fa-long-arrow-up"></i>
+          <Link
+            to={`/product_detials/6`}
+            className="button_product_nav text-white! "
+          >
+            <RiArrowRightUpLongLine size={30} />
           </Link>
         </motion.div>
 
@@ -180,7 +184,7 @@ const Deals = () => {
             <Link className="banner_icon">
               <div className="box_style1"></div>
               <div className="box_style2"></div>
-              <i className="fa-solid fa-long-arrow-up icon"></i>
+              <RiArrowRightUpLongLine size={30} className="text-orange!" />
             </Link>
           </div>
           <div className="side_banner2">
@@ -194,7 +198,7 @@ const Deals = () => {
             <Link to={`/product_detials/1`} className="banner_icon">
               <div className="box_style1"></div>
               <div className="box_style2"></div>
-              <i className="fa-solid fa-long-arrow-up icon"></i>
+              <RiArrowRightUpLongLine size={30} className="text-orange!" />
             </Link>
           </div>
         </motion.div>

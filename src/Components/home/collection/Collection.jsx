@@ -3,6 +3,7 @@ import { assets } from "../../../assets/assets";
 import "./Collection.css";
 import { use_notification_context } from "../../../Context/NotificationProvider";
 import { motion } from "framer-motion";
+import { RiArrowRightUpLongLine } from "react-icons/ri";
 
 export const Collection = () => {
   const { add_message } = use_notification_context();
@@ -55,9 +56,9 @@ export const Collection = () => {
             if (coll.type != "dress")
               add_message({ title: "This Feature Will Coming Soon" });
           }}
-          className="collection_btn"
+          className="collection_btn text-orange!"
         >
-          <i className="fa-solid fa-arrow-right"></i>
+          <RiArrowRightUpLongLine size={30} />
         </button>
       </Link>
     );
@@ -93,7 +94,7 @@ export const Collection = () => {
             viewport={{ amount: 0.5, once: true }}
           >
             <p>View All Collection</p>{" "}
-            <i className="fa-solid fa-arrow-right"></i>
+            <RiArrowRightUpLongLine className="text-orange!" />
           </motion.div>
         </Link>
         <motion.div

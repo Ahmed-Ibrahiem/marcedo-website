@@ -1,36 +1,50 @@
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import { useFavoriteContext } from "../../../Context/favoriteMenuContext";
 import styles from "./CartAndFavoriteBtns.module.css";
+import { FaCartShopping, FaHeart } from "react-icons/fa6";
 
 const CartAndFavoriteBtns = () => {
-  const { isHasProducts, setIsOpenCart, cartItemsData } = useCartContext();
-  const { isHasFevoritesProducts, favoriteItems } = useFavoriteContext();
+  const { setIsOpenCart, cartItemsData } = useCartContext();
+  const { favoriteItems } = useFavoriteContext();
   return (
     <>
       <Link
         to={"/wishlist"}
-        className={`${styles.fevoraite_icon_btn} ${
-          isHasFevoritesProducts ? styles.has_products : ""
+        className={`relative ${
+          favoriteItems.length > 0 ? "text-orange!" : "text-gray-300!"
         }`}
       >
-        <p>{favoriteItems.length}</p>
-        <i className="fa-solid fa-heart"></i>
+        <div
+          className={`${countStyle} ${favoriteItems.length > 0 ? "text-black bg-orange-lite" : "text-gray bg-gray-light"}`}
+        >
+          {favoriteItems.length}
+        </div>
+        <FaHeart className="text-2xl" />
       </Link>
       <button
         onClick={() => {
           // Open the cartItems menu
           setIsOpenCart((prev) => (prev ? false : true));
         }}
-        className={`${styles.cart_icon_btn} ${
-          isHasProducts ? styles.has_products : ""
+        className={`relative ${
+          Object.keys(cartItemsData).length > 0 ? "text-orange!" : ""
         }`}
       >
-        <p>{cartItemsData.length}</p>
-        <i className="fa-solid fa-bag-shopping"></i>
+        <div
+          className={`${countStyle} ${Object.keys(cartItemsData).length > 0 ? "text-black bg-orange-lite" : "text-gray bg-gray-light"}`}
+        >
+          {Object.keys(cartItemsData).length}
+        </div>
+        <FaCartShopping className="text-2xl" />
       </button>
     </>
   );
 };
 
-export default CartAndFavoriteBtns;
+const countStyle = `
+absolute w-3.5 h-3.5 text-[10px] -top-1.5 -right-1.5 flex-center rounded-full shadow-[0_0_2px_var(--color-gray)]
+`;
+
+export default React.memo(CartAndFavoriteBtns);

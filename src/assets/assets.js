@@ -232,3 +232,4 @@ export const discount_codes = [
   { code: "FIRSTORDER20", type: "percentage", value: 20 },
   { code: "TRYME5", type: "fixed", value: 5 },
 ];
+

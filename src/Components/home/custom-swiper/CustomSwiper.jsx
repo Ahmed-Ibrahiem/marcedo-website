@@ -7,7 +7,7 @@ import "./CustomSwiper.css";
 
 const CustomSwiper = ({ children, ...props }) => {
   return (
-    <Swiper 
+    <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       autoplay={{
         delay: 3000,

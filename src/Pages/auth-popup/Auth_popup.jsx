@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./Auth_popup.module.css";
 import { use_auth_context } from "../../Context/AuthProvider";
 import Form_errors_message from "../../Components/ui/Errors/Form_errors_message";
+import { FaXmark } from "react-icons/fa6";
 
 const Auth_popup = () => {
   const [show_password, set_show_password] = useState(true);
@@ -28,7 +29,7 @@ const Auth_popup = () => {
           className={styles.close_btn}
           onClick={() => set_auth_open(false)}
         >
-          <i className="fa-solid fa-xmark"></i>
+          <FaXmark size={15} />
         </button>
 
         {/* Content */}

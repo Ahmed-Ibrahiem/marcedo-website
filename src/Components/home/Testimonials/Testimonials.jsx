@@ -27,7 +27,7 @@ const Testimonials = () => {
           viewport={{ amount: 0.2, once: true }}
         >
           <CustomSwiper
-            loop={true}
+            loop={testimonials.length > 3}
             breakpoints={{
               320: { slidesPerView: 1 },
               720: { slidesPerView: 2 },

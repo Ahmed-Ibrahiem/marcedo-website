@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { use_pagination_context } from "../../../Context/PaginationProvider";
 import "./Bubbles.css";
+import { FaCaretRight } from "react-icons/fa6";
+import { FaCaretLeft } from "react-icons/fa";
 
 // Pagination bubbles component (used for navigating between pages)
 const Bubbles = () => {
@@ -74,10 +76,10 @@ const Bubbles = () => {
       <div className="bubbles-box">
         {/* Previous page button */}
         <button
-          className={`${current_bubbles_index > 1 ? "active" : ""}`}
+          className={`${current_bubbles_index > 1 ? "text-orange" : "text-gray-400"}`}
           onClick={decrease_index}
         >
-          <i className="fa-solid fa-caret-left left"></i>
+          <FaCaretLeft size={28} />
         </button>
 
         {/* Render pagination bubbles */}
@@ -104,10 +106,10 @@ const Bubbles = () => {
 
         {/* Next page button */}
         <button
-          className={`${current_bubbles_index < num_of_rev_pag ? "active" : ""}`}
+          className={`${current_bubbles_index < num_of_rev_pag ? "text-orange!" : "text-gray-400"}`}
           onClick={increase_index}
         >
-          <i className="fa-solid fa-caret-right right"></i>
+          <FaCaretRight size={28} />
         </button>
       </div>
 

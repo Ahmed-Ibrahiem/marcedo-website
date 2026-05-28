@@ -38,7 +38,7 @@ const Auth_provider = ({ children }) => {
     localStorage.getItem("user_info") || null,
   );
   // State to store current user info
-  const [user_info, set_user_info] = useState(user_info_storage || {});
+  const [user_info, set_user_info] = useState(user_info_storage || null);
 
   // Initialize react-hook-form with default values and validation schema
   const auth_form = useForm({

@@ -1,11 +1,12 @@
+import { FaCheck } from "react-icons/fa";
 import "./Success_Toast.css";
 
 const Success_Toast = ({ message }) => {
   return (
     <div className="success_operation">
       <p>{message}</p>
-      <div>
-        <i className="fa-solid fa-check"></i>
+      <div className=" w-7.5! h-6.5! flex-center ">
+        <FaCheck size={12} />
       </div>
     </div>
   );

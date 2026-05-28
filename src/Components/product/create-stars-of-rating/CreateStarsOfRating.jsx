@@ -1,4 +1,5 @@
 import styles from "./CreateStarsOfRating.module.css";
+import { FaStar } from "react-icons/fa6";
 
 const CreateStarsOfRating = ({ rating_value }) => {
   return (
@@ -7,12 +8,10 @@ const CreateStarsOfRating = ({ rating_value }) => {
         .fill(0)
         .map((_, index) => {
           return (
-            <i
+            <FaStar
               key={index}
-              className={`fa-solid fa-star ${
-                index <= Math.floor(rating_value) - 1 ? styles.active : ""
-              }`}
-            ></i>
+              className={`${index + 1 <= rating_value ? "text-amber-400" : " text-gray-light!"}`}
+            />
           );
         })}
     </div>
