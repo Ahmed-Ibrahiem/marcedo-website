@@ -30,7 +30,7 @@ const AdminNavbar = ({ currentPage }) => {
   ];
   return (
     <nav
-      className={`bg-white h-fit lg:h-full px-1 sm:px-5! py-2.5! flex-between xl:flex-col lg:justify-start! sm:gap-2.5 overflow-hidden min-w-50  `}
+      className={`bg-white h-fit lg:h-full  px-5! py-2.5! flex-between xl:flex-col xl:justify-start! sm:gap-2.5 overflow-hidden  `}
     >
       {navInfo.map((btn, index) => {
         return (

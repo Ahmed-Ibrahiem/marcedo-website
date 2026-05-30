@@ -13,7 +13,7 @@ const AdminLayout = () => {
       <AdminHeader />
       <main className="lg:grid xl:grid-cols-[200px_1fr] flex-1 ">
         <AdminNavbar currentPage={currentPage} />
-        <section className="p-4 w-full">
+        <section className="p-2.5 ">
           <Outlet />
         </section>
       </main>
