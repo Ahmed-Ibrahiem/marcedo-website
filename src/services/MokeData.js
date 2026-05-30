@@ -1,0 +1,8933 @@
+const media = [
+  // Product 101
+  {
+    videos: [],
+    product_id: "prod_101",
+    gallery: ["/assets/dresses/zara51.png", "/assets/dresses/zara52.png"],
+    thumbnail: "/assets/dresses/zara1.png",
+  },
+  // Product 102
+  {
+    videos: [],
+    product_id: "prod_102",
+    gallery: ["/assets/dresses/zara53.png"],
+    thumbnail: "/assets/dresses/zara2.png",
+  },
+  // Product 103
+  {
+    videos: [],
+    product_id: "prod_103",
+    gallery: ["/assets/dresses/zara54.png", "/assets/dresses/zara55.png"],
+    thumbnail: "/assets/dresses/zara3.png",
+  },
+  // Product 104
+  {
+    videos: [],
+    product_id: "prod_104",
+    gallery: [
+      "/assets/dresses/zara56.png",
+      "/assets/dresses/zara57.png",
+      "/assets/dresses/zara58.png",
+    ],
+    thumbnail: "/assets/dresses/zara4.png",
+  },
+  // Product 105
+  {
+    videos: [],
+    product_id: "prod_105",
+    gallery: ["/assets/dresses/zara59.png"],
+    thumbnail: "/assets/dresses/zara5.png",
+  },
+  // Product 106
+  {
+    videos: [],
+    product_id: "prod_106",
+    gallery: ["/assets/dresses/zara60.png", "/assets/dresses/zara61.png"],
+    thumbnail: "/assets/dresses/zara6.png",
+  },
+  // Product 107
+  {
+    videos: [],
+    product_id: "prod_107",
+    gallery: ["/assets/dresses/zara62.png", "/assets/dresses/zara63.png"],
+    thumbnail: "/assets/dresses/zara7.png",
+  },
+  // Product 108
+  {
+    videos: [],
+    product_id: "prod_108",
+    gallery: ["/assets/dresses/zara64.png"],
+    thumbnail: "/assets/dresses/zara8.png",
+  },
+  // Product 109
+  {
+    videos: [],
+    product_id: "prod_109",
+    gallery: ["/assets/dresses/zara65.png", "/assets/dresses/zara66.png"],
+    thumbnail: "/assets/dresses/zara9.png",
+  },
+  // Product 110
+  {
+    videos: [],
+    product_id: "prod_110",
+    gallery: [
+      "/assets/dresses/zara67.png",
+      "/assets/dresses/zara68.png",
+      "/assets/dresses/zara69.png",
+    ],
+    thumbnail: "/assets/dresses/zara10.png",
+  },
+  // Product 111
+  {
+    videos: [],
+    product_id: "prod_111",
+    gallery: ["/assets/dresses/zara70.png"],
+    thumbnail: "/assets/dresses/zara11.png",
+  },
+  // Product 112
+  {
+    videos: [],
+    product_id: "prod_112",
+    gallery: ["/assets/dresses/zara71.png", "/assets/dresses/zara72.png"],
+    thumbnail: "/assets/dresses/zara12.png",
+  },
+  // Product 113
+  {
+    videos: [],
+    product_id: "prod_113",
+    gallery: ["/assets/dresses/nb51.png", "/assets/dresses/nb52.png"],
+    thumbnail: "/assets/dresses/new balance1.png",
+  },
+  // Product 114
+  {
+    videos: [],
+    product_id: "prod_114",
+    gallery: [
+      "/assets/dresses/nb53.png",
+      "/assets/dresses/nb54.png",
+      "/assets/dresses/nb55.png",
+    ],
+    thumbnail: "/assets/dresses/new balance2.png",
+  },
+  // Product 115
+  {
+    videos: [],
+    product_id: "prod_115",
+    gallery: ["/assets/dresses/nb56.png"],
+    thumbnail: "/assets/dresses/new balance3.png",
+  },
+  // Product 116
+  {
+    videos: [],
+    product_id: "prod_116",
+    gallery: ["/assets/dresses/nb57.png"],
+    thumbnail: "/assets/dresses/new balance4.png",
+  },
+  // Product 117
+  {
+    videos: [],
+    product_id: "prod_117",
+    gallery: ["/assets/dresses/nb58.png", "/assets/dresses/nb59.png"],
+    thumbnail: "/assets/dresses/new balance5.png",
+  },
+  // Product 118
+  {
+    videos: [],
+    product_id: "prod_118",
+    gallery: ["/assets/dresses/nb60.png"],
+    thumbnail: "/assets/dresses/new balance6.png",
+  },
+  // Product 119
+  {
+    videos: [],
+    product_id: "prod_119",
+    gallery: [
+      "/assets/dresses/nb61.png",
+      "/assets/dresses/nb62.png",
+      "/assets/dresses/nb63.png",
+    ],
+    thumbnail: "/assets/dresses/new balance7.png",
+  },
+  // Product 120
+  {
+    videos: [],
+    product_id: "prod_120",
+    gallery: ["/assets/dresses/nb64.png"],
+    thumbnail: "/assets/dresses/new balance8.png",
+  },
+  // Product 121
+  {
+    videos: [],
+    product_id: "prod_121",
+    gallery: ["/assets/dresses/nb65.png", "/assets/dresses/nb66.png"],
+    thumbnail: "/assets/dresses/new balance9.png",
+  },
+  // Product 122
+  {
+    videos: [],
+    product_id: "prod_122",
+    gallery: ["/assets/dresses/nb67.png", "/assets/dresses/nb68.png"],
+    thumbnail: "/assets/dresses/new balance10.png",
+  },
+  // Product 123
+  {
+    videos: [],
+    product_id: "prod_123",
+    gallery: ["/assets/dresses/nb69.png"],
+    thumbnail: "/assets/dresses/new balance11.png",
+  },
+  // Product 124
+  {
+    videos: [],
+    product_id: "prod_124",
+    gallery: ["/assets/dresses/nb70.png", "/assets/dresses/nb71.png"],
+    thumbnail: "/assets/dresses/new balance12.png",
+  },
+  // Product 125
+  {
+    videos: [],
+    product_id: "prod_125",
+    gallery: [
+      "/assets/dresses/hm51.png",
+      "/assets/dresses/hm52.png",
+      "/assets/dresses/hm53.png",
+    ],
+    thumbnail: "/assets/dresses/H&M1.png",
+  },
+  // Product 126
+  {
+    videos: [],
+    product_id: "prod_126",
+    gallery: ["/assets/dresses/hm54.png"],
+    thumbnail: "/assets/dresses/H&M2.png",
+  },
+  // Product 127
+  {
+    videos: [],
+    product_id: "prod_127",
+    gallery: ["/assets/dresses/hm55.png", "/assets/dresses/hm56.png"],
+    thumbnail: "/assets/dresses/H&M3.png",
+  },
+  // Product 128
+  {
+    videos: [],
+    product_id: "prod_128",
+    gallery: ["/assets/dresses/hm57.png"],
+    thumbnail: "/assets/dresses/H&M4.png",
+  },
+  // Product 129
+  {
+    videos: [],
+    product_id: "prod_129",
+    gallery: ["/assets/dresses/hm58.png", "/assets/dresses/hm59.png"],
+    thumbnail: "/assets/dresses/H&M5.png",
+  },
+  // Product 130
+  {
+    videos: [],
+    product_id: "prod_130",
+    gallery: [
+      "/assets/dresses/hm60.png",
+      "/assets/dresses/hm61.png",
+      "/assets/dresses/hm62.png",
+    ],
+    thumbnail: "/assets/dresses/H&M6.png",
+  },
+  // Product 131
+  {
+    videos: [],
+    product_id: "prod_131",
+    gallery: ["/assets/dresses/hm63.png"],
+    thumbnail: "/assets/dresses/H&M7.png",
+  },
+  // Product 132
+  {
+    videos: [],
+    product_id: "prod_132",
+    gallery: ["/assets/dresses/hm64.png", "/assets/dresses/hm65.png"],
+    thumbnail: "/assets/dresses/H&M8.png",
+  },
+  // Product 133
+  {
+    videos: [],
+    product_id: "prod_133",
+    gallery: ["/assets/dresses/hm66.png"],
+    thumbnail: "/assets/dresses/H&M9.png",
+  },
+  // Product 134
+  {
+    videos: [],
+    product_id: "prod_134",
+    gallery: ["/assets/dresses/hm67.png", "/assets/dresses/hm68.png"],
+    thumbnail: "/assets/dresses/H&M10.png",
+  },
+  // Product 135
+  {
+    videos: [],
+    product_id: "prod_135",
+    gallery: ["/assets/dresses/hm69.png"],
+    thumbnail: "/assets/dresses/H&M11.png",
+  },
+  // Product 136
+  {
+    videos: [],
+    product_id: "prod_136",
+    gallery: ["/assets/dresses/m51.png", "/assets/dresses/m52.png"],
+    thumbnail: "/assets/dresses/mange1.png",
+  },
+  // Product 137
+  {
+    videos: [],
+    product_id: "prod_137",
+    gallery: [
+      "/assets/dresses/m53.png",
+      "/assets/dresses/m54.png",
+      "/assets/dresses/m55.png",
+    ],
+    thumbnail: "/assets/dresses/mange2.png",
+  },
+  // Product 138
+  {
+    videos: [],
+    product_id: "prod_138",
+    gallery: ["/assets/dresses/m56.png"],
+    thumbnail: "/assets/dresses/mange3.png",
+  },
+  // Product 139
+  {
+    videos: [],
+    product_id: "prod_139",
+    gallery: ["/assets/dresses/m57.png", "/assets/dresses/m58.png"],
+    thumbnail: "/assets/dresses/mange4.png",
+  },
+  // Product 140
+  {
+    videos: [],
+    product_id: "prod_140",
+    gallery: ["/assets/dresses/m59.png"],
+    thumbnail: "/assets/dresses/mange5.png",
+  },
+  // Product 141
+  {
+    videos: [],
+    product_id: "prod_141",
+    gallery: ["/assets/dresses/m60.png", "/assets/dresses/m61.png"],
+    thumbnail: "/assets/dresses/mange6.png",
+  },
+  // Product 142
+  {
+    videos: [],
+    product_id: "prod_142",
+    gallery: ["/assets/dresses/m62.png", "/assets/dresses/m63.png"],
+    thumbnail: "/assets/dresses/mange7.png",
+  },
+  // Product 143
+  {
+    videos: [],
+    product_id: "prod_143",
+    gallery: ["/assets/dresses/m64.png"],
+    thumbnail: "/assets/dresses/mange8.png",
+  },
+  // Product 144
+  {
+    videos: [],
+    product_id: "prod_144",
+    gallery: ["/assets/dresses/m65.png", "/assets/dresses/m66.png"],
+    thumbnail: "/assets/dresses/mange9.png",
+  },
+  // Product 145
+  {
+    videos: [],
+    product_id: "prod_145",
+    gallery: ["/assets/dresses/m67.png"],
+    thumbnail: "/assets/dresses/mange10.png",
+  },
+  // Product 146
+  {
+    videos: [],
+    product_id: "prod_146",
+    gallery: ["/assets/dresses/m68.png", "/assets/dresses/m69.png"],
+    thumbnail: "/assets/dresses/mange11.png",
+  },
+  // Product 147
+  {
+    videos: [],
+    product_id: "prod_147",
+    gallery: [
+      "/assets/dresses/m70.png",
+      "/assets/dresses/m71.png",
+      "/assets/dresses/m72.png",
+    ],
+    thumbnail: "/assets/dresses/mange12.png",
+  },
+  // Product 148
+  {
+    videos: [],
+    product_id: "prod_148",
+    gallery: ["/assets/dresses/m73.png"],
+    thumbnail: "/assets/dresses/mange13.png",
+  },
+  // Product 149
+  {
+    videos: [],
+    product_id: "prod_149",
+    gallery: ["/assets/dresses/m74.png", "/assets/dresses/m75.png"],
+    thumbnail: "/assets/dresses/mange14.png",
+  },
+  // Product 150
+  {
+    videos: [],
+    product_id: "prod_150",
+    gallery: ["/assets/dresses/hm70.png", "/assets/dresses/hm71.png"],
+    thumbnail: "/assets/dresses/H&M12.png",
+  },
+];
+
+const details = [
+  // Product 101
+  {
+    short_description:
+      "Denim skirt with short sleeve shirt and tie detail - perfect blend of casual and chic for everyday wear.",
+    description: [
+      {
+        content:
+          "This stylish denim dress combines a classic skirt silhouette with a comfortable short sleeve shirt and an elegant tie detail at the waist. Perfect for casual outings, lunch dates, or weekend getaways.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Premium quality denim fabric",
+          "Short sleeve design with decorative tie detail",
+          "Comfortable regular fit",
+          "Versatile for day and evening wear",
+          "Easy care and durable",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_101",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Denim Skirt With Short Sleeve Shirt And Tie Detail",
+    model: null,
+    material: "Denim",
+    memory: null,
+    weight_grams: 450,
+  },
+  // Product 102
+  {
+    short_description:
+      "Satin slip dress in elegant blue - perfect for evening parties and special occasions.",
+    description: [
+      {
+        content:
+          "This luxurious satin slip dress features a flattering silhouette with delicate spaghetti straps. The smooth satin fabric drapes beautifully and catches the light perfectly for any formal event.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Premium satin fabric with silky smooth finish",
+          "Adjustable spaghetti straps",
+          "Flattering cowl neckline",
+          "Elegant blue color",
+          "Perfect for parties, weddings, and dates",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_102",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Satin Slip Dress Blue",
+    model: null,
+    material: "Satin",
+    memory: null,
+    weight_grams: 320,
+  },
+  // Product 103
+  {
+    short_description:
+      "Floral blue mini dress - fresh and vibrant for spring and summer days.",
+    description: [
+      {
+        content:
+          "This charming floral mini dress features a beautiful blue base with colorful floral prints. Perfect for garden parties, brunches, and vacation wear. The lightweight fabric keeps you cool on warm days.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Vibrant floral print all over",
+          "Lightweight breathable fabric",
+          "Flattering mini length",
+          "Short puff sleeves",
+          "Perfect for spring and summer",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_103",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Floral Blue Mini Dress",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 280,
+  },
+  // Product 104
+  {
+    short_description:
+      "Casual t-shirt dress - comfortable and stylish for everyday wear.",
+    description: [
+      {
+        content:
+          "This relaxed t-shirt dress is made from soft cotton blend fabric. Perfect for running errands, lounging at home, or casual coffee dates. The simple design makes it easy to accessorize.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft cotton blend fabric",
+          "Classic crew neck",
+          "Short sleeves",
+          "Relaxed comfortable fit",
+          "Easy to style with sneakers or sandals",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_104",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Casual T-Shirt Dress",
+    model: null,
+    material: "Cotton Blend",
+    memory: null,
+    weight_grams: 350,
+  },
+  // Product 105
+  {
+    short_description:
+      "Sporty hoodie dress - athletic meets casual for a trendy streetwear look.",
+    description: [
+      {
+        content:
+          "This sporty hoodie dress combines comfort and style with its relaxed fit, attached hood, and modern silhouette. Perfect for casual days, airport travel, or athleisure looks. Made from soft fleece fabric.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft fleece fabric for warmth",
+          "Attached hood with drawstrings",
+          "Kangaroo pocket in front",
+          "Sporty casual streetwear style",
+          "Perfect for lounging or running errands",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_105",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sporty Hoodie Dress",
+    model: null,
+    material: "Cotton Fleece",
+    memory: null,
+    weight_grams: 520,
+  },
+  // Product 106
+  {
+    short_description:
+      "Linen blend wrap dress - breathable and elegant for warm weather days.",
+    description: [
+      {
+        content:
+          "This lightweight wrap dress is made from a breathable linen blend fabric. The flattering wrap silhouette cinches at the waist with an adjustable tie and creates a beautiful V-neckline. Perfect for summer days and beach vacations.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Breathable linen blend fabric",
+          "Flattering wrap silhouette",
+          "Adjustable waist tie",
+          "Elegant V-neckline",
+          "Perfect for summer and spring",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_106",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Linen Blend Wrap Dress",
+    model: null,
+    material: "Linen Blend",
+    memory: null,
+    weight_grams: 380,
+  },
+  // Product 107
+  {
+    short_description:
+      "Ribbed bodycon dress - curve-hugging and stylish for a night out.",
+    description: [
+      {
+        content:
+          "This ribbed knit bodycon dress hugs your curves in all the right places. Made from stretchy and comfortable fabric that moves with you. Perfect for date nights, parties, and evening events.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Stretchy ribbed knit fabric",
+          "Bodycon silhouette that hugs curves",
+          "Short sleeves",
+          "Below knee length",
+          "Perfect for parties and romantic dates",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_107",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Ribbed Bodycon Dress",
+    model: null,
+    material: "Ribbed Knit",
+    memory: null,
+    weight_grams: 410,
+  },
+  // Product 108
+  {
+    short_description:
+      "Ribbed bodycon dress - sleek and versatile for any occasion.",
+    description: [
+      {
+        content:
+          "This classic ribbed bodycon dress is a wardrobe staple. The stretchy fabric provides a comfortable fit while maintaining a sleek silhouette. Easy to dress up with heels or down with sneakers.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft ribbed knit fabric",
+          "Body-hugging comfortable fit",
+          "Versatile design for day or night",
+          "Easy to dress up or down",
+          "Available in multiple sizes",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_108",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Ribbed Bodycon Dress",
+    model: null,
+    material: "Ribbed Knit",
+    memory: null,
+    weight_grams: 400,
+  },
+  // Product 109
+  {
+    short_description:
+      "Puff sleeve mini dress - romantic and trendy for special occasions.",
+    description: [
+      {
+        content:
+          "This adorable puff sleeve mini dress features dramatic sleeves and a flattering neckline. The lightweight fabric and romantic silhouette make it perfect for weddings, garden parties, and date nights.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Dramatic puff sleeves",
+          "Flattering V-neckline",
+          "Mini length",
+          "Lightweight flowing fabric",
+          "Perfect for special occasions and events",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_109",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Puff Sleeve Mini Dress",
+    model: null,
+    material: "Polyester",
+    memory: null,
+    weight_grams: 340,
+  },
+  // Product 110
+  {
+    short_description:
+      "Velvet wrap dress - luxurious and perfect for holiday parties.",
+    description: [
+      {
+        content:
+          "This stunning velvet wrap dress adds instant glamour to any occasion. The rich velvet fabric and flattering wrap silhouette make it perfect for festive events, Christmas parties, and New Year's celebrations.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Luxurious velvet fabric",
+          "Flattering wrap design",
+          "Rich warm colors",
+          "Perfect for holiday and festive parties",
+          "Elegant drape and movement",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_110",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Velvet Wrap Dress",
+    model: null,
+    material: "Velvet",
+    memory: null,
+    weight_grams: 470,
+  },
+  // Product 111
+  {
+    short_description:
+      "Elegant silk dress - timeless sophistication for formal events.",
+    description: [
+      {
+        content:
+          "This elegant silk dress exudes sophistication and class. The smooth silk fabric drapes beautifully and feels luxurious against the skin. Perfect for weddings, galas, and formal dinners.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Premium silk fabric",
+          "Elegant timeless design",
+          "Smooth luxurious feel",
+          "Perfect for formal events",
+          "Beautiful drape and movement",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_111",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Silk Dress",
+    model: null,
+    material: "Silk",
+    memory: null,
+    weight_grams: 310,
+  },
+  // Product 112
+  {
+    short_description:
+      "Casual linen dress - relaxed and breathable for everyday summer wear.",
+    description: [
+      {
+        content:
+          "This casual linen dress is perfect for hot summer days. The breathable linen fabric keeps you cool while the relaxed fit provides all-day comfort. Great for beach cover-ups or casual outings.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Breathable linen fabric",
+          "Relaxed comfortable fit",
+          "Short sleeves",
+          "Perfect for hot weather",
+          "Great as a beach cover-up",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_112",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Casual Linen Dress",
+    model: null,
+    material: "Linen",
+    memory: null,
+    weight_grams: 360,
+  },
+  // Product 113
+  {
+    short_description:
+      "Party sequins dress - sparkle and shine for your next celebration.",
+    description: [
+      {
+        content:
+          "Get ready to shine in this stunning sequins dress. Covered in shimmering sequins, this dress is guaranteed to turn heads at any party, club, or special celebration.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Full sequin coverage",
+          "Shimmering sparkle effect",
+          "Body-hugging fit",
+          "Perfect for parties and clubs",
+          "Guaranteed to turn heads",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_113",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Party Sequins Dress",
+    model: null,
+    material: "Sequins",
+    memory: null,
+    weight_grams: 550,
+  },
+  // Product 114
+  {
+    short_description:
+      "Casual cotton dress - soft, comfortable, and perfect for everyday wear.",
+    description: [
+      {
+        content:
+          "This casual cotton dress is a summer essential. Made from 100% soft cotton, it's breathable, comfortable, and easy to wear. Perfect for lounging, running errands, or casual meetups.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "100% soft cotton fabric",
+          "Breathable and comfortable",
+          "Relaxed fit",
+          "Short sleeves",
+          "Everyday summer essential",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_114",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Casual Cotton Dress",
+    model: null,
+    material: "Cotton",
+    memory: null,
+    weight_grams: 330,
+  },
+  // Product 115
+  {
+    short_description:
+      "Elegant evening gown - red carpet ready for formal occasions.",
+    description: [
+      {
+        content:
+          "Make a grand entrance in this elegant evening gown. The floor-length design and flattering silhouette create a red-carpet look that's perfect for galas, award ceremonies, and black-tie events.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Floor-length elegant design",
+          "Flattering silhouette",
+          "Premium quality fabric",
+          "Perfect for black-tie events",
+          "Red carpet ready",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_115",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Evening Gown",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 680,
+  },
+  // Product 116
+  {
+    short_description:
+      "Casual denim dress - classic and versatile for everyday styling.",
+    description: [
+      {
+        content:
+          "This casual denim dress is a timeless wardrobe staple. Made from comfortable denim with a relaxed fit, it's perfect for everyday wear. Style with sneakers for a casual look or boots for edge.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Classic denim fabric",
+          "Relaxed comfortable fit",
+          "Versatile styling options",
+          "Durable and long-lasting",
+          "Timeless wardrobe staple",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_116",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Casual Denim Dress",
+    model: null,
+    material: "Denim",
+    memory: null,
+    weight_grams: 480,
+  },
+  // Product 117
+  {
+    short_description: "Summer floral dress - vibrant prints for sunny days.",
+    description: [
+      {
+        content:
+          "Embrace the summer vibes with this vibrant floral dress. The colorful print and lightweight fabric make it perfect for beach vacations, brunches, and outdoor parties.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Vibrant floral print",
+          "Lightweight breathable fabric",
+          "Flattering fit",
+          "Perfect for summer vacations",
+          "Easy to pack and travel with",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_117",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Summer Floral Dress",
+    model: null,
+    material: "Polyester",
+    memory: null,
+    weight_grams: 290,
+  },
+  // Product 118
+  {
+    short_description:
+      "Formal blazer dress - power dressing for professional settings.",
+    description: [
+      {
+        content:
+          "Make a statement with this formal blazer dress. Combining the structure of a blazer with the elegance of a dress, it's perfect for business meetings, presentations, and professional events.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Tailored blazer-style design",
+          "Professional and polished look",
+          "Structured silhouette",
+          "Perfect for business settings",
+          "Versatile for work and events",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_118",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Formal Blazer Dress",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 530,
+  },
+  // Product 119
+  {
+    short_description: "Casual knit dress - cozy comfort for cooler days.",
+    description: [
+      {
+        content:
+          "Stay cozy and stylish in this casual knit dress. The soft knitted fabric provides warmth while the relaxed fit ensures comfort. Perfect for fall and winter days paired with boots and tights.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft knitted fabric",
+          "Warm and cozy",
+          "Relaxed comfortable fit",
+          "Perfect for fall and winter",
+          "Pairs well with boots",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_119",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Casual Knit Dress",
+    model: null,
+    material: "Knit",
+    memory: null,
+    weight_grams: 490,
+  },
+  // Product 120
+  {
+    short_description:
+      "Elegant silk dress - timeless beauty for special moments.",
+    description: [
+      {
+        content:
+          "This elegant silk dress captures timeless beauty and sophistication. The lustrous silk fabric and classic design make it perfect for weddings, anniversary dinners, and special celebrations.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Luxurious silk fabric",
+          "Timeless elegant design",
+          "Beautiful drape",
+          "Perfect for special occasions",
+          "A forever piece in your wardrobe",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_120",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Silk Dress",
+    model: null,
+    material: "Silk",
+    memory: null,
+    weight_grams: 320,
+  },
+  // Product 121
+  {
+    short_description: "Casual linen dress - relaxed summer essential.",
+    description: [
+      {
+        content:
+          "Keep cool and look stylish in this casual linen dress. The breathable linen fabric and relaxed silhouette make it perfect for hot summer days, whether you're at the beach or exploring a new city.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Breathable linen fabric",
+          "Relaxed silhouette",
+          "Short sleeves",
+          "Perfect for hot weather",
+          "Great for travel and vacation",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_121",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Casual Linen Dress",
+    model: null,
+    material: "Linen",
+    memory: null,
+    weight_grams: 350,
+  },
+  // Product 122
+  {
+    short_description:
+      "Party sequins dress - shine bright at your next celebration.",
+    description: [
+      {
+        content:
+          "Get ready to sparkle in this dazzling sequins dress. Fully covered in shimmering sequins, this dress is designed to make you the center of attention at any party or celebration.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Full sequin coverage",
+          "Dazzling sparkle effect",
+          "Figure-flattering fit",
+          "Perfect for parties and events",
+          "Lightweight despite sequins",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_122",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Party Sequins Dress",
+    model: null,
+    material: "Sequins",
+    memory: null,
+    weight_grams: 540,
+  },
+  // Product 123
+  {
+    short_description: "Casual cotton dress - everyday comfort and style.",
+    description: [
+      {
+        content:
+          "This casual cotton dress combines comfort and style effortlessly. Made from soft, breathable cotton, it's perfect for everyday wear. Easy to dress up with accessories or keep simple.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft breathable cotton",
+          "Comfortable everyday fit",
+          "Versatile styling options",
+          "Easy care and durable",
+          "Wardrobe essential",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_123",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Casual Cotton Dress",
+    model: null,
+    material: "Cotton",
+    memory: null,
+    weight_grams: 340,
+  },
+  // Product 124
+  {
+    short_description:
+      "Elegant evening gown - sophisticated glamour for formal events.",
+    description: [
+      {
+        content:
+          "Command attention in this elegant evening gown. The sophisticated design and flowing silhouette create a look of timeless glamour, perfect for galas, weddings, and formal celebrations.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Sophisticated elegant design",
+          "Flowing floor-length silhouette",
+          "Premium quality fabric",
+          "Perfect for formal events",
+          "Timeless glamour",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_124",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Evening Gown",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 670,
+  },
+  // Product 125
+  {
+    short_description:
+      "Sports denim dress - athletic inspired denim for casual wear.",
+    description: [
+      {
+        content:
+          "This sporty denim dress combines the durability of denim with athletic-inspired design elements. Perfect for active casual days, running errands, or casual meetups with friends.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Durable denim fabric",
+          "Athletic-inspired design",
+          "Comfortable fit",
+          "Sporty casual style",
+          "Perfect for active days",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_125",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Denim Dress",
+    model: null,
+    material: "Denim",
+    memory: null,
+    weight_grams: 500,
+  },
+  // Product 126
+  {
+    short_description: "Summer floral dress - brighten up your wardrobe.",
+    description: [
+      {
+        content:
+          "Bring the beauty of summer flowers to your wardrobe with this vibrant floral dress. The cheerful print and lightweight fabric make it perfect for sunny days and warm weather getaways.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Cheerful floral print",
+          "Lightweight breathable fabric",
+          "Flattering fit",
+          "Perfect for summer",
+          "Great for vacation photos",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_126",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Summer Floral Dress",
+    model: null,
+    material: "Polyester",
+    memory: null,
+    weight_grams: 300,
+  },
+  // Product 127
+  {
+    short_description: "Formal blazer dress - power and elegance combined.",
+    description: [
+      {
+        content:
+          "Step into any boardroom with confidence in this formal blazer dress. The structured design creates a powerful silhouette while maintaining feminine elegance. Perfect for executives and professionals.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Structured blazer design",
+          "Powerful professional silhouette",
+          "Feminine elegant details",
+          "Perfect for business settings",
+          "Command respect and attention",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_127",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Formal Blazer Dress",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 540,
+  },
+  // Product 128
+  {
+    short_description: "Sports knit dress - comfortable athleisure style.",
+    description: [
+      {
+        content:
+          "This sports knit dress brings together comfort and style. The soft knit fabric and sporty design make it perfect for casual days, travel, or lounging while still looking put together.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft knit fabric",
+          "Sporty athleisure design",
+          "Comfortable relaxed fit",
+          "Perfect for travel and lounging",
+          "Stylish yet comfortable",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_128",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Knit Dress",
+    model: null,
+    material: "Knit",
+    memory: null,
+    weight_grams: 460,
+  },
+  // Product 129
+  {
+    short_description: "Elegant silk dress - luxury and sophistication.",
+    description: [
+      {
+        content:
+          "Indulge in luxury with this elegant silk dress. The premium silk fabric feels incredible against the skin while the classic design ensures you'll look sophisticated at any formal occasion.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Premium silk fabric",
+          "Luxurious feel",
+          "Classic elegant design",
+          "Perfect for formal events",
+          "Investment piece",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_129",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Silk Dress",
+    model: null,
+    material: "Silk",
+    memory: null,
+    weight_grams: 315,
+  },
+  // Product 130
+  {
+    short_description: "Sports linen dress - breathable active style.",
+    description: [
+      {
+        content:
+          "Stay cool and active in this sports linen dress. The breathable linen fabric and sporty design make it perfect for warm weather activities, from beach volleyball to casual bike rides.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Breathable linen fabric",
+          "Sporty active design",
+          "Lightweight and cool",
+          "Perfect for warm weather",
+          "Great for outdoor activities",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_130",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Linen Dress",
+    model: null,
+    material: "Linen",
+    memory: null,
+    weight_grams: 370,
+  },
+  // Product 131
+  {
+    short_description: "Party sequins dress - celebrate in style.",
+    description: [
+      {
+        content:
+          "Get ready to party in this stunning sequins dress. The eye-catching sparkle and flattering fit ensure you'll be the life of any celebration, from New Year's Eve to birthday parties.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Eye-catching sequins",
+          "Party-ready sparkle",
+          "Flattering fit",
+          "Perfect for celebrations",
+          "Be the center of attention",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_131",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Party Sequins Dress",
+    model: null,
+    material: "Sequins",
+    memory: null,
+    weight_grams: 530,
+  },
+  // Product 132
+  {
+    short_description: "Sports cotton dress - active comfort for everyday.",
+    description: [
+      {
+        content:
+          "This sports cotton dress is designed for active comfort. The soft cotton fabric and athletic-inspired design make it perfect for gym sessions, yoga class, or casual active days.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft cotton fabric",
+          "Athletic-inspired design",
+          "Active comfort fit",
+          "Perfect for gym and yoga",
+          "Breathable and flexible",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_132",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Cotton Dress",
+    model: null,
+    material: "Cotton",
+    memory: null,
+    weight_grams: 380,
+  },
+  // Product 133
+  {
+    short_description: "Elegant evening gown - red carpet glamour.",
+    description: [
+      {
+        content:
+          "Experience red carpet glamour in this elegant evening gown. The stunning design and flowing silhouette will make you feel like a movie star at any formal event, gala, or awards ceremony.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Red carpet ready",
+          "Stunning elegant design",
+          "Flowing floor-length silhouette",
+          "Perfect for formal galas",
+          "Movie star glamour",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_133",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Evening Gown",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 690,
+  },
+  // Product 134
+  {
+    short_description: "Sports denim dress - rugged casual style.",
+    description: [
+      {
+        content:
+          "This sports denim dress brings rugged casual style to your wardrobe. The durable denim and sporty design make it perfect for outdoor activities, casual Fridays, or weekend adventures.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Rugged durable denim",
+          "Sporty casual design",
+          "Comfortable fit",
+          "Perfect for outdoor activities",
+          "Weekend adventure ready",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_134",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Denim Dress",
+    model: null,
+    material: "Denim",
+    memory: null,
+    weight_grams: 510,
+  },
+  // Product 135
+  {
+    short_description: "Summer floral dress - vacation ready.",
+    description: [
+      {
+        content:
+          "Pack this summer floral dress for your next vacation. The beautiful print and lightweight fabric make it perfect for tropical getaways, beach resorts, or simply enjoying sunny days at home.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Beautiful floral print",
+          "Lightweight vacation fabric",
+          "Flattering fit",
+          "Perfect for tropical getaways",
+          "Easy to pack and wear",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_135",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Summer Floral Dress",
+    model: null,
+    material: "Polyester",
+    memory: null,
+    weight_grams: 295,
+  },
+  // Product 136
+  {
+    short_description: "Formal blazer dress - executive elegance.",
+    description: [
+      {
+        content:
+          "Project executive elegance with this formal blazer dress. The tailored design and professional silhouette make it perfect for corporate events, presentations, and important business meetings.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Tailored executive design",
+          "Professional silhouette",
+          "Elegant details",
+          "Perfect for corporate events",
+          "Command the boardroom",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_136",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Formal Blazer Dress",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 550,
+  },
+  // Product 137
+  {
+    short_description: "Sports knit dress - cozy active style.",
+    description: [
+      {
+        content:
+          "Stay cozy and active in this sports knit dress. The soft knit fabric provides warmth and comfort while the sporty design keeps you looking stylish during cool weather activities.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft warm knit",
+          "Sporty active design",
+          "Cozy comfortable fit",
+          "Perfect for cool weather",
+          "Stylish athleisure",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_137",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Knit Dress",
+    model: null,
+    material: "Knit",
+    memory: null,
+    weight_grams: 480,
+  },
+  // Product 138
+  {
+    short_description: "Elegant silk dress - timeless treasure.",
+    description: [
+      {
+        content:
+          "Add a timeless treasure to your wardrobe with this elegant silk dress. The classic design and luxurious silk fabric ensure you'll reach for this dress for years to come for special occasions.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Timeless classic design",
+          "Luxurious silk fabric",
+          "Elegant silhouette",
+          "Perfect for special occasions",
+          "A forever piece",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_138",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Silk Dress",
+    model: null,
+    material: "Silk",
+    memory: null,
+    weight_grams: 325,
+  },
+  // Product 139
+  {
+    short_description: "Sports linen dress - lightweight active wear.",
+    description: [
+      {
+        content:
+          "Stay active and cool in this sports linen dress. The lightweight linen fabric and sporty design make it perfect for hiking, outdoor yoga, or any warm weather activity where you want to look good.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Lightweight linen fabric",
+          "Sporty active design",
+          "Breathable and cool",
+          "Perfect for outdoor activities",
+          "Style meets function",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_139",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Linen Dress",
+    model: null,
+    material: "Linen",
+    memory: null,
+    weight_grams: 360,
+  },
+  // Product 140
+  {
+    short_description: "Party sequins dress - dance the night away.",
+    description: [
+      {
+        content:
+          "Get ready to dance the night away in this party sequins dress. The dazzling sparkle and comfortable fit make it perfect for clubs, parties, and any celebration where you want to shine.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Dazzling sequin sparkle",
+          "Comfortable party fit",
+          "Dance-ready design",
+          "Perfect for clubs and parties",
+          "Shine all night long",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_140",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Party Sequins Dress",
+    model: null,
+    material: "Sequins",
+    memory: null,
+    weight_grams: 525,
+  },
+  // Product 141
+  {
+    short_description: "Casual cotton dress - simple summer style.",
+    description: [
+      {
+        content:
+          "Embrace simple summer style with this casual cotton dress. The soft cotton fabric and easy design make it perfect for lazy summer days, picnics in the park, or casual barbecues with friends.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft summer cotton",
+          "Simple easy design",
+          "Breathable and comfortable",
+          "Perfect for casual days",
+          "Effortless style",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_141",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Casual Cotton Dress",
+    model: null,
+    material: "Cotton",
+    memory: null,
+    weight_grams: 345,
+  },
+  // Product 142
+  {
+    short_description: "Elegant evening gown - unforgettable elegance.",
+    description: [
+      {
+        content:
+          "Create unforgettable memories in this elegant evening gown. The breathtaking design and flowing silhouette ensure you'll look and feel amazing at any formal event, from prom to charity galas.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Breathtaking design",
+          "Flowing elegant silhouette",
+          "Premium quality fabric",
+          "Perfect for formal events",
+          "Unforgettable elegance",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_142",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Evening Gown",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 660,
+  },
+  // Product 143
+  {
+    short_description: "Sports leather dress - edgy active style.",
+    description: [
+      {
+        content:
+          "Make an edgy statement with this sports leather dress. The faux leather fabric and sporty design create a unique look that's perfect for concerts, night outs, or when you want to stand out.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Edgy faux leather",
+          "Sporty active design",
+          "Unique standout style",
+          "Perfect for concerts and nights out",
+          "Bold fashion statement",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_143",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Leather Dress",
+    model: null,
+    material: "Faux Leather",
+    memory: null,
+    weight_grams: 560,
+  },
+  // Product 144
+  {
+    short_description: "Summer floral dress - blooming beauty.",
+    description: [
+      {
+        content:
+          "Let your style bloom with this beautiful floral dress. The vibrant print and flattering fit make it perfect for garden parties, outdoor weddings, or any spring or summer celebration.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Vibrant blooming print",
+          "Flattering fit",
+          "Lightweight fabric",
+          "Perfect for garden parties",
+          "Spring and summer ready",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_144",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Summer Floral Dress",
+    model: null,
+    material: "Polyester",
+    memory: null,
+    weight_grams: 305,
+  },
+  // Product 145
+  {
+    short_description: "Formal blazer dress - confident style.",
+    description: [
+      {
+        content:
+          "Project confidence and style with this formal blazer dress. The sharp tailoring and professional design make it perfect for job interviews, business lunches, and important presentations.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Sharp tailored design",
+          "Professional confident style",
+          "Flattering silhouette",
+          "Perfect for interviews",
+          "Command respect",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_145",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Formal Blazer Dress",
+    model: null,
+    material: "Polyester Blend",
+    memory: null,
+    weight_grams: 535,
+  },
+  // Product 146
+  {
+    short_description: "Sports knit dress - active comfort.",
+    description: [
+      {
+        content:
+          "Experience active comfort in this sports knit dress. The flexible knit fabric and athletic design allow for full range of motion, making it perfect for yoga, pilates, or active recovery days.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Flexible knit fabric",
+          "Athletic active design",
+          "Full range of motion",
+          "Perfect for yoga and pilates",
+          "Comfort meets function",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_146",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Knit Dress",
+    model: null,
+    material: "Knit",
+    memory: null,
+    weight_grams: 450,
+  },
+  // Product 147
+  {
+    short_description: "Elegant silk dress - refined sophistication.",
+    description: [
+      {
+        content:
+          "Experience refined sophistication in this elegant silk dress. The high-quality silk and thoughtful design details create a dress that's perfect for upscale restaurants, theater nights, and formal dinner parties.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "High-quality silk fabric",
+          "Refined sophisticated design",
+          "Thoughtful elegant details",
+          "Perfect for upscale events",
+          "Evening sophistication",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_147",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Elegant Silk Dress",
+    model: null,
+    material: "Silk",
+    memory: null,
+    weight_grams: 335,
+  },
+  // Product 148
+  {
+    short_description: "Sports linen dress - breezy active wear.",
+    description: [
+      {
+        content:
+          "Stay breezy and active in this sports linen dress. The lightweight linen fabric allows air to flow while the sporty design keeps you looking stylish during warm weather activities.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Breezy lightweight linen",
+          "Sporty active design",
+          "Airflow for cooling",
+          "Perfect for warm weather",
+          "Style and comfort",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_148",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Linen Dress",
+    model: null,
+    material: "Linen",
+    memory: null,
+    weight_grams: 365,
+  },
+  // Product 149
+  {
+    short_description: "Party sequins dress - celebrate in shimmer.",
+    description: [
+      {
+        content:
+          "Celebrate in shimmer with this party sequins dress. The stunning sequin coverage and flattering fit make it perfect for milestone birthdays, engagement parties, and any special celebration.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Stunning sequin shimmer",
+          "Flattering celebration fit",
+          "Milestone event ready",
+          "Perfect for special celebrations",
+          "Sparkle and shine",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_149",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Party Sequins Dress",
+    model: null,
+    material: "Sequins",
+    memory: null,
+    weight_grams: 540,
+  },
+  // Product 150
+  {
+    short_description: "Sports cotton dress - everyday active style.",
+    description: [
+      {
+        content:
+          "Elevate your everyday active style with this sports cotton dress. The soft cotton fabric and athletic design make it perfect for gym sessions, morning runs, or casual active days around town.",
+        type: "paragraph",
+      },
+      {
+        content: "Key Features",
+        type: "heading",
+      },
+      {
+        items: [
+          "Soft active cotton",
+          "Athletic everyday design",
+          "Comfortable performance fit",
+          "Perfect for gym and runs",
+          "Elevated athleisure",
+        ],
+        type: "list",
+      },
+    ],
+    condition: "New",
+    product_id: "prod_150",
+    operating_system: null,
+    screen_size: null,
+    full_name: "Sports Cotton Dress",
+    model: null,
+    material: "Cotton",
+    memory: null,
+    weight_grams: 385,
+  },
+];
+
+const ratings = [
+  // Product 101
+  {
+    total_ratings: 128,
+    product_id: "prod_101",
+    sold: 42,
+    total_reviews: 128,
+    average: 4.8,
+    distribution: { 1: 2, 2: 1, 3: 5, 4: 30, 5: 90 },
+  },
+  // Product 102
+  {
+    total_ratings: 95,
+    product_id: "prod_102",
+    sold: 18,
+    total_reviews: 95,
+    average: 4.8,
+    distribution: { 1: 1, 2: 1, 3: 4, 4: 20, 5: 69 },
+  },
+  // Product 103
+  {
+    total_ratings: 203,
+    product_id: "prod_103",
+    sold: 7,
+    total_reviews: 203,
+    average: 4.7,
+    distribution: { 1: 4, 2: 2, 3: 15, 4: 50, 5: 132 },
+  },
+  // Product 104
+  {
+    total_ratings: 187,
+    product_id: "prod_104",
+    sold: 35,
+    total_reviews: 187,
+    average: 4.8,
+    distribution: { 1: 2, 2: 3, 3: 10, 4: 45, 5: 127 },
+  },
+  // Product 105
+  {
+    total_ratings: 312,
+    product_id: "prod_105",
+    sold: 22,
+    total_reviews: 312,
+    average: 4.9,
+    distribution: { 1: 3, 2: 1, 3: 8, 4: 40, 5: 260 },
+  },
+  // Product 106
+  {
+    total_ratings: 156,
+    product_id: "prod_106",
+    sold: 29,
+    total_reviews: 156,
+    average: 4.8,
+    distribution: { 1: 2, 2: 1, 3: 6, 4: 35, 5: 112 },
+  },
+  // Product 107
+  {
+    total_ratings: 89,
+    product_id: "prod_107",
+    sold: 12,
+    total_reviews: 89,
+    average: 4.5,
+    distribution: { 1: 3, 2: 4, 3: 10, 4: 25, 5: 47 },
+  },
+  // Product 108
+  {
+    total_ratings: 234,
+    product_id: "prod_108",
+    sold: 19,
+    total_reviews: 234,
+    average: 4.6,
+    distribution: { 1: 5, 2: 3, 3: 15, 4: 60, 5: 151 },
+  },
+  // Product 109
+  {
+    total_ratings: 178,
+    product_id: "prod_109",
+    sold: 15,
+    total_reviews: 178,
+    average: 4.8,
+    distribution: { 1: 2, 2: 1, 3: 5, 4: 40, 5: 130 },
+  },
+  // Product 110
+  {
+    total_ratings: 267,
+    product_id: "prod_110",
+    sold: 27,
+    total_reviews: 267,
+    average: 4.8,
+    distribution: { 1: 3, 2: 2, 3: 8, 4: 55, 5: 199 },
+  },
+  // Product 111
+  {
+    total_ratings: 142,
+    product_id: "prod_111",
+    sold: 31,
+    total_reviews: 142,
+    average: 4.6,
+    distribution: { 1: 3, 2: 2, 3: 12, 4: 35, 5: 90 },
+  },
+  // Product 112
+  {
+    total_ratings: 76,
+    product_id: "prod_112",
+    sold: 44,
+    total_reviews: 76,
+    average: 4.4,
+    distribution: { 1: 2, 2: 3, 3: 8, 4: 20, 5: 43 },
+  },
+  // Product 113
+  {
+    total_ratings: 198,
+    product_id: "prod_113",
+    sold: 8,
+    total_reviews: 198,
+    average: 4.7,
+    distribution: { 1: 3, 2: 2, 3: 12, 4: 45, 5: 136 },
+  },
+  // Product 114
+  {
+    total_ratings: 112,
+    product_id: "prod_114",
+    sold: 52,
+    total_reviews: 112,
+    average: 4.5,
+    distribution: { 1: 2, 2: 3, 3: 10, 4: 30, 5: 67 },
+  },
+  // Product 115
+  {
+    total_ratings: 345,
+    product_id: "prod_115",
+    sold: 5,
+    total_reviews: 345,
+    average: 4.9,
+    distribution: { 1: 2, 2: 1, 3: 5, 4: 30, 5: 307 },
+  },
+  // Product 116
+  {
+    total_ratings: 67,
+    product_id: "prod_116",
+    sold: 38,
+    total_reviews: 67,
+    average: 4.3,
+    distribution: { 1: 3, 2: 4, 3: 10, 4: 15, 5: 35 },
+  },
+  // Product 117
+  {
+    total_ratings: 189,
+    product_id: "prod_117",
+    sold: 41,
+    total_reviews: 189,
+    average: 4.6,
+    distribution: { 1: 4, 2: 3, 3: 12, 4: 45, 5: 125 },
+  },
+  // Product 118
+  {
+    total_ratings: 223,
+    product_id: "prod_118",
+    sold: 14,
+    total_reviews: 223,
+    average: 4.8,
+    distribution: { 1: 2, 2: 2, 3: 8, 4: 50, 5: 161 },
+  },
+  // Product 119
+  {
+    total_ratings: 98,
+    product_id: "prod_119",
+    sold: 47,
+    total_reviews: 98,
+    average: 4.4,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 25, 5: 57 },
+  },
+  // Product 120
+  {
+    total_ratings: 176,
+    product_id: "prod_120",
+    sold: 21,
+    total_reviews: 176,
+    average: 4.7,
+    distribution: { 1: 2, 2: 2, 3: 8, 4: 40, 5: 124 },
+  },
+  // Product 121
+  {
+    total_ratings: 81,
+    product_id: "prod_121",
+    sold: 33,
+    total_reviews: 81,
+    average: 4.3,
+    distribution: { 1: 3, 2: 4, 3: 12, 4: 18, 5: 44 },
+  },
+  // Product 122
+  {
+    total_ratings: 201,
+    product_id: "prod_122",
+    sold: 9,
+    total_reviews: 201,
+    average: 4.7,
+    distribution: { 1: 3, 2: 2, 3: 10, 4: 45, 5: 141 },
+  },
+  // Product 123
+  {
+    total_ratings: 119,
+    product_id: "prod_123",
+    sold: 50,
+    total_reviews: 119,
+    average: 4.5,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 28, 5: 75 },
+  },
+  // Product 124
+  {
+    total_ratings: 289,
+    product_id: "prod_124",
+    sold: 6,
+    total_reviews: 289,
+    average: 4.9,
+    distribution: { 1: 2, 2: 1, 3: 6, 4: 30, 5: 250 },
+  },
+  // Product 125
+  {
+    total_ratings: 73,
+    product_id: "prod_125",
+    sold: 39,
+    total_reviews: 73,
+    average: 4.3,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 18, 5: 39 },
+  },
+  // Product 126
+  {
+    total_ratings: 154,
+    product_id: "prod_126",
+    sold: 43,
+    total_reviews: 154,
+    average: 4.6,
+    distribution: { 1: 3, 2: 2, 3: 10, 4: 35, 5: 104 },
+  },
+  // Product 127
+  {
+    total_ratings: 192,
+    product_id: "prod_127",
+    sold: 16,
+    total_reviews: 192,
+    average: 4.8,
+    distribution: { 1: 2, 2: 2, 3: 7, 4: 42, 5: 139 },
+  },
+  // Product 128
+  {
+    total_ratings: 105,
+    product_id: "prod_128",
+    sold: 48,
+    total_reviews: 105,
+    average: 4.4,
+    distribution: { 1: 3, 2: 3, 3: 12, 4: 25, 5: 62 },
+  },
+  // Product 129
+  {
+    total_ratings: 168,
+    product_id: "prod_129",
+    sold: 23,
+    total_reviews: 168,
+    average: 4.7,
+    distribution: { 1: 2, 2: 2, 3: 8, 4: 38, 5: 118 },
+  },
+  // Product 130
+  {
+    total_ratings: 88,
+    product_id: "prod_130",
+    sold: 36,
+    total_reviews: 88,
+    average: 4.3,
+    distribution: { 1: 4, 2: 3, 3: 11, 4: 20, 5: 50 },
+  },
+  // Product 131
+  {
+    total_ratings: 211,
+    product_id: "prod_131",
+    sold: 11,
+    total_reviews: 211,
+    average: 4.7,
+    distribution: { 1: 3, 2: 2, 3: 10, 4: 46, 5: 150 },
+  },
+  // Product 132
+  {
+    total_ratings: 124,
+    product_id: "prod_132",
+    sold: 51,
+    total_reviews: 124,
+    average: 4.5,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 30, 5: 78 },
+  },
+  // Product 133
+  {
+    total_ratings: 276,
+    product_id: "prod_133",
+    sold: 4,
+    total_reviews: 276,
+    average: 4.9,
+    distribution: { 1: 2, 2: 1, 3: 5, 4: 28, 5: 240 },
+  },
+  // Product 134
+  {
+    total_ratings: 69,
+    product_id: "prod_134",
+    sold: 40,
+    total_reviews: 69,
+    average: 4.3,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 17, 5: 36 },
+  },
+  // Product 135
+  {
+    total_ratings: 147,
+    product_id: "prod_135",
+    sold: 45,
+    total_reviews: 147,
+    average: 4.6,
+    distribution: { 1: 3, 2: 2, 3: 10, 4: 35, 5: 97 },
+  },
+  // Product 136
+  {
+    total_ratings: 205,
+    product_id: "prod_136",
+    sold: 17,
+    total_reviews: 205,
+    average: 4.8,
+    distribution: { 1: 2, 2: 2, 3: 7, 4: 45, 5: 149 },
+  },
+  // Product 137
+  {
+    total_ratings: 92,
+    product_id: "prod_137",
+    sold: 49,
+    total_reviews: 92,
+    average: 4.4,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 22, 5: 54 },
+  },
+  // Product 138
+  {
+    total_ratings: 183,
+    product_id: "prod_138",
+    sold: 24,
+    total_reviews: 183,
+    average: 4.7,
+    distribution: { 1: 2, 2: 2, 3: 8, 4: 42, 5: 129 },
+  },
+  // Product 139
+  {
+    total_ratings: 78,
+    product_id: "prod_139",
+    sold: 34,
+    total_reviews: 78,
+    average: 4.3,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 18, 5: 44 },
+  },
+  // Product 140
+  {
+    total_ratings: 216,
+    product_id: "prod_140",
+    sold: 13,
+    total_reviews: 216,
+    average: 4.7,
+    distribution: { 1: 3, 2: 2, 3: 10, 4: 48, 5: 153 },
+  },
+  // Product 141
+  {
+    total_ratings: 134,
+    product_id: "prod_141",
+    sold: 53,
+    total_reviews: 134,
+    average: 4.5,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 32, 5: 86 },
+  },
+  // Product 142
+  {
+    total_ratings: 298,
+    product_id: "prod_142",
+    sold: 3,
+    total_reviews: 298,
+    average: 4.9,
+    distribution: { 1: 2, 2: 1, 3: 5, 4: 30, 5: 260 },
+  },
+  // Product 143
+  {
+    total_ratings: 84,
+    product_id: "prod_143",
+    sold: 37,
+    total_reviews: 84,
+    average: 4.3,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 20, 5: 48 },
+  },
+  // Product 144
+  {
+    total_ratings: 162,
+    product_id: "prod_144",
+    sold: 46,
+    total_reviews: 162,
+    average: 4.6,
+    distribution: { 1: 3, 2: 2, 3: 10, 4: 38, 5: 109 },
+  },
+  // Product 145
+  {
+    total_ratings: 194,
+    product_id: "prod_145",
+    sold: 20,
+    total_reviews: 194,
+    average: 4.8,
+    distribution: { 1: 2, 2: 2, 3: 7, 4: 42, 5: 141 },
+  },
+  // Product 146
+  {
+    total_ratings: 101,
+    product_id: "prod_146",
+    sold: 54,
+    total_reviews: 101,
+    average: 4.4,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 24, 5: 61 },
+  },
+  // Product 147
+  {
+    total_ratings: 172,
+    product_id: "prod_147",
+    sold: 26,
+    total_reviews: 172,
+    average: 4.7,
+    distribution: { 1: 2, 2: 2, 3: 8, 4: 40, 5: 120 },
+  },
+  // Product 148
+  {
+    total_ratings: 71,
+    product_id: "prod_148",
+    sold: 32,
+    total_reviews: 71,
+    average: 4.3,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 16, 5: 39 },
+  },
+  // Product 149
+  {
+    total_ratings: 209,
+    product_id: "prod_149",
+    sold: 10,
+    total_reviews: 209,
+    average: 4.7,
+    distribution: { 1: 3, 2: 2, 3: 10, 4: 46, 5: 148 },
+  },
+  // Product 150
+  {
+    total_ratings: 129,
+    product_id: "prod_150",
+    sold: 55,
+    total_reviews: 129,
+    average: 4.5,
+    distribution: { 1: 3, 2: 3, 3: 10, 4: 30, 5: 83 },
+  },
+];
+
+const reviews = [
+  // ==================== Product 101 Reviews ====================
+  {
+    user_name: "Olivia C.",
+    product_id: "prod_101",
+    id: "rev_101_1",
+    created_at: "2026-01-15T14:30:00Z",
+    rating: 5,
+    user_id: "user_101_1",
+    user_image: "/assets/users/user-female-1.png",
+    comment:
+      "This dress exceeded my expectations! The denim is soft but sturdy, and the tie detail adds a nice touch. Fits perfectly.",
+    type: "global",
+    verfied: true,
+    usefull: 24,
+    tags: ["Great quality", "Perfect fit"],
+  },
+  {
+    user_name: "Daniel K.",
+    product_id: "prod_101",
+    id: "rev_101_2",
+    created_at: "2026-01-10T09:15:00Z",
+    rating: 4,
+    user_id: "user_101_2",
+    user_image: "/assets/users/user-male-1.png",
+    comment:
+      "Good dress for the price. The camel color looks exactly as shown. Shipping was fast.",
+    type: "global",
+    verfied: true,
+    usefull: 12,
+    tags: ["Good value", "Fast shipping"],
+  },
+  {
+    user_name: "Isabella R.",
+    product_id: "prod_101",
+    id: "rev_101_3",
+    created_at: "2026-01-05T18:45:00Z",
+    rating: 5,
+    user_id: "user_101_3",
+    user_image: "/assets/users/user-female-2.png",
+    comment:
+      "Absolutely gorgeous! Wore it to a brunch and received so many compliments. Will buy more colors.",
+    type: "global",
+    verfied: true,
+    usefull: 38,
+    tags: ["Beautiful", "Must buy"],
+  },
+  // ==================== Product 102 Reviews ====================
+  {
+    user_name: "Mia S.",
+    product_id: "prod_102",
+    id: "rev_102_1",
+    created_at: "2026-01-14T12:00:00Z",
+    rating: 5,
+    user_id: "user_102_1",
+    user_image: "/assets/users/user-female-3.png",
+    comment:
+      "So elegant and sexy! The satin feels luxurious. Perfect for date night.",
+    type: "global",
+    verfied: true,
+    usefull: 18,
+    tags: ["Elegant", "Great fit"],
+  },
+  {
+    user_name: "Liam P.",
+    product_id: "prod_102",
+    id: "rev_102_2",
+    created_at: "2026-01-09T08:30:00Z",
+    rating: 4,
+    user_id: "user_102_2",
+    user_image: "/assets/users/user-male-2.png",
+    comment:
+      "Nice dress but runs a bit small. Size up if you're between sizes.",
+    type: "global",
+    verfied: true,
+    usefull: 7,
+    tags: ["Nice fabric", "Size up"],
+  },
+  {
+    user_name: "Emma W.",
+    product_id: "prod_102",
+    id: "rev_102_3",
+    created_at: "2026-01-02T16:20:00Z",
+    rating: 5,
+    user_id: "user_102_3",
+    user_image: "/assets/users/user-female-4.png",
+    comment:
+      "Wore this to a wedding and got so many compliments. The blue is stunning.",
+    type: "global",
+    verfied: true,
+    usefull: 42,
+    tags: ["Wedding guest", "Stunning color"],
+  },
+  // ==================== Product 103 Reviews ====================
+  {
+    user_name: "Sophia L.",
+    product_id: "prod_103",
+    id: "rev_103_1",
+    created_at: "2026-01-13T11:00:00Z",
+    rating: 5,
+    user_id: "user_103_1",
+    user_image: "/assets/users/user-female-5.png",
+    comment: "Love this floral dress! So fresh and pretty. Perfect for spring.",
+    type: "global",
+    verfied: true,
+    usefull: 31,
+    tags: ["Floral", "Spring vibe"],
+  },
+  {
+    user_name: "Noah B.",
+    product_id: "prod_103",
+    id: "rev_103_2",
+    created_at: "2026-01-08T13:45:00Z",
+    rating: 4,
+    user_id: "user_103_2",
+    user_image: "/assets/users/user-male-3.png",
+    comment:
+      "Good quality dress. My wife loves it. Slightly shorter than expected.",
+    type: "global",
+    verfied: true,
+    usefull: 9,
+    tags: ["Good quality", "Shorter length"],
+  },
+  {
+    user_name: "Ava K.",
+    product_id: "prod_103",
+    id: "rev_103_3",
+    created_at: "2026-01-01T10:00:00Z",
+    rating: 5,
+    user_id: "user_103_3",
+    user_image: "/assets/users/user-female-6.png",
+    comment:
+      "My favorite summer dress! The print is beautiful and it's very comfortable.",
+    type: "global",
+    verfied: true,
+    usefull: 56,
+    tags: ["Summer essential", "Comfortable"],
+  },
+  // ==================== Product 104 Reviews ====================
+  {
+    user_name: "Charlotte H.",
+    product_id: "prod_104",
+    id: "rev_104_1",
+    created_at: "2026-01-12T09:30:00Z",
+    rating: 5,
+    user_id: "user_104_1",
+    user_image: "/assets/users/user-female-7.png",
+    comment:
+      "So comfortable! I wear this all the time at home. Great quality cotton.",
+    type: "global",
+    verfied: true,
+    usefull: 27,
+    tags: ["Super comfy", "Lounge wear"],
+  },
+  {
+    user_name: "Mason D.",
+    product_id: "prod_104",
+    id: "rev_104_2",
+    created_at: "2026-01-07T15:00:00Z",
+    rating: 4,
+    user_id: "user_104_2",
+    user_image: "/assets/users/user-male-4.png",
+    comment: "Simple and effective. Bought for my daughter and she loves it.",
+    type: "global",
+    verfied: true,
+    usefull: 11,
+    tags: ["Simple", "Great for teens"],
+  },
+  {
+    user_name: "Amelia T.",
+    product_id: "prod_104",
+    id: "rev_104_3",
+    created_at: "2025-12-28T19:00:00Z",
+    rating: 5,
+    user_id: "user_104_3",
+    user_image: "/assets/users/user-female-8.png",
+    comment:
+      "Perfect casual dress. Goes with sneakers or sandals. Will buy more colors.",
+    type: "global",
+    verfied: true,
+    usefull: 33,
+    tags: ["Versatile", "Wardrobe staple"],
+  },
+  // ==================== Product 105 Reviews ====================
+  {
+    user_name: "Ethan J.",
+    product_id: "prod_105",
+    id: "rev_105_1",
+    created_at: "2026-01-11T14:00:00Z",
+    rating: 5,
+    user_id: "user_105_1",
+    user_image: "/assets/users/user-male-5.png",
+    comment:
+      "Super comfortable hoodie dress. Perfect for lazy days and running errands.",
+    type: "global",
+    verfied: true,
+    usefull: 22,
+    tags: ["Cozy", "Athleisure"],
+  },
+  {
+    user_name: "Harper N.",
+    product_id: "prod_105",
+    id: "rev_105_2",
+    created_at: "2026-01-06T17:30:00Z",
+    rating: 5,
+    user_id: "user_105_2",
+    user_image: "/assets/users/user-female-9.png",
+    comment:
+      "Obsessed with this dress! Looks great with chunky sneakers and a baseball cap.",
+    type: "global",
+    verfied: true,
+    usefull: 45,
+    tags: ["Streetwear", "Trendy"],
+  },
+  {
+    user_name: "Evelyn R.",
+    product_id: "prod_105",
+    id: "rev_105_3",
+    created_at: "2025-12-30T12:15:00Z",
+    rating: 4,
+    user_id: "user_105_3",
+    user_image: "/assets/users/user-female-10.png",
+    comment:
+      "Really nice but fabric is a bit thinner than expected. Still warm enough.",
+    type: "global",
+    verfied: true,
+    usefull: 14,
+    tags: ["Nice style", "Thinner fabric"],
+  },
+  // ==================== Product 106 Reviews ====================
+  {
+    user_name: "Grace M.",
+    product_id: "prod_106",
+    id: "rev_106_1",
+    created_at: "2026-01-14T10:00:00Z",
+    rating: 5,
+    user_id: "user_106_1",
+    user_image: "/assets/users/user-female-11.png",
+    comment:
+      "Perfect summer dress! The linen is high quality and keeps me cool. Love the wrap style.",
+    type: "global",
+    verfied: true,
+    usefull: 29,
+    tags: ["Breathable", "Summer essential"],
+  },
+  {
+    user_name: "Henry L.",
+    product_id: "prod_106",
+    id: "rev_106_2",
+    created_at: "2026-01-09T16:30:00Z",
+    rating: 4,
+    user_id: "user_106_2",
+    user_image: "/assets/users/user-male-6.png",
+    comment:
+      "Bought this for my wife. She loves the fit and the sage green color is beautiful.",
+    type: "global",
+    verfied: true,
+    usefull: 14,
+    tags: ["Great gift", "Nice color"],
+  },
+  {
+    user_name: "Chloe P.",
+    product_id: "prod_106",
+    id: "rev_106_3",
+    created_at: "2026-01-03T11:45:00Z",
+    rating: 5,
+    user_id: "user_106_3",
+    user_image: "/assets/users/user-female-12.png",
+    comment:
+      "This dress is so flattering! The wrap design hides problem areas perfectly.",
+    type: "global",
+    verfied: true,
+    usefull: 41,
+    tags: ["Flattering", "Comfortable"],
+  },
+  // ==================== Product 107 Reviews ====================
+  {
+    user_name: "Zoe S.",
+    product_id: "prod_107",
+    id: "rev_107_1",
+    created_at: "2026-01-13T19:00:00Z",
+    rating: 5,
+    user_id: "user_107_1",
+    user_image: "/assets/users/user-female-13.png",
+    comment:
+      "Obsessed with this dress! It's so figure-flattering and the material is thick enough not to be see-through.",
+    type: "global",
+    verfied: true,
+    usefull: 33,
+    tags: ["Figure flattering", "Great quality"],
+  },
+  {
+    user_name: "Lucas B.",
+    product_id: "prod_107",
+    id: "rev_107_2",
+    created_at: "2026-01-08T14:15:00Z",
+    rating: 4,
+    user_id: "user_107_2",
+    user_image: "/assets/users/user-male-7.png",
+    comment:
+      "My girlfriend loves this dress. Looks very elegant on her. Shipping was quick.",
+    type: "global",
+    verfied: true,
+    usefull: 11,
+    tags: ["Elegant", "Good fit"],
+  },
+  {
+    user_name: "Lily K.",
+    product_id: "prod_107",
+    id: "rev_107_3",
+    created_at: "2025-12-29T20:30:00Z",
+    rating: 4,
+    user_id: "user_107_3",
+    user_image: "/assets/users/user-female-14.png",
+    comment:
+      "Really nice dress but runs small. Size up if you're between sizes.",
+    type: "global",
+    verfied: true,
+    usefull: 19,
+    tags: ["Runs small", "Nice material"],
+  },
+  // ==================== Product 108 Reviews ====================
+  {
+    user_name: "Natalie R.",
+    product_id: "prod_108",
+    id: "rev_108_1",
+    created_at: "2026-01-12T13:00:00Z",
+    rating: 5,
+    user_id: "user_108_1",
+    user_image: "/assets/users/user-female-15.png",
+    comment:
+      "Such a versatile dress! Wear it with sneakers for day or heels for night. Love it.",
+    type: "global",
+    verfied: true,
+    usefull: 27,
+    tags: ["Versatile", "Wardrobe essential"],
+  },
+  {
+    user_name: "Oliver M.",
+    product_id: "prod_108",
+    id: "rev_108_2",
+    created_at: "2026-01-07T10:30:00Z",
+    rating: 4,
+    user_id: "user_108_2",
+    user_image: "/assets/users/user-male-8.png",
+    comment:
+      "Good quality dress. The beige color is very neutral and matches everything.",
+    type: "global",
+    verfied: true,
+    usefull: 8,
+    tags: ["Neutral color", "Good quality"],
+  },
+  {
+    user_name: "Hannah T.",
+    product_id: "prod_108",
+    id: "rev_108_3",
+    created_at: "2025-12-27T15:45:00Z",
+    rating: 5,
+    user_id: "user_108_3",
+    user_image: "/assets/users/user-female-16.png",
+    comment:
+      "This dress is so comfortable! The ribbed fabric is soft and doesn't ride up.",
+    type: "global",
+    verfied: true,
+    usefull: 35,
+    tags: ["Comfortable", "Stays in place"],
+  },
+  // ==================== Product 109 Reviews ====================
+  {
+    user_name: "Victoria A.",
+    product_id: "prod_109",
+    id: "rev_109_1",
+    created_at: "2026-01-14T17:00:00Z",
+    rating: 5,
+    user_id: "user_109_1",
+    user_image: "/assets/users/user-female-17.png",
+    comment:
+      "This dress is stunning! The puff sleeves are so trendy and the camel color is elegant.",
+    type: "global",
+    verfied: true,
+    usefull: 44,
+    tags: ["Trendy", "Elegant"],
+  },
+  {
+    user_name: "Benjamin C.",
+    product_id: "prod_109",
+    id: "rev_109_2",
+    created_at: "2026-01-09T12:15:00Z",
+    rating: 5,
+    user_id: "user_109_2",
+    user_image: "/assets/users/user-male-9.png",
+    comment:
+      "Bought for my wife's birthday. She looked amazing! Great quality dress.",
+    type: "global",
+    verfied: true,
+    usefull: 21,
+    tags: ["Great gift", "High quality"],
+  },
+  {
+    user_name: "Madison L.",
+    product_id: "prod_109",
+    id: "rev_109_3",
+    created_at: "2026-01-02T21:00:00Z",
+    rating: 4,
+    user_id: "user_109_3",
+    user_image: "/assets/users/user-female-18.png",
+    comment:
+      "So cute! The sleeves are a bit big but that's the style. True to size.",
+    type: "global",
+    verfied: true,
+    usefull: 17,
+    tags: ["Cute style", "True to size"],
+  },
+  // ==================== Product 110 Reviews ====================
+  {
+    user_name: "Elena D.",
+    product_id: "prod_110",
+    id: "rev_110_1",
+    created_at: "2026-01-15T20:00:00Z",
+    rating: 5,
+    user_id: "user_110_1",
+    user_image: "/assets/users/user-female-19.png",
+    comment:
+      "Wore this to a Christmas party and got so many compliments! The velvet is high quality.",
+    type: "global",
+    verfied: true,
+    usefull: 52,
+    tags: ["Holiday perfect", "Stunning"],
+  },
+  {
+    user_name: "Samuel W.",
+    product_id: "prod_110",
+    id: "rev_110_2",
+    created_at: "2026-01-10T11:30:00Z",
+    rating: 5,
+    user_id: "user_110_2",
+    user_image: "/assets/users/user-male-10.png",
+    comment:
+      "Beautiful dress. The terracotta color is rich and looks expensive.",
+    type: "global",
+    verfied: true,
+    usefull: 28,
+    tags: ["Rich color", "Expensive look"],
+  },
+  {
+    user_name: "Aria N.",
+    product_id: "prod_110",
+    id: "rev_110_3",
+    created_at: "2026-01-04T18:15:00Z",
+    rating: 4,
+    user_id: "user_110_3",
+    user_image: "/assets/users/user-female-20.png",
+    comment:
+      "Gorgeous dress but the velvet sheds a bit. Still worth it for special occasions.",
+    type: "global",
+    verfied: true,
+    usefull: 16,
+    tags: ["Gorgeous", "Sheds slightly"],
+  },
+  // ==================== Product 111 Reviews ====================
+  {
+    user_name: "Stella B.",
+    product_id: "prod_111",
+    id: "rev_111_1",
+    created_at: "2026-01-13T15:30:00Z",
+    rating: 5,
+    user_id: "user_111_1",
+    user_image: "/assets/users/user-female-21.png",
+    comment:
+      "This silk dress is absolutely stunning! Feels so luxurious and drapes beautifully.",
+    type: "global",
+    verfied: true,
+    usefull: 35,
+    tags: ["Luxurious", "Beautiful drape"],
+  },
+  {
+    user_name: "Leo F.",
+    product_id: "prod_111",
+    id: "rev_111_2",
+    created_at: "2026-01-08T11:00:00Z",
+    rating: 4,
+    user_id: "user_111_2",
+    user_image: "/assets/users/user-male-11.png",
+    comment:
+      "Bought for my wife's anniversary. She felt like a queen. Worth every penny.",
+    type: "global",
+    verfied: true,
+    usefull: 19,
+    tags: ["Anniversary gift", "Queen vibes"],
+  },
+  {
+    user_name: "Nora G.",
+    product_id: "prod_111",
+    id: "rev_111_3",
+    created_at: "2026-01-01T14:00:00Z",
+    rating: 5,
+    user_id: "user_111_3",
+    user_image: "/assets/users/user-female-22.png",
+    comment:
+      "Perfect for formal events. The sage green is such a unique and elegant color.",
+    type: "global",
+    verfied: true,
+    usefull: 28,
+    tags: ["Formal event", "Unique color"],
+  },
+  // ==================== Product 112 Reviews ====================
+  {
+    user_name: "Ellie T.",
+    product_id: "prod_112",
+    id: "rev_112_1",
+    created_at: "2026-01-12T16:00:00Z",
+    rating: 4,
+    user_id: "user_112_1",
+    user_image: "/assets/users/user-female-23.png",
+    comment:
+      "Very comfortable for hot weather. The linen is breathable but wrinkles easily.",
+    type: "global",
+    verfied: true,
+    usefull: 15,
+    tags: ["Breathable", "Wrinkles easily"],
+  },
+  {
+    user_name: "Jack R.",
+    product_id: "prod_112",
+    id: "rev_112_2",
+    created_at: "2026-01-07T09:45:00Z",
+    rating: 4,
+    user_id: "user_112_2",
+    user_image: "/assets/users/user-male-12.png",
+    comment: "Good casual dress for summer. My wife wears it all the time.",
+    type: "global",
+    verfied: true,
+    usefull: 8,
+    tags: ["Summer casual", "Wife approved"],
+  },
+  {
+    user_name: "Mila S.",
+    product_id: "prod_112",
+    id: "rev_112_3",
+    created_at: "2025-12-29T13:00:00Z",
+    rating: 5,
+    user_id: "user_112_3",
+    user_image: "/assets/users/user-female-24.png",
+    comment:
+      "Love this dress! Perfect for beach cover-up or casual lunch. Great buy.",
+    type: "global",
+    verfied: true,
+    usefull: 22,
+    tags: ["Beach ready", "Great buy"],
+  },
+  // ==================== Product 113 Reviews ====================
+  {
+    user_name: "Luna P.",
+    product_id: "prod_113",
+    id: "rev_113_1",
+    created_at: "2026-01-14T21:00:00Z",
+    rating: 5,
+    user_id: "user_113_1",
+    user_image: "/assets/users/user-female-25.png",
+    comment:
+      "Shines so bright! Wore this to a club and everyone was asking where I got it.",
+    type: "global",
+    verfied: true,
+    usefull: 47,
+    tags: ["Shiny", "Club ready"],
+  },
+  {
+    user_name: "Carter N.",
+    product_id: "prod_113",
+    id: "rev_113_2",
+    created_at: "2026-01-09T19:30:00Z",
+    rating: 4,
+    user_id: "user_113_2",
+    user_image: "/assets/users/user-male-13.png",
+    comment:
+      "Great party dress. My girlfriend looked amazing. Sequins are secure.",
+    type: "global",
+    verfied: true,
+    usefull: 13,
+    tags: ["Party dress", "Sequins secure"],
+  },
+  {
+    user_name: "Ivy W.",
+    product_id: "prod_113",
+    id: "rev_113_3",
+    created_at: "2026-01-03T22:00:00Z",
+    rating: 5,
+    user_id: "user_113_3",
+    user_image: "/assets/users/user-female-26.png",
+    comment:
+      "Perfect for New Year's Eve! Sparkles like crazy and fits like a glove.",
+    type: "global",
+    verfied: true,
+    usefull: 51,
+    tags: ["NYE perfect", "Sparkles"],
+  },
+  // ==================== Product 114 Reviews ====================
+  {
+    user_name: "Ruby M.",
+    product_id: "prod_114",
+    id: "rev_114_1",
+    created_at: "2026-01-11T08:00:00Z",
+    rating: 5,
+    user_id: "user_114_1",
+    user_image: "/assets/users/user-female-27.png",
+    comment:
+      "Softest cotton ever! I bought three colors because I love it so much.",
+    type: "global",
+    verfied: true,
+    usefull: 39,
+    tags: ["Soft cotton", "Bought multiple"],
+  },
+  {
+    user_name: "Wyatt J.",
+    product_id: "prod_114",
+    id: "rev_114_2",
+    created_at: "2026-01-06T12:30:00Z",
+    rating: 4,
+    user_id: "user_114_2",
+    user_image: "/assets/users/user-male-14.png",
+    comment: "Good everyday dress. Simple but stylish. Great value for money.",
+    type: "global",
+    verfied: true,
+    usefull: 10,
+    tags: ["Everyday dress", "Good value"],
+  },
+  {
+    user_name: "Alice C.",
+    product_id: "prod_114",
+    id: "rev_114_3",
+    created_at: "2025-12-26T09:00:00Z",
+    rating: 5,
+    user_id: "user_114_3",
+    user_image: "/assets/users/user-female-28.png",
+    comment: "Perfect for lounging at home or quick errands. So comfortable!",
+    type: "global",
+    verfied: true,
+    usefull: 26,
+    tags: ["Lounge perfect", "Comfortable"],
+  },
+  // ==================== Product 115 Reviews ====================
+  {
+    user_name: "Clara D.",
+    product_id: "prod_115",
+    id: "rev_115_1",
+    created_at: "2026-01-15T18:00:00Z",
+    rating: 5,
+    user_id: "user_115_1",
+    user_image: "/assets/users/user-female-29.png",
+    comment:
+      "Red carpet worthy! Wore this to a gala and felt like a movie star.",
+    type: "global",
+    verfied: true,
+    usefull: 62,
+    tags: ["Red carpet", "Movie star"],
+  },
+  {
+    user_name: "Owen K.",
+    product_id: "prod_115",
+    id: "rev_115_2",
+    created_at: "2026-01-10T20:15:00Z",
+    rating: 5,
+    user_id: "user_115_2",
+    user_image: "/assets/users/user-male-15.png",
+    comment:
+      "Incredible quality. My wife never looked more beautiful. Worth every cent.",
+    type: "global",
+    verfied: true,
+    usefull: 34,
+    tags: ["Incredible quality", "Worth it"],
+  },
+  {
+    user_name: "Hazel F.",
+    product_id: "prod_115",
+    id: "rev_115_3",
+    created_at: "2026-01-04T16:30:00Z",
+    rating: 5,
+    user_id: "user_115_3",
+    user_image: "/assets/users/user-female-30.png",
+    comment:
+      "The terracotta color is breathtaking. Perfect for formal winter events.",
+    type: "global",
+    verfied: true,
+    usefull: 43,
+    tags: ["Breathtaking color", "Winter formal"],
+  },
+  // ==================== Product 116 Reviews ====================
+  {
+    user_name: "Willow B.",
+    product_id: "prod_116",
+    id: "rev_116_1",
+    created_at: "2026-01-13T10:15:00Z",
+    rating: 4,
+    user_id: "user_116_1",
+    user_image: "/assets/users/user-female-31.png",
+    comment:
+      "Classic denim dress. Fits well and goes with everything. A bit stiff at first.",
+    type: "global",
+    verfied: true,
+    usefull: 18,
+    tags: ["Classic", "Stiff at first"],
+  },
+  {
+    user_name: "Luke H.",
+    product_id: "prod_116",
+    id: "rev_116_2",
+    created_at: "2026-01-08T18:45:00Z",
+    rating: 4,
+    user_id: "user_116_2",
+    user_image: "/assets/users/user-male-16.png",
+    comment:
+      "Good quality denim. My daughter wears it all the time for casual outings.",
+    type: "global",
+    verfied: true,
+    usefull: 9,
+    tags: ["Good denim", "Casual"],
+  },
+  {
+    user_name: "Aurora S.",
+    product_id: "prod_116",
+    id: "rev_116_3",
+    created_at: "2025-12-30T11:00:00Z",
+    rating: 5,
+    user_id: "user_116_3",
+    user_image: "/assets/users/user-female-32.png",
+    comment:
+      "Love this dress! The mustard yellow is so unique. Gets softer after each wash.",
+    type: "global",
+    verfied: true,
+    usefull: 24,
+    tags: ["Unique color", "Gets softer"],
+  },
+  // ==================== Product 117 Reviews ====================
+  {
+    user_name: "Violet P.",
+    product_id: "prod_117",
+    id: "rev_117_1",
+    created_at: "2026-01-12T14:30:00Z",
+    rating: 5,
+    user_id: "user_117_1",
+    user_image: "/assets/users/user-female-33.png",
+    comment:
+      "Beautiful floral print! Perfect for summer. Lightweight and flowy.",
+    type: "global",
+    verfied: true,
+    usefull: 31,
+    tags: ["Beautiful print", "Flowy"],
+  },
+  {
+    user_name: "Isaac M.",
+    product_id: "prod_117",
+    id: "rev_117_2",
+    created_at: "2026-01-07T09:30:00Z",
+    rating: 4,
+    user_id: "user_117_2",
+    user_image: "/assets/users/user-male-17.png",
+    comment: "Great summer dress. My wife wore it on vacation and loved it.",
+    type: "global",
+    verfied: true,
+    usefull: 12,
+    tags: ["Vacation dress", "Wife loved"],
+  },
+  {
+    user_name: "Iris C.",
+    product_id: "prod_117",
+    id: "rev_117_3",
+    created_at: "2025-12-28T15:45:00Z",
+    rating: 5,
+    user_id: "user_117_3",
+    user_image: "/assets/users/user-female-34.png",
+    comment:
+      "So many compliments! The colors are vibrant and it's very comfortable.",
+    type: "global",
+    verfied: true,
+    usefull: 37,
+    tags: ["Compliments", "Vibrant"],
+  },
+  // ==================== Product 118 Reviews ====================
+  {
+    user_name: "Eva W.",
+    product_id: "prod_118",
+    id: "rev_118_1",
+    created_at: "2026-01-14T13:00:00Z",
+    rating: 5,
+    user_id: "user_118_1",
+    user_image: "/assets/users/user-female-35.png",
+    comment:
+      "Powerful and elegant! Wore this to a board meeting and felt so confident.",
+    type: "global",
+    verfied: true,
+    usefull: 41,
+    tags: ["Powerful", "Confidence booster"],
+  },
+  {
+    user_name: "Nathan L.",
+    product_id: "prod_118",
+    id: "rev_118_2",
+    created_at: "2026-01-09T11:30:00Z",
+    rating: 5,
+    user_id: "user_118_2",
+    user_image: "/assets/users/user-male-18.png",
+    comment: "Professional and stylish. Great for women in leadership roles.",
+    type: "global",
+    verfied: true,
+    usefull: 23,
+    tags: ["Professional", "Leadership"],
+  },
+  {
+    user_name: "Lydia R.",
+    product_id: "prod_118",
+    id: "rev_118_3",
+    created_at: "2026-01-02T10:00:00Z",
+    rating: 4,
+    user_id: "user_118_3",
+    user_image: "/assets/users/user-female-36.png",
+    comment:
+      "Fits well but needs dry cleaning. Looks very sharp and put together.",
+    type: "global",
+    verfied: true,
+    usefull: 16,
+    tags: ["Sharp look", "Dry clean only"],
+  },
+  // ==================== Product 119 Reviews ====================
+  {
+    user_name: "Penelope A.",
+    product_id: "prod_119",
+    id: "rev_119_1",
+    created_at: "2026-01-13T08:45:00Z",
+    rating: 5,
+    user_id: "user_119_1",
+    user_image: "/assets/users/user-female-37.png",
+    comment:
+      "So cozy! Perfect for fall weather. Pairs great with boots and tights.",
+    type: "global",
+    verfied: true,
+    usefull: 28,
+    tags: ["Cozy", "Fall ready"],
+  },
+  {
+    user_name: "Caleb T.",
+    product_id: "prod_119",
+    id: "rev_119_2",
+    created_at: "2026-01-08T20:15:00Z",
+    rating: 4,
+    user_id: "user_119_2",
+    user_image: "/assets/users/user-male-19.png",
+    comment:
+      "Nice knit dress. Warm and comfortable. My wife wears it all winter.",
+    type: "global",
+    verfied: true,
+    usefull: 14,
+    tags: ["Warm", "Winter staple"],
+  },
+  {
+    user_name: "Naomi K.",
+    product_id: "prod_119",
+    id: "rev_119_3",
+    created_at: "2025-12-31T17:00:00Z",
+    rating: 5,
+    user_id: "user_119_3",
+    user_image: "/assets/users/user-female-38.png",
+    comment:
+      "Love this dress! The camel color goes with everything. Very versatile.",
+    type: "global",
+    verfied: true,
+    usefull: 32,
+    tags: ["Versatile", "Camel color"],
+  },
+  // ==================== Product 120 Reviews ====================
+  {
+    user_name: "Scarlett J.",
+    product_id: "prod_120",
+    id: "rev_120_1",
+    created_at: "2026-01-15T16:00:00Z",
+    rating: 5,
+    user_id: "user_120_1",
+    user_image: "/assets/users/user-female-39.png",
+    comment:
+      "Pure elegance! The silk is high quality and the fit is perfect. Worth the investment.",
+    type: "global",
+    verfied: true,
+    usefull: 44,
+    tags: ["Pure elegance", "Investment piece"],
+  },
+  {
+    user_name: "David S.",
+    product_id: "prod_120",
+    id: "rev_120_2",
+    created_at: "2026-01-10T13:00:00Z",
+    rating: 5,
+    user_id: "user_120_2",
+    user_image: "/assets/users/user-male-20.png",
+    comment:
+      "Bought for our anniversary dinner. My wife looked absolutely stunning.",
+    type: "global",
+    verfied: true,
+    usefull: 29,
+    tags: ["Anniversary", "Stunning"],
+  },
+  {
+    user_name: "Bella M.",
+    product_id: "prod_120",
+    id: "rev_120_3",
+    created_at: "2026-01-03T19:30:00Z",
+    rating: 4,
+    user_id: "user_120_3",
+    user_image: "/assets/users/user-female-40.png",
+    comment: "Beautiful dress but runs a bit large. Size down for perfect fit.",
+    type: "global",
+    verfied: true,
+    usefull: 15,
+    tags: ["Beautiful", "Size down"],
+  },
+  // ==================== Product 121 Reviews ====================
+  {
+    user_name: "Leah F.",
+    product_id: "prod_121",
+    id: "rev_121_1",
+    created_at: "2026-01-11T09:15:00Z",
+    rating: 4,
+    user_id: "user_121_1",
+    user_image: "/assets/users/user-female-41.png",
+    comment:
+      "Perfect beach cover-up. Lightweight and airy. Wrinkles but that's linen.",
+    type: "global",
+    verfied: true,
+    usefull: 21,
+    tags: ["Beach cover", "Wrinkles"],
+  },
+  {
+    user_name: "Julian C.",
+    product_id: "prod_121",
+    id: "rev_121_2",
+    created_at: "2026-01-06T14:00:00Z",
+    rating: 4,
+    user_id: "user_121_2",
+    user_image: "/assets/users/user-male-21.png",
+    comment:
+      "Good summer dress. My girlfriend wears it to the beach and casual lunches.",
+    type: "global",
+    verfied: true,
+    usefull: 7,
+    tags: ["Summer", "Casual"],
+  },
+  {
+    user_name: "Quinn H.",
+    product_id: "prod_121",
+    id: "rev_121_3",
+    created_at: "2025-12-27T11:30:00Z",
+    rating: 5,
+    user_id: "user_121_3",
+    user_image: "/assets/users/user-female-42.png",
+    comment:
+      "Love this dress! The mustard yellow is so cheerful. Great for vacation.",
+    type: "global",
+    verfied: true,
+    usefull: 26,
+    tags: ["Cheerful", "Vacation"],
+  },
+  // ==================== Product 122 Reviews ====================
+  {
+    user_name: "Sadie R.",
+    product_id: "prod_122",
+    id: "rev_122_1",
+    created_at: "2026-01-14T22:00:00Z",
+    rating: 5,
+    user_id: "user_122_1",
+    user_image: "/assets/users/user-female-43.png",
+    comment:
+      "Sparkle central! Wore this for my birthday and felt like a disco ball. So fun!",
+    type: "global",
+    verfied: true,
+    usefull: 53,
+    tags: ["Sparkle", "Birthday perfect"],
+  },
+  {
+    user_name: "Eliot P.",
+    product_id: "prod_122",
+    id: "rev_122_2",
+    created_at: "2026-01-09T23:00:00Z",
+    rating: 5,
+    user_id: "user_122_2",
+    user_image: "/assets/users/user-male-22.png",
+    comment:
+      "Incredible party dress. My wife was the center of attention all night.",
+    type: "global",
+    verfied: true,
+    usefull: 38,
+    tags: ["Center of attention", "Party"],
+  },
+  {
+    user_name: "Piper L.",
+    product_id: "prod_122",
+    id: "rev_122_3",
+    created_at: "2026-01-05T20:00:00Z",
+    rating: 4,
+    user_id: "user_122_3",
+    user_image: "/assets/users/user-female-44.png",
+    comment:
+      "Beautiful sequins but a few fell off. Still looks amazing though.",
+    type: "global",
+    verfied: true,
+    usefull: 12,
+    tags: ["Beautiful", "Sequins fall"],
+  },
+  // ==================== Product 123 Reviews ====================
+  {
+    user_name: "Riley T.",
+    product_id: "prod_123",
+    id: "rev_123_1",
+    created_at: "2026-01-12T18:45:00Z",
+    rating: 5,
+    user_id: "user_123_1",
+    user_image: "/assets/users/user-female-45.png",
+    comment: "My go-to summer dress! So comfortable and easy to throw on.",
+    type: "global",
+    verfied: true,
+    usefull: 34,
+    tags: ["Go-to dress", "Easy"],
+  },
+  {
+    user_name: "Cooper N.",
+    product_id: "prod_123",
+    id: "rev_123_2",
+    created_at: "2026-01-07T16:15:00Z",
+    rating: 4,
+    user_id: "user_123_2",
+    user_image: "/assets/users/user-male-23.png",
+    comment: "Good quality cotton. My daughter loves it for everyday wear.",
+    type: "global",
+    verfied: true,
+    usefull: 11,
+    tags: ["Everyday", "Daughter loves"],
+  },
+  {
+    user_name: "Daisy W.",
+    product_id: "prod_123",
+    id: "rev_123_3",
+    created_at: "2025-12-29T14:30:00Z",
+    rating: 5,
+    user_id: "user_123_3",
+    user_image: "/assets/users/user-female-46.png",
+    comment:
+      "Bought in beige and camel. Both colors are great. Very versatile dress.",
+    type: "global",
+    verfied: true,
+    usefull: 28,
+    tags: ["Multiple colors", "Versatile"],
+  },
+  // ==================== Product 124 Reviews ====================
+  {
+    user_name: "Rose H.",
+    product_id: "prod_124",
+    id: "rev_124_1",
+    created_at: "2026-01-15T19:30:00Z",
+    rating: 5,
+    user_id: "user_124_1",
+    user_image: "/assets/users/user-female-47.png",
+    comment:
+      "Absolutely breathtaking! Wore this to a charity gala and felt like royalty.",
+    type: "global",
+    verfied: true,
+    usefull: 58,
+    tags: ["Breathtaking", "Royalty"],
+  },
+  {
+    user_name: "Lincoln J.",
+    product_id: "prod_124",
+    id: "rev_124_2",
+    created_at: "2026-01-10T21:00:00Z",
+    rating: 5,
+    user_id: "user_124_2",
+    user_image: "/assets/users/user-male-24.png",
+    comment: "Stunning dress. My wife was the most elegant woman at the event.",
+    type: "global",
+    verfied: true,
+    usefull: 41,
+    tags: ["Stunning", "Most elegant"],
+  },
+  {
+    user_name: "Jasmine K.",
+    product_id: "prod_124",
+    id: "rev_124_3",
+    created_at: "2026-01-04T18:00:00Z",
+    rating: 4,
+    user_id: "user_124_3",
+    user_image: "/assets/users/user-female-48.png",
+    comment:
+      "Gorgeous gown but needs alterations for height. Quality is amazing.",
+    type: "global",
+    verfied: true,
+    usefull: 19,
+    tags: ["Gorgeous", "Needs alterations"],
+  },
+  // ==================== Product 125 Reviews ====================
+  {
+    user_name: "Peyton C.",
+    product_id: "prod_125",
+    id: "rev_125_1",
+    created_at: "2026-01-13T20:00:00Z",
+    rating: 4,
+    user_id: "user_125_1",
+    user_image: "/assets/users/user-female-49.png",
+    comment:
+      "Sporty and cute! The terracotta color is really nice. Fits true to size.",
+    type: "global",
+    verfied: true,
+    usefull: 17,
+    tags: ["Sporty", "Cute"],
+  },
+  {
+    user_name: "Hunter M.",
+    product_id: "prod_125",
+    id: "rev_125_2",
+    created_at: "2026-01-08T15:00:00Z",
+    rating: 4,
+    user_id: "user_125_2",
+    user_image: "/assets/users/user-male-25.png",
+    comment:
+      "Good casual denim dress. My girlfriend wears it for weekend outings.",
+    type: "global",
+    verfied: true,
+    usefull: 8,
+    tags: ["Weekend", "Girlfriend approved"],
+  },
+  {
+    user_name: "Emerson S.",
+    product_id: "prod_125",
+    id: "rev_125_3",
+    created_at: "2025-12-27T12:15:00Z",
+    rating: 5,
+    user_id: "user_125_3",
+    user_image: "/assets/users/user-female-50.png",
+    comment:
+      "Love the sporty vibe! Perfect for errands and casual coffee dates.",
+    type: "global",
+    verfied: true,
+    usefull: 23,
+    tags: ["Sporty vibe", "Casual"],
+  },
+  // ==================== Product 126 Reviews ====================
+  {
+    user_name: "London B.",
+    product_id: "prod_126",
+    id: "rev_126_1",
+    created_at: "2026-01-14T08:30:00Z",
+    rating: 5,
+    user_id: "user_126_1",
+    user_image: "/assets/users/user-female-51.png",
+    comment:
+      "Such a pretty floral! Wore this to a garden party and got so many compliments.",
+    type: "global",
+    verfied: true,
+    usefull: 36,
+    tags: ["Garden party", "Compliments"],
+  },
+  {
+    user_name: "Miles R.",
+    product_id: "prod_126",
+    id: "rev_126_2",
+    created_at: "2026-01-09T12:30:00Z",
+    rating: 4,
+    user_id: "user_126_2",
+    user_image: "/assets/users/user-male-26.png",
+    comment: "Nice summer dress. My wife loves the print. Fits well.",
+    type: "global",
+    verfied: true,
+    usefull: 10,
+    tags: ["Summer", "Nice print"],
+  },
+  {
+    user_name: "Sawyer L.",
+    product_id: "prod_126",
+    id: "rev_126_3",
+    created_at: "2025-12-31T15:45:00Z",
+    rating: 5,
+    user_id: "user_126_3",
+    user_image: "/assets/users/user-female-52.png",
+    comment: "My favorite dress this season! Lightweight and beautiful colors.",
+    type: "global",
+    verfied: true,
+    usefull: 29,
+    tags: ["Favorite", "Beautiful colors"],
+  },
+  // ==================== Product 127 Reviews ====================
+  {
+    user_name: "Kennedy W.",
+    product_id: "prod_127",
+    id: "rev_127_1",
+    created_at: "2026-01-15T14:15:00Z",
+    rating: 5,
+    user_id: "user_127_1",
+    user_image: "/assets/users/user-female-53.png",
+    comment:
+      "Commanded the room! Wore this for a big presentation and felt so powerful.",
+    type: "global",
+    verfied: true,
+    usefull: 44,
+    tags: ["Powerful", "Presentation"],
+  },
+  {
+    user_name: "Carson D.",
+    product_id: "prod_127",
+    id: "rev_127_2",
+    created_at: "2026-01-10T17:00:00Z",
+    rating: 5,
+    user_id: "user_127_2",
+    user_image: "/assets/users/user-male-27.png",
+    comment: "Very professional. My partner looks like a CEO in this dress.",
+    type: "global",
+    verfied: true,
+    usefull: 27,
+    tags: ["Professional", "CEO vibes"],
+  },
+  {
+    user_name: "Finley K.",
+    product_id: "prod_127",
+    id: "rev_127_3",
+    created_at: "2026-01-05T20:30:00Z",
+    rating: 4,
+    user_id: "user_127_3",
+    user_image: "/assets/users/user-female-54.png",
+    comment: "Great for work but wish it had pockets. Still very stylish.",
+    type: "global",
+    verfied: true,
+    usefull: 18,
+    tags: ["Work wear", "No pockets"],
+  },
+  // ==================== Product 128 Reviews ====================
+  {
+    user_name: "Parker M.",
+    product_id: "prod_128",
+    id: "rev_128_1",
+    created_at: "2026-01-12T13:30:00Z",
+    rating: 4,
+    user_id: "user_128_1",
+    user_image: "/assets/users/user-female-55.png",
+    comment:
+      "Super comfortable for travel. Wore this on a long flight and stayed cozy.",
+    type: "global",
+    verfied: true,
+    usefull: 22,
+    tags: ["Travel", "Cozy"],
+  },
+  {
+    user_name: "Reed S.",
+    product_id: "prod_128",
+    id: "rev_128_2",
+    created_at: "2026-01-07T18:30:00Z",
+    rating: 4,
+    user_id: "user_128_2",
+    user_image: "/assets/users/user-male-28.png",
+    comment:
+      "Nice lounge dress. My wife wears it around the house all the time.",
+    type: "global",
+    verfied: true,
+    usefull: 13,
+    tags: ["Lounge", "House dress"],
+  },
+  {
+    user_name: "Sage H.",
+    product_id: "prod_128",
+    id: "rev_128_3",
+    created_at: "2025-12-28T10:30:00Z",
+    rating: 5,
+    user_id: "user_128_3",
+    user_image: "/assets/users/user-female-56.png",
+    comment:
+      "Love this dress! Great for casual days but still looks put together.",
+    type: "global",
+    verfied: true,
+    usefull: 29,
+    tags: ["Put together", "Casual"],
+  },
+  // ==================== Product 129 Reviews ====================
+  {
+    user_name: "Quincy L.",
+    product_id: "prod_129",
+    id: "rev_129_1",
+    created_at: "2026-01-14T19:15:00Z",
+    rating: 5,
+    user_id: "user_129_1",
+    user_image: "/assets/users/user-female-57.png",
+    comment:
+      "Pure luxury! The silk feels amazing. Wore this for a fancy dinner and felt like a million bucks.",
+    type: "global",
+    verfied: true,
+    usefull: 47,
+    tags: ["Luxury", "Million bucks"],
+  },
+  {
+    user_name: "Ellis C.",
+    product_id: "prod_129",
+    id: "rev_129_2",
+    created_at: "2026-01-09T22:00:00Z",
+    rating: 5,
+    user_id: "user_129_2",
+    user_image: "/assets/users/user-male-29.png",
+    comment:
+      "Incredible dress. My wife looked elegant and sophisticated. Great purchase.",
+    type: "global",
+    verfied: true,
+    usefull: 31,
+    tags: ["Elegant", "Great purchase"],
+  },
+  {
+    user_name: "Blake N.",
+    product_id: "prod_129",
+    id: "rev_129_3",
+    created_at: "2026-01-02T21:30:00Z",
+    rating: 4,
+    user_id: "user_129_3",
+    user_image: "/assets/users/user-female-58.png",
+    comment:
+      "Beautiful but needs delicate care. Worth it for special occasions.",
+    type: "global",
+    verfied: true,
+    usefull: 16,
+    tags: ["Beautiful", "Delicate care"],
+  },
+  // ==================== Product 130 Reviews ====================
+  {
+    user_name: "Tatum R.",
+    product_id: "prod_130",
+    id: "rev_130_1",
+    created_at: "2026-01-13T11:15:00Z",
+    rating: 4,
+    user_id: "user_130_1",
+    user_image: "/assets/users/user-female-59.png",
+    comment:
+      "Great for hot yoga and outdoor activities. Breathable and lightweight.",
+    type: "global",
+    verfied: true,
+    usefull: 19,
+    tags: ["Hot yoga", "Breathable"],
+  },
+  {
+    user_name: "Casey M.",
+    product_id: "prod_130",
+    id: "rev_130_2",
+    created_at: "2026-01-08T09:45:00Z",
+    rating: 4,
+    user_id: "user_130_2",
+    user_image: "/assets/users/user-male-30.png",
+    comment:
+      "Good active dress. My girlfriend wears it for hiking. Holds up well.",
+    type: "global",
+    verfied: true,
+    usefull: 8,
+    tags: ["Hiking", "Holds up"],
+  },
+  {
+    user_name: "Rory P.",
+    product_id: "prod_130",
+    id: "rev_130_3",
+    created_at: "2025-12-30T16:00:00Z",
+    rating: 5,
+    user_id: "user_130_3",
+    user_image: "/assets/users/user-female-60.png",
+    comment:
+      "Perfect for summer sports! The sage green is lovely and it's so cool to wear.",
+    type: "global",
+    verfied: true,
+    usefull: 27,
+    tags: ["Summer sports", "Cool fabric"],
+  },
+  // ==================== Product 131 Reviews ====================
+  {
+    user_name: "Marley T.",
+    product_id: "prod_131",
+    id: "rev_131_1",
+    created_at: "2026-01-15T23:00:00Z",
+    rating: 5,
+    user_id: "user_131_1",
+    user_image: "/assets/users/user-female-61.png",
+    comment:
+      "Party monster! Wore this for NYE and danced all night. Sequins stayed put.",
+    type: "global",
+    verfied: true,
+    usefull: 55,
+    tags: ["Party", "Sequins stayed"],
+  },
+  {
+    user_name: "Frankie J.",
+    product_id: "prod_131",
+    id: "rev_131_2",
+    created_at: "2026-01-10T20:00:00Z",
+    rating: 5,
+    user_id: "user_131_2",
+    user_image: "/assets/users/user-male-31.png",
+    comment:
+      "Amazing party dress. My girlfriend was the life of the celebration.",
+    type: "global",
+    verfied: true,
+    usefull: 39,
+    tags: ["Life of party", "Celebration"],
+  },
+  {
+    user_name: "Indigo C.",
+    product_id: "prod_131",
+    id: "rev_131_3",
+    created_at: "2026-01-06T18:15:00Z",
+    rating: 4,
+    user_id: "user_131_3",
+    user_image: "/assets/users/user-female-62.png",
+    comment: "Super sparkly but heavy. Still worth it for the right occasion.",
+    type: "global",
+    verfied: true,
+    usefull: 14,
+    tags: ["Sparkly", "Heavy"],
+  },
+  // ==================== Product 132 Reviews ====================
+  {
+    user_name: "Jessie L.",
+    product_id: "prod_132",
+    id: "rev_132_1",
+    created_at: "2026-01-12T07:30:00Z",
+    rating: 5,
+    user_id: "user_132_1",
+    user_image: "/assets/users/user-female-63.png",
+    comment:
+      "Perfect for yoga and gym. Stretchy and comfortable. Does not ride up.",
+    type: "global",
+    verfied: true,
+    usefull: 31,
+    tags: ["Yoga", "No ride up"],
+  },
+  {
+    user_name: "Dakota S.",
+    product_id: "prod_132",
+    id: "rev_132_2",
+    created_at: "2026-01-07T10:00:00Z",
+    rating: 4,
+    user_id: "user_132_2",
+    user_image: "/assets/users/user-male-32.png",
+    comment:
+      "Good workout dress. My partner wears it to pilates. Quality is good.",
+    type: "global",
+    verfied: true,
+    usefull: 12,
+    tags: ["Workout", "Pilates"],
+  },
+  {
+    user_name: "Avery K.",
+    product_id: "prod_132",
+    id: "rev_132_3",
+    created_at: "2025-12-28T08:45:00Z",
+    rating: 5,
+    user_id: "user_132_3",
+    user_image: "/assets/users/user-female-64.png",
+    comment:
+      "Love this for active days! The terracotta color is beautiful and it's so comfortable.",
+    type: "global",
+    verfied: true,
+    usefull: 26,
+    tags: ["Active days", "Beautiful color"],
+  },
+  // ==================== Product 133 Reviews ====================
+  {
+    user_name: "Spencer H.",
+    product_id: "prod_133",
+    id: "rev_133_1",
+    created_at: "2026-01-14T20:00:00Z",
+    rating: 5,
+    user_id: "user_133_1",
+    user_image: "/assets/users/user-female-65.png",
+    comment:
+      "Red carpet ready! Wore this to an awards ceremony and felt like a celebrity.",
+    type: "global",
+    verfied: true,
+    usefull: 61,
+    tags: ["Red carpet", "Celebrity"],
+  },
+  {
+    user_name: "Jordan R.",
+    product_id: "prod_133",
+    id: "rev_133_2",
+    created_at: "2026-01-09T19:30:00Z",
+    rating: 5,
+    user_id: "user_133_2",
+    user_image: "/assets/users/user-male-33.png",
+    comment:
+      "Stunning gown. My wife was the talk of the gala. Worth every penny.",
+    type: "global",
+    verfied: true,
+    usefull: 44,
+    tags: ["Talk of gala", "Worth it"],
+  },
+  {
+    user_name: "Casey M.",
+    product_id: "prod_133",
+    id: "rev_133_3",
+    created_at: "2026-01-04T22:00:00Z",
+    rating: 5,
+    user_id: "user_133_3",
+    user_image: "/assets/users/user-female-66.png",
+    comment:
+      "Absolutely gorgeous! The camel color is stunning. Fit is perfect.",
+    type: "global",
+    verfied: true,
+    usefull: 38,
+    tags: ["Gorgeous", "Perfect fit"],
+  },
+  // ==================== Product 134 Reviews ====================
+  {
+    user_name: "Morgan B.",
+    product_id: "prod_134",
+    id: "rev_134_1",
+    created_at: "2026-01-13T16:30:00Z",
+    rating: 4,
+    user_id: "user_134_1",
+    user_image: "/assets/users/user-female-67.png",
+    comment:
+      "Edgy and cool! Great for concerts. The faux leather is good quality.",
+    type: "global",
+    verfied: true,
+    usefull: 21,
+    tags: ["Edgy", "Concerts"],
+  },
+  {
+    user_name: "Alex W.",
+    product_id: "prod_134",
+    id: "rev_134_2",
+    created_at: "2026-01-08T14:45:00Z",
+    rating: 4,
+    user_id: "user_134_2",
+    user_image: "/assets/users/user-male-34.png",
+    comment:
+      "Nice edgy dress. My girlfriend wore it to a rock concert and fit right in.",
+    type: "global",
+    verfied: true,
+    usefull: 10,
+    tags: ["Rock concert", "Edgy"],
+  },
+  {
+    user_name: "Riley N.",
+    product_id: "prod_134",
+    id: "rev_134_3",
+    created_at: "2025-12-30T19:45:00Z",
+    rating: 5,
+    user_id: "user_134_3",
+    user_image: "/assets/users/user-female-68.png",
+    comment: "Obsessed with this dress! Makes me feel so cool and confident.",
+    type: "global",
+    verfied: true,
+    usefull: 34,
+    tags: ["Confident", "Cool"],
+  },
+  // ==================== Product 135 Reviews ====================
+  {
+    user_name: "Charlie P.",
+    product_id: "prod_135",
+    id: "rev_135_1",
+    created_at: "2026-01-12T10:30:00Z",
+    rating: 5,
+    user_id: "user_135_1",
+    user_image: "/assets/users/user-female-69.png",
+    comment:
+      "Beautiful summer floral! Wore this on vacation and got so many compliments.",
+    type: "global",
+    verfied: true,
+    usefull: 32,
+    tags: ["Vacation", "Compliments"],
+  },
+  {
+    user_name: "Taylor M.",
+    product_id: "prod_135",
+    id: "rev_135_2",
+    created_at: "2026-01-07T11:30:00Z",
+    rating: 4,
+    user_id: "user_135_2",
+    user_image: "/assets/users/user-male-35.png",
+    comment:
+      "Great vacation dress. My wife loves it. Lightweight and packable.",
+    type: "global",
+    verfied: true,
+    usefull: 14,
+    tags: ["Packable", "Vacation"],
+  },
+  {
+    user_name: "Quinn L.",
+    product_id: "prod_135",
+    id: "rev_135_3",
+    created_at: "2025-12-31T13:15:00Z",
+    rating: 5,
+    user_id: "user_135_3",
+    user_image: "/assets/users/user-female-70.png",
+    comment:
+      "Perfect for beach dinners! The print is vibrant and it's so flowy.",
+    type: "global",
+    verfied: true,
+    usefull: 27,
+    tags: ["Beach dinner", "Flowy"],
+  },
+  // ==================== Product 136 Reviews ====================
+  {
+    user_name: "Cameron R.",
+    product_id: "prod_136",
+    id: "rev_136_1",
+    created_at: "2026-01-15T15:00:00Z",
+    rating: 5,
+    user_id: "user_136_1",
+    user_image: "/assets/users/user-female-71.png",
+    comment:
+      "Executive level! Wore this for a CEO meeting and felt completely in charge.",
+    type: "global",
+    verfied: true,
+    usefull: 46,
+    tags: ["CEO", "In charge"],
+  },
+  {
+    user_name: "Bailey S.",
+    product_id: "prod_136",
+    id: "rev_136_2",
+    created_at: "2026-01-10T13:30:00Z",
+    rating: 5,
+    user_id: "user_136_2",
+    user_image: "/assets/users/user-male-36.png",
+    comment: "Very professional dress. My partner looks like a boss in this.",
+    type: "global",
+    verfied: true,
+    usefull: 29,
+    tags: ["Professional", "Boss"],
+  },
+  {
+    user_name: "Jordan K.",
+    product_id: "prod_136",
+    id: "rev_136_3",
+    created_at: "2026-01-05T14:00:00Z",
+    rating: 4,
+    user_id: "user_136_3",
+    user_image: "/assets/users/user-female-72.png",
+    comment:
+      "Sharp and tailored. Runs a bit snug in shoulders. Otherwise perfect.",
+    type: "global",
+    verfied: true,
+    usefull: 17,
+    tags: ["Sharp", "Snug shoulders"],
+  },
+  // ==================== Product 137 Reviews ====================
+  {
+    user_name: "Emery L.",
+    product_id: "prod_137",
+    id: "rev_137_1",
+    created_at: "2026-01-14T08:00:00Z",
+    rating: 4,
+    user_id: "user_137_1",
+    user_image: "/assets/users/user-female-73.png",
+    comment:
+      "Cozy and cute! Perfect for cool weather. The knit is soft and warm.",
+    type: "global",
+    verfied: true,
+    usefull: 18,
+    tags: ["Cozy", "Cool weather"],
+  },
+  {
+    user_name: "Riley H.",
+    product_id: "prod_137",
+    id: "rev_137_2",
+    created_at: "2026-01-09T15:45:00Z",
+    rating: 4,
+    user_id: "user_137_2",
+    user_image: "/assets/users/user-male-37.png",
+    comment:
+      "Good casual dress. My wife wears it for weekend errands. Comfortable.",
+    type: "global",
+    verfied: true,
+    usefull: 11,
+    tags: ["Errands", "Comfortable"],
+  },
+  {
+    user_name: "Sasha C.",
+    product_id: "prod_137",
+    id: "rev_137_3",
+    created_at: "2025-12-27T11:00:00Z",
+    rating: 5,
+    user_id: "user_137_3",
+    user_image: "/assets/users/user-female-74.png",
+    comment:
+      "Love this dress! The mustard yellow is perfect for fall. So warm and stylish.",
+    type: "global",
+    verfied: true,
+    usefull: 26,
+    tags: ["Fall", "Warm"],
+  },
+  // ==================== Product 138 Reviews ====================
+  {
+    user_name: "Kendall P.",
+    product_id: "prod_138",
+    id: "rev_138_1",
+    created_at: "2026-01-13T21:00:00Z",
+    rating: 5,
+    user_id: "user_138_1",
+    user_image: "/assets/users/user-female-75.png",
+    comment:
+      "Timeless elegance! Wore this to the opera and felt so sophisticated.",
+    type: "global",
+    verfied: true,
+    usefull: 42,
+    tags: ["Opera", "Sophisticated"],
+  },
+  {
+    user_name: "Dylan N.",
+    product_id: "prod_138",
+    id: "rev_138_2",
+    created_at: "2026-01-08T19:15:00Z",
+    rating: 5,
+    user_id: "user_138_2",
+    user_image: "/assets/users/user-male-38.png",
+    comment:
+      "Absolutely beautiful. My wife looked timeless and elegant. Great investment.",
+    type: "global",
+    verfied: true,
+    usefull: 34,
+    tags: ["Timeless", "Investment"],
+  },
+  {
+    user_name: "Reese T.",
+    product_id: "prod_138",
+    id: "rev_138_3",
+    created_at: "2026-01-01T20:45:00Z",
+    rating: 4,
+    user_id: "user_138_3",
+    user_image: "/assets/users/user-female-76.png",
+    comment:
+      "Beautiful silk but wrinkles easily. Still worth it for special events.",
+    type: "global",
+    verfied: true,
+    usefull: 19,
+    tags: ["Wrinkles", "Special events"],
+  },
+  // ==================== Product 139 Reviews ====================
+  {
+    user_name: "Harley J.",
+    product_id: "prod_139",
+    id: "rev_139_1",
+    created_at: "2026-01-12T17:30:00Z",
+    rating: 4,
+    user_id: "user_139_1",
+    user_image: "/assets/users/user-female-77.png",
+    comment: "Great for hiking! Breathable and lightweight. Dries quickly too.",
+    type: "global",
+    verfied: true,
+    usefull: 22,
+    tags: ["Hiking", "Quick dry"],
+  },
+  {
+    user_name: "Casey F.",
+    product_id: "prod_139",
+    id: "rev_139_2",
+    created_at: "2026-01-07T09:00:00Z",
+    rating: 4,
+    user_id: "user_139_2",
+    user_image: "/assets/users/user-male-39.png",
+    comment:
+      "Good active dress. My girlfriend uses it for outdoor workouts. Works well.",
+    type: "global",
+    verfied: true,
+    usefull: 9,
+    tags: ["Outdoor", "Workouts"],
+  },
+  {
+    user_name: "Blair W.",
+    product_id: "prod_139",
+    id: "rev_139_3",
+    created_at: "2025-12-29T14:30:00Z",
+    rating: 5,
+    user_id: "user_139_3",
+    user_image: "/assets/users/user-female-78.png",
+    comment:
+      "Perfect for summer adventures! The camel color hides dirt well. Love it.",
+    type: "global",
+    verfied: true,
+    usefull: 28,
+    tags: ["Adventures", "Hides dirt"],
+  },
+  // ==================== Product 140 Reviews ====================
+  {
+    user_name: "Skyler M.",
+    product_id: "prod_140",
+    id: "rev_140_1",
+    created_at: "2026-01-15T22:30:00Z",
+    rating: 5,
+    user_id: "user_140_1",
+    user_image: "/assets/users/user-female-79.png",
+    comment:
+      "Danced all night! The sequins are secure and it's surprisingly comfortable.",
+    type: "global",
+    verfied: true,
+    usefull: 48,
+    tags: ["Danced all night", "Comfortable"],
+  },
+  {
+    user_name: "Riley K.",
+    product_id: "prod_140",
+    id: "rev_140_2",
+    created_at: "2026-01-10T23:15:00Z",
+    rating: 5,
+    user_id: "user_140_2",
+    user_image: "/assets/users/user-male-40.png",
+    comment:
+      "Incredible party dress. My girlfriend was shining all night long.",
+    type: "global",
+    verfied: true,
+    usefull: 36,
+    tags: ["Shining", "Party"],
+  },
+  {
+    user_name: "Emerson H.",
+    product_id: "prod_140",
+    id: "rev_140_3",
+    created_at: "2026-01-05T23:00:00Z",
+    rating: 4,
+    user_id: "user_140_3",
+    user_image: "/assets/users/user-female-80.png",
+    comment: "So sparkly! A bit itchy at the seams but worth it for the look.",
+    type: "global",
+    verfied: true,
+    usefull: 15,
+    tags: ["Sparkly", "Itchy seams"],
+  },
+  // ==================== Product 141 Reviews ====================
+  {
+    user_name: "Logan B.",
+    product_id: "prod_141",
+    id: "rev_141_1",
+    created_at: "2026-01-13T12:00:00Z",
+    rating: 5,
+    user_id: "user_141_1",
+    user_image: "/assets/users/user-female-81.png",
+    comment:
+      "Simple and perfect! My go-to for lazy summer days. So comfortable.",
+    type: "global",
+    verfied: true,
+    usefull: 30,
+    tags: ["Lazy summer", "Comfortable"],
+  },
+  {
+    user_name: "Morgan P.",
+    product_id: "prod_141",
+    id: "rev_141_2",
+    created_at: "2026-01-08T08:15:00Z",
+    rating: 4,
+    user_id: "user_141_2",
+    user_image: "/assets/users/user-male-41.png",
+    comment: "Good casual dress. My daughter wears it for picnics. Easy care.",
+    type: "global",
+    verfied: true,
+    usefull: 8,
+    tags: ["Picnics", "Easy care"],
+  },
+  {
+    user_name: "Addison C.",
+    product_id: "prod_141",
+    id: "rev_141_3",
+    created_at: "2025-12-26T10:00:00Z",
+    rating: 5,
+    user_id: "user_141_3",
+    user_image: "/assets/users/user-female-82.png",
+    comment:
+      "Love this dress! Bought in both colors. Perfect for beach days and BBQs.",
+    type: "global",
+    verfied: true,
+    usefull: 33,
+    tags: ["Beach days", "BBQs"],
+  },
+  // ==================== Product 142 Reviews ====================
+  {
+    user_name: "Sutton L.",
+    product_id: "prod_142",
+    id: "rev_142_1",
+    created_at: "2026-01-14T22:00:00Z",
+    rating: 5,
+    user_id: "user_142_1",
+    user_image: "/assets/users/user-female-83.png",
+    comment:
+      "Unforgettable! Wore this to prom and felt like a princess. Everyone loved it.",
+    type: "global",
+    verfied: true,
+    usefull: 67,
+    tags: ["Prom", "Princess"],
+  },
+  {
+    user_name: "Cameron R.",
+    product_id: "prod_142",
+    id: "rev_142_2",
+    created_at: "2026-01-09T21:00:00Z",
+    rating: 5,
+    user_id: "user_142_2",
+    user_image: "/assets/users/user-male-42.png",
+    comment:
+      "Stunning gown. My daughter looked beautiful for her formal. Great quality.",
+    type: "global",
+    verfied: true,
+    usefull: 41,
+    tags: ["Formal", "Beautiful"],
+  },
+  {
+    user_name: "Finley D.",
+    product_id: "prod_142",
+    id: "rev_142_3",
+    created_at: "2026-01-03T20:00:00Z",
+    rating: 5,
+    user_id: "user_142_3",
+    user_image: "/assets/users/user-female-84.png",
+    comment:
+      "Absolutely breathtaking! The sage green is unique and so elegant.",
+    type: "global",
+    verfied: true,
+    usefull: 39,
+    tags: ["Breathtaking", "Unique color"],
+  },
+  // ==================== Product 143 Reviews ====================
+  {
+    user_name: "Tyler S.",
+    product_id: "prod_143",
+    id: "rev_143_1",
+    created_at: "2026-01-11T18:15:00Z",
+    rating: 4,
+    user_id: "user_143_1",
+    user_image: "/assets/users/user-female-85.png",
+    comment:
+      "Edgy and cool! Wore this to a concert and got so many looks. Love it.",
+    type: "global",
+    verfied: true,
+    usefull: 23,
+    tags: ["Concert", "Edgy"],
+  },
+  {
+    user_name: "Jordan M.",
+    product_id: "prod_143",
+    id: "rev_143_2",
+    created_at: "2026-01-06T17:00:00Z",
+    rating: 4,
+    user_id: "user_143_2",
+    user_image: "/assets/users/user-male-43.png",
+    comment:
+      "Nice faux leather dress. My girlfriend wore it to a club. Looked great.",
+    type: "global",
+    verfied: true,
+    usefull: 12,
+    tags: ["Club", "Faux leather"],
+  },
+  {
+    user_name: "Kai W.",
+    product_id: "prod_143",
+    id: "rev_143_3",
+    created_at: "2025-12-28T19:15:00Z",
+    rating: 5,
+    user_id: "user_143_3",
+    user_image: "/assets/users/user-female-86.png",
+    comment:
+      "So badass! Makes me feel so confident. The mustard yellow is perfect.",
+    type: "global",
+    verfied: true,
+    usefull: 35,
+    tags: ["Badass", "Confident"],
+  },
+  // ==================== Product 144 Reviews ====================
+  {
+    user_name: "Avery H.",
+    product_id: "prod_144",
+    id: "rev_144_1",
+    created_at: "2026-01-12T15:30:00Z",
+    rating: 5,
+    user_id: "user_144_1",
+    user_image: "/assets/users/user-female-87.png",
+    comment:
+      "Blooming beautiful! Wore this to a garden wedding and fit right in.",
+    type: "global",
+    verfied: true,
+    usefull: 37,
+    tags: ["Garden wedding", "Beautiful"],
+  },
+  {
+    user_name: "Parker R.",
+    product_id: "prod_144",
+    id: "rev_144_2",
+    created_at: "2026-01-07T20:30:00Z",
+    rating: 4,
+    user_id: "user_144_2",
+    user_image: "/assets/users/user-male-44.png",
+    comment:
+      "Nice floral dress. My wife loves the print. Good for spring events.",
+    type: "global",
+    verfied: true,
+    usefull: 14,
+    tags: ["Spring", "Floral"],
+  },
+  {
+    user_name: "Rory C.",
+    product_id: "prod_144",
+    id: "rev_144_3",
+    created_at: "2025-12-30T12:00:00Z",
+    rating: 5,
+    user_id: "user_144_3",
+    user_image: "/assets/users/user-female-88.png",
+    comment:
+      "Love this dress! The camel color with floral is so unique. Very flattering.",
+    type: "global",
+    verfied: true,
+    usefull: 29,
+    tags: ["Unique", "Flattering"],
+  },
+  // ==================== Product 145 Reviews ====================
+  {
+    user_name: "Ellis P.",
+    product_id: "prod_145",
+    id: "rev_145_1",
+    created_at: "2026-01-14T18:15:00Z",
+    rating: 5,
+    user_id: "user_145_1",
+    user_image: "/assets/users/user-female-89.png",
+    comment:
+      "Confidence in a dress! Wore this for a job interview and got the job!",
+    type: "global",
+    verfied: true,
+    usefull: 51,
+    tags: ["Job interview", "Got the job"],
+  },
+  {
+    user_name: "Taylor D.",
+    product_id: "prod_145",
+    id: "rev_145_2",
+    created_at: "2026-01-09T14:00:00Z",
+    rating: 5,
+    user_id: "user_145_2",
+    user_image: "/assets/users/user-male-45.png",
+    comment:
+      "Very impressive dress. My partner looked so professional and capable.",
+    type: "global",
+    verfied: true,
+    usefull: 32,
+    tags: ["Impressive", "Professional"],
+  },
+  {
+    user_name: "Blake S.",
+    product_id: "prod_145",
+    id: "rev_145_3",
+    created_at: "2026-01-02T15:30:00Z",
+    rating: 4,
+    user_id: "user_145_3",
+    user_image: "/assets/users/user-female-90.png",
+    comment:
+      "Great for work. Fits well but wrinkles easily. Still looks sharp.",
+    type: "global",
+    verfied: true,
+    usefull: 18,
+    tags: ["Work", "Wrinkles"],
+  },
+  // ==================== Product 146 Reviews ====================
+  {
+    user_name: "Casey L.",
+    product_id: "prod_146",
+    id: "rev_146_1",
+    created_at: "2026-01-13T09:15:00Z",
+    rating: 4,
+    user_id: "user_146_1",
+    user_image: "/assets/users/user-female-91.png",
+    comment:
+      "Great for yoga! Stretchy and moves with you. Doesn't restrict at all.",
+    type: "global",
+    verfied: true,
+    usefull: 24,
+    tags: ["Yoga", "Stretchy"],
+  },
+  {
+    user_name: "Morgan C.",
+    product_id: "prod_146",
+    id: "rev_146_2",
+    created_at: "2026-01-08T11:00:00Z",
+    rating: 4,
+    user_id: "user_146_2",
+    user_image: "/assets/users/user-male-46.png",
+    comment:
+      "Good for active recovery. My girlfriend wears it after workouts. Comfortable.",
+    type: "global",
+    verfied: true,
+    usefull: 10,
+    tags: ["Recovery", "Comfortable"],
+  },
+  {
+    user_name: "Quinn R.",
+    product_id: "prod_146",
+    id: "rev_146_3",
+    created_at: "2025-12-31T08:00:00Z",
+    rating: 5,
+    user_id: "user_146_3",
+    user_image: "/assets/users/user-female-92.png",
+    comment:
+      "Perfect for pilates! The terracotta is beautiful and it breathes well.",
+    type: "global",
+    verfied: true,
+    usefull: 27,
+    tags: ["Pilates", "Breathable"],
+  },
+  // ==================== Product 147 Reviews ====================
+  {
+    user_name: "Sydney M.",
+    product_id: "prod_147",
+    id: "rev_147_1",
+    created_at: "2026-01-15T17:30:00Z",
+    rating: 5,
+    user_id: "user_147_1",
+    user_image: "/assets/users/user-female-93.png",
+    comment:
+      "Refined and elegant! Wore this to a Michelin star restaurant and felt perfect.",
+    type: "global",
+    verfied: true,
+    usefull: 43,
+    tags: ["Michelin star", "Refined"],
+  },
+  {
+    user_name: "Alexis N.",
+    product_id: "prod_147",
+    id: "rev_147_2",
+    created_at: "2026-01-10T18:00:00Z",
+    rating: 5,
+    user_id: "user_147_2",
+    user_image: "/assets/users/user-male-47.png",
+    comment:
+      "Sophisticated dress. My wife looked amazing for our anniversary dinner.",
+    type: "global",
+    verfied: true,
+    usefull: 35,
+    tags: ["Anniversary", "Sophisticated"],
+  },
+  {
+    user_name: "Jordan K.",
+    product_id: "prod_147",
+    id: "rev_147_3",
+    created_at: "2026-01-04T21:30:00Z",
+    rating: 4,
+    user_id: "user_147_3",
+    user_image: "/assets/users/user-female-94.png",
+    comment:
+      "Beautiful silk but very delicate. Dry clean only. Worth it for the look.",
+    type: "global",
+    verfied: true,
+    usefull: 20,
+    tags: ["Delicate", "Dry clean"],
+  },
+  // ==================== Product 148 Reviews ====================
+  {
+    user_name: "Reagan B.",
+    product_id: "prod_148",
+    id: "rev_148_1",
+    created_at: "2026-01-12T19:45:00Z",
+    rating: 4,
+    user_id: "user_148_1",
+    user_image: "/assets/users/user-female-95.png",
+    comment: "Breezy and cool! Great for hot summer hikes. Dries super fast.",
+    type: "global",
+    verfied: true,
+    usefull: 21,
+    tags: ["Summer hikes", "Fast dry"],
+  },
+  {
+    user_name: "Riley P.",
+    product_id: "prod_148",
+    id: "rev_148_2",
+    created_at: "2026-01-07T16:30:00Z",
+    rating: 4,
+    user_id: "user_148_2",
+    user_image: "/assets/users/user-male-48.png",
+    comment:
+      "Good active linen dress. My partner wears it for beach volleyball. Works great.",
+    type: "global",
+    verfied: true,
+    usefull: 12,
+    tags: ["Beach volleyball", "Works great"],
+  },
+  {
+    user_name: "Dakota S.",
+    product_id: "prod_148",
+    id: "rev_148_3",
+    created_at: "2025-12-27T13:45:00Z",
+    rating: 5,
+    user_id: "user_148_3",
+    user_image: "/assets/users/user-female-96.png",
+    comment:
+      "Love this dress! The sage green is so pretty and it's perfect for outdoor activities.",
+    type: "global",
+    verfied: true,
+    usefull: 26,
+    tags: ["Outdoor", "Pretty color"],
+  },
+  // ==================== Product 149 Reviews ====================
+  {
+    user_name: "Avery B.",
+    product_id: "prod_149",
+    id: "rev_149_1",
+    created_at: "2026-01-14T21:15:00Z",
+    rating: 5,
+    user_id: "user_149_1",
+    user_image: "/assets/users/user-female-97.png",
+    comment:
+      "Celebrated my 30th in this dress! Shimmered all night and felt amazing.",
+    type: "global",
+    verfied: true,
+    usefull: 54,
+    tags: ["30th birthday", "Shimmered"],
+  },
+  {
+    user_name: "Casey F.",
+    product_id: "prod_149",
+    id: "rev_149_2",
+    created_at: "2026-01-09T22:30:00Z",
+    rating: 5,
+    user_id: "user_149_2",
+    user_image: "/assets/users/user-male-49.png",
+    comment:
+      "Perfect for milestone celebrations. My wife looked stunning and sparkly.",
+    type: "global",
+    verfied: true,
+    usefull: 38,
+    tags: ["Milestone", "Sparkly"],
+  },
+  {
+    user_name: "Rory K.",
+    product_id: "prod_149",
+    id: "rev_149_3",
+    created_at: "2026-01-06T21:00:00Z",
+    rating: 4,
+    user_id: "user_149_3",
+    user_image: "/assets/users/user-female-98.png",
+    comment:
+      "Beautiful sequins but a bit heavy. Still worth it for the special day.",
+    type: "global",
+    verfied: true,
+    usefull: 17,
+    tags: ["Heavy", "Special day"],
+  },
+  // ==================== Product 150 Reviews ====================
+  {
+    user_name: "Quinn L.",
+    product_id: "prod_150",
+    id: "rev_150_1",
+    created_at: "2026-01-13T14:00:00Z",
+    rating: 5,
+    user_id: "user_150_1",
+    user_image: "/assets/users/user-female-99.png",
+    comment:
+      "Everyday active style! Wear this to the gym and then to brunch. So versatile.",
+    type: "global",
+    verfied: true,
+    usefull: 33,
+    tags: ["Gym to brunch", "Versatile"],
+  },
+  {
+    user_name: "Taylor W.",
+    product_id: "prod_150",
+    id: "rev_150_2",
+    created_at: "2026-01-08T14:15:00Z",
+    rating: 4,
+    user_id: "user_150_2",
+    user_image: "/assets/users/user-male-50.png",
+    comment:
+      "Good active dress. My girlfriend wears it for morning runs. Breathable.",
+    type: "global",
+    verfied: true,
+    usefull: 11,
+    tags: ["Morning runs", "Breathable"],
+  },
+  {
+    user_name: "Emery H.",
+    product_id: "prod_150",
+    id: "rev_150_3",
+    created_at: "2025-12-29T16:15:00Z",
+    rating: 5,
+    user_id: "user_150_3",
+    user_image: "/assets/users/user-female-100.png",
+    comment:
+      "Love this dress! The beige color goes with everything. Perfect for active days.",
+    type: "global",
+    verfied: true,
+    usefull: 28,
+    tags: ["Active days", "Goes with everything"],
+  },
+];
+
+const categories = [
+  {
+    parent_id: null,
+    icon: "/icons/fashion.svg",
+    is_active: true,
+    id: "cat_dresses",
+    name: "Dresses",
+    slug: "dresses",
+  },
+  {
+    parent_id: "cat_dresses",
+    icon: "/icons/casual.svg",
+    is_active: true,
+    id: "cat_casual",
+    name: "Casual Dresses",
+    slug: "casual-dresses",
+  },
+  {
+    parent_id: "cat_dresses",
+    icon: "/icons/summer.svg",
+    is_active: true,
+    id: "cat_summer",
+    name: "Summer Dresses",
+    slug: "summer-dresses",
+  },
+  {
+    parent_id: "cat_dresses",
+    icon: "/icons/formal.svg",
+    is_active: true,
+    id: "cat_formal",
+    name: "Formal Dresses",
+    slug: "formal-dresses",
+  },
+  {
+    parent_id: "cat_dresses",
+    icon: "/icons/party.svg",
+    is_active: true,
+    id: "cat_party",
+    name: "Party Dresses",
+    slug: "party-dresses",
+  },
+  {
+    parent_id: "cat_dresses",
+    icon: "/icons/sporty.svg",
+    is_active: true,
+    id: "cat_sporty",
+    name: "Sporty Dresses",
+    slug: "sporty-dresses",
+  },
+  {
+    parent_id: "cat_dresses",
+    icon: "/icons/bodycon.svg",
+    is_active: true,
+    id: "cat_bodycon",
+    name: "Bodycon Dresses",
+    slug: "bodycon-dresses",
+  },
+  {
+    parent_id: "cat_dresses",
+    icon: "/icons/wrap.svg",
+    is_active: true,
+    id: "cat_wrap",
+    name: "Wrap Dresses",
+    slug: "wrap-dresses",
+  },
+  {
+    parent_id: "cat_dresses",
+    icon: "/icons/work.svg",
+    is_active: true,
+    id: "cat_work",
+    name: "Work Dresses",
+    slug: "work-dresses",
+  },
+];
+
+export const products = [
+  // Product 101 - Casual Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_casual"],
+    tags: ["denim", "casual", "women", "dress", "tie detail"],
+    relatedIds: ["prod_102", "prod_103", "prod_104"],
+    thumbnail: "/assets/dresses/zara1.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-101-DNM-CML",
+    original_price: 3000,
+    discount_percentage: 17,
+    rating_average: 4.8,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2500,
+    brand_id: "brand_nike",
+    short_name: "Denim Skirt Dress",
+    name: "Denim Skirt With Short Sleeve Shirt And Tie Detail",
+    product_type: "dress",
+    id: "prod_101",
+    currency: "USD",
+    slug: "denim-skirt-short-sleeve-shirt-tie-detail",
+    sold_count: 42,
+    is_active: true,
+  },
+  // Product 102 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["satin", "evening", "formal", "slip dress", "blue"],
+    relatedIds: ["prod_101", "prod_103", "prod_105"],
+    thumbnail: "/assets/dresses/zara2.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-102-SAT-BLU",
+    original_price: 2100,
+    discount_percentage: 52,
+    rating_average: 4.8,
+    is_featured: true,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 1000,
+    brand_id: "brand_adidas",
+    short_name: "Satin Slip Dress",
+    name: "Satin Slip Dress Blue",
+    product_type: "dress",
+    id: "prod_102",
+    currency: "USD",
+    slug: "satin-slip-dress-blue",
+    sold_count: 18,
+    is_active: true,
+  },
+  // Product 103 - Summer Dress
+  {
+    is_best_seller: true,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_summer"],
+    tags: ["floral", "mini", "summer", "spring", "colorful"],
+    relatedIds: ["prod_101", "prod_102", "prod_104"],
+    thumbnail: "/assets/dresses/zara3.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-103-FLO-BLU",
+    original_price: 3000,
+    discount_percentage: 0,
+    rating_average: 4.7,
+    is_featured: true,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 3000,
+    brand_id: "brand_zara",
+    short_name: "Floral Mini Dress",
+    name: "Floral Blue Mini Dress",
+    product_type: "dress",
+    id: "prod_103",
+    currency: "USD",
+    slug: "floral-blue-mini-dress",
+    sold_count: 7,
+    is_active: true,
+  },
+  // Product 104 - Casual Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_casual"],
+    tags: ["t-shirt", "casual", "cotton", "everyday", "comfortable"],
+    relatedIds: ["prod_101", "prod_103", "prod_105"],
+    thumbnail: "/assets/dresses/zara4.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-104-TSH-CAS",
+    original_price: 3000,
+    discount_percentage: 17,
+    rating_average: 4.8,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2500,
+    brand_id: "brand_hm",
+    short_name: "T-Shirt Dress",
+    name: "Casual T-Shirt Dress",
+    product_type: "dress",
+    id: "prod_104",
+    currency: "USD",
+    slug: "casual-t-shirt-dress",
+    sold_count: 35,
+    is_active: true,
+  },
+  // Product 105 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["hoodie", "sporty", "streetwear", "fleece", "casual"],
+    relatedIds: ["prod_102", "prod_104", "prod_106"],
+    thumbnail: "/assets/dresses/zara5.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-105-HOOD-SPT",
+    original_price: 5499,
+    discount_percentage: 27,
+    rating_average: 4.9,
+    is_featured: true,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 4000,
+    brand_id: "brand_tommy",
+    short_name: "Hoodie Dress",
+    name: "Sporty Hoodie Dress",
+    product_type: "dress",
+    id: "prod_105",
+    currency: "USD",
+    slug: "sporty-hoodie-dress",
+    sold_count: 22,
+    is_active: true,
+  },
+  // Product 106 - Wrap Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_summer", "cat_wrap"],
+    tags: ["linen", "wrap", "summer", "breathable", "casual chic"],
+    relatedIds: ["prod_105", "prod_107", "prod_108"],
+    thumbnail: "/assets/dresses/zara6.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-106-LIN-WRP",
+    original_price: 4499,
+    discount_percentage: 22,
+    rating_average: 4.8,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 3500,
+    brand_id: "brand_levis",
+    short_name: "Linen Wrap Dress",
+    name: "Linen Blend Wrap Dress",
+    product_type: "dress",
+    id: "prod_106",
+    currency: "USD",
+    slug: "linen-blend-wrap-dress",
+    sold_count: 29,
+    is_active: true,
+  },
+  // Product 107 - Bodycon Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_bodycon"],
+    tags: ["bodycon", "ribbed", "knit", "party", "curve hugging"],
+    relatedIds: ["prod_106", "prod_108", "prod_109"],
+    thumbnail: "/assets/dresses/zara7.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-107-RIB-BDC",
+    original_price: 6499,
+    discount_percentage: 8,
+    rating_average: 4.5,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 6000,
+    brand_id: "brand_uniqlo",
+    short_name: "Ribbed Bodycon",
+    name: "Ribbed Bodycon Dress",
+    product_type: "dress",
+    id: "prod_107",
+    currency: "USD",
+    slug: "ribbed-bodycon-dress",
+    sold_count: 12,
+    is_active: true,
+  },
+  // Product 108 - Bodycon Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_bodycon", "cat_casual"],
+    tags: ["ribbed", "bodycon", "neutral", "beige", "casual"],
+    relatedIds: ["prod_107", "prod_109", "prod_110"],
+    thumbnail: "/assets/dresses/zara8.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-108-RIB-BGE",
+    original_price: 5299,
+    discount_percentage: 14,
+    rating_average: 4.6,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 4550,
+    brand_id: "brand_nike",
+    short_name: "Ribbed Bodycon",
+    name: "Ribbed Bodycon Dress",
+    product_type: "dress",
+    id: "prod_108",
+    currency: "USD",
+    slug: "ribbed-bodycon-dress-beige",
+    sold_count: 19,
+    is_active: true,
+  },
+  // Product 109 - Party Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_party"],
+    tags: ["puff sleeve", "mini", "romantic", "party", "camel"],
+    relatedIds: ["prod_108", "prod_110", "prod_111"],
+    thumbnail: "/assets/dresses/zara9.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-109-PUF-MIN",
+    original_price: 5999,
+    discount_percentage: 8,
+    rating_average: 4.8,
+    is_featured: true,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 5500,
+    brand_id: "brand_adidas",
+    short_name: "Puff Sleeve Mini",
+    name: "Puff Sleeve Mini Dress",
+    product_type: "dress",
+    id: "prod_109",
+    currency: "USD",
+    slug: "puff-sleeve-mini-dress",
+    sold_count: 15,
+    is_active: true,
+  },
+  // Product 110 - Wrap Dress
+  {
+    is_best_seller: true,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_party", "cat_wrap"],
+    tags: ["velvet", "wrap", "holiday", "party", "luxury"],
+    relatedIds: ["prod_109", "prod_111", "prod_112"],
+    thumbnail: "/assets/dresses/zara10.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-110-VEL-WRP",
+    original_price: 5199,
+    discount_percentage: 17,
+    rating_average: 4.8,
+    is_featured: true,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 4299,
+    brand_id: "brand_zara",
+    short_name: "Velvet Wrap",
+    name: "Velvet Wrap Dress",
+    product_type: "dress",
+    id: "prod_110",
+    currency: "USD",
+    slug: "velvet-wrap-dress",
+    sold_count: 27,
+    is_active: true,
+  },
+  // Product 111 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["silk", "elegant", "formal", "evening", "sage"],
+    relatedIds: ["prod_110", "prod_112", "prod_113"],
+    thumbnail: "/assets/dresses/zara11.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-111-SILK-FRM",
+    original_price: 6000,
+    discount_percentage: 17,
+    rating_average: 4.6,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 5000,
+    brand_id: "brand_hm",
+    short_name: "Elegant Silk",
+    name: "Elegant Silk Dress",
+    product_type: "dress",
+    id: "prod_111",
+    currency: "USD",
+    slug: "elegant-silk-dress",
+    sold_count: 31,
+    is_active: true,
+  },
+  // Product 112 - Casual Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_casual", "cat_summer"],
+    tags: ["linen", "casual", "summer", "breathable", "camel"],
+    relatedIds: ["prod_111", "prod_113", "prod_114"],
+    thumbnail: "/assets/dresses/zara12.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-112-LIN-CSL",
+    original_price: 3200,
+    discount_percentage: 0,
+    rating_average: 4.4,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 3200,
+    brand_id: "brand_tommy",
+    short_name: "Casual Linen",
+    name: "Casual Linen Dress",
+    product_type: "dress",
+    id: "prod_112",
+    currency: "USD",
+    slug: "casual-linen-dress",
+    sold_count: 44,
+    is_active: true,
+  },
+  // Product 113 - Party Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_party"],
+    tags: ["sequins", "party", "sparkle", "celebration", "mustard"],
+    relatedIds: ["prod_112", "prod_114", "prod_115"],
+    thumbnail: "/assets/dresses/new balance1.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-113-SEQ-PTY",
+    original_price: 8999,
+    discount_percentage: 22,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 7000,
+    brand_id: "brand_levis",
+    short_name: "Party Sequins",
+    name: "Party Sequins Dress",
+    product_type: "dress",
+    id: "prod_113",
+    currency: "USD",
+    slug: "party-sequins-dress",
+    sold_count: 8,
+    is_active: true,
+  },
+  // Product 114 - Casual Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_casual", "cat_summer"],
+    tags: ["cotton", "casual", "summer", "comfortable", "sage"],
+    relatedIds: ["prod_113", "prod_115", "prod_116"],
+    thumbnail: "/assets/dresses/new balance2.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-114-COT-CSL",
+    original_price: 3500,
+    discount_percentage: 20,
+    rating_average: 4.5,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_uniqlo",
+    short_name: "Casual Cotton",
+    name: "Casual Cotton Dress",
+    product_type: "dress",
+    id: "prod_114",
+    currency: "USD",
+    slug: "casual-cotton-dress",
+    sold_count: 52,
+    is_active: true,
+  },
+  // Product 115 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "low_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["evening", "gown", "formal", "elegant", "terracotta"],
+    relatedIds: ["prod_114", "prod_116", "prod_117"],
+    thumbnail: "/assets/dresses/new balance3.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-115-GWN-FRM",
+    original_price: 9999,
+    discount_percentage: 20,
+    rating_average: 4.9,
+    is_featured: true,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 8000,
+    brand_id: "brand_nike",
+    short_name: "Evening Gown",
+    name: "Elegant Evening Gown",
+    product_type: "dress",
+    id: "prod_115",
+    currency: "USD",
+    slug: "elegant-evening-gown",
+    sold_count: 5,
+    is_active: true,
+  },
+  // Product 116 - Casual Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_casual"],
+    tags: ["denim", "casual", "everyday", "mustard", "comfortable"],
+    relatedIds: ["prod_115", "prod_117", "prod_118"],
+    thumbnail: "/assets/dresses/new balance4.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-116-DNM-CSL",
+    original_price: 2200,
+    discount_percentage: 0,
+    rating_average: 4.3,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2200,
+    brand_id: "brand_adidas",
+    short_name: "Casual Denim",
+    name: "Casual Denim Dress",
+    product_type: "dress",
+    id: "prod_116",
+    currency: "USD",
+    slug: "casual-denim-dress",
+    sold_count: 38,
+    is_active: true,
+  },
+  // Product 117 - Summer Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_summer"],
+    tags: ["floral", "summer", "mini", "colorful", "camel"],
+    relatedIds: ["prod_116", "prod_118", "prod_119"],
+    thumbnail: "/assets/dresses/new balance5.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-117-FLO-SMR",
+    original_price: 4500,
+    discount_percentage: 20,
+    rating_average: 4.6,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 3600,
+    brand_id: "brand_zara",
+    short_name: "Summer Floral",
+    name: "Summer Floral Dress",
+    product_type: "dress",
+    id: "prod_117",
+    currency: "USD",
+    slug: "summer-floral-dress",
+    sold_count: 41,
+    is_active: true,
+  },
+  // Product 118 - Work Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_work"],
+    tags: ["blazer", "formal", "work", "professional", "beige"],
+    relatedIds: ["prod_117", "prod_119", "prod_120"],
+    thumbnail: "/assets/dresses/new balance6.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-118-BLZ-WRK",
+    original_price: 7999,
+    discount_percentage: 19,
+    rating_average: 4.8,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 6500,
+    brand_id: "brand_hm",
+    short_name: "Blazer Dress",
+    name: "Formal Blazer Dress",
+    product_type: "dress",
+    id: "prod_118",
+    currency: "USD",
+    slug: "formal-blazer-dress",
+    sold_count: 14,
+    is_active: true,
+  },
+  // Product 119 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["knit", "sporty", "casual", "comfortable", "terracotta"],
+    relatedIds: ["prod_118", "prod_120", "prod_121"],
+    thumbnail: "/assets/dresses/new balance7.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-119-KNT-SPT",
+    original_price: 3200,
+    discount_percentage: 16,
+    rating_average: 4.4,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2700,
+    brand_id: "brand_tommy",
+    short_name: "Knit Sporty",
+    name: "Casual Knit Dress",
+    product_type: "dress",
+    id: "prod_119",
+    currency: "USD",
+    slug: "casual-knit-dress",
+    sold_count: 47,
+    is_active: true,
+  },
+  // Product 120 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["silk", "elegant", "formal", "evening", "camel"],
+    relatedIds: ["prod_119", "prod_121", "prod_122"],
+    thumbnail: "/assets/dresses/new balance8.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-120-SIL-FRM",
+    original_price: 6000,
+    discount_percentage: 17,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 5000,
+    brand_id: "brand_levis",
+    short_name: "Elegant Silk",
+    name: "Elegant Silk Dress",
+    product_type: "dress",
+    id: "prod_120",
+    currency: "USD",
+    slug: "elegant-silk-dress-camel",
+    sold_count: 21,
+    is_active: true,
+  },
+  // Product 121 - Casual Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_casual", "cat_summer"],
+    tags: ["linen", "casual", "summer", "mustard", "beige"],
+    relatedIds: ["prod_120", "prod_122", "prod_123"],
+    thumbnail: "/assets/dresses/new balance9.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-121-LIN-CSL",
+    original_price: 2800,
+    discount_percentage: 0,
+    rating_average: 4.3,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_uniqlo",
+    short_name: "Casual Linen",
+    name: "Casual Linen Dress",
+    product_type: "dress",
+    id: "prod_121",
+    currency: "USD",
+    slug: "casual-linen-dress-beige",
+    sold_count: 33,
+    is_active: true,
+  },
+  // Product 122 - Party Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_party"],
+    tags: ["sequins", "party", "sparkle", "sage", "terracotta"],
+    relatedIds: ["prod_121", "prod_123", "prod_124"],
+    thumbnail: "/assets/dresses/new balance10.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-122-SEQ-PTY",
+    original_price: 8999,
+    discount_percentage: 22,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 7000,
+    brand_id: "brand_nike",
+    short_name: "Party Sequins",
+    name: "Party Sequins Dress",
+    product_type: "dress",
+    id: "prod_122",
+    currency: "USD",
+    slug: "party-sequins-dress-sage",
+    sold_count: 9,
+    is_active: true,
+  },
+  // Product 123 - Casual Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_casual", "cat_summer"],
+    tags: ["cotton", "casual", "summer", "beige", "comfortable"],
+    relatedIds: ["prod_122", "prod_124", "prod_125"],
+    thumbnail: "/assets/dresses/new balance11.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-123-COT-CSL",
+    original_price: 3500,
+    discount_percentage: 20,
+    rating_average: 4.5,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_adidas",
+    short_name: "Casual Cotton",
+    name: "Casual Cotton Dress",
+    product_type: "dress",
+    id: "prod_123",
+    currency: "USD",
+    slug: "casual-cotton-dress-beige",
+    sold_count: 50,
+    is_active: true,
+  },
+  // Product 124 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "low_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["gown", "evening", "formal", "camel", "mustard"],
+    relatedIds: ["prod_123", "prod_125", "prod_126"],
+    thumbnail: "/assets/dresses/new balance12.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-124-GWN-FRM",
+    original_price: 9999,
+    discount_percentage: 20,
+    rating_average: 4.9,
+    is_featured: true,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 8000,
+    brand_id: "brand_zara",
+    short_name: "Evening Gown",
+    name: "Elegant Evening Gown",
+    product_type: "dress",
+    id: "prod_124",
+    currency: "USD",
+    slug: "elegant-evening-gown-camel",
+    sold_count: 6,
+    is_active: true,
+  },
+  // Product 125 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["denim", "sporty", "casual", "terracotta", "sage"],
+    relatedIds: ["prod_124", "prod_126", "prod_127"],
+    thumbnail: "/assets/dresses/H&M1.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-125-DNM-SPT",
+    original_price: 2200,
+    discount_percentage: 0,
+    rating_average: 4.3,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2200,
+    brand_id: "brand_hm",
+    short_name: "Sporty Denim",
+    name: "Sports Denim Dress",
+    product_type: "dress",
+    id: "prod_125",
+    currency: "USD",
+    slug: "sports-denim-dress",
+    sold_count: 39,
+    is_active: true,
+  },
+  // Product 126 - Summer Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_summer"],
+    tags: ["floral", "summer", "mini", "mustard", "colorful"],
+    relatedIds: ["prod_125", "prod_127", "prod_128"],
+    thumbnail: "/assets/dresses/H&M2.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-126-FLO-SMR",
+    original_price: 4500,
+    discount_percentage: 20,
+    rating_average: 4.6,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 3600,
+    brand_id: "brand_tommy",
+    short_name: "Summer Floral",
+    name: "Summer Floral Dress",
+    product_type: "dress",
+    id: "prod_126",
+    currency: "USD",
+    slug: "summer-floral-dress-mustard",
+    sold_count: 43,
+    is_active: true,
+  },
+  // Product 127 - Work Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_work"],
+    tags: ["blazer", "formal", "work", "professional", "camel"],
+    relatedIds: ["prod_126", "prod_128", "prod_129"],
+    thumbnail: "/assets/dresses/H&M3.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-127-BLZ-WRK",
+    original_price: 7999,
+    discount_percentage: 19,
+    rating_average: 4.8,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 6500,
+    brand_id: "brand_levis",
+    short_name: "Blazer Dress",
+    name: "Formal Blazer Dress",
+    product_type: "dress",
+    id: "prod_127",
+    currency: "USD",
+    slug: "formal-blazer-dress-camel",
+    sold_count: 16,
+    is_active: true,
+  },
+  // Product 128 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["knit", "sporty", "casual", "sage", "comfortable"],
+    relatedIds: ["prod_127", "prod_129", "prod_130"],
+    thumbnail: "/assets/dresses/H&M4.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-128-KNT-SPT",
+    original_price: 3200,
+    discount_percentage: 16,
+    rating_average: 4.4,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2700,
+    brand_id: "brand_uniqlo",
+    short_name: "Knit Sporty",
+    name: "Sports Knit Dress",
+    product_type: "dress",
+    id: "prod_128",
+    currency: "USD",
+    slug: "sports-knit-dress",
+    sold_count: 48,
+    is_active: true,
+  },
+  // Product 129 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["silk", "elegant", "formal", "terracotta", "mustard"],
+    relatedIds: ["prod_128", "prod_130", "prod_131"],
+    thumbnail: "/assets/dresses/H&M5.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-129-SIL-FRM",
+    original_price: 6000,
+    discount_percentage: 17,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 5000,
+    brand_id: "brand_nike",
+    short_name: "Elegant Silk",
+    name: "Elegant Silk Dress",
+    product_type: "dress",
+    id: "prod_129",
+    currency: "USD",
+    slug: "elegant-silk-dress-terracotta",
+    sold_count: 23,
+    is_active: true,
+  },
+  // Product 130 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty", "cat_summer"],
+    tags: ["linen", "sporty", "summer", "beige", "camel"],
+    relatedIds: ["prod_129", "prod_131", "prod_132"],
+    thumbnail: "/assets/dresses/H&M6.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-130-LIN-SPT",
+    original_price: 2800,
+    discount_percentage: 0,
+    rating_average: 4.3,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_adidas",
+    short_name: "Sporty Linen",
+    name: "Sports Linen Dress",
+    product_type: "dress",
+    id: "prod_130",
+    currency: "USD",
+    slug: "sports-linen-dress",
+    sold_count: 36,
+    is_active: true,
+  },
+  // Product 131 - Party Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_party"],
+    tags: ["sequins", "party", "sparkle", "mustard", "celebration"],
+    relatedIds: ["prod_130", "prod_132", "prod_133"],
+    thumbnail: "/assets/dresses/H&M7.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-131-SEQ-PTY",
+    original_price: 8999,
+    discount_percentage: 22,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 7000,
+    brand_id: "brand_zara",
+    short_name: "Party Sequins",
+    name: "Party Sequins Dress",
+    product_type: "dress",
+    id: "prod_131",
+    currency: "USD",
+    slug: "party-sequins-dress-mustard",
+    sold_count: 11,
+    is_active: true,
+  },
+  // Product 132 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["cotton", "sporty", "active", "terracotta", "sage"],
+    relatedIds: ["prod_131", "prod_133", "prod_134"],
+    thumbnail: "/assets/dresses/H&M8.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-132-COT-SPT",
+    original_price: 3500,
+    discount_percentage: 20,
+    rating_average: 4.5,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_hm",
+    short_name: "Sporty Cotton",
+    name: "Sports Cotton Dress",
+    product_type: "dress",
+    id: "prod_132",
+    currency: "USD",
+    slug: "sports-cotton-dress",
+    sold_count: 51,
+    is_active: true,
+  },
+  // Product 133 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "low_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["gown", "evening", "formal", "camel", "elegant"],
+    relatedIds: ["prod_132", "prod_134", "prod_135"],
+    thumbnail: "/assets/dresses/H&M9.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-133-GWN-FRM",
+    original_price: 9999,
+    discount_percentage: 20,
+    rating_average: 4.9,
+    is_featured: true,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 8000,
+    brand_id: "brand_tommy",
+    short_name: "Evening Gown",
+    name: "Elegant Evening Gown",
+    product_type: "dress",
+    id: "prod_133",
+    currency: "USD",
+    slug: "elegant-evening-gown-camel",
+    sold_count: 4,
+    is_active: true,
+  },
+  // Product 134 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["denim", "sporty", "casual", "mustard", "beige"],
+    relatedIds: ["prod_133", "prod_135", "prod_136"],
+    thumbnail: "/assets/dresses/H&M10.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-134-DNM-SPT",
+    original_price: 2200,
+    discount_percentage: 0,
+    rating_average: 4.3,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2200,
+    brand_id: "brand_levis",
+    short_name: "Sporty Denim",
+    name: "Sports Denim Dress",
+    product_type: "dress",
+    id: "prod_134",
+    currency: "USD",
+    slug: "sports-denim-dress-beige",
+    sold_count: 40,
+    is_active: true,
+  },
+  // Product 135 - Summer Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_summer"],
+    tags: ["floral", "summer", "sage", "colorful", "lightweight"],
+    relatedIds: ["prod_134", "prod_136", "prod_137"],
+    thumbnail: "/assets/dresses/H&M11.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-135-FLO-SMR",
+    original_price: 4500,
+    discount_percentage: 20,
+    rating_average: 4.6,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 3600,
+    brand_id: "brand_uniqlo",
+    short_name: "Summer Floral",
+    name: "Summer Floral Dress",
+    product_type: "dress",
+    id: "prod_135",
+    currency: "USD",
+    slug: "summer-floral-dress-sage",
+    sold_count: 45,
+    is_active: true,
+  },
+  // Product 136 - Work Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_work"],
+    tags: ["blazer", "formal", "work", "terracotta", "camel"],
+    relatedIds: ["prod_135", "prod_137", "prod_138"],
+    thumbnail: "/assets/dresses/mange1.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-136-BLZ-WRK",
+    original_price: 7999,
+    discount_percentage: 19,
+    rating_average: 4.8,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 6500,
+    brand_id: "brand_nike",
+    short_name: "Blazer Dress",
+    name: "Formal Blazer Dress",
+    product_type: "dress",
+    id: "prod_136",
+    currency: "USD",
+    slug: "formal-blazer-dress-terracotta",
+    sold_count: 17,
+    is_active: true,
+  },
+  // Product 137 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["knit", "sporty", "mustard", "sage", "beige"],
+    relatedIds: ["prod_136", "prod_138", "prod_139"],
+    thumbnail: "/assets/dresses/mange2.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-137-KNT-SPT",
+    original_price: 3200,
+    discount_percentage: 16,
+    rating_average: 4.4,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2700,
+    brand_id: "brand_adidas",
+    short_name: "Knit Sporty",
+    name: "Sports Knit Dress",
+    product_type: "dress",
+    id: "prod_137",
+    currency: "USD",
+    slug: "sports-knit-dress-mustard",
+    sold_count: 49,
+    is_active: true,
+  },
+  // Product 138 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["silk", "elegant", "formal", "camel", "evening"],
+    relatedIds: ["prod_137", "prod_139", "prod_140"],
+    thumbnail: "/assets/dresses/mange3.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-138-SIL-FRM",
+    original_price: 6000,
+    discount_percentage: 17,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 5000,
+    brand_id: "brand_zara",
+    short_name: "Elegant Silk",
+    name: "Elegant Silk Dress",
+    product_type: "dress",
+    id: "prod_138",
+    currency: "USD",
+    slug: "elegant-silk-dress-formal",
+    sold_count: 24,
+    is_active: true,
+  },
+  // Product 139 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty", "cat_summer"],
+    tags: ["linen", "sporty", "summer", "sage", "terracotta"],
+    relatedIds: ["prod_138", "prod_140", "prod_141"],
+    thumbnail: "/assets/dresses/mange4.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-139-LIN-SPT",
+    original_price: 2800,
+    discount_percentage: 0,
+    rating_average: 4.3,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_hm",
+    short_name: "Sporty Linen",
+    name: "Sports Linen Dress",
+    product_type: "dress",
+    id: "prod_139",
+    currency: "USD",
+    slug: "sports-linen-dress-sage",
+    sold_count: 34,
+    is_active: true,
+  },
+  // Product 140 - Party Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_party"],
+    tags: ["sequins", "party", "sparkle", "mustard", "celebration"],
+    relatedIds: ["prod_139", "prod_141", "prod_142"],
+    thumbnail: "/assets/dresses/mange5.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-140-SEQ-PTY",
+    original_price: 8999,
+    discount_percentage: 22,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 7000,
+    brand_id: "brand_tommy",
+    short_name: "Party Sequins",
+    name: "Party Sequins Dress",
+    product_type: "dress",
+    id: "prod_140",
+    currency: "USD",
+    slug: "party-sequins-dress-mustard-2",
+    sold_count: 13,
+    is_active: true,
+  },
+  // Product 141 - Casual Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_casual", "cat_summer"],
+    tags: ["cotton", "casual", "summer", "beige", "camel"],
+    relatedIds: ["prod_140", "prod_142", "prod_143"],
+    thumbnail: "/assets/dresses/mange6.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-141-COT-CSL",
+    original_price: 3500,
+    discount_percentage: 20,
+    rating_average: 4.5,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_levis",
+    short_name: "Casual Cotton",
+    name: "Casual Cotton Dress",
+    product_type: "dress",
+    id: "prod_141",
+    currency: "USD",
+    slug: "casual-cotton-dress-beige-camel",
+    sold_count: 53,
+    is_active: true,
+  },
+  // Product 142 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "low_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["gown", "evening", "formal", "terracotta", "sage"],
+    relatedIds: ["prod_141", "prod_143", "prod_144"],
+    thumbnail: "/assets/dresses/mange7.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-142-GWN-FRM",
+    original_price: 9999,
+    discount_percentage: 20,
+    rating_average: 4.9,
+    is_featured: true,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 8000,
+    brand_id: "brand_uniqlo",
+    short_name: "Evening Gown",
+    name: "Elegant Evening Gown",
+    product_type: "dress",
+    id: "prod_142",
+    currency: "USD",
+    slug: "elegant-evening-gown-terracotta",
+    sold_count: 3,
+    is_active: true,
+  },
+  // Product 143 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["leather", "sporty", "edgy", "mustard", "faux"],
+    relatedIds: ["prod_142", "prod_144", "prod_145"],
+    thumbnail: "/assets/dresses/mange8.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-143-LTH-SPT",
+    original_price: 2200,
+    discount_percentage: 0,
+    rating_average: 4.3,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2200,
+    brand_id: "brand_nike",
+    short_name: "Sporty Leather",
+    name: "Sports Leather Dress",
+    product_type: "dress",
+    id: "prod_143",
+    currency: "USD",
+    slug: "sports-leather-dress",
+    sold_count: 37,
+    is_active: true,
+  },
+  // Product 144 - Summer Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_summer"],
+    tags: ["floral", "summer", "camel", "colorful", "lightweight"],
+    relatedIds: ["prod_143", "prod_145", "prod_146"],
+    thumbnail: "/assets/dresses/mange9.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-144-FLO-SMR",
+    original_price: 4500,
+    discount_percentage: 20,
+    rating_average: 4.6,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 3600,
+    brand_id: "brand_adidas",
+    short_name: "Summer Floral",
+    name: "Summer Floral Dress",
+    product_type: "dress",
+    id: "prod_144",
+    currency: "USD",
+    slug: "summer-floral-dress-camel",
+    sold_count: 46,
+    is_active: true,
+  },
+  // Product 145 - Work Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_work"],
+    tags: ["blazer", "formal", "work", "sage", "professional"],
+    relatedIds: ["prod_144", "prod_146", "prod_147"],
+    thumbnail: "/assets/dresses/mange10.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-145-BLZ-WRK",
+    original_price: 7999,
+    discount_percentage: 19,
+    rating_average: 4.8,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 6500,
+    brand_id: "brand_zara",
+    short_name: "Blazer Dress",
+    name: "Formal Blazer Dress",
+    product_type: "dress",
+    id: "prod_145",
+    currency: "USD",
+    slug: "formal-blazer-dress-sage",
+    sold_count: 20,
+    is_active: true,
+  },
+  // Product 146 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["knit", "sporty", "terracotta", "mustard", "comfortable"],
+    relatedIds: ["prod_145", "prod_147", "prod_148"],
+    thumbnail: "/assets/dresses/mange11.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-146-KNT-SPT",
+    original_price: 3200,
+    discount_percentage: 16,
+    rating_average: 4.4,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2700,
+    brand_id: "brand_hm",
+    short_name: "Knit Sporty",
+    name: "Sports Knit Dress",
+    product_type: "dress",
+    id: "prod_146",
+    currency: "USD",
+    slug: "sports-knit-dress-terracotta",
+    sold_count: 54,
+    is_active: true,
+  },
+  // Product 147 - Formal Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_formal"],
+    tags: ["silk", "elegant", "formal", "camel", "sage", "beige"],
+    relatedIds: ["prod_146", "prod_148", "prod_149"],
+    thumbnail: "/assets/dresses/mange12.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-147-SIL-FRM",
+    original_price: 6000,
+    discount_percentage: 17,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 5000,
+    brand_id: "brand_tommy",
+    short_name: "Elegant Silk",
+    name: "Elegant Silk Dress",
+    product_type: "dress",
+    id: "prod_147",
+    currency: "USD",
+    slug: "elegant-silk-dress-multi",
+    sold_count: 26,
+    is_active: true,
+  },
+  // Product 148 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty", "cat_summer"],
+    tags: ["linen", "sporty", "summer", "mustard", "breathable"],
+    relatedIds: ["prod_147", "prod_149", "prod_150"],
+    thumbnail: "/assets/dresses/mange13.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-148-LIN-SPT",
+    original_price: 2800,
+    discount_percentage: 0,
+    rating_average: 4.3,
+    is_featured: false,
+    has_discount: false,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_levis",
+    short_name: "Sporty Linen",
+    name: "Sports Linen Dress",
+    product_type: "dress",
+    id: "prod_148",
+    currency: "USD",
+    slug: "sports-linen-dress-mustard",
+    sold_count: 32,
+    is_active: true,
+  },
+  // Product 149 - Party Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_party"],
+    tags: ["sequins", "party", "sparkle", "terracotta", "camel"],
+    relatedIds: ["prod_148", "prod_150"],
+    thumbnail: "/assets/dresses/mange14.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-149-SEQ-PTY",
+    original_price: 8999,
+    discount_percentage: 22,
+    rating_average: 4.7,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 7000,
+    brand_id: "brand_uniqlo",
+    short_name: "Party Sequins",
+    name: "Party Sequins Dress",
+    product_type: "dress",
+    id: "prod_149",
+    currency: "USD",
+    slug: "party-sequins-dress-terracotta",
+    sold_count: 10,
+    is_active: true,
+  },
+  // Product 150 - Sporty Dress
+  {
+    is_best_seller: false,
+    stock_status: "in_stock",
+    category_ids: ["cat_dresses", "cat_sporty"],
+    tags: ["cotton", "sporty", "active", "sage", "beige"],
+    relatedIds: ["prod_149"],
+    thumbnail: "/assets/dresses/H&M12.png",
+    created_at: "2026-01-18T10:00:00Z",
+    sku: "DRS-150-COT-SPT",
+    original_price: 3500,
+    discount_percentage: 20,
+    rating_average: 4.5,
+    is_featured: false,
+    has_discount: true,
+    updated_at: "2026-01-18T10:00:00Z",
+    current_price: 2800,
+    brand_id: "brand_nike",
+    short_name: "Sporty Cotton",
+    name: "Sports Cotton Dress",
+    product_type: "dress",
+    id: "prod_150",
+    currency: "USD",
+    slug: "sports-cotton-dress-sage",
+    sold_count: 55,
+    is_active: true,
+  },
+];
+
+const pricing = [
+  // Product 101
+  {
+    installment_months: 10,
+    product_id: "prod_101",
+    offer_note: "17% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 250,
+    current_price: 2500,
+    original_price: 3000,
+    discount_percentage: 17,
+  },
+  // Product 102
+  {
+    installment_months: 0,
+    product_id: "prod_102",
+    offer_note: "52% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 1000,
+    original_price: 2100,
+    discount_percentage: 52,
+  },
+  // Product 103
+  {
+    installment_months: 0,
+    product_id: "prod_103",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 3000,
+    original_price: 3000,
+    discount_percentage: 0,
+  },
+  // Product 104
+  {
+    installment_months: 0,
+    product_id: "prod_104",
+    offer_note: "17% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2500,
+    original_price: 3000,
+    discount_percentage: 17,
+  },
+  // Product 105
+  {
+    installment_months: 0,
+    product_id: "prod_105",
+    offer_note: "27% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 4000,
+    original_price: 5499,
+    discount_percentage: 27,
+  },
+  // Product 106
+  {
+    installment_months: 0,
+    product_id: "prod_106",
+    offer_note: "22% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 3500,
+    original_price: 4499,
+    discount_percentage: 22,
+  },
+  // Product 107
+  {
+    installment_months: 0,
+    product_id: "prod_107",
+    offer_note: "8% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 6000,
+    original_price: 6499,
+    discount_percentage: 8,
+  },
+  // Product 108
+  {
+    installment_months: 0,
+    product_id: "prod_108",
+    offer_note: "14% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 4550,
+    original_price: 5299,
+    discount_percentage: 14,
+  },
+  // Product 109
+  {
+    installment_months: 0,
+    product_id: "prod_109",
+    offer_note: "8% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 5500,
+    original_price: 5999,
+    discount_percentage: 8,
+  },
+  // Product 110
+  {
+    installment_months: 0,
+    product_id: "prod_110",
+    offer_note: "17% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 4299,
+    original_price: 5199,
+    discount_percentage: 17,
+  },
+  // Product 111
+  {
+    installment_months: 0,
+    product_id: "prod_111",
+    offer_note: "17% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 5000,
+    original_price: 6000,
+    discount_percentage: 17,
+  },
+  // Product 112
+  {
+    installment_months: 0,
+    product_id: "prod_112",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 3200,
+    original_price: 3200,
+    discount_percentage: 0,
+  },
+  // Product 113
+  {
+    installment_months: 0,
+    product_id: "prod_113",
+    offer_note: "22% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 7000,
+    original_price: 8999,
+    discount_percentage: 22,
+  },
+  // Product 114
+  {
+    installment_months: 0,
+    product_id: "prod_114",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 3500,
+    discount_percentage: 20,
+  },
+  // Product 115
+  {
+    installment_months: 0,
+    product_id: "prod_115",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 8000,
+    original_price: 9999,
+    discount_percentage: 20,
+  },
+  // Product 116
+  {
+    installment_months: 0,
+    product_id: "prod_116",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 2200,
+    original_price: 2200,
+    discount_percentage: 0,
+  },
+  // Product 117
+  {
+    installment_months: 0,
+    product_id: "prod_117",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 3600,
+    original_price: 4500,
+    discount_percentage: 20,
+  },
+  // Product 118
+  {
+    installment_months: 0,
+    product_id: "prod_118",
+    offer_note: "19% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 6500,
+    original_price: 7999,
+    discount_percentage: 19,
+  },
+  // Product 119
+  {
+    installment_months: 0,
+    product_id: "prod_119",
+    offer_note: "16% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2700,
+    original_price: 3200,
+    discount_percentage: 16,
+  },
+  // Product 120
+  {
+    installment_months: 0,
+    product_id: "prod_120",
+    offer_note: "17% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 5000,
+    original_price: 6000,
+    discount_percentage: 17,
+  },
+  // Product 121
+  {
+    installment_months: 0,
+    product_id: "prod_121",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 2800,
+    discount_percentage: 0,
+  },
+  // Product 122
+  {
+    installment_months: 0,
+    product_id: "prod_122",
+    offer_note: "22% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 7000,
+    original_price: 8999,
+    discount_percentage: 22,
+  },
+  // Product 123
+  {
+    installment_months: 0,
+    product_id: "prod_123",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 3500,
+    discount_percentage: 20,
+  },
+  // Product 124
+  {
+    installment_months: 0,
+    product_id: "prod_124",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 8000,
+    original_price: 9999,
+    discount_percentage: 20,
+  },
+  // Product 125
+  {
+    installment_months: 0,
+    product_id: "prod_125",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 2200,
+    original_price: 2200,
+    discount_percentage: 0,
+  },
+  // Product 126
+  {
+    installment_months: 0,
+    product_id: "prod_126",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 3600,
+    original_price: 4500,
+    discount_percentage: 20,
+  },
+  // Product 127
+  {
+    installment_months: 0,
+    product_id: "prod_127",
+    offer_note: "19% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 6500,
+    original_price: 7999,
+    discount_percentage: 19,
+  },
+  // Product 128
+  {
+    installment_months: 0,
+    product_id: "prod_128",
+    offer_note: "16% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2700,
+    original_price: 3200,
+    discount_percentage: 16,
+  },
+  // Product 129
+  {
+    installment_months: 0,
+    product_id: "prod_129",
+    offer_note: "17% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 5000,
+    original_price: 6000,
+    discount_percentage: 17,
+  },
+  // Product 130
+  {
+    installment_months: 0,
+    product_id: "prod_130",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 2800,
+    discount_percentage: 0,
+  },
+  // Product 131
+  {
+    installment_months: 0,
+    product_id: "prod_131",
+    offer_note: "22% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 7000,
+    original_price: 8999,
+    discount_percentage: 22,
+  },
+  // Product 132
+  {
+    installment_months: 0,
+    product_id: "prod_132",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 3500,
+    discount_percentage: 20,
+  },
+  // Product 133
+  {
+    installment_months: 0,
+    product_id: "prod_133",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 8000,
+    original_price: 9999,
+    discount_percentage: 20,
+  },
+  // Product 134
+  {
+    installment_months: 0,
+    product_id: "prod_134",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 2200,
+    original_price: 2200,
+    discount_percentage: 0,
+  },
+  // Product 135
+  {
+    installment_months: 0,
+    product_id: "prod_135",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 3600,
+    original_price: 4500,
+    discount_percentage: 20,
+  },
+  // Product 136
+  {
+    installment_months: 0,
+    product_id: "prod_136",
+    offer_note: "19% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 6500,
+    original_price: 7999,
+    discount_percentage: 19,
+  },
+  // Product 137
+  {
+    installment_months: 0,
+    product_id: "prod_137",
+    offer_note: "16% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2700,
+    original_price: 3200,
+    discount_percentage: 16,
+  },
+  // Product 138
+  {
+    installment_months: 0,
+    product_id: "prod_138",
+    offer_note: "17% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 5000,
+    original_price: 6000,
+    discount_percentage: 17,
+  },
+  // Product 139
+  {
+    installment_months: 0,
+    product_id: "prod_139",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 2800,
+    discount_percentage: 0,
+  },
+  // Product 140
+  {
+    installment_months: 0,
+    product_id: "prod_140",
+    offer_note: "22% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 7000,
+    original_price: 8999,
+    discount_percentage: 22,
+  },
+  // Product 141
+  {
+    installment_months: 0,
+    product_id: "prod_141",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 3500,
+    discount_percentage: 20,
+  },
+  // Product 142
+  {
+    installment_months: 0,
+    product_id: "prod_142",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 8000,
+    original_price: 9999,
+    discount_percentage: 20,
+  },
+  // Product 143
+  {
+    installment_months: 0,
+    product_id: "prod_143",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 2200,
+    original_price: 2200,
+    discount_percentage: 0,
+  },
+  // Product 144
+  {
+    installment_months: 0,
+    product_id: "prod_144",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 3600,
+    original_price: 4500,
+    discount_percentage: 20,
+  },
+  // Product 145
+  {
+    installment_months: 0,
+    product_id: "prod_145",
+    offer_note: "19% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 6500,
+    original_price: 7999,
+    discount_percentage: 19,
+  },
+  // Product 146
+  {
+    installment_months: 0,
+    product_id: "prod_146",
+    offer_note: "16% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2700,
+    original_price: 3200,
+    discount_percentage: 16,
+  },
+  // Product 147
+  {
+    installment_months: 0,
+    product_id: "prod_147",
+    offer_note: "17% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 5000,
+    original_price: 6000,
+    discount_percentage: 17,
+  },
+  // Product 148
+  {
+    installment_months: 0,
+    product_id: "prod_148",
+    offer_note: "No discount",
+    currency: "USD",
+    offer_expiry: null,
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 2800,
+    discount_percentage: 0,
+  },
+  // Product 149
+  {
+    installment_months: 0,
+    product_id: "prod_149",
+    offer_note: "22% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 7000,
+    original_price: 8999,
+    discount_percentage: 22,
+  },
+  // Product 150
+  {
+    installment_months: 0,
+    product_id: "prod_150",
+    offer_note: "20% OFF",
+    currency: "USD",
+    offer_expiry: "2026-12-31",
+    installment_amount: 0,
+    current_price: 2800,
+    original_price: 3500,
+    discount_percentage: 20,
+  },
+];
+
+const stocks = [
+  // Product 101
+  {
+    product_id: "prod_101",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 42,
+  },
+  // Product 102
+  {
+    product_id: "prod_102",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 18,
+  },
+  // Product 103
+  {
+    product_id: "prod_103",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 7,
+  },
+  // Product 104
+  {
+    product_id: "prod_104",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 35,
+  },
+  // Product 105
+  {
+    product_id: "prod_105",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 22,
+  },
+  // Product 106
+  {
+    product_id: "prod_106",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 29,
+  },
+  // Product 107
+  {
+    product_id: "prod_107",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 12,
+  },
+  // Product 108
+  {
+    product_id: "prod_108",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 19,
+  },
+  // Product 109
+  {
+    product_id: "prod_109",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 15,
+  },
+  // Product 110
+  {
+    product_id: "prod_110",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 27,
+  },
+  // Product 111
+  {
+    product_id: "prod_111",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 31,
+  },
+  // Product 112
+  {
+    product_id: "prod_112",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 44,
+  },
+  // Product 113
+  {
+    product_id: "prod_113",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 8,
+  },
+  // Product 114
+  {
+    product_id: "prod_114",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 52,
+  },
+  // Product 115
+  {
+    product_id: "prod_115",
+    low_stock_threshold: 5,
+    status: "low_stock",
+    quantity: 5,
+  },
+  // Product 116
+  {
+    product_id: "prod_116",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 38,
+  },
+  // Product 117
+  {
+    product_id: "prod_117",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 41,
+  },
+  // Product 118
+  {
+    product_id: "prod_118",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 14,
+  },
+  // Product 119
+  {
+    product_id: "prod_119",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 47,
+  },
+  // Product 120
+  {
+    product_id: "prod_120",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 21,
+  },
+  // Product 121
+  {
+    product_id: "prod_121",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 33,
+  },
+  // Product 122
+  {
+    product_id: "prod_122",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 9,
+  },
+  // Product 123
+  {
+    product_id: "prod_123",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 50,
+  },
+  // Product 124
+  {
+    product_id: "prod_124",
+    low_stock_threshold: 5,
+    status: "low_stock",
+    quantity: 6,
+  },
+  // Product 125
+  {
+    product_id: "prod_125",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 39,
+  },
+  // Product 126
+  {
+    product_id: "prod_126",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 43,
+  },
+  // Product 127
+  {
+    product_id: "prod_127",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 16,
+  },
+  // Product 128
+  {
+    product_id: "prod_128",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 48,
+  },
+  // Product 129
+  {
+    product_id: "prod_129",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 23,
+  },
+  // Product 130
+  {
+    product_id: "prod_130",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 36,
+  },
+  // Product 131
+  {
+    product_id: "prod_131",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 11,
+  },
+  // Product 132
+  {
+    product_id: "prod_132",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 51,
+  },
+  // Product 133
+  {
+    product_id: "prod_133",
+    low_stock_threshold: 5,
+    status: "low_stock",
+    quantity: 4,
+  },
+  // Product 134
+  {
+    product_id: "prod_134",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 40,
+  },
+  // Product 135
+  {
+    product_id: "prod_135",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 45,
+  },
+  // Product 136
+  {
+    product_id: "prod_136",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 17,
+  },
+  // Product 137
+  {
+    product_id: "prod_137",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 49,
+  },
+  // Product 138
+  {
+    product_id: "prod_138",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 24,
+  },
+  // Product 139
+  {
+    product_id: "prod_139",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 34,
+  },
+  // Product 140
+  {
+    product_id: "prod_140",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 13,
+  },
+  // Product 141
+  {
+    product_id: "prod_141",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 53,
+  },
+  // Product 142
+  {
+    product_id: "prod_142",
+    low_stock_threshold: 5,
+    status: "low_stock",
+    quantity: 3,
+  },
+  // Product 143
+  {
+    product_id: "prod_143",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 37,
+  },
+  // Product 144
+  {
+    product_id: "prod_144",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 46,
+  },
+  // Product 145
+  {
+    product_id: "prod_145",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 20,
+  },
+  // Product 146
+  {
+    product_id: "prod_146",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 54,
+  },
+  // Product 147
+  {
+    product_id: "prod_147",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 26,
+  },
+  // Product 148
+  {
+    product_id: "prod_148",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 32,
+  },
+  // Product 149
+  {
+    product_id: "prod_149",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 10,
+  },
+  // Product 150
+  {
+    product_id: "prod_150",
+    low_stock_threshold: 5,
+    status: "in_stock",
+    quantity: 55,
+  },
+];
+
+const brands = [
+  {
+    name: "Nike",
+    logo: "/brands/nike.png",
+    id: "brand_nike",
+    store_name: "Nike Official Store",
+    website: "https://www.nike.com",
+  },
+  {
+    name: "Adidas",
+    logo: "/brands/adidas.png",
+    id: "brand_adidas",
+    store_name: "Adidas Official Store",
+    website: "https://www.adidas.com",
+  },
+  {
+    name: "Zara",
+    logo: "/brands/zara.png",
+    id: "brand_zara",
+    store_name: "Zara Official Store",
+    website: "https://www.zara.com",
+  },
+  {
+    name: "H&M",
+    logo: "/brands/hm.png",
+    id: "brand_hm",
+    store_name: "H&M Official Store",
+    website: "https://www.hm.com",
+  },
+  {
+    name: "Tommy Hilfiger",
+    logo: "/brands/tommy.png",
+    id: "brand_tommy",
+    store_name: "Tommy Hilfiger Official Store",
+    website: "https://www.tommy.com",
+  },
+  {
+    name: "Levi's",
+    logo: "/brands/levis.png",
+    id: "brand_levis",
+    store_name: "Levi's Official Store",
+    website: "https://www.levi.com",
+  },
+  {
+    name: "Uniqlo",
+    logo: "/brands/uniqlo.png",
+    id: "brand_uniqlo",
+    store_name: "Uniqlo Official Store",
+    website: "https://www.uniqlo.com",
+  },
+];
+
+const variants = [
+  // Product 101 - Denim Skirt Dress
+  {
+    product_id: "prod_101",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 102 - Satin Slip Dress
+  {
+    product_id: "prod_102",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 103 - Floral Mini Dress
+  {
+    product_id: "prod_103",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 104 - T-Shirt Dress
+  {
+    product_id: "prod_104",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Terracotta", available: true, hex: "#E2725B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 105 - Hoodie Dress
+  {
+    product_id: "prod_105",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 106 - Linen Wrap Dress
+  {
+    product_id: "prod_106",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Camel", available: true, hex: "#C19A6B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 107 - Ribbed Bodycon Dress
+  {
+    product_id: "prod_107",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 108 - Ribbed Bodycon Dress (Nike)
+  {
+    product_id: "prod_108",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 109 - Puff Sleeve Mini Dress
+  {
+    product_id: "prod_109",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 110 - Velvet Wrap Dress
+  {
+    product_id: "prod_110",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 111 - Elegant Silk Dress
+  {
+    product_id: "prod_111",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 112 - Casual Linen Dress
+  {
+    product_id: "prod_112",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 113 - Party Sequins Dress
+  {
+    product_id: "prod_113",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Terracotta", available: true, hex: "#E2725B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 114 - Casual Cotton Dress
+  {
+    product_id: "prod_114",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 115 - Elegant Evening Gown
+  {
+    product_id: "prod_115",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 116 - Casual Denim Dress
+  {
+    product_id: "prod_116",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 117 - Summer Floral Dress
+  {
+    product_id: "prod_117",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Camel", available: true, hex: "#C19A6B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 118 - Formal Blazer Dress
+  {
+    product_id: "prod_118",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 119 - Casual Knit Dress
+  {
+    product_id: "prod_119",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 120 - Elegant Silk Dress
+  {
+    product_id: "prod_120",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 121 - Casual Linen Dress
+  {
+    product_id: "prod_121",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 122 - Party Sequins Dress
+  {
+    product_id: "prod_122",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Terracotta", available: true, hex: "#E2725B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 123 - Casual Cotton Dress
+  {
+    product_id: "prod_123",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 124 - Elegant Evening Gown
+  {
+    product_id: "prod_124",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 125 - Sports Denim Dress
+  {
+    product_id: "prod_125",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 126 - Summer Floral Dress
+  {
+    product_id: "prod_126",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 127 - Formal Blazer Dress
+  {
+    product_id: "prod_127",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 128 - Sports Knit Dress
+  {
+    product_id: "prod_128",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 129 - Elegant Silk Dress
+  {
+    product_id: "prod_129",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 130 - Sports Linen Dress
+  {
+    product_id: "prod_130",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 131 - Party Sequins Dress
+  {
+    product_id: "prod_131",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 132 - Sports Cotton Dress
+  {
+    product_id: "prod_132",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 133 - Elegant Evening Gown
+  {
+    product_id: "prod_133",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 134 - Sports Denim Dress
+  {
+    product_id: "prod_134",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 135 - Summer Floral Dress
+  {
+    product_id: "prod_135",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 136 - Formal Blazer Dress
+  {
+    product_id: "prod_136",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Camel", available: true, hex: "#C19A6B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 137 - Sports Knit Dress
+  {
+    product_id: "prod_137",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 138 - Elegant Silk Dress
+  {
+    product_id: "prod_138",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 139 - Sports Linen Dress
+  {
+    product_id: "prod_139",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Terracotta", available: true, hex: "#E2725B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 140 - Party Sequins Dress
+  {
+    product_id: "prod_140",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 141 - Casual Cotton Dress
+  {
+    product_id: "prod_141",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Camel", available: true, hex: "#C19A6B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 142 - Elegant Evening Gown
+  {
+    product_id: "prod_142",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 143 - Sports Leather Dress
+  {
+    product_id: "prod_143",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 144 - Summer Floral Dress
+  {
+    product_id: "prod_144",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 145 - Formal Blazer Dress
+  {
+    product_id: "prod_145",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 146 - Sports Knit Dress
+  {
+    product_id: "prod_146",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 147 - Elegant Silk Dress
+  {
+    product_id: "prod_147",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Sage Green", available: true, hex: "#8A9A5B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 148 - Sports Linen Dress
+  {
+    product_id: "prod_148",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 149 - Party Sequins Dress
+  {
+    product_id: "prod_149",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Camel", available: true, hex: "#C19A6B" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  },
+  // Product 150 - Sports Cotton Dress
+  {
+    product_id: "prod_150",
+    variants: [
+      {
+        label: "Choose Color",
+        key: "color",
+        type: "swatch",
+        values: [
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
+        ]
+      },
+      {
+        label: "Choose Size",
+        key: "size",
+        type: "button",
+        values: [
+          { label: "S", available: true, price_modifier: 0 },
+          { label: "M", available: true, price_modifier: 0 },
+          { label: "L", available: true, price_modifier: 0 },
+          { label: "XL", available: true, price_modifier: 0 },
+          { label: "2XL", available: true, price_modifier: 0 }
+        ]
+      }
+    ]
+  }
+];
+
+const shipping = [
+  // Product 101
+  {
+    product_id: "prod_101",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 102
+  {
+    product_id: "prod_102",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 103
+  {
+    product_id: "prod_103",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 104
+  {
+    product_id: "prod_104",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 105
+  {
+    product_id: "prod_105",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 106
+  {
+    product_id: "prod_106",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 107
+  {
+    product_id: "prod_107",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 108
+  {
+    product_id: "prod_108",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 109
+  {
+    product_id: "prod_109",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 110
+  {
+    product_id: "prod_110",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 111
+  {
+    product_id: "prod_111",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 112
+  {
+    product_id: "prod_112",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 113
+  {
+    product_id: "prod_113",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 114
+  {
+    product_id: "prod_114",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 115
+  {
+    product_id: "prod_115",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 116
+  {
+    product_id: "prod_116",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 117
+  {
+    product_id: "prod_117",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 118
+  {
+    product_id: "prod_118",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 119
+  {
+    product_id: "prod_119",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 120
+  {
+    product_id: "prod_120",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 121
+  {
+    product_id: "prod_121",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 122
+  {
+    product_id: "prod_122",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 123
+  {
+    product_id: "prod_123",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 124
+  {
+    product_id: "prod_124",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 125
+  {
+    product_id: "prod_125",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 126
+  {
+    product_id: "prod_126",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 127
+  {
+    product_id: "prod_127",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 128
+  {
+    product_id: "prod_128",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 129
+  {
+    product_id: "prod_129",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 130
+  {
+    product_id: "prod_130",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 131
+  {
+    product_id: "prod_131",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 132
+  {
+    product_id: "prod_132",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 133
+  {
+    product_id: "prod_133",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 134
+  {
+    product_id: "prod_134",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 135
+  {
+    product_id: "prod_135",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 136
+  {
+    product_id: "prod_136",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 137
+  {
+    product_id: "prod_137",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 138
+  {
+    product_id: "prod_138",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 139
+  {
+    product_id: "prod_139",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 140
+  {
+    product_id: "prod_140",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 141
+  {
+    product_id: "prod_141",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 142
+  {
+    product_id: "prod_142",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 143
+  {
+    product_id: "prod_143",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 144
+  {
+    product_id: "prod_144",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 145
+  {
+    product_id: "prod_145",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 146
+  {
+    product_id: "prod_146",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 147
+  {
+    product_id: "prod_147",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 148
+  {
+    product_id: "prod_148",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  },
+  // Product 149
+  {
+    product_id: "prod_149",
+    estimated_delivery_days: "2 - 4 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Express Shipping",
+    is_free: false
+  },
+  // Product 150
+  {
+    product_id: "prod_150",
+    estimated_delivery_days: "3 - 5 Business Days",
+    from: "Cairo, Egypt",
+    shipping_type: "Standard Shipping",
+    is_free: false
+  }
+];

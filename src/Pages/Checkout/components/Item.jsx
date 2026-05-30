@@ -5,12 +5,12 @@ const Item = ({ data }) => {
     <div className={style.item}>
       <div className={style.left}>
         <div className={style.img_box}>
-          <img src={data.image} alt="" />
+          <img src={data.thumbnail} alt="" />
           <div>{data.quantity}</div>
         </div>
-        <h1>{data.title}</h1>
+        <h1>{data.name}</h1>
       </div>
-      <p className="price">${Math.round(+data.quantity * +data.price)}</p>
+      <p className="price">${Math.round(+data.quantity * +data.current_price)}</p>
     </div>
   );
 };

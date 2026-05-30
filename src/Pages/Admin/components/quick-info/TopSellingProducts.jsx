@@ -40,9 +40,11 @@ const TopSellingProducts = () => {
       <div className="overflow-x-auto w-full">
         <table className="md:min-w-fit w-full">
           <thead className="bg-gray-light font-bold text-xs ">
-            <td className="p-1.5 px-2.5">Product</td>
-            <td className="p-1.5 px-2.5">Sold</td>
-            <td className="p-1.5 px-2.5">Revenue</td>
+            <tr>
+              <th className="p-1.5 text-start px-2.5">Product</th>
+              <th className="p-1.5 text-start px-2.5">Sold</th>
+              <th className="p-1.5 text-start px-2.5">Revenue</th>
+            </tr>
           </thead>
           <tbody>
             {mokeData.map((pro) => {

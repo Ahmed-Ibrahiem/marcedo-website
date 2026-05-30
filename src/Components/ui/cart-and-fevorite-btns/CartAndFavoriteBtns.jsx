@@ -2,7 +2,6 @@ import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import { useFavoriteContext } from "../../../Context/favoriteMenuContext";
-import styles from "./CartAndFavoriteBtns.module.css";
 import { FaCartShopping, FaHeart } from "react-icons/fa6";
 
 const CartAndFavoriteBtns = () => {
@@ -29,7 +28,7 @@ const CartAndFavoriteBtns = () => {
           setIsOpenCart((prev) => (prev ? false : true));
         }}
         className={`relative ${
-          Object.keys(cartItemsData).length > 0 ? "text-orange!" : ""
+          Object.keys(cartItemsData).length > 0 ? "text-orange!" : "text-gray-300"
         }`}
       >
         <div
@@ -37,7 +36,7 @@ const CartAndFavoriteBtns = () => {
         >
           {Object.keys(cartItemsData).length}
         </div>
-        <FaCartShopping className="text-2xl" />
+        <FaCartShopping className="text-2xl "  />
       </button>
     </>
   );

@@ -77,7 +77,15 @@ export const getProductStock = async (product_id) => {
   const snapshot = await getDoc(docRef);
 
   if (!snapshot.exists) return null;
+  return snapshot.data();
+};
 
+export const getProductBrands = async (brand_id) => {
+  const docRef = doc(collection(db, "brands"), String(brand_id));
+
+  const snapshot = await getDoc(docRef);
+
+  if (!snapshot.exists) return null;
   return snapshot.data();
 };
 

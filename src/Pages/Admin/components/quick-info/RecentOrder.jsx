@@ -55,20 +55,30 @@ const RecentOrder = () => {
       <div className="overflow-x-auto w-full">
         <table className="w-full">
           <thead className="bg-gray-light font-bold text-xs ">
-            <td className="p-1.5 px-2.5">Order</td>
-            <td className="p-1.5 px-2.5">Customer</td>
-            <td className="p-1.5 px-2.5">Date</td>
-            <td className="p-1.5 px-2.5">Total</td>
-            <td className="p-1.5 px-2.5">Status</td>
+            <tr>
+              <th className="p-1.5 text-start px-2.5">Order</th>
+              <th className="p-1.5 text-start px-2.5">Customer</th>
+              <th className="p-1.5 text-start px-2.5">Date</th>
+              <th className="p-1.5 text-start px-2.5">Total</th>
+              <th className="p-1.5 text-start px-2.5">Status</th>
+            </tr>
           </thead>
           <tbody>
             {mokeData.map((pro) => {
               return (
                 <tr key={pro.id} className="border-t border-border text-[10px]">
-                  <td className="px-2.5 py-1.5"><p className="line-clamp-1">{pro.id}</p></td>
-                  <td className="px-2.5 py-1.5"><p className="line-clamp-1">{pro.customer}</p></td>
-                  <td className="px-2.5 py-1.5"><p className="line-clamp-1">{pro.date}</p></td>
-                  <td className="px-2.5 py-1.5"><p className="line-clamp-1">{pro.total}</p></td>
+                  <td className="px-2.5 py-1.5">
+                    <p className="line-clamp-1">{pro.id}</p>
+                  </td>
+                  <td className="px-2.5 py-1.5">
+                    <p className="line-clamp-1">{pro.customer}</p>
+                  </td>
+                  <td className="px-2.5 py-1.5">
+                    <p className="line-clamp-1">{pro.date}</p>
+                  </td>
+                  <td className="px-2.5 py-1.5">
+                    <p className="line-clamp-1">{pro.total}</p>
+                  </td>
                   <td className="px-2.5 flex items-center py-1.5">
                     {statusStyle(pro.status)}
                   </td>

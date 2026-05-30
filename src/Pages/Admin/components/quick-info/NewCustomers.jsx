@@ -38,9 +38,11 @@ const NewCustomers = () => {
       <div className="overflow-x-auto w-full">
         <table className="w-full">
           <thead className="bg-gray-light font-bold text-xs ">
-            <td className="p-1.5 px-2.5">Customer</td>
-            <td className="p-1.5 px-2.5">Date</td>
-            <td className="p-1.5 px-2.5">Total Orders</td>
+            <tr>
+              <th className="text-start p-1.5 px-2.5">Customer</th>
+              <th className="text-start p-1.5 px-2.5">Date</th>
+              <th className="text-center p-1.5 px-2.5">Total Orders</th>
+            </tr>
           </thead>
           <tbody>
             {mokeData.map((user) => {

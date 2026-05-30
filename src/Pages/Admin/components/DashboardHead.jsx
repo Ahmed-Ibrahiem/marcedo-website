@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCalendarAlt } from "react-icons/fa";
 
 const DashboardHead = ({
   dropDownOpen,
@@ -21,7 +22,7 @@ const DashboardHead = ({
         className="right drop-down-list min-w-32.5!"
         onClick={() => setDropDownOpen((prev) => !prev)}
       >
-        <i className="fa-solid fa-calendar"></i>
+        <FaCalendarAlt />
         <p className="current_option">{selectedPeriod.label}</p>
         {dropDownOpen && (
           <div className="options fade-in-animate z-40">

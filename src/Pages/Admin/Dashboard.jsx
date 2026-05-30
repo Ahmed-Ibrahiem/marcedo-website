@@ -6,6 +6,7 @@ import LowStockProducts from "./components/statistics-area/LowStockProducts.jsx"
 import RecentOrder from "./components/quick-info/RecentOrder.jsx";
 import TopSellingProducts from "./components/quick-info/TopSellingProducts.jsx";
 import NewCustomers from "./components/quick-info/NewCustomers.jsx";
+import DashboardStats from "./components/DashboardStats.jsx";
 
 const Dashboard = () => {
 
@@ -14,7 +15,7 @@ const Dashboard = () => {
     <main className=" flex flex-col gap-2.5 ">
      
       {/* Start stats cards */}
-      <StatsCards  />
+      <DashboardStats  />
       {/* Start Statistics area */}
       <div className="statistics-area flex flex-col xl:flex-row gap-2.5 flex-wrap">
         <SalesOverview />
