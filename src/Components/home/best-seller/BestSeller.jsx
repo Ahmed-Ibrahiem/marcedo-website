@@ -36,7 +36,7 @@ const BestSeller = ({ bestSellerProducts }) => {
               opacity: 1,
               transition: { delay: 0.5, ease: "linear" },
             }}
-            viewport={{ amount: 0.9, once: true }}
+            viewport={{ amount: 0.5, once: true }}
           >
             Best <span className="text-orange">Seller</span>
           </motion.h1>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import {
   AreaChart,
@@ -9,6 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import useOutside_click from "../../../../Hooks/Outside_click";
 
 // #region Data
 const datasets = {
@@ -44,7 +45,6 @@ const datasets = {
 };
 // #endregion
 
-
 const formatValue = (v) =>
   v >= 1000 ? `${(v / 1000).toFixed(0)}K` : v.toString();
 
@@ -74,6 +74,8 @@ const SalesOverview = () => {
   const [period, setPeriod] = useState({ key: "week", label: "This Week" });
   const [dropDownOpen, setDropDownOpen] = useState(false);
   const data = datasets[period.key];
+  const menuRef = useRef(null);
+  useOutside_click(menuRef, () => setDropDownOpen(false));
 
   return (
     <div className="bg-white rounded-lg h-75 max-h-57.5  border grow border-gray-100 p-3 w-full 2xl:w-[40%] flex flex-col">
@@ -83,13 +85,14 @@ const SalesOverview = () => {
           Sales Overview
         </h2>
         <div
-          className="text-sm! drop-down-list min-w-25 justify-between!"
+          ref={menuRef}
+          className="text-sm! drop-down-list min-w-25 justify-between! "
           onClick={(e) => setDropDownOpen((prev) => !prev)}
         >
           <p className="current_option ">{period.label}</p>
-          <FaAngleDown />
+          <FaAngleDown className={`${dropDownOpen ? "-rotate-90!" : ""}`} />
           {dropDownOpen && (
-            <div className="options fade-in-aminate z-20">
+            <div className="options fade-in-aminate z-20 fade-in-animate">
               {periods.map((p) => (
                 <span onClick={(e) => setPeriod(p)} key={p.key}>
                   {p.label}

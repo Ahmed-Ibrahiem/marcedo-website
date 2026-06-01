@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
+import useOutside_click from "../../../../Hooks/Outside_click";
 
 const datasets = {
   week: [
@@ -57,6 +58,9 @@ const OrdersOverview = () => {
   const data = datasets[period.key];
   const [dropDownOpen, setDropDownOpen] = useState(false);
   const total = data.reduce((s, d) => s + d.value, 0);
+  const menuRef = useRef(null);
+
+  useOutside_click(menuRef, () => setDropDownOpen(false));
 
   return (
     <div className="bg-white rounded-lg border border-gray-100 p-3 2xl:w-[30%] min-w-70 lg:min-w-100 max-h-57.5">
@@ -66,13 +70,14 @@ const OrdersOverview = () => {
           Orders Overview
         </h2>
         <div
-          className="text-sm! drop-down-list min-w-25 justify-between!"
+          ref={menuRef}
+          className="text-sm! drop-down-list min-w-25 justify-between! "
           onClick={(e) => setDropDownOpen((prev) => !prev)}
         >
           <p className="current_option ">{period.label}</p>
-          <FaAngleDown />
+          <FaAngleDown className={`${dropDownOpen ? "-rotate-90!" : ""}`} />
           {dropDownOpen && (
-            <div className="options fade-in-aminate z-20">
+            <div className="options fade-in-aminate z-20 fade-in-animate">
               {periods.map((p) => (
                 <span onClick={(e) => setPeriod(p)} key={p.key}>
                   {p.label}
@@ -105,7 +110,7 @@ const OrdersOverview = () => {
                 ))}
 
                 {/* العدد والنص في المنتصف */}
-                <CenterLabel cx={85} cy={85} total={total}  />
+                <CenterLabel cx={85} cy={85} total={total} />
               </Pie>
 
               <Tooltip

@@ -1,4 +1,4 @@
-const media = [
+export const media = [
   // Product 101
   {
     videos: [],
@@ -383,7 +383,7 @@ const media = [
   },
 ];
 
-const details = [
+export const details = [
   // Product 101
   {
     short_description:
@@ -2107,7 +2107,7 @@ const details = [
   },
 ];
 
-const ratings = [
+export const ratings = [
   // Product 101
   {
     total_ratings: 128,
@@ -2560,7 +2560,7 @@ const ratings = [
   },
 ];
 
-const reviews = [
+export const reviews = [
   // ==================== Product 101 Reviews ====================
   {
     user_name: "Olivia C.",
@@ -4841,7 +4841,7 @@ const reviews = [
   },
 ];
 
-const categories = [
+export const categories = [
   {
     parent_id: null,
     icon: "/icons/fashion.svg",
@@ -6269,7 +6269,7 @@ export const products = [
   },
 ];
 
-const pricing = [
+export const pricing = [
   // Product 101
   {
     installment_months: 10,
@@ -6872,7 +6872,7 @@ const pricing = [
   },
 ];
 
-const stocks = [
+export const stocks = [
   // Product 101
   {
     product_id: "prod_101",
@@ -7225,7 +7225,7 @@ const stocks = [
   },
 ];
 
-const brands = [
+export const brands = [
   {
     name: "Nike",
     logo: "/brands/nike.png",
@@ -7277,7 +7277,7 @@ const brands = [
   },
 ];
 
-const variants = [
+export const variants = [
   // Product 101 - Denim Skirt Dress
   {
     product_id: "prod_101",
@@ -7288,8 +7288,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7298,10 +7298,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 102 - Satin Slip Dress
   {
@@ -7311,9 +7311,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" }
-        ]
+        values: [{ label: "Terracotta", available: true, hex: "#E2725B" }],
       },
       {
         label: "Choose Size",
@@ -7322,10 +7320,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 103 - Floral Mini Dress
   {
@@ -7337,8 +7335,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7346,10 +7344,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 104 - T-Shirt Dress
   {
@@ -7362,8 +7360,8 @@ const variants = [
         values: [
           { label: "Camel", available: true, hex: "#C19A6B" },
           { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Terracotta", available: true, hex: "#E2725B" }
-        ]
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7373,10 +7371,10 @@ const variants = [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 105 - Hoodie Dress
   {
@@ -7386,9 +7384,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
       },
       {
         label: "Choose Size",
@@ -7398,10 +7394,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 106 - Linen Wrap Dress
   {
@@ -7413,8 +7409,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Camel", available: true, hex: "#C19A6B" }
-        ]
+          { label: "Camel", available: true, hex: "#C19A6B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7423,10 +7419,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 107 - Ribbed Bodycon Dress
   {
@@ -7438,8 +7434,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7447,10 +7443,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 108 - Ribbed Bodycon Dress (Nike)
   {
@@ -7460,9 +7456,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+        values: [{ label: "Beige / Sand", available: true, hex: "#F5F5DC" }],
       },
       {
         label: "Choose Size",
@@ -7471,10 +7465,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 109 - Puff Sleeve Mini Dress
   {
@@ -7486,8 +7480,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7498,10 +7492,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 110 - Velvet Wrap Dress
   {
@@ -7514,8 +7508,8 @@ const variants = [
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
           { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7524,10 +7518,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 111 - Elegant Silk Dress
   {
@@ -7537,9 +7531,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+        values: [{ label: "Sage Green", available: true, hex: "#8A9A5B" }],
       },
       {
         label: "Choose Size",
@@ -7548,10 +7540,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 112 - Casual Linen Dress
   {
@@ -7563,8 +7555,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7574,10 +7566,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 113 - Party Sequins Dress
   {
@@ -7589,8 +7581,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Terracotta", available: true, hex: "#E2725B" }
-        ]
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7599,10 +7591,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 114 - Casual Cotton Dress
   {
@@ -7615,8 +7607,8 @@ const variants = [
         values: [
           { label: "Sage Green", available: true, hex: "#8A9A5B" },
           { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7624,10 +7616,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 115 - Elegant Evening Gown
   {
@@ -7637,9 +7629,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" }
-        ]
+        values: [{ label: "Terracotta", available: true, hex: "#E2725B" }],
       },
       {
         label: "Choose Size",
@@ -7648,10 +7638,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 116 - Casual Denim Dress
   {
@@ -7661,9 +7651,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
       },
       {
         label: "Choose Size",
@@ -7674,10 +7662,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 117 - Summer Floral Dress
   {
@@ -7689,8 +7677,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Camel", available: true, hex: "#C19A6B" }
-        ]
+          { label: "Camel", available: true, hex: "#C19A6B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7699,10 +7687,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 118 - Formal Blazer Dress
   {
@@ -7712,9 +7700,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+        values: [{ label: "Beige / Sand", available: true, hex: "#F5F5DC" }],
       },
       {
         label: "Choose Size",
@@ -7723,10 +7709,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 119 - Casual Knit Dress
   {
@@ -7739,8 +7725,8 @@ const variants = [
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
           { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7748,10 +7734,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 120 - Elegant Silk Dress
   {
@@ -7761,9 +7747,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Camel", available: true, hex: "#C19A6B" }
-        ]
+        values: [{ label: "Camel", available: true, hex: "#C19A6B" }],
       },
       {
         label: "Choose Size",
@@ -7773,10 +7757,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 121 - Casual Linen Dress
   {
@@ -7788,8 +7772,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7798,10 +7782,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 122 - Party Sequins Dress
   {
@@ -7813,8 +7797,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Terracotta", available: true, hex: "#E2725B" }
-        ]
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7822,10 +7806,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 123 - Casual Cotton Dress
   {
@@ -7835,9 +7819,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+        values: [{ label: "Beige / Sand", available: true, hex: "#F5F5DC" }],
       },
       {
         label: "Choose Size",
@@ -7846,10 +7828,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 124 - Elegant Evening Gown
   {
@@ -7861,8 +7843,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7872,10 +7854,10 @@ const variants = [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 125 - Sports Denim Dress
   {
@@ -7888,8 +7870,8 @@ const variants = [
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
           { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7899,10 +7881,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 126 - Summer Floral Dress
   {
@@ -7912,9 +7894,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
       },
       {
         label: "Choose Size",
@@ -7923,10 +7903,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 127 - Formal Blazer Dress
   {
@@ -7938,8 +7918,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7947,10 +7927,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 128 - Sports Knit Dress
   {
@@ -7960,9 +7940,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+        values: [{ label: "Sage Green", available: true, hex: "#8A9A5B" }],
       },
       {
         label: "Choose Size",
@@ -7971,10 +7949,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 129 - Elegant Silk Dress
   {
@@ -7986,8 +7964,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+        ],
       },
       {
         label: "Choose Size",
@@ -7998,10 +7976,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 130 - Sports Linen Dress
   {
@@ -8014,8 +7992,8 @@ const variants = [
         values: [
           { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
           { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8024,10 +8002,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 131 - Party Sequins Dress
   {
@@ -8037,9 +8015,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
       },
       {
         label: "Choose Size",
@@ -8048,10 +8024,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 132 - Sports Cotton Dress
   {
@@ -8063,8 +8039,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8072,10 +8048,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 133 - Elegant Evening Gown
   {
@@ -8085,9 +8061,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Camel", available: true, hex: "#C19A6B" }
-        ]
+        values: [{ label: "Camel", available: true, hex: "#C19A6B" }],
       },
       {
         label: "Choose Size",
@@ -8097,10 +8071,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 134 - Sports Denim Dress
   {
@@ -8112,8 +8086,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8122,10 +8096,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 135 - Summer Floral Dress
   {
@@ -8135,9 +8109,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+        values: [{ label: "Sage Green", available: true, hex: "#8A9A5B" }],
       },
       {
         label: "Choose Size",
@@ -8146,10 +8118,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 136 - Formal Blazer Dress
   {
@@ -8161,8 +8133,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Camel", available: true, hex: "#C19A6B" }
-        ]
+          { label: "Camel", available: true, hex: "#C19A6B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8172,10 +8144,10 @@ const variants = [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 137 - Sports Knit Dress
   {
@@ -8188,8 +8160,8 @@ const variants = [
         values: [
           { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
           { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8197,10 +8169,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 138 - Elegant Silk Dress
   {
@@ -8210,9 +8182,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Camel", available: true, hex: "#C19A6B" }
-        ]
+        values: [{ label: "Camel", available: true, hex: "#C19A6B" }],
       },
       {
         label: "Choose Size",
@@ -8221,10 +8191,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 139 - Sports Linen Dress
   {
@@ -8236,8 +8206,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Terracotta", available: true, hex: "#E2725B" }
-        ]
+          { label: "Terracotta", available: true, hex: "#E2725B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8248,10 +8218,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 140 - Party Sequins Dress
   {
@@ -8261,9 +8231,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
       },
       {
         label: "Choose Size",
@@ -8272,10 +8240,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 141 - Casual Cotton Dress
   {
@@ -8287,8 +8255,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Camel", available: true, hex: "#C19A6B" }
-        ]
+          { label: "Camel", available: true, hex: "#C19A6B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8297,10 +8265,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 142 - Elegant Evening Gown
   {
@@ -8312,8 +8280,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8321,10 +8289,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 143 - Sports Leather Dress
   {
@@ -8334,9 +8302,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
       },
       {
         label: "Choose Size",
@@ -8346,10 +8312,10 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 144 - Summer Floral Dress
   {
@@ -8361,8 +8327,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8371,10 +8337,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 145 - Formal Blazer Dress
   {
@@ -8384,9 +8350,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+        values: [{ label: "Sage Green", available: true, hex: "#8A9A5B" }],
       },
       {
         label: "Choose Size",
@@ -8394,10 +8358,10 @@ const variants = [
         type: "button",
         values: [
           { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "M", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 146 - Sports Knit Dress
   {
@@ -8409,8 +8373,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8419,10 +8383,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 147 - Elegant Silk Dress
   {
@@ -8435,8 +8399,8 @@ const variants = [
         values: [
           { label: "Camel", available: true, hex: "#C19A6B" },
           { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" }
-        ]
+          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8446,10 +8410,10 @@ const variants = [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 148 - Sports Linen Dress
   {
@@ -8459,9 +8423,7 @@ const variants = [
         label: "Choose Color",
         key: "color",
         type: "swatch",
-        values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" }
-        ]
+        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
       },
       {
         label: "Choose Size",
@@ -8470,10 +8432,10 @@ const variants = [
         values: [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 149 - Party Sequins Dress
   {
@@ -8485,8 +8447,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Camel", available: true, hex: "#C19A6B" }
-        ]
+          { label: "Camel", available: true, hex: "#C19A6B" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8495,10 +8457,10 @@ const variants = [
         values: [
           { label: "S", available: true, price_modifier: 0 },
           { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
+          { label: "L", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
   },
   // Product 150 - Sports Cotton Dress
   {
@@ -8510,8 +8472,8 @@ const variants = [
         type: "swatch",
         values: [
           { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" }
-        ]
+          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+        ],
       },
       {
         label: "Choose Size",
@@ -8522,21 +8484,21 @@ const variants = [
           { label: "M", available: true, price_modifier: 0 },
           { label: "L", available: true, price_modifier: 0 },
           { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 }
-        ]
-      }
-    ]
-  }
+          { label: "2XL", available: true, price_modifier: 0 },
+        ],
+      },
+    ],
+  },
 ];
 
-const shipping = [
+export const shipping = [
   // Product 101
   {
     product_id: "prod_101",
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 102
   {
@@ -8544,7 +8506,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 103
   {
@@ -8552,7 +8514,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 104
   {
@@ -8560,7 +8522,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 105
   {
@@ -8568,7 +8530,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 106
   {
@@ -8576,7 +8538,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 107
   {
@@ -8584,7 +8546,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 108
   {
@@ -8592,7 +8554,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 109
   {
@@ -8600,7 +8562,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 110
   {
@@ -8608,7 +8570,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 111
   {
@@ -8616,7 +8578,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 112
   {
@@ -8624,7 +8586,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 113
   {
@@ -8632,7 +8594,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 114
   {
@@ -8640,7 +8602,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 115
   {
@@ -8648,7 +8610,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 116
   {
@@ -8656,7 +8618,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 117
   {
@@ -8664,7 +8626,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 118
   {
@@ -8672,7 +8634,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 119
   {
@@ -8680,7 +8642,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 120
   {
@@ -8688,7 +8650,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 121
   {
@@ -8696,7 +8658,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 122
   {
@@ -8704,7 +8666,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 123
   {
@@ -8712,7 +8674,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 124
   {
@@ -8720,7 +8682,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 125
   {
@@ -8728,7 +8690,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 126
   {
@@ -8736,7 +8698,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 127
   {
@@ -8744,7 +8706,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 128
   {
@@ -8752,7 +8714,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 129
   {
@@ -8760,7 +8722,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 130
   {
@@ -8768,7 +8730,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 131
   {
@@ -8776,7 +8738,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 132
   {
@@ -8784,7 +8746,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 133
   {
@@ -8792,7 +8754,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 134
   {
@@ -8800,7 +8762,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 135
   {
@@ -8808,7 +8770,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 136
   {
@@ -8816,7 +8778,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 137
   {
@@ -8824,7 +8786,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 138
   {
@@ -8832,7 +8794,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 139
   {
@@ -8840,7 +8802,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 140
   {
@@ -8848,7 +8810,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 141
   {
@@ -8856,7 +8818,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 142
   {
@@ -8864,7 +8826,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 143
   {
@@ -8872,7 +8834,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 144
   {
@@ -8880,7 +8842,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 145
   {
@@ -8888,7 +8850,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 146
   {
@@ -8896,7 +8858,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 147
   {
@@ -8904,7 +8866,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 148
   {
@@ -8912,7 +8874,7 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 149
   {
@@ -8920,7 +8882,7 @@ const shipping = [
     estimated_delivery_days: "2 - 4 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Express Shipping",
-    is_free: false
+    is_free: false,
   },
   // Product 150
   {
@@ -8928,6 +8890,6 @@ const shipping = [
     estimated_delivery_days: "3 - 5 Business Days",
     from: "Cairo, Egypt",
     shipping_type: "Standard Shipping",
-    is_free: false
-  }
+    is_free: false,
+  },
 ];

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
+import useOutside_click from "../../../Hooks/Outside_click";
+import { FaAngleDown } from "react-icons/fa6";
 
 const DashboardHead = ({
   dropDownOpen,
@@ -12,6 +14,9 @@ const DashboardHead = ({
     { key: "month", label: "This Month" },
     { key: "year", label: "This Year" },
   ];
+  const menuRef = useRef(null);
+
+  useOutside_click(menuRef, () => setDropDownOpen(false));
 
   return (
     <div className="head flex flex-col gap-5 md:flex-row md:justify-between  ">
@@ -19,11 +24,13 @@ const DashboardHead = ({
         <h1 className="text-lg font-bold text-black">Dashboard</h1>
       </div>
       <div
+        ref={menuRef}
         className="right drop-down-list min-w-32.5!"
         onClick={() => setDropDownOpen((prev) => !prev)}
       >
         <FaCalendarAlt />
         <p className="current_option">{selectedPeriod.label}</p>
+        <FaAngleDown className={`${dropDownOpen ? "-rotate-90!" : ""}`} />
         {dropDownOpen && (
           <div className="options fade-in-animate z-40">
             {dates.map((date, index) => {

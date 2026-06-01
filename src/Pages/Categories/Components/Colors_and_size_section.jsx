@@ -12,28 +12,24 @@ const Colors_and_size_section = ({
   set_select_color,
   set_select_size,
 }) => {
-
   // Access cart state from Cart Context
-  const { cartItemsId, cartItemsData } = useCartContext();
+  const { cartItemsData } = useCartContext();
 
   // Check if the current product already exists in the cart
-  const cartItem = cartItemsData.find((item) => item.id == data.id);
+  const cartItem = cartItemsData[data.id];
 
   // When the component mounts or cartItem changes,
   // sync the selected color and size with the cart data
   useEffect(() => {
     if (cartItem) {
-      const cart_data = cartItemsData.find((item) => data.id == item.id);
-
       // Set the selected color and size from the cart
-      set_select_color(cart_data.colors);
-      set_select_size(cart_data.size);
+      set_select_color(cartItem.colors);
+      set_select_size(cartItem.size);
     }
   }, [cartItem]);
 
   return (
     <div className={style.color_size_options}>
-
       {/* Render color label if it exists */}
       {color_label && color_label}
 
@@ -43,24 +39,19 @@ const Colors_and_size_section = ({
           return (
             <input
               // Disable color selection if the product already exists in the cart
-              disabled={cartItemsId.includes(data.id)}
-
+              disabled={cartItemsData[data.id]}
               // Mark the color as selected if it matches the selected color
               checked={select_color.id == color.id}
-
               type="radio"
               name={data.title}
               key={color.id}
-
               // Pass the color code as a CSS variable
               style={{ "--bg-color": color.code }}
-
               // Update selected color when user selects one
               onChange={() => set_select_color(color)}
-
               className={`${main_style.color_options} 
               ${style.color_btn} 
-              ${cartItemsId.includes(data.id) ? style.disabled_btn : ""}`}
+              ${cartItemsData[data.id] ? style.disabled_btn : ""}`}
             />
           );
         })}
@@ -75,17 +66,13 @@ const Colors_and_size_section = ({
           return (
             <button
               // Disable size selection if product already exists in cart
-              disabled={cartItemsId.includes(data.id)}
-
+              disabled={cartItemsData[data.id]}
               type="button"
-
               // Update selected size
               onClick={() => set_select_size(s)}
-
               className={`${style.size_btn} 
               ${select_size == s ? style.size_btn_active : ""} 
-              ${cartItemsId.includes(data.id) ? style.disabled_btn : ""}`}
-
+              ${cartItemsData[data.id] ? style.disabled_btn : ""}`}
               key={i}
             >
               {s}

@@ -11,11 +11,12 @@ import { motion } from "framer-motion";
 
 const Product_item = ({ data }) => {
   // Access cart state and actions from Cart Context
-  const { toggleItem, cartItemsData } = useCartContext();
+  const { addItem, cartItemsData } = useCartContext();
   const [imageLoaded, setImageLoaded] = useState(false);
 
   // Access wishlist state and actions from Favorite Context
-  const { favoriteItemsId, handleFavoriteItems } = useFavoriteContext();
+
+  const { handleFavoriteItems, favoriteItems } = useFavoriteContext();
 
   // Access quick view updater from Products Grid Context
   const { update_quick_view_data } = use_products_grid_context();
@@ -28,7 +29,9 @@ const Product_item = ({ data }) => {
   const [select_size, set_select_size] = useState("");
 
   // Find if the current product already exists in the cart
-  const cartItem = cartItemsData.find((item) => item.id == data.id);
+  const cartItem = Object.values(cartItemsData).find(
+    (item) => item.id == data.id,
+  );
 
   // Function to add the product to the cart
   const add_to_cart = () => {
@@ -40,7 +43,7 @@ const Product_item = ({ data }) => {
     };
 
     // Send formatted product data to the cart handler
-    toggleItem(format_data);
+    addItem(format_data);
   };
 
   return (
@@ -74,7 +77,7 @@ const Product_item = ({ data }) => {
           {/* Wishlist Button */}
           <div>
             <p>
-              {favoriteItemsId.includes(product_data.id)
+              {favoriteItems.find((item) => item.id === product_data.id)
                 ? "Remove Wishlist"
                 : "Add To Wishlist"}
             </p>
@@ -86,7 +89,7 @@ const Product_item = ({ data }) => {
             >
               <i
                 className={`${
-                  favoriteItemsId.includes(product_data.id)
+                  favoriteItems.find((item) => item.id === product_data.id)
                     ? "fa-solid fa-xmark"
                     : "fa-regular fa-heart"
                 }`}

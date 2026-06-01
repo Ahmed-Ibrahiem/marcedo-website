@@ -1,19 +1,24 @@
-import React, { useState, memo } from "react";
+import React, { useState, memo, useRef } from "react";
 import { FaAngleDown } from "react-icons/fa6";
+import useOutside_click from "../../../Hooks/Outside_click";
 
 const DropDownList = ({ list, currentSelect, optionFun, listType }) => {
   const items = listType
     ? [{ name: `All ${listType}`, id: list.length }, ...list]
     : list;
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  useOutside_click(menuRef, () => setIsOpen(false));
 
   return (
     <div
-      className="drop-down-list min-w-25 gap-3! border border-border grow!"
+      className="drop-down-list min-w-25 gap-5! border border-border grow! relative z-10"
       onClick={() => setIsOpen((prev) => !prev)}
+      ref={menuRef}
     >
       <p>{currentSelect}</p>
-      <FaAngleDown />
+      <FaAngleDown className={`${isOpen ? "-rotate-90!" : ""}`}  />
       {isOpen && (
         <div className="options max-h-24 overflow-y-auto fade-in-animate">
           {items.map((item) => {

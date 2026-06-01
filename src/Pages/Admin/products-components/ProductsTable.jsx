@@ -3,8 +3,8 @@ import ProductRow from "./ProductRow";
 
 const ProductsTable = ({ productsData }) => {
   return (
-    <div className="w-full max-h-87.5 overflow-x-auto">
-      <table className="w-full min-w-[900px] ">
+    <div className="w-full max-h-81.1 last-of-type:border-b-0 overflow-x-auto border-y border-border fade-in-animate">
+      <table className="w-full min-w-225 ">
         <thead className="border-y border-border bg-gray-50">
           <tr className="text-sm">
             <th className="text-start! pl-2.5 ">

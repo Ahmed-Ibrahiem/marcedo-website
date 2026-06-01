@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDocs, limit, query } from "firebase/firestore";
 import { db } from "./firestoreConfig";
 
 export const getProductsStats = async () => {
@@ -61,7 +61,6 @@ export const getProductsStats = async () => {
   }
 };
 
-
 export const getAllCategoreis = async () => {
   const collRef = collection(db, "categories");
 
@@ -80,4 +79,14 @@ export const getAllBrands = async () => {
   if (snapshot.empty) return null;
 
   return [...snapshot.docs.map((doc) => doc.data())];
+};
+
+export const getLimitedProducts = async (limitNumber) => {
+  const collRef = query(collection(db, "products"), limit(limitNumber));
+
+  const snapshot = await getDocs(collRef);
+
+  if (snapshot.empty) return null;
+
+  return snapshot.docs.map((doc) => doc.data());
 };

@@ -54,6 +54,7 @@ const ProductStatsCards = () => {
           cardsStyle={cardsStyle}
           style={"flex! flex-wrap"}
           cardStyle={"min-w-[250px] grow"}
+          timePeriod={{ key: "week" }}
         />
       )}
     </>

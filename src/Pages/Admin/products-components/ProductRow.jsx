@@ -45,7 +45,7 @@ const ProductRow = ({ product }) => {
       {product && (
         <tr
           key={product.id}
-          className="text-sm border-b border-border font-semibold"
+          className="text-sm border-b border-border font-semibold hover:bg-gray/5 cursor-pointer"
         >
           <td className="text-start pl-2.5">
             <div className="">

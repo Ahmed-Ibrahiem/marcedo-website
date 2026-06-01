@@ -5,7 +5,7 @@ import React, { memo } from "react";
 
 const ProductAdminHead = () => {
   return (
-    <div className="head flex-between gap-7 w-full flex-wrap">
+    <div className="head flex-between gap-7 w-full flex-wrap fade-in-animate">
       <h1 className="font-bold text-black-lite text-lg ">Products</h1>
       <div className="product-actions w-full sm:w-fit flex-start gap-5">
         {/* Download btn */}

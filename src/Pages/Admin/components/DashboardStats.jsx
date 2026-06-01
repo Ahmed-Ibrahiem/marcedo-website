@@ -109,7 +109,11 @@ const DashboardStats = () => {
         selectedPeriod={selectedPeriod}
         setPeriod={setPeriod}
       />
-      <StatsCards cards={cards} cardsStyle={cardsStyle} />
+      <StatsCards
+        cards={cards}
+        cardsStyle={cardsStyle}
+        timePeriod={selectedPeriod}
+      />
     </>
   );
 };

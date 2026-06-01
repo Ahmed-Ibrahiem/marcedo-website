@@ -43,7 +43,7 @@ const ProductsActions = ({ filterOptions, updateFilterOptions }) => {
   }, []);
 
   return (
-    <div className="text-sm flex-start gap-2.5 w-full flex-wrap p-2.5">
+    <div className="text-sm flex-start gap-2.5 w-full flex-wrap p-2.5 fade-in-animate relative z-10">
       {/* Search Input */}
       <div className="search border border-border  flex-start min-w-50  grow rounded-sm">
         <button className="p-2.5">

@@ -11,11 +11,11 @@ import { useState } from "react";
 import DashboardHead from "./DashboardHead";
 import { FaArrowUp } from "react-icons/fa";
 
-const StatsCards = ({ cards, cardsStyle, style, cardStyle }) => {
+const StatsCards = ({ cards, cardsStyle, style, cardStyle, timePeriod }) => {
   return (
     <>
       <div
-        className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 w-full ${style || ""}`}
+        className={`grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 w-full fade-in-animate ${style || ""}`}
       >
         {cards.map((data, index) => {
           return (
@@ -42,7 +42,7 @@ const StatsCards = ({ cards, cardsStyle, style, cardStyle }) => {
                 <span className="text-green font-bold">
                   <FaArrowUpLong /> {data.change}
                 </span>
-                <p>vs last week</p>
+                <p>vs last {timePeriod.key}</p>
               </div>
 
               <div className="absolute bottom-2.5 right-2.5 w-[25%]! xl:w-[30%]! max-h-[70%] overflow-hidden">
