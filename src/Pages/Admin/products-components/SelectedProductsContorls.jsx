@@ -5,7 +5,7 @@ import { TiExport } from "react-icons/ti";
 
 const SelectedProductsContorls = ({ exportProductsToExcel }) => {
   return (
-    <div className="flex-start gap-2.5 lg:absolute lg:left-[50%] lg:translate-x-[-50%] bottom-2.5 fade-in-animate">
+    <div className="flex-start mx-2.5 mb-2.5 md:mb-0 gap-2.5 md:absolute md:left-[50%] md:translate-x-[-50%] bottom-5  xl:bottom-2 fade-in-animate">
       <div className="relative group">
         <p className={`${hintStyle} group-hover:opacity-100 `}>
           delete Products
