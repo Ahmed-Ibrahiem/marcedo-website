@@ -8,11 +8,14 @@ import { FaArrowTrendUp, FaEye } from "react-icons/fa6";
 import { FaPen, FaStar } from "react-icons/fa";
 import { CiEdit } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
+import { useProductsTableControlContext } from "../context/ProductsTableControl";
 
 const ProductRow = ({ product }) => {
   const [proBrand, setProBrand] = useState(null);
   const [proCateg, setProCateg] = useState(null);
   const [proStock, setProStock] = useState(null);
+  const { handleSelectedProducts, selectedProductsIds } =
+    useProductsTableControlContext();
 
   useEffect(() => {
     const getBrand = async () => {
@@ -44,12 +47,20 @@ const ProductRow = ({ product }) => {
     <>
       {product && (
         <tr
+          onClick={() => handleSelectedProducts(product.id)}
           key={product.id}
-          className="text-sm border-b border-border font-semibold hover:bg-gray/5 cursor-pointer"
+          className="text-sm border-b border-border last-of-type:border-b-0 font-semibold hover:bg-gray/5 cursor-pointer "
         >
           <td className="text-start pl-2.5">
             <div className="">
-              <input type="checkbox" className="w-5! h-5! border-gray-300!" />
+              <input
+                checked={selectedProductsIds.includes(product.id)}
+                onChange={() => {
+                  handleSelectedProducts(product.id);
+                }}
+                type="checkbox"
+                className="w-5! h-5! border-gray-300!"
+              />
             </div>
           </td>
           <td className="text-start pl-2.5 py-1.75 flex-start items-start! gap-1.5 max-w-30">
@@ -75,7 +86,7 @@ const ProductRow = ({ product }) => {
           </td>
 
           <td className="text-start pl-2.5">
-            <div className="flex-start gap-1.5">
+            <div className="flex-between gap-1.5 ">
               <p className="font-semibold">${product.current_price}</p>
               {product.has_discount && (
                 <span className="p-1 text-red-600 bg-red-200 rounded-sm text-[10px] font-semibold">

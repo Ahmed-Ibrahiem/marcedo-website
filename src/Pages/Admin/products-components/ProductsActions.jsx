@@ -1,20 +1,20 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState, memo } from "react";
 import { FaMagnifyingGlass, FaListUl, FaAngleDown } from "react-icons/fa6";
 import {
-  getAllBrands,
   getAllCategoreis,
+  getAllBrands,
 } from "../../../services/ProductsDashboardServices";
 import DropDownList from "../components/DropDownList";
 import { CiFilter, CiGrid41 } from "react-icons/ci";
 
 const status = [
-  { name: "Active", type: "active", id: 1 },
-  { name: "Not Active", type: "not-active", id: 2 },
+  { name: "Active", type: true, id: 1 },
+  { name: "Not Active", type: false, id: 2 },
 ];
 
 const stocks = [
-  { name: "In Stock", type: "in-stock", id: 1 },
-  { name: "Out Stock", type: "out-of-stock", id: 2 },
+  { name: "In Stock", type: "in_stock", id: 1 },
+  { name: "Out Stock", type: "out_of_stock", id: 2 },
 ];
 
 const sortList = [
@@ -24,28 +24,31 @@ const sortList = [
   { name: "Z To A", type: "z-to-a", id: 4 },
 ];
 
-const ProductsActions = ({ filterOptions, updateFilterOptions }) => {
-  const [categories, setCategories] = useState([]);
-  const [brands, setBrands] = useState([]);
+const ProductsActions = ({
+  filterOptions,
+  updateFilterOptions,
+  setTableMode,
+  tableMode,
+}) => {
+  const [filterData, setFilterData] = useState({ categories: [], brands: [] });
 
   useEffect(() => {
-    const getCateg = async () => {
-      const categ = await getAllCategoreis();
-      if (categ) setCategories(categ);
-    };
-    const getBrands = async () => {
-      const brans = await getAllBrands();
-      if (brans) setBrands(brans);
+    const fetchData = async () => {
+      const [categories, brands] = await Promise.all([
+        getAllCategoreis(),
+        getAllBrands(),
+      ]);
+
+      if (categories && brands) setFilterData({ categories, brands });
     };
 
-    getCateg();
-    getBrands();
+    fetchData();
   }, []);
 
   return (
     <div className="text-sm flex-start gap-2.5 w-full flex-wrap p-2.5 fade-in-animate relative z-10">
       {/* Search Input */}
-      <div className="search border border-border  flex-start min-w-50  grow rounded-sm">
+      <div className="search border border-border  flex-start min-w-40  grow rounded-sm">
         <button className="p-2.5">
           <FaMagnifyingGlass className="text-gray" />
         </button>
@@ -56,21 +59,21 @@ const ProductsActions = ({ filterOptions, updateFilterOptions }) => {
         />
       </div>
 
-      {/* Categories Dropdown */}
-      {categories.length > 0 && (
+      {/* filterData.categories Dropdown */}
+      {filterData.categories.length > 0 && (
         <DropDownList
           currentSelect={filterOptions.categories.title}
-          list={categories}
+          list={filterData.categories}
           optionFun={(item) => updateFilterOptions("UPDATE_CATEGORIES", item)}
           listType={"Categories"}
         />
       )}
 
-      {/* Brands Dropdown */}
-      {brands.length > 0 && (
+      {/* filterData.brands Dropdown */}
+      {filterData.brands.length > 0 && (
         <DropDownList
           currentSelect={filterOptions.brands.title}
-          list={brands}
+          list={filterData.brands}
           optionFun={(item) => updateFilterOptions("UPDATE_BRANDS", item)}
           listType={"Brands"}
         />
@@ -114,11 +117,15 @@ const ProductsActions = ({ filterOptions, updateFilterOptions }) => {
 
       {/* Grid View */}
       <div className="flex-start gap-2.5">
-        <button className={` table ${gridBtnStyle}`}>
+        <button
+          onClick={() => setTableMode(true)}
+          className={` table ${gridBtnStyle} ${tableMode ? "bg-orange! text-white!" : "bg-white! text-black"}`}
+        >
           <FaListUl />
         </button>
         <button
-          className={` grid ${gridBtnStyle} text-black! bg-white! border border-border shadow-sm`}
+          onClick={() => setTableMode(false)}
+          className={` grid ${gridBtnStyle} text-black! ${!tableMode ? "bg-orange! text-white!" : "bg-white!"}`}
         >
           <CiGrid41 />
         </button>
@@ -128,7 +135,21 @@ const ProductsActions = ({ filterOptions, updateFilterOptions }) => {
 };
 
 const gridBtnStyle = `
-text-lg! w-8.5 h-8.5 bg-orange text-white flex-center rounded-sm hover:scale-105
+text-lg! w-8.5 h-8.5  flex-center rounded-sm hover:scale-105 border border-border shadow-sm
 `;
 
-export default ProductsActions;
+// Optimized memoization: Prevents parent-induced re-renders by comparing primitive values instead of object references.
+export default React.memo(ProductsActions, (prevProps, nextProps) => {
+  return (
+    prevProps.tableMode === nextProps.tableMode &&
+    prevProps.filterOptions.categories.type ===
+      nextProps.filterOptions.categories.type &&
+    prevProps.filterOptions.brands.type ===
+      nextProps.filterOptions.brands.type &&
+    prevProps.filterOptions.status.type ===
+      nextProps.filterOptions.status.type &&
+    prevProps.filterOptions.stocks.type ===
+      nextProps.filterOptions.stocks.type &&
+    prevProps.filterOptions.sort.type === nextProps.filterOptions.sort.type
+  );
+});

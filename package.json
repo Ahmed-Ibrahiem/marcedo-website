@@ -29,6 +29,7 @@
     "rechart": "^0.0.1",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.2.4",
+    "xlsx": "^0.18.5",
     "yup": "^1.7.1"
   },
   "devDependencies": {

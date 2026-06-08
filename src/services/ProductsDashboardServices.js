@@ -1,4 +1,14 @@
-import { collection, doc, getDocs, limit, query } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getCountFromServer,
+  getDocs,
+  limit,
+  orderBy,
+  query,
+  startAfter,
+  where,
+} from "firebase/firestore";
 import { db } from "./firestoreConfig";
 
 export const getProductsStats = async () => {
@@ -89,4 +99,46 @@ export const getLimitedProducts = async (limitNumber) => {
   if (snapshot.empty) return null;
 
   return snapshot.docs.map((doc) => doc.data());
+};
+
+export const getProductsWithPaginations = async (filterOptions) => {
+  const constraints = [];
+
+  // Filter Products
+  if (filterOptions.categories.type !== "all-categories") {
+    constraints.push(
+      where("category_ids", "array-contains", filterOptions.categories.id),
+    );
+  }
+  if (filterOptions.brands.type !== "all-brands") {
+    constraints.push(where("brand_id", "==", filterOptions.brands.id));
+  }
+  if (filterOptions.status.type !== "all-status") {
+    constraints.push(where("is_active", "==", filterOptions.status.type));
+  }
+  if (filterOptions.stocks.type !== "all-stocks") {
+    constraints.push(where("stock_status", "==", filterOptions.stocks.type));
+  }
+  // Sort Products
+  if (filterOptions.sort.type === "newest")
+    constraints.push(orderBy("created_at", "desc"));
+  else if (filterOptions.sort.type === "best-seller")
+    constraints.push(orderBy("sold_count", "asc"));
+  else if (filterOptions.sort.type === "a-to-z")
+    constraints.push(orderBy("name", "asc"));
+  else if (filterOptions.sort.type === "a-to-z")
+    constraints.push(orderBy("name", "desc"));
+
+  // Get Produts Count
+  const countQuery = query(collection(db, "products"), ...constraints);
+  const countSnapshot = await getCountFromServer(countQuery);
+  const totalProducts = countSnapshot.data().count;
+
+  // Get Products
+  const productsQuery = query(collection(db, "products"), ...constraints);
+  const productsSnapshot = await getDocs(productsQuery);
+
+  if (productsSnapshot.empty) return [];
+
+  return [...productsSnapshot.docs.map((doc) => doc.data())];
 };

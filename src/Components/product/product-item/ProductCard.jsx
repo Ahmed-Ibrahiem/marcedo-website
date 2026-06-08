@@ -7,7 +7,7 @@ import { useCartContext } from "../../../Context/CartMenuContext";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, cardHeight }) => {
   const { handleFavoriteItems, favoriteItems } = useFavoriteContext();
   const { addItem } = useCartContext();
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
         {/* Image Container */}
         <Link
           to={`/product_detials/${product.slug}`}
-          className="flex-center relative bg-gray-light pt-[124%] rounded-md"
+          className={`flex-center relative bg-gray-light pt-[124%] rounded-md ${cardHeight || ""}`}
           href=""
         >
           {!imageLoaded && (
@@ -114,8 +114,8 @@ product-top w-full overflow-hidden relative group/top
 const cartBtnStyle = `
 cart-btn rounded-full bg-black-lite! text-2xl flex-center text-white hover:bg-orange! outline-[7.5px]!
 outline-white! outline-solid! w-12.5 h-12.5 absolute right-0 bottom-0 z-10 add-cart-btn translate-x-[50px_50px]
-group-hover/top:translate-x-[0_0] duration-500!
-before:-top-[27px] before:-right-[20px] after:-bottom-[20px] after:-right-[-37px]
+group-hover/top:translate-x-[0_0] duration-500! before:-top-[27px] before:-right-[20px] after:-right-[-37px]
+after:-bottom-[20px] 
 `;
 
 const btnContainerStyle = `
