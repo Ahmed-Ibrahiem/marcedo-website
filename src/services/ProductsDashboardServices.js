@@ -142,3 +142,4 @@ export const getProductsWithPaginations = async (filterOptions) => {
 
   return [...productsSnapshot.docs.map((doc) => doc.data())];
 };
+

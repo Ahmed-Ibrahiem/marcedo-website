@@ -9,23 +9,23 @@ const AdminNavbar = ({ currentPage }) => {
   const navInfo = [
     {
       title: "dashboard",
-      url: "/admin",
-      icon: <IoMdHome className="text-xl"/>,
+      url: ["/admin"],
+      icon: <IoMdHome className="text-xl" />,
     },
     {
       title: "products",
-      url: "/admin/products",
-      icon: <HiOutlineCube className="text-xl"/>,
+      url: ["/admin/products", "/admin/products/add_new_product"],
+      icon: <HiOutlineCube className="text-xl" />,
     },
     {
       title: "customers",
-      url: "/admin/customers",
-      icon: <FaRegUser className="text-xl"/>,
+      url: ["/admin/customers"],
+      icon: <FaRegUser className="text-xl" />,
     },
     {
       title: "orders",
-      url: "/admin/orders",
-      icon: <MdOutlineShoppingCart className="text-xl"/>,
+      url: ["/admin/orders"],
+      icon: <MdOutlineShoppingCart className="text-xl" />,
     },
   ];
   return (
@@ -36,9 +36,9 @@ const AdminNavbar = ({ currentPage }) => {
         return (
           <NavLink
             key={index}
-            to={btn.url}
+            to={btn.url[0]}
             className={`flex-start gap-2.5 py-1.5! px-2.5! rounded-[5px] hover:bg-orange-lite lg:w-full
-               ${currentPage === btn.url ? "bg-orange hover:bg-orange! text-white!" : ""}`}
+               ${btn.url.includes(currentPage) ? "bg-orange hover:bg-orange! text-white!" : ""}`}
           >
             {btn.icon}
             <p className="capitalize hidden lg:block">{btn.title}</p>

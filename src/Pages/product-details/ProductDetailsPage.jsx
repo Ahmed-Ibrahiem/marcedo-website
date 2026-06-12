@@ -14,6 +14,7 @@ import {
 } from "../../services/ProductsServices.js";
 import { Link, useParams } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa6";
+import ProductDetailsProvider from "../../Context/ProductDetailsProvider.jsx";
 
 const ProductDetailsPage = () => {
   const [productData, setProductData] = useState(null);
@@ -68,7 +69,9 @@ const ProductDetailsPage = () => {
               {/* Product Images Gallary */}
               <ProductMedia productData={productData} />
               {/* Product Basics info */}
-              <ProductInfo productData={productData} />
+              <ProductDetailsProvider productData={productData}>
+                <ProductInfo productData={productData} />
+              </ProductDetailsProvider>
             </div>
 
             {/* Product Detials */}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { MdOutlineStar } from "react-icons/md";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import { MdOutlineInbox } from "react-icons/md";
@@ -29,7 +29,6 @@ const ProductBasicInfo = ({ productData }) => {
       const categs = await getProductCategories(productData.category_ids);
       if (categs) setCategories(categs);
     };
-
 
     getProDetails();
     getProRatings();
@@ -129,4 +128,4 @@ const ProductBasicInfo = ({ productData }) => {
   );
 };
 
-export default ProductBasicInfo;
+export default React.memo(ProductBasicInfo);

@@ -7278,1214 +7278,3353 @@ export const brands = [
 ];
 
 export const variants = [
-  // Product 101 - Denim Skirt Dress
+  {
+    product_id: "prod_001",
+    options: [
+      {
+        key: "connectivity",
+        values: ["GPS", "GPS + Cellular"],
+      },
+      {
+        key: "color",
+        values: [
+          { label: "Silver", hex: "#CFCFCF" },
+          { label: "Olive Green", hex: "#3B533E" },
+          { label: "Gold", hex: "#D4AF37" },
+          { label: "Slate Blue", hex: "#6A7B8C" },
+          { label: "Black", hex: "#32333b" },
+        ],
+      },
+    ],
+    variants: [
+      {
+        id: "var_001",
+        sku: "prod_001-GPS-Silver",
+        attributes: { connectivity: "GPS", color: "Silver" },
+        stock: 10,
+        price: 2000,
+      },
+      {
+        id: "var_002",
+        sku: "prod_001-GPS-Olive_Green",
+        attributes: { connectivity: "GPS", color: "Olive Green" },
+        stock: 10,
+        price: 2000,
+      },
+      {
+        id: "var_003",
+        sku: "prod_001-GPS-Gold",
+        attributes: { connectivity: "GPS", color: "Gold" },
+        stock: 10,
+        price: 2000,
+      },
+      {
+        id: "var_004",
+        sku: "prod_001-GPS-Slate_Blue",
+        attributes: { connectivity: "GPS", color: "Slate Blue" },
+        stock: 10,
+        price: 2000,
+      },
+      {
+        id: "var_005",
+        sku: "prod_001-GPS-Black",
+        attributes: { connectivity: "GPS", color: "Black" },
+        stock: 10,
+        price: 2000,
+      },
+      {
+        id: "var_006",
+        sku: "prod_001-GPS+Cellular-Silver",
+        attributes: { connectivity: "GPS + Cellular", color: "Silver" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_007",
+        sku: "prod_001-GPS+Cellular-Olive_Green",
+        attributes: { connectivity: "GPS + Cellular", color: "Olive Green" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_008",
+        sku: "prod_001-GPS+Cellular-Gold",
+        attributes: { connectivity: "GPS + Cellular", color: "Gold" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_009",
+        sku: "prod_001-GPS+Cellular-Slate_Blue",
+        attributes: { connectivity: "GPS + Cellular", color: "Slate Blue" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_010",
+        sku: "prod_001-GPS+Cellular-Black",
+        attributes: { connectivity: "GPS + Cellular", color: "Black" },
+        stock: 10,
+        price: 2500,
+      },
+    ],
+  },
+
+  // ==================== prod_002 ====================
+  {
+    product_id: "prod_002",
+    options: [
+      {
+        key: "voltage",
+        values: ["24V", "32V"],
+      },
+      {
+        key: "color",
+        values: [{ label: "Black", hex: "#000000" }],
+      },
+    ],
+    variants: [
+      {
+        id: "var_011",
+        sku: "prod_002-24V-Black",
+        attributes: { voltage: "24V", color: "Black" },
+        stock: 10,
+        price: 1500,
+      },
+      {
+        id: "var_012",
+        sku: "prod_002-32V-Black",
+        attributes: { voltage: "32V", color: "Black" },
+        stock: 10,
+        price: 1500,
+      },
+    ],
+  },
+
+  // ==================== prod_003 ====================
+  {
+    product_id: "prod_003",
+    options: [
+      {
+        key: "screen_size",
+        values: ["47 inch", "55 inch"],
+      },
+      {
+        key: "color",
+        values: [{ label: "Black", hex: "#000000" }],
+      },
+    ],
+    variants: [
+      {
+        id: "var_013",
+        sku: "prod_003-47-Black",
+        attributes: { screen_size: "47 inch", color: "Black" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_014",
+        sku: "prod_003-55-Black",
+        attributes: { screen_size: "55 inch", color: "Black" },
+        stock: 10,
+        price: 12000,
+      },
+    ],
+  },
+
+  // ==================== prod_004 ====================
+  {
+    product_id: "prod_004",
+    options: [
+      {
+        key: "size",
+        values: ["100 ml"],
+      },
+      {
+        key: "color",
+        values: [{ label: "Transparent", hex: "#FFFFFF" }],
+      },
+    ],
+    variants: [
+      {
+        id: "var_015",
+        sku: "prod_004-100ml-Transparent",
+        attributes: { size: "100 ml", color: "Transparent" },
+        stock: 10,
+        price: 500,
+      },
+    ],
+  },
+
+  // ==================== prod_005 ====================
+  {
+    product_id: "prod_005",
+    options: [
+      {
+        key: "noise_control",
+        values: ["Active Noise Cancellation", "Transparency Mode"],
+      },
+      {
+        key: "color",
+        values: [{ label: "White", hex: "#FFFFFF" }],
+      },
+    ],
+    variants: [
+      {
+        id: "var_016",
+        sku: "prod_005-ANC-White",
+        attributes: {
+          noise_control: "Active Noise Cancellation",
+          color: "White",
+        },
+        stock: 10,
+        price: 1200,
+      },
+      {
+        id: "var_017",
+        sku: "prod_005-Transparency-White",
+        attributes: { noise_control: "Transparency Mode", color: "White" },
+        stock: 10,
+        price: 1200,
+      },
+    ],
+  },
+
+  // ==================== prod_006 ====================
+  {
+    product_id: "prod_006",
+    options: [
+      {
+        key: "storage",
+        values: ["128 GB", "256 GB", "512 GB"],
+      },
+      {
+        key: "color",
+        values: [
+          { label: "Black", hex: "#000000" },
+          { label: "Yellow", hex: "#F5E14B" },
+          { label: "Pink", hex: "#F3A1B3" },
+          { label: "Green", hex: "#6DAA7F" },
+          { label: "Blue", hex: "#4A7BD0" },
+        ],
+      },
+    ],
+    variants: [
+      ...["Black", "Yellow", "Pink", "Green", "Blue"].map((color, idx) => ({
+        id: `var_${18 + idx}`,
+        sku: `prod_006-128GB-${color.replace(/\s/g, "")}`,
+        attributes: { storage: "128 GB", color: color },
+        stock: 10,
+        price: 10000,
+      })),
+      ...["Black", "Yellow", "Pink", "Green", "Blue"].map((color, idx) => ({
+        id: `var_${23 + idx}`,
+        sku: `prod_006-256GB-${color.replace(/\s/g, "")}`,
+        attributes: { storage: "256 GB", color: color },
+        stock: 10,
+        price: 13000,
+      })),
+      ...["Black", "Yellow", "Pink", "Green", "Blue"].map((color, idx) => ({
+        id: `var_${28 + idx}`,
+        sku: `prod_006-512GB-${color.replace(/\s/g, "")}`,
+        attributes: { storage: "512 GB", color: color },
+        stock: 10,
+        price: 13000,
+      })),
+    ],
+  },
+
+  // ==================== prod_007 ====================
+  {
+    product_id: "prod_007",
+    options: [
+      {
+        key: "memory",
+        values: ["8 GB Unified Memory", "16 GB Unified Memory"],
+      },
+      {
+        key: "color",
+        values: [
+          { label: "Silver", hex: "#CFCFCF" },
+          { label: "Blue", hex: "#4A7BD0" },
+          { label: "Green", hex: "#6DAA7F" },
+        ],
+      },
+    ],
+    variants: [
+      ...["Silver", "Blue", "Green"].map((color, idx) => ({
+        id: `var_${33 + idx}`,
+        sku: `prod_007-8GB-${color}`,
+        attributes: { memory: "8 GB Unified Memory", color: color },
+        stock: 10,
+        price: 15000,
+      })),
+      ...["Silver", "Blue", "Green"].map((color, idx) => ({
+        id: `var_${36 + idx}`,
+        sku: `prod_007-16GB-${color}`,
+        attributes: { memory: "16 GB Unified Memory", color: color },
+        stock: 10,
+        price: 18000,
+      })),
+    ],
+  },
+
+  // ==================== prod_008 ====================
+  {
+    product_id: "prod_008",
+    options: [
+      {
+        key: "memory",
+        values: [
+          "8 GB Unified Memory",
+          "16 GB Unified Memory",
+          "24 GB Unified Memory",
+        ],
+      },
+      {
+        key: "color",
+        values: [
+          { label: "Space Black", hex: "#1C1C1E" },
+          { label: "Silver", hex: "#D1D1D6" },
+        ],
+      },
+    ],
+    variants: [
+      ...["Space Black", "Silver"].map((color, idx) => ({
+        id: `var_${39 + idx}`,
+        sku: `prod_008-8GB-${color.replace(/\s/g, "")}`,
+        attributes: { memory: "8 GB Unified Memory", color: color },
+        stock: 10,
+        price: 20000,
+      })),
+      ...["Space Black", "Silver"].map((color, idx) => ({
+        id: `var_${41 + idx}`,
+        sku: `prod_008-16GB-${color.replace(/\s/g, "")}`,
+        attributes: { memory: "16 GB Unified Memory", color: color },
+        stock: 10,
+        price: 24000,
+      })),
+      ...["Space Black", "Silver"].map((color, idx) => ({
+        id: `var_${43 + idx}`,
+        sku: `prod_008-24GB-${color.replace(/\s/g, "")}`,
+        attributes: { memory: "24 GB Unified Memory", color: color },
+        stock: 10,
+        price: 28000,
+      })),
+    ],
+  },
+
+  // ==================== prod_009 ====================
+  {
+    product_id: "prod_009",
+    options: [
+      {
+        key: "screen_size",
+        values: ["49 mm"],
+      },
+      {
+        key: "color",
+        values: [{ label: "Black Titanium", hex: "#1C1C1E" }],
+      },
+    ],
+    variants: [
+      {
+        id: "var_045",
+        sku: "prod_009-49mm-Black_Titanium",
+        attributes: { screen_size: "49 mm", color: "Black Titanium" },
+        stock: 10,
+        price: 3000,
+      },
+    ],
+  },
+
+  // ==================== prod_010 ====================
+  {
+    product_id: "prod_010",
+    options: [
+      {
+        key: "screen_size",
+        values: ["46 mm"],
+      },
+      {
+        key: "color",
+        values: [
+          { label: "Jet Black Aluminium", hex: "#2B2B2F" },
+          { label: "Rose Gold Aluminium", hex: "#D9A6A0" },
+          { label: "Space Grey Aluminium", hex: "#CCCCCC" },
+        ],
+      },
+    ],
+    variants: [
+      {
+        id: "var_046",
+        sku: "prod_010-46mm-Jet_Black",
+        attributes: { screen_size: "46 mm", color: "Jet Black Aluminium" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_047",
+        sku: "prod_010-46mm-Rose_Gold",
+        attributes: { screen_size: "46 mm", color: "Rose Gold Aluminium" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_048",
+        sku: "prod_010-46mm-Space_Grey",
+        attributes: { screen_size: "46 mm", color: "Space Grey Aluminium" },
+        stock: 10,
+        price: 2800,
+      },
+    ],
+  },
+
+  // ==================== prod_012 ====================
+  {
+    product_id: "prod_012",
+    options: [
+      {
+        key: "screen_size",
+        values: ["49 mm"],
+      },
+      {
+        key: "color",
+        values: [{ label: "Black Titanium", hex: "#1C1C1E" }],
+      },
+    ],
+    variants: [
+      {
+        id: "var_049",
+        sku: "prod_012-49mm-Black_Titanium",
+        attributes: { screen_size: "49 mm", color: "Black Titanium" },
+        stock: 10,
+        price: 3200,
+      },
+    ],
+  },
+
+  // ==================== prod_101 ====================
   {
     product_id: "prod_101",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_001",
+        sku: "prod_101-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_002",
+        sku: "prod_101-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_003",
+        sku: "prod_101-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_004",
+        sku: "prod_101-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_005",
+        sku: "prod_101-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_006",
+        sku: "prod_101-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2500,
       },
     ],
   },
-  // Product 102 - Satin Slip Dress
+
+  // ==================== prod_102 ====================
   {
     product_id: "prod_102",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Terracotta", available: true, hex: "#E2725B" }],
+        values: [{ label: "Terracotta", hex: "#E2725B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_007",
+        sku: "prod_102-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 1000,
+      },
+      {
+        id: "var_008",
+        sku: "prod_102-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 1000,
+      },
+      {
+        id: "var_009",
+        sku: "prod_102-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 1000,
       },
     ],
   },
-  // Product 103 - Floral Mini Dress
+
+  // ==================== prod_103 ====================
   {
     product_id: "prod_103",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Sage Green", hex: "#8A9A5B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_010",
+        sku: "prod_103-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 3000,
+      },
+      {
+        id: "var_011",
+        sku: "prod_103-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 3000,
+      },
+      {
+        id: "var_012",
+        sku: "prod_103-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 3000,
+      },
+      {
+        id: "var_013",
+        sku: "prod_103-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 3000,
       },
     ],
   },
-  // Product 104 - T-Shirt Dress
+
+  // ==================== prod_104 ====================
   {
     product_id: "prod_104",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
+          { label: "Terracotta", hex: "#E2725B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_014",
+        sku: "prod_104-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_015",
+        sku: "prod_104-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_016",
+        sku: "prod_104-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_017",
+        sku: "prod_104-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_018",
+        sku: "prod_104-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_019",
+        sku: "prod_104-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_020",
+        sku: "prod_104-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_021",
+        sku: "prod_104-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_022",
+        sku: "prod_104-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_023",
+        sku: "prod_104-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_024",
+        sku: "prod_104-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 2500,
+      },
+      {
+        id: "var_025",
+        sku: "prod_104-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 2500,
       },
     ],
   },
-  // Product 105 - Hoodie Dress
+
+  // ==================== prod_105 ====================
   {
     product_id: "prod_105",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
+        values: [{ label: "Mustard Yellow", hex: "#FFDB58" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_026",
+        sku: "prod_105-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 4000,
+      },
+      {
+        id: "var_027",
+        sku: "prod_105-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 4000,
+      },
+      {
+        id: "var_028",
+        sku: "prod_105-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 4000,
+      },
+      {
+        id: "var_029",
+        sku: "prod_105-MUS-2XL",
+        attributes: { color: "Mustard Yellow", size: "2XL" },
+        stock: 10,
+        price: 4000,
       },
     ],
   },
-  // Product 106 - Linen Wrap Dress
+
+  // ==================== prod_106 ====================
   {
     product_id: "prod_106",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
+          { label: "Camel", hex: "#C19A6B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_030",
+        sku: "prod_106-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 3500,
+      },
+      {
+        id: "var_031",
+        sku: "prod_106-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 3500,
+      },
+      {
+        id: "var_032",
+        sku: "prod_106-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 3500,
+      },
+      {
+        id: "var_033",
+        sku: "prod_106-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 3500,
+      },
+      {
+        id: "var_034",
+        sku: "prod_106-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 3500,
+      },
+      {
+        id: "var_035",
+        sku: "prod_106-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 3500,
       },
     ],
   },
-  // Product 107 - Ribbed Bodycon Dress
+
+  // ==================== prod_107 ====================
   {
     product_id: "prod_107",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_036",
+        sku: "prod_107-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 6000,
+      },
+      {
+        id: "var_037",
+        sku: "prod_107-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 6000,
+      },
+      {
+        id: "var_038",
+        sku: "prod_107-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 6000,
+      },
+      {
+        id: "var_039",
+        sku: "prod_107-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 6000,
       },
     ],
   },
-  // Product 108 - Ribbed Bodycon Dress (Nike)
+
+  // ==================== prod_108 ====================
   {
     product_id: "prod_108",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Beige / Sand", available: true, hex: "#F5F5DC" }],
+        values: [{ label: "Beige / Sand", hex: "#F5F5DC" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_040",
+        sku: "prod_108-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 4550,
+      },
+      {
+        id: "var_041",
+        sku: "prod_108-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 4550,
+      },
+      {
+        id: "var_042",
+        sku: "prod_108-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 4550,
       },
     ],
   },
-  // Product 109 - Puff Sleeve Mini Dress
+
+  // ==================== prod_109 ====================
   {
     product_id: "prod_109",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_043",
+        sku: "prod_109-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_044",
+        sku: "prod_109-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_045",
+        sku: "prod_109-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_046",
+        sku: "prod_109-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_047",
+        sku: "prod_109-CAM-2XL",
+        attributes: { color: "Camel", size: "2XL" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_048",
+        sku: "prod_109-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_049",
+        sku: "prod_109-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_050",
+        sku: "prod_109-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_051",
+        sku: "prod_109-SAG-XL",
+        attributes: { color: "Sage Green", size: "XL" },
+        stock: 10,
+        price: 5500,
+      },
+      {
+        id: "var_052",
+        sku: "prod_109-SAG-2XL",
+        attributes: { color: "Sage Green", size: "2XL" },
+        stock: 10,
+        price: 5500,
       },
     ],
   },
-  // Product 110 - Velvet Wrap Dress
+
+  // ==================== prod_110 ====================
   {
     product_id: "prod_110",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_053",
+        sku: "prod_110-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 4299,
+      },
+      {
+        id: "var_054",
+        sku: "prod_110-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 4299,
+      },
+      {
+        id: "var_055",
+        sku: "prod_110-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 4299,
+      },
+      {
+        id: "var_056",
+        sku: "prod_110-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 4299,
+      },
+      {
+        id: "var_057",
+        sku: "prod_110-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 4299,
+      },
+      {
+        id: "var_058",
+        sku: "prod_110-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 4299,
+      },
+      {
+        id: "var_059",
+        sku: "prod_110-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 4299,
+      },
+      {
+        id: "var_060",
+        sku: "prod_110-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 4299,
+      },
+      {
+        id: "var_061",
+        sku: "prod_110-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 4299,
       },
     ],
   },
-  // Product 111 - Elegant Silk Dress
+
+  // ==================== prod_111 ====================
   {
     product_id: "prod_111",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Sage Green", available: true, hex: "#8A9A5B" }],
+        values: [{ label: "Sage Green", hex: "#8A9A5B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_062",
+        sku: "prod_111-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_063",
+        sku: "prod_111-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_064",
+        sku: "prod_111-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 5000,
       },
     ],
   },
-  // Product 112 - Casual Linen Dress
+
+  // ==================== prod_112 ====================
   {
     product_id: "prod_112",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_065",
+        sku: "prod_112-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 3200,
+      },
+      {
+        id: "var_066",
+        sku: "prod_112-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 3200,
+      },
+      {
+        id: "var_067",
+        sku: "prod_112-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 3200,
+      },
+      {
+        id: "var_068",
+        sku: "prod_112-CAM-2XL",
+        attributes: { color: "Camel", size: "2XL" },
+        stock: 10,
+        price: 3200,
+      },
+      {
+        id: "var_069",
+        sku: "prod_112-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 3200,
+      },
+      {
+        id: "var_070",
+        sku: "prod_112-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 3200,
+      },
+      {
+        id: "var_071",
+        sku: "prod_112-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 3200,
+      },
+      {
+        id: "var_072",
+        sku: "prod_112-BEI-2XL",
+        attributes: { color: "Beige / Sand", size: "2XL" },
+        stock: 10,
+        price: 3200,
       },
     ],
   },
-  // Product 113 - Party Sequins Dress
+
+  // ==================== prod_113 ====================
   {
     product_id: "prod_113",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
+          { label: "Terracotta", hex: "#E2725B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_073",
+        sku: "prod_113-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_074",
+        sku: "prod_113-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_075",
+        sku: "prod_113-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_076",
+        sku: "prod_113-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_077",
+        sku: "prod_113-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_078",
+        sku: "prod_113-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 7000,
       },
     ],
   },
-  // Product 114 - Casual Cotton Dress
+
+  // ==================== prod_114 ====================
   {
     product_id: "prod_114",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Sage Green", hex: "#8A9A5B" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_079",
+        sku: "prod_114-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_080",
+        sku: "prod_114-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_081",
+        sku: "prod_114-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_082",
+        sku: "prod_114-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_083",
+        sku: "prod_114-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_084",
+        sku: "prod_114-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },
-  // Product 115 - Elegant Evening Gown
+
+  // ==================== prod_115 ====================
   {
     product_id: "prod_115",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Terracotta", available: true, hex: "#E2725B" }],
+        values: [{ label: "Terracotta", hex: "#E2725B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_085",
+        sku: "prod_115-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_086",
+        sku: "prod_115-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_087",
+        sku: "prod_115-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 8000,
       },
     ],
   },
-  // Product 116 - Casual Denim Dress
+
+  // ==================== prod_116 ====================
   {
     product_id: "prod_116",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
+        values: [{ label: "Mustard Yellow", hex: "#FFDB58" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_088",
+        sku: "prod_116-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_089",
+        sku: "prod_116-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_090",
+        sku: "prod_116-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_091",
+        sku: "prod_116-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_092",
+        sku: "prod_116-MUS-2XL",
+        attributes: { color: "Mustard Yellow", size: "2XL" },
+        stock: 10,
+        price: 2200,
       },
     ],
   },
-  // Product 117 - Summer Floral Dress
+
+  // ==================== prod_117 ====================
   {
     product_id: "prod_117",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
+          { label: "Camel", hex: "#C19A6B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_093",
+        sku: "prod_117-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_094",
+        sku: "prod_117-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_095",
+        sku: "prod_117-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_096",
+        sku: "prod_117-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_097",
+        sku: "prod_117-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_098",
+        sku: "prod_117-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 3600,
       },
     ],
   },
-  // Product 118 - Formal Blazer Dress
+
+  // ==================== prod_118 ====================
   {
     product_id: "prod_118",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Beige / Sand", available: true, hex: "#F5F5DC" }],
+        values: [{ label: "Beige / Sand", hex: "#F5F5DC" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_099",
+        sku: "prod_118-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_100",
+        sku: "prod_118-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_101",
+        sku: "prod_118-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 6500,
       },
     ],
   },
-  // Product 119 - Casual Knit Dress
+
+  // ==================== prod_119 ====================
   {
     product_id: "prod_119",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
+          { label: "Sage Green", hex: "#8A9A5B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_102",
+        sku: "prod_119-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_103",
+        sku: "prod_119-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_104",
+        sku: "prod_119-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_105",
+        sku: "prod_119-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_106",
+        sku: "prod_119-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_107",
+        sku: "prod_119-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2700,
       },
     ],
   },
-  // Product 120 - Elegant Silk Dress
+
+  // ==================== prod_120 ====================
   {
     product_id: "prod_120",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Camel", available: true, hex: "#C19A6B" }],
+        values: [{ label: "Camel", hex: "#C19A6B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_108",
+        sku: "prod_120-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_109",
+        sku: "prod_120-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_110",
+        sku: "prod_120-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_111",
+        sku: "prod_120-CAM-2XL",
+        attributes: { color: "Camel", size: "2XL" },
+        stock: 10,
+        price: 5000,
       },
     ],
   },
-  // Product 121 - Casual Linen Dress
+
+  // ==================== prod_121 ====================
   {
     product_id: "prod_121",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_112",
+        sku: "prod_121-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_113",
+        sku: "prod_121-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_114",
+        sku: "prod_121-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_115",
+        sku: "prod_121-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_116",
+        sku: "prod_121-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_117",
+        sku: "prod_121-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },
-  // Product 122 - Party Sequins Dress
+
+  // ==================== prod_122 ====================
   {
     product_id: "prod_122",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
+          { label: "Terracotta", hex: "#E2725B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_118",
+        sku: "prod_122-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_119",
+        sku: "prod_122-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_120",
+        sku: "prod_122-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_121",
+        sku: "prod_122-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 7000,
       },
     ],
   },
-  // Product 123 - Casual Cotton Dress
+
+  // ==================== prod_123 ====================
   {
     product_id: "prod_123",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Beige / Sand", available: true, hex: "#F5F5DC" }],
+        values: [{ label: "Beige / Sand", hex: "#F5F5DC" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_122",
+        sku: "prod_123-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_123",
+        sku: "prod_123-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_124",
+        sku: "prod_123-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },
-  // Product 124 - Elegant Evening Gown
+
+  // ==================== prod_124 ====================
   {
     product_id: "prod_124",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_125",
+        sku: "prod_124-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_126",
+        sku: "prod_124-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_127",
+        sku: "prod_124-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_128",
+        sku: "prod_124-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_129",
+        sku: "prod_124-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_130",
+        sku: "prod_124-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_131",
+        sku: "prod_124-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_132",
+        sku: "prod_124-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 8000,
       },
     ],
   },
-  // Product 125 - Sports Denim Dress
+
+  // ==================== prod_125 ====================
   {
     product_id: "prod_125",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_133",
+        sku: "prod_125-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_134",
+        sku: "prod_125-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_135",
+        sku: "prod_125-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_136",
+        sku: "prod_125-TER-2XL",
+        attributes: { color: "Terracotta", size: "2XL" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_137",
+        sku: "prod_125-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_138",
+        sku: "prod_125-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_139",
+        sku: "prod_125-SAG-XL",
+        attributes: { color: "Sage Green", size: "XL" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_140",
+        sku: "prod_125-SAG-2XL",
+        attributes: { color: "Sage Green", size: "2XL" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_141",
+        sku: "prod_125-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_142",
+        sku: "prod_125-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_143",
+        sku: "prod_125-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_144",
+        sku: "prod_125-BEI-2XL",
+        attributes: { color: "Beige / Sand", size: "2XL" },
+        stock: 10,
+        price: 2200,
       },
     ],
   },
-  // Product 126 - Summer Floral Dress
+
+  // ==================== prod_126 ====================
   {
     product_id: "prod_126",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
+        values: [{ label: "Mustard Yellow", hex: "#FFDB58" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_145",
+        sku: "prod_126-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_146",
+        sku: "prod_126-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_147",
+        sku: "prod_126-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 3600,
       },
     ],
   },
-  // Product 127 - Formal Blazer Dress
+
+  // ==================== prod_127 ====================
   {
     product_id: "prod_127",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_148",
+        sku: "prod_127-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_149",
+        sku: "prod_127-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_150",
+        sku: "prod_127-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_151",
+        sku: "prod_127-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 6500,
       },
     ],
   },
-  // Product 128 - Sports Knit Dress
+
+  // ==================== prod_128 ====================
   {
     product_id: "prod_128",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Sage Green", available: true, hex: "#8A9A5B" }],
+        values: [{ label: "Sage Green", hex: "#8A9A5B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_152",
+        sku: "prod_128-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_153",
+        sku: "prod_128-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_154",
+        sku: "prod_128-SAG-XL",
+        attributes: { color: "Sage Green", size: "XL" },
+        stock: 10,
+        price: 2700,
       },
     ],
   },
-  // Product 129 - Elegant Silk Dress
+
+  // ==================== prod_129 ====================
   {
     product_id: "prod_129",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_155",
+        sku: "prod_129-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_156",
+        sku: "prod_129-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_157",
+        sku: "prod_129-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_158",
+        sku: "prod_129-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_159",
+        sku: "prod_129-TER-2XL",
+        attributes: { color: "Terracotta", size: "2XL" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_160",
+        sku: "prod_129-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_161",
+        sku: "prod_129-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_162",
+        sku: "prod_129-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_163",
+        sku: "prod_129-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_164",
+        sku: "prod_129-MUS-2XL",
+        attributes: { color: "Mustard Yellow", size: "2XL" },
+        stock: 10,
+        price: 5000,
       },
     ],
   },
-  // Product 130 - Sports Linen Dress
+
+  // ==================== prod_130 ====================
   {
     product_id: "prod_130",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_165",
+        sku: "prod_130-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_166",
+        sku: "prod_130-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_167",
+        sku: "prod_130-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_168",
+        sku: "prod_130-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_169",
+        sku: "prod_130-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_170",
+        sku: "prod_130-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_171",
+        sku: "prod_130-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_172",
+        sku: "prod_130-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_173",
+        sku: "prod_130-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },
-  // Product 131 - Party Sequins Dress
+
+  // ==================== prod_131 ====================
   {
     product_id: "prod_131",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
+        values: [{ label: "Mustard Yellow", hex: "#FFDB58" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_174",
+        sku: "prod_131-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_175",
+        sku: "prod_131-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_176",
+        sku: "prod_131-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 7000,
       },
     ],
   },
-  // Product 132 - Sports Cotton Dress
+
+  // ==================== prod_132 ====================
   {
     product_id: "prod_132",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_177",
+        sku: "prod_132-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_178",
+        sku: "prod_132-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_179",
+        sku: "prod_132-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_180",
+        sku: "prod_132-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },
-  // Product 133 - Elegant Evening Gown
+
+  // ==================== prod_133 ====================
   {
     product_id: "prod_133",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Camel", available: true, hex: "#C19A6B" }],
+        values: [{ label: "Camel", hex: "#C19A6B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_181",
+        sku: "prod_133-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_182",
+        sku: "prod_133-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_183",
+        sku: "prod_133-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_184",
+        sku: "prod_133-CAM-2XL",
+        attributes: { color: "Camel", size: "2XL" },
+        stock: 10,
+        price: 8000,
       },
     ],
   },
-  // Product 134 - Sports Denim Dress
+
+  // ==================== prod_134 ====================
   {
     product_id: "prod_134",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_185",
+        sku: "prod_134-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_186",
+        sku: "prod_134-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_187",
+        sku: "prod_134-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_188",
+        sku: "prod_134-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_189",
+        sku: "prod_134-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_190",
+        sku: "prod_134-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 2200,
       },
     ],
   },
-  // Product 135 - Summer Floral Dress
+
+  // ==================== prod_135 ====================
   {
     product_id: "prod_135",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Sage Green", available: true, hex: "#8A9A5B" }],
+        values: [{ label: "Sage Green", hex: "#8A9A5B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_191",
+        sku: "prod_135-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_192",
+        sku: "prod_135-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_193",
+        sku: "prod_135-SAG-XL",
+        attributes: { color: "Sage Green", size: "XL" },
+        stock: 10,
+        price: 3600,
       },
     ],
   },
-  // Product 136 - Formal Blazer Dress
+
+  // ==================== prod_136 ====================
   {
     product_id: "prod_136",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Camel", hex: "#C19A6B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_194",
+        sku: "prod_136-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_195",
+        sku: "prod_136-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_196",
+        sku: "prod_136-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_197",
+        sku: "prod_136-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_198",
+        sku: "prod_136-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_199",
+        sku: "prod_136-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_200",
+        sku: "prod_136-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_201",
+        sku: "prod_136-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 6500,
       },
     ],
   },
-  // Product 137 - Sports Knit Dress
+
+  // ==================== prod_137 ====================
   {
     product_id: "prod_137",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
+          { label: "Sage Green", hex: "#8A9A5B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_202",
+        sku: "prod_137-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_203",
+        sku: "prod_137-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_204",
+        sku: "prod_137-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_205",
+        sku: "prod_137-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_206",
+        sku: "prod_137-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_207",
+        sku: "prod_137-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2700,
       },
     ],
   },
-  // Product 138 - Elegant Silk Dress
+
+  // ==================== prod_138 ====================
   {
     product_id: "prod_138",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Camel", available: true, hex: "#C19A6B" }],
+        values: [{ label: "Camel", hex: "#C19A6B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_208",
+        sku: "prod_138-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_209",
+        sku: "prod_138-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_210",
+        sku: "prod_138-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 5000,
       },
     ],
   },
-  // Product 139 - Sports Linen Dress
+
+  // ==================== prod_139 ====================
   {
     product_id: "prod_139",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Terracotta", available: true, hex: "#E2725B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
+          { label: "Terracotta", hex: "#E2725B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_211",
+        sku: "prod_139-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_212",
+        sku: "prod_139-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_213",
+        sku: "prod_139-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_214",
+        sku: "prod_139-SAG-XL",
+        attributes: { color: "Sage Green", size: "XL" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_215",
+        sku: "prod_139-SAG-2XL",
+        attributes: { color: "Sage Green", size: "2XL" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_216",
+        sku: "prod_139-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_217",
+        sku: "prod_139-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_218",
+        sku: "prod_139-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_219",
+        sku: "prod_139-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_220",
+        sku: "prod_139-TER-2XL",
+        attributes: { color: "Terracotta", size: "2XL" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },
-  // Product 140 - Party Sequins Dress
+
+  // ==================== prod_140 ====================
   {
     product_id: "prod_140",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
+        values: [{ label: "Mustard Yellow", hex: "#FFDB58" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_221",
+        sku: "prod_140-MUS-S",
+        attributes: { color: "Mustard Yellow", size: "S" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_222",
+        sku: "prod_140-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_223",
+        sku: "prod_140-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 7000,
       },
     ],
   },
-  // Product 141 - Casual Cotton Dress
+
+  // ==================== prod_141 ====================
   {
     product_id: "prod_141",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
+          { label: "Camel", hex: "#C19A6B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_224",
+        sku: "prod_141-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_225",
+        sku: "prod_141-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_226",
+        sku: "prod_141-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_227",
+        sku: "prod_141-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_228",
+        sku: "prod_141-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_229",
+        sku: "prod_141-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },
-  // Product 142 - Elegant Evening Gown
+
+  // ==================== prod_142 ====================
   {
     product_id: "prod_142",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Sage Green", hex: "#8A9A5B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_230",
+        sku: "prod_142-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_231",
+        sku: "prod_142-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_232",
+        sku: "prod_142-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 8000,
+      },
+      {
+        id: "var_233",
+        sku: "prod_142-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 8000,
       },
     ],
   },
-  // Product 143 - Sports Leather Dress
+
+  // ==================== prod_143 ====================
   {
     product_id: "prod_143",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
+        values: [{ label: "Mustard Yellow", hex: "#FFDB58" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_234",
+        sku: "prod_143-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_235",
+        sku: "prod_143-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_236",
+        sku: "prod_143-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 2200,
+      },
+      {
+        id: "var_237",
+        sku: "prod_143-MUS-2XL",
+        attributes: { color: "Mustard Yellow", size: "2XL" },
+        stock: 10,
+        price: 2200,
       },
     ],
   },
-  // Product 144 - Summer Floral Dress
+
+  // ==================== prod_144 ====================
   {
     product_id: "prod_144",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_238",
+        sku: "prod_144-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_239",
+        sku: "prod_144-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_240",
+        sku: "prod_144-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_241",
+        sku: "prod_144-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_242",
+        sku: "prod_144-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 3600,
+      },
+      {
+        id: "var_243",
+        sku: "prod_144-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 3600,
       },
     ],
   },
-  // Product 145 - Formal Blazer Dress
+
+  // ==================== prod_145 ====================
   {
     product_id: "prod_145",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Sage Green", available: true, hex: "#8A9A5B" }],
+        values: [{ label: "Sage Green", hex: "#8A9A5B" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_244",
+        sku: "prod_145-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 6500,
+      },
+      {
+        id: "var_245",
+        sku: "prod_145-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 6500,
       },
     ],
   },
-  // Product 146 - Sports Knit Dress
+
+  // ==================== prod_146 ====================
   {
     product_id: "prod_146",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Mustard Yellow", available: true, hex: "#FFDB58" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Mustard Yellow", hex: "#FFDB58" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_246",
+        sku: "prod_146-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_247",
+        sku: "prod_146-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_248",
+        sku: "prod_146-TER-XL",
+        attributes: { color: "Terracotta", size: "XL" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_249",
+        sku: "prod_146-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_250",
+        sku: "prod_146-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 2700,
+      },
+      {
+        id: "var_251",
+        sku: "prod_146-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 2700,
       },
     ],
   },
-  // Product 147 - Elegant Silk Dress
+
+  // ==================== prod_147 ====================
   {
     product_id: "prod_147",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Camel", available: true, hex: "#C19A6B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
+          { label: "Camel", hex: "#C19A6B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
+          { label: "Sage Green", hex: "#8A9A5B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_252",
+        sku: "prod_147-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_253",
+        sku: "prod_147-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_254",
+        sku: "prod_147-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_255",
+        sku: "prod_147-CAM-XL",
+        attributes: { color: "Camel", size: "XL" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_256",
+        sku: "prod_147-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_257",
+        sku: "prod_147-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_258",
+        sku: "prod_147-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_259",
+        sku: "prod_147-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_260",
+        sku: "prod_147-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_261",
+        sku: "prod_147-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_262",
+        sku: "prod_147-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 5000,
+      },
+      {
+        id: "var_263",
+        sku: "prod_147-SAG-XL",
+        attributes: { color: "Sage Green", size: "XL" },
+        stock: 10,
+        price: 5000,
       },
     ],
   },
-  // Product 148 - Sports Linen Dress
+
+  // ==================== prod_148 ====================
   {
     product_id: "prod_148",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
-        values: [{ label: "Mustard Yellow", available: true, hex: "#FFDB58" }],
+        values: [{ label: "Mustard Yellow", hex: "#FFDB58" }],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-        ],
+        values: ["M", "L", "XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_264",
+        sku: "prod_148-MUS-M",
+        attributes: { color: "Mustard Yellow", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_265",
+        sku: "prod_148-MUS-L",
+        attributes: { color: "Mustard Yellow", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_266",
+        sku: "prod_148-MUS-XL",
+        attributes: { color: "Mustard Yellow", size: "XL" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },
-  // Product 149 - Party Sequins Dress
+
+  // ==================== prod_149 ====================
   {
     product_id: "prod_149",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Terracotta", available: true, hex: "#E2725B" },
-          { label: "Camel", available: true, hex: "#C19A6B" },
+          { label: "Terracotta", hex: "#E2725B" },
+          { label: "Camel", hex: "#C19A6B" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_267",
+        sku: "prod_149-TER-S",
+        attributes: { color: "Terracotta", size: "S" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_268",
+        sku: "prod_149-TER-M",
+        attributes: { color: "Terracotta", size: "M" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_269",
+        sku: "prod_149-TER-L",
+        attributes: { color: "Terracotta", size: "L" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_270",
+        sku: "prod_149-CAM-S",
+        attributes: { color: "Camel", size: "S" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_271",
+        sku: "prod_149-CAM-M",
+        attributes: { color: "Camel", size: "M" },
+        stock: 10,
+        price: 7000,
+      },
+      {
+        id: "var_272",
+        sku: "prod_149-CAM-L",
+        attributes: { color: "Camel", size: "L" },
+        stock: 10,
+        price: 7000,
       },
     ],
   },
-  // Product 150 - Sports Cotton Dress
+
+  // ==================== prod_150 ====================
   {
     product_id: "prod_150",
-    variants: [
+    options: [
       {
-        label: "Choose Color",
         key: "color",
-        type: "swatch",
         values: [
-          { label: "Sage Green", available: true, hex: "#8A9A5B" },
-          { label: "Beige / Sand", available: true, hex: "#F5F5DC" },
+          { label: "Sage Green", hex: "#8A9A5B" },
+          { label: "Beige / Sand", hex: "#F5F5DC" },
         ],
       },
       {
-        label: "Choose Size",
         key: "size",
-        type: "button",
-        values: [
-          { label: "S", available: true, price_modifier: 0 },
-          { label: "M", available: true, price_modifier: 0 },
-          { label: "L", available: true, price_modifier: 0 },
-          { label: "XL", available: true, price_modifier: 0 },
-          { label: "2XL", available: true, price_modifier: 0 },
-        ],
+        values: ["S", "M", "L", "XL", "2XL"],
+      },
+    ],
+    variants: [
+      {
+        id: "var_273",
+        sku: "prod_150-SAG-S",
+        attributes: { color: "Sage Green", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_274",
+        sku: "prod_150-SAG-M",
+        attributes: { color: "Sage Green", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_275",
+        sku: "prod_150-SAG-L",
+        attributes: { color: "Sage Green", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_276",
+        sku: "prod_150-SAG-XL",
+        attributes: { color: "Sage Green", size: "XL" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_277",
+        sku: "prod_150-SAG-2XL",
+        attributes: { color: "Sage Green", size: "2XL" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_278",
+        sku: "prod_150-BEI-S",
+        attributes: { color: "Beige / Sand", size: "S" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_279",
+        sku: "prod_150-BEI-M",
+        attributes: { color: "Beige / Sand", size: "M" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_280",
+        sku: "prod_150-BEI-L",
+        attributes: { color: "Beige / Sand", size: "L" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_281",
+        sku: "prod_150-BEI-XL",
+        attributes: { color: "Beige / Sand", size: "XL" },
+        stock: 10,
+        price: 2800,
+      },
+      {
+        id: "var_282",
+        sku: "prod_150-BEI-2XL",
+        attributes: { color: "Beige / Sand", size: "2XL" },
+        stock: 10,
+        price: 2800,
       },
     ],
   },

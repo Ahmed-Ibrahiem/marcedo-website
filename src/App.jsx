@@ -21,6 +21,7 @@ import Orders from "./Pages/Admin/Orders.jsx";
 import ProductsAdmin from "./Pages/Admin/ProductsAdmin.jsx";
 import Customers from "./Pages/Admin/Customers.jsx";
 import ProductDetailsPage from "./Pages/product-details/ProductDetailsPage.jsx";
+import NewProductForm from "./Pages/Admin/product-form-components/NewProductForm.jsx";
 
 const App = () => {
   return (
@@ -51,6 +52,7 @@ const App = () => {
           <Route index element={<Dashboard />} />
           <Route path="orders" element={<Orders />} />
           <Route path="products" element={<ProductsAdmin />} />
+          <Route path="products/add_new_product" element={<NewProductForm />} />
           <Route path="customers" element={<Customers />} />
         </Route>
         <Route path="/checkout" element={<Checkout_page />} />

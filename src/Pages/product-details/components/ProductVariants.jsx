@@ -1,90 +1,81 @@
 import React, { useEffect, useState } from "react";
+import { useProductDetailsContext } from "../../../Context/ProductDetailsProvider";
 
-const ProductVariants = ({ prodVariants }) => {
-  const [selectedVaraints, setSelectedVaraints] = useState(null);
-
-  useEffect(() => {
-    if (prodVariants) {
-      let defaultVariant = {};
-      prodVariants.variants.forEach((variant) => {
-        const firstVariant = variant.values.find((value) => value.available);
-        defaultVariant = {
-          ...defaultVariant,
-          [variant.key]: firstVariant.label,
-        };
-      });
-      setSelectedVaraints(defaultVariant);
-    }
-  }, [prodVariants]);
+const ProductVariants = () => {
+  const { selectedOptions, setSelectedOptions, productVariants } =
+    useProductDetailsContext();
 
   return (
-    <div className="colors-container flex-start-col gap-7.5 text-sm!">
-      {selectedVaraints &&
-        prodVariants.variants.map((variant) => {
-          return (
-            <div key={variant.key}>
-              <h3 className="font-bold">{variant.label}:</h3>
-              {/* color Options */}
-              {variant.key === "color" && (
-                <ul className="flex-start gap-1.5 mt-2.5 flex-wrap sm:flex-nowrap">
-                  {variant.values.map((value, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className={`flex-start gap-1 cursor-pointer!`}
-                      >
-                        <input
-                          checked={
-                            selectedVaraints.color &&
-                            selectedVaraints.color === value.label
-                          }
-                          onChange={() => {
-                            setSelectedVaraints((prev) => ({
-                              ...prev,
-                              color: value.label,
-                            }));
-                          }}
-                          name={variant.key}
-                          id={value.label}
-                          type="radio"
-                          className={`color_options `}
-                          style={{ "--bg-color": value.hex }}
-                        />
-                        <label className="cursor-pointer" htmlFor={value.label}>
-                          {value.label}
-                        </label>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
+    <>
+      {productVariants && selectedOptions && (
+        <div className="colors-container flex-start-col gap-7.5 text-sm!">
+          {productVariants.options.map((op) => {
+            return (
+              <div key={op.key}>
+                <h3 className="font-bold capitalize">{op.key}:</h3>
+                {/* color Options */}
+                {op.key === "color" && (
+                  <ul className="flex-start gap-1.5 mt-2.5 flex-wrap sm:flex-nowrap">
+                    {op.values.map((value, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className={`flex-start gap-1 cursor-pointer!`}
+                        >
+                          <input
+                            checked={selectedOptions.color === value.label}
+                            onChange={() => {
+                              setSelectedOptions((prev) => ({
+                                ...prev,
+                                color: value.label,
+                              }));
+                            }}
+                            name={op.key}
+                            id={value.label}
+                            type="radio"
+                            className={`color_options`}
+                            style={{ "--bg-color": value.hex }}
+                          />
+                          <label
+                            className="cursor-pointer"
+                            htmlFor={value.label}
+                          >
+                            {value.label}
+                          </label>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
 
-              {/* Another Veraings */}
-              {selectedVaraints && variant.key !== "color" && (
-                <div className="flex-start gap-2.5 mt-2.5">
-                  {variant.values.map((value, index) => {
-                    return (
-                      <button
-                        key={index}
-                        onClick={() =>
-                          setSelectedVaraints((prev) => ({
-                            ...prev,
-                            [variant.key]: value.label,
-                          }))
-                        }
-                        className={`p-1.5  rounded-md border border-transparent
-                                 ${selectedVaraints[variant.key] === value.label ? "border-gray-300! bg-gray-light!" : ""}`}
-                      >
-                        <span>{value.label}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          );
-        })}
-    </div>
+                {/* Another Veraings */}
+                {op.key !== "color" && (
+                  <div className="flex-start gap-2.5 mt-2.5">
+                    {op.values.map((value, index) => {
+                      return (
+                        <button
+                          onClick={() =>
+                            setSelectedOptions((prev) => ({
+                              ...prev,
+                              [op.key]: value,
+                            }))
+                          }
+                          key={index}
+                          className={`p-1.5  rounded-md border border-gray-light 
+                                 ${selectedOptions[op.key] === value ? "border-gray-300! bg-gray-light!" : ""}`}
+                        >
+                          <span>{value}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { FaPlus } from "react-icons/fa";
 import { BiExport } from "react-icons/bi";
 import React, { memo } from "react";
+import { Link } from "react-router-dom";
 
 const ProductAdminHead = ({
   handleExportSelectedProducts,
@@ -34,10 +35,13 @@ const ProductAdminHead = ({
           </button>
         </div>
         {/* Add New Product */}
-        <button className={`${btnStyleTwo} `}>
+        <Link
+          to={"/admin/products/add_new_product"}
+          className={`${btnStyleTwo} `}
+        >
           <FaPlus />
           <span>Add Product</span>
-        </button>
+        </Link>
       </div>
     </div>
   );

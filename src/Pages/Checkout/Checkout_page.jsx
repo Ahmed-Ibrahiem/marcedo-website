@@ -17,7 +17,7 @@ const Checkout_page = () => {
   const { cartItemsData } = useCartContext();
 
   useEffect(() => {
-    if (cartItemsData == 0) {
+    if (Object.keys(cartItemsData).length === 0) {
       set_threre_items(false);
       setTimeout(() => {
         navigate("/");

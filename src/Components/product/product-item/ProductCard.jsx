@@ -31,7 +31,7 @@ const ProductCard = ({ product, cardHeight }) => {
             </div>
           )}
           <img
-            className="absolute inset-0 m-auto max-w-[60%] group-hover/top:max-w-[70%] object-contain h-[90%]"
+            className="absolute inset-0 m-auto max-w-[65%] group-hover/top:max-w-[75%] object-contain h-[90%]"
             alt={`The Image Of Product ${product.id}`}
             style={{ opacity: imageLoaded ? 1 : 0 }}
             loading="lazy"

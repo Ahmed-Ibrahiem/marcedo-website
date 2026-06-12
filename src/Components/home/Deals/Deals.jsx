@@ -152,7 +152,7 @@ const Deals = () => {
 
           {/* Button to navigate to the full product details page */}
           <Link
-            to={`/product_detials/6`}
+            to={`/product_detials/`}
             className="button_product_nav text-white! "
           >
             <RiArrowRightUpLongLine size={30} />

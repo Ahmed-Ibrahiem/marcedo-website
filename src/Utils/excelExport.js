@@ -54,3 +54,5 @@ export const exportAllProductsToExcel = async (productsData) => {
 
   XLSX.writeFile(workbook, "products.xlsx");
 };
+
+

@@ -47,7 +47,7 @@ const Cart_popup = () => {
         {/* Start Cart Footer  */}
         <div className="flex-start-col gap-3.5 w-full">
           <h3 className="text-lg font-semibold text-black-lite">
-            Subtitle: {SubtotalItemsPrice}$
+            SubTotal: {SubtotalItemsPrice}$
           </h3>
           <div className="flex-start gap-5 ">
             <button className="py-2 px-5 bg-transparent hover:bg-orange! hover:text-white! font-semibold text-orange rounded-sm border-orange border-2">

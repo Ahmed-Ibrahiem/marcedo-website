@@ -155,7 +155,7 @@ const Checkout_provider = ({ children }) => {
   const onSubmit = (data) => {
     const order = {
       id: crypto.randomUUID(),
-      items: [...cartItemsData],
+      items: [...Object.values(cartItemsData)],
       customer: {
         contact: data.contact_way,
         wantsEmailUpdates: data.email_me,
@@ -203,7 +203,6 @@ const Checkout_provider = ({ children }) => {
     localStorage.setItem("last_order", JSON.stringify(order));
     payment_form.reset();
     clearCartItems();
-    console.log(order);
     navigate("/order-success");
   };
 

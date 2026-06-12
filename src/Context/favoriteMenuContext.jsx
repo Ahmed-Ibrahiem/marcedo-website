@@ -30,7 +30,7 @@ const FavoriteProvider = ({ children }) => {
     if (!item) {
       addToFavorites(data);
       toast(
-        <Success_Toast message={"The product has been added to favorites"} />,
+        <Success_Toast message={"The product has been added to wishlist"} />,
       );
     }
     // Check if the product id is includes in favoriteItem menu then remove his id from favoriteItem menu
@@ -38,7 +38,7 @@ const FavoriteProvider = ({ children }) => {
       removeFromFavorites(data);
       toast(
         <Success_Toast
-          message={"The Product Has Been Deleted From favorites"}
+          message={"The Product Has Been Deleted From Wishlist"}
         />,
       );
     }

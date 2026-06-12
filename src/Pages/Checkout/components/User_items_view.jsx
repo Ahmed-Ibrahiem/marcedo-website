@@ -39,7 +39,7 @@ const User_items_view = () => {
       {/* Render each cart item using the Item component */}
       <div className={style.items_grid}>
         {Object.values(cartItemsData).map((data) => {
-          return <Item key={data.id} data={data} />;
+          return <Item key={data.variants.id} data={data} />;
         })}
       </div>
 
