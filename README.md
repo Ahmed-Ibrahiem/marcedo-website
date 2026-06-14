@@ -1,100 +1,187 @@
-# Marcedo - E-Commerce Website
+# Marcedo E-Commerce
 
-Marcedo is a fully responsive e-commerce web application built with React and Vite. It includes a complete shopping experience from browsing products to checkout.
+Marcedo is a full-featured E-Commerce project that originally started as a simple frontend-only application built with HTML, CSS, and JavaScript based on a UI design.
+
+After gaining more experience and building other projects, I decided to rebuild the project from scratch and turn it into my main portfolio project with a more scalable and production-oriented architecture.
+
+The goal is not just to build an online store, but to build a complete E-Commerce system with clean architecture, scalable data design, and a full admin management system.
 
 ---
 
 ## Tech Stack
 
-- React 19
-- Vite 7
-- React Router DOM v7
-- Axios
-- React Hook Form + Yup
+### Frontend
+
+- React.js
+- TailwindCSS
+- Redux Toolkit
+- React Router DOM
 - Swiper.js
-- React Toastify
-- Skeleton
+
+### Backend / Database
+
+- Firebase Authentication
+- Firestore Database
+- Firebase Realtime Database
 
 ---
 
-## Features
+## Project Goals
 
-- Home page with hero banners, best sellers, deals, brands, and testimonials
-- Product listing with advanced filters (brand, price, color, size, availability)
-- Dresses collection with brand-specific filtering
-- Product detail page with image gallery, reviews, and recommendations
-- Shopping cart with quantity control and price calculation.
-- Categories page with filter and sorting products
-- Wishlist to save favorite products
-- Full checkout flow with address, delivery options, and credit card form
-- User authentication (login / register) with form validation
-- Order success confirmation page
-- Contact page and About us page
-- Fully responsive design with mobile navbar
-- Skeleton loading.
+This project focuses on building a scalable and maintainable E-Commerce platform with:
+
+- Clean Architecture
+- Scalable Data Structure
+- Performance Optimization
+- Dynamic Product Management
+- Admin Dashboard System
+- Product Variant Management
+- Inventory Tracking
+- Order Management
+- Reviews System
 
 ---
 
-## Project Structure
+## Current Progress
 
-```
-src/
-├── assets/         # Images, icons, and brand assets
-├── Components/     # 30+ reusable UI components
-├── Pages/          # Application pages and routes
-├── Context/        # Global state management (12 context providers)
-├── Hooks/          # Custom React hooks
-└── server/         # Data fetching and localStorage utilities
-```
+### Store Front
 
----
-
-## Pages
-
-| Route            | Description                        |
-| ---------------- | ---------------------------------- |
-| `/`              | Home page                          |
-| `/categories`    | Products grid with sidebar filters |
-| `/products`      | All products                       |
-| `/dresses`       | Dresses collection                 |
-| `/product/:id`   | Product detail page                |
-| `/wishlist`      | Saved items                        |
-| `/checkout`      | Checkout and payment               |
-| `/order-success` | Order confirmation                 |
-| `/about`         | About us                           |
-| `/contact`       | Contact form                       |
+- [x] Home Page
+- [x] Product Details Page
+- [x] Product Gallery
+- [x] Product Variants UI
+- [x] Product Reviews System
+- [x] Product Ratings System
+- [x] Cart System
+- [x] Wishlist System
+- [x] Dynamic Filters
+- [x] Pagination System
+- [x] Export Products Feature
 
 ---
 
-## Getting Started
+### Admin Dashboard
 
-### Requirements
+- [x] Dashboard Layout
+- [x] Products Management Page
+- [x] Filters System
+- [x] Bulk Actions
+- [x] Export Selected Products
+- [ ] Add New Product Form (In Progress)
+- [ ] Edit Product
+- [ ] Orders Management
+- [ ] Users Management
+- [ ] Reviews Management
+- [ ] Inventory Management
 
-- Node.js 18 or higher
-- npm
+---
 
-### Installation
+## Current Data Architecture
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/marcedo-website.git
+The project went through a complete data restructuring.
 
-# Go to the project folder
-cd marcedo-website
+Originally, all product data was stored inside a single object, which made the system difficult to scale and manage.
 
-# Install dependencies
-npm install
+The new structure separates product data into multiple collections:
 
-# Start the development server
-npm run dev
-```
+- products
+- product_details
+- product_pricing
+- product_stock
+- product_media
+- product_shipping
+- product_variants
+- product_reviews
+- ratings
+- brands
+- categories
 
-The app will run at `http://localhost:5173`
+This restructuring improved:
 
-### Scripts
+- Performance
+- Scalability
+- Maintainability
+- Data Organization
+- Dashboard Management
 
-```bash
-npm run dev       # Start development server
-npm run build     # Build for production
-npm run preview   # Preview production build
-```
+---
+
+## Current Challenge
+
+While building the Admin Dashboard, specifically the Add New Product system, I discovered an important limitation in the current architecture.
+
+The current variant system supports displaying product options like:
+
+- Colors
+- Sizes
+- Storage
+- Connectivity
+
+But it does not fully support variant-level inventory management.
+
+Example:
+
+If a product has:
+
+Color:
+
+- Black
+- White
+
+Size:
+
+- S
+- M
+- L
+
+The system must be able to answer:
+
+- Is Black + M available?
+- How many units of Black + M are in stock?
+- Is White + L out of stock?
+
+This revealed the need for a more advanced variant inventory system where each combination is treated as an individual stock unit.
+
+---
+
+## What I Learned
+
+This project taught me one of the most important lessons in software development:
+
+Data architecture is not a secondary detail.
+
+Every structural decision directly affects:
+
+- Performance
+- Scalability
+- Feature flexibility
+- Maintainability
+- System complexity
+
+I learned that building software is not just about writing code.
+
+It is about designing systems that can grow and adapt over time.
+
+---
+
+## Next Steps
+
+- Complete Add Product System
+- Build Variant Inventory Logic
+- Complete Orders Management
+- Complete Users Management
+- Complete Reviews Management
+- Build Checkout Flow
+- Payment Integration
+- Analytics Dashboard
+- Performance Optimization
+
+---
+
+## Live Demo:
+
+[marcedo-application](https://marcedo-application.netlify.app/)
+
+## Github Repo:
+
+[marcedo-website-repo](https://github.com/Ahmed-Ibrahiem/marcedo-website.git)
