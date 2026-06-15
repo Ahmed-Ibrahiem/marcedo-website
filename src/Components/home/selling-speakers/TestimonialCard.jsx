@@ -10,6 +10,7 @@ const TestimonialCard = ({ testimonial_data }) => {
   return (
     <div className="testimonial_card">
       <CreateStarsOfRating rating_value={testimonial_data.rating} />
+      
       <h3>{testimonial_data.title}</h3>
       <p>{testimonial_data.content}</p>
       <div className="personal-info">

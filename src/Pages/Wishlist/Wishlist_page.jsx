@@ -12,7 +12,6 @@ const Wishlist_page = () => {
     window.scrollTo(0, 0);
   });
 
-  console.log(favoriteItems);
   return (
     <div className="wishlist">
       <div className="container">

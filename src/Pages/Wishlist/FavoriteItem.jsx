@@ -5,8 +5,10 @@ import { formate_date } from "../../services/formatsDate";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { useFavoriteContext } from "../../Context/favoriteMenuContext";
 import { useCartContext } from "../../Context/CartMenuContext";
+import { useQuickViewPopupContext } from "../../Context/QuickViewPopupsProvider";
 
 const FavoriteItem = ({ productData }) => {
+  const { setIsQuickViewOpen, setProductData } = useQuickViewPopupContext();
   const { handleFavoriteItems } = useFavoriteContext();
   return (
     <div className={`${itemStyle}`}>
@@ -45,7 +47,13 @@ const FavoriteItem = ({ productData }) => {
           </p>
         </div>
       </div>
-      <button className="px-7.5 py-3.5 font-semibold text-sm rounded-sm bg-orange-lite hover:bg-orange! hover:text-white">
+      <button
+        onClick={() => {
+          setIsQuickViewOpen(true);
+          setProductData(productData);
+        }}
+        className="px-7.5 py-3.5 font-semibold text-sm rounded-sm bg-orange-lite hover:bg-orange! hover:text-white"
+      >
         Quick View
       </button>
     </div>

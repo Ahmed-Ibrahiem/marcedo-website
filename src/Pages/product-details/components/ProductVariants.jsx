@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useProductDetailsContext } from "../../../Context/ProductDetailsProvider";
 
-const ProductVariants = () => {
-  const { selectedOptions, setSelectedOptions, productVariants } =
-    useProductDetailsContext();
-
+const ProductVariants = ({
+  selectedOptions,
+  setSelectedOptions,
+  productVariants,
+}) => {
   return (
     <>
       {productVariants && selectedOptions && (
-        <div className="colors-container flex-start-col gap-7.5 text-sm!">
+        <div className=" flex-start-col gap-7.5 text-sm!">
           {productVariants.options.map((op) => {
             return (
-              <div key={op.key}>
+              <div className="fade-in" key={op.key}>
                 <h3 className="font-bold capitalize">{op.key}:</h3>
                 {/* color Options */}
                 {op.key === "color" && (
-                  <ul className="flex-start gap-1.5 mt-2.5 flex-wrap sm:flex-nowrap">
+                  <ul className="flex-start gap-1.5 mt-2.5 flex-wrap sm:flex-nowrap ">
                     {op.values.map((value, index) => {
                       return (
                         <li
@@ -64,7 +64,7 @@ const ProductVariants = () => {
                           className={`p-1.5  rounded-md border border-gray-light 
                                  ${selectedOptions[op.key] === value ? "border-gray-300! bg-gray-light!" : ""}`}
                         >
-                          <span>{value}</span>
+                          <span className="min-w-10 block">{value}</span>
                         </button>
                       );
                     })}

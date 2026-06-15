@@ -6,11 +6,18 @@ import { useFavoriteContext } from "../../../Context/favoriteMenuContext";
 import { useCartContext } from "../../../Context/CartMenuContext";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { useQuickViewPopupContext } from "../../../Context/QuickViewPopupsProvider";
 
 const ProductCard = ({ product, cardHeight }) => {
   const { handleFavoriteItems, favoriteItems } = useFavoriteContext();
   const { addItem } = useCartContext();
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { setIsQuickViewOpen, setProductData } = useQuickViewPopupContext();
+
+  const handleQuickViewClick = () => {
+    setProductData(product);
+    setIsQuickViewOpen(true);
+  };
 
   return (
     <div className="product-card h-fit w-full relative ">
@@ -73,7 +80,7 @@ const ProductCard = ({ product, cardHeight }) => {
           </div>
 
           {/* Quick View btn */}
-          <div className={btnContainerStyle}>
+          <div onClick={handleQuickViewClick} className={btnContainerStyle}>
             <button className={btnStyle}>
               <FaEye />
             </button>

@@ -22,6 +22,7 @@ import ProductsAdmin from "./Pages/Admin/ProductsAdmin.jsx";
 import Customers from "./Pages/Admin/Customers.jsx";
 import ProductDetailsPage from "./Pages/product-details/ProductDetailsPage.jsx";
 import NewProductForm from "./Pages/Admin/product-form-components/NewProductForm.jsx";
+import QuickViewPopup from "./Components/layout/quick-view/QuickViewPopup.jsx";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
       {/* cover the Header And SearchOverlay By SearchProvider context  */}
 
       <Custom_message_toast />
+      <QuickViewPopup/>
 
       <Routes>
         <Route element={<MainLayout />}>
