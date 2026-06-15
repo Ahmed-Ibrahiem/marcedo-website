@@ -57,9 +57,9 @@ const QuickViewPopup = () => {
 
   // Create function to get the selected variants by check the matching with options selected
   const getSelectedVariants = () => {
-    if (!selectedOptions || !proVariants.variants) return;
+    if (!selectedOptions || !proInfo.proVariants.variants) return;
 
-    const varaint = proVariants.variants.find((varia) => {
+    const varaint = proInfo.proVariants.variants.find((varia) => {
       return Object.entries(varia.attributes).every(
         ([key, value]) => selectedOptions[key] === value,
       );
@@ -132,6 +132,7 @@ const QuickViewPopup = () => {
                     setIsQuickViewOpen(false);
                     // Reset the all state to undefind
                     dispatchProInfo({ type: "RESET_VALUES" });
+                    setCountSelected(1);
                   }}
                   className={`${exitBtnStyle}`}
                 >
@@ -233,6 +234,7 @@ const QuickViewPopup = () => {
                       addToCart();
                       setIsQuickViewOpen(false);
                       dispatchProInfo({ type: "RESET_VALUES" });
+                      setCountSelected(1);
                     }}
                     className="grow bg-gray-200 p-3 font-semibold rounded-sm hover:text-white hover:bg-black-lite uppercase "
                   >
