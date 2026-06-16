@@ -29,20 +29,30 @@ const CartMenuProvider = ({ children }) => {
 
   // Create Function to add the number of items
   const addItem = (data, count = 1) => {
-    if (!data.variants) return toast.error("The Operation Dosn't Complate ");
-    const variants_id = data.variants.id;
-
-    setCartItemsData((prev) => {
-      return {
-        ...prev,
-        [variants_id]: {
-          ...data,
-          quantity: prev[variants_id]
-            ? prev[variants_id].quantity + count
-            : count,
-        },
-      };
-    });
+    if (data.variants) {
+      const variants_id = data.variants.id;
+      setCartItemsData((prev) => {
+        return {
+          ...prev,
+          [variants_id]: {
+            ...data,
+            quantity: prev[variants_id]
+              ? prev[variants_id].quantity + count
+              : count,
+          },
+        };
+      });
+    } else {
+      setCartItemsData((prev) => {
+        return {
+          ...prev,
+          [data.id]: {
+            ...data,
+            quantity: prev[data.id] ? prev[data.id].quantity + count : count,
+          },
+        };
+      });
+    }
 
     setIsOpenCart(true);
   };
