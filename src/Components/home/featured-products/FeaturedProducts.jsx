@@ -27,7 +27,12 @@ const FeaturedProducts = ({ bestSellerProducts }) => {
             <span className="w-fit!">EGP</span>
             <p className="text-3xl text-orange p-0">77,496</p>
           </div>
-          <img className="w-110 mt-17.5" src={assets.featur_product} alt="" />
+          <img
+            className="w-110 mt-17.5"
+            src={assets.featur_product}
+            loading="lazy"
+            alt=""
+          />
         </motion.div>
 
         <motion.div

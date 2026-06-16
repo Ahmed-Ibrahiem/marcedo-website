@@ -16,7 +16,7 @@ const PreOrder = () => {
           <p>FROM 35,000 EGP</p>
         </div>
         <div className="image_container">
-          <img src={assets.gaming_monitor} alt="" />
+          <img src={assets.gaming_monitor} alt="" loading="lazy" />
         </div>
         <div className="text2">
           <div>

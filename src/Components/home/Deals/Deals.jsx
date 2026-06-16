@@ -77,7 +77,7 @@ const Deals = () => {
                       key={index}
                       onClick={() => setCurrentImgColor(variable.color)}
                     >
-                      <img src={variable.image} alt="" />
+                      <img src={variable.image} alt="" loading="lazy" />
                     </button>
                   );
                 })}
@@ -88,6 +88,7 @@ const Deals = () => {
                 {deals_data.variants.map((variable, index) => {
                   return (
                     <img
+                      loading="lazy"
                       src={variable.image}
                       key={index}
                       className={`${
@@ -176,6 +177,7 @@ const Deals = () => {
           <div className="side_banner1">
             <div className="img_box">
               <img
+                loading="lazy"
                 src={assets.deals_side_banner1}
                 alt=""
                 className="banner_img"
@@ -193,6 +195,7 @@ const Deals = () => {
                 src={assets.deals_side_banner2}
                 alt=""
                 className="banner_img"
+                loading="lazy"
               />
             </div>
             <Link to={`/product_detials/1`} className="banner_icon">

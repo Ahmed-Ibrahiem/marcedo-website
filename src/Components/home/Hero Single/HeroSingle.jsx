@@ -17,7 +17,7 @@ const HeroSingle = ({ activeIndex, index, slider }) => {
         Shop Now
       </button>
       <div className="img_box">
-        <img src={slider.img} alt="" />
+        <img src={slider.img} alt=""  loading="lazy"/>
       </div>
     </div>
   );

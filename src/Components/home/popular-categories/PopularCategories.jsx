@@ -70,7 +70,7 @@ const PopularCategories = () => {
               >
                 <Link to={index == 2 && "/categories/dresses"}>
                   <div className="box-img">
-                    <img src={category.img} alt="" />
+                    <img src={category.img} alt="" loading="lazy" />
                   </div>
                   <p>{category.category_name}</p>
                 </Link>

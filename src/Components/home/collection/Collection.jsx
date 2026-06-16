@@ -49,7 +49,7 @@ export const Collection = () => {
       >
         <div className="dark_style"></div>
         <div className="style"></div>
-        <img src={coll.image} alt="" />
+        <img src={coll.image} alt="" loading="lazy" />
         <h1>{coll.title}</h1>
         <button
           onClick={() => {

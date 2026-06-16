@@ -30,7 +30,7 @@ const Footer = () => {
       <div className="foot">
         <div className="logo-container">
           <div className="logo">
-            <img src={assets.logo_img} alt="" />
+            <img src={assets.logo_img} alt=""  loading="lazy"/>
             <p>
               Mercado - <span>Online Shopping</span>
             </p>

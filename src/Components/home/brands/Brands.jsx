@@ -50,7 +50,7 @@ const Brands = () => {
           className="brands_grid"
         >
           <motion.div variants={cardVariants} className="brand brand_one">
-            <img src="/assets/images/brand_one.png" alt="" />
+            <img src="/assets/images/brand_one.png" loading="lazy" alt="" />
             <p>ACELOS 3D</p>
             <h1>VR Headset and Controllers</h1>
             <button
@@ -62,7 +62,7 @@ const Brands = () => {
             </button>
           </motion.div>
           <motion.div variants={cardVariants} className="brand brand_two">
-            <img src="/assets/images/brand_two.png" alt="" />
+            <img src="/assets/images/brand_two.png" loading="lazy" alt="" />
             <h1>MASSAGE CHAIR LUXURY</h1>
             <p>Fuka Relax Full Body Massage Chair</p>
             <button
@@ -78,11 +78,13 @@ const Brands = () => {
               src="/assets/images/brand_three1.png"
               className="image1"
               alt=""
+              loading="lazy"
             />
             <img
               src="/assets/images/brand_three2.png"
               className="image2"
               alt=""
+              loading="lazy"
             />
             <p>OKODo</p>
             <h1>hero 11+ black</h1>

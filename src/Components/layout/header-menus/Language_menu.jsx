@@ -29,7 +29,7 @@ const Language_menu = ({ currentLanguage, handleSetCurrentLanguage }) => {
     >
       {/* Display the currently selected language with its flag */}
       <div className="current_option">
-        <img src={currentLanguage.language_flag} alt="" />
+        <img src={currentLanguage.language_flag} alt="" loading="lazy" />
         <span>{currentLanguage.language_name}</span>
       </div>
 

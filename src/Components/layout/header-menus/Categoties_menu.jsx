@@ -80,7 +80,7 @@ const Categoties_menu = () => {
               }}
             >
               <p>{option.title}</p>
-              {option.img && <img src={option.img} alt={option.title} />}
+              {option.img && <img src={option.img} alt={option.title} loading="lazy"/>}
             </Link>
           );
         })}
