@@ -211,6 +211,13 @@
     animation: cart_container_anime 0.5s both;
   }
 
+  .search-overlay-anim {
+    animation: search-anim 0.8s 600ms ease-in-out both;
+  }
+
+  .search-overlay-anim-close {
+    animation: search-anim-close 0.5s linear both;
+  }
 }
 
 * {
@@ -246,54 +253,6 @@ button {
   outline: none;
   cursor: pointer;
 }
-
-@keyframes FadeInAndTranslate {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes cart_container_anime {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes cart_container_hide {
-  0% {
-    display: flex;
-    transform: translateX(0);
-  }
-
-  99% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    display: none;
-  }
-}
-
 
 ::-webkit-scrollbar {
   appearance: none;

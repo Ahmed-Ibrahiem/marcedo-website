@@ -50,7 +50,22 @@ export const getBestSellerProducts = async () => {
 
   const snapshot = await getDocs(q);
 
-  if (snapshot.empty) return null;
+  if (snapshot.empty) return [];
 
   return snapshot.docs.map((doc) => doc.data());
+};
+
+export const getProductsByName = async (searchKey) => {
+  const theWord = searchKey.toLowerCase().trim();
+  const collRef = collection(db, "products");
+
+  const snapshot = await getDocs(collRef);
+
+  if (snapshot.empty) return [];
+
+  return [
+    ...snapshot.docs
+      .map((doc) => doc.data())
+      .filter((data) => data.name.toLowerCase().trim().includes(theWord)),
+  ];
 };

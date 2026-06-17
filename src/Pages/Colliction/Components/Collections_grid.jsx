@@ -90,6 +90,7 @@ export const Collections_grid = () => {
                 )}
                 <div>
                   <img
+                    loading="lazy"
                     onLoad={() => setLoaded(true)}
                     src={data.image}
                     alt={`This Image Of ${data.title}`}

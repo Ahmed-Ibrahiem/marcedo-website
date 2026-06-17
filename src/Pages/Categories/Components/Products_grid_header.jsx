@@ -81,7 +81,7 @@ const Products_grid_header = () => {
               }
               onClick={() => set_current_display(btn.count)}
             >
-              <img src={btn.image} alt="" />
+              <img src={btn.image} alt="" loading="lazy" />
             </button>
           );
         })}

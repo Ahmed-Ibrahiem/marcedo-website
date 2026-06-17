@@ -47,7 +47,7 @@ const Payment_type = () => {
             {...register("payment_type")}
           />
           <label htmlFor="credit_card">Credit card</label>
-          <img src={image} className={style.payment_image} />
+          <img src={image} className={style.payment_image} loading="lazy"/>
         </section>
 
         {/* Credit card form — only visible when credit_card option is selected */}

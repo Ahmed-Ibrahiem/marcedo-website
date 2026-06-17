@@ -68,7 +68,7 @@ const ProductRow = ({ product }) => {
               className="flex-center min-w-10 w-10 min-h-10 h-10 rounded-sm overflow-hidden
              bg-gray-200 border border-border"
             >
-              <img
+              <img loading="lazy"
                 className="max-w-[90%] max-h-[90%]"
                 src={product.thumbnail}
                 alt=""

@@ -43,7 +43,7 @@ const ReviewStepOne = () => {
           <img
             src={productData.thumbnail}
             alt=""
-            className="max-w-[80%] max-h-[80%]!"
+            className="max-w-[80%] max-h-[80%]!" loading="lazy"
           />
         </div>
 

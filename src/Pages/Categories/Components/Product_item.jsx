@@ -56,7 +56,7 @@ const Product_item = ({ data }) => {
         {/* Secondary image used for hover effect */}
         {imageLoaded && (
           <div className={style.second_img}>
-            <img src={data.image} alt="" />
+            <img src={data.image} alt="" loading="lazy" />
           </div>
         )}
 

@@ -67,7 +67,8 @@ const Header = ({ setIsSearchOverlayOpen, isSticky }) => {
             {/* Hamburger button — toggles the responsive nav menu on mobile */}
             <button
               onClick={() => setIsResNavActive((prev) => !prev)}
-              className="nav_menu_icon_btn"
+              className="text-lg sm:text-xl text-black border border-border absolute sm:relative top-1 sm:top-0 right-12.5 sm:right-0 
+               rounded-sm w-8 h-8 flex-center  hover:bg-orange hover:border-orange hover:text-white lg:hidden!"
             >
               {isResNavActive ? <FaXmark /> : <FaBars />}
             </button>

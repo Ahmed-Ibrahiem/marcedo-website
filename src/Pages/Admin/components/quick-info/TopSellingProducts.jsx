@@ -52,7 +52,7 @@ const TopSellingProducts = () => {
                 <tr key={pro.id} className="border-t border-border text-xs">
                   <td className="px-2.5 py-1.5 flex items-center gap-5 font-bold">
                     <div className="w-7 h-7 bg-gray-light rounded-xs flex-center">
-                      <img src={pro.image} className="max-h-[90%]" alt="" />
+                      <img src={pro.image} className="max-h-[90%]" alt="" loading="lazy" />
                     </div>
                     <p className="line-clamp-1">{pro.name}</p>
                   </td>

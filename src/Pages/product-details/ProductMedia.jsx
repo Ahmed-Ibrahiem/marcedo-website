@@ -44,6 +44,7 @@ const ProductMedia = ({ productData }) => {
           <img
             src={productsMedia?.gallery[mainIndex]}
             onLoad={() => setImageLoaded(false)}
+            loading="lazy"
             className={`max-w-[90%] max-h-80 md:max-h-100 lg:max-h-100  opacity-100!`}
           />
         </div>
@@ -166,6 +167,7 @@ const ImageStyle = ({ src, imageStyle }) => {
         />
       )}
       <img
+        loading="lazy"
         src={src}
         onLoad={() => setLoaded(false)}
         className={imageStyle}

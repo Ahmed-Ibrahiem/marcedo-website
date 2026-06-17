@@ -106,7 +106,7 @@ const About_us = () => {
         viewport={{ amount: 0.3, once: true }}
         className={style.video_section}
       >
-        <img src="/assets/modern1.jpg" className={style.poster} alt="" />
+        <img src="/assets/modern1.jpg" className={style.poster} alt="" loading="lazy" />
         <button onClick={() => set_start_video(true)}>
           <i className="fa-solid fa-play"></i>
         </button>
@@ -139,7 +139,7 @@ const About_us = () => {
               className={style.member}
             >
               <div className={style.image_box}>
-                <img src={our_team[0].img} alt={our_team[0].name} />
+                <img src={our_team[0].img} alt={our_team[0].name} loading="lazy"/>
               </div>
               <h3>{our_team[0].name}</h3>
               <p>{our_team[0].job_desc}</p>
@@ -151,7 +151,7 @@ const About_us = () => {
               className={style.member}
             >
               <div className={style.image_box}>
-                <img src={our_team[1].img} alt={our_team[1].name} />
+                <img src={our_team[1].img} alt={our_team[1].name} loading="lazy" />
               </div>
               <h3>{our_team[1].name}</h3>
               <p>{our_team[1].job_desc}</p>

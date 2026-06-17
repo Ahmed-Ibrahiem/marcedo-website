@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, memo } from "react";
 import { FaRegHeart, FaStar, FaCartPlus, FaEye } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -254,4 +254,4 @@ before:-right-1 before:top-[10px] before:w-2.5 before:h-2.5 z-10 duration-500!
 const variantContainerStyle = `
 variants w-full min-h-50 bg-white p-2.5 absolute bottom-0 left-0 rounded-[6px_6px_0_0] text-xs z-20
 `;
-export default ProductCard;
+export default React.memo(ProductCard);

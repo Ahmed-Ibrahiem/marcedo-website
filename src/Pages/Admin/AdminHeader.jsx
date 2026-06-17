@@ -32,6 +32,7 @@ const AdminHeader = () => {
                 src="/assets/users/user 1.png"
                 className="max-w-full"
                 alt=""
+                loading="lazy"
               />
             </div>
             <div className="flex-col font-bold hidden lg:flex text-start">

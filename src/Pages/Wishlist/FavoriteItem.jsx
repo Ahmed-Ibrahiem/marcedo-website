@@ -24,6 +24,7 @@ const FavoriteItem = ({ productData }) => {
         {/* Item Image */}
         <div className="img-box flex-center h-50 xs:h-25 w-full xs:w-22.5 rounded-sm bg-gray-light/60">
           <img
+            loading="lazy"
             src={productData.thumbnail}
             className="max-w-[80%] max-h-[80%]"
             alt=""

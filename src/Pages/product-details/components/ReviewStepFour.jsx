@@ -96,7 +96,7 @@ const ReviewStepFour = () => {
                   <img
                     src={media.src}
                     className="max-w-[90%] object-contain max-h-[90%]"
-                    alt=""
+                    alt="" loading="lazy"
                   />
                 </div>
               );

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./Our_banner.module.css";
 import { motion } from "framer-motion";
+import { FaAngleRight } from "react-icons/fa6";
 
 const Our_banner = ({ page_data }) => {
   return (
@@ -12,7 +13,7 @@ const Our_banner = ({ page_data }) => {
       <h1>{page_data.title}</h1>
       <div>
         <Link to={"/home"}>Home</Link>
-        <i className="fa-solid fa-angle-right"></i>
+        <FaAngleRight />
         <p>{page_data.title}</p>
       </div>
     </motion.div>

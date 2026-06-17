@@ -50,7 +50,7 @@ const NewCustomers = () => {
                 <tr key={user.id} className="border-t border-border text-xs">
                   <td className="px-2.5 py-1.5 flex items-center gap-5 font-bold">
                     <div className="w-7 h-7 bg-gray-light flex-center rounded-full overflow-hidden">
-                      <img src={user.avatar} className="max-h-full" alt="" />
+                      <img src={user.avatar} className="max-h-full" alt="" loading="lazy" />
                     </div>
                     <p className="line-clamp-1">{user.name}</p>
                   </td>

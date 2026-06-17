@@ -5,7 +5,7 @@ const Item = ({ data }) => {
     <div className={style.item}>
       <div className={style.left}>
         <div className={style.img_box}>
-          <img src={data.thumbnail} alt="" />
+          <img src={data.thumbnail} alt="" loading="lazy"/>
           <div>{data.quantity}</div>
         </div>
         <div className="flex-start-col gap-1 text-sm">

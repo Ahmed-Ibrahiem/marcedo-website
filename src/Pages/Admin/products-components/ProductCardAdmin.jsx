@@ -57,7 +57,7 @@ const ProductCardAdmin = ({ productsData }) => {
             type="checkbox"
             className="absolute! left-0! top-0! w-6.5! h-6.5! border-[1.5px]! checked:border-orange! after:-top-px! after:-left-px"
           />
-          <img
+          <img loading="lazy"
             src={productsData.thumbnail}
             className="max-h-[90%] max-w-[90%] absolute inset-0 m-auto"
             alt=""

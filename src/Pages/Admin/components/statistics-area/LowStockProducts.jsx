@@ -40,7 +40,7 @@ const LowStockProducts = () => {
               className="flex-start gap-5 border-t border-border py-2.5 w-full"
             >
               <div className="img-box w-10 h-10 rounded-sm flex-center overflow-hidden bg-gray-light">
-                <img src={pro.image} className="max-w-[85%] " alt="" />
+                <img src={pro.image} className="max-w-[85%] " alt="" loading="lazy"/>
               </div>
               <div className="text-xs">
                 <h1 className="font-bold">{pro.name}</h1>

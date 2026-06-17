@@ -116,7 +116,7 @@ const Quick_view = () => {
           {/* Image Section - Product image gallery with navigation */}
           <div className={styles.image_section}>
             <div className={styles.image_box}>
-              <img
+              <img loading="lazy"
                 src={quick_view_data.image}
                 alt={quick_view_data.title}
                 className={styles.image}

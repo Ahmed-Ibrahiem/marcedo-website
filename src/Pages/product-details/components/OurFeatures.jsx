@@ -7,6 +7,7 @@ const OurFeatures = () => {
         The Benefits of Choosing Us
       </h2>
       <img
+        loading="lazy"
         className="max-w-[80%] 2xl:max-w-full"
         src="/assets/images/policy-detailpage.avif"
         alt=""
