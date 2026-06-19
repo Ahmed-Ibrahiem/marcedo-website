@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { motion } from "framer-motion";
-import { Loading } from "../../../Components/ui/Loading/Loading";
-import { getCollections } from "../../../services/collectionsServices";
 import { RiArrowRightUpLongLine } from "react-icons/ri";
+import { getAllCategories } from "../../../services/CategoriesServices";
+import LoadingScreen from "../../../Components/ui/Loading/LoadingScreen";
 
 export const Collections_grid = () => {
   const [loaded, setLoaded] = useState(false);
@@ -35,7 +35,7 @@ export const Collections_grid = () => {
     const get_data = async () => {
       setLoading(true);
       try {
-        const data = await getCollections();
+        const data = await getAllCategories();
 
         // Check if request is successful
         if (data) {
@@ -66,7 +66,7 @@ export const Collections_grid = () => {
   }, [all_collections]);
 
   if (loading) {
-    return <Loading />;
+    return <LoadingScreen />;
   }
 
   return (
@@ -80,8 +80,12 @@ export const Collections_grid = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ amount: 0.3, once: true }}
               key={data.id}
+              className="group/card"
             >
-              <Link to={data.slug} className={style.collection}>
+              <Link
+                to={`/categories/${data.slug}`}
+                className={style.collection}
+              >
                 {/* Collection image */}
                 {!loaded && (
                   <div className={style.skeletonImage}>
@@ -91,16 +95,17 @@ export const Collections_grid = () => {
                 <div>
                   <img
                     loading="lazy"
+                    className="group-hover/card:scale-115"
                     onLoad={() => setLoaded(true)}
-                    src={data.image}
-                    alt={`This Image Of ${data.title}`}
+                    src={data.icon}
+                    alt={`This Image Of ${data.name}`}
                     loading="lazy"
                     style={{ opacity: loaded ? 1 : 0 }}
                   />
                 </div>
 
                 {/* Collection title */}
-                <span className={style.title}>{data.title}</span>
+                <span className={style.title}>{data.name}</span>
 
                 {/* Action button with hover effect */}
                 <button className="action hover:text-white!">

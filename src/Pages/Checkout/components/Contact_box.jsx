@@ -40,7 +40,7 @@ const Contact_box = () => {
 
         {/* Optional checkbox to subscribe to email offers */}
         <div className={style.email_offers}>
-          <input type="checkbox" id="email_offers" {...register("email_me")} />
+          <input type="checkbox" className="checkbox" id="email_offers" {...register("email_me")} />
           <label htmlFor="email_offers">Email me with new offers</label>
         </div>
       </div>

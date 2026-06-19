@@ -1,6 +1,5 @@
 import style from "./Categories.module.css";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
-import { use_categories_context } from "../../Context/CategoriesProvider";
 import { useParams } from "react-router-dom";
 import { useEffect, useLayoutEffect, useState } from "react";
 import axios from "axios";
@@ -15,35 +14,7 @@ import { getCollectionBySlag } from "../../services/collectionsServices";
  * Main Categories Page Component
  **/
 const Categories = () => {
-  // Global state for the currently selected collection
-  const { current_collection, set_current_collection } =
-    use_categories_context();
-
-  // Local states for handling API loading and error status
-  const [is_loading, set_is_loading] = useState(false);
-  const [is_worning, set_is_worning] = useState(false);
-
-  // Extract the category type from the URL parameters
-  const { category_type } = useParams();
-
-  // Fetch collections data whenever the URL category changes
-  useEffect(() => {
-    set_is_loading(true);
-    const get_data = async () => {
-      try {
-        const currentColl = await getCollectionBySlag(category_type);
-        if (currentColl) {
-          set_current_collection(currentColl);
-        }
-      } catch {
-        set_is_worning(true);
-      } finally {
-        set_is_loading(false);
-      }
-    };
-    get_data();
-  }, [category_type]);
-
+ 
   useLayoutEffect(() => {
     window.scrollTo({
       top: 0,

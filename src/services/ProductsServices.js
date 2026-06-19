@@ -69,3 +69,18 @@ export const getProductsByName = async (searchKey) => {
       .filter((data) => data.name.toLowerCase().trim().includes(theWord)),
   ];
 };
+
+export const getProductsByCategories = async (category_id) => {
+  const collRef = collection(db, "products");
+
+  const q = query(
+    collRef,
+    where("category_ids", "array-contains", category_id),
+  );
+
+  const snapshot = await getDocs(q);
+
+  if (snapshot.empty) return [];
+
+  return [...snapshot.docs.map((doc) => doc.data())];
+};

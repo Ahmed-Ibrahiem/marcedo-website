@@ -39,7 +39,7 @@ const ReviewStepThree = () => {
         </div>
         {/* Terms and policy */}
         <div className="flex-start gap-2.5">
-          <input type="checkbox" id="anonymous" />
+          <input type="checkbox" className="checkbox" id="anonymous" />
           <label className="text-sm font-semibold" htmlFor="anonymous">
             Post review as anonymous
           </label>

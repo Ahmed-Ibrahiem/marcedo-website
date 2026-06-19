@@ -59,7 +59,7 @@ const ProductRow = ({ product }) => {
                   handleSelectedProducts(product.id);
                 }}
                 type="checkbox"
-                className="w-5! h-5! border-gray-300!"
+                className="w-5! h-5! border-gray-300! checkbox"
               />
             </div>
           </td>

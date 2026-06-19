@@ -114,6 +114,7 @@
 @media (max-width: 1150px) {
   .hero_single > .img_box {
     width: 500px;
+    right: 0;
   }
 }
 @media (max-width: 1030px) {
@@ -121,8 +122,10 @@
     font-size: 50px;
   }
   .hero_single > .img_box {
-    width: 450px;
-    right: 50px;
+    width: 400px;
+    height: 500px;
+    right: 0;
+    bottom: 0;
   }
 }
 @media (max-width: 850px) {

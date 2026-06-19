@@ -17,7 +17,8 @@ const ProductsGrid = ({ productsData }) => {
         type="checkbox"
         checked={selectedAllProducts}
         onChange={() => setSelectedAllProducts((prev) => !prev)}
-        className="w-6.5! h-6.5!"
+        className="w-6.5! h-6.5! checkbox
+        "
       />
       <div className="w-full grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 gap-5  ">
         {productsData.map((data) => {

@@ -93,6 +93,11 @@ const SearchOverlay = ({ isSearchOverlayOpen, setIsSearchOverlayOpen }) => {
                 return (
                   <Link
                     key={data.id}
+                    onClick={() => {
+                      setQuery("");
+                      setDebounceQuery("");
+                      setIsSearchOverlayOpen(false);
+                    }}
                     to={`/product_detials/${data.slug}`}
                     className="w-full! hover:bg-orange p-1.5 rounded-sm hover:text-white! text-sm flex-between gap-5"
                   >

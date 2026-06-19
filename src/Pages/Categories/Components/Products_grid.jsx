@@ -3,7 +3,6 @@ import Products_grid_header from "./Products_grid_header";
 import Products_grid_content from "./Products_grid_content";
 import { useEffect } from "react";
 import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
-import { use_categories_context } from "../../../Context/CategoriesProvider";
 import Bubbles from "../../../Components/ui/Bubbles/Bubbles";
 import { use_pagination_context } from "../../../Context/PaginationProvider";
 import Quick_view from "./Quick_view";
@@ -13,48 +12,47 @@ const Products_grid = () => {
   const { current_display, set_current_display, is_quick_view_open } =
     use_products_grid_context();
   const { set_pagination_data } = use_pagination_context();
-  const { filter_products, isLoading } = use_categories_context();
 
   useEffect(() => {
     set_pagination_data(filter_products);
   }, [filter_products]);
 
-  useEffect(() => {
-    /**
-     * Define the logic to handle window resizing.
-     * Checks the current window width and updates the display count
-     * if it meets specific responsive design conditions.
-     **/
-    const handle_resize = () => {
-      const size_screen = window.innerWidth;
+  // useEffect(() => {
+  //   /**
+  //    * Define the logic to handle window resizing.
+  //    * Checks the current window width and updates the display count
+  //    * if it meets specific responsive design conditions.
+  //    **/
+  //   const handle_resize = () => {
+  //     const size_screen = window.innerWidth;
 
-      if (size_screen <= 1150 && current_display == 8) {
-        set_current_display(6);
-      } else if (size_screen <= 768) {
-        set_current_display(2);
-      }
-    };
+  //     if (size_screen <= 1150 && current_display == 8) {
+  //       set_current_display(6);
+  //     } else if (size_screen <= 768) {
+  //       set_current_display(2);
+  //     }
+  //   };
 
-    // Attach the resize event listener to the window object
-    window.addEventListener("resize", handle_resize);
+  //   // Attach the resize event listener to the window object
+  //   window.addEventListener("resize", handle_resize);
 
-    /**
-     * Cleanup function:
-     * Removes the event listener whenever the component unmounts
-     * or before re-running the effect due to dependency changes.
-     **/
-    return () => window.removeEventListener("resize", handle_resize);
+  //   /**
+  //    * Cleanup function:
+  //    * Removes the event listener whenever the component unmounts
+  //    * or before re-running the effect due to dependency changes.
+  //    **/
+  //   return () => window.removeEventListener("resize", handle_resize);
 
-    // The effect re-syncs whenever current_display changes to avoid stale closures
-  }, [current_display]);
+  //   // The effect re-syncs whenever current_display changes to avoid stale closures
+  // }, [current_display]);
 
   return (
     <div className={style.products_grid}>
       <Products_grid_header />
-      {!isLoading && filter_products && <Products_grid_content />}
-      {isLoading && (
+      {/* {!isLoading && filter_products && <Products_grid_content />} */}
+      {/* {isLoading && (
         <div className="min-h-75 w-full flex-center">Loading...</div>
-      )}
+      )} */}
       <Bubbles />
       {is_quick_view_open && <Quick_view />}
     </div>

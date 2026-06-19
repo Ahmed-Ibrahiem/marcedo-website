@@ -55,7 +55,7 @@ const ProductCardAdmin = ({ productsData }) => {
               handleSelectedProducts(productsData.id);
             }}
             type="checkbox"
-            className="absolute! left-0! top-0! w-6.5! h-6.5! border-[1.5px]! checked:border-orange! after:-top-px! after:-left-px"
+            className="absolute!  left-0! top-0! w-6.5! h-6.5! border-[1.5px]! checked:border-orange! after:-top-px! after:-left-px checkbox"
           />
           <img loading="lazy"
             src={productsData.thumbnail}

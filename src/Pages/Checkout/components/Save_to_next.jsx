@@ -12,6 +12,7 @@ const Save_to_next = () => {
         type="checkbox"
         id="save_to_next"
         {...register("save_address_info_next")}
+        className="checkbox"
       />
       <label htmlFor="save_to_next">Save this information for next time</label>
     </div>

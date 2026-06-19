@@ -1,4 +1,11 @@
-import { collection, getDocs, query, where } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+} from "firebase/firestore";
 import { db } from "./firestoreConfig";
 
 export const getCategoryName = async (categoryIds) => {
@@ -39,3 +46,15 @@ export const getAllCategories = async () => {
   return [...snapshot.docs.map((doc) => doc.data())];
 };
 
+export const getCategoryBySlug = async (categorySlug) => {
+  const q = query(
+    collection(db, "categories"),
+    where("slug", "==", categorySlug),
+  );
+
+  const snapshot = await getDocs(q);
+
+  if (snapshot.empty) return null;
+
+  return snapshot.docs[0].data();
+};

@@ -2,7 +2,6 @@ import { useState } from "react";
 import style from "../CSS/Products_grid.module.css";
 import { display_image } from "../../../assets/assets";
 import { use_products_grid_context } from "../../../Context/ProductsGridProvider";
-import { use_categories_context } from "../../../Context/CategoriesProvider";
 import { motion } from "framer-motion";
 
 const Products_grid_header = () => {
@@ -25,8 +24,6 @@ const Products_grid_header = () => {
     "Date, old to new",
     "Date, new to old",
   ];
-
-  const { set_sort_option } = use_categories_context();
 
   return (
     <motion.div
@@ -61,7 +58,6 @@ const Products_grid_header = () => {
                 key={index}
                 onClick={() => {
                   set_current_sort_type(option);
-                  set_sort_option(option);
                 }}
               >
                 {option}

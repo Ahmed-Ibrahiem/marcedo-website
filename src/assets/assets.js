@@ -51,18 +51,14 @@ export const languages = [
 export const display_image = [
   {
     count: 2,
-    image: display_2,
-  },
-  {
-    count: 4,
     image: display_4,
   },
   {
-    count: 6,
+    count: 3,
     image: display_6,
   },
   {
-    count: 8,
+    count: 4,
     image: display_8,
   },
 ];

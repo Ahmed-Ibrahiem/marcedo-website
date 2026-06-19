@@ -5,6 +5,7 @@ import { use_products_grid_context } from "../../../Context/ProductsGridProvider
 import { use_pagination_context } from "../../../Context/PaginationProvider";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import ProductCard from "../../../Components/product/product-item/ProductCard";
 
 // Component that displays products in a responsive grid layout with dynamic column sizing
 const Products_grid_content = () => {
@@ -27,10 +28,10 @@ const Products_grid_content = () => {
   return (
     <>
       <div
-        className={`${style.products_grid_content}
-        ${current_display === 4 ? product_item_style.grid_2 : ""}
-        ${current_display === 6 ? product_item_style.grid_3 : ""}
-        ${current_display === 8 ? product_item_style.grid_4 : ""}`}
+        className={` grid grid-cols-1 xs:grid-cols-2 gap-5 mt-10 
+        ${current_display === 4 ? "xs:grid-cols-2!" : ""}
+        ${current_display === 6 ? "xs:grid-cols-3!" : ""}
+        ${current_display === 8 ? "xs:grid-cols-4!" : ""}`}
       >
         {/* Map through paginated products and render each product as a Product_item component */}
         {display_data.length > 0 &&
@@ -43,7 +44,7 @@ const Products_grid_content = () => {
               viewport={{ amount: 0.3, once: true }}
               // end animation
             >
-              <Product_item key={pro.id} data={pro} />
+              <ProductCard key={pro.id} product={pro} />
             </motion.div>
           ))}
       </div>

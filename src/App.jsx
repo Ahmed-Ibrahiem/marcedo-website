@@ -10,7 +10,6 @@ import Wishlist_page from "./Pages/Wishlist/Wishlist_page.jsx";
 import About_us from "./Pages/about-us-page/About_us.jsx";
 import Contact_page from "./Pages/contact-page/Contact_page.jsx";
 import Shop_page from "./Pages/Colliction/Shop_page.jsx";
-import Categories from "./Pages/Categories/Categories.jsx";
 import Checkout_page from "./Pages/Checkout/Checkout_page.jsx";
 import MainLayout from "./Pages/Layout/MainLayout.jsx";
 import Order_successfull from "./Pages/order-seccessfull/Order_successfull.jsx";
@@ -23,6 +22,7 @@ import Customers from "./Pages/Admin/Customers.jsx";
 import ProductDetailsPage from "./Pages/product-details/ProductDetailsPage.jsx";
 import NewProductForm from "./Pages/Admin/product-form-components/NewProductForm.jsx";
 import QuickViewPopup from "./Components/layout/quick-view/QuickViewPopup.jsx";
+import CategoriesPage from "./Pages/categories-page/CategoriesPage.jsx";
 
 const App = () => {
   return (
@@ -46,8 +46,8 @@ const App = () => {
           <Route path="/about-us" element={<About_us />} />
           <Route path="/contact-us" element={<Contact_page />} />
           <Route path="/shop" element={<Shop_page />} />
-          <Route path="/categories/:category_type" element={<Categories />} />
-          <Route path="/shop/:category_type" element={<Categories />} />
+          <Route path="/categories/:categorySlug" element={<CategoriesPage />} />
+          <Route path="/shop/:categorySlug" element={<CategoriesPage />} />
           <Route path="/order-success" element={<Order_successfull />} />
         </Route>
         <Route path="/admin" element={<AdminLayout />}>

@@ -126,6 +126,7 @@ const ReviewStepFour = () => {
                   >
                     <input
                       type="checkbox"
+                      className="checkbox"
                       id={tag}
                       onChange={() => handleSelectedTags(tag)}
                     />

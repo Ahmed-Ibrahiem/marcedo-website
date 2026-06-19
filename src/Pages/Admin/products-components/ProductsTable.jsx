@@ -18,7 +18,7 @@ const ProductsTable = ({ productsData }) => {
                 type="checkbox"
                 name=""
                 id=""
-                className="w-5! h-5! border-gray-300!"
+                className="w-5! h-5! border-gray-300! checkbox"
               />
             </div>
           </th>
