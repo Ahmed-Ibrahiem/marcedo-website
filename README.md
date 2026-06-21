@@ -147,11 +147,13 @@ The system needed to be able to answer:
 ---
 
 ### 2. Dynamic, Category-Aware Filtering
-
-Each category in the store has a different set of filterable attributes (e.g. Electronics has Storage, Connectivity, and Screen Size, while Clothing has Size and Color). Filter values also live in the `product_variants` collection, separate from the `products` collection.
-
-The first approach queried `product_variants` separately on every category page load, in addition to the `products` and `category` queries. This worked, but meant every page visit paid for an extra round trip to Firestore just to build the filter sidebar.
-
+ 
+Each category has a different set of filterable attributes (e.g. Electronics has Storage and Connectivity, Clothing has Size and Color), and filter values live in a separate `product_variants` collection.
+ 
+**Solution:** Kept the data normalized and solved the N+1 query risk by batching variant requests with Firestore's `in` queries (chunked by 30) fetched in parallel. The filtering logic itself is fully dynamic via `Object.entries()`, so new filter attributes require no code changes.
+ 
+*Full reasoning behind this decision: see [DEVLOG.md](./DEVLOG.md).*
+ 
 ---
 
 ## What I Learned

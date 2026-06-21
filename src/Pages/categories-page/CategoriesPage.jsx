@@ -18,6 +18,7 @@ const CategoriesPage = () => {
   const [isError, setIsError] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeFilters, setActiveFilters] = useState({});
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
   const handleFilterChange = (key, value) => {
     setActiveFilters((prev) => {
@@ -83,6 +84,8 @@ const CategoriesPage = () => {
         categoriesPageInfo.variants,
         categoriesPageInfo.products,
       );
+
+      if (products) setFilteredProducts(products);
     };
 
     getProducts();
@@ -107,7 +110,7 @@ const CategoriesPage = () => {
               max={categoriesPageInfo.price.max}
               min={categoriesPageInfo.price.min}
               setIsSidebarOpen={setIsSidebarOpen}
-              filterProducts={categoriesPageInfo.products}
+              filterProducts={filteredProducts}
             />
           </div>
         </div>

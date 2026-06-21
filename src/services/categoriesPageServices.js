@@ -185,25 +185,26 @@ export const getFilterProducts = async (
     if (!matchesPrice) return false; // مفيش داعي نكمل لو السعر مش مطابق أصلاً
 
     const productVariant = resetVariants.find(
-      (variant) => variant.product_id === product.id,
+      (variant) => variant.products_id === product.id,
     );
 
     // 2. التحقق من باقي الـ variants filters (ديناميكي زي قبل كده)
     if (activeFilter.variants) {
-      const matchesVariants = Object.entries(activeFilter.variants).every(
-        ([filterKey, selectedValues]) => {
-          if (!selectedValues || selectedValues.length === 0) return true;
+      // first redesign activeFilter variants to array of objects
+      const resetFilterVariants = Object.entries(activeFilter.variants);
 
-          const productValues = resetVariants.variants?.[filterKey];
-          console.log(filterKey)
-          if (!productValues) return false;
+      // check the activeFilter Variant matches with products variants or not
+      const matchesVariants = resetFilterVariants.every(([key, values]) => {
+        const productsValues = productVariant.variants[key];
 
-          return selectedValues.some((val) => productValues.includes(val));
-        },
-      );
+        if (!productsValues) return false;
+
+        return values.some((value) => productsValues.includes(value));
+      });
 
       return matchesVariants;
     } else return true;
   });
 
+  return filteredProducts;
 };
