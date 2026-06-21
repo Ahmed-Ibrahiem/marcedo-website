@@ -65,4 +65,29 @@ Normalized vs. denormalized isn't a "correct answer" — it's a read-heavy vs. w
 
 ---
 
+## 2026-06-21 — Filter scoping: from "show everything" to "build schema from real data"
+ 
+**The problem (continuing from the unresolved filter UX issue above):**
+Looked at how other live stores (Shopify-based) handle this — categories like "Air Tools" only showed a Brand filter, while "Shoes" and "Accessories" showed Color and Size. Filters weren't fixed per site; they were scoped per category based on what actually made sense for the products in it.
+ 
+**First idea — Union (wrong):**
+My first instinct was: if *any* product in the category has a "color", show the Color filter. Quickly realized this just recreates the original problem — a single product with an unrelated attribute can still pollute the filter list and lead to zero-result combinations.
+ 
+**Second idea — Intersection (mine, more correct but fragile):**
+Proposed only showing a filter if *all* products in the category share that attribute, computed dynamically by comparing each product's `availableFilters` keys. This is logically sound but fragile in production: one mismatched product (e.g. added without a "color" field) would silently remove the Color filter for everyone, with no clear reason why from the admin's side.
+ 
+**Third idea — Category-level schema (the realistic answer):**
+The actual industry pattern isn't computing filters dynamically at read time at all — it's defining filterable attributes at the category level, set as data evolves, not guessed upfront. Instead of the admin manually declaring a category's filters in advance (error-prone — they could pick "Color" for a category with no colored products), the schema builds itself incrementally: when a variant is saved with a new attribute (e.g. "Storage"), that attribute is added to the category's `filterableAttributes` via Firestore's `arrayUnion`. No separate "define filters" step to get wrong, and no risk of a single bad product hiding a filter everyone else needs.
+ 
+**The real blocker — build order:**
+While working through this, realized the actual issue wasn't the filtering logic at all — it was build order. The Admin "Add/Edit Product" flow is what *creates* the variant/schema shape; the client-side filtering is what *consumes* it. I had been designing the consumer (filters) before the producer (the form that defines what variants look like) existed, which is why every filtering approach felt like guesswork. The producer needs to exist first.
+ 
+**Decision:**
+Pausing client-side dynamic filter work until the Admin "Add New Product" form is built and proven on real products. Once variants are actually being created through a stable form, the category schema (and therefore the filters) will reflect real data instead of assumptions — and the filtering logic itself becomes simple, since it just reads an already-correct schema rather than trying to infer one.
+ 
+**What I learned:**
+Spent real effort solving "how do filters decide what to show" before solving "how does data get created in the first place." When a read-side problem keeps resisting clean solutions, it's worth checking whether the write side it depends on is actually finished — building consumer before producer makes every downstream decision harder than it needs to be.
+ 
+---
+
 <!-- Add new entries above this line, newest first -->
