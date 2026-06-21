@@ -6,7 +6,7 @@ const seedCollection = async (collectionName, data = []) => {
   const batch = writeBatch(db);
 
   data.forEach((item) => {
-    const ref = doc(collection(db, collectionName), String(item.product_id));
+    const ref = doc(collection(db, collectionName), String(item.id));
     batch.set(ref, item);
   });
 
@@ -15,7 +15,7 @@ const seedCollection = async (collectionName, data = []) => {
 
 export const seedAllData = async () => {
   try {
-    await seedCollection("/product-variants", variants);
+    await seedCollection("products", products);
     // await seedCollection("products", products);
     // await seedCollection("brands", brands);
    

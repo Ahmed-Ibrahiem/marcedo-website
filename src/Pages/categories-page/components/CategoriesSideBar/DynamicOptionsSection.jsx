@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { FaAngleUp } from "react-icons/fa6";
 
-const DynamicOptionsSection = ({ option }) => {
+const DynamicOptionsSection = ({
+  option,
+  activeFilters,
+  handleFilterChange,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -18,19 +22,32 @@ const DynamicOptionsSection = ({ option }) => {
         style={{ maxHeight: isMenuOpen ? "320px" : "0" }}
       >
         {option.key === "color" ? (
-          <ColorOptions option={option} />
+          <ColorOptions
+            option={option}
+            activeFilters={activeFilters}
+            handleFilterChange={handleFilterChange}
+          />
         ) : (
-          <AntherOptions option={option} />
+          <AntherOptions
+            option={option}
+            activeFilters={activeFilters}
+            handleFilterChange={handleFilterChange}
+          />
         )}
       </ul>
     </div>
   );
 };
 
-const ColorOptions = ({ option }) => {
+const ColorOptions = memo(({ option, activeFilters, handleFilterChange }) => {
+  const currentSelected = activeFilters.variants
+    ? activeFilters.variants[option.key] || []
+    : [];
+
   return (
     <>
       {option.values.map((value, index) => {
+        const isChecked = currentSelected.includes(value.label);
         return (
           <li key={index} className="flex-start gap-2.5 cursor-pointer ">
             <input
@@ -38,8 +55,10 @@ const ColorOptions = ({ option }) => {
               style={{ "--bg-color": value.hex }}
               className="color_options w-6.5! h-6.5! "
               id={value.label}
+              checked={isChecked}
+              onChange={() => handleFilterChange(option.key, value.label)}
             />
-            <label className="grow" htmlFor={value.label}>
+            <label className="grow cursor-pointer" htmlFor={value.label}>
               {value.label}
             </label>
           </li>
@@ -47,15 +66,26 @@ const ColorOptions = ({ option }) => {
       })}
     </>
   );
-};
+});
 
-const AntherOptions = ({ option }) => {
+const AntherOptions = memo(({ option, activeFilters, handleFilterChange }) => {
+  const currentSelected = activeFilters.variants
+    ? activeFilters.variants[option.key] || []
+    : [];
+
   return (
     <>
       {option.values.map((value, index) => {
+        const isChecked = currentSelected.includes(value);
         return (
           <li key={index} className="flex-start gap-2.5">
-            <input type="checkbox" className="checkbox" id={value} />
+            <input
+              checked={isChecked}
+              onChange={() => handleFilterChange(option.key, value)}
+              type="checkbox"
+              className="checkbox"
+              id={value}
+            />
             <label className="text-sm grow cursor-pointer" htmlFor={value}>
               {value}
             </label>
@@ -64,6 +94,6 @@ const AntherOptions = ({ option }) => {
       })}
     </>
   );
-};
+});
 
-export default DynamicOptionsSection;
+export default React.memo(DynamicOptionsSection);

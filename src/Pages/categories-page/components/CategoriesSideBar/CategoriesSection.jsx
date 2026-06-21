@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { popular_categories } from "../../../../assets/assets";
 import { FaAngleUp } from "react-icons/fa6";
+import React, { memo } from "react";
 
 const CategoriesSeciton = () => {
   const [is_menu_open, set_is_menu_open] = useState(false);
@@ -41,4 +42,4 @@ const CategoriesSeciton = () => {
   );
 };
 
-export default CategoriesSeciton;
+export default React.memo(CategoriesSeciton);

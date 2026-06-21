@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { memo, useState } from "react";
 import { motion } from "framer-motion";
 import { display_image } from "../../../../assets/assets";
 import { use_products_grid_context } from "../../../../Context/ProductsGridProvider";
@@ -103,4 +103,4 @@ const CategoriesHead = ({
   );
 };
 
-export default CategoriesHead;
+export default React.memo(CategoriesHead);

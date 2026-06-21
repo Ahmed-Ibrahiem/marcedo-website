@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import CategoriesHead from "./CategoriesHead";
 import ProductsGridOfCategories from "../ProductsGridOfCategories";
 import PaginationBtns from "./PaginationBtns";
@@ -14,6 +14,7 @@ const CategoriesContent = ({ setIsSidebarOpen, min, max, filterProducts }) => {
     const products = sortProducts(filterProducts, selectedSort);
     setSortedProducts(products);
   }, [filterProducts, selectedSort]);
+
   return (
     <div className="grow">
       <CategoriesHead
@@ -38,4 +39,4 @@ const CategoriesContent = ({ setIsSidebarOpen, min, max, filterProducts }) => {
   );
 };
 
-export default CategoriesContent;
+export default React.memo(CategoriesContent);

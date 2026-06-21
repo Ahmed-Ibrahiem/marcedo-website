@@ -1,5 +1,5 @@
 import { FaMagnifyingGlass, FaSellcast, FaXmark } from "react-icons/fa6";
-import { useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import { getProductsByName } from "../../../services/ProductsServices";
 import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
@@ -155,4 +155,4 @@ const SearchOverlay = ({ isSearchOverlayOpen, setIsSearchOverlayOpen }) => {
   );
 };
 
-export default SearchOverlay;
+export default React.memo(SearchOverlay);

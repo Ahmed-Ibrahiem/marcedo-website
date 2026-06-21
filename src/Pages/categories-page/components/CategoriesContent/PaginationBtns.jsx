@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, memo } from "react";
 import useOutside_click from "../../../../Hooks/Outside_click";
 import { FaAngleDown, FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
@@ -35,7 +35,7 @@ const PaginationBtns = ({ sortedProducts, gridMode, setDisplayProducts }) => {
 
   useEffect(() => {
     if (!sortedProducts) return;
-    setCurrentPage(1)
+    setCurrentPage(1);
     const end = currentPage * rowsNumber;
     const start = end - rowsNumber;
     const products = [...sortedProducts.slice(start, end)];
@@ -148,4 +148,4 @@ const btnStyle = `
 w-7.5 h-7.5 rounded-sm border border-border flex-center text-black-lite
 `;
 
-export default PaginationBtns;
+export default React.memo(PaginationBtns);

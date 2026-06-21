@@ -41,7 +41,7 @@ export const getCategoriesPageInfo = async (slug) => {
   /* =====================
   Get All variants of products
   ======================== */
-  const optionsValues = await getVariantsOptions(products);
+  const { optionsValues, allVariants } = await getVariantsOptions(products);
 
   /* =====================
   Get All Brands of products
@@ -53,6 +53,7 @@ export const getCategoriesPageInfo = async (slug) => {
     price: { min: minPrice, max: maxPrice },
     options: optionsValues,
     brands: brandsOptions,
+    variants: allVariants,
   };
 };
 
@@ -83,35 +84,28 @@ const getVariantsOptions = async (products) => {
   /* =======================
   Get the Option of variaint
   ========================= */
-  const productsOptions = [
-    ...new Set(
-      allVariants.flatMap((variant) => variant.options).flatMap((v) => v.key),
-    ),
-  ];
 
-  // Get the value of options
+  const allOptions = allVariants.flatMap((variant) => variant.options);
+
+  const productsOptions = [...new Set(allOptions.flatMap((v) => v.key))];
+
   const optionsValues = productsOptions.map((option) => {
-    // return all values of varainst except color because his values are array of object
-    // unlike others of variants have values are array of string
     if (option !== "color") {
       return {
         key: [option],
         values: [
           ...new Set(
-            allVariants
-              .flatMap((variant) => variant.options)
+            allOptions
               .filter((op) => op.key === option)
               .flatMap((op) => [...op.values]),
           ),
         ],
       };
     } else {
-      const colorObjects = allVariants
-        .flatMap((variant) => variant.options)
+      const colorObjects = allOptions
         .filter((op) => op.key === "color")
-        .flatMap((op) => op.values); // [{ label, hex }, { label, hex }, ...]
+        .flatMap((op) => op.values);
 
-      // Remove the repeat by using label
       const uniqueColors = Object.values(
         Object.fromEntries(colorObjects.map((c) => [c.label, c])),
       );
@@ -120,7 +114,7 @@ const getVariantsOptions = async (products) => {
     }
   });
 
-  return optionsValues;
+  return { optionsValues, allVariants };
 };
 
 /* ===================================================
@@ -151,10 +145,65 @@ export const sortProducts = (products, sortType) => {
     case "price, high to low":
       return [...products].sort((a, b) => b.current_price - a.current_price);
     case "date, old to new":
-      return [...products].sort((a, b) => new Date(a.created_at) - new Date(b.created_at) );
+      return [...products].sort(
+        (a, b) => new Date(a.created_at) - new Date(b.created_at),
+      );
     case "date, new to old":
-      return [...products].sort((a, b) => new Date(b.created_at) - new Date(a.created_at) );
+      return [...products].sort(
+        (a, b) => new Date(b.created_at) - new Date(a.created_at),
+      );
     default:
       return [...products];
   }
+};
+
+export const getFilterProducts = async (
+  activeFilter,
+  variantsProducts,
+  products,
+) => {
+  if (!variantsProducts || !products) return;
+
+  const resetVariants = variantsProducts.map((item) => ({
+    products_id: item.product_id,
+    variants: Object.fromEntries(
+      item.options.map((option) => {
+        if (option.key === "color")
+          return [[option.key], [...option.values.map((val) => val.label)]];
+        else return [[option.key], [...option.values]];
+      }),
+    ),
+  }));
+
+  // get the products that's between the price range
+  const filteredProducts = products.filter((product) => {
+    // 1. التحقق من الـ price range الأول (منطق مختلف تمامًا)
+    const { min, max } = activeFilter.price;
+    const matchesPrice =
+      product.current_price >= min && product.current_price <= max;
+
+    if (!matchesPrice) return false; // مفيش داعي نكمل لو السعر مش مطابق أصلاً
+
+    const productVariant = resetVariants.find(
+      (variant) => variant.product_id === product.id,
+    );
+
+    // 2. التحقق من باقي الـ variants filters (ديناميكي زي قبل كده)
+    if (activeFilter.variants) {
+      const matchesVariants = Object.entries(activeFilter.variants).every(
+        ([filterKey, selectedValues]) => {
+          if (!selectedValues || selectedValues.length === 0) return true;
+
+          const productValues = resetVariants.variants?.[filterKey];
+          console.log(filterKey)
+          if (!productValues) return false;
+
+          return selectedValues.some((val) => productValues.includes(val));
+        },
+      );
+
+      return matchesVariants;
+    } else return true;
+  });
+
 };

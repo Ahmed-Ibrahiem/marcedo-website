@@ -2,11 +2,15 @@ import { motion } from "framer-motion";
 import CategoriesSeciton from "./CategoriesSection";
 import PriceSection from "./PriceSection";
 import DynamicOptionsSection from "./DynamicOptionsSection";
+import React, { memo } from "react";
 
 const CategoriesSideBar = ({
   isSidebarOpen,
   setIsSidebarOpen,
   categoriesPageInfo,
+  activeFilters,
+  handleFilterChange,
+  setActiveFilters,
 }) => {
   const price = categoriesPageInfo.price;
 
@@ -34,10 +38,20 @@ const CategoriesSideBar = ({
         {/* Category */}
         <CategoriesSeciton />
         {/* Price */}
-        <PriceSection max={price.max} min={price.min} />
+        <PriceSection
+          max={price.max}
+          min={price.min}
+          activeFilters={activeFilters}
+          setActiveFilters={setActiveFilters}
+        />
         {/* Other Options */}
         {categoriesPageInfo.options.map((option, index) => (
-          <DynamicOptionsSection option={option} key={index} />
+          <DynamicOptionsSection
+            option={option}
+            key={index}
+            activeFilters={activeFilters}
+            handleFilterChange={handleFilterChange}
+          />
         ))}
       </div>
     </motion.aside>
@@ -61,4 +75,4 @@ border border-black min-w-8.5 min-h-8.5 rounded-[5px] transition-colors duration
 z-10 hover:bg-white hover:border-gray hover:text-black self-end mt-2.5 mr-2.5
 `;
 
-export default CategoriesSideBar;
+export default React.memo(CategoriesSideBar);

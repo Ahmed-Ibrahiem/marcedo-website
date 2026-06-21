@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import { FaAngleUp } from "react-icons/fa6";
 
-const PriceSection = ({ min, max }) => {
+const PriceSection = ({ min, max, setActiveFilters }) => {
   const [is_menu_open, set_is_menu_open] = useState(false);
   const [min_price, set_min_price] = useState(0);
   const [max_price, set_max_price] = useState(max);
@@ -15,21 +15,20 @@ const PriceSection = ({ min, max }) => {
     set_progress_width((prev) => ({ ...prev, left, width }));
   };
 
-  //   const update_price_info = () => {
-  //     const price_info = { ...filter_options.price };
-  //     dispatch_filter({
-  //       type: "UPDATE_PRICE",
-  //       payload: { ...price_info, min: min_price, max: max_price },
-  //     });
-  //   };
-
   useEffect(() => {
     update_progress_UI();
     if (!progress_ref.current) return;
     if (+min_price > +max_price) {
       progress_ref.current.style.width = "0%";
     }
-    // update_price_info();
+
+    setActiveFilters((prev) => ({
+      ...prev,
+      price: {
+        min: min_price,
+        max: max_price,
+      },
+    }));
   }, [min_price, max_price]);
 
   return (
@@ -133,6 +132,7 @@ appearance-none bg-transparent pointer-events-none
 [&::-webkit-slider-thumb]:w-3.5
 [&::-webkit-slider-thumb]:h-3.5
 [&::-webkit-slider-thumb]:rounded-full
+[&::-webkit-slider-thumb]:cursor-pointer
 [&::-webkit-slider-thumb]:pointer-events-auto
 `;
 
@@ -147,5 +147,6 @@ appearance-none bg-transparent pointer-events-none
 [&::-webkit-slider-thumb]:h-3.5
 [&::-webkit-slider-thumb]:rounded-full
 [&::-webkit-slider-thumb]:pointer-events-auto
+[&::-webkit-slider-thumb]:cursor-pointer
 `;
-export default PriceSection;
+export default React.memo(PriceSection);
