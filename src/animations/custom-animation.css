@@ -86,3 +86,12 @@
     width: 0px;
   }
 }
+
+@keyframes loading-animate-1 {
+  0%{
+    rotate: 0;
+  }
+  100%{
+    rotate: 360deg;
+  }
+}

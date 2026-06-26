@@ -1,0 +1,22 @@
+# Add new category (Problem solves):
+
+[1] Re-structure the categories collection to encode the categories to levels.
+[2] Get the level 1 of categories.
+[3] Review the categories of level 1.
+[4] Get the level 2 for level 1 of user category.
+[5] Review the category of level 2.
+[6] if user click on save category then:
+    [1] create object contain the
+        {
+            level number (in this the number = 2),
+            parent id ,
+            category name , 
+            category id ,
+            category slug,
+            category image (optional),
+            category active (optional),
+        }
+    [2] Save the category in firestore
+[7] else if user click on category of level 2 then:
+   [1] Get the level 3 for level 2 of category.
+   [2] Review the category of level 2.

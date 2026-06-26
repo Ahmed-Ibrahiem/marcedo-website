@@ -8,20 +8,20 @@ import DropDownList from "../components/DropDownList";
 import { CiFilter, CiGrid41 } from "react-icons/ci";
 
 const status = [
-  { name: "Active", type: true, id: 1 },
-  { name: "Not Active", type: false, id: 2 },
+  { name: "Active", id: true },
+  { name: "Not Active", id: false },
 ];
 
 const stocks = [
-  { name: "In Stock", type: "in_stock", id: 1 },
-  { name: "Out Stock", type: "out_of_stock", id: 2 },
+  { name: "In Stock", id: "in_stock" },
+  { name: "Out Stock", id: "out_of_stock" },
 ];
 
 const sortList = [
-  { name: "Newest", type: "newest", id: 1 },
-  { name: "Best Seller", type: "best-seller", id: 2 },
-  { name: "A To Z", type: "a-to-z", id: 3 },
-  { name: "Z To A", type: "z-to-a", id: 4 },
+  { name: "Newest", id: "newest" },
+  { name: "Best Seller", id: "best-seller" },
+  { name: "A To Z", id: "a-to-z" },
+  { name: "Z To A", id: "z-to-a" },
 ];
 
 const ProductsActions = ({
@@ -62,7 +62,7 @@ const ProductsActions = ({
       {/* filterData.categories Dropdown */}
       {filterData.categories.length > 0 && (
         <DropDownList
-          currentSelect={filterOptions.categories.title}
+          currentSelect={filterOptions.categories.name}
           list={filterData.categories}
           optionFun={(item) => updateFilterOptions("UPDATE_CATEGORIES", item)}
           listType={"Categories"}
@@ -72,7 +72,7 @@ const ProductsActions = ({
       {/* filterData.brands Dropdown */}
       {filterData.brands.length > 0 && (
         <DropDownList
-          currentSelect={filterOptions.brands.title}
+          currentSelect={filterOptions.brands.name}
           list={filterData.brands}
           optionFun={(item) => updateFilterOptions("UPDATE_BRANDS", item)}
           listType={"Brands"}
@@ -82,7 +82,7 @@ const ProductsActions = ({
       {/* Status Dropdown */}
       {status.length > 0 && (
         <DropDownList
-          currentSelect={filterOptions.status.title}
+          currentSelect={filterOptions.status.name}
           list={status}
           optionFun={(item) => updateFilterOptions("UPDATE_STATUS", item)}
           listType={"Status"}
@@ -92,7 +92,7 @@ const ProductsActions = ({
       {/* Stocks Dropdown */}
       {stocks.length > 0 && (
         <DropDownList
-          currentSelect={filterOptions.stocks.title}
+          currentSelect={filterOptions.stocks.name}
           list={stocks}
           optionFun={(item) => updateFilterOptions("UPDATE_STOCKS", item)}
           listType={"Stocks"}
@@ -112,7 +112,7 @@ const ProductsActions = ({
       <DropDownList
         list={sortList}
         optionFun={(item) => updateFilterOptions("UPDATE_SORT", item)}
-        currentSelect={filterOptions.sort.title}
+        currentSelect={filterOptions.sort.name}
       />
 
       {/* Grid View */}
@@ -142,14 +142,14 @@ text-lg! w-8.5 h-8.5  flex-center rounded-sm hover:scale-105 border border-borde
 export default React.memo(ProductsActions, (prevProps, nextProps) => {
   return (
     prevProps.tableMode === nextProps.tableMode &&
-    prevProps.filterOptions.categories.type ===
-      nextProps.filterOptions.categories.type &&
-    prevProps.filterOptions.brands.type ===
-      nextProps.filterOptions.brands.type &&
-    prevProps.filterOptions.status.type ===
-      nextProps.filterOptions.status.type &&
-    prevProps.filterOptions.stocks.type ===
-      nextProps.filterOptions.stocks.type &&
-    prevProps.filterOptions.sort.type === nextProps.filterOptions.sort.type
+    prevProps.filterOptions.categories.id ===
+      nextProps.filterOptions.categories.id &&
+    prevProps.filterOptions.brands.id ===
+      nextProps.filterOptions.brands.id &&
+    prevProps.filterOptions.status.id ===
+      nextProps.filterOptions.status.id &&
+    prevProps.filterOptions.stocks.id ===
+      nextProps.filterOptions.stocks.id &&
+    prevProps.filterOptions.sort.id === nextProps.filterOptions.sort.id
   );
 });

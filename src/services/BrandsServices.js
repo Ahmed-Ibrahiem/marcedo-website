@@ -1,4 +1,4 @@
-import { collection, doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { db } from "./firestoreConfig";
 
 export const getBrandName = async (pro_id) => {
@@ -8,4 +8,13 @@ export const getBrandName = async (pro_id) => {
   if (!snapshot.exists) return null;
 
   return snapshot.data().name;
+};
+
+export const getAllBrands = async () => {
+  const collRef = collection(db, "brands");
+
+  const snapshot = await getDocs(collRef);
+  if (snapshot.empty) return [];
+
+  return snapshot.docs.map((doc) => doc.data());
 };

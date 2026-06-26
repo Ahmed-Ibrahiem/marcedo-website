@@ -15,7 +15,7 @@ const seedCollection = async (collectionName, data = []) => {
 
 export const seedAllData = async () => {
   try {
-    await seedCollection("products", products);
+    await seedCollection("categories", categories);
     // await seedCollection("products", products);
     // await seedCollection("brands", brands);
    

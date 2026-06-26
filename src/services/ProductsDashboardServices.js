@@ -37,35 +37,35 @@ export const getProductsStats = async () => {
         title: "Total Products",
         value: products.length,
         change: 8.2,
-        type: "total-products",
+        id: "total-products",
       },
       {
         id: 1,
         title: "In Stock",
         value: in_stock.length,
         change: 6.5,
-        type: "in-stock",
+        id: "in-stock",
       },
       {
         id: 2,
         title: "In Discount",
         value: inDiscount.length,
         change: 12.4,
-        type: "in-discount",
+        id: "in-discount",
       },
       {
         id: 3,
         title: "Out Stock",
         value: outStock.length,
         change: 2.1,
-        type: "out-of-stock",
+        id: "out-of-stock",
       },
       {
         id: 4,
         title: "Avg. Ratings",
         value: avgRatings,
         change: 0.3,
-        type: "ratings",
+        id: "ratings",
       },
     ];
   }
@@ -105,28 +105,28 @@ export const getProductsWithPaginations = async (filterOptions) => {
   const constraints = [];
 
   // Filter Products
-  if (filterOptions.categories.type !== "all-categories") {
+  if (filterOptions.categories.id !== "all-categories") {
     constraints.push(
       where("category_ids", "array-contains", filterOptions.categories.id),
     );
   }
-  if (filterOptions.brands.type !== "all-brands") {
+  if (filterOptions.brands.id !== "all-brands") {
     constraints.push(where("brand_id", "==", filterOptions.brands.id));
   }
-  if (filterOptions.status.type !== "all-status") {
-    constraints.push(where("is_active", "==", filterOptions.status.type));
+  if (filterOptions.status.id !== "all-status") {
+    constraints.push(where("is_active", "==", filterOptions.status.id));
   }
-  if (filterOptions.stocks.type !== "all-stocks") {
-    constraints.push(where("stock_status", "==", filterOptions.stocks.type));
+  if (filterOptions.stocks.id !== "all-stocks") {
+    constraints.push(where("stock_status", "==", filterOptions.stocks.id));
   }
   // Sort Products
-  if (filterOptions.sort.type === "newest")
+  if (filterOptions.sort.id === "newest")
     constraints.push(orderBy("created_at", "desc"));
-  else if (filterOptions.sort.type === "best-seller")
+  else if (filterOptions.sort.id === "best-seller")
     constraints.push(orderBy("sold_count", "asc"));
-  else if (filterOptions.sort.type === "a-to-z")
+  else if (filterOptions.sort.id === "a-to-z")
     constraints.push(orderBy("name", "asc"));
-  else if (filterOptions.sort.type === "a-to-z")
+  else if (filterOptions.sort.id === "a-to-z")
     constraints.push(orderBy("name", "desc"));
 
   // Get Produts Count
@@ -142,4 +142,3 @@ export const getProductsWithPaginations = async (filterOptions) => {
 
   return [...productsSnapshot.docs.map((doc) => doc.data())];
 };
-

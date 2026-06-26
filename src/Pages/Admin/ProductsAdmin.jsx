@@ -18,11 +18,11 @@ import SelectedProductsContorls from "./products-components/SelectedProductsCont
 import { exportAllProductsToExcel } from "../../Utils/excelExport";
 
 const initailFilter = {
-  categories: { title: "All Categories", type: "all-categories" },
-  brands: { title: "All Brands", type: "all-brands" },
-  status: { title: "All Status", type: "all-status" },
-  stocks: { title: "All Stocks", type: "all-stocks" },
-  sort: { title: "Newest", type: "newest" },
+  categories: { name: "All Categories", id: "all-categories" },
+  brands: { name: "All Brands", id: "all-brands" },
+  status: { name: "All Status", id: "all-status" },
+  stocks: { name: "All Stocks", id: "all-stocks" },
+  sort: { name: "Newest", id: "newest" },
 };
 
 const filterReducer = (state, action) => {
@@ -59,7 +59,7 @@ const ProductsAdmin = () => {
   const updateFilterOptions = useCallback((type, payload) => {
     dispatchFilterOptions({ type: type, payload: payload });
   }, []);
-
+  
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
