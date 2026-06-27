@@ -10,7 +10,7 @@ import {
   getlevelOneOfCategories,
   getLevelTwoByCategoryId,
 } from "../../../../services/CategoriesServices";
-import DropDownList from "../../components/DropDownList";
+import DropDownList from "../DropDownList";
 import { motion } from "framer-motion";
 import { GiCheckMark } from "react-icons/gi";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
@@ -28,19 +28,26 @@ const NewCategoryPopup = ({
   const [levelTwoCategories, setLevelTwoCategories] = useState([]);
   const [parentWarning, setParentWarning] = useState(false);
   const [categNameWarning, setCategNameWarning] = useState(false);
-  const [isAleardyExist, setIsAlreadyExist] = useState(false);
+  const [isAlreadyExist, setIsAlreadyExist] = useState(false);
   const [loading, setLoading] = useState(false);
   const [confirmAdded, setConfirmAdded] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if (categoryType === "main") return;
-    const getLevelOne = async () => {
-      const categs = await getlevelOneOfCategories();
-      setLevelOneCategories(categs);
+    if (categoryType === "main") {
       setSelectedLevelOne(null);
+      setSelectedLevelTwo(null);
+      setLevelOneCategories([]);
       setLevelTwoCategories([]);
-    };
-    getLevelOne();
+    } else {
+      const getLevelOne = async () => {
+        const categs = await getlevelOneOfCategories();
+        setLevelOneCategories(categs);
+        setSelectedLevelOne(null);
+        setLevelTwoCategories([]);
+      };
+      getLevelOne();
+    }
   }, [categoryType]);
 
   useEffect(() => {
@@ -53,15 +60,6 @@ const NewCategoryPopup = ({
     getCategsOfLev2();
   }, [selectedLevelOne]);
 
-  useEffect(() => {
-    if (categoryType === "sub") return;
-
-    setSelectedLevelOne(null);
-    setSelectedLevelTwo(null);
-    setLevelOneCategories([]);
-    setLevelTwoCategories([]);
-  }, [categoryType]);
-
   const defaultValues = () => {
     setCategoryName("");
     setCategNameWarning(false);
@@ -70,17 +68,17 @@ const NewCategoryPopup = ({
   };
 
   const handleAddCategory = async () => {
+    if (!categoryName.trim()) {
+      setCategNameWarning(true);
+      return;
+    }
+    if (categoryType === "sub" && !selectedLevelOne) {
+      setParentWarning(true);
+      return;
+    }
+
     setLoading(true);
     try {
-      if (!categoryName.trim()) {
-        setCategNameWarning(true);
-        return;
-      }
-      if (categoryType === "sub" && !selectedLevelOne) {
-        setParentWarning(true);
-        return;
-      }
-
       const parentId = selectedLevelTwo
         ? selectedLevelTwo?.id
         : selectedLevelOne?.id;
@@ -99,6 +97,8 @@ const NewCategoryPopup = ({
 
       setConfirmAdded(true);
     } catch (error) {
+      console.log(error);
+      setIsError(true);
     } finally {
       setLoading(false);
     }
@@ -166,7 +166,7 @@ const NewCategoryPopup = ({
                 This Field Is Required
               </span>
             )}
-            {isAleardyExist && (
+            {isAlreadyExist && (
               <span className="text-red-500 absolute -bottom-5 text-xs font-semibold">
                 This Category Name Is Already Exist
               </span>
@@ -278,7 +278,7 @@ const NewCategoryPopup = ({
                     <DropDownList
                       list={levelTwoCategories}
                       currentSelect={
-                        selectedLevelTwo?.name || "select category (optional)"
+                        selectedLevelTwo?.name || "none"
                       }
                       optionFun={(item) => {
                         setSelectedLevelTwo(item);

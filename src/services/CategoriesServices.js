@@ -78,8 +78,6 @@ export const getLevelTwoByCategoryId = async (parentId) => {
     where("parent_id", "==", parentId),
   );
 
-  console.log(parentId);
-
   const snapshot = await getDocs(q);
 
   if (snapshot.empty) return [];

@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import FormProgress from "./components/FormProgress";
 import Step1 from "./steps/Step1";
 import StepsControl from "./steps/StepsControl";
 import { AnimatePresence } from "framer-motion";
 import Step2 from "./steps/Step2";
 import AddNewBrandPopup from "./components/AddNewBrandPopup";
-import NewCategoryPopup from "./components/NewCategoryPopup";
+import NewCategoryPopup from "../components/category-form/NewCategoryPopup";
 import { getAllBrands } from "../../../services/BrandsServices";
 import { getAllCategories } from "../../../services/CategoriesServices";
+import { basicReducer, intialBasic } from "./utils/reducerData";
 
 const variants = {
   hidden: {
@@ -42,6 +43,7 @@ const NewProductForm = () => {
   const [allBrands, setAllBrands] = useState([]);
   const [allCategories, setAllCategories] = useState([]);
   const [allSubCategories, setSubCategories] = useState([]);
+  const [basicData, dispatchBasicData] = useReducer(basicReducer, intialBasic);
 
   useEffect(() => {
     const getBrands = async () => {
@@ -53,7 +55,6 @@ const NewProductForm = () => {
       }));
 
       setAllBrands(brands);
-    
     };
 
     const getCategories = async () => {
