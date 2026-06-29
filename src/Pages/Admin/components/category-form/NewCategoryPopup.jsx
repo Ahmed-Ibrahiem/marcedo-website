@@ -15,11 +15,7 @@ import { motion } from "framer-motion";
 import { GiCheckMark } from "react-icons/gi";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
-const NewCategoryPopup = ({
-  setOpenCategoryPopup,
-  setAllCategories,
-  setSubCategories,
-}) => {
+const NewCategoryPopup = ({ setOpenCategoryPopup, setAllCategories }) => {
   const [categoryType, setCategoryType] = useState("main");
   const [categoryName, setCategoryName] = useState("");
   const [selectedLevelOne, setSelectedLevelOne] = useState(null);
@@ -92,8 +88,7 @@ const NewCategoryPopup = ({
 
       const categData = { name: category.name, id: category.id };
 
-      if (parentId) setSubCategories((prev) => [...prev, categData]);
-      else setAllCategories((prev) => [...prev, categData]);
+      setAllCategories((prev) => [...prev, categData]);
 
       setConfirmAdded(true);
     } catch (error) {
@@ -277,9 +272,7 @@ const NewCategoryPopup = ({
                   <div className="flex-start gap-2.5 w-full text-xs!">
                     <DropDownList
                       list={levelTwoCategories}
-                      currentSelect={
-                        selectedLevelTwo?.name || "none"
-                      }
+                      currentSelect={selectedLevelTwo?.name || "none"}
                       optionFun={(item) => {
                         setSelectedLevelTwo(item);
                       }}

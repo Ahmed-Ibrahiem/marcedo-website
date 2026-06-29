@@ -8,7 +8,10 @@ import AddNewBrandPopup from "./components/AddNewBrandPopup";
 import NewCategoryPopup from "../components/category-form/NewCategoryPopup";
 import { getAllBrands } from "../../../services/BrandsServices";
 import { getAllCategories } from "../../../services/CategoriesServices";
-import { basicReducer, intialBasic } from "./utils/reducerData";
+import { FormProvider, useForm } from "react-hook-form";
+import { step1Schema } from "./utils/reducerData.js";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { DevTool } from "@hookform/devtools";
 
 const variants = {
   hidden: {
@@ -36,14 +39,37 @@ const variants = {
   },
 };
 
+const schemas = [step1Schema];
+
 const NewProductForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [openCategoryPopup, setOpenCategoryPopup] = useState(false);
   const [stepOneInfo, setStepOneInfo] = useState({ name: "" });
   const [allBrands, setAllBrands] = useState([]);
   const [allCategories, setAllCategories] = useState([]);
-  const [allSubCategories, setSubCategories] = useState([]);
-  const [basicData, dispatchBasicData] = useReducer(basicReducer, intialBasic);
+  const methods = useForm({
+    resolver: yupResolver(schemas[currentStep - 1]),
+    defaultValues: {
+      stock_status: "",
+      category_ids: [],
+      brand_id: "",
+      tags: [],
+      relatedIds: [],
+      thumbnail: "",
+      has_discount: false,
+      discount_percentage: 0,
+      original_price: 0,
+      currency: "",
+      name: "",
+      is_active: false,
+      is_best_seller: false,
+      is_featured: false,
+      short_description: "",
+    },
+    mode: "onChange",
+  });
+
+  const { control } = methods;
 
   useEffect(() => {
     const getBrands = async () => {
@@ -60,20 +86,16 @@ const NewProductForm = () => {
     const getCategories = async () => {
       const res = await getAllCategories();
 
-      const categories = res
-        .filter((categ) => !categ.parent_id)
-        .map((category) => ({ name: category.name, id: category.id }));
-
-      const subCategories = res
-        .filter((categ) => categ.parent_id)
-        .map((categ) => ({ name: categ.name, id: categ.id }));
-
-      setAllCategories(categories);
-      setSubCategories(subCategories);
+      setAllCategories(res);
     };
     getBrands();
     getCategories();
   }, []);
+
+  const handleNextStep = async () => {
+    const valid = await methods.trigger();
+    if (valid) setCurrentStep((prev) => prev + 1);
+  };
 
   return (
     <div className="h-full flex-start-col w-full gap-5">
@@ -84,33 +106,39 @@ const NewProductForm = () => {
       <FormProgress currentStep={currentStep} />
 
       <div className="grow w-full  mt-5 relative">
-        <AnimatePresence>
-          {currentStep === 1 && (
-            <Step1
-              allBrands={allBrands}
-              allCategories={allCategories}
-              allSubCategories={allSubCategories}
-              setOpenCategoryPopup={setOpenCategoryPopup}
-              key={"model-1"}
-              variants={variants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            />
-          )}
-          {currentStep === 2 && (
-            <Step2
-              key={"model-2"}
-              variants={variants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            />
-          )}
-        </AnimatePresence>
+        <FormProvider {...methods}>
+          <AnimatePresence>
+            {currentStep === 1 && (
+              <Step1
+                allBrands={allBrands}
+                allCategories={allCategories}
+                setOpenCategoryPopup={setOpenCategoryPopup}
+                // Animation
+                key={"model-1"}
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              />
+            )}
+            {currentStep === 2 && (
+              <Step2
+                key={"model-2"}
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              />
+            )}
+          </AnimatePresence>
+        </FormProvider>
       </div>
 
-      <StepsControl currentStep={currentStep} setCurrentStep={setCurrentStep} />
+      <StepsControl
+        currentStep={currentStep}
+        onNext={handleNextStep}
+        onBack={() => setCurrentStep((prev) => prev - 1)}
+      />
 
       {/* <AddNewBrandPopup /> */}
       <AnimatePresence>
@@ -119,10 +147,11 @@ const NewProductForm = () => {
             key={"model"}
             setOpenCategoryPopup={setOpenCategoryPopup}
             setAllCategories={setAllCategories}
-            setSubCategories={setSubCategories}
           />
         )}
       </AnimatePresence>
+
+      <DevTool control={control} />
     </div>
   );
 };

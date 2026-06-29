@@ -225,6 +225,16 @@
   .loading-animate-1{
     animation: loading-animate-1 3s both infinite linear;
   }
+
+  .label-form-style {
+    @apply font-bold text-xs sm:text-sm
+  }
+  .input-form-style{
+    @apply border border-border p-1.5 rounded-sm w-full outline-transparent focus:outline-1 focus:outline-gray-300  duration-500!
+  }
+  .box-form-style{
+    @apply flex flex-col w-full gap-1.5 text-sm relative
+  }
 }
 
 * {

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
-const StepsControl = ({ currentStep, setCurrentStep }) => {
+const StepsControl = ({ currentStep, onNext, onBack }) => {
   return (
     <div className="flex-between w-full bg-white p-2.5 rounded-sm shadow-[3px_3px_5px_var(--color-gray-300)] font-semibold">
       {currentStep === 1 ? (
@@ -10,7 +10,7 @@ const StepsControl = ({ currentStep, setCurrentStep }) => {
         </button>
       ) : (
         <button
-          onClick={() => setCurrentStep((prev) => prev - 1)}
+          onClick={onBack}
           className="px-5 py-2 text-sm flex-center gap-1.5 border border-border rounded-sm text-gray hover:text-black! hover:bg-gray-200!"
         >
           <FaArrowLeft />
@@ -18,7 +18,7 @@ const StepsControl = ({ currentStep, setCurrentStep }) => {
         </button>
       )}
       <button
-        onClick={() => setCurrentStep((prev) => prev + 1)}
+        onClick={onNext}
         className="px-5 text-sm py-2 flex-center border border-border rounded-sm bg-orange-lite gap-1.5 text-black hover:text-white! hover:bg-orange!"
       >
         <span>Continue</span>

@@ -1,155 +1,80 @@
-import React, { useEffect, useState } from "react";
-import DropDownList from "../../components/DropDownList";
-import { getAllBrands } from "../../../../services/BrandsServices";
-import { getAllCategories } from "../../../../services/CategoriesServices";
+import React from "react";
 import { motion } from "framer-motion";
+import { useFormContext } from "react-hook-form";
+import ErrorMessageFrom from "../../../../Components/ui/ErrorMessageFrom";
+import AddBrandDropDown from "./step1-components/AddBrandDropDown";
+import AddCategories from "./step1-components/AddCategories";
+import ShortDescription from "./step1-components/ShortDescription";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import DescriptionSection from "./step1-components/DescriptionSection";
 
 const Step1 = ({
   allBrands,
   allCategories,
-  allSubCategories,
   setOpenCategoryPopup,
   ...props
 }) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
   return (
     <motion.form
       {...props}
       onSubmit={(e) => e.preventDefault()}
-      className="w-full bg-white rounded-sm p-2.5 shadow-[3px_3px_5px_var(--color-gray-300)] flex-start-col gap-4  "
+      className="w-full bg-white rounded-sm p-2.5 pb-6 shadow-[3px_3px_5px_var(--color-gray-300)] flex-start-col gap-3"
     >
       <h1 className="font-bold">Basic Information</h1>
 
-      <div className={boxStyle}>
-        <label htmlFor="name" className={labelStyle}>
-          Product Name
-        </label>
-        <input
-          type="text"
-          className={inputStyle}
-          placeholder="Enter Product Name"
-        />
-      </div>
-
-      <div className="w-full flex-start gap-4 flex-wrap sm:flex-nowrap">
-        {allBrands.length > 0 ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className={`${boxStyle}  grow`}
-          >
-            <p className={labelStyle}>Brand</p>
-            <DropDownList
-              listStyle={"w-full justify-between!"}
-              currentSelect={"Select brand"}
-              list={allBrands}
-            >
-              <button className="sticky top-0 left-full z-10 w-fit p-1.5 rounded-sm bg-orange text-xs text-white font-black">
-                Add New +
-              </button>
-            </DropDownList>
-          </motion.div>
-        ) : (
-          <SkeletonLoading />
-        )}
-
-        {allCategories.length > 0 ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className={`${boxStyle} grow`}
-          >
-            <p className={labelStyle}>Category</p>
-            <DropDownList
-              listStyle={"w-full justify-between!"}
-              currentSelect={"Select category"}
-              list={allCategories}
-            >
-              <button
-                onClick={() => setOpenCategoryPopup(true)}
-                className="sticky top-0 left-full z-10 w-fit p-1.5 rounded-sm bg-orange text-xs text-white font-black"
-              >
-                Add New +
-              </button>
-            </DropDownList>
-          </motion.div>
-        ) : (
-          <SkeletonLoading />
-        )}
-
-        {allSubCategories.length > 0 ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className={`${boxStyle}  grow`}
-          >
-            <p className={labelStyle}>
-              Sub Category <span className="text-gray">(optional)</span>
-            </p>
-            <DropDownList
-              listStyle={"w-full justify-between!"}
-              currentSelect={"Select category"}
-              list={allSubCategories}
-            >
-              <button
-                onClick={() => setOpenCategoryPopup(true)}
-                className="sticky top-0 left-full z-10 w-fit p-1.5 rounded-sm bg-orange text-xs text-white font-black"
-              >
-                Add New +
-              </button>
-            </DropDownList>
-          </motion.div>
-        ) : (
-          <SkeletonLoading />
-        )}
-      </div>
-
-      <div className={boxStyle}>
-        <label htmlFor="name" className={labelStyle}>
-          Short Description
-        </label>
-        <textarea
-          className={`${inputStyle} h-20`}
-          placeholder="Enter short description"
-        />
-      </div>
-
-      <div className="w-full  bg-orange-lite rounded-sm min-h-fit p-2.5">
-        <div className="flex-start text-lg gap-1 font-bold text-orange">
-          <div className="image-box w-6 h-6 ">
-            <img src="/assets/images/idea.png" alt="" />
-          </div>
-          <h4>Tip</h4>
+      {/* Top row: product name, brand, categories */}
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+        {/* Product name — registered directly with RHF */}
+        <div className="box-form-style">
+          <label htmlFor="name" className="label-form-style">
+            Product Name
+          </label>
+          <input
+            {...register("name")}
+            type="text"
+            className="input-form-style"
+            placeholder="Enter Product Name"
+          />
+          {errors?.name && <ErrorMessageFrom message={errors.name.message} />}
         </div>
-        <p className="mt-2.5 text-sm">
-          You can add product images, attributes, variants, pricing and more in
-          the next steps.
-        </p>
+
+        {/* Brand dropdown — shows skeleton while brands are loading */}
+        {allBrands.length === 0 ? (
+          <SkeletonLoading />
+        ) : (
+          <AddBrandDropDown allBrands={allBrands} />
+        )}
+
+        {/* Category multi-select with popup to add new categories */}
+        <AddCategories
+          allCategories={allCategories}
+          setOpenCategoryPopup={setOpenCategoryPopup}
+        />
       </div>
+
+      {/* Short description with character counter */}
+      <ShortDescription />
+
+      {/* Block-based long description builder */}
+      <DescriptionSection />
     </motion.form>
   );
 };
 
+// Placeholder shown while brand data is being fetched
 const SkeletonLoading = () => {
   return (
-    <div className={`${boxStyle} w-81.5`}>
+    <div className="box-form-style w-full">
       <Skeleton width={100} height={15} />
-      <Skeleton className="w-30! md:w-60! " height={35} />
+      <Skeleton className="w-30! md:w-60!" height={35} />
     </div>
   );
 };
-
-const boxStyle = `
-flex-start-col w-full gap-1.5 text-sm
-`;
-
-const inputStyle = `
-border border-border p-1.5 rounded-sm w-full outline-transparent focus:outline-1 focus:outline-orange  duration-500!
-`;
-
-const labelStyle = `
-font-bold
-`;
 
 export default Step1;
