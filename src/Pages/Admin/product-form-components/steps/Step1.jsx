@@ -13,6 +13,7 @@ const Step1 = ({
   allBrands,
   allCategories,
   setOpenCategoryPopup,
+  setOpenBrandPopup,
   ...props
 }) => {
   const {
@@ -48,7 +49,10 @@ const Step1 = ({
         {allBrands.length === 0 ? (
           <SkeletonLoading />
         ) : (
-          <AddBrandDropDown allBrands={allBrands} />
+          <AddBrandDropDown
+            setOpenBrandPopup={setOpenBrandPopup}
+            allBrands={allBrands}
+          />
         )}
 
         {/* Category multi-select with popup to add new categories */}

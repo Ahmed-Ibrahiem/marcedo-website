@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ErrorMessageFrom from "../../../../../Components/ui/ErrorMessageFrom";
 import DropDownList from "../../../components/DropDownList";
 
-const AddBrandDropDown = ({ allBrands }) => {
+const AddBrandDropDown = ({ allBrands, setOpenBrandPopup }) => {
   const {
     control,
     formState: { errors },
@@ -31,7 +31,10 @@ const AddBrandDropDown = ({ allBrands }) => {
               list={allBrands}
               optionFun={(item) => field.onChange(item.id)}
             >
-              <button className="sticky top-0 left-full z-10 w-fit  p-1.5 rounded-sm bg-orange text-[10px] md:text-xs text-white font-black">
+              <button
+                onClick={() => setOpenBrandPopup(true)}
+                className="sticky top-0 left-full z-10 w-fit  p-1.5 rounded-sm bg-orange text-[10px] md:text-xs text-white font-black"
+              >
                 Add New +
               </button>
             </DropDownList>

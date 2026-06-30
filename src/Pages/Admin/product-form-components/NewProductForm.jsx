@@ -44,6 +44,7 @@ const schemas = [step1Schema];
 const NewProductForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [openCategoryPopup, setOpenCategoryPopup] = useState(false);
+  const [openBrandPopup, setOpenBrandPopup] = useState(false);
   const [stepOneInfo, setStepOneInfo] = useState({ name: "" });
   const [allBrands, setAllBrands] = useState([]);
   const [allCategories, setAllCategories] = useState([]);
@@ -113,6 +114,7 @@ const NewProductForm = () => {
                 allBrands={allBrands}
                 allCategories={allCategories}
                 setOpenCategoryPopup={setOpenCategoryPopup}
+                setOpenBrandPopup={setOpenBrandPopup}
                 // Animation
                 key={"model-1"}
                 variants={variants}
@@ -141,12 +143,20 @@ const NewProductForm = () => {
       />
 
       {/* <AddNewBrandPopup /> */}
-      <AnimatePresence>
+      <AnimatePresence mode="popLayout">
         {openCategoryPopup && (
           <NewCategoryPopup
             key={"model"}
             setOpenCategoryPopup={setOpenCategoryPopup}
             setAllCategories={setAllCategories}
+          />
+        )}
+        {openBrandPopup && (
+          <AddNewBrandPopup
+            key={"model2"}
+            allBrands={allBrands}
+            setAllBrands={setAllBrands}
+            setOpenBrandPopup={setOpenBrandPopup}
           />
         )}
       </AnimatePresence>
