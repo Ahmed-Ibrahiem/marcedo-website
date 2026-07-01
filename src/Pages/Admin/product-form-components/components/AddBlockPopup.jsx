@@ -245,7 +245,7 @@ const AddBlockPopup = ({ setOpenBlockPopup, addNewItem }) => {
         {/* Step 2: fill in block content based on selected type */}
         {currentStep > 1 && selectedType && (
           <div className="w-full box-form-style">
-            <h3 className="text-sm font-semibold mt-5 label-form-style">
+            <h3 className="text-sm font-semibold mt-5 mb-2.5 label-form-style">
               Add {selectedType.split("-").join(" ")}
             </h3>
 

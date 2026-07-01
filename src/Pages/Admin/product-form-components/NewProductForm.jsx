@@ -9,9 +9,10 @@ import NewCategoryPopup from "../components/category-form/NewCategoryPopup";
 import { getAllBrands } from "../../../services/BrandsServices";
 import { getAllCategories } from "../../../services/CategoriesServices";
 import { FormProvider, useForm } from "react-hook-form";
-import { step1Schema } from "./utils/reducerData.js";
+import { step1Schema, step2Schema } from "./utils/reducerData.js";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { DevTool } from "@hookform/devtools";
+import Step3 from "./steps/Step3.jsx";
 
 const variants = {
   hidden: {
@@ -39,10 +40,10 @@ const variants = {
   },
 };
 
-const schemas = [step1Schema];
+const schemas = [step1Schema, step2Schema];
 
 const NewProductForm = () => {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(2);
   const [openCategoryPopup, setOpenCategoryPopup] = useState(false);
   const [openBrandPopup, setOpenBrandPopup] = useState(false);
   const [stepOneInfo, setStepOneInfo] = useState({ name: "" });
@@ -66,6 +67,9 @@ const NewProductForm = () => {
       is_best_seller: false,
       is_featured: false,
       short_description: "",
+      thumbnail: "",
+      gallery: [],
+      videos: [],
     },
     mode: "onChange",
   });
@@ -126,6 +130,15 @@ const NewProductForm = () => {
             {currentStep === 2 && (
               <Step2
                 key={"model-2"}
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              />
+            )}
+            {currentStep === 3 && (
+              <Step3
+                key={"model-3"}
                 variants={variants}
                 initial="hidden"
                 animate="visible"

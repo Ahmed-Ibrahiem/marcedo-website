@@ -10,3 +10,8 @@ export const step1Schema = yup.object({
   category_ids: yup.array().min(1, "Category is Required"),
   description: yup.array().min(1, "There must be at least one block here"),
 });
+
+export const step2Schema = yup.object({
+  gallery: yup.array().min(1, "There must be at least one image"),
+  thumbnail: yup.string().required("This field is required"),
+});
