@@ -61,6 +61,7 @@ const AddCategories = ({ setOpenCategoryPopup, allCategories }) => {
                   {suggestedCategory.map((categ) => {
                     return (
                       <div
+                        key={categ.id}
                         onClick={() => {
                           if (
                             field.value.map((cat) => cat.id).includes(categ.id)
@@ -90,11 +91,11 @@ const AddCategories = ({ setOpenCategoryPopup, allCategories }) => {
               )}
             </div>
             {errors?.category_ids && (
-              <ErrorMessageFrom message={errors.category_ids.message} />
+              <ErrorMessageFrom style={"line-clamp-1 "} message={errors.category_ids.message} />
             )}
           </div>
           {/* Review Categories */}
-          <div className="flex-start min-w-0 flex-1 gap-1.5">
+          <div className="flex-start min-w-0 flex-1 gap-1.5 ">
             <FaAngleRight className="self-end mb-2 text-sm text-gray" />
             <div className={`${`box-form-style`} min-w-0`}>
               <h4 className={`label-form-style`}>Categories Selected</h4>

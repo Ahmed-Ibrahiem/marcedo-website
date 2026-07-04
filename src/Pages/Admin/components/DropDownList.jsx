@@ -8,6 +8,7 @@ const DropDownList = ({
   optionFun,
   listType,
   listStyle,
+  opionsStyle,
   children,
 }) => {
   const items = listType
@@ -35,7 +36,9 @@ const DropDownList = ({
       {isOpen && (
         <div className="options cursor-auto! h-25 max-h-25 overflow-y-auto fade-in-animate z-10 ">
           {children}
-          <div className="flex-start-col absolute inset-0 p-1.5 cursor-pointer w-[70%]">
+          <div
+            className={`flex-start-col absolute inset-0 p-1.5 cursor-pointer w-[70%] ${opionsStyle || ""}`}
+          >
             {items.map((item) => {
               return (
                 <span

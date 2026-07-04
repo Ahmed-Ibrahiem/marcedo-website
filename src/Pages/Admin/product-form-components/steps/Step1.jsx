@@ -74,9 +74,9 @@ const Step1 = ({
 // Placeholder shown while brand data is being fetched
 const SkeletonLoading = () => {
   return (
-    <div className="box-form-style w-full">
+    <div className="box-form-style max-w-full">
       <Skeleton width={100} height={15} />
-      <Skeleton className="w-30! md:w-60!" height={35} />
+      <Skeleton className="w-30! md:w-50!" height={35} />
     </div>
   );
 };

@@ -107,8 +107,8 @@ const CategoriesPage = () => {
               setActiveFilters={setActiveFilters}
             />
             <CategoriesContent
-              max={categoriesPageInfo.price.max}
-              min={categoriesPageInfo.price.min}
+              max={categoriesPageInfo?.price?.max}
+              min={categoriesPageInfo?.price?.min}
               setIsSidebarOpen={setIsSidebarOpen}
               filterProducts={filteredProducts}
             />

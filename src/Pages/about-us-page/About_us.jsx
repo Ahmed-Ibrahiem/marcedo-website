@@ -106,7 +106,12 @@ const About_us = () => {
         viewport={{ amount: 0.3, once: true }}
         className={style.video_section}
       >
-        <img src="/assets/modern1.jpg" className={style.poster} alt="" loading="lazy" />
+        <img
+          src="/assets/modern1.jpg"
+          className={style.poster}
+          alt=""
+          loading="lazy"
+        />
         <button onClick={() => set_start_video(true)}>
           <i className="fa-solid fa-play"></i>
         </button>
@@ -120,45 +125,7 @@ const About_us = () => {
         )}
       </motion.div>
 
-      {/* Start Show Our Team */}
-      <div className={style.page_container}>
-        <div className={style.our_team_area}>
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ amount: 0.8, once: true }}
-            className={style.title}
-          >
-            Meet Our Team
-          </motion.h1>
-          <div className={style.members}>
-            <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ amount: 0.3, once: true }}
-              className={style.member}
-            >
-              <div className={style.image_box}>
-                <img src={our_team[0].img} alt={our_team[0].name} loading="lazy"/>
-              </div>
-              <h3>{our_team[0].name}</h3>
-              <p>{our_team[0].job_desc}</p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ amount: 0.3, once: true }}
-              className={style.member}
-            >
-              <div className={style.image_box}>
-                <img src={our_team[1].img} alt={our_team[1].name} loading="lazy" />
-              </div>
-              <h3>{our_team[1].name}</h3>
-              <p>{our_team[1].job_desc}</p>
-            </motion.div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

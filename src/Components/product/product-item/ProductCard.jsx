@@ -194,7 +194,7 @@ const ProductCard = ({ product, cardHeight }) => {
         )}
       </div>
 
-      {/* Cart bottom */}
+      {/* Card bottom */}
       <div className="w-full flex-start-col gap-2.5 mt-5">
         <div className="flex-start gap-1 text-gray/45">
           {Array(5)

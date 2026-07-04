@@ -14,7 +14,7 @@ import { db } from "./firestoreConfig";
 const chunkArray = (array, size) => {
   const result = [];
 
-  for (let i = 0; i <= array.length; i += size) {
+  for (let i = 0; i < array.length; i += size) {
     result.push(array.slice(i, i + size));
   }
 
@@ -29,7 +29,7 @@ export const getCategoriesPageInfo = async (slug) => {
   Get Products Depend On Category Id
   ================================== */
   const products = await getProductsByCategories(category.id);
-  if (products.length === 0) return [];
+  if (products.length === 0) return null;
 
   /* ==============================================
   Get Minimize and Maximize price of these products
@@ -207,4 +207,59 @@ export const getFilterProducts = async (
   });
 
   return filteredProducts;
+};
+
+export const getAttributesByCategoriesId = async (categoriesId) => {
+  const proRef = collection(db, "products");
+
+  const productsSnap = await getDocs(
+    query(proRef, where("category_ids", "array-contains-any", categoriesId)),
+  );
+  
+  const productsIds = productsSnap.docs.map((doc) => doc.id);
+  const productsIdschunk = chunkArray(productsIds, 10);
+  
+  const optionsSnap = await Promise.all(
+    productsIdschunk.map((chunk) => {
+      return getDocs(
+        query(
+          collection(db, "product-variants"),
+          where("product_id", "in", chunk),
+        ),
+      );
+    }),
+  );
+
+  const options = [
+    ...new Set(
+      optionsSnap.flatMap((item) =>
+        item.docs
+          .map((doc) => doc.data())
+          .map((item) => item.options)
+          .flatMap((op) => op)
+          .map((op) => op.key),
+      ),
+    ),
+  ];
+
+  const optionsChunk = chunkArray(options, 10);
+
+  const attributiesQuery = await Promise.all(
+    optionsChunk.map((chunk) => {
+      return getDocs(
+        query(collection(db, "global_attributes"), where("key", "in", chunk)),
+      );
+    }),
+  );
+
+  const attributes = [];
+
+  attributiesQuery
+    .flatMap((snap) => snap.docs.map((doc) => doc.data()))
+    .forEach((att) => {
+      const isExist = attributes.find((item) => item.key === att.key);
+      if (!isExist) attributes.push(att);
+    });
+
+  return attributes;
 };

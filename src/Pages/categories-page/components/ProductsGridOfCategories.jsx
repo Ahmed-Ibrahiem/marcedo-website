@@ -4,7 +4,8 @@ import ProductCard from "../../../Components/product/product-item/ProductCard";
 const ProductsGridOfCategories = ({ products, gridMode, setGridMode }) => {
   return (
     <div
-      className={`grid grid-cols-1! xs:grid-cols-${gridMode}!  gap-10 mt-10 `}
+      className={`grid max-xs:grid-cols-1! max-md:grid-cols-2! gap-10 mt-10 `}
+      style={{ gridTemplateColumns: `repeat(${gridMode} , minmax(0 , 1fr))` }}
     >
       {products.map((data) => {
         return (

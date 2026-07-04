@@ -9,7 +9,7 @@ import NewCategoryPopup from "../components/category-form/NewCategoryPopup";
 import { getAllBrands } from "../../../services/BrandsServices";
 import { getAllCategories } from "../../../services/CategoriesServices";
 import { FormProvider, useForm } from "react-hook-form";
-import { step1Schema, step2Schema } from "./utils/reducerData.js";
+import { step1Schema, step2Schema, step3Schema } from "./utils/reducerData.js";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { DevTool } from "@hookform/devtools";
 import Step3 from "./steps/Step3.jsx";
@@ -40,10 +40,10 @@ const variants = {
   },
 };
 
-const schemas = [step1Schema, step2Schema];
+const schemas = [step1Schema, step2Schema, step3Schema];
 
 const NewProductForm = () => {
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(3);
   const [openCategoryPopup, setOpenCategoryPopup] = useState(false);
   const [openBrandPopup, setOpenBrandPopup] = useState(false);
   const [stepOneInfo, setStepOneInfo] = useState({ name: "" });
@@ -70,6 +70,8 @@ const NewProductForm = () => {
       thumbnail: "",
       gallery: [],
       videos: [],
+      variants: [],
+      colorPalette: {},
     },
     mode: "onChange",
   });

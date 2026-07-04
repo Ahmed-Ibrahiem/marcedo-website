@@ -10,7 +10,6 @@ import {
 } from "../../services/ProductsDashboardServices";
 import ProductsActions from "./products-components/ProductsActions";
 import ProductsTable from "./products-components/ProductsTable";
-import { getAllProducts } from "../../services/ProductsServices";
 import TableControlsBtns from "./products-components/TableControlsBtns";
 import ProductsGrid from "./products-components/ProductsGrid";
 import { useProductsTableControlContext } from "./context/ProductsTableControl";
