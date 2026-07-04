@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { color, hex, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useFormContext, useWatch } from "react-hook-form";
 import { getAttributesByCategoriesId } from "../../../../services/categoriesPageServices";
-import { FaPencil, FaXmark } from "react-icons/fa6";
-import { FaRegTrashCan } from "react-icons/fa6";
+import { FaPencil, FaXmark, FaRegTrashCan } from "react-icons/fa6";
+import { FaPercent } from "react-icons/fa";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import DropDownList from "../../components/DropDownList";
@@ -15,6 +15,7 @@ const Step3 = ({ ...props }) => {
   const [stock, setStock] = useState(0);
   const [sku, setSku] = useState("");
   const [prodColor, setProdColor] = useState({ name: "", hex: "#000000" });
+  const [discount_percentage, setDiscount_percentage] = useState("0");
   const [missingMessage, setMissingMessage] = useState({
     type: "",
     message: "",
@@ -100,9 +101,11 @@ const Step3 = ({ ...props }) => {
       attributes: prodColor.name
         ? { ...areThereVariant, color: prodColor.name }
         : areThereVariant,
-      price,
+      original_price: price,
       stock,
       sku,
+      discount_percentage,
+      price: Math.round( price - price * (+discount_percentage / 100)).toFixed(1),
     };
     setValue(
       "colorPalette",
@@ -118,6 +121,7 @@ const Step3 = ({ ...props }) => {
     setPrice(0);
     setStock(0);
     setSku("");
+    setDiscount_percentage(0);
     setProdColor({ name: "", hex: "#000000" });
   };
 
@@ -244,10 +248,10 @@ const Step3 = ({ ...props }) => {
               <SkeletonLoading />
             </div>
           )}
-          <div className="mt-auto sm:grid sm:grid-cols-3 gap-5 w-full">
+          <div className="mt-auto sm:grid sm:grid-cols-4 gap-5 w-full">
             <div className="box-form-style mt-2.5 relative">
               <label className="label-form-style" htmlFor="price">
-                Price
+                Original Price
               </label>
               <input
                 type="number"
@@ -260,6 +264,34 @@ const Step3 = ({ ...props }) => {
               {missingMessage.type === "price" && (
                 <ErrorMessageFrom message={missingMessage.message} />
               )}
+            </div>
+            <div className="box-form-style mt-2.5 relative">
+              <label className="label-form-style" htmlFor="price">
+                Discount Percentage
+              </label>
+              <input
+                type="number"
+                value={discount_percentage}
+                onBlur={(e) => {
+                  if (
+                    e.target.value.trim() === "" ||
+                    +discount_percentage.trim() < 0
+                  ) {
+                    setDiscount_percentage("0");
+                  } else if (+discount_percentage.trim() > 100)
+                    setDiscount_percentage(99);
+                }}
+                onChange={(e) => {
+                  setDiscount_percentage(e.target.value);
+                }}
+                id="price"
+                placeholder="Enter your price"
+                className="input-form-style"
+              />
+              <FaPercent
+                size={12}
+                className="absolute right-2.5 text-gray bottom-2.5 mt-0"
+              />
             </div>
             <div className="box-form-style mt-2.5 relative">
               <label className="label-form-style" htmlFor="stock">
@@ -309,13 +341,34 @@ const Step3 = ({ ...props }) => {
               return (
                 <div
                   key={variant.id}
-                  className="relative input-form-style flex-between gap-3.5"
+                  className="relative input-form-style flex-start-col gap-1.5 text-xs! w-full"
                 >
-                  <p>
-                    {Object.entries(variant.attributes)
-                      .map(([key, value]) => value)
-                      .join("/ ")}
-                  </p>
+                  <h4 className="font-semibold ">{variant.sku}</h4>
+
+                  <div className="grid grid-cols-3 gap-2.5 w-full">
+                    {Object.entries(variant.attributes).map(([key, value]) => {
+                      return (
+                        <div key={key}>
+                          <span>{key.split("_").join(" ")}:</span>{" "}
+                          <p className="text-gray">{value}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div className="w-full grid grid-cols-2  gap-2.5">
+                    <div className="flex-start gap-1.5">
+                      <span>Price:</span>
+                      <p>{variant.price}</p>
+                      {variant.discount_percentage > 0 && (
+                        <p className="line-through">{variant.original_price}</p>
+                      )}
+                    </div>
+                    <div className="flex-start gap-1.5">
+                      <span>Stock: </span>
+                      <p>{variant.stock}</p>
+                    </div>
+                  </div>
+
                   <button
                     onClick={() => {
                       setValue(
@@ -323,7 +376,7 @@ const Step3 = ({ ...props }) => {
                         variants.filter((item) => item.id !== variant.id),
                       );
                     }}
-                    className="w-4.5 h-4.5 rounded-full text-[10px] bg-black text-white flex-center "
+                    className="absolute top-2.5 right-2.5 w-4.5 h-4.5 rounded-full text-[10px] bg-black text-white flex-center "
                   >
                     <FaXmark />
                   </button>
@@ -336,6 +389,7 @@ const Step3 = ({ ...props }) => {
                 <p className="text-gray">Add your variants</p>
               </div>
             )}
+            
           </div>
         </div>
       </div>
