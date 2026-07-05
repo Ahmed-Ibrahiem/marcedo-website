@@ -7588,6 +7588,8 @@ export const variants = [
         attributes: { connectivity: "GPS", color: "Silver" },
         stock: 10,
         price: 2000,
+        original_price: 2200,
+        discount_percentage: 10
       },
       {
         id: "var_002",

@@ -37,3 +37,58 @@ export const step2Schema = yup.object({
 });
 
 export const step3Schema = yup.object({});
+
+export const numberField = () =>
+  yup
+    .number()
+    .transform((value, originalValue) => {
+      if (
+        originalValue === "" ||
+        originalValue === null ||
+        originalValue === undefined
+      ) {
+        return undefined;
+      }
+      return Number(originalValue);
+    })
+    .typeError("Must be a valid number");
+
+export const step4Schema = yup.object({
+  sku: yup.string().when("$hasVariants", {
+    is: false,
+    then: (schema) =>
+      schema
+        .required("SKU is required")
+        .matches(/^\S+$/, 'SKU cannot contain spaces, You can use "-" '),
+    otherwise: (schema) => schema.notRequired(),
+  }),
+
+  original_price: numberField().when("$hasVariants", {
+    is: false,
+    then: (schema) =>
+      schema
+        .required("Price is required")
+        .positive("Price must be greater than 0"),
+    otherwise: (schema) => schema.notRequired(),
+  }),
+
+  discount_percentage: numberField()
+    .min(0, "Discount cannot be negative")
+    .max(99, "Discount cannot reach 100%"),
+
+  quantity: numberField()
+    .integer("Stock must be a whole number")
+    .min(0, "Stock cannot be negative")
+    .required("Stock is required"),
+
+  cost_price: numberField().min(0, "Cost price cannot be negative"),
+
+  low_stock_threshold: numberField()
+    .integer("Must be a whole number")
+    .min(0)
+    .when("track_inventroy", {
+      is: true,
+      then: (schema) => schema.required("Low stock threshold is required"),
+      otherwise: (schema) => schema.notRequired(),
+    }),
+});

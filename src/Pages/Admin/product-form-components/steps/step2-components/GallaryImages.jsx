@@ -139,7 +139,7 @@ const GallaryImages = () => {
           </label>
           {errors?.gallery && (
             <ErrorMessageFrom
-              style={"relative! -bottom-7"}
+              style={"relative! -bottom-7! top-auto!"}
               message={errors.gallery.message}
             />
           )}

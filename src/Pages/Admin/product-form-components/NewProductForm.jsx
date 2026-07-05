@@ -9,10 +9,16 @@ import NewCategoryPopup from "../components/category-form/NewCategoryPopup";
 import { getAllBrands } from "../../../services/BrandsServices";
 import { getAllCategories } from "../../../services/CategoriesServices";
 import { FormProvider, useForm } from "react-hook-form";
-import { step1Schema, step2Schema, step3Schema } from "./utils/reducerData.js";
+import {
+  step1Schema,
+  step2Schema,
+  step3Schema,
+  step4Schema,
+} from "./utils/reducerData.js";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { DevTool } from "@hookform/devtools";
 import Step3 from "./steps/Step3.jsx";
+import Step4 from "./steps/Step4.jsx";
 
 const variants = {
   hidden: {
@@ -40,17 +46,19 @@ const variants = {
   },
 };
 
-const schemas = [step1Schema, step2Schema, step3Schema];
+const schemas = [step1Schema, step2Schema, step3Schema, step4Schema];
 
 const NewProductForm = () => {
-  const [currentStep, setCurrentStep] = useState(3);
+  const [currentStep, setCurrentStep] = useState(1);
   const [openCategoryPopup, setOpenCategoryPopup] = useState(false);
   const [openBrandPopup, setOpenBrandPopup] = useState(false);
   const [stepOneInfo, setStepOneInfo] = useState({ name: "" });
   const [allBrands, setAllBrands] = useState([]);
   const [allCategories, setAllCategories] = useState([]);
+  const [hasVariants, setHasVariants] = useState(false);
   const methods = useForm({
     resolver: yupResolver(schemas[currentStep - 1]),
+    context: { hasVariants },
     defaultValues: {
       stock_status: "",
       category_ids: [],
@@ -61,7 +69,8 @@ const NewProductForm = () => {
       has_discount: false,
       discount_percentage: 0,
       original_price: 0,
-      currency: "",
+      currency: "EGP",
+      cost_price: 0,
       name: "",
       is_active: false,
       is_best_seller: false,
@@ -72,6 +81,15 @@ const NewProductForm = () => {
       videos: [],
       variants: [],
       colorPalette: {},
+      charge_tax: true,
+      quantity: 0,
+      sku: "",
+      track_inventory: true,
+      low_stock_threshold: 0,
+      shipping_type: "Standard Shipping",
+      estimated_delivery_days: { from: 3, to: 5 },
+      from: "Cairo, Egypt",
+      is_free: false,
     },
     mode: "onChange",
   });
@@ -140,7 +158,17 @@ const NewProductForm = () => {
             )}
             {currentStep === 3 && (
               <Step3
+                setHasVariants={setHasVariants}
                 key={"model-3"}
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              />
+            )}
+            {currentStep === 4 && (
+              <Step4
+                key={"model-4"}
                 variants={variants}
                 initial="hidden"
                 animate="visible"

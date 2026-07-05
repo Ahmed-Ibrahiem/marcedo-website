@@ -27,7 +27,7 @@ const DropDownList = ({
 
   return (
     <div
-      className={`drop-down-list min-w-25 gap-5! border border-border grow! relative ${listStyle || ""}`}
+      className={`drop-down-list min-w-25 gap-5 border border-border grow! relative justify-between! ${listStyle || ""}`}
       onClick={() => setIsOpen((prev) => !prev)}
       ref={menuRef}
     >

@@ -227,13 +227,33 @@
   }
 
   .label-form-style {
-    @apply font-bold text-xs sm:text-sm
+    @apply font-bold text-xs sm:text-sm line-clamp-1
   }
   .input-form-style{
     @apply border border-border p-1.5 rounded-sm w-full outline-transparent focus:outline-1 focus:outline-gray-300  duration-500!
   }
   .box-form-style{
     @apply flex flex-col w-full gap-1.5 text-sm relative
+  }
+  .switch-input-style{
+    @apply appearance-none w-15 h-6 rounded-full bg-gray-400/70 cursor-pointer relative
+  }
+  .switch-input-style::after{
+    content: "";
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px ;
+    width: 18.5px ;
+    height: 18.5px ;
+    border-radius: 100%;
+    background: white;
+    transition: 0.3s;
+  }
+  .switch-input-style:checked{
+    @apply bg-orange
+  }
+  .switch-input-style:checked::after{
+    left: calc(100% - 22px);
   }
 }
 

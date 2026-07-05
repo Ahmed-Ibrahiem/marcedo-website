@@ -8,14 +8,22 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import DropDownList from "../../components/DropDownList";
 import ErrorMessageFrom from "../../../../Components/ui/ErrorMessageFrom";
+import InputNumaric from "../components/InputNumaric";
 
-const Step3 = ({ ...props }) => {
+const Step3 = ({ setHasVariants, ...props }) => {
+  const currencyList = [
+    { name: "EGP", id: 1 },
+    { name: "USD", id: 2 },
+    { name: "EUR", id: 3 },
+  ];
   const [attributiesList, setAttributesList] = useState(null);
   const [price, setPrice] = useState(0);
   const [stock, setStock] = useState(0);
   const [sku, setSku] = useState("");
+  const [currency, setCurrency] = useState("EGP");
   const [prodColor, setProdColor] = useState({ name: "", hex: "#000000" });
   const [discount_percentage, setDiscount_percentage] = useState("0");
+  const [threshold, setThreshold] = useState(0);
   const [missingMessage, setMissingMessage] = useState({
     type: "",
     message: "",
@@ -25,6 +33,7 @@ const Step3 = ({ ...props }) => {
     setValue,
     formState: { errors },
   } = useFormContext();
+
   const variants = useWatch({ name: "variants" });
   const colorPalette = useWatch({ name: "colorPalette" });
 
@@ -50,8 +59,8 @@ const Step3 = ({ ...props }) => {
 
         if (level2.length > 0) deepestCategories = level2.map((cat) => cat.id);
         else deepestCategories = level1.map((cat) => cat.id);
-
-        const req = await getAttributesByCategoriesId(["cat_003"]);
+        console.log(deepestCategories)
+        const req = await getAttributesByCategoriesId(deepestCategories);
         setAttributes(req);
         setDefaultvariant(req);
       } catch (errors) {
@@ -61,6 +70,10 @@ const Step3 = ({ ...props }) => {
     };
     getAttributesData();
   }, []);
+
+  useEffect(() => {
+    setHasVariants(variants.length > 0);
+  }, [variants]);
 
   const handleAddVaraints = () => {
     const areThereVariant = Object.fromEntries(
@@ -95,18 +108,30 @@ const Step3 = ({ ...props }) => {
       });
       return;
     }
+    if (!/^\S+$/.test(sku)) {
+      setMissingMessage({
+        type: "sku",
+        message: 'SKU cannot contain spaces, You can use "-"',
+      });
+      return;
+    }
 
     const productVariant = {
       id: crypto.randomUUID(),
       attributes: prodColor.name
         ? { ...areThereVariant, color: prodColor.name }
         : areThereVariant,
-      original_price: price,
-      stock,
+      original_price: Number(price),
+      stock: Number(stock),
       sku,
-      discount_percentage,
-      price: Math.round( price - price * (+discount_percentage / 100)).toFixed(1),
+      discount_percentage: Number(discount_percentage),
+      currency,
+      threshold: Number(threshold),
+      price: Number(
+        Math.round(+price - price * (+discount_percentage / 100)).toFixed(1),
+      ),
     };
+
     setValue(
       "colorPalette",
       prodColor.name
@@ -135,10 +160,12 @@ const Step3 = ({ ...props }) => {
       className="w-full min-h-full h-full text-sm flex-start-col gap-4 grow "
     >
       <div className="grid  grid-cols-1 2xl:grid-cols-4 h-full flex-wrap gap-5 w-full">
+        {/* Variants Options */}
         <div className="flex-start-col h-full gap-4 grow 2xl:col-span-3 p-3.5 bg-white shadow-sm rounded-sm">
           <h1 className="font-bold">Add Product Variants </h1>
           {attributes.length > 0 && (
             <div className="relative flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 min-[900px]:grid-cols-4 2xl:grid-cols-4  w-full gap-5">
+              {/* Variants Inputs */}
               {attributes.map((attribute) => {
                 return (
                   <div
@@ -240,6 +267,7 @@ const Step3 = ({ ...props }) => {
               )}
             </div>
           )}
+          {/* Skeleton Loading */}
           {attributes.length === 0 && (
             <div className="relative flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 min-[900px]:grid-cols-4 2xl:grid-cols-4  w-full gap-5">
               <SkeletonLoading />
@@ -248,75 +276,85 @@ const Step3 = ({ ...props }) => {
               <SkeletonLoading />
             </div>
           )}
+
+          {/* Price , stock , sku */}
           <div className="mt-auto sm:grid sm:grid-cols-4 gap-5 w-full">
-            <div className="box-form-style mt-2.5 relative">
-              <label className="label-form-style" htmlFor="price">
-                Original Price
-              </label>
-              <input
-                type="number"
-                value={price}
-                onChange={(e) => setPrice(e.target.value)}
-                id="price"
-                placeholder="Enter your price"
-                className="input-form-style"
+            {/* Price */}
+            <InputNumaric
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              inputName={"Original Price"}
+              placeholder={"Enter your price"}
+            >
+              <DropDownList
+                currentSelect={currency}
+                optionFun={(item) => setCurrency(item.name)}
+                list={currencyList}
+                listStyle={
+                  "absolute! right-0! bottom-0! gap-0! text-sm! shadow-none! justify-between! w-17! min-w-10!"
+                }
+                opionsStyle={"w-full!"}
               />
-              {missingMessage.type === "price" && (
-                <ErrorMessageFrom message={missingMessage.message} />
+
+              {errors.original_price && (
+                <ErrorMessageFrom message={errors.original_price.message} />
               )}
-            </div>
-            <div className="box-form-style mt-2.5 relative">
-              <label className="label-form-style" htmlFor="price">
-                Discount Percentage
-              </label>
-              <input
-                type="number"
-                value={discount_percentage}
-                onBlur={(e) => {
-                  if (
-                    e.target.value.trim() === "" ||
-                    +discount_percentage.trim() < 0
-                  ) {
-                    setDiscount_percentage("0");
-                  } else if (+discount_percentage.trim() > 100)
-                    setDiscount_percentage(99);
-                }}
-                onChange={(e) => {
-                  setDiscount_percentage(e.target.value);
-                }}
-                id="price"
-                placeholder="Enter your price"
-                className="input-form-style"
-              />
+            </InputNumaric>
+
+            {/* Discount */}
+            <InputNumaric
+              value={discount_percentage}
+              onBlur={(e) => {
+                if (
+                  e.target.value.trim() === "" ||
+                  +discount_percentage.trim() < 0
+                ) {
+                  setDiscount_percentage("0");
+                } else if (+discount_percentage.trim() > 100)
+                  setDiscount_percentage(99);
+              }}
+              onChange={(e) => {
+                setDiscount_percentage(e.target.value);
+              }}
+              id="price"
+              placeholder="Enter your price"
+              inputName={"Discount Percentage"}
+            >
               <FaPercent
                 size={12}
                 className="absolute right-2.5 text-gray bottom-2.5 mt-0"
               />
-            </div>
-            <div className="box-form-style mt-2.5 relative">
-              <label className="label-form-style" htmlFor="stock">
-                Stock
-              </label>
-              <input
-                type="number"
-                value={stock}
-                onChange={(e) => setStock(e.target.value)}
-                id="stock"
-                placeholder="Enter your stock"
-                className="input-form-style"
-              />
+            </InputNumaric>
+            {/* Stock */}
+            <InputNumaric
+              value={stock}
+              onChange={(e) => setStock(e.target.value)}
+              placeholder="Enter your stock"
+              inputName={"Stock"}
+            >
               {missingMessage.type === "stock" && (
                 <ErrorMessageFrom message={missingMessage.message} />
               )}
-            </div>
-            <div className="box-form-style mt-2.5 relative">
+            </InputNumaric>
+            {/* Low Stock Threshold */}
+            <InputNumaric
+              value={threshold}
+              onChange={(e) => {
+                setThreshold(e.target.value);
+              }}
+              inputName={"Low Stock Threshold"}
+            />
+            {/* Sku */}
+            <div className="box-form-style relative">
               <label className="label-form-style" htmlFor="sku">
                 SKU
               </label>
               <input
                 type="text"
                 value={sku}
-                onChange={(e) => setSku(e.target.value)}
+                onChange={(e) => {
+                  setSku(e.target.value.toUpperCase());
+                }}
                 id="sku"
                 placeholder="Enter your sku product"
                 className="input-form-style"
@@ -334,6 +372,7 @@ const Step3 = ({ ...props }) => {
             Add Variant
           </button>
         </div>
+
         <div className="h-full flex-start-col gap-2.5 w-full p-3.5 bg-white shadow-sm rounded-sm grow">
           <h1 className="font-semibold">Variants Added</h1>
           <div className="flex-start-col gap-2.5 max-h-85 overflow-auto pr-2.5 w-full grow ">
@@ -355,10 +394,12 @@ const Step3 = ({ ...props }) => {
                       );
                     })}
                   </div>
-                  <div className="w-full grid grid-cols-2  gap-2.5">
-                    <div className="flex-start gap-1.5">
-                      <span>Price:</span>
-                      <p>{variant.price}</p>
+                  <div className="w-full flex-start  gap-5">
+                    <div className="flex-start gap-2.5">
+                      <span>Final Price:</span>
+                      <p>
+                        {variant.price} {variant.currency}
+                      </p>
                       {variant.discount_percentage > 0 && (
                         <p className="line-through">{variant.original_price}</p>
                       )}
@@ -389,7 +430,6 @@ const Step3 = ({ ...props }) => {
                 <p className="text-gray">Add your variants</p>
               </div>
             )}
-            
           </div>
         </div>
       </div>
