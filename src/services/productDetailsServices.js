@@ -51,8 +51,8 @@ export const getProductReviews = async (product_id) => {
   return snapshot.docs.map((doc) => doc.data());
 };
 
-export const getRelatedProducts = async (relatedIds) => {
-  const q = query(collection(db, "products"), where("id", "in", relatedIds));
+export const getRelatedProducts = async (related_ids) => {
+  const q = query(collection(db, "products"), where("id", "in", related_ids));
 
   const snapshot = await getDocs(q);
 

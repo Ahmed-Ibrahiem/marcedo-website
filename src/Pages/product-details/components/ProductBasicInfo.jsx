@@ -36,7 +36,7 @@ const ProductBasicInfo = ({ productData }) => {
   }, [productData]);
   return (
     <>
-      <h1 className="font-bold max-w-full text-lg  ">{details?.full_name}</h1>
+      <h1 className="font-bold max-w-full text-lg  ">{productData?.name}</h1>
 
       {/* Start Rating */}
       {rating && (

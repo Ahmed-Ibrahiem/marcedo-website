@@ -113,7 +113,9 @@ const MainImage = () => {
           {/* Validation Error Message */}
           {errors?.thumbnail && (
             <ErrorMessageFrom
-              style={"bottom-5! top-auto! left-[50%] translate-x-[-50%] whitespace-nowrap"}
+              style={
+                "bottom-5! top-auto! left-[50%] translate-x-[-50%] whitespace-nowrap"
+              }
               message={errors.thumbnail.message}
             />
           )}

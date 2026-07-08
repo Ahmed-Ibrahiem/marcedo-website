@@ -14,8 +14,8 @@ const Reviews_Provider = ({ productData, children }) => {
     if (!productData) return;
     const getReviews = async () => {
       const reviews = await getProductReviews(productData.id);
-      if (!reviews) return;
-      setProductReviews(reviews);
+      // if (!reviews) return;
+      setProductReviews(reviews ?? []);
     };
 
     const getRatings = async () => {

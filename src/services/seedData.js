@@ -1,12 +1,25 @@
 import { collection, doc, writeBatch } from "firebase/firestore";
 import { db } from "./firestoreConfig";
-import { brands, categories, details, global_attributes, media, pricing, products, ratings, reviews, shipping, stocks, variants,  } from "./MokeData";
+import {
+  brands,
+  categories,
+  details,
+  global_attributes,
+  media,
+  pricing,
+  products,
+  ratings,
+  reviews,
+  shipping,
+  stocks,
+  variants,
+} from "./MokeData";
 
 const seedCollection = async (collectionName, data = []) => {
   const batch = writeBatch(db);
 
   data.forEach((item) => {
-    const ref = doc(collection(db, collectionName), String(item.product_id));
+    const ref = doc(collection(db, collectionName), String(item.id));
     batch.set(ref, item);
   });
 
@@ -15,10 +28,10 @@ const seedCollection = async (collectionName, data = []) => {
 
 export const seedAllData = async () => {
   try {
-    await seedCollection("product-variants", variants);
+    await seedCollection("products", products);
     // await seedCollection("products", products);
     // await seedCollection("brands", brands);
-   
+
     console.log("All Data Uploaded!");
   } catch (error) {
     console.log("something went wrong", error);

@@ -9,11 +9,7 @@ import VariantsSummary from "./step4-components/VariantsSummary";
 const Step4 = ({ ...props }) => {
   const variants = useWatch({ name: "variants" });
   return (
-    <motion.form
-      {...props}
-      onSubmit={(e) => e.preventDefault()}
-      className="w-full h-full  flex-start-col gap-5"
-    >
+    <motion.section {...props} className="w-full h-full flex-start-col gap-5">
       {variants.length > 0 && <VariantsSummary variants={variants} />}
       <div
         className={`w-full grid grid-cols-1 md:grid-cols-2 gap-5 ${variants.length === 0 ? "" : ""}`}
@@ -22,7 +18,7 @@ const Step4 = ({ ...props }) => {
         <ProductLevelInventory />
       </div>
       <ProductLevelShipping />
-    </motion.form>
+    </motion.section>
   );
 };
 

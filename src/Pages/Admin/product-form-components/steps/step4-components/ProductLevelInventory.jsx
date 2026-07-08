@@ -75,7 +75,7 @@ const ProductLevelInventory = () => {
               className="switch-input-style"
               {...register("track_inventory")}
             />
-            <p className="text-sm text-gray">
+            <p className="text-sm text-gray line-clamp-1">
               Track inventory for this product
             </p>
           </div>

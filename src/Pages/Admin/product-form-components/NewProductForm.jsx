@@ -10,15 +10,21 @@ import { getAllBrands } from "../../../services/BrandsServices";
 import { getAllCategories } from "../../../services/CategoriesServices";
 import { FormProvider, useForm } from "react-hook-form";
 import {
+  publishProduct,
   step1Schema,
   step2Schema,
   step3Schema,
   step4Schema,
+  step5Schema,
 } from "./utils/reducerData.js";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { DevTool } from "@hookform/devtools";
 import Step3 from "./steps/Step3.jsx";
 import Step4 from "./steps/Step4.jsx";
+import Step5 from "./steps/Step5.jsx";
+import { toast } from "react-toastify";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import Success_Toast from "../../../Components/ui/confirm-message/Success_Toast.jsx";
 
 const variants = {
   hidden: {
@@ -46,7 +52,13 @@ const variants = {
   },
 };
 
-const schemas = [step1Schema, step2Schema, step3Schema, step4Schema];
+const schemas = [
+  step1Schema,
+  step2Schema,
+  step3Schema,
+  step4Schema,
+  step5Schema,
+];
 
 const NewProductForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -56,27 +68,22 @@ const NewProductForm = () => {
   const [allBrands, setAllBrands] = useState([]);
   const [allCategories, setAllCategories] = useState([]);
   const [hasVariants, setHasVariants] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
   const methods = useForm({
     resolver: yupResolver(schemas[currentStep - 1]),
-    context: { hasVariants },
+    context: { hasVariants, setCurrentStep },
     defaultValues: {
-      stock_status: "",
       category_ids: [],
       brand_id: "",
       tags: [],
-      relatedIds: [],
       thumbnail: "",
-      has_discount: false,
       discount_percentage: 0,
-      original_price: 0,
+      original_price: "",
       currency: "EGP",
       cost_price: 0,
       name: "",
-      is_active: false,
-      is_best_seller: false,
-      is_featured: false,
       short_description: "",
-      thumbnail: "",
       gallery: [],
       videos: [],
       variants: [],
@@ -87,14 +94,21 @@ const NewProductForm = () => {
       track_inventory: true,
       low_stock_threshold: 0,
       shipping_type: "Standard Shipping",
-      estimated_delivery_days: { from: 3, to: 5 },
-      from: "Cairo, Egypt",
+      estimated_delivery_days: { from: 0, to: 0 },
+      from: "",
       is_free: false,
+      is_active: true,
+      is_featured: true,
+      is_best_seller: true,
+      related_ids: [],
+      description: [],
+      current_price: "",
+      discount_expires_at: null,
     },
     mode: "onChange",
   });
 
-  const { control } = methods;
+  const { control, handleSubmit, reset } = methods;
 
   useEffect(() => {
     const getBrands = async () => {
@@ -122,68 +136,125 @@ const NewProductForm = () => {
     if (valid) setCurrentStep((prev) => prev + 1);
   };
 
+  const onSave = async (formData) => {
+    setSubmitError(null);
+    setIsSubmitting(true);
+    try {
+      const proId = await publishProduct(formData);
+
+      console.log("Product created:", proId);
+
+      reset();
+      setCurrentStep(1);
+      setHasVariants(false);
+      // navigate(`/products/${proId}`);
+      toast(<Success_Toast message={"Product Saved Successfully!"} />);
+    } catch (err) {
+      console.error("Failed to publish product:", err);
+      setSubmitError("حصل خطأ أثناء حفظ المنتج، حاول تاني.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleFinalSubmit = async () => {
+    const stepsValid = await Promise.all(
+      schemas.map((schema) => schema.isValid(methods.getValues())),
+    );
+
+    if (stepsValid.every(Boolean)) {
+      handleSubmit(onSave)();
+    } else {
+      setSubmitError("There are same missing data, check it please");
+    }
+  };
+
   return (
-    <div className="h-full flex-start-col w-full gap-5">
+    <main className="h-full flex-start-col w-full gap-5 relative">
       <header className="bg-transparent! ">
         <h1 className="font-bold">Add New Product</h1>
       </header>
 
       <FormProgress currentStep={currentStep} />
 
-      <div className="grow w-full  mt-5 relative">
-        <FormProvider {...methods}>
-          <AnimatePresence>
-            {currentStep === 1 && (
-              <Step1
-                allBrands={allBrands}
-                allCategories={allCategories}
-                setOpenCategoryPopup={setOpenCategoryPopup}
-                setOpenBrandPopup={setOpenBrandPopup}
-                // Animation
-                key={"model-1"}
-                variants={variants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              />
-            )}
-            {currentStep === 2 && (
-              <Step2
-                key={"model-2"}
-                variants={variants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              />
-            )}
-            {currentStep === 3 && (
-              <Step3
-                setHasVariants={setHasVariants}
-                key={"model-3"}
-                variants={variants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              />
-            )}
-            {currentStep === 4 && (
-              <Step4
-                key={"model-4"}
-                variants={variants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              />
-            )}
-          </AnimatePresence>
-        </FormProvider>
-      </div>
-
-      <StepsControl
-        currentStep={currentStep}
-        onNext={handleNextStep}
-        onBack={() => setCurrentStep((prev) => prev - 1)}
-      />
+      <FormProvider {...methods}>
+        <fieldset disabled={isSubmitting} className="contents">
+          <form
+            id="product-form"
+            onSubmit={(e) => e.preventDefault()}
+            className="grow w-full mt-5 relative"
+          >
+            <AnimatePresence>
+              {currentStep === 1 && (
+                <Step1
+                  allBrands={allBrands}
+                  allCategories={allCategories}
+                  setOpenCategoryPopup={setOpenCategoryPopup}
+                  setOpenBrandPopup={setOpenBrandPopup}
+                  // Animation
+                  key={"model-1"}
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+              {currentStep === 2 && (
+                <Step2
+                  key={"model-2"}
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+              {currentStep === 3 && (
+                <Step3
+                  setHasVariants={setHasVariants}
+                  key={"model-3"}
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+              {currentStep === 4 && (
+                <Step4
+                  key={"model-4"}
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+              {currentStep === 5 && (
+                <Step5
+                  setCurrentStep={setCurrentStep}
+                  key={"model-4"}
+                  variants={variants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                />
+              )}
+            </AnimatePresence>
+          </form>
+        </fieldset>
+        <StepsControl
+          formId="product-form"
+          currentStep={currentStep}
+          onNext={handleNextStep}
+          onBack={() => setCurrentStep((prev) => prev - 1)}
+          onSave={handleFinalSubmit}
+          isSubmitting={isSubmitting}
+        />
+      </FormProvider>
+      {isSubmitting && (
+        <div className="fixed z-50 top-0 left-0 w-full h-full bg-gray/20 flex-center-col gap-5  text-gray">
+          <AiOutlineLoading3Quarters size={40} className="loading-animate-1" />
+          <p className="text-xl font-bold">Loading...</p>
+        </div>
+      )}
 
       {/* <AddNewBrandPopup /> */}
       <AnimatePresence mode="popLayout">
@@ -205,7 +276,7 @@ const NewProductForm = () => {
       </AnimatePresence>
 
       <DevTool control={control} />
-    </div>
+    </main>
   );
 };
 

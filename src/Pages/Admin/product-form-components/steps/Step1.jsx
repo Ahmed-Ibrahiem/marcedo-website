@@ -8,6 +8,7 @@ import ShortDescription from "./step1-components/ShortDescription";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import DescriptionSection from "./step1-components/DescriptionSection";
+import TagsInput from "./step1-components/TagsInput";
 
 const Step1 = ({
   allBrands,
@@ -29,9 +30,8 @@ const Step1 = ({
   }, [categories]);
 
   return (
-    <motion.form
+    <motion.section
       {...props}
-      onSubmit={(e) => e.preventDefault()}
       className="w-full bg-white rounded-sm p-2.5 pb-6 shadow-[3px_3px_5px_var(--color-gray-300)] flex-start-col gap-3"
     >
       <h1 className="font-bold">Basic Information</h1>
@@ -70,11 +70,14 @@ const Step1 = ({
       </div>
 
       {/* Short description with character counter */}
-      <ShortDescription />
+      <div className="w-full grid grid-cols-2 gap-2.5">
+        <TagsInput />
+        <ShortDescription />
+      </div>
 
       {/* Block-based long description builder */}
       <DescriptionSection />
-    </motion.form>
+    </motion.section>
   );
 };
 

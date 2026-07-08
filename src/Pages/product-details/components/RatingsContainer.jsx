@@ -44,7 +44,7 @@ const RatingsContainer = () => {
             </div>
             {/* rating number */}
             <span className="text-sm text-gray">
-              ({productRatings.total_ratings} Reviews)
+              ({productRatings?.total_ratings ?? 0} Reviews)
             </span>
             {/*Write a Review Button */}
             {!isUserRated && (
@@ -72,9 +72,7 @@ const RatingsContainer = () => {
             {!isUserRated && (
               <>
                 <p className="text-gray text-sm">
-                  {reviews.length > 0
-                    ? "Share your review with athor people"
-                    : "Be the first to write a review"}
+                  Be the first to write a review
                 </p>
                 <div className="p-5 rounded-sm bg-gray-light/50 flex-center-col gap-3.5 w-full">
                   <h3>Click To Review:</h3>

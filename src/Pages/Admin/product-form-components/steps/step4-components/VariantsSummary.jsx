@@ -3,7 +3,7 @@ import { IoLayersOutline, IoPricetagOutline } from "react-icons/io5";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { FaPercent } from "react-icons/fa";
 
-const VariantsSummary = ({ variants }) => {
+const VariantsSummary = ({ variants, containerStyle }) => {
   const totalStock = variants.reduce((acc, item) => acc + item.stock, 0);
   const priceRange = {
     min: Math.min(...variants.map((v) => v.price)),
@@ -49,11 +49,16 @@ const VariantsSummary = ({ variants }) => {
   ];
 
   return (
-    <div className="w-full grid grid-cols-4 gap-5 bg-white rounded-sm shadow-sm p-5">
+    <div
+      className={`w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 bg-white rounded-sm shadow-sm p-5 ${containerStyle || ""}`}
+    >
       {summaryData.map((data, index) => {
         return (
           <div
-            className={`card w-full flex-start gap-4 text-sm border-r border-border ${index === data.length - 1 ? "border-0" : ""}`}
+            key={data.title}
+            className={`card w-full flex-start gap-4 text-sm sm:border-r border-border
+              ${index === summaryData.length - 3 ? "max-lg:border-r-0! " : ""}
+             ${index === summaryData.length - 1 ? "border-r-0! " : ""}`}
           >
             <div
               className="icon-box w-14 h-14 rounded-full  flex-center text-xl"

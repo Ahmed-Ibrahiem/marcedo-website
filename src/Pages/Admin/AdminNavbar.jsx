@@ -29,7 +29,7 @@ const AdminNavbar = ({ currentPage }) => {
     },
   ];
   return (
-    <nav
+    <aside
       className={`bg-white h-fit lg:h-full  px-5! py-2.5! flex-between xl:flex-col xl:justify-start! sm:gap-2.5 overflow-hidden  `}
     >
       {navInfo.map((btn, index) => {
@@ -45,7 +45,7 @@ const AdminNavbar = ({ currentPage }) => {
           </NavLink>
         );
       })}
-    </nav>
+    </aside>
   );
 };
 

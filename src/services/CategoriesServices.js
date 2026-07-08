@@ -119,3 +119,22 @@ export const addNewCategory = async (categoryName, parentId) => {
 
   return null;
 };
+
+export const getCategoryPath = async (category) => {
+  const category_path = [category.name];
+  const collRef = collection(db, "categories");
+  const parentId = category.parent_id;
+
+  if (!parentId) return category_path;
+
+  const parentSnap = await getDoc(doc(collRef, parentId));
+  const parentName = parentSnap.data().name;
+  category_path.push(parentName);
+
+  if (!parentSnap.data().parentId) return category_path.reverse();
+  const parent2Snap = await getDoc(doc(collRef, parentSnap.data().parentId));
+  const parent2Name = parent2Snap.data().name;
+  category_path.push(parent2Name);
+
+  return category_path.reverse();
+};

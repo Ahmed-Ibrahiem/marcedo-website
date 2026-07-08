@@ -33,3 +33,10 @@ export const addNewBrand = async (data) => {
 
   return brandData;
 };
+
+export const getBrandNameByBrandId = async (brand_id) => {
+  const docRef = doc(collection(db, "brands"), brand_id);
+
+  const brandSnap = await getDoc(docRef);
+  return brandSnap.data().name;
+};

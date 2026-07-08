@@ -61,7 +61,7 @@ const ProductDetailsPage = () => {
               </Link>
               <FaAngleRight />
               <span className="current-page text-orange">
-                Apple Iphone 15 (128 GB) - Black
+                {productData.name}
               </span>
             </div>
 

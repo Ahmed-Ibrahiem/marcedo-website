@@ -15,10 +15,11 @@ const RecommendedProducts = ({ productData }) => {
 
   useEffect(() => {
     if (!productData) return;
+    console.log(productData)
 
     const getRelated = async () => {
-      if (!productData.relatedIds.length) return;
-      const products = await getRelatedProducts(productData.relatedIds);
+      if (!productData.related_ids.length) return;
+      const products = await getRelatedProducts(productData.related_ids);
       if (!products) return null;
       setRelatedProducts(products);
     };

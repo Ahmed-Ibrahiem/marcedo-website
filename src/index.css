@@ -173,7 +173,7 @@
   }
 
   .color_options , .radio-option {
-    @apply relative min-w-5.25 min-h-5.25 rounded-full border border-gray-400 appearance-none before:absolute before:top-[50%] before:left-[50%] before:translate-x-[-50%_-50%] before:rounded-full before:duration-300 before:w-[80%] before:h-[80%] before:bg-(--bg-color)
+    @apply cursor-pointer relative min-w-5.25 min-h-5.25 rounded-full border border-gray-400 appearance-none before:absolute before:top-[50%] before:left-[50%] before:translate-x-[-50%_-50%] before:rounded-full before:duration-300 before:w-[80%] before:h-[80%] before:bg-(--bg-color)
   }
 
   .color_options:checked {

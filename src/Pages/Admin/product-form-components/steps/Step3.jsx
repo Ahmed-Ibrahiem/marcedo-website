@@ -17,17 +17,18 @@ const Step3 = ({ setHasVariants, ...props }) => {
     { name: "EUR", id: 3 },
   ];
   const [attributiesList, setAttributesList] = useState(null);
-  const [price, setPrice] = useState(0);
-  const [stock, setStock] = useState(0);
+  const [price, setPrice] = useState("");
+  const [stock, setStock] = useState("");
   const [sku, setSku] = useState("");
   const [currency, setCurrency] = useState("EGP");
   const [prodColor, setProdColor] = useState({ name: "", hex: "#000000" });
-  const [discount_percentage, setDiscount_percentage] = useState("0");
+  const [discount_percentage, setDiscount_percentage] = useState("");
   const [threshold, setThreshold] = useState(0);
   const [missingMessage, setMissingMessage] = useState({
     type: "",
     message: "",
   });
+  const [discountExpiresAt, setDiscountExpiresAt] = useState("");
   const {
     getValues,
     setValue,
@@ -59,7 +60,7 @@ const Step3 = ({ setHasVariants, ...props }) => {
 
         if (level2.length > 0) deepestCategories = level2.map((cat) => cat.id);
         else deepestCategories = level1.map((cat) => cat.id);
-        console.log(deepestCategories)
+
         const req = await getAttributesByCategoriesId(deepestCategories);
         setAttributes(req);
         setDefaultvariant(req);
@@ -94,6 +95,23 @@ const Step3 = ({ setHasVariants, ...props }) => {
       });
       return;
     }
+
+    if (discount_percentage > 0 && !discountExpiresAt) {
+      setMissingMessage({
+        type: "discount-expire",
+        message: "This Field is Required",
+      });
+      return;
+    }
+
+    if (new Date(discountExpiresAt) < new Date()) {
+      setMissingMessage({
+        type: "discount-expire",
+        message: "Expiry date must be in the future",
+      });
+      return;
+    }
+
     if (stock <= 0) {
       setMissingMessage({
         type: "stock",
@@ -101,6 +119,7 @@ const Step3 = ({ setHasVariants, ...props }) => {
       });
       return;
     }
+
     if (!sku.trim()) {
       setMissingMessage({
         type: "sku",
@@ -130,6 +149,7 @@ const Step3 = ({ setHasVariants, ...props }) => {
       price: Number(
         Math.round(+price - price * (+discount_percentage / 100)).toFixed(1),
       ),
+      discount_expires_at: discountExpiresAt,
     };
 
     setValue(
@@ -147,16 +167,24 @@ const Step3 = ({ setHasVariants, ...props }) => {
     setStock(0);
     setSku("");
     setDiscount_percentage(0);
+    setDiscountExpiresAt("");
+    setThreshold(0);
     setProdColor({ name: "", hex: "#000000" });
   };
 
   useEffect(() => {
     setMissingMessage({ message: "", type: "" });
-  }, [price, stock, sku, attributiesList]);
+  }, [
+    price,
+    stock,
+    sku,
+    attributiesList,
+    discount_percentage,
+    discountExpiresAt,
+  ]);
   return (
-    <motion.form
+    <motion.section
       {...props}
-      onSubmit={(e) => e.preventDefault()}
       className="w-full min-h-full h-full text-sm flex-start-col gap-4 grow "
     >
       <div className="grid  grid-cols-1 2xl:grid-cols-4 h-full flex-wrap gap-5 w-full">
@@ -282,7 +310,11 @@ const Step3 = ({ setHasVariants, ...props }) => {
             {/* Price */}
             <InputNumaric
               value={price}
-              onChange={(e) => setPrice(e.target.value)}
+              onChange={(e) => {
+                if (e.target.value.startsWith(0))
+                  setPrice(e.target.value.slice(1));
+                else setPrice(e.target.value);
+              }}
               inputName={"Original Price"}
               placeholder={"Enter your price"}
             >
@@ -296,8 +328,8 @@ const Step3 = ({ setHasVariants, ...props }) => {
                 opionsStyle={"w-full!"}
               />
 
-              {errors.original_price && (
-                <ErrorMessageFrom message={errors.original_price.message} />
+              {missingMessage.type === "price" && (
+                <ErrorMessageFrom message={missingMessage.message} />
               )}
             </InputNumaric>
 
@@ -305,12 +337,9 @@ const Step3 = ({ setHasVariants, ...props }) => {
             <InputNumaric
               value={discount_percentage}
               onBlur={(e) => {
-                if (
-                  e.target.value.trim() === "" ||
-                  +discount_percentage.trim() < 0
-                ) {
+                if (e.target.value.trim() === "" || +discount_percentage < 0) {
                   setDiscount_percentage("0");
-                } else if (+discount_percentage.trim() > 100)
+                } else if (+discount_percentage.trim() >= 100)
                   setDiscount_percentage(99);
               }}
               onChange={(e) => {
@@ -325,6 +354,19 @@ const Step3 = ({ setHasVariants, ...props }) => {
                 className="absolute right-2.5 text-gray bottom-2.5 mt-0"
               />
             </InputNumaric>
+            {/* Discount Expries */}
+            <div className="box-form-style">
+              <label className="label-form-style">Discount Expires At</label>
+              <input
+                value={discountExpiresAt}
+                onChange={(e) => setDiscountExpiresAt(e.target.value)}
+                type="date"
+                className="input-form-style"
+              />
+              {missingMessage.type === "discount-expire" && (
+                <ErrorMessageFrom message={missingMessage.message} />
+              )}
+            </div>
             {/* Stock */}
             <InputNumaric
               value={stock}
@@ -411,6 +453,7 @@ const Step3 = ({ setHasVariants, ...props }) => {
                   </div>
 
                   <button
+                    type="button"
                     onClick={() => {
                       setValue(
                         "variants",
@@ -433,7 +476,7 @@ const Step3 = ({ setHasVariants, ...props }) => {
           </div>
         </div>
       </div>
-    </motion.form>
+    </motion.section>
   );
 };
 
