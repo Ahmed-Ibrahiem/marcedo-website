@@ -17,7 +17,7 @@ const AdminNavbar = ({ currentPage }) => {
       title: "products",
       url: [
         "/admin/products",
-        `/admin/products/add_new_product/${product_id || ""}`,
+        `/admin/products/add_new_product${product_id ? `/${product_id}` : ""}`.trim(),
       ],
       icon: <HiOutlineCube className="text-xl" />,
     },
