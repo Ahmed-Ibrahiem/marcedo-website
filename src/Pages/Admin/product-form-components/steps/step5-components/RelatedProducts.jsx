@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useFormContext } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import { FaMagnifyingGlass, FaXmark } from "react-icons/fa6";
 import { getProductsByCategories } from "../../../../../services/ProductsServices";
 import Skeleton from "react-loading-skeleton";
@@ -10,9 +10,9 @@ import Success_Toast from "../../../../../Components/ui/confirm-message/Success_
 
 const RelatedProducts = () => {
   const [products, setProducts] = useState([]);
-  const [selectedProducts, setSelectedProducts] = useState([]);
-  const { getValues, setValue } = useFormContext();
+  const { getValues, setValue, control } = useFormContext();
   const categoriesId = getValues("category_ids");
+
   const [searchWord, setSearchWord] = useState("");
 
   const suggestedProducts = useMemo(() => {
@@ -49,11 +49,6 @@ const RelatedProducts = () => {
     getProducts();
   }, [categoriesId]);
 
-  useEffect(() => {
-    const related_ids = [...selectedProducts.map((pro) => pro.id)];
-    setValue("related_ids", related_ids);
-  }, [selectedProducts]);
-
   return (
     <div className="w-full max-w-full bg-white rounded-sm shadow-sm p-2.5">
       <h1 className="font-bold mb-2.5">Related Products</h1>
@@ -68,107 +63,121 @@ const RelatedProducts = () => {
           />
           <FaMagnifyingGlass />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 min-h-45 w-full gap-3 ">
-          {suggestedProducts.length > 0 &&
-            suggestedProducts.slice(0, 8).map((pro) => (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                key={pro.id}
-                className="flex-between gap-2.5 h-fit border border-border p-2.5 rounded-sm min-w-40!  shrink-0"
-              >
-                <div className="flex-start gap-2.5">
-                  <div className="w-14 min-w-14 h-14 min-h-14 rounded-sm bg-gray-100 flex-center">
-                    <img
-                      src={pro.thumbnail}
-                      loading="lazy"
-                      className="max-h-[80%] max-w-[80%]"
-                    />
-                  </div>
-                  <div className="flex-start-col text-xs gap-1.5 ">
-                    <h3 className="font-bold line-clamp-1">{pro.name}</h3>
-                    <p>{pro.current_price}$</p>
-                  </div>
+        <Controller
+          control={control}
+          name="related_ids"
+          render={({ field }) => {
+            return (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 min-h-45 w-full gap-3 ">
+                  {suggestedProducts.length > 0 &&
+                    suggestedProducts.slice(0, 8).map((pro) => (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        key={pro.id}
+                        className="flex-between gap-2.5 h-fit border border-border p-2.5 rounded-sm min-w-40!  shrink-0"
+                      >
+                        <div className="flex-start gap-2.5">
+                          <div className="w-14 min-w-14 h-14 min-h-14 rounded-sm bg-gray-100 flex-center">
+                            <img
+                              src={pro.thumbnail}
+                              loading="lazy"
+                              className="max-h-[80%] max-w-[80%]"
+                            />
+                          </div>
+                          <div className="flex-start-col text-xs gap-1.5 ">
+                            <h3 className="font-bold line-clamp-1">
+                              {pro.name}
+                            </h3>
+                            <p>{pro.current_price}$</p>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            if (field.value.length >= 4) {
+                              toast(
+                                <Success_Toast
+                                  message={
+                                    "The maximum number of related products is 4"
+                                  }
+                                />,
+                              );
+                              return;
+                            }
+                            if (!field.value.find((p) => p.id === pro.id)) {
+                              field.onChange([...field.value, pro]);
+                            } else {
+                              toast(
+                                <Success_Toast
+                                  message={"This Product has been added"}
+                                />,
+                              );
+                            }
+                          }}
+                          className="hover:bg-black text-lg hover:text-white w-6 h-6 rounded-sm flex-center border border-border"
+                        >
+                          +
+                        </button>
+                      </motion.div>
+                    ))}
+                  {suggestedProducts.length === 0 &&
+                    Array(8)
+                      .fill(0)
+                      .map((_, index) => {
+                        return <SkeletonLoading key={index} />;
+                      })}
                 </div>
-                <button
-                  type="button"
-                  onClick={() => {
-                    if (selectedProducts.length >= 4) {
-                      toast(
-                        <Success_Toast
-                          message={
-                            "The maximum number of related products is 4"
-                          }
-                        />,
-                      );
-                      return;
-                    }
-                    if (!selectedProducts.find((p) => p.id === pro.id)) {
-                      setSelectedProducts((prev) => [...prev, pro]);
-                    } else {
-                      toast(
-                        <Success_Toast
-                          message={"This Product has been added"}
-                        />,
-                      );
-                    }
-                  }}
-                  className="hover:bg-black text-lg hover:text-white w-6 h-6 rounded-sm flex-center border border-border"
-                >
-                  +
-                </button>
-              </motion.div>
-            ))}
-          {suggestedProducts.length === 0 &&
-            Array(8)
-              .fill(0)
-              .map((_, index) => {
-                return <SkeletonLoading key={index} />;
-              })}
-        </div>
-        
-        <div className="flex-start-col gap-2.5 w-full">
-          <h2 className="font-bold">Selected Products</h2>
-          {selectedProducts.length > 0 && (
-            <div className="grid grid-cols-4 gap-5 w-full">
-              {selectedProducts.map((pro) => {
-                return (
-                  <div
-                    key={pro.id}
-                    className="p-2.5 rounded-sm border border-border flex-between gap-5"
-                  >
-                    <div className="flex-start gap-2.5">
-                      <div className="w-14 min-w-14 h-14 min-h-14 rounded-sm bg-gray-100 flex-center">
-                        <img
-                          src={pro.thumbnail}
-                          loading="lazy"
-                          className="max-h-[80%] max-w-[80%]"
-                        />
-                      </div>
-                      <h2 className="line-clamp-1 font-bold">{pro.name}</h2>
+
+                <div className="flex-start-col gap-2.5 w-full">
+                  <h2 className="font-bold">Selected Products</h2>
+                  {field.value.length > 0 && (
+                    <div className="grid grid-cols-4 gap-5 w-full">
+                      {field.value.map((pro) => {
+                        return (
+                          <div
+                            key={pro.id}
+                            className="p-2.5 rounded-sm border border-border flex-between gap-5"
+                          >
+                            <div className="flex-start gap-2.5">
+                              <div className="w-14 min-w-14 h-14 min-h-14 rounded-sm bg-gray-100 flex-center">
+                                <img
+                                  src={pro.thumbnail}
+                                  loading="lazy"
+                                  className="max-h-[80%] max-w-[80%]"
+                                />
+                              </div>
+                              <h2 className="line-clamp-1 font-bold">
+                                {pro.name}
+                              </h2>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                field.onChange([
+                                  ...field.value.filter((p) => p.id !== pro.id),
+                                ])
+                              }
+                              className="hover:bg-black text-sm hover:text-white w-6 h-6 rounded-sm flex-center border border-border"
+                            >
+                              <FaXmark />
+                            </button>
+                          </div>
+                        );
+                      })}
                     </div>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setSelectedProducts((prev) =>
-                          prev.filter((p) => p.id !== pro.id),
-                        )
-                      }
-                      className="hover:bg-black text-sm hover:text-white w-6 h-6 rounded-sm flex-center border border-border"
-                    >
-                      <FaXmark />
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-          {selectedProducts.length === 0 && (
-            <div className="w-full text-center text-gray">
-              --- No Related Products Yet ---
-            </div>
-          )}
-        </div>
+                  )}
+                  {field.value.length === 0 && (
+                    <div className="w-full text-center text-gray">
+                      --- No Related Products Yet ---
+                    </div>
+                  )}
+                </div>
+              </>
+            );
+          }}
+        />
       </div>
     </div>
   );

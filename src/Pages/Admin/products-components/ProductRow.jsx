@@ -9,6 +9,8 @@ import { FaPen, FaStar } from "react-icons/fa";
 import { CiEdit } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import { useProductsTableControlContext } from "../context/ProductsTableControl";
+import { getProductForEdit } from "../product-form-components/services/productFormServices";
+import { useNavigate } from "react-router-dom";
 
 const ProductRow = ({ product }) => {
   const [proBrand, setProBrand] = useState(null);
@@ -43,11 +45,15 @@ const ProductRow = ({ product }) => {
     getBrand();
   }, []);
 
+  const navigate = useNavigate();
   return (
     <>
       {product && (
         <tr
-          onClick={() => handleSelectedProducts(product.id)}
+          onClick={(e) => {
+            if (e.target === e.currentTarget)
+              handleSelectedProducts(product.id);
+          }}
           key={product.id}
           className="text-sm border-b border-border last-of-type:border-b-0 font-semibold hover:bg-gray/5 cursor-pointer "
         >
@@ -68,7 +74,8 @@ const ProductRow = ({ product }) => {
               className="flex-center min-w-10 w-10 min-h-10 h-10 rounded-sm overflow-hidden
              bg-gray-200 border border-border"
             >
-              <img loading="lazy"
+              <img
+                loading="lazy"
                 className="max-w-[90%] max-h-[90%]"
                 src={product.thumbnail}
                 alt=""
@@ -132,12 +139,20 @@ const ProductRow = ({ product }) => {
             </span>
           </td>
 
+          {/* Row Actions */}
           <td>
             <div className="flex-start gap-1.5">
+              {/* Hide */}
               <button className={btnstyle}>
                 <FaEye />
               </button>
-              <button className={btnstyle}>
+              {/* Edit Product */}
+              <button
+                onClick={() =>
+                  navigate(`/admin/products/add_new_product/${product.id}`)
+                }
+                className={btnstyle}
+              >
                 <CiEdit />
               </button>
               <button className={btnstyle}>

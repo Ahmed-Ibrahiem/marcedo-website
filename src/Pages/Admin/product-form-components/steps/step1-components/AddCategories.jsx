@@ -6,6 +6,7 @@ import useOutside_click from "../../../../../Hooks/Outside_click";
 
 const AddCategories = ({ setOpenCategoryPopup, allCategories }) => {
   const {
+    setValue,
     control,
     formState: { errors },
   } = useFormContext();
@@ -72,6 +73,8 @@ const AddCategories = ({ setOpenCategoryPopup, allCategories }) => {
                           } else {
                             field.onChange([...field.value, categ]);
                           }
+                          setValue("variants", []);
+                          setValue("related_ids", []);
                           setCategoryWord("");
                         }}
                         className="p-1.5 text-xs hover:cursor-pointer hover:bg-orange-lite rounded-sm w-full flex-start"
@@ -91,7 +94,10 @@ const AddCategories = ({ setOpenCategoryPopup, allCategories }) => {
               )}
             </div>
             {errors?.category_ids && (
-              <ErrorMessageFrom style={"line-clamp-1 "} message={errors.category_ids.message} />
+              <ErrorMessageFrom
+                style={"line-clamp-1 "}
+                message={errors.category_ids.message}
+              />
             )}
           </div>
           {/* Review Categories */}

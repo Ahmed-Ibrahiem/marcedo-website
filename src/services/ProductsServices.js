@@ -30,6 +30,15 @@ export const getProductById = async (id) => {
   return snapshot.data();
 };
 
+export const getProductsByIdsGroup = async (products_ids) => {
+  const collRef = collection(db, "products");
+  const q = query(collRef, where("id", "in", products_ids));
+
+  const snap = await getDocs(q);
+
+  return [...snap.docs.map((doc) => doc.data())];
+};
+
 export const getProductBySlug = async (slug) => {
   const q = query(collection(db, "products"), where("slug", "==", slug));
 

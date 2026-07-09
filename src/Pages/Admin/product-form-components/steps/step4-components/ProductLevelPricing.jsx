@@ -44,7 +44,6 @@ const ProductLevelPricing = () => {
                   placeholder={"Enter your price"}
                   value={field.value}
                   onChange={(e) => {
-                    console.log(field.value);
                     if (e.target.value.startsWith(0))
                       field.onChange(e.target.value.slice(1));
                     else field.onChange(e.target.value);

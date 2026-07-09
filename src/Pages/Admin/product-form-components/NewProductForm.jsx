@@ -10,7 +10,6 @@ import { getAllBrands } from "../../../services/BrandsServices";
 import { getAllCategories } from "../../../services/CategoriesServices";
 import { FormProvider, useForm } from "react-hook-form";
 import {
-  publishProduct,
   step1Schema,
   step2Schema,
   step3Schema,
@@ -25,6 +24,12 @@ import Step5 from "./steps/Step5.jsx";
 import { toast } from "react-toastify";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Success_Toast from "../../../Components/ui/confirm-message/Success_Toast.jsx";
+import { useParams } from "react-router-dom";
+import {
+  getProductForEdit,
+  publishProduct,
+  updateProduct,
+} from "./services/productFormServices.js";
 
 const variants = {
   hidden: {
@@ -70,6 +75,11 @@ const NewProductForm = () => {
   const [hasVariants, setHasVariants] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
+  const [isProductLoading, setIsProductLoading] = useState(false);
+  const { product_id: productId } = useParams();
+
+  const isEditMode = Boolean(productId);
+
   const methods = useForm({
     resolver: yupResolver(schemas[currentStep - 1]),
     context: { hasVariants, setCurrentStep },
@@ -111,25 +121,40 @@ const NewProductForm = () => {
   const { control, handleSubmit, reset } = methods;
 
   useEffect(() => {
-    const getBrands = async () => {
-      const res = await getAllBrands();
+    const getData = async () => {
+      const [brandsReq, categories] = await Promise.all([
+        getAllBrands(),
+        getAllCategories(),
+      ]);
 
-      const brands = res.map((brand) => ({
+      const brands = brandsReq.map((brand) => ({
         name: brand.name,
         id: brand.id,
       }));
 
       setAllBrands(brands);
+      setAllCategories(categories);
     };
 
-    const getCategories = async () => {
-      const res = await getAllCategories();
-
-      setAllCategories(res);
-    };
-    getBrands();
-    getCategories();
+    getData();
   }, []);
+
+  useEffect(() => {
+    if (!isEditMode) return;
+    const loadProduct = async () => {
+      try {
+        setIsProductLoading(true);
+        const productData = await getProductForEdit(productId);
+
+        reset(productData);
+      } catch (errors) {
+        console.error("Failed to load product for edit:", errors);
+      } finally {
+        setIsProductLoading(false);
+      }
+    };
+    loadProduct();
+  }, [productId]);
 
   const handleNextStep = async () => {
     const valid = await methods.trigger();
@@ -147,11 +172,27 @@ const NewProductForm = () => {
       reset();
       setCurrentStep(1);
       setHasVariants(false);
-      // navigate(`/products/${proId}`);
       toast(<Success_Toast message={"Product Saved Successfully!"} />);
     } catch (err) {
       console.error("Failed to publish product:", err);
-      setSubmitError("حصل خطأ أثناء حفظ المنتج، حاول تاني.");
+      setSubmitError("Something Went Wrong, Please Try Again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const onUpdate = async (formData, existingProductId) => {
+    setSubmitError(null);
+    setIsSubmitting(true);
+    try {
+      await updateProduct(formData, existingProductId);
+
+      console.log("Product updated:", existingProductId);
+
+      toast(<Success_Toast message={"Product Updated Successfully!"} />);
+    } catch (err) {
+      console.error("Failed to update product:", err);
+      setSubmitError("Something Went Wrong, Please Try Again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -162,8 +203,13 @@ const NewProductForm = () => {
       schemas.map((schema) => schema.isValid(methods.getValues())),
     );
 
+    console.log(stepsValid.every(Boolean));
     if (stepsValid.every(Boolean)) {
-      handleSubmit(onSave)();
+      if (isEditMode) {
+        handleSubmit((formData) => onUpdate(formData, productId))();
+      } else {
+        handleSubmit(onSave)();
+      }
     } else {
       setSubmitError("There are same missing data, check it please");
     }
@@ -172,7 +218,9 @@ const NewProductForm = () => {
   return (
     <main className="h-full flex-start-col w-full gap-5 relative">
       <header className="bg-transparent! ">
-        <h1 className="font-bold">Add New Product</h1>
+        <h1 className="font-bold">
+          {isEditMode ? "Edit Product" : "Add New Product"}
+        </h1>
       </header>
 
       <FormProgress currentStep={currentStep} />
@@ -241,15 +289,16 @@ const NewProductForm = () => {
           </form>
         </fieldset>
         <StepsControl
+          isEditMode={isEditMode}
           formId="product-form"
           currentStep={currentStep}
           onNext={handleNextStep}
           onBack={() => setCurrentStep((prev) => prev - 1)}
-          onSave={handleFinalSubmit}
+          handleFinalSubmit={handleFinalSubmit}
           isSubmitting={isSubmitting}
         />
       </FormProvider>
-      {isSubmitting && (
+      {(isSubmitting || isProductLoading) && (
         <div className="fixed z-50 top-0 left-0 w-full h-full bg-gray/20 flex-center-col gap-5  text-gray">
           <AiOutlineLoading3Quarters size={40} className="loading-animate-1" />
           <p className="text-xl font-bold">Loading...</p>

@@ -26,6 +26,18 @@ export const getCategoryName = async (categoryIds) => {
   else return parent.name;
 };
 
+export const getCategoriesByIds = async (categoryIds) => {
+  const q = query(collection(db, "categories"), where("id", "in", categoryIds));
+
+  const snapshot = await getDocs(q);
+
+  if (snapshot.empty) return [];
+
+  const categories = snapshot.docs.map((doc) => doc.data());
+
+  return categories;
+};
+
 export const getCategoriesAsStringFromDB = async (categoryIds) => {
   const q = query(collection(db, "categories"), where("id", "in", categoryIds));
 

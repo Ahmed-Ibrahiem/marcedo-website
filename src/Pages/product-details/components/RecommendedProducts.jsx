@@ -15,7 +15,6 @@ const RecommendedProducts = ({ productData }) => {
 
   useEffect(() => {
     if (!productData) return;
-    console.log(productData)
 
     const getRelated = async () => {
       if (!productData.related_ids.length) return;

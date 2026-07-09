@@ -8,8 +8,9 @@ const StepsControl = ({
   onNext,
   onBack,
   formId,
-  onSave,
+  handleFinalSubmit,
   isSubmitting,
+  isEditMode,
 }) => {
   return (
     <div className="flex-between w-full bg-white p-2.5 rounded-sm shadow-[3px_3px_5px_var(--color-gray-300)] font-semibold">
@@ -43,11 +44,19 @@ const StepsControl = ({
       ) : (
         <button
           type="button"
-          onClick={onSave}
+          onClick={handleFinalSubmit}
           disabled={isSubmitting}
           className="px-5 text-sm py-2 flex-center border-2 border-orange rounded-sm bg-orange gap-1.5 text-white hover:text-orange! hover:bg-white! disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <span>{isSubmitting ? "Saving..." : "Save"}</span>
+          <span>
+            {isSubmitting
+              ? isEditMode
+                ? "Updating..."
+                : "Saving..."
+              : isEditMode
+                ? "Update Product"
+                : "Save"}
+          </span>
           <FaSave />
         </button>
       )}

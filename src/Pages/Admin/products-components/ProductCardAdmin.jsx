@@ -9,6 +9,7 @@ import { HiMiniArrowTrendingUp } from "react-icons/hi2";
 import { CiEdit } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import { useProductsTableControlContext } from "../context/ProductsTableControl";
+import { useNavigate } from "react-router-dom";
 
 const ProductCardAdmin = ({ productsData }) => {
   const { selectedProductsIds, handleSelectedProducts } =
@@ -42,6 +43,8 @@ const ProductCardAdmin = ({ productsData }) => {
     getCategs();
     getBrand();
   }, []);
+
+  const navigate = useNavigate();
   return (
     <div
       className="border border-border rounded-sm shadow-sm p-2.5 text-[14px] fade-in-animate cursor-pointer relative
@@ -57,7 +60,8 @@ const ProductCardAdmin = ({ productsData }) => {
             type="checkbox"
             className="absolute!  left-0! top-0! w-6.5! h-6.5! border-[1.5px]! checked:border-orange! after:-top-px! after:-left-px checkbox"
           />
-          <img loading="lazy"
+          <img
+            loading="lazy"
             src={productsData.thumbnail}
             className="max-h-[90%] max-w-[90%] absolute inset-0 m-auto"
             alt=""
@@ -121,7 +125,12 @@ const ProductCardAdmin = ({ productsData }) => {
         <button className={btnstyle}>
           <FaEye />
         </button>
-        <button className={btnstyle}>
+        <button
+          onClick={() =>
+            navigate(`/admin/products/add_new_product/${productsData.id}`)
+          }
+          className={btnstyle}
+        >
           <CiEdit />
         </button>
         <button className={btnstyle}>
