@@ -1,11 +1,12 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { IoMdHome } from "react-icons/io";
 import { HiOutlineCube } from "react-icons/hi";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
 const AdminNavbar = ({ currentPage }) => {
+  const { product_id } = useParams();
   const navInfo = [
     {
       title: "dashboard",
@@ -14,7 +15,10 @@ const AdminNavbar = ({ currentPage }) => {
     },
     {
       title: "products",
-      url: ["/admin/products", "/admin/products/add_new_product"],
+      url: [
+        "/admin/products",
+        `/admin/products/add_new_product/${product_id || ""}`,
+      ],
       icon: <HiOutlineCube className="text-xl" />,
     },
     {

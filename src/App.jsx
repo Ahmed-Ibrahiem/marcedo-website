@@ -3,7 +3,6 @@ import Home from "./Pages/Home/Home.jsx";
 import Scroll_button from "./Components/ui/scroll-button/Scroll_button.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
-import "./App.css";
 import Cart_popup from "./Components/Cart/Cart_popup.jsx";
 import Custom_message_toast from "./Components/ui/coming-soon/Custom_message_toast.jsx";
 import Wishlist_page from "./Pages/Wishlist/Wishlist_page.jsx";
@@ -50,6 +49,7 @@ const App = () => {
           <Route path="/shop/:categorySlug" element={<CategoriesPage />} />
           <Route path="/order-success" element={<Order_successfull />} />
         </Route>
+
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="orders" element={<Orders />} />
