@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, memo } from "react";
 import { useFormContext } from "react-hook-form";
 import { getCategoryPath } from "../../../../../services/CategoriesServices";
 import { FaAngleRight, FaPencil } from "react-icons/fa6";
@@ -151,4 +151,4 @@ const SkeletonLoading = () => {
   );
 };
 
-export default ProductSummary;
+export default React.memo(ProductSummary);

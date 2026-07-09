@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useFormContext, useWatch } from "react-hook-form";
 import { getAttributesByCategoriesId } from "../../../../services/categoriesPageServices";
-import { FaPencil, FaXmark, FaRegTrashCan } from "react-icons/fa6";
+import { FaXmark } from "react-icons/fa6";
 import { FaPercent } from "react-icons/fa";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -10,25 +10,38 @@ import DropDownList from "../../components/DropDownList";
 import ErrorMessageFrom from "../../../../Components/ui/ErrorMessageFrom";
 import InputNumaric from "../components/InputNumaric";
 
+const currencyList = [
+  { name: "EGP", id: 1 },
+  { name: "USD", id: 2 },
+  { name: "EUR", id: 3 },
+];
+
+// Default shape for the variant currently being built in the form
+const defaultDraft = {
+  price: "",
+  stock: "",
+  sku: "",
+  currency: "EGP",
+  prodColor: { name: "", hex: "#000000" },
+  discount_percentage: "",
+  threshold: 0,
+  discountExpiresAt: "",
+};
+
 const Step3 = ({ setHasVariants, ...props }) => {
-  const currencyList = [
-    { name: "EGP", id: 1 },
-    { name: "USD", id: 2 },
-    { name: "EUR", id: 3 },
-  ];
+  // Single object holding every field of the variant draft, instead of
+  // 8 separate useState calls. updateDraft merges partial updates in,
+  // same way setState does for class components.
+  const [draft, setDraft] = useState(defaultDraft);
+  const updateDraft = (updates) =>
+    setDraft((prev) => ({ ...prev, ...updates }));
+
   const [attributiesList, setAttributesList] = useState(null);
-  const [price, setPrice] = useState("");
-  const [stock, setStock] = useState("");
-  const [sku, setSku] = useState("");
-  const [currency, setCurrency] = useState("EGP");
-  const [prodColor, setProdColor] = useState({ name: "", hex: "#000000" });
-  const [discount_percentage, setDiscount_percentage] = useState("");
-  const [threshold, setThreshold] = useState(0);
   const [missingMessage, setMissingMessage] = useState({
     type: "",
     message: "",
   });
-  const [discountExpiresAt, setDiscountExpiresAt] = useState("");
+
   const {
     getValues,
     setValue,
@@ -77,6 +90,17 @@ const Step3 = ({ setHasVariants, ...props }) => {
   }, [variants]);
 
   const handleAddVaraints = () => {
+    const {
+      price,
+      stock,
+      sku,
+      currency,
+      prodColor,
+      discount_percentage,
+      threshold,
+      discountExpiresAt,
+    } = draft;
+
     const areThereVariant = Object.fromEntries(
       Object.entries(attributiesList).filter(([key, value]) => value.trim()),
     );
@@ -163,25 +187,15 @@ const Step3 = ({ setHasVariants, ...props }) => {
     setAttributesList((prev) =>
       Object.fromEntries(Object.entries(prev).map(([key, value]) => [key, ""])),
     );
-    setPrice(0);
-    setStock(0);
-    setSku("");
-    setDiscount_percentage(0);
-    setDiscountExpiresAt("");
-    setThreshold(0);
-    setProdColor({ name: "", hex: "#000000" });
+
+    // Reset the whole draft in one go instead of 8 separate setters
+    setDraft(defaultDraft);
   };
 
   useEffect(() => {
     setMissingMessage({ message: "", type: "" });
-  }, [
-    price,
-    stock,
-    sku,
-    attributiesList,
-    discount_percentage,
-    discountExpiresAt,
-  ]);
+  }, [draft, attributiesList]);
+
   return (
     <motion.section
       {...props}
@@ -194,99 +208,105 @@ const Step3 = ({ setHasVariants, ...props }) => {
           {attributes.length > 0 && (
             <div className="relative flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 min-[900px]:grid-cols-4 2xl:grid-cols-4  w-full gap-5">
               {/* Variants Inputs */}
-              {attributes.map((attribute) => {
-                return (
-                  <div
-                    className={`relative ${attribute.key === "color" ? "order-50 col-span-2" : ""}`}
-                    key={attribute.id}
-                  >
-                    <p className="capitalize label-form-style mb-1.5">
-                      {attribute.name}
-                    </p>
-                    {attribute.key !== "color" && (
-                      <DropDownList
-                        listStyle={`justify-between! `}
-                        opionsStyle={"w-full! relative!"}
-                        list={attribute.values.map(({ label, value }, i) => ({
-                          id: i,
-                          name: label,
-                        }))}
-                        currentSelect={
-                          attributiesList[attribute.key]
-                            ? attributiesList[attribute.key]
-                            : `Select ${attribute.name}`
-                        }
-                        optionFun={(item) => {
-                          setAttributesList((prev) => ({
-                            ...prev,
-                            [attribute.key]: item.name,
-                          }));
-                        }}
-                      >
-                        <span
-                          className="p-1.5 hover:bg-orange-lite text-sm!"
-                          onClick={() => {
+              {attributes &&
+                attributiesList &&
+                attributes.map((attribute) => {
+                  return (
+                    <div
+                      className={`relative ${attribute.key === "color" ? "order-50 col-span-2" : ""}`}
+                      key={attribute.id}
+                    >
+                      <p className="capitalize label-form-style mb-1.5">
+                        {attribute.name}
+                      </p>
+                      {attribute.key !== "color" && (
+                        <DropDownList
+                          listStyle={`justify-between! `}
+                          opionsStyle={"w-full! relative!"}
+                          list={attribute.values.map(({ label, value }, i) => ({
+                            id: i,
+                            name: label,
+                          }))}
+                          currentSelect={
+                            attributiesList[attribute.key]
+                              ? attributiesList[attribute.key]
+                              : `Select ${attribute.name}`
+                          }
+                          optionFun={(item) => {
                             setAttributesList((prev) => ({
                               ...prev,
-                              [attribute.key]: "",
+                              [attribute.key]: item.name,
                             }));
                           }}
                         >
-                          -- none --
-                        </span>
-                      </DropDownList>
-                    )}
-                    {attribute.key === "color" && (
-                      <div className="flex-start gap-2.5">
-                        {/* color name */}
-                        <div className="flex-start gap-1.5">
-                          <label
-                            className="label-form-style"
-                            htmlFor="color-name"
-                          >
-                            Name
-                          </label>
-                          <input
-                            value={prodColor.name}
-                            onChange={(e) =>
-                              setProdColor((prev) => ({
+                          <span
+                            className="p-1.5 hover:bg-orange-lite text-sm!"
+                            onClick={() => {
+                              setAttributesList((prev) => ({
                                 ...prev,
-                                name: e.target.value,
-                              }))
-                            }
-                            id="color-name"
-                            placeholder="Enter your color name"
-                            type="text"
-                            className="input-form-style"
-                          />
-                        </div>
-                        {/* color hex */}
-                        <div className="flex-start gap-1.5">
-                          <label
-                            className="label-form-style"
-                            htmlFor="hex-color"
+                                [attribute.key]: "",
+                              }));
+                            }}
                           >
-                            Hex
-                          </label>
-                          <input
-                            value={prodColor.hex}
-                            onChange={(e) =>
-                              setProdColor((prev) => ({
-                                ...prev,
-                                hex: e.target.value,
-                              }))
-                            }
-                            id="hex-color"
-                            placeholder="Enter your color name"
-                            type="color"
-                            className=""
-                          />
+                            -- none --
+                          </span>
+                        </DropDownList>
+                      )}
+                      {attribute.key === "color" && (
+                        <div className="flex-start gap-2.5">
+                          {/* color name */}
+                          <div className="flex-start gap-1.5">
+                            <label
+                              className="label-form-style"
+                              htmlFor="color-name"
+                            >
+                              Name
+                            </label>
+                            <input
+                              value={draft.prodColor.name}
+                              onChange={(e) =>
+                                updateDraft({
+                                  prodColor: {
+                                    ...draft.prodColor,
+                                    name: e.target.value,
+                                  },
+                                })
+                              }
+                              id="color-name"
+                              placeholder="Enter your color name"
+                              type="text"
+                              className="input-form-style"
+                            />
+                          </div>
+                          {/* color hex */}
+                          <div className="flex-start gap-1.5">
+                            <label
+                              className="label-form-style"
+                              htmlFor="hex-color"
+                            >
+                              Hex
+                            </label>
+                            <input
+                              value={draft.prodColor.hex}
+                              onChange={(e) =>
+                                updateDraft({
+                                  prodColor: {
+                                    ...draft.prodColor,
+                                    hex: e.target.value,
+                                  },
+                                })
+                              }
+                              id="hex-color"
+                              placeholder="Enter your color name"
+                              type="color"
+                              className=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+                      )}
+                    </div>
+                  );
+                })}
               {missingMessage.type === "variants" && (
                 <ErrorMessageFrom
                   style={"-bottom-7"}
@@ -309,18 +329,18 @@ const Step3 = ({ setHasVariants, ...props }) => {
           <div className="mt-auto sm:grid sm:grid-cols-4 gap-5 w-full">
             {/* Price */}
             <InputNumaric
-              value={price}
+              value={draft.price}
               onChange={(e) => {
                 if (e.target.value.startsWith(0))
-                  setPrice(e.target.value.slice(1));
-                else setPrice(e.target.value);
+                  updateDraft({ price: e.target.value.slice(1) });
+                else updateDraft({ price: e.target.value });
               }}
               inputName={"Original Price"}
               placeholder={"Enter your price"}
             >
               <DropDownList
-                currentSelect={currency}
-                optionFun={(item) => setCurrency(item.name)}
+                currentSelect={draft.currency}
+                optionFun={(item) => updateDraft({ currency: item.name })}
                 list={currencyList}
                 listStyle={
                   "absolute! right-0! bottom-0! gap-0! text-sm! shadow-none! justify-between! w-17! min-w-10!"
@@ -335,15 +355,18 @@ const Step3 = ({ setHasVariants, ...props }) => {
 
             {/* Discount */}
             <InputNumaric
-              value={discount_percentage}
+              value={draft.discount_percentage}
               onBlur={(e) => {
-                if (e.target.value.trim() === "" || +discount_percentage < 0) {
-                  setDiscount_percentage("0");
-                } else if (+discount_percentage.trim() >= 100)
-                  setDiscount_percentage(99);
+                if (
+                  e.target.value.trim() === "" ||
+                  +draft.discount_percentage < 0
+                ) {
+                  updateDraft({ discount_percentage: "0" });
+                } else if (+draft.discount_percentage.toString().trim() >= 100)
+                  updateDraft({ discount_percentage: 99 });
               }}
               onChange={(e) => {
-                setDiscount_percentage(e.target.value);
+                updateDraft({ discount_percentage: e.target.value });
               }}
               id="price"
               placeholder="Enter your price"
@@ -358,8 +381,10 @@ const Step3 = ({ setHasVariants, ...props }) => {
             <div className="box-form-style">
               <label className="label-form-style">Discount Expires At</label>
               <input
-                value={discountExpiresAt}
-                onChange={(e) => setDiscountExpiresAt(e.target.value)}
+                value={draft.discountExpiresAt}
+                onChange={(e) =>
+                  updateDraft({ discountExpiresAt: e.target.value })
+                }
                 type="date"
                 className="input-form-style"
               />
@@ -369,8 +394,8 @@ const Step3 = ({ setHasVariants, ...props }) => {
             </div>
             {/* Stock */}
             <InputNumaric
-              value={stock}
-              onChange={(e) => setStock(e.target.value)}
+              value={draft.stock}
+              onChange={(e) => updateDraft({ stock: e.target.value })}
               placeholder="Enter your stock"
               inputName={"Stock"}
             >
@@ -380,10 +405,8 @@ const Step3 = ({ setHasVariants, ...props }) => {
             </InputNumaric>
             {/* Low Stock Threshold */}
             <InputNumaric
-              value={threshold}
-              onChange={(e) => {
-                setThreshold(e.target.value);
-              }}
+              value={draft.threshold}
+              onChange={(e) => updateDraft({ threshold: e.target.value })}
               inputName={"Low Stock Threshold"}
             />
             {/* Sku */}
@@ -393,10 +416,10 @@ const Step3 = ({ setHasVariants, ...props }) => {
               </label>
               <input
                 type="text"
-                value={sku}
-                onChange={(e) => {
-                  setSku(e.target.value.toUpperCase());
-                }}
+                value={draft.sku}
+                onChange={(e) =>
+                  updateDraft({ sku: e.target.value.toUpperCase() })
+                }
                 id="sku"
                 placeholder="Enter your sku product"
                 className="input-form-style"

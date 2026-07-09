@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { motion } from "framer-motion";
 import MainImage from "./step2-components/MainImage";
 import GallaryImages from "./step2-components/GallaryImages";
@@ -22,4 +22,4 @@ const Step2 = ({ ...props }) => {
   );
 };
 
-export default Step2;
+export default React.memo(Step2);

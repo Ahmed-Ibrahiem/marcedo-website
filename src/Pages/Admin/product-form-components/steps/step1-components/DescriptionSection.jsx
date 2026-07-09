@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import AddBlockPopup from "../../components/AddBlockPopup";
 import { FaPlus } from "react-icons/fa6";
 import { FaTrashAlt } from "react-icons/fa";
@@ -68,7 +68,9 @@ const DescriptionSection = () => {
           </button>
 
           {/* Empty state */}
-          {!field.value.length && <p className="text-gray my-2.5">--- No block yet --- </p>}
+          {!field.value.length && (
+            <p className="text-gray my-2.5">--- No block yet --- </p>
+          )}
 
           {/* List of added blocks */}
           {field.value.length > 0 && (
@@ -77,7 +79,7 @@ const DescriptionSection = () => {
               animate={{ opacity: 1 }}
               className="content flex-start-col gap-3.5 mt-1.5 max-h-52 overflow-y-auto"
             >
-              {field.value.map((item) => {
+              {field.value.map((item, index) => {
                 // Match the block to its display config
                 const typeInfo = typeOptions.find(
                   (typ) => item.type === typ.type,
@@ -88,7 +90,7 @@ const DescriptionSection = () => {
                     htmlFor={item.type}
                     className="p-2.5 w-full cursor-pointer rounded-sm border border-border flex-between gap-5"
                     style={{ borderColor: typeInfo.color }}
-                    key={item.id}
+                    key={index}
                   >
                     <div className="flex-start gap-2.5">
                       {/* Block type icon */}
@@ -171,4 +173,4 @@ const DescriptionSection = () => {
   );
 };
 
-export default DescriptionSection;
+export default React.memo(DescriptionSection);

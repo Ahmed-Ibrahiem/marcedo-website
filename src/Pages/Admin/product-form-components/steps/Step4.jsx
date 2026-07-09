@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import ProductLevelPricing from "./step4-components/ProductLevelPricing";
 import ProductLevelInventory from "./step4-components/ProductLevelInventory";
@@ -22,4 +22,4 @@ const Step4 = ({ ...props }) => {
   );
 };
 
-export default Step4;
+export default React.memo(Step4);

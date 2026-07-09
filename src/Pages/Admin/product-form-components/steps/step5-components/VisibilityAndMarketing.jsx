@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { GrCircleAlert } from "react-icons/gr";
 
@@ -85,7 +85,9 @@ const VisibilityAndMarketing = () => {
               >
                 Featured Product <GrCircleAlert className="text-gray" />
               </label>
-              <p className="text-gray">show this product in featured section.</p>
+              <p className="text-gray">
+                show this product in featured section.
+              </p>
             </div>
           </div>
           {/* Best Seller Product */}
@@ -112,4 +114,4 @@ const VisibilityAndMarketing = () => {
   );
 };
 
-export default VisibilityAndMarketing;
+export default React.memo(VisibilityAndMarketing);

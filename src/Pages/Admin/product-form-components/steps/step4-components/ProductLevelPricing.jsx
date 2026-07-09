@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import DropDownList from "../../../components/DropDownList";
 import { FaPercent } from "react-icons/fa";
 import { Controller, useFormContext, useWatch } from "react-hook-form";
 import InputNumaric from "../../components/InputNumaric";
 import ErrorMessageFrom from "../../../../../Components/ui/ErrorMessageFrom";
+
+const currencyList = [
+  { name: "EGP", id: 1 },
+  { name: "USD", id: 2 },
+  { name: "EUR", id: 3 },
+];
 
 const ProductLevelPricing = () => {
   const {
@@ -12,22 +18,18 @@ const ProductLevelPricing = () => {
     register,
     formState: { errors },
   } = useFormContext();
+
   const currentPrice = useWatch({ name: "current_price" });
   const originalPrice = useWatch({ name: "original_price" });
   const discountPercentage = useWatch({ name: "discount_percentage" });
   const currency = useWatch({ name: "currency" });
   const variants = useWatch({ name: "variants" });
 
-  const currencyList = [
-    { name: "EGP", id: 1 },
-    { name: "USD", id: 2 },
-    { name: "EUR", id: 3 },
-  ];
-
   useEffect(() => {
     const price = originalPrice - (originalPrice * discountPercentage) / 100;
     setValue("current_price", price);
   }, [originalPrice, discountPercentage]);
+
   return (
     <div className="w-full bg-white flex-start-col gap-2.5 rounded-sm shadow-sm  p-2.5">
       <h1 className="font-semibold">Pricing (Product-level)</h1>
@@ -157,7 +159,9 @@ const ProductLevelPricing = () => {
               className="switch-input-style"
               {...register("charge_tax")}
             />
-            <p className="text-sm text-gray line-clamp-1">Charge tax on this product</p>
+            <p className="text-sm text-gray line-clamp-1">
+              Charge tax on this product
+            </p>
           </div>
         </div>
       </div>
@@ -165,4 +169,4 @@ const ProductLevelPricing = () => {
   );
 };
 
-export default ProductLevelPricing;
+export default React.memo(ProductLevelPricing);

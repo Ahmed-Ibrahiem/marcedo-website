@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { motion } from "framer-motion";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -30,4 +30,4 @@ const SkeletonLoading = () => {
   );
 };
 
-export default Step5;
+export default React.memo(Step5);

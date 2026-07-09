@@ -65,6 +65,39 @@ const schemas = [
   step5Schema,
 ];
 
+const defaultProductValues = {
+  category_ids: [],
+  brand_id: "",
+  tags: [],
+  thumbnail: "",
+  discount_percentage: 0,
+  original_price: "",
+  currency: "EGP",
+  cost_price: 0,
+  name: "",
+  short_description: "",
+  gallery: [],
+  videos: [],
+  variants: [],
+  colorPalette: {},
+  charge_tax: true,
+  quantity: 0,
+  sku: "",
+  track_inventory: true,
+  low_stock_threshold: 0,
+  shipping_type: "Standard Shipping",
+  estimated_delivery_days: { from: 0, to: 0 },
+  from: "",
+  is_free: false,
+  is_active: true,
+  is_featured: true,
+  is_best_seller: true,
+  related_ids: [],
+  description: [],
+  current_price: "",
+  discount_expires_at: null,
+};
+
 const NewProductForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [openCategoryPopup, setOpenCategoryPopup] = useState(false);
@@ -83,39 +116,8 @@ const NewProductForm = () => {
   const methods = useForm({
     resolver: yupResolver(schemas[currentStep - 1]),
     context: { hasVariants, setCurrentStep },
-    defaultValues: {
-      category_ids: [],
-      brand_id: "",
-      tags: [],
-      thumbnail: "",
-      discount_percentage: 0,
-      original_price: "",
-      currency: "EGP",
-      cost_price: 0,
-      name: "",
-      short_description: "",
-      gallery: [],
-      videos: [],
-      variants: [],
-      colorPalette: {},
-      charge_tax: true,
-      quantity: 0,
-      sku: "",
-      track_inventory: true,
-      low_stock_threshold: 0,
-      shipping_type: "Standard Shipping",
-      estimated_delivery_days: { from: 0, to: 0 },
-      from: "",
-      is_free: false,
-      is_active: true,
-      is_featured: true,
-      is_best_seller: true,
-      related_ids: [],
-      description: [],
-      current_price: "",
-      discount_expires_at: null,
-    },
-    mode: "onChange",
+    defaultValues: defaultProductValues,
+    mode: "onTouched",
   });
 
   const { control, handleSubmit, reset } = methods;
@@ -203,7 +205,6 @@ const NewProductForm = () => {
       schemas.map((schema) => schema.isValid(methods.getValues())),
     );
 
-    console.log(stepsValid.every(Boolean));
     if (stepsValid.every(Boolean)) {
       if (isEditMode) {
         handleSubmit((formData) => onUpdate(formData, productId))();
@@ -278,7 +279,7 @@ const NewProductForm = () => {
               {currentStep === 5 && (
                 <Step5
                   setCurrentStep={setCurrentStep}
-                  key={"model-4"}
+                  key={"model-5"}
                   variants={variants}
                   initial="hidden"
                   animate="visible"
@@ -299,8 +300,11 @@ const NewProductForm = () => {
         />
       </FormProvider>
       {(isSubmitting || isProductLoading) && (
-        <div className="fixed z-50 top-0 left-0 w-full h-full bg-gray/20 flex-center-col gap-5  text-gray">
-          <AiOutlineLoading3Quarters size={40} className="loading-animate-1" />
+        <div className="fixed z-50 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
+          <AiOutlineLoading3Quarters
+            size={40}
+            className="loading-animate-1 text-orange"
+          />
           <p className="text-xl font-bold">Loading...</p>
         </div>
       )}
@@ -324,7 +328,7 @@ const NewProductForm = () => {
         )}
       </AnimatePresence>
 
-      <DevTool control={control} />
+      {/* <DevTool control={control} /> */}
     </main>
   );
 };

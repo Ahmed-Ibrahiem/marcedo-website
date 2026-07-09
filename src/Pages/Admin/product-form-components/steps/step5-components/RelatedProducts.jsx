@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, memo } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { FaMagnifyingGlass, FaXmark } from "react-icons/fa6";
 import { getProductsByCategories } from "../../../../../services/ProductsServices";
@@ -198,4 +198,4 @@ const SkeletonLoading = () => {
   );
 };
 
-export default RelatedProducts;
+export default React.memo(RelatedProducts);

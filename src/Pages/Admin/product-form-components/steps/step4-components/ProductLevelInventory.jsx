@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import { Controller, useFormContext, useWatch } from "react-hook-form";
 import ErrorMessageFrom from "../../../../../Components/ui/ErrorMessageFrom";
 import InputNumaric from "../../components/InputNumaric";
@@ -14,7 +14,6 @@ const ProductLevelInventory = () => {
   const trackInventory = useWatch({ name: "track_inventory" });
   const variants = useWatch({ name: "variants" });
 
- 
   useEffect(() => {
     if (!trackInventory) {
       clearErrors("low_stock_threshold");
@@ -33,7 +32,6 @@ const ProductLevelInventory = () => {
             inputName={"Stock"}
             placeholder={"Enter your product stock"}
             {...register("quantity")}
-            
           >
             {errors?.quantity && (
               <ErrorMessageFrom message={errors.quantity.message} />
@@ -82,7 +80,6 @@ const ProductLevelInventory = () => {
         </div>
         {/* Threshold */}
         <InputNumaric
-          
           className={`input-form-style ${!trackInventory ? " bg-gray-100 pointer-events-none text-gray" : ""}`}
           inputName={"Low Stock Threshold"}
           placeholder="Enter your threshold"
@@ -97,4 +94,4 @@ const ProductLevelInventory = () => {
   );
 };
 
-export default ProductLevelInventory;
+export default React.memo(ProductLevelInventory);

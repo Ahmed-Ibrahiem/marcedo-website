@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { useFormContext } from "react-hook-form";
 import VariantsSummary from "../step4-components/VariantsSummary";
 import { FaRegCircleXmark, FaRegCircleCheck, FaPencil } from "react-icons/fa6";
@@ -18,7 +18,11 @@ const PriceAndInventorySummary = ({ setCurrentStep }) => {
     <div className="w-full bg-white rounded-sm shadow-sm p-2.5">
       <div className="flex-between mb-2.5">
         <h1 className="font-bold">Price & Inventory Summary</h1>
-        <button type="button" onClick={() => setCurrentStep(3)} className={btnStyle}>
+        <button
+          type="button"
+          onClick={() => setCurrentStep(3)}
+          className={btnStyle}
+        >
           <FaPencil />
           <span>Edit</span>
         </button>
@@ -119,4 +123,4 @@ const btnStyle = `
 flex-start max-sm:absolute max-sm:top-12.5 max-sm:right-5 gap-2.5 p-1.5 px-4 bg-white
 rounded-sm border border-border h-fit hover:bg-gray-200 
 `;
-export default PriceAndInventorySummary;
+export default React.memo(PriceAndInventorySummary);

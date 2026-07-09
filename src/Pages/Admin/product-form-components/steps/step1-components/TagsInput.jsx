@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { FaXmark } from "react-icons/fa6";
 
@@ -94,4 +94,4 @@ const TagsInput = ({ name = "tags" }) => {
   );
 };
 
-export default TagsInput;
+export default React.memo(TagsInput);

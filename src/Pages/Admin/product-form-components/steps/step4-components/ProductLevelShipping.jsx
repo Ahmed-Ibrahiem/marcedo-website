@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, memo } from "react";
 import DropDownList from "../../../components/DropDownList";
 import { Controller, useFormContext, useWatch } from "react-hook-form";
 
@@ -92,4 +92,4 @@ const ProductLevelShipping = () => {
   );
 };
 
-export default ProductLevelShipping;
+export default React.memo(ProductLevelShipping);

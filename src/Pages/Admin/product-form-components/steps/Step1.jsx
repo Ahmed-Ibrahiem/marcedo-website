@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, memo } from "react";
 import { motion } from "framer-motion";
 import { useFormContext, useWatch } from "react-hook-form";
 import ErrorMessageFrom from "../../../../Components/ui/ErrorMessageFrom";
@@ -22,7 +22,6 @@ const Step1 = ({
     setValue,
     formState: { errors },
   } = useFormContext();
-
 
   return (
     <motion.section
@@ -86,4 +85,4 @@ const SkeletonLoading = () => {
   );
 };
 
-export default Step1;
+export default React.memo(Step1);
