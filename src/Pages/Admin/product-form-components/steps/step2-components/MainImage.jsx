@@ -4,6 +4,8 @@ import { FaXmark } from "react-icons/fa6";
 import { useFormContext, useWatch } from "react-hook-form";
 import ErrorMessageFrom from "../../../../../Components/ui/ErrorMessageFrom";
 
+const MAX_FILE_SIZE = 2 * 1024 * 1024;
+
 const MainImage = () => {
   const [isDragging, setIsDragging] = useState(false);
 
@@ -15,6 +17,7 @@ const MainImage = () => {
   // Extract form control and errors from context
   const {
     setValue,
+    setError,
     formState: { errors },
   } = useFormContext();
 
@@ -23,19 +26,27 @@ const MainImage = () => {
     const file = files[0]; // Take only the first file since this is a single thumbnail upload
     if (!file) return;
     if (!file.type.startsWith("image")) return; // Validate that the file is an image
-
-    const reader = new FileReader();
+    if (file.size > MAX_FILE_SIZE) {
+      setError("thumbnail", {
+        message: `"${file.name}" is lager, max size is 2MB`,
+      });
+      return;
+    }
 
     // Convert file to Base64 string and update the form state directly
-    reader.onload = (e) =>
-      setValue("thumbnail", e.target.result, {
-        shouldValidate: true,
-        shouldDirty: true,
-      });
-
-    reader.readAsDataURL(file);
+    setValue("thumbnail", file, {
+      shouldValidate: true,
+      shouldDirty: true,
+    });
   };
 
+  // Get src image if it was image file then return Object file else return image as string
+  const getPreviewSrc = (item) => {
+    if (item instanceof File) {
+      return URL.createObjectURL(item);
+    }
+    return item;
+  };
   return (
     <div className="thembnail flex-start-col gap-2.5 bg-white w-full rounded-sm p-2.5 shadow-[3px_3px_5px_var(--color-gray-300)]">
       <h1 className="font-semibold">Thumbnail Image (main image)</h1>
@@ -84,7 +95,7 @@ const MainImage = () => {
         <div className="h-50 xl:h-auto xl:max-h-58.5 bg-gray-100 rounded-sm border flex-center border-border relative">
           {thumbnail ? (
             <img
-              src={thumbnail}
+              src={getPreviewSrc(thumbnail)}
               className="max-w-[90%] max-h-[90%] "
               alt="Thumbnail Preview"
             />

@@ -71,7 +71,7 @@ const RelatedProducts = () => {
               <>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 min-h-45 w-full gap-3 ">
                   {suggestedProducts.length > 0 &&
-                    suggestedProducts.slice(0, 8).map((pro) => (
+                    suggestedProducts.map((pro) => (
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}

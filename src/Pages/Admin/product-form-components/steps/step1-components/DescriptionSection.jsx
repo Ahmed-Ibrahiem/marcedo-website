@@ -95,7 +95,7 @@ const DescriptionSection = () => {
                     <div className="flex-start gap-2.5">
                       {/* Block type icon */}
                       <div
-                        className="w-8 h-8 rounded-sm flex-center text-lg!"
+                        className="w-8 min-w-8 h-8 min-h-8 rounded-sm flex-center text-lg!"
                         style={{
                           color: typeInfo.color,
                           background: `${typeInfo.color}25`,
@@ -145,7 +145,7 @@ const DescriptionSection = () => {
                           ...field.value.filter((i) => i.id !== item.id),
                         ])
                       }
-                      className="w-7 h-7 shadow-sm rounded-sm border border-border flex-center text-orange hover:border-orange hover:bg-orange hover:text-white"
+                      className="min-w-7 w-7 min-h-7 h-7 shadow-sm rounded-sm border border-border flex-center text-orange hover:border-orange hover:bg-orange hover:text-white"
                     >
                       <FaTrashAlt />
                     </button>

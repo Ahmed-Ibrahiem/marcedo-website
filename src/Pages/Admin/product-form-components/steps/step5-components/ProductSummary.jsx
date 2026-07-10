@@ -43,6 +43,14 @@ const ProductSummary = ({ setCurrentStep }) => {
     getCategory();
   }, [categories, brand_id]);
 
+  // Get src image if it was image file then return Object file else return image as string
+  const getPreviewSrc = (item) => {
+    if (item instanceof File) {
+      return URL.createObjectURL(item);
+    }
+    return item;
+  };
+
   return (
     <div className="w-full rounded-sm bg-white shadow-sm p-2.5 flex-start-col gap-2.5">
       <h1 className="font-bold">Product Summary</h1>
@@ -51,7 +59,7 @@ const ProductSummary = ({ setCurrentStep }) => {
         <div className="flex flex-col md:flex-row gap-5 grow ">
           <div className="thumbnail min-w-50 sm:w-50 min-h-60 max-h-60 rounded-sm flex-center bg-gray-100">
             <img
-              src={thumbnail}
+              src={getPreviewSrc(thumbnail)}
               className="max-w-[90%] max-h-[90%]"
               loading="lazy"
             />

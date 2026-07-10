@@ -24,12 +24,17 @@ import Step5 from "./steps/Step5.jsx";
 import { toast } from "react-toastify";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Success_Toast from "../../../Components/ui/confirm-message/Success_Toast.jsx";
-import { useParams } from "react-router-dom";
+import { data, useParams } from "react-router-dom";
 import {
   getProductForEdit,
   publishProduct,
   updateProduct,
 } from "./services/productFormServices.js";
+import {
+  uploadImageToCloudinary,
+  uploadMaltiIMageToCloudinary,
+} from "../../../services/cloudinaryServices.js";
+import UploadProgressBar from "../../../Components/ui/UploadProgressBar.jsx";
 
 const variants = {
   hidden: {
@@ -109,6 +114,7 @@ const NewProductForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
   const [isProductLoading, setIsProductLoading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
   const { product_id: productId } = useParams();
 
   const isEditMode = Boolean(productId);
@@ -163,40 +169,93 @@ const NewProductForm = () => {
     if (valid) setCurrentStep((prev) => prev + 1);
   };
 
+  const uplaodFormMedia = async (formData) => {
+    let filesToUpload = [];
+    const update = { ...formData };
+
+    if (formData.thumbnail instanceof File) {
+      filesToUpload.push({ key: "thumbnail", file: update.thumbnail });
+    }
+
+    if (update.gallery?.length > 0) {
+      update.gallery.forEach((item, index) => {
+        if (item instanceof File)
+          filesToUpload.push({ key: `gallery-${index}`, file: item });
+      });
+    }
+
+    if (filesToUpload.length <= 0) return update;
+
+    const progressMap = {};
+
+    const result = await Promise.all(
+      filesToUpload.map(({ key, file }) => {
+        return uploadImageToCloudinary(file, (percent) => {
+          progressMap[key] = percent;
+          const total = Object.values(progressMap).reduce((a, b) => a + b, 0);
+          const avarage = Math.round(total / filesToUpload.length);
+          setUploadProgress(avarage);
+        }).then((url) => ({ key, url }));
+      }),
+    );
+
+    result.forEach((item) => {
+      if (item.key === "thumbnail") {
+        update.thumbnail = item.url;
+      } else if (item.key.startsWith("gallery")) {
+        const index = Number(item.key.split("-")[1]);
+        update.gallery[index] = item.url;
+      }
+    });
+
+    return update;
+  };
+
   const onSave = async (formData) => {
     setSubmitError(null);
     setIsSubmitting(true);
+    setUploadProgress(0);
     try {
-      const proId = await publishProduct(formData);
-
-      console.log("Product created:", proId);
+      const cleanData = await uplaodFormMedia(formData);
+      const proId = await publishProduct(cleanData);
 
       reset();
       setCurrentStep(1);
       setHasVariants(false);
-      toast(<Success_Toast message={"Product Saved Successfully!"} />);
+      toast(
+        <Success_Toast
+          message={`"${cleanData.name}" Product Saved Successfully!`}
+        />,
+      );
     } catch (err) {
       console.error("Failed to publish product:", err);
       setSubmitError("Something Went Wrong, Please Try Again.");
     } finally {
       setIsSubmitting(false);
+      setUploadProgress(0);
     }
   };
 
   const onUpdate = async (formData, existingProductId) => {
     setSubmitError(null);
     setIsSubmitting(true);
+    setUploadProgress(0);
+
     try {
-      await updateProduct(formData, existingProductId);
+      const cleanData = await uplaodFormMedia(formData);
+      await updateProduct(cleanData, existingProductId);
 
-      console.log("Product updated:", existingProductId);
-
-      toast(<Success_Toast message={"Product Updated Successfully!"} />);
+      toast(
+        <Success_Toast
+          message={`"${cleanData.name}" Product Updated Successfully!`}
+        />,
+      );
     } catch (err) {
       console.error("Failed to update product:", err);
       setSubmitError("Something Went Wrong, Please Try Again.");
     } finally {
       setIsSubmitting(false);
+      setUploadProgress(0);
     }
   };
 
@@ -215,6 +274,18 @@ const NewProductForm = () => {
       setSubmitError("There are same missing data, check it please");
     }
   };
+
+  useEffect(() => {
+    if (isSubmitting || isProductLoading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isSubmitting, isProductLoading]);
 
   return (
     <main className="h-full flex-start-col w-full gap-5 relative">
@@ -299,13 +370,37 @@ const NewProductForm = () => {
           isSubmitting={isSubmitting}
         />
       </FormProvider>
-      {(isSubmitting || isProductLoading) && (
+
+      {submitError && (
+        <p className="text-red-500 text-sm font-semibold">{submitError}</p>
+      )}
+
+      {isProductLoading && (
         <div className="fixed z-50 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
           <AiOutlineLoading3Quarters
             size={40}
             className="loading-animate-1 text-orange"
           />
           <p className="text-xl font-bold">Loading...</p>
+        </div>
+      )}
+
+      {isSubmitting && (
+        <div className="fixed z-50 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
+          <AiOutlineLoading3Quarters
+            size={40}
+            className="loading-animate-1 text-orange"
+          />
+          <p className="text-xl font-bold">Submitting...</p>
+        </div>
+      )}
+
+      {uploadProgress > 0 && uploadProgress <= 100 && (
+        <div className="fixed z-50 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
+          <UploadProgressBar
+            style={"w-75! max-w-full!"}
+            progress={uploadProgress}
+          />
         </div>
       )}
 

@@ -4,6 +4,8 @@ import { FaPlus, FaXmark } from "react-icons/fa6";
 import { IoCloudUploadOutline } from "react-icons/io5";
 import ErrorMessageFrom from "../../../../../Components/ui/ErrorMessageFrom";
 
+const MAX_FILE_SIZE = 2 * 1024 * 1024;
+
 const GallaryImages = () => {
   const [isDragging, setIsDragging] = useState(false);
 
@@ -12,6 +14,7 @@ const GallaryImages = () => {
     setValue,
     getValues,
     formState: { errors },
+    setError,
   } = useFormContext();
 
   // Initialize local state from the current form value (e.g. edit mode) or an empty array
@@ -19,29 +22,26 @@ const GallaryImages = () => {
 
   // Process uploaded or dropped files
   const handleFiles = (files) => {
-    [...files].forEach((file) => {
+    const validFile = [...files].filter((file) => {
       // Skip anything that isn't an image
-      if (!file.type.startsWith("image")) return;
-
-      const reader = new FileReader();
-
-      // Once the image finishes converting to Base64:
-      // 1. Append it to local state using a functional update (avoids stale
-      //    closure issues when multiple files are uploaded at once)
-      // 2. Sync the resulting value to RHF right away, so validation only
-      //    runs on a real user action (upload/delete), not on initial mount
-      reader.onload = (e) => {
-        setGallery((prev) => {
-          const updated = [...prev, e.target.result];
-          setValue("gallery", updated, {
-            shouldDirty: true,
-            shouldValidate: true,
-          });
-          return updated;
+      if (!file.type.startsWith("image")) return false;
+      // Ignore any image larger then MAX_FILE_SIZE
+      if (file.size > MAX_FILE_SIZE) {
+        setError("gallery", {
+          message: `"${file.name}" is too large. Max size is 2MB.`,
         });
-      };
+        return false;
+      }
+      return file;
+    });
 
-      reader.readAsDataURL(file);
+    setGallery((prev) => {
+      const updated = [...prev, ...validFile];
+      setValue("gallery", updated, {
+        shouldDirty: true,
+        shouldValidate: true,
+      });
+      return updated;
     });
   };
 
@@ -55,6 +55,14 @@ const GallaryImages = () => {
       });
       return updated;
     });
+  };
+
+  // Get src image if it was image file then return Object file else return image as string
+  const getPreviewSrc = (item) => {
+    if (item instanceof File) {
+      return URL.createObjectURL(item);
+    }
+    return item;
   };
 
   return (
@@ -103,7 +111,7 @@ const GallaryImages = () => {
         <div className="w-full h-20 flex-start gap-5 ">
           {gallary?.length > 0 && (
             <div className="flex-start h-full gap-2.5 overflow-x-auto">
-              {gallary.map((imageSrc, index) => {
+              {gallary.map((File, index) => {
                 return (
                   <div
                     key={index}
@@ -118,7 +126,7 @@ const GallaryImages = () => {
                       <FaXmark />
                     </button>
                     <img
-                      src={imageSrc}
+                      src={getPreviewSrc(File)}
                       alt={`Preview ${index}`}
                       className=" max-h-[90%]"
                     />
