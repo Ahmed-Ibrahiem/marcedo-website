@@ -1,11 +1,9 @@
 import React, { useEffect, useReducer, useState, memo } from "react";
 import { FaMagnifyingGlass, FaListUl, FaAngleDown } from "react-icons/fa6";
-import {
-  getAllCategoreis,
-  getAllBrands,
-} from "../../../services/ProductsDashboardServices";
+import { getAllBrands } from "../../../services/ProductsDashboardServices";
 import DropDownList from "../components/DropDownList";
 import { CiFilter, CiGrid41 } from "react-icons/ci";
+import { getAllCategories } from "../../../services/CategoriesServices";
 
 const status = [
   { name: "Active", id: true },
@@ -35,7 +33,7 @@ const ProductsActions = ({
   useEffect(() => {
     const fetchData = async () => {
       const [categories, brands] = await Promise.all([
-        getAllCategoreis(),
+        getAllCategories(),
         getAllBrands(),
       ]);
 
@@ -144,12 +142,9 @@ export default React.memo(ProductsActions, (prevProps, nextProps) => {
     prevProps.tableMode === nextProps.tableMode &&
     prevProps.filterOptions.categories.id ===
       nextProps.filterOptions.categories.id &&
-    prevProps.filterOptions.brands.id ===
-      nextProps.filterOptions.brands.id &&
-    prevProps.filterOptions.status.id ===
-      nextProps.filterOptions.status.id &&
-    prevProps.filterOptions.stocks.id ===
-      nextProps.filterOptions.stocks.id &&
+    prevProps.filterOptions.brands.id === nextProps.filterOptions.brands.id &&
+    prevProps.filterOptions.status.id === nextProps.filterOptions.status.id &&
+    prevProps.filterOptions.stocks.id === nextProps.filterOptions.stocks.id &&
     prevProps.filterOptions.sort.id === nextProps.filterOptions.sort.id
   );
 });

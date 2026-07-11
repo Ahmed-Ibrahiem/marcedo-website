@@ -60,6 +60,19 @@ export const getAllCategories = async () => {
   return [...snapshot.docs.map((doc) => doc.data())];
 };
 
+export const getAllCategoriesMap = async () => {
+  const collRef = collection(db, "categories");
+  const snapshot = await getDocs(collRef);
+
+  if (snapshot.empty) return [];
+  const categoriesMap = {};
+  snapshot.docs.forEach((doc) => {
+    categoriesMap[doc.id] = doc.data();
+  });
+
+  return categoriesMap;
+};
+
 export const getCategoryBySlug = async (categorySlug) => {
   const q = query(
     collection(db, "categories"),

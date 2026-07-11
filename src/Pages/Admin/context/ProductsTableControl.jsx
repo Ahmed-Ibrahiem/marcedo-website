@@ -1,37 +1,56 @@
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useState,
+} from "react";
 const productsTableControlContext = createContext(null);
 
 const ProductsTableControl = ({ children }) => {
   const [selectedAllProducts, setSelectedAllProducts] = useState(false);
   const [selectedProductsIds, setSelectedProductsIds] = useState([]);
+  const [productsInfoMap, setProductsInfoMap] = useState({});
 
   // handle the addition and delete products from selectedProducts
-  const handleSelectedProducts = (id) => {
-    if (selectedProductsIds.includes(id)) {
-      setSelectedProductsIds((prev) => [...prev.filter((i) => i !== id)]);
-    } else {
-      setSelectedProductsIds((prev) => [...prev, id]);
-    }
-  };
+  const handleSelectedProducts = useCallback((id) => {
+    setSelectedProductsIds((prev) =>
+      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id],
+    );
+  }, []);
 
   // handle Selected All Products
-  const handleAllSelectedProducts = (productsData) => {
-    if (selectedAllProducts) {
-      const selectedProsId = [...productsData.map((data) => data.id)];
-      setSelectedProductsIds(selectedProsId);
-    } else {
-      setSelectedProductsIds([]);
-    }
-  };
+  const handleAllSelectedProducts = useCallback(
+    (productsData) => {
+      if (selectedAllProducts) {
+        const selectedProsId = [...productsData.map((data) => data.id)];
+        setSelectedProductsIds(selectedProsId);
+      } else {
+        setSelectedProductsIds([]);
+      }
+    },
+    [selectedAllProducts],
+  );
 
-  const value = {
-    handleSelectedProducts,
-    handleAllSelectedProducts,
-    selectedProductsIds,
-    setSelectedProductsIds,
-    selectedAllProducts,
-    setSelectedAllProducts,
-  };
+  const value = useMemo(
+    () => ({
+      handleSelectedProducts,
+      handleAllSelectedProducts,
+      selectedProductsIds,
+      setSelectedProductsIds,
+      selectedAllProducts,
+      setSelectedAllProducts,
+      productsInfoMap,
+      setProductsInfoMap,
+    }),
+    [
+      selectedProductsIds,
+      selectedAllProducts,
+      productsInfoMap,
+      handleSelectedProducts,
+      handleAllSelectedProducts,
+    ],
+  );
 
   return (
     <productsTableControlContext.Provider value={value}>

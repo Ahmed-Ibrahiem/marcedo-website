@@ -2,10 +2,8 @@ import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import ProductAdminHead from "./components/ProductAdminHead";
 import ProductStatsCards from "./components/ProductStatsCards";
 import {
-  getAllBrands,
-  getAllCategoreis,
+  getAllBrandsMap,
   getLimitedProducts,
-  getProductsStats,
   getProductsWithPaginations,
 } from "../../services/ProductsDashboardServices";
 import ProductsActions from "./products-components/ProductsActions";
@@ -15,6 +13,8 @@ import ProductsGrid from "./products-components/ProductsGrid";
 import { useProductsTableControlContext } from "./context/ProductsTableControl";
 import SelectedProductsContorls from "./products-components/SelectedProductsContorls";
 import { exportAllProductsToExcel } from "../../Utils/excelExport";
+import { getAllCategoriesMap } from "../../services/CategoriesServices";
+import { getAllProductsStocksMap } from "../../services/stocksServices";
 
 const initailFilter = {
   categories: { name: "All Categories", id: "all-categories" },
@@ -48,6 +48,8 @@ const ProductsAdmin = () => {
     selectedAllProducts,
     setSelectedAllProducts,
     handleAllSelectedProducts,
+    productsInfoMap,
+    setProductsInfoMap,
   } = useProductsTableControlContext();
   const [tableMode, setTableMode] = useState(true);
   const [filterOptions, dispatchFilterOptions] = useReducer(
@@ -58,7 +60,7 @@ const ProductsAdmin = () => {
   const updateFilterOptions = useCallback((type, payload) => {
     dispatchFilterOptions({ type: type, payload: payload });
   }, []);
-  
+
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
@@ -79,6 +81,19 @@ const ProductsAdmin = () => {
     setSelectedProductsIds([]);
     getProducts();
   }, [filterOptions]);
+
+  useEffect(() => {
+    const getProductsInfo = async () => {
+      const [categories, brands, stocks] = await Promise.all([
+        getAllCategoriesMap(),
+        getAllBrandsMap(),
+        getAllProductsStocksMap(),
+      ]);
+
+      setProductsInfoMap({ categories, brands, stocks });
+    };
+    getProductsInfo();
+  }, []);
 
   useEffect(() => {
     if (filterProducts) {

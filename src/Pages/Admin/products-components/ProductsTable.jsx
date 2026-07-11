@@ -3,7 +3,7 @@ import ProductRow from "./ProductRow";
 import { useProductsTableControlContext } from "../context/ProductsTableControl";
 
 const ProductsTable = ({ productsData }) => {
-  const { selectedAllProducts, setSelectedAllProducts } =
+  const { selectedAllProducts, setSelectedAllProducts, productsInfoMap } =
     useProductsTableControlContext();
 
   return (
@@ -34,9 +34,20 @@ const ProductsTable = ({ productsData }) => {
         </tr>
       </thead>
       <tbody>
-        {productsData.map((pro) => {
-          return <ProductRow key={pro.id} product={pro} />;
-        })}
+        {Object.keys(productsInfoMap).length > 0 &&
+          productsData.map((pro) => {
+            return (
+              <ProductRow
+                brand={productsInfoMap.brands[pro.brand_id]}
+                categories={Object.values(productsInfoMap.categories).filter(
+                  (cat) => pro.category_ids.includes(cat.id),
+                )}
+                stock={productsInfoMap.stocks[pro.id]}
+                key={pro.id}
+                product={pro}
+              />
+            );
+          })}
       </tbody>
     </table>
   );

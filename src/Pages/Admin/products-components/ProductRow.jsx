@@ -4,46 +4,22 @@ import {
   getProductCategories,
   getProductStock,
 } from "../../../services/productDetailsServices";
-import { FaArrowTrendUp, FaEye } from "react-icons/fa6";
+import { FaArrowTrendUp, FaEye, FaTrashCan } from "react-icons/fa6";
 import { FaPen, FaStar } from "react-icons/fa";
 import { CiEdit } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import { useProductsTableControlContext } from "../context/ProductsTableControl";
 import { getProductForEdit } from "../product-form-components/services/productFormServices";
 import { useNavigate } from "react-router-dom";
+import SelectionCheckbox from "./SelectionCheckbox";
 
-const ProductRow = ({ product }) => {
-  const [proBrand, setProBrand] = useState(null);
-  const [proCateg, setProCateg] = useState(null);
-  const [proStock, setProStock] = useState(null);
+const ProductRow = ({ product, brand, categories, stock }) => {
+  const category = categories.reduce(
+    (item, next) => (item.level > next.level ? item : next),
+    categories[0],
+  );
   const { handleSelectedProducts, selectedProductsIds } =
     useProductsTableControlContext();
-
-  useEffect(() => {
-    const getBrand = async () => {
-      const brand = await getProductBrands(product.brand_id);
-      if (brand) setProBrand(brand);
-    };
-
-    const getStock = async () => {
-      const stock = await getProductStock(product.id);
-      if (stock) setProStock(stock);
-    };
-
-    const getCategs = async () => {
-      const categs = await getProductCategories(product.category_ids);
-      if (categs) {
-        const theParent = categs.find((cat) => !cat.parent_id);
-        const theChild = categs.find((cat) => cat.parent_id);
-        if (theChild) setProCateg(theChild);
-        else setProCateg(theParent);
-      }
-    };
-
-    getStock();
-    getCategs();
-    getBrand();
-  }, []);
 
   const navigate = useNavigate();
   return (
@@ -57,18 +33,12 @@ const ProductRow = ({ product }) => {
           key={product.id}
           className="text-sm border-b border-border last-of-type:border-b-0 font-semibold hover:bg-gray/5 cursor-pointer "
         >
+          {/* select row */}
           <td className="text-start pl-2.5">
-            <div className="">
-              <input
-                checked={selectedProductsIds.includes(product.id)}
-                onChange={() => {
-                  handleSelectedProducts(product.id);
-                }}
-                type="checkbox"
-                className="w-5! h-5! border-gray-300! checkbox"
-              />
-            </div>
+            <SelectionCheckbox productId={product.id} />
           </td>
+
+          {/* Product thumbnail and name */}
           <td className="text-start pl-2.5 py-1.75 flex-start items-start! gap-1.5 max-w-30">
             <div
               className="flex-center min-w-10 w-10 min-h-10 h-10 rounded-sm overflow-hidden
@@ -84,14 +54,17 @@ const ProductRow = ({ product }) => {
             <p className="line-clamp-1 ">{product?.name}</p>
           </td>
 
+          {/* Category */}
           <td className="text-start pl-2.5">
-            <span>{proCateg?.name}</span>
+            <span>{category?.name}</span>
           </td>
 
+          {/* Brand */}
           <td className="text-start pl-2.5">
-            <span>{proBrand?.name}</span>
+            <span>{brand?.name}</span>
           </td>
 
+          {/* Price */}
           <td className="text-start pl-2.5">
             <div className="flex-between gap-1.5 ">
               <p className="font-semibold">${product.current_price}</p>
@@ -108,15 +81,17 @@ const ProductRow = ({ product }) => {
             )}
           </td>
 
+          {/* Stock */}
           <td className="text-start pl-2.5 font-semibold">
-            <p>{proStock?.quantity}</p>
+            <p>{stock?.quantity}</p>
             <span
-              className={`capitalize text-[10px] p-1 rounded-sm ${proStock?.status === "in_stock" ? "bg-green/10 text-green" : "text-gray bg-gray/10"}`}
+              className={`capitalize text-[10px] p-1 rounded-sm ${product.stock_status === "in_stock" ? "bg-green/10 text-green" : "text-gray bg-gray/10"}`}
             >
-              {proStock?.status.split("_").join(" ")}
+              {stock?.status.split("_").join(" ")}
             </span>
           </td>
 
+          {/* Sold Count */}
           <td className="text-start pl-2.5">
             <div className="flex-start gap-1.5">
               <span>{product?.sold_count}</span>
@@ -124,6 +99,7 @@ const ProductRow = ({ product }) => {
             </div>
           </td>
 
+          {/* Rating Average */}
           <td className="text-start pl-2.5">
             <div className="flex-start gap-1.5">
               <FaStar className="text-amber-400" />
@@ -131,6 +107,7 @@ const ProductRow = ({ product }) => {
             </div>
           </td>
 
+          {/* isActive (Publish or Draft) */}
           <td className="text-start pl-2.5">
             <span
               className={`p-1 rounded-sm ${product?.is_active ? "text-green bg-green/10" : "text-gray bg-gray/10"}`}
@@ -156,7 +133,7 @@ const ProductRow = ({ product }) => {
                 <CiEdit />
               </button>
               <button className={btnstyle}>
-                <BsThreeDots />
+                <FaTrashCan />
               </button>
             </div>
           </td>

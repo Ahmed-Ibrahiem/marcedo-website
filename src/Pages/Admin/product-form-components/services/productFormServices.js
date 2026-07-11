@@ -155,6 +155,7 @@ export const updateProduct = async (formData, productId) => {
       slug: formData.name.split(" ").join("-"),
       brand_id: formData.brand_id,
       thumbnail: formData.thumbnail,
+      stock: !thereVariants ? lowestPriceVariant.stock : formData.quantity,
       stock_status: !thereVariants
         ? formData.quantity <= formData.low_stock_threshold
           ? "out_of_stock"
@@ -354,6 +355,7 @@ export const publishProduct = async (formData) => {
     slug: formData.name.split(" ").join("-"),
     brand_id: formData.brand_id,
     thumbnail: formData.thumbnail,
+    stock: !thereVariants ? lowestPriceVariant.stock : formData.quantity,
     stock_status: !thereVariants
       ? formData.quantity <= formData.low_stock_threshold
         ? "out_of_stock"
@@ -499,4 +501,30 @@ export const publishProduct = async (formData) => {
 
   await batch.commit();
   return proId;
+};
+
+/**
+ * Deletes a product and all its related documents across collections
+ * in a single atomic batch. If any document doesn't exist, batch.delete
+ * simply no-ops on it - no need to check existence first.
+ */
+export const deleteProduct = async (productId) => {
+  const batch = writeBatch(db);
+
+  const collections = [
+    "products",
+    "product-details",
+    "product-media",
+    "product-pricing",
+    "product-stock",
+    "product-shipping",
+    "product-variants",
+  ];
+
+  collections.forEach((collectionName) => {
+    batch.delete(doc(db, collectionName, productId));
+  });
+
+  await batch.commit();
+  return productId;
 };

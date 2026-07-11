@@ -71,16 +71,6 @@ export const getProductsStats = async () => {
   }
 };
 
-export const getAllCategoreis = async () => {
-  const collRef = collection(db, "categories");
-
-  const snapshot = await getDocs(collRef);
-
-  if (snapshot.empty) return null;
-
-  return [...snapshot.docs.map((doc) => doc.data())];
-};
-
 export const getAllBrands = async () => {
   const collRef = collection(db, "brands");
 
@@ -89,6 +79,22 @@ export const getAllBrands = async () => {
   if (snapshot.empty) return null;
 
   return [...snapshot.docs.map((doc) => doc.data())];
+};
+
+export const getAllBrandsMap = async () => {
+  const collRef = collection(db, "brands");
+
+  const snapshot = await getDocs(collRef);
+
+  if (snapshot.empty) return null;
+
+  const brandsMap = {};
+
+  snapshot.docs.forEach((doc) => {
+    brandsMap[doc.id] = doc.data();
+  });
+
+  return brandsMap;
 };
 
 export const getLimitedProducts = async (limitNumber) => {

@@ -68,8 +68,8 @@ This project focuses on building a scalable and maintainable E-Commerce platform
 - [x] Bulk Actions
 - [x] Export Selected Products
 - [x] Variant Inventory System
-- [ ] Add New Product Form (In Progress)
-- [ ] Edit Product
+- [x] Add New Product Form (In Progress)
+- [x] Edit Product
 - [ ] Orders Management
 - [ ] Users Management
 - [ ] Reviews Management
@@ -178,7 +178,6 @@ Building software is not just about writing code. It is about designing systems 
 
 ## Next Steps
 
-- Complete Add Product System
 - Complete Orders Management
 - Complete Users Management
 - Complete Reviews Management

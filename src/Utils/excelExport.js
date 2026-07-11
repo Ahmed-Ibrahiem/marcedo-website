@@ -1,14 +1,12 @@
-import {
-  getAllBrands,
-  getAllCategoreis,
-} from "../services/ProductsDashboardServices";
+import { getAllCategories } from "../services/CategoriesServices";
+import { getAllBrands } from "../services/ProductsDashboardServices";
 import * as XLSX from "xlsx";
 
 export const exportAllProductsToExcel = async (productsData) => {
   if (!productsData) return;
 
   const allBrands = await getAllBrands();
-  const allCategories = await getAllCategoreis();
+  const allCategories = await getAllCategories();
 
   if (!allBrands || !allCategories) return;
 
@@ -54,5 +52,3 @@ export const exportAllProductsToExcel = async (productsData) => {
 
   XLSX.writeFile(workbook, "products.xlsx");
 };
-
-

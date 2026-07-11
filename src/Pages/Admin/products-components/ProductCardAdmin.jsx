@@ -10,39 +10,17 @@ import { CiEdit } from "react-icons/ci";
 import { BsThreeDots } from "react-icons/bs";
 import { useProductsTableControlContext } from "../context/ProductsTableControl";
 import { useNavigate } from "react-router-dom";
+import { FaTrashCan } from "react-icons/fa6";
+import SelectionCheckbox from "./SelectionCheckbox";
 
-const ProductCardAdmin = ({ productsData }) => {
+const ProductCardAdmin = ({ productsData, brand, categories, stock }) => {
   const { selectedProductsIds, handleSelectedProducts } =
     useProductsTableControlContext();
-  const [proBrand, setProBrand] = useState(null);
-  const [proCateg, setProCateg] = useState(null);
-  const [proStock, setProStock] = useState(null);
 
-  useEffect(() => {
-    const getBrand = async () => {
-      const brand = await getProductBrands(productsData.brand_id);
-      if (brand) setProBrand(brand);
-    };
-
-    const getStock = async () => {
-      const stock = await getProductStock(productsData.id);
-      if (stock) setProStock(stock);
-    };
-
-    const getCategs = async () => {
-      const categs = await getProductCategories(productsData.category_ids);
-      if (categs) {
-        const theParent = categs.find((cat) => !cat.parent_id);
-        const theChild = categs.find((cat) => cat.parent_id);
-        if (theChild) setProCateg(theChild);
-        else setProCateg(theParent);
-      }
-    };
-
-    getStock();
-    getCategs();
-    getBrand();
-  }, []);
+  const category = categories.reduce(
+    (item, next) => (item.level > next.level ? item : next),
+    categories[0],
+  );
 
   const navigate = useNavigate();
   return (
@@ -52,14 +30,10 @@ const ProductCardAdmin = ({ productsData }) => {
     >
       <div onClick={() => handleSelectedProducts(productsData.id)}>
         <div className="pt-[58%] flex-center relative">
-          <input
-            checked={selectedProductsIds.includes(productsData.id)}
-            onChange={() => {
-              handleSelectedProducts(productsData.id);
-            }}
-            type="checkbox"
-            className="absolute!  left-0! top-0! w-6.5! h-6.5! border-[1.5px]! checked:border-orange! after:-top-px! after:-left-px checkbox"
-          />
+          <div className="absolute!  left-0! top-0!  after:-top-px! after:-left-px">
+            <SelectionCheckbox style="w-6.5! h-6.5! border-[1.5px]! checked:border-orange!" productId={productsData.id} />
+          </div>
+
           <img
             loading="lazy"
             src={productsData.thumbnail}
@@ -79,8 +53,8 @@ const ProductCardAdmin = ({ productsData }) => {
           </div>
           {/* category and brand */}
           <div className="w-full flex-between gap-2.5 text-gray flex-wrap">
-            <p>{proCateg?.name}</p>
-            <p>{proBrand?.name}</p>
+            <p>{category?.name}</p>
+            <p>{brand?.name}</p>
           </div>
           {/* price and active  */}
           <div className="w-full flex-between gap-1.5">
@@ -105,7 +79,7 @@ const ProductCardAdmin = ({ productsData }) => {
           {/* stock and sold */}
           <div className="w-full flex-between gap-1.5">
             <div className="flex-start gap-1.5">
-              <p>{proStock?.quantity}</p>
+              <p>{stock?.quantity}</p>
               <p
                 className={`p-1 rounded-sm font-semibold ${productsData.stock_status === "in_stock" ? "text-green bg-green-100" : "bg-gray-200 text-gray"}`}
               >
@@ -134,7 +108,7 @@ const ProductCardAdmin = ({ productsData }) => {
           <CiEdit />
         </button>
         <button className={btnstyle}>
-          <BsThreeDots />
+          <FaTrashCan />
         </button>
       </div>
     </div>
