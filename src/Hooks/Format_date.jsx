@@ -8,7 +8,6 @@ export const use_format_date_in_reviews = (date) => {
   const day = diff / (1000 * 60 * 60 * 24);
   const month = diff / (1000 * 60 * 60 * 24 * 30);
   const years = diff / (1000 * 60 * 60 * 22 * 30 * 12);
-  // console.log(mini)
 
   if (mini < 60) {
     return `${Math.floor(mini)} min`;

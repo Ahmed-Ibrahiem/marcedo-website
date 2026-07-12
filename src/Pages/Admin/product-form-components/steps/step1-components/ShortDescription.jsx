@@ -25,7 +25,7 @@ const ShortDescription = () => {
           placeholder="Enter short description"
         />
         <p className="absolute right-2.5 bottom-2.5 text-xs font-semibold text-gray">
-          {shortDescWatch.length}/200
+          {shortDescWatch.length}/400
         </p>
       </div>
       {errors?.short_description && (

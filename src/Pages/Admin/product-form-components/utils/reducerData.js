@@ -12,7 +12,7 @@ export const step1Schema = yup.object({
   short_description: yup
     .string()
     .required("This field is required")
-    .max(200, "The maximum number is 200 charachter"),
+    .max(400, "The maximum number is 200 charachter"),
   brand_id: yup.string().required("This field is required"),
   category_ids: yup
     .array()

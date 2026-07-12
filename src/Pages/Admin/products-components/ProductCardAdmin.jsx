@@ -14,7 +14,7 @@ import { FaTrashCan } from "react-icons/fa6";
 import SelectionCheckbox from "./SelectionCheckbox";
 
 const ProductCardAdmin = ({ productsData, brand, categories, stock }) => {
-  const { selectedProductsIds, handleSelectedProducts } =
+  const { selectedProductsIds, handleSelectedProducts, requestDelete } =
     useProductsTableControlContext();
 
   const category = categories.reduce(
@@ -30,8 +30,11 @@ const ProductCardAdmin = ({ productsData, brand, categories, stock }) => {
     >
       <div onClick={() => handleSelectedProducts(productsData.id)}>
         <div className="pt-[58%] flex-center relative">
-          <div className="absolute!  left-0! top-0!  after:-top-px! after:-left-px">
-            <SelectionCheckbox style="w-6.5! h-6.5! border-[1.5px]! checked:border-orange!" productId={productsData.id} />
+          <div onClick={(e) => e.stopPropagation()}>
+            <SelectionCheckbox
+              style="w-6.5! h-6.5! border-[1.5px]! checked:border-orange! absolute! left-0! top-0!  after:-top-px! after:-left-px"
+              productId={productsData.id}
+            />
           </div>
 
           <img
@@ -96,9 +99,9 @@ const ProductCardAdmin = ({ productsData, brand, categories, stock }) => {
         </div>
       </div>
       <div className="flex-start-col gap-5  z-20 absolute right-2.5 top-2.5">
-        <button className={btnstyle}>
+        {/* <button className={btnstyle}>
           <FaEye />
-        </button>
+        </button> */}
         <button
           onClick={() =>
             navigate(`/admin/products/add_new_product/${productsData.id}`)
@@ -107,7 +110,13 @@ const ProductCardAdmin = ({ productsData, brand, categories, stock }) => {
         >
           <CiEdit />
         </button>
-        <button className={btnstyle}>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            requestDelete([productsData.id], `"${productsData.name}"`);
+          }}
+          className={btnstyle}
+        >
           <FaTrashCan />
         </button>
       </div>

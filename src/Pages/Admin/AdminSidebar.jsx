@@ -5,7 +5,7 @@ import { HiOutlineCube } from "react-icons/hi";
 import { FaRegUser } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 
-const AdminNavbar = ({ currentPage }) => {
+const AdminSidebar = ({ currentPage }) => {
   const { product_id } = useParams();
   const navInfo = [
     {
@@ -21,16 +21,16 @@ const AdminNavbar = ({ currentPage }) => {
       ],
       icon: <HiOutlineCube className="text-xl" />,
     },
-    {
-      title: "customers",
-      url: ["/admin/customers"],
-      icon: <FaRegUser className="text-xl" />,
-    },
-    {
-      title: "orders",
-      url: ["/admin/orders"],
-      icon: <MdOutlineShoppingCart className="text-xl" />,
-    },
+    // {
+    //   title: "customers",
+    //   url: ["/admin/customers"],
+    //   icon: <FaRegUser className="text-xl" />,
+    // },
+    // {
+    //   title: "orders",
+    //   url: ["/admin/orders"],
+    //   icon: <MdOutlineShoppingCart className="text-xl" />,
+    // },
   ];
   return (
     <aside
@@ -53,4 +53,4 @@ const AdminNavbar = ({ currentPage }) => {
   );
 };
 
-export default AdminNavbar;
+export default AdminSidebar;

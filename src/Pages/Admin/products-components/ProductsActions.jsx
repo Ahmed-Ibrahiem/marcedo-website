@@ -64,6 +64,7 @@ const ProductsActions = ({
           list={filterData.categories}
           optionFun={(item) => updateFilterOptions("UPDATE_CATEGORIES", item)}
           listType={"Categories"}
+          opionsStyle={"w-full!"}
         />
       )}
 
@@ -74,6 +75,7 @@ const ProductsActions = ({
           list={filterData.brands}
           optionFun={(item) => updateFilterOptions("UPDATE_BRANDS", item)}
           listType={"Brands"}
+          opionsStyle={"w-full!"}
         />
       )}
 
@@ -84,6 +86,7 @@ const ProductsActions = ({
           list={status}
           optionFun={(item) => updateFilterOptions("UPDATE_STATUS", item)}
           listType={"Status"}
+          opionsStyle={"w-full!"}
         />
       )}
 
@@ -93,6 +96,7 @@ const ProductsActions = ({
           currentSelect={filterOptions.stocks.name}
           list={stocks}
           optionFun={(item) => updateFilterOptions("UPDATE_STOCKS", item)}
+          opionsStyle={"w-full!"}
           listType={"Stocks"}
         />
       )}
@@ -111,6 +115,7 @@ const ProductsActions = ({
         list={sortList}
         optionFun={(item) => updateFilterOptions("UPDATE_SORT", item)}
         currentSelect={filterOptions.sort.name}
+        opionsStyle={"w-full!"}
       />
 
       {/* Grid View */}

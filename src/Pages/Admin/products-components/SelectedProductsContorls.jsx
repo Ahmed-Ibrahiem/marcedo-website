@@ -2,26 +2,35 @@ import React from "react";
 import { FaTrash } from "react-icons/fa";
 import { MdPublish } from "react-icons/md";
 import { TiExport } from "react-icons/ti";
+import { useProductsTableControlContext } from "../context/ProductsTableControl";
 
 const SelectedProductsContorls = ({ exportProductsToExcel }) => {
+  const { requestDelete, selectedProductsIds } =
+    useProductsTableControlContext();
   return (
     <div className="flex-start mx-2.5 mb-2.5 md:mb-0 gap-2.5 md:absolute md:left-[50%] md:translate-x-[-50%] bottom-5  xl:bottom-2 fade-in-animate">
       <div className="relative group">
         <p className={`${hintStyle} group-hover:opacity-100 `}>
           delete Products
         </p>
-        <button className={actionBtnSytle}>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            requestDelete(selectedProductsIds , `"${selectedProductsIds.length} Products"`)
+          }}
+          className={actionBtnSytle}
+        >
           <FaTrash />
         </button>
       </div>
-      <div className="relative group">
+      {/* <div className="relative group">
         <p className={`${hintStyle} group-hover:opacity-100`}>
           Publish Products
         </p>
         <button className={actionBtnSytle}>
           <MdPublish size={20} />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

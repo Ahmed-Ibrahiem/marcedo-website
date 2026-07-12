@@ -15,6 +15,10 @@ import SelectedProductsContorls from "./products-components/SelectedProductsCont
 import { exportAllProductsToExcel } from "../../Utils/excelExport";
 import { getAllCategoriesMap } from "../../services/CategoriesServices";
 import { getAllProductsStocksMap } from "../../services/stocksServices";
+import { deleteProducts } from "./product-form-components/services/productFormServices";
+import ConfirmDeletePopup from "../../Components/ui/ConfirmDeletePopup";
+import SuccessPopup from "../../Components/ui/SuccessPopup";
+import { toast } from "react-toastify";
 
 const initailFilter = {
   categories: { name: "All Categories", id: "all-categories" },
@@ -42,6 +46,14 @@ const ProductsAdmin = () => {
   const [loading, setLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [displayProducts, setDisplayProducts] = useState(null);
+  const [tableMode, setTableMode] = useState(true);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [deletionResult, setDeletionResult] = useState(null);
+  const [filterOptions, dispatchFilterOptions] = useReducer(
+    filterReducer,
+    initailFilter,
+  );
+
   const {
     setSelectedProductsIds,
     selectedProductsIds,
@@ -50,12 +62,9 @@ const ProductsAdmin = () => {
     handleAllSelectedProducts,
     productsInfoMap,
     setProductsInfoMap,
+    deleteRequest,
+    clearDeleteRequest,
   } = useProductsTableControlContext();
-  const [tableMode, setTableMode] = useState(true);
-  const [filterOptions, dispatchFilterOptions] = useReducer(
-    filterReducer,
-    initailFilter,
-  );
 
   const updateFilterOptions = useCallback((type, payload) => {
     dispatchFilterOptions({ type: type, payload: payload });
@@ -127,6 +136,38 @@ const ProductsAdmin = () => {
     }
   }, [filterProducts]);
 
+  // Open Confirm Delete Popup , delete products , close confirm delete popup ,
+  // and open succese confirm to update products table
+  const handleConfirmDelete = async () => {
+    if (!deleteRequest) return;
+    setIsDeleting(true);
+    try {
+      await deleteProducts(deleteRequest.ids);
+      // Close Confirm Delete Popup
+      clearDeleteRequest();
+      // Open Success Confirm
+      setDeletionResult(deleteRequest);
+    } catch (errors) {
+      console.error("Failed to delete product(s):", errors);
+      toast.error("Failed to delete, please try again.");
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
+  const handleUpdateTableAfterDeletion = () => {
+    if (!deletionResult) return;
+    setFilterProducts((prev) =>
+      prev.filter((pro) => !deletionResult.ids.includes(pro.id)),
+    );
+
+    setSelectedProductsIds((prev) =>
+      prev.filter((id) => !deletionResult.ids.includes(id)),
+    );
+
+    setDeletionResult(null);
+  };
+
   return (
     <>
       <section className="flex-start-col w-full gap-2.5 h-full max-w-full ">
@@ -192,6 +233,26 @@ const ProductsAdmin = () => {
           {selectedProductsIds.length > 0 && <SelectedProductsContorls />}
         </div>
       </section>
+
+      {/* Confirm Delete popup */}
+      {deleteRequest && (
+        <ConfirmDeletePopup
+          onCancel={clearDeleteRequest}
+          onConfirm={handleConfirmDelete}
+          isDeleting={isDeleting}
+          message={`Are you sure you want delete product ${deleteRequest.label} 
+           This will permanently remove ${deleteRequest.ids.length > 1 ? "them" : "it"} and all related data. `}
+          title="Delete Product"
+        />
+      )}
+
+      {deletionResult && (
+        <SuccessPopup
+          title="Deleted Successfully"
+          message={`${deletionResult.label} ${deletionResult.ids.length > 1 ? "have" : "has"} been deleted.`}
+          onOk={handleUpdateTableAfterDeletion}
+        />
+      )}
     </>
   );
 };

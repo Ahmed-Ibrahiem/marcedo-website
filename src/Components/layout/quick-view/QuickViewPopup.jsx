@@ -27,12 +27,19 @@ const reducer = (state, action) => {
       return { ...state, proBrands: action.payload };
     case "UPDATE_VARIANTS":
       return { ...state, proVariants: action.payload };
+    case "UPDATE_INFO":
+      return {
+        proCategories: action.payload.categories,
+        proBrands: action.payload.brand,
+        proVariants: action.payload.variants,
+      };
     case "RESET_VALUES":
       return initialInfo;
     default:
       return state;
   }
 };
+
 const QuickViewPopup = () => {
   const { cartItemsData } = useCartContext();
   const { isQuickViewOpen, setIsQuickViewOpen, productData } =
@@ -57,7 +64,7 @@ const QuickViewPopup = () => {
 
   // Create function to get the selected variants by check the matching with options selected
   const getSelectedVariants = () => {
-    if (!selectedOptions || !proInfo.proVariants.variants) return;
+    if (!selectedOptions || !proInfo?.proVariants?.variants) return;
 
     const varaint = proInfo.proVariants.variants.find((varia) => {
       return Object.entries(varia.attributes).every(
@@ -79,23 +86,26 @@ const QuickViewPopup = () => {
 
   // When the product data change reset the brand , categories and variants state
   useEffect(() => {
-    if (!productData) return;
+    if (!productData || !isQuickViewOpen) return;
 
-    getProductCategories(productData.category_ids).then((data) => {
-      if (data) {
-        const categs = data.map((cat) => cat.name);
-        dispatchProInfo({ type: "UPDATE_CATEGS", payload: categs });
-      }
-    });
+    const getProductInfo = async () => {
+      const [categories, brand, variants] = await Promise.all([
+        getProductCategories(productData.category_ids),
+        getProductBrands(productData.brand_id),
+        getProductVariants(productData.id),
+      ]);
 
-    getProductBrands(productData.brand_id).then((data) => {
-      dispatchProInfo({ type: "UPDATE_BRANDS", payload: data ?? null });
-    });
-
-    getProductVariants(productData.id).then((data) => {
-      dispatchProInfo({ type: "UPDATE_VARIANTS", payload: data ?? null });
-    });
-  }, [productData]);
+      dispatchProInfo({
+        type: "UPDATE_INFO",
+        payload: {
+          categories,
+          brand,
+          variants,
+        },
+      });
+    };
+    getProductInfo();
+  }, [productData, isQuickViewOpen]);
 
   // when the variants change get the default options
   useEffect(() => {

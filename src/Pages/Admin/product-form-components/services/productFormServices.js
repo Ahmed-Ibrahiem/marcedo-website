@@ -52,8 +52,13 @@ export const getProductForEdit = async (productId) => {
 
   // The form needs full category and related-product objects (not just
   // ids) to render selectors correctly, so fetch them here.
-  const categories = await getCategoriesByIds(core.category_ids);
-  const relatedProducts = await getProductsByIdsGroup(core.related_ids);
+  const categories = core.category_ids?.length
+    ? await getCategoriesByIds(core.category_ids)
+    : [];
+
+  const relatedProducts = core.related_ids?.length
+    ? await getProductsByIdsGroup(core.related_ids)
+    : [];
 
   // Shipping days are stored as a ready string ("3 - 5 Business Days"),
   // but the form needs them back as {from, to} numbers.
@@ -71,7 +76,7 @@ export const getProductForEdit = async (productId) => {
     const colorOption = options.find((op) => op.key === "color");
     if (!colorOption) return {};
     return colorOption.values.reduce((palette, value) => {
-      if (value?.name) palette[value.name] = value.hex ?? null;
+      if (value?.label) palette[value.label] = value.hex ?? null;
       return palette;
     }, {});
   };
@@ -155,7 +160,7 @@ export const updateProduct = async (formData, productId) => {
       slug: formData.name.split(" ").join("-"),
       brand_id: formData.brand_id,
       thumbnail: formData.thumbnail,
-      stock: !thereVariants ? lowestPriceVariant.stock : formData.quantity,
+      stock: thereVariants ? lowestPriceVariant.stock : formData.quantity,
       stock_status: !thereVariants
         ? formData.quantity <= formData.low_stock_threshold
           ? "out_of_stock"
@@ -272,7 +277,7 @@ export const updateProduct = async (formData, productId) => {
         return {
           ...op,
           values: op.values.map((value) => ({
-            name: value,
+            label: value,
             hex: formData.colorPalette[value] ?? null,
           })),
         };
@@ -355,7 +360,7 @@ export const publishProduct = async (formData) => {
     slug: formData.name.split(" ").join("-"),
     brand_id: formData.brand_id,
     thumbnail: formData.thumbnail,
-    stock: !thereVariants ? lowestPriceVariant.stock : formData.quantity,
+    stock: thereVariants ? lowestPriceVariant.stock : formData.quantity,
     stock_status: !thereVariants
       ? formData.quantity <= formData.low_stock_threshold
         ? "out_of_stock"
@@ -458,7 +463,7 @@ export const publishProduct = async (formData) => {
         return {
           ...op,
           values: op.values.map((value) => ({
-            name: value,
+            label: value,
             hex: formData.colorPalette[value] ?? null,
           })),
         };
@@ -504,11 +509,11 @@ export const publishProduct = async (formData) => {
 };
 
 /**
- * Deletes a product and all its related documents across collections
- * in a single atomic batch. If any document doesn't exist, batch.delete
- * simply no-ops on it - no need to check existence first.
+ * Deletes one or more products and all their related documents across
+ * collections in a single atomic batch. Accepts an array so it works
+ * for both a single-row delete and a bulk selection delete.
  */
-export const deleteProduct = async (productId) => {
+export const deleteProducts = async (productIds) => {
   const batch = writeBatch(db);
 
   const collections = [
@@ -521,10 +526,10 @@ export const deleteProduct = async (productId) => {
     "product-variants",
   ];
 
-  collections.forEach((collectionName) => {
-    batch.delete(doc(db, collectionName, productId));
+  productIds.forEach((id) => {
+    collections.forEach((collName) => batch.delete(doc(db, collName, id)));
   });
 
   await batch.commit();
-  return productId;
+  return productIds;
 };

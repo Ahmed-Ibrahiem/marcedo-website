@@ -127,7 +127,7 @@ const ProductSummary = ({ setCurrentStep }) => {
             {shortDescription && (
               <div className="flex-start-col gap-1">
                 <h4 className="text-gray">Short Description</h4>
-                <p className="font-semibold">{shortDescription}</p>
+                <p className="font-semibold line-clamp-3">{shortDescription}</p>
               </div>
             )}
           </div>

@@ -11,6 +11,7 @@ const ProductsTableControl = ({ children }) => {
   const [selectedAllProducts, setSelectedAllProducts] = useState(false);
   const [selectedProductsIds, setSelectedProductsIds] = useState([]);
   const [productsInfoMap, setProductsInfoMap] = useState({});
+  const [deleteRequest, setDeleteRequest] = useState(null);
 
   // handle the addition and delete products from selectedProducts
   const handleSelectedProducts = useCallback((id) => {
@@ -32,6 +33,16 @@ const ProductsTableControl = ({ children }) => {
     [selectedAllProducts],
   );
 
+  // Any delete button - whether from a row or from bulk actions - uses this function only
+  const requestDelete = useCallback((ids, label) => {
+    if (!ids || ids.length <= 0) return;
+    setDeleteRequest({ ids, label });
+  }, []);
+
+  const clearDeleteRequest = useCallback(() => {
+    setDeleteRequest(null);
+  }, []);
+
   const value = useMemo(
     () => ({
       handleSelectedProducts,
@@ -42,13 +53,19 @@ const ProductsTableControl = ({ children }) => {
       setSelectedAllProducts,
       productsInfoMap,
       setProductsInfoMap,
+      requestDelete,
+      clearDeleteRequest,
+      deleteRequest,
     }),
     [
       selectedProductsIds,
       selectedAllProducts,
       productsInfoMap,
+      deleteRequest,
       handleSelectedProducts,
       handleAllSelectedProducts,
+      requestDelete,
+      clearDeleteRequest,
     ],
   );
 

@@ -8,7 +8,7 @@ const AdminHeader = () => {
       {/* Header Content */}
       <div className="header-content grow flex-between gap-5">
         {/* Search Input */}
-        <div className="search-bar border border-border rounded-full p-1! lg:p-2! lg:px-3.5!  lg:min-w-90 flex-between gap-2.5 text-sm! ">
+        {/* <div className="search-bar border border-border rounded-full p-1! lg:p-2! lg:px-3.5!  lg:min-w-90 flex-between gap-2.5 text-sm! ">
           <input
             type="text"
             placeholder="Search for order, product, user..."
@@ -17,10 +17,10 @@ const AdminHeader = () => {
           <button type="button" className="text-gray">
             <i className="fa-solid fa-magnifying-glass"></i>
           </button>
-        </div>
+        </div> */}
 
         {/* Right Section */}
-        <section className="flex gap-5 lg:gap-10 items-center ">
+        <section className="flex ml-auto gap-5 lg:gap-10 items-center ">
           {/* Notfication */}
           <button className="text-gray text-xl">
             <i className="fa-solid fa-bell"></i>

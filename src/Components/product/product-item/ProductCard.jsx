@@ -183,7 +183,6 @@ const ProductCard = ({ product, cardHeight }) => {
             {/* Add Cart Btn */}
             <button
               onClick={() => {
-                console.log("yes");
                 addToCart();
               }}
               className="w-full bg-orange-lite hover:bg-orange hover:text-white p-2.5 text-sm font-bold mt-2.5"

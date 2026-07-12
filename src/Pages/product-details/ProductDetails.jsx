@@ -52,20 +52,37 @@ const ProductDetails = ({ productData }) => {
                     {dt.content}
                   </h2>
                 );
-              if (dt.type === "list")
+              if (dt.type === "bullet-list")
                 return (
                   <ol
                     key={index}
-                    className="flex-start-col gap-2 list-disc pl-7.5"
+                    className="flex-start-col gap-2 list-disc mt-2.5 pl-7.5"
                   >
-                    {dt.items.map((list, index) => {
+                    {dt.content.title && <h2 className="-ml-7.5 font-bold">{dt.content.title}</h2>}
+                    {dt.content.items.map((list, index) => {
                       return (
                         <li key={index + 4} className="text-sm text-gray">
-                          {list}
+                          {list.text}
                         </li>
                       );
                     })}
                   </ol>
+                );
+              if (dt.type === "numbered-list")
+                return (
+                  <ul
+                    key={index}
+                    className="flex-start-col gap-2 list-disc mt-2.5 pl-7.5"
+                  >
+                    {dt.content.title && <h2 className="-ml-7.5 font-bold">{dt.content.title}</h2>}
+                    {dt.content.items.map((list, index) => {
+                      return (
+                        <li key={index + 4} className="text-sm text-gray">
+                          {list.text}
+                        </li>
+                      );
+                    })}
+                  </ul>
                 );
             })}
           </div>

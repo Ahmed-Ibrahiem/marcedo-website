@@ -11,7 +11,7 @@ const SelectionCheckbox = ({ productId, style }) => {
       checked={selectedProductsIds.includes(productId)}
       onChange={() => handleSelectedProducts(productId)}
       type="checkbox"
-      className={`w-5! h-5! border-gray-300! checkbox ${style || ""}`}
+      className={`w-5! h-5! z-20 border-gray-300! checkbox ${style || ""}`}
     />
   );
 };

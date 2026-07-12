@@ -18,18 +18,13 @@ const ProductRow = ({ product, brand, categories, stock }) => {
     (item, next) => (item.level > next.level ? item : next),
     categories[0],
   );
-  const { handleSelectedProducts, selectedProductsIds } =
-    useProductsTableControlContext();
+  const { requestDelete } = useProductsTableControlContext();
 
   const navigate = useNavigate();
   return (
     <>
       {product && (
         <tr
-          onClick={(e) => {
-            if (e.target === e.currentTarget)
-              handleSelectedProducts(product.id);
-          }}
           key={product.id}
           className="text-sm border-b border-border last-of-type:border-b-0 font-semibold hover:bg-gray/5 cursor-pointer "
         >
@@ -120,9 +115,9 @@ const ProductRow = ({ product, brand, categories, stock }) => {
           <td>
             <div className="flex-start gap-1.5">
               {/* Hide */}
-              <button className={btnstyle}>
+              {/* <button className={btnstyle}>
                 <FaEye />
-              </button>
+              </button> */}
               {/* Edit Product */}
               <button
                 onClick={() =>
@@ -132,7 +127,13 @@ const ProductRow = ({ product, brand, categories, stock }) => {
               >
                 <CiEdit />
               </button>
-              <button className={btnstyle}>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  requestDelete([product.id], `"${product.name}"`);
+                }}
+                className={btnstyle}
+              >
                 <FaTrashCan />
               </button>
             </div>

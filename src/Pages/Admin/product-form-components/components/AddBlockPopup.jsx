@@ -266,14 +266,14 @@ const AddBlockPopup = ({ setOpenBlockPopup, addNewItem }) => {
                 <textarea
                   value={content}
                   onChange={(e) => {
-                    if (e.target.value.trim().length <= 300)
+                    if (e.target.value.trim().length <= 600)
                       setContent(e.target.value);
                   }}
                   className="input-form-style h-50 leading-6"
                   placeholder="Enter your paragraph"
                 />
                 <p className="absolute bottom-3.5 right-3.5 text-xs text-gray">
-                  {content.trim().length}/300
+                  {content.trim().length}/600
                 </p>
               </div>
             )}

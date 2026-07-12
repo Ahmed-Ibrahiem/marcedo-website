@@ -22,7 +22,7 @@ const defaultDraft = {
   stock: "",
   sku: "",
   currency: "EGP",
-  prodColor: { name: "", hex: "#000000" },
+  prodColor: { label: "", hex: "#000000" },
   discount_percentage: "",
   threshold: 0,
   discountExpiresAt: "",
@@ -104,7 +104,8 @@ const Step3 = ({ setHasVariants, ...props }) => {
     const areThereVariant = Object.fromEntries(
       Object.entries(attributiesList).filter(([key, value]) => value.trim()),
     );
-    const isColorSelect = prodColor.name.trim();
+
+    const isColorSelect = prodColor.label.trim();
     if (Object.keys(areThereVariant).length === 0 && !isColorSelect) {
       setMissingMessage({
         type: "variants",
@@ -161,8 +162,8 @@ const Step3 = ({ setHasVariants, ...props }) => {
 
     const productVariant = {
       id: crypto.randomUUID(),
-      attributes: prodColor.name
-        ? { ...areThereVariant, color: prodColor.name }
+      attributes: prodColor.label
+        ? { ...areThereVariant, color: prodColor.label }
         : areThereVariant,
       original_price: Number(price),
       stock: Number(stock),
@@ -178,8 +179,8 @@ const Step3 = ({ setHasVariants, ...props }) => {
 
     setValue(
       "colorPalette",
-      prodColor.name
-        ? { ...colorPalette, [prodColor.name]: prodColor.hex }
+      prodColor.label
+        ? { ...colorPalette, [prodColor.label]: prodColor.hex }
         : colorPalette,
     );
 
@@ -191,6 +192,33 @@ const Step3 = ({ setHasVariants, ...props }) => {
     // Reset the whole draft in one go instead of 8 separate setters
     setDraft(defaultDraft);
   };
+
+  // Create sku name automatic to make the input process easier for the user
+  useEffect(() => {
+    if (!attributiesList) return;
+
+    const areThereVariant = Object.fromEntries(
+      Object.entries(attributiesList).filter(([key, value]) => value.trim()),
+    );
+
+    if (
+      Object.keys(areThereVariant).length === 0 &&
+      !draft.prodColor.label.trim()
+    )
+      return;
+    const proName = getValues("name").split(" ").join("-").slice(0, 4);
+
+    const variantsValue = Object.values(areThereVariant)
+      .join("-")
+      .split(" ")
+      .join("");
+
+    const colorName = draft.prodColor.label.trim();
+
+    updateDraft({
+      sku: `${proName}-${variantsValue}${colorName ? `-${colorName}` : ""}`.toUpperCase(),
+    });
+  }, [draft.prodColor.label, attributiesList]);
 
   useEffect(() => {
     setMissingMessage({ message: "", type: "" });
@@ -263,12 +291,12 @@ const Step3 = ({ setHasVariants, ...props }) => {
                               Name
                             </label>
                             <input
-                              value={draft.prodColor.name}
+                              value={draft.prodColor.label}
                               onChange={(e) =>
                                 updateDraft({
                                   prodColor: {
                                     ...draft.prodColor,
-                                    name: e.target.value,
+                                    label: e.target.value,
                                   },
                                 })
                               }
