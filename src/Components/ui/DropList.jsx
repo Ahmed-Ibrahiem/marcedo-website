@@ -7,6 +7,8 @@ const DropList = ({
   optionFun,
   currentSelect,
   listName,
+  validOptions,
+  listKey,
   children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +31,18 @@ const DropList = ({
             <div className={optionsStyle}>
               {children}
               {options.map((option, index) => {
+                const getOpttion = validOptions[listKey];
+                const isValid =
+                  getOpttion === undefined || getOpttion.includes(option);
                 return (
-                  <span className={spanStyle} onClick={()=> optionFun(option)} key={index}>
+                  <button
+                    className={`${btnStyle} ${!isValid ? "text-gray! line-through! hover:bg-white! " : ""}`}
+                    disabled={!isValid}
+                    onClick={() => optionFun(option)}
+                    key={index}
+                  >
                     {option}
-                  </span>
+                  </button>
                 );
               })}
             </div>
@@ -52,8 +62,8 @@ absolute left-0 top-full p-1.5 flex-start-col max-h-24 overflow-y-auto fade-in-a
 bg-white shadow-sm border border-border 
 `;
 
-const spanStyle = `
-p-1.5 hover:bg-orange-lite w-full
+const btnStyle = `
+p-1.5 hover:bg-orange-lite w-full text-start
 `;
 
 export default DropList;

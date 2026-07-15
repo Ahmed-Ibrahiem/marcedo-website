@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 
 import SocialMediaActions from "./components/SocialMediaActions";
 import ProductBasicInfo from "./components/ProductBasicInfo";
@@ -11,8 +11,13 @@ import ProductActions from "./components/ProductActions";
 import { useProductDetailsContext } from "../../Context/ProductDetailsProvider";
 
 const ProductInfo = ({ productData }) => {
-  const { selectedOptions, setSelectedOptions, productVariants } =
-    useProductDetailsContext();
+  const {
+    selectedOptions,
+    setSelectedOptions,
+    productVariants,
+    validOptions,
+    updateValidOptions,
+  } = useProductDetailsContext();
   return (
     <>
       <div className="w-full lg:pl-10 flex flex-col gap-7.5 mt-12.5 lg:mt-0">
@@ -20,9 +25,11 @@ const ProductInfo = ({ productData }) => {
 
         {/* Start select options */}
         <ProductVariants
+          productVariants={productVariants}
           selectedOptions={selectedOptions}
           setSelectedOptions={setSelectedOptions}
-          productVariants={productVariants}
+          updateValidOptions={updateValidOptions}
+          validOptions={validOptions}
         />
 
         {/* Start Actions Btn */}

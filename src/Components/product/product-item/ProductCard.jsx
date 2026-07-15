@@ -25,9 +25,11 @@ const ProductCard = ({ product, cardHeight }) => {
 
   const {
     selectedOptions,
-    setSeletedOptions,
+    setSelectedOptions,
     getDefaultOptions,
     getSelectedVariants,
+    validOptions,
+    updateValidOptions,
   } = useProductVariants({ proVariants });
 
   const handleQuickViewClick = () => {
@@ -154,28 +156,52 @@ const ProductCard = ({ product, cardHeight }) => {
             <div className="flex-start-col gap-2.5 w-full">
               {selectedOptions &&
                 proVariants.options.map((opt) => {
+                  const getOptions = validOptions[opt.key];
                   return opt.key === "color" ? (
                     <DropList
+                      listKey={opt.key}
                       key={opt.key}
                       options={opt.values.map((value) => value.label)}
-                      currentSelect={selectedOptions[opt.key]}
-                      listName={"Color"}
-                      optionFun={(option) =>
-                        setSeletedOptions({ ...selectedOptions, color: option })
+                      currentSelect={
+                        getOptions === undefined
+                          ? selectedOptions[opt.key]
+                          : getOptions.includes(selectedOptions[opt.key])
+                            ? selectedOptions[opt.key]
+                            : getOptions[0]
                       }
+                      listName={"Color"}
+                      optionFun={(option) => {
+                        const newOptions = {
+                          ...selectedOptions,
+                          color: option,
+                        };
+                        updateValidOptions(newOptions);
+                        setSelectedOptions(newOptions);
+                      }}
+                      validOptions={validOptions}
                     />
                   ) : (
                     <DropList
+                      listKey={opt.key}
                       key={opt.key}
                       options={opt.values}
-                      currentSelect={selectedOptions[opt.key]}
+                      currentSelect={
+                        getOptions === undefined
+                          ? selectedOptions[opt.key]
+                          : getOptions.includes(selectedOptions[opt.key])
+                            ? selectedOptions[opt.key]
+                            : getOptions[0]
+                      }
                       listName={opt.key}
-                      optionFun={(option) =>
-                        setSeletedOptions({
+                      optionFun={(option) => {
+                        const newOptions = {
                           ...selectedOptions,
                           [opt.key]: option,
-                        })
-                      }
+                        };
+                        updateValidOptions(newOptions);
+                        setSelectedOptions(newOptions);
+                      }}
+                      validOptions={validOptions}
                     />
                   );
                 })}
@@ -253,4 +279,5 @@ before:-right-1 before:top-[10px] before:w-2.5 before:h-2.5 z-10 duration-500!
 const variantContainerStyle = `
 variants w-full min-h-50 bg-white p-2.5 absolute bottom-0 left-0 rounded-[6px_6px_0_0] text-xs z-20
 `;
+
 export default React.memo(ProductCard);

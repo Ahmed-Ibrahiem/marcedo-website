@@ -12,6 +12,7 @@ import {
 import ProductVariants from "../../../Pages/product-details/components/ProductVariants";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import useProductVariants from "../../../Hooks/useProductVariants";
 
 const initialInfo = {
   proCategories: undefined,
@@ -45,35 +46,17 @@ const QuickViewPopup = () => {
   const { isQuickViewOpen, setIsQuickViewOpen, productData } =
     useQuickViewPopupContext();
   const [countSelected, setCountSelected] = useState(1);
-  const [selectedOptions, setSeletedOptions] = useState(null);
   const [proInfo, dispatchProInfo] = useReducer(reducer, initialInfo);
   const { addItem } = useCartContext();
 
-  // Create function to get default option when the component render
-  const getDefaultOptions = () => {
-    let options = {};
-
-    proInfo.proVariants.options.forEach((op) => {
-      options = { ...options, [op.key]: op.values[0] };
-      if (op.key === "color")
-        options = { ...options, [op.key]: op.values[0].label };
-    });
-
-    setSeletedOptions(options);
-  };
-
-  // Create function to get the selected variants by check the matching with options selected
-  const getSelectedVariants = () => {
-    if (!selectedOptions || !proInfo?.proVariants?.variants) return;
-
-    const varaint = proInfo.proVariants.variants.find((varia) => {
-      return Object.entries(varia.attributes).every(
-        ([key, value]) => selectedOptions[key] === value,
-      );
-    });
-
-    return varaint || null;
-  };
+  const {
+    selectedOptions,
+    setSelectedOptions,
+    updateValidOptions,
+    validOptions,
+    getSelectedVariants,
+    getDefaultOptions,
+  } = useProductVariants({ proVariants: proInfo.proVariants });
 
   // Create function to handle the add the item to cart operation
   const addToCart = () => {
@@ -171,7 +154,7 @@ const QuickViewPopup = () => {
                 <div className="flex-start flex-wrap gap-2.5 fade-in">
                   <span className="font-semibold min-w-25">Categories: </span>
                   <p className="capitalize text-gray">
-                    {proInfo.proCategories.join(", ")}
+                    {proInfo.proCategories.map((cat) => cat.name).join(", ")}
                   </p>
                 </div>
               )}
@@ -210,7 +193,9 @@ const QuickViewPopup = () => {
                 <ProductVariants
                   productVariants={proInfo.proVariants}
                   selectedOptions={selectedOptions}
-                  setSelectedOptions={setSeletedOptions}
+                  setSelectedOptions={setSelectedOptions}
+                  updateValidOptions={updateValidOptions}
+                  validOptions={validOptions}
                 />
               )}
               {/* Quantity */}

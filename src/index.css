@@ -176,6 +176,26 @@
     @apply cursor-pointer relative min-w-5.25 min-h-5.25 rounded-full border border-gray-400 appearance-none before:absolute before:top-[50%] before:left-[50%] before:translate-x-[-50%_-50%] before:rounded-full before:duration-300 before:w-[80%] before:h-[80%] before:bg-(--bg-color)
   }
 
+  .color_options:disabled{
+    @apply cursor-not-allowed! border-gray-300! border!  opacity-50
+  }
+
+  .color_options:disabled + label{
+    @apply text-gray! cursor-not-allowed!
+  }
+
+  .color_options:disabled::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: var(--color-gray-400);
+    top: 50%;
+    left: 50%;
+    rotate: -45deg;
+    translate: -50% -50%;
+  }
+
   .color_options:checked {
     @apply before:w-[70%] before:h-[70%] border-black border-2
   }

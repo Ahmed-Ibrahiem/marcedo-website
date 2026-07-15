@@ -3,14 +3,34 @@ import { getProductVariants } from "../services/productDetailsServices";
 import { toast } from "react-toastify";
 import { useCartContext } from "./CartMenuContext";
 import Success_Toast from "../Components/ui/confirm-message/Success_Toast";
+import useProductVariants from "../Hooks/useProductVariants";
 
 const ProductDetailsContext = createContext(null);
 
 const ProductDetailsProvider = ({ productData, children }) => {
-  const [selectedOptions, setSelectedOptions] = useState(null);
-  const [productVariants, setProductVariants] = useState(null);
   const [selectedCount, setSelectedCount] = useState(1);
   const { addItem } = useCartContext();
+  const [productVariants, setProductVariants] = useState(null);
+  const {
+    selectedOptions,
+    setSelectedOptions,
+    getDefaultOptions,
+    validOptions,
+    updateValidOptions,
+    getSelectedVariants,
+  } = useProductVariants({ proVariants: productVariants });
+
+  useEffect(() => {
+    if (!productData) return;
+
+    const getVariants = async () => {
+      const variants = await getProductVariants(productData.id);
+      if (!variants) return;
+      setProductVariants(variants);
+    };
+
+    getVariants();
+  }, [productData]);
 
   useEffect(() => {
     if (!productData) return;
@@ -26,30 +46,11 @@ const ProductDetailsProvider = ({ productData, children }) => {
 
   useEffect(() => {
     if (!productVariants) return;
-
-    const options = {};
-
-    productVariants.options.forEach((op, index) => {
-      if (op.key === "color") options[op.key] = op.values[0].label;
-      else options[op.key] = op.values[0];
-    });
-
-    setSelectedOptions(options);
+    getDefaultOptions();
   }, [productVariants]);
 
-  const getSelectedVariant = () => {
-    if (!selectedOptions || !productVariants?.variants)
-      return toast.error("Please Select Options");
-
-    return productVariants.variants.find((varian) =>
-      Object.entries(varian.attributes).every(
-        ([key, value]) => selectedOptions[key] === value,
-      ),
-    );
-  };
-
   const addProductToCart = () => {
-    const variants = getSelectedVariant();
+    const variants = getSelectedVariants();
     if (!variants || !productData) return;
 
     const data = { ...productData, variants };
@@ -68,6 +69,8 @@ const ProductDetailsProvider = ({ productData, children }) => {
     addProductToCart,
     selectedCount,
     setSelectedCount,
+    validOptions,
+    updateValidOptions,
   };
 
   return (
