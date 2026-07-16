@@ -50,16 +50,15 @@ const ProductCard = ({ product, cardHeight }) => {
   }, [proVariants]);
 
   const addToCart = () => {
-    if (proVariants) {
-      const variants = getSelectedVariants();
-      const data = {
-        ...product,
-        variants,
-      };
+    const variants = getSelectedVariants();
 
-      addItem(data);
-      setIsOptionsShow(false);
-    }
+    const data = {
+      ...product,
+      variants: variants ? variants : null,
+    };
+
+    addItem(data);
+    setIsOptionsShow(false);
   };
 
   useOutside_click(varaintRef, () => setIsOptionsShow(false));
@@ -97,10 +96,14 @@ const ProductCard = ({ product, cardHeight }) => {
           <button
             type="button"
             onClick={() => {
-              if (proVariants) {
-                setIsOptionsShow(true);
-              } else {
+              if (
+                !proVariants ||
+                !proVariants.variants ||
+                !proVariants.options
+              ) {
                 addItem(product); // add and remove from cartItems menu
+              } else {
+                setIsOptionsShow(true);
               }
             }}
             className={`${cartBtnStyle} group/btn`}

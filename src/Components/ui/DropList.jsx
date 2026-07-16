@@ -20,7 +20,10 @@ const DropList = ({
     <>
       <div
         ref={menuRef}
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsOpen((prev) => !prev);
+        }}
         className="border border-border p-2.5 flex-start-col gap-1.5 w-full relative cursor-pointer"
       >
         {listName && <h3 className="font-semibold ">{listName}</h3>}

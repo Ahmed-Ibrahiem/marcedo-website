@@ -21,7 +21,9 @@ const CartMenuProvider = ({ children }) => {
   const SubtotalItemsPrice = useMemo(() => {
     let totalPrice = 0;
     Object.values(cartItemsData).forEach((item) => {
-      totalPrice += item.quantity * item.variants.price;
+      totalPrice +=
+        item.quantity *
+        (item.variants ? item.variants.price : item.current_price);
     });
 
     return totalPrice;
@@ -73,10 +75,10 @@ const CartMenuProvider = ({ children }) => {
 
   // Create function to remove the product id has already exist from cartItems
   const removeItem = (data) => {
-    if (!data.variants) return toast.error("The Operation Dosn't Complate ");
-    const variants_id = data.variants.id;
+    const data_id = data.variants ? data.variants.id : data.id;
+
     setCartItemsData((prev) => {
-      const { [variants_id]: removeItem, ...rest } = prev;
+      const { [data_id]: removeItem, ...rest } = prev;
       return rest;
     });
   };

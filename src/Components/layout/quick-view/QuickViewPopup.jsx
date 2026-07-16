@@ -61,7 +61,6 @@ const QuickViewPopup = () => {
   // Create function to handle the add the item to cart operation
   const addToCart = () => {
     const variant = getSelectedVariants();
-    if (!variant) return;
 
     const data = { ...productData, variants: variant };
     addItem(data, countSelected);
@@ -189,7 +188,7 @@ const QuickViewPopup = () => {
                   </div>
                 </>
               )}
-              {proInfo.proVariants && (
+              {proInfo?.proVariants?.options && (
                 <ProductVariants
                   productVariants={proInfo.proVariants}
                   selectedOptions={selectedOptions}

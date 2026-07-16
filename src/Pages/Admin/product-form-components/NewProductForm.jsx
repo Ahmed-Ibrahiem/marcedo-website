@@ -376,7 +376,7 @@ const NewProductForm = () => {
       )}
 
       {isProductLoading && (
-        <div className="fixed z-50 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
+        <div className="fixed z-1000 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
           <AiOutlineLoading3Quarters
             size={40}
             className="loading-animate-1 text-orange"
@@ -386,7 +386,7 @@ const NewProductForm = () => {
       )}
 
       {isSubmitting && (
-        <div className="fixed z-50 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
+        <div className="fixed z-1000 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
           <AiOutlineLoading3Quarters
             size={40}
             className="loading-animate-1 text-orange"
@@ -396,7 +396,7 @@ const NewProductForm = () => {
       )}
 
       {uploadProgress > 0 && uploadProgress <= 100 && (
-        <div className="fixed z-50 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
+        <div className="fixed z-1000 top-0 left-0 w-full h-full bg-white flex-center-col gap-5  text-gray">
           <UploadProgressBar
             style={"w-75! max-w-full!"}
             progress={uploadProgress}

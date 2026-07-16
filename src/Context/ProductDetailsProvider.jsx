@@ -51,7 +51,7 @@ const ProductDetailsProvider = ({ productData, children }) => {
 
   const addProductToCart = () => {
     const variants = getSelectedVariants();
-    if (!variants || !productData) return;
+    if (!productData) return;
 
     const data = { ...productData, variants };
 
