@@ -8,7 +8,7 @@ import Auth_menu_btn from "../../ui/auth-menu-btn/Auth_menu_btn";
 import NavbarMenu from "../navbar-menu/NavbarMenu";
 import Categoties_menu from "../header-menus/Categoties_menu";
 import { motion } from "framer-motion";
-import { FaMagnifyingGlass, FaXmark } from "react-icons/fa6";
+import { FaLocationDot, FaMagnifyingGlass, FaXmark } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa";
 
 const Header = ({ setIsSearchOverlayOpen, isSticky }) => {
@@ -55,7 +55,7 @@ const Header = ({ setIsSearchOverlayOpen, isSticky }) => {
             {/* Right side — delivery location, auth button, cart and wishlist */}
             <div className="right_part">
               <div className="deliver">
-                <i className="fa-solid fa-location-dot"></i>
+                <FaLocationDot />
                 <p>
                   Deliver to <span>Egypt</span>
                 </p>

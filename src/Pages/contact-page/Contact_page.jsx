@@ -2,6 +2,16 @@ import { useLayoutEffect } from "react";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
 import style from "./Contact_page.module.css";
 import { motion } from "framer-motion";
+import {
+  FaLocationDot,
+  FaEnvelope,
+  FaPhone,
+  FaClock,
+  FaFacebookF,
+  FaInstagram,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const Contact_page = () => {
   useLayoutEffect(() => {
@@ -70,37 +80,34 @@ const Contact_page = () => {
             </p>
             <ul className={style.info}>
               <li>
-                <i className="fa-solid fa-location-dot"></i>
+                <FaLocationDot size={20} />
                 <p>Cairo , Egypt</p>
               </li>
               <li>
-                <i className="fa-regular fa-envelope"></i>
+                <FaEnvelope size={20} />
                 <p>ahmedebrhihem935@gmail.com</p>
               </li>
               <li>
-                <i className="fa-solid fa-phone"></i>
+                <FaPhone size={20} />
                 <p>+20 101 156 0550</p>
               </li>
               <li>
-                <i className="fa-regular fa-clock"></i>
+                <FaClock size={20} />
                 <p>Open Time: 8:00AM - 6:00PM</p>
               </li>
             </ul>
             <div className={style.social_media}>
               <a href="##">
-                <i className="fa-brands fa-facebook-f"></i>
+                <FaFacebookF size={22} />
               </a>
               <a href="##">
-                <i className="fa-brands fa-instagram"></i>
+                <FaInstagram size={22} />
               </a>
               <a href="##">
-                <i className="fa-brands fa-x-twitter"></i>
+                <FaXTwitter size={22} />
               </a>
               <a href="##">
-                <i className="fa-brands fa-tiktok"></i>
-              </a>
-              <a href="##">
-                <i className="fa-brands fa-youtube"></i>
+                <FaYoutube size={22} />
               </a>
             </div>
           </motion.div>

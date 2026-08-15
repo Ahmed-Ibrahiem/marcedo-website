@@ -22,8 +22,17 @@ import ProductDetailsPage from "./Pages/product-details/ProductDetailsPage.jsx";
 import NewProductForm from "./Pages/Admin/product-form-components/NewProductForm.jsx";
 import QuickViewPopup from "./Components/layout/quick-view/QuickViewPopup.jsx";
 import CategoriesPage from "./Pages/categories-page/CategoriesPage.jsx";
+import { use_auth_context } from "./Context/AuthProvider.jsx";
+import LoadingScreen from "./Components/ui/Loading/LoadingScreen.jsx";
+import UserProfilePopup from "./Components/layout/user-profile/UserProfilePopup.jsx";
 
 const App = () => {
+  const { is_loading } = use_auth_context();
+
+  if (is_loading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <div className="app">
       <ToastContainer position="top-right" autoClose={3000} />
@@ -31,7 +40,7 @@ const App = () => {
       {/* cover the Header And SearchOverlay By SearchProvider context  */}
 
       <Custom_message_toast />
-      <QuickViewPopup/>
+      <QuickViewPopup />
 
       <Routes>
         <Route element={<MainLayout />}>
@@ -45,7 +54,10 @@ const App = () => {
           <Route path="/about-us" element={<About_us />} />
           <Route path="/contact-us" element={<Contact_page />} />
           <Route path="/shop" element={<Shop_page />} />
-          <Route path="/categories/:categorySlug" element={<CategoriesPage />} />
+          <Route
+            path="/categories/:categorySlug"
+            element={<CategoriesPage />}
+          />
           <Route path="/shop/:categorySlug" element={<CategoriesPage />} />
           <Route path="/order-success" element={<Order_successfull />} />
         </Route>
@@ -55,7 +67,10 @@ const App = () => {
           <Route path="orders" element={<Orders />} />
           <Route path="products" element={<ProductsAdmin />} />
           <Route path="products/add_new_product" element={<NewProductForm />} />
-          <Route path="products/add_new_product/:product_id" element={<NewProductForm />} />
+          <Route
+            path="products/add_new_product/:product_id"
+            element={<NewProductForm />}
+          />
           <Route path="customers" element={<Customers />} />
         </Route>
         <Route path="/checkout" element={<Checkout_page />} />
@@ -64,6 +79,7 @@ const App = () => {
       <Scroll_button />
       <Cart_popup />
       <Auth_popup />
+      <UserProfilePopup />
     </div>
   );
 };

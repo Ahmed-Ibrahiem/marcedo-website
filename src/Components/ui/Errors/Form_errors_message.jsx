@@ -1,6 +1,5 @@
-import style from "./Form_errors_message.module.css";
-const Form_errors_message = ({ message }) => {
-  return <p className={style.message}>{message}</p>;
+const Form_errors_message = ({ message, style }) => {
+  return <p className={`text-sm text-red-600  ${style || ""} `}>{message}</p>;
 };
 
 export default Form_errors_message;

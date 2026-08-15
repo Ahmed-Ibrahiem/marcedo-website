@@ -1,17 +1,16 @@
-import { useState } from "react";
 import styles from "./Auth_popup.module.css";
 import { use_auth_context } from "../../Context/AuthProvider";
-import Form_errors_message from "../../Components/ui/Errors/Form_errors_message";
+import SignInForm from "./signinForm";
+import SignUpForm from "./SignUpForm";
 import { FaXmark } from "react-icons/fa6";
+import LoginWithGoogleBtn from "./LoginWithGoogleBtn";
+import { useState } from "react";
 
 const Auth_popup = () => {
-  const [show_password, set_show_password] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
   const { sign_mode, set_sign_mode, auth_open, set_auth_open } =
     use_auth_context();
 
-  const { register, control, handleSubmit, errors, onSubmit } =
-    use_auth_context();
+  const [formLoading, setFormLoading] = useState(false);
 
   return (
     <>
@@ -42,107 +41,17 @@ const Auth_popup = () => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-            {sign_mode == "create_account" && (
-              <>
-                {/* First Name */}
-                <div className={styles.form_group}>
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className={`${styles.input}`}
-                    {...register("first_name")}
-                  />
-                </div>
-
-                {/* Last Name */}
-                <div className={styles.form_group}>
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className={`${styles.input}`}
-                    {...register("last_name")}
-                  />
-                </div>
-              </>
-            )}
-
-            {/* Email Input */}
-            <div className={styles.form_group}>
-              <input
-                type="text"
-                placeholder={
-                  sign_mode == "sign_in" ? "Email or Phone Number*" : "Email*"
-                }
-                className={`${styles.input}`}
-                {...register("email")}
-              />
-              {errors.email && (
-                <Form_errors_message message={errors.email.message} />
-              )}
-            </div>
-
-            {/* Phone Number Input */}
-            {sign_mode == "create_account" && (
-              <div className={styles.form_group}>
-                <input
-                  type="tel"
-                  placeholder="Phone Number*"
-                  className={`${styles.input}`}
-                  {...register("phone")}
-                />
-                {errors.phone && (
-                  <Form_errors_message message={errors.phone.message} />
-                )}
-              </div>
-            )}
-
-            {/* Password Input */}
-            <div className={styles.form_group}>
-              <div className={styles.password_wrapper}>
-                <input
-                  type={show_password ? "text" : "password"}
-                  placeholder="Password*"
-                  className={`${styles.input}`}
-                  {...register("password")}
-                />
-                <button
-                  type="button"
-                  onClick={() => set_show_password(!show_password)}
-                  className={styles.toggle_passward_btn}
-                >
-                  {show_password ? (
-                    <i className="fa-solid fa-eye"></i>
-                  ) : (
-                    <i className="fa-solid fa-eye-slash"></i>
-                  )}
-                </button>
-              </div>
-              {errors.password && (
-                <Form_errors_message message={errors.password.message} />
-              )}
-            </div>
-
-            {/* Forgot Password */}
-            {sign_mode == "sign_in" && (
-              <div className={styles.forgot_password_container}>
-                <button type="button" className={styles.forgot_password_link}>
-                  Forgot your password?
-                </button>
-              </div>
-            )}
-
-            {/* Sign In Button */}
-            <button
-              type="submit"
-              //   disabled={isLoading}
-              className={styles.main_btn}
-            >
-              {/* {isLoading && <div className={styles.spinner}></div>} */}
-              {!isLoading && sign_mode == "sign_in" && "Sign in"}
-              {!isLoading && sign_mode != "sign_in" && "Create Account"}
-            </button>
-          </form>
+          {sign_mode === "sign_in" ? (
+            <SignInForm
+              formLoading={formLoading}
+              setFormLoading={setFormLoading}
+            />
+          ) : (
+            <SignUpForm
+              formLoading={formLoading}
+              setFormLoading={setFormLoading}
+            />
+          )}
 
           {/* Divider */}
           <div className={styles.divider}>
@@ -153,8 +62,10 @@ const Auth_popup = () => {
           {/* Create Account */}
           <button
             type="button"
-            className={styles.submain_btn}
+            className={styles.toggleSignMode}
+            disabled={formLoading}
             onClick={() => {
+              if (formLoading) return;
               set_sign_mode((prev) =>
                 prev == "sign_in" ? "create_account" : "sign_in",
               );
@@ -162,6 +73,18 @@ const Auth_popup = () => {
           >
             {sign_mode === "sign_in" ? "Create An Account" : "Sign in"}
           </button>
+
+          {/* Divider */}
+          <div className={styles.divider}>
+            <div className={styles.divider_line}></div>
+            <div className={styles.divider_text}>Or</div>
+          </div>
+
+          {/* Login With Google*/}
+          <LoginWithGoogleBtn
+            formLoading={formLoading}
+            setFormLoading={setFormLoading}
+          />
         </div>
       </div>
     </>
