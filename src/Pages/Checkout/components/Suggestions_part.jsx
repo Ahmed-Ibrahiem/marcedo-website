@@ -3,6 +3,7 @@ import style from "../Css/Address_box.module.css";
 import axios from "axios";
 import { use_checkout_context } from "../../../Context/CheckoutProvider";
 import Form_errors_message from "../../../Components/ui/Errors/Form_errors_message";
+import { FaMagnifyingGlass, FaXmark } from "react-icons/fa6";
 
 const Suggestions_part = () => {
   // --- State Management ---
@@ -47,7 +48,7 @@ const Suggestions_part = () => {
             placeholder="Address"
             {...register("address_info.address")}
           />
-          <i className="fa-solid fa-magnifying-glass"></i>
+          <FaMagnifyingGlass />
 
           {/* Suggestion Menu */}
           <div
@@ -59,7 +60,7 @@ const Suggestions_part = () => {
                 type="button"
                 onClick={() => set_is_user_closed_menu(true)}
               >
-                <i className="fa-solid fa-xmark"></i>
+                <FaXmark />
               </button>
             </div>
             <div className={style.suggestion_span}>

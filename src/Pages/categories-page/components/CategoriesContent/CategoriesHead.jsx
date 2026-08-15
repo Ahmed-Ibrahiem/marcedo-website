@@ -2,6 +2,7 @@ import React, { memo, useState } from "react";
 import { motion } from "framer-motion";
 import { display_image } from "../../../../assets/assets";
 import { use_products_grid_context } from "../../../../Context/ProductsGridProvider";
+import { FaFilter } from "react-icons/fa6";
 
 const CategoriesHead = ({
   setIsSidebarOpen,
@@ -38,7 +39,7 @@ const CategoriesHead = ({
         "
       >
         <span>Filter</span>
-        <i className="fa-solid fa-filter" />
+        <FaFilter />
       </div>
 
       {/* Sort dropdown */}

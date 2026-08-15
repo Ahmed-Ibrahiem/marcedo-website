@@ -2,6 +2,7 @@ import { useState } from "react";
 import style from "../Css/Country_box.module.css";
 import { use_checkout_context } from "../../../Context/CheckoutProvider";
 import Form_errors_message from "../../../Components/ui/Errors/Form_errors_message";
+import { FaAngleRight } from "react-icons/fa6";
 
 const Country_box = () => {
   // Track whether the country dropdown menu is open or closed
@@ -40,8 +41,10 @@ const Country_box = () => {
         </p>
 
         {/* Arrow icon — indicates dropdown behavior */}
-        <i className="fa-solid fa-angle-right"></i>
-
+        <FaAngleRight
+          className="absolute top-[50%] right-2.5 translate-y-[-50%] text-gray"
+          size={15}
+        />
         {/* Dropdown options — visible only when is_menu_open is true */}
         <div
           className={`${style.options} ${is_menu_open ? style.open_menu : ""}`}

@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useRef, useState } from "react";
-import { FaAngleUp } from "react-icons/fa6";
+import { FaAngleRight, FaAngleUp } from "react-icons/fa6";
 
 const PriceSection = ({ min, max, setActiveFilters }) => {
   const [is_menu_open, set_is_menu_open] = useState(false);
@@ -98,7 +98,7 @@ const PriceSection = ({ min, max, setActiveFilters }) => {
               />
             </div>
 
-            <i className="fa-solid fa-angle-right" />
+            <FaAngleRight />
 
             {/* Max field */}
             <div className="rounded-[5px] border border-gray-light flex-center gap-2.5 relative overflow-hidden">

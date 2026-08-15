@@ -6,6 +6,7 @@ import style from "./About_us.module.css";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { motion } from "framer-motion";
+import { FaPlay } from "react-icons/fa6";
 
 const About_us = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -113,7 +114,7 @@ const About_us = () => {
           loading="lazy"
         />
         <button onClick={() => set_start_video(true)}>
-          <i className="fa-solid fa-play"></i>
+          <FaPlay />
         </button>
         {start_video && (
           <Our_video_component
@@ -124,8 +125,6 @@ const About_us = () => {
           />
         )}
       </motion.div>
-
-      
     </div>
   );
 };

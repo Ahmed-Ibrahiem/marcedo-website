@@ -1,3 +1,4 @@
+import { FaXmark } from "react-icons/fa6";
 import style from "./Our_video_component.module.css";
 
 const Our_video_component = ({ video_url, stop_video }) => {
@@ -5,8 +6,7 @@ const Our_video_component = ({ video_url, stop_video }) => {
     <div className={style.our_video_area}>
       <div className={style.video_container}>
         <button onClick={() => stop_video()} className={style.play}>
-
-            <i className="fa-solid fa-xmark"></i>
+          <FaXmark />
         </button>
         <iframe src={video_url} title="YouTube video" allowFullScreen></iframe>
       </div>

@@ -3,6 +3,7 @@ import CategoriesSeciton from "./CategoriesSection";
 import PriceSection from "./PriceSection";
 import DynamicOptionsSection from "./DynamicOptionsSection";
 import React, { memo } from "react";
+import { FaXmark } from "react-icons/fa6";
 
 const CategoriesSideBar = ({
   isSidebarOpen,
@@ -28,7 +29,7 @@ const CategoriesSideBar = ({
         onClick={() => setIsSidebarOpen((prev) => !prev)}
         className={`${closeBtnStyle} `}
       >
-        <i className="fa-solid fa-xmark" />
+        <FaXmark />
       </button>
 
       {/* Sidebar content */}

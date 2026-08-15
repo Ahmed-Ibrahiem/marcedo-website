@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../Components/ui/Logo/Logo";
+import { FaAngleDown, FaBell } from "react-icons/fa6";
 
 const AdminHeader = () => {
   return (
@@ -7,23 +8,11 @@ const AdminHeader = () => {
       <Logo logoStyle={"scale-60 sm:scale-70 lg:scale-90"} />
       {/* Header Content */}
       <div className="header-content grow flex-between gap-5">
-        {/* Search Input */}
-        {/* <div className="search-bar border border-border rounded-full p-1! lg:p-2! lg:px-3.5!  lg:min-w-90 flex-between gap-2.5 text-sm! ">
-          <input
-            type="text"
-            placeholder="Search for order, product, user..."
-            className="grow border-none outline-none hidden lg:block"
-          />
-          <button type="button" className="text-gray">
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div> */}
-
         {/* Right Section */}
         <section className="flex ml-auto gap-5 lg:gap-10 items-center ">
           {/* Notfication */}
           <button className="text-gray text-xl">
-            <i className="fa-solid fa-bell"></i>
+            <FaBell />
           </button>
           {/* Portfolio */}
           <button className="flex items-center gap-2.5 text-xs hover:bg-hover-bg! cursor-pointer p-1.5! rounded-sm">
@@ -39,7 +28,7 @@ const AdminHeader = () => {
               <h1>Admin</h1>
               <h3>Super Admin</h3>
             </div>
-            <i className="fa-solid fa-angle-down hidden lg:block"></i>
+            <FaAngleDown className=" hidden lg:block" />
           </button>
         </section>
       </div>

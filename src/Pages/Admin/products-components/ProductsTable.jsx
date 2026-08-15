@@ -6,6 +6,8 @@ const ProductsTable = ({ productsData }) => {
   const { selectedAllProducts, setSelectedAllProducts, productsInfoMap } =
     useProductsTableControlContext();
 
+  console.log(productsData);
+
   return (
     <table className="w-full min-w-225 xl:min-w-auto ">
       <thead className="border-y border-border bg-gray-50 ">
@@ -35,6 +37,7 @@ const ProductsTable = ({ productsData }) => {
       </thead>
       <tbody>
         {Object.keys(productsInfoMap).length > 0 &&
+          productsData &&
           productsData.map((pro) => {
             return (
               <ProductRow

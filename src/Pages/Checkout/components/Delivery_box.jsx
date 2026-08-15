@@ -1,6 +1,8 @@
+import { FaTruck } from "react-icons/fa6";
 import Form_errors_message from "../../../Components/ui/Errors/Form_errors_message";
 import { use_checkout_context } from "../../../Context/CheckoutProvider";
 import style from "../Css/Delivery_box.module.css";
+import { FaHome } from "react-icons/fa";
 
 const Delivery_box = () => {
   // Destructure register and errors directly from the payment form in checkout context
@@ -30,7 +32,10 @@ const Delivery_box = () => {
             {...register("delivery_type")} // Register with react-hook-form
           />
           <label htmlFor="ship">Ship</label>
-          <i className="fa-regular fa-truck"></i>
+          <FaTruck
+            className="absolute top-[50%] right-2.5 translate-y-[-50%] text-gray"
+            size={18}
+          />
         </div>
 
         {/* Pick Up option — user collects order from a location */}
@@ -43,7 +48,10 @@ const Delivery_box = () => {
             {...register("delivery_type")} // Register with react-hook-form
           />
           <label htmlFor="Pick-up">Pick Up</label>
-          <i className="fa-regular fa-home"></i>
+          <FaHome
+            className="absolute top-[50%] right-2.5 translate-y-[-50%] text-gray"
+            size={18}
+          />
         </div>
       </div>
 

@@ -2,6 +2,20 @@ import "./Footer.css";
 import { assets } from "../../../assets/assets.js";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import {
+  FaTruck,
+  FaRotateRight,
+  FaShield,
+  FaMessage,
+  FaLocationDot,
+  FaWhatsapp,
+  FaRegEnvelope,
+  FaXTwitter,
+  FaInstagram,
+  FaEnvelope,
+} from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <motion.footer
@@ -11,26 +25,26 @@ const Footer = () => {
     >
       <div className="head">
         <div className="part">
-          <i className="fa-solid fa-truck"></i>
+          <FaTruck className="text-orange text-lg mr-4" />
           <span>FREE SHIPPING OVER</span>
         </div>
         <div className="part">
-          <i className="fa-solid fa-rotate-right"></i>
+          <FaRotateRight className="text-orange text-lg mr-4" />
           <span>30 DAY MONEY BACK</span>
         </div>
         <div className="part">
-          <i className="fa-solid fa-shield"></i>
+          <FaShield className="text-orange text-lg mr-4" />
           <span>100% SECURE PAYMENT</span>
         </div>
         <div className="part">
-          <i className="fa-solid fa-message"></i>
+          <FaMessage className="text-orange text-lg mr-4" />
           <span>24/7 DEDICATED SUPPORT</span>
         </div>
       </div>
       <div className="foot">
         <div className="logo-container">
           <div className="logo">
-            <img src={assets.logo_img} alt=""  loading="lazy"/>
+            <img src={assets.logo_img} alt="" loading="lazy" />
             <p>
               Mercado - <span>Online Shopping</span>
             </p>
@@ -62,20 +76,23 @@ const Footer = () => {
           <h2>Contact Us</h2>
           <ul>
             <li>
-              <a href="##">
-                <i className="fa-solid fa-location-dot"></i>
+              <a href="##" className="flex gap-1.5 items-center">
+                <FaLocationDot className="text-gray-light text-sm" />
                 <span>Cairo , Egypt</span>
               </a>
             </li>
             <li>
-              <a href="tel:01011560550">
-                <i className="fa-brands fa-whatsapp"></i>
+              <a href="tel:01011560550" className="flex gap-1.5 items-center">
+                <FaWhatsapp className="text-gray-light " />
                 <span>+20 101 156 0550</span>
               </a>
             </li>
             <li>
-              <a href="mailto:ahmedebrhihem935@gmail.com">
-                <i className="fa-solid fa-envelope"></i>
+              <a
+                href="mailto:ahmedebrhihem935@gmail.com"
+                className="flex gap-1.5 items-center"
+              >
+                <FaEnvelope className="text-gray-light" />
                 <span>ahmedebrhihem935@gmail.com</span>
               </a>
             </li>
@@ -89,13 +106,13 @@ const Footer = () => {
           </form>
           <div className="social-media">
             <a href="http://www.twitter.com">
-              <i className="fa-brands fa-twitter"></i>
+              <FaXTwitter size={20} />
             </a>
             <a href="http://www.faceabook.com">
-              <i className="fa-brands fa-facebook-f"></i>
+              <FaFacebookF size={20} />
             </a>
             <a href="http://www.instagram.com">
-              <i className="fa-brands fa-instagram"></i>
+              <FaInstagram size={20} />
             </a>
           </div>
         </div>

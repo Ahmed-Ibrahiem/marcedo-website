@@ -220,7 +220,7 @@ header.stickyHeader {
   }
 }
 
-@media (max-width: 970px) {
+@media (max-width: 960px) {
 
   .header_bottom .nav_menu,
   .header_bottom .right_part {

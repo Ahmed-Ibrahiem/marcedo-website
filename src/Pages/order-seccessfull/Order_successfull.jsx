@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Order_success.css";
+import { FaCheck } from "react-icons/fa6";
 
 // Page displayed after a successful order placement
 const Order_successfull = () => {
@@ -31,7 +32,7 @@ const Order_successfull = () => {
       <div className="success_card">
         {/* Success checkmark icon */}
         <div className="success_icon">
-          <i className="fa-solid fa-check"></i>
+          <FaCheck />
         </div>
 
         <h1>Order Confirmed </h1>
