@@ -14,15 +14,15 @@ The goal is not just to build an online store, but to build a complete E-Commerc
 
 - React.js
 - TailwindCSS
-- Redux Toolkit
 - React Router DOM
 - Swiper.js
+- react-icons
 
 ### Backend / Database
 
 - Firebase Authentication
 - Firestore Database
-- Firebase Realtime Database
+- Firebase Firestore
 
 ---
 
@@ -50,6 +50,7 @@ This project focuses on building a scalable and maintainable E-Commerce platform
 - [x] Product Details Page
 - [x] Product Gallery
 - [x] Product Variants UI
+- [x] Dynamic Variant Availability
 - [x] Product Reviews System
 - [x] Product Ratings System
 - [x] Cart System
@@ -57,6 +58,16 @@ This project focuses on building a scalable and maintainable E-Commerce platform
 - [x] Dynamic Filters (category-aware, multi-select, price range)
 - [x] Pagination System
 - [x] Export Products Feature
+- [x] Responsive UI
+
+---
+
+### Authentication
+
+- [x] Firebase Authentication
+- [x] User Registration
+- [x] User Login
+- [x] Authentication State Management
 
 ---
 
@@ -64,12 +75,13 @@ This project focuses on building a scalable and maintainable E-Commerce platform
 
 - [x] Dashboard Layout
 - [x] Products Management Page
-- [x] Filters System
+- [x] Product Filters
 - [x] Bulk Actions
 - [x] Export Selected Products
-- [x] Variant Inventory System
-- [x] Add New Product Form (In Progress)
+- [x] Add New Product Flow
 - [x] Edit Product
+- [x] Product Variants Management
+- [x] Variant-Level Inventory
 - [ ] Orders Management
 - [ ] Users Management
 - [ ] Reviews Management
@@ -103,6 +115,28 @@ This restructuring improved:
 - Maintainability
 - Data Organization
 - Dashboard Management
+
+---
+
+### Product Variants
+
+Product options and variant inventory are handled separately.
+
+A product can define multiple attributes such as:
+
+- Color
+- Size
+- Storage
+- Connectivity
+
+Each valid combination of options is represented as an individual variant with its own:
+
+- Variant ID
+- Selected attributes
+- Price
+- Stock
+- SKU
+- Availability
 
 ---
 
@@ -147,13 +181,23 @@ The system needed to be able to answer:
 ---
 
 ### 2. Dynamic, Category-Aware Filtering
- 
+
 Each category has a different set of filterable attributes (e.g. Electronics has Storage and Connectivity, Clothing has Size and Color), and filter values live in a separate `product_variants` collection.
- 
+
 **Solution:** Kept the data normalized and solved the N+1 query risk by batching variant requests with Firestore's `in` queries (chunked by 30) fetched in parallel. The filtering logic itself is fully dynamic via `Object.entries()`, so new filter attributes require no code changes.
- 
-*Full reasoning behind this decision: see [DEVLOG.md](./DEVLOG.md).*
- 
+
+_Full reasoning behind this decision: see [DEVLOG.md](./DEVLOG.md)._
+
+---
+
+### 3. Designing a Scalable Product Creation Flow
+
+As the product architecture became more complex, the Admin Dashboard needed a structured way to create products without exposing all fields at once.
+
+The product creation process was divided into multiple steps, each responsible for a specific part of the product configuration.
+
+This made the form easier to manage while keeping the resulting data structure consistent with the database architecture.
+
 ---
 
 ## What I Learned
@@ -176,15 +220,79 @@ Building software is not just about writing code. It is about designing systems 
 
 ---
 
+## Architecture Decisions
+
+### Normalized Product Architecture
+
+Product-related data is separated into dedicated collections instead of storing all product information inside a single document.
+
+This makes the system easier to:
+
+- Maintain
+- Query
+- Update
+- Scale
+- Manage through the Admin Dashboard
+
+### Variant-Based Inventory
+
+Products with multiple options use individual variants to represent valid combinations.
+
+For example:
+
+Color: Black  
+Size: M
+
+is treated as a distinct variant from:
+
+Color: Black  
+Size: L
+
+Each variant can have its own stock, SKU, price, and availability.
+
+### Category-Aware Attributes
+
+Product attributes are determined by the deepest selected category.
+
+The system dynamically loads the attributes associated with that category, while also allowing product-specific attributes when needed.
+
+This keeps filtering and product configuration flexible without hardcoding attributes into the product model.
+
+---
+
+## Product Management Flow
+
+The Admin Dashboard provides a multi-step product creation flow:
+
+1. Basic Information
+2. Categories & Product Properties
+3. Variants & Inventory
+4. Pricing, Inventory & Shipping
+5. Review & Publish
+
+The flow is designed to keep product configuration structured and prevent invalid or incomplete product data from being published.
+
+---
+
 ## Next Steps
 
-- Complete Orders Management
-- Complete Users Management
-- Complete Reviews Management
-- Build Checkout Flow
-- Payment Integration
-- Analytics Dashboard
-- Performance Optimization
+### Admin Dashboard
+
+- [ ] Orders Management
+- [ ] Users Management
+- [ ] Reviews Management
+
+### Store
+
+- [ ] Checkout Flow
+- [ ] Order Creation
+- [ ] Order Tracking
+
+### Advanced Features
+
+- [ ] Payment Integration
+- [ ] Analytics Dashboard
+- [ ] Performance Optimization
 
 ---
 
