@@ -1,6 +1,6 @@
 import styles from "./Auth_popup.module.css";
 import { use_auth_context } from "../../Context/AuthProvider";
-import SignInForm from "./signinForm";
+import SignInForm from "./SignInForm";
 import SignUpForm from "./SignUpForm";
 import { FaXmark } from "react-icons/fa6";
 import LoginWithGoogleBtn from "./LoginWithGoogleBtn";
