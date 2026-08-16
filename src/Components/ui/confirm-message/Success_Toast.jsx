@@ -5,7 +5,7 @@ const Success_Toast = ({ message }) => {
   return (
     <div className="success_operation">
       <p>{message}</p>
-      <div className=" w-7.5! h-6.5! flex-center ">
+      <div className=" min-w-7.5! min-h-6.5! w-7.5! h-6.5! flex-center ">
         <FaCheck size={12} />
       </div>
     </div>

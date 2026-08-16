@@ -405,10 +405,7 @@ export const publishProduct = async (formData) => {
 
   // Set product media
   batch.set(doc(db, "product-media", proId), {
-    gallery: [
-      "/assets/products image/wristwatchs/product1/gallary_1.png",
-      "/assets/products image/wristwatchs/product1/gallary_3.png",
-    ],
+    gallery: [formData.gallery],
     videos: [],
     product_id: proId,
     thumbnail: formData.thumbnail,

@@ -211,14 +211,6 @@ export const getFilterProducts = async (
 };
 
 export const getAttributesByCategoriesId = async (categoryId) => {
-  // const proRef = collection(db, "products");
-
-  // const productsSnap = await getDocs(
-  //   query(proRef, where("category_ids", "array-contains", categoryId)),
-  // );
-
-  // if (productsSnap.empty) {
-
   let optionsSnap;
   const catRef = collection(db, "categories");
 
@@ -226,6 +218,7 @@ export const getAttributesByCategoriesId = async (categoryId) => {
 
   const hasParentId = category.parent_id;
 
+  // Check if parent is child of dress famile
   if (hasParentId) {
     const parentCat = (await getDoc(doc(db, "categories", hasParentId))).data();
 
@@ -252,59 +245,10 @@ export const getAttributesByCategoriesId = async (categoryId) => {
     }
   }
 
-
   optionsSnap = await getDoc(
     doc(collection(db, "category-default-options"), categoryId),
   );
 
   const defaultOptions = optionsSnap.data().default_options;
   return defaultOptions;
-  // }
-
-  // const productsIds = productsSnap.docs.map((doc) => doc.id);
-  // const productsIdschunk = chunkArray(productsIds, 10);
-
-  // const optionsSnap = await Promise.all(
-  //   productsIdschunk.map((chunk) => {
-  //     return getDocs(
-  //       query(
-  //         collection(db, "product-variants"),
-  //         where("product_id", "in", chunk),
-  //       ),
-  //     );
-  //   }),
-  // );
-
-  // const options = [
-  //   ...new Set(
-  //     optionsSnap.flatMap((item) =>
-  //       item.docs
-  //         .map((doc) => doc.data())
-  //         .map((item) => item.options)
-  //         .flatMap((op) => op),
-  //     ).map(op => op.key),
-  //   ),
-  // ];
-
-  // const optionsChunk = chunkArray(options, 10);
-
-  // const attributiesQuery = await Promise.all(
-  //   optionsChunk.map((chunk) => {
-  //     return getDocs(
-  //       query(collection(db, "global_attributes"), where("key", "in", chunk)),
-  //     );
-  //   }),
-  // );
-
-  // const attributes = [];
-
-  // attributiesQuery
-  // .flatMap((snap) => snap.docs.map((doc) => doc.data()))
-  // .forEach((att) => {
-  //   const isExist = attributes.find((item) => item.key === att.key);
-  //   if (!isExist) attributes.push(att);
-  // });
-
-  // console.log(options);
-  // return attributes;
 };

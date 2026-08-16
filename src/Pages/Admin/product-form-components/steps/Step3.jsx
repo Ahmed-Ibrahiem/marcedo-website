@@ -218,7 +218,7 @@ const Step3 = ({ setHasVariants, ...props }) => {
       .split(" ")
       .join("");
 
-    const colorName = draft.prodColor.label.trim();
+    const colorName = draft.prodColor.label.trim().split(" ").join("-");
 
     updateDraft({
       sku: `${proName}-${variantsValue}${colorName ? `-${colorName}` : ""}`.toUpperCase(),

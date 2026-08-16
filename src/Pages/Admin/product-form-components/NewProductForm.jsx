@@ -171,7 +171,10 @@ const NewProductForm = () => {
 
   const uplaodFormMedia = async (formData) => {
     let filesToUpload = [];
-    const update = { ...formData };
+    const update = {
+      ...formData,
+      gallery: formData.gallery ? [...formData.gallery] : [],
+    };
 
     if (formData.thumbnail instanceof File) {
       filesToUpload.push({ key: "thumbnail", file: update.thumbnail });
