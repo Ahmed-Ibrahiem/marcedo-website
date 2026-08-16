@@ -6,7 +6,6 @@ const ProductsTable = ({ productsData }) => {
   const { selectedAllProducts, setSelectedAllProducts, productsInfoMap } =
     useProductsTableControlContext();
 
-  console.log(productsData);
 
   return (
     <table className="w-full min-w-225 xl:min-w-auto ">

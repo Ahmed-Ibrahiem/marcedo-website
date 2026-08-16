@@ -74,7 +74,8 @@ const Step3 = ({ setHasVariants, ...props }) => {
         if (level2.length > 0) deepestCategories = level2.map((cat) => cat.id);
         else deepestCategories = level1.map((cat) => cat.id);
 
-        const req = await getAttributesByCategoriesId(deepestCategories);
+        const req = await getAttributesByCategoriesId(deepestCategories[0]);
+
         setAttributes(req);
         setDefaultvariant(req);
       } catch (errors) {
@@ -204,8 +205,12 @@ const Step3 = ({ setHasVariants, ...props }) => {
     if (
       Object.keys(areThereVariant).length === 0 &&
       !draft.prodColor.label.trim()
-    )
+    ) {
+      updateDraft({
+        sku: ``,
+      });
       return;
+    }
     const proName = getValues("name").split(" ").join("-").slice(0, 4);
 
     const variantsValue = Object.values(areThereVariant)

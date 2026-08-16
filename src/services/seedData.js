@@ -3,6 +3,7 @@ import { db } from "./firestoreConfig";
 import {
   brands,
   categories,
+  category_default_options,
   details,
   global_attributes,
   media,
@@ -19,7 +20,7 @@ const seedCollection = async (collectionName, data = []) => {
   const batch = writeBatch(db);
 
   data.forEach((item) => {
-    const ref = doc(collection(db, collectionName), String(item.product_id));
+    const ref = doc(collection(db, collectionName), String(item.id));
     batch.set(ref, item);
   });
 
@@ -28,7 +29,7 @@ const seedCollection = async (collectionName, data = []) => {
 
 export const seedAllData = async () => {
   try {
-    await seedCollection("product-variants", variants);
+    await seedCollection("global_attributes", global_attributes);
     // await seedCollection("products", products);
     // await seedCollection("brands", brands);
 
