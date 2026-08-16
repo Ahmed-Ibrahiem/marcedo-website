@@ -132,6 +132,15 @@ const AddBlockPopup = ({ setOpenBlockPopup, addNewItem }) => {
     setCurrentStep((prev) => prev + 1);
   };
 
+  useEffect(() => {
+    if (currentStep === 2) {
+      if (selectedType === "heading" || selectedType === "paragraph") {
+        console.log('yes')
+        document.getElementById("block-content-input")?.focus();
+      }
+    }
+  }, [currentStep]);
+
   // Add a new item to the list
   const addItem = () => {
     if (!itemContent) return;
@@ -252,6 +261,7 @@ const AddBlockPopup = ({ setOpenBlockPopup, addNewItem }) => {
             {/* Heading input */}
             {selectedType === "heading" && (
               <input
+                id="block-content-input"
                 type="text"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
@@ -264,6 +274,7 @@ const AddBlockPopup = ({ setOpenBlockPopup, addNewItem }) => {
             {selectedType === "paragraph" && (
               <div className="relative">
                 <textarea
+                  id="block-content-input"
                   value={content}
                   onChange={(e) => {
                     if (e.target.value.trim().length <= 600)

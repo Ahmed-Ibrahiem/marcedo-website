@@ -3,7 +3,7 @@ import "./Success_Toast.css";
 
 const Success_Toast = ({ message }) => {
   return (
-    <div className="success_operation">
+    <div className="success_operation  ">
       <p>{message}</p>
       <div className=" min-w-7.5! min-h-6.5! w-7.5! h-6.5! flex-center ">
         <FaCheck size={12} />
