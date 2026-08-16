@@ -13,6 +13,7 @@
   padding-right: 50px;
   gap: 10px;
   font-size: 14px;
+  min-height: fit-content;
 }
 .success_operation > div {
   width: 20px;

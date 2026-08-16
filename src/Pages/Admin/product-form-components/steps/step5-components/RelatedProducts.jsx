@@ -116,7 +116,7 @@ const RelatedProducts = () => {
                               );
                             }
                           }}
-                          className="hover:bg-black text-lg hover:text-white w-6 h-6 rounded-sm flex-center border border-border"
+                          className="hover:bg-black text-lg hover:text-white w-6! min-w-6! h-6! min-h-6! rounded-sm flex-center border border-border"
                         >
                           +
                         </button>
@@ -159,7 +159,7 @@ const RelatedProducts = () => {
                                   ...field.value.filter((p) => p.id !== pro.id),
                                 ])
                               }
-                              className="hover:bg-black text-sm hover:text-white w-6 h-6 rounded-sm flex-center border border-border"
+                              className="hover:bg-black text-sm hover:text-white w-6 h-6 min-w-6! min-h-6! rounded-sm flex-center border border-border"
                             >
                               <FaXmark />
                             </button>
