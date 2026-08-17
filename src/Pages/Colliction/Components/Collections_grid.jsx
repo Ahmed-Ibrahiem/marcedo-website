@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { RiArrowRightUpLongLine } from "react-icons/ri";
 import { getAllCategories } from "../../../services/CategoriesServices";
 import LoadingScreen from "../../../Components/ui/Loading/LoadingScreen";
+import { FaBoxOpen } from "react-icons/fa6";
 
 export const Collections_grid = () => {
   const [loaded, setLoaded] = useState(false);
@@ -69,54 +70,74 @@ export const Collections_grid = () => {
     return <LoadingScreen />;
   }
 
-  return (
-    <motion.div className={style.collections_grid}>
-      {/* Render collections only if display data exists */}
-      {display_data &&
-        display_data.map((data) => {
-          return (
-            <motion.div
-              initial={{ opacity: 0, y: -30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ amount: 0.3, once: true }}
-              key={data.id}
-              className="group/card"
-            >
-              <Link
-                to={`/categories/${data.slug}`}
-                className={style.collection}
+  if (all_collections?.length === 0) {
+    return (
+      <div className="w-full py-20 px-5 flex-center-col gap-8">
+        <div className="flex-center-col ">
+          <FaBoxOpen className="text-orange text-8xl!" />
+          <h2 className=" text-4xl font-semibold">Oops...!</h2>
+        </div>
+        <p className="text-lg text-gray">Something Went Wrong</p>
+        <Link
+          className="px-5 py-2.5 rounded-sm text-white! bg-orange border-2 border-orange hover:bg-transparent hover:text-orange! font-semibold"
+          to={"/home"}
+        >
+          Go Back Home
+        </Link>
+      </div>
+    );
+  }
+
+  if (all_collections.length > 0) {
+    return (
+      <motion.div className={style.collections_grid}>
+        {/* Render collections only if display data exists */}
+        {display_data &&
+          display_data.map((data) => {
+            return (
+              <motion.div
+                initial={{ opacity: 0, y: -30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ amount: 0.3, once: true }}
+                key={data.id}
+                className="group/card"
               >
-                {/* Collection image */}
-                {!loaded && (
-                  <div className={style.skeletonImage}>
-                    <Skeleton height="100%" width="100%" />
+                <Link
+                  to={`/categories/${data.slug}`}
+                  className={style.collection}
+                >
+                  {/* Collection image */}
+                  {!loaded && (
+                    <div className={style.skeletonImage}>
+                      <Skeleton height="100%" width="100%" />
+                    </div>
+                  )}
+                  <div>
+                    <img
+                      loading="lazy"
+                      className="group-hover/card:scale-115"
+                      onLoad={() => setLoaded(true)}
+                      src={data.icon}
+                      alt={`This Image Of ${data.name}`}
+                      loading="lazy"
+                      style={{ opacity: loaded ? 1 : 0 }}
+                    />
                   </div>
-                )}
-                <div>
-                  <img
-                    loading="lazy"
-                    className="group-hover/card:scale-115"
-                    onLoad={() => setLoaded(true)}
-                    src={data.icon}
-                    alt={`This Image Of ${data.name}`}
-                    loading="lazy"
-                    style={{ opacity: loaded ? 1 : 0 }}
-                  />
-                </div>
 
-                {/* Collection title */}
-                <span className={style.title}>{data.name}</span>
+                  {/* Collection title */}
+                  <span className={style.title}>{data.name}</span>
 
-                {/* Action button with hover effect */}
-                <button className="action hover:text-white!">
-                  <RiArrowRightUpLongLine size={25} />
-                </button>
-              </Link>
-            </motion.div>
-          );
-        })}
-    </motion.div>
-  );
+                  {/* Action button with hover effect */}
+                  <button className="action hover:text-white!">
+                    <RiArrowRightUpLongLine size={25} />
+                  </button>
+                </Link>
+              </motion.div>
+            );
+          })}
+      </motion.div>
+    );
+  }
 };
 
 export default React.memo(Collections_grid);

@@ -24,9 +24,12 @@ const cardVariants = {
 };
 
 const BestSeller = ({ bestSellerProducts }) => {
+
+  console.log(bestSellerProducts)
+
   return (
     <div className="container my-15 ">
-      {bestSellerProducts && (
+      {bestSellerProducts?.length > 0 && (
         <div className=" w-full! flex-start-col gap-8">
           <motion.h1
             className="text-3xl text-black-lite font-semibold "

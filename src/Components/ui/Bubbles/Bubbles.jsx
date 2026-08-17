@@ -14,6 +14,7 @@ const Bubbles = () => {
     current_package_index,
     set_current_package_index,
     number_of_packages,
+    display_data,
   } = use_pagination_context();
 
   // Alias variables for better readability
@@ -71,54 +72,56 @@ const Bubbles = () => {
     }
   };
 
-  return (
-    <div className="bubbles-container">
-      <div className="bubbles-box">
-        {/* Previous page button */}
-        <button
-          className={`${current_bubbles_index > 1 ? "text-orange" : "text-gray-400"}`}
-          onClick={decrease_index}
-        >
-          <FaCaretLeft size={28} />
-        </button>
+  if (display_data?.length > 0) {
+    return (
+      <div className="bubbles-container">
+        <div className="bubbles-box">
+          {/* Previous page button */}
+          <button
+            className={`${current_bubbles_index > 1 ? "text-orange" : "text-gray-400"}`}
+            onClick={decrease_index}
+          >
+            <FaCaretLeft size={28} />
+          </button>
 
-        {/* Render pagination bubbles */}
-        <div className="bubbles">
-          {get_bubbles_details().map((bubble, index) => {
-            // Render dots between page ranges
-            if (bubble == "dots") {
-              return <div key={index}>...</div>;
-            } else {
-              return (
-                <div
-                  key={index}
-                  onClick={() => set_current_bubble_index(bubble)}
-                  className={`bubble ${
-                    bubble == current_bubbles_index ? "current-bubble" : ""
-                  }`}
-                >
-                  {bubble}
-                </div>
-              );
-            }
-          })}
+          {/* Render pagination bubbles */}
+          <div className="bubbles">
+            {get_bubbles_details().map((bubble, index) => {
+              // Render dots between page ranges
+              if (bubble == "dots") {
+                return <div key={index}>...</div>;
+              } else {
+                return (
+                  <div
+                    key={index}
+                    onClick={() => set_current_bubble_index(bubble)}
+                    className={`bubble ${
+                      bubble == current_bubbles_index ? "current-bubble" : ""
+                    }`}
+                  >
+                    {bubble}
+                  </div>
+                );
+              }
+            })}
+          </div>
+
+          {/* Next page button */}
+          <button
+            className={`${current_bubbles_index < num_of_rev_pag ? "text-orange!" : "text-gray-400"}`}
+            onClick={increase_index}
+          >
+            <FaCaretRight size={28} />
+          </button>
         </div>
 
-        {/* Next page button */}
-        <button
-          className={`${current_bubbles_index < num_of_rev_pag ? "text-orange!" : "text-gray-400"}`}
-          onClick={increase_index}
-        >
-          <FaCaretRight size={28} />
-        </button>
+        {/* Show additional text only on product details route */}
+        {location.pathname.includes("/product_detials") && (
+          <span>See More Reviews</span>
+        )}
       </div>
-
-      {/* Show additional text only on product details route */}
-      {location.pathname.includes("/product_detials") && (
-        <span>See More Reviews</span>
-      )}
-    </div>
-  );
+    );
+  }
 };
 
 export default Bubbles;

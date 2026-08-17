@@ -15,7 +15,7 @@ const Shop_page = () => {
       <div className="container">
         <Our_banner
           page_data={{
-            title: "Collections",
+            title: "Shop",
           }}
         />
         <Pagination_provider>
