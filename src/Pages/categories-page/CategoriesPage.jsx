@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getCategoryBySlug } from "../../services/CategoriesServices";
 import { getProductsByCategories } from "../../services/ProductsServices";
 import {
@@ -10,6 +10,7 @@ import {
 import LoadingScreen from "../../Components/ui/Loading/LoadingScreen";
 import CategoriesSideBar from "./components/CategoriesSideBar/CategoriesSideBar";
 import CategoriesContent from "./components/CategoriesContent/CategoriesContent";
+import { FaBoxesStacked, FaBoxOpen, FaBoxTissue } from "react-icons/fa6";
 
 const CategoriesPage = () => {
   const { categorySlug } = useParams();
@@ -67,7 +68,6 @@ const CategoriesPage = () => {
 
         if (categoriesInfo) setCategoriesPageInfo(categoriesInfo);
       } catch (error) {
-        console.log(error);
         setIsError(true);
       } finally {
         setIsLoading(false);
@@ -113,6 +113,21 @@ const CategoriesPage = () => {
               filterProducts={filteredProducts}
             />
           </div>
+        </div>
+      )}
+      {!isLoading && !categoriesPageInfo && (
+        <div className="w-full py-20 px-5 flex-center-col gap-8">
+          <div className="flex-center-col ">
+            <FaBoxOpen className="text-orange text-8xl!" />
+            <h2 className=" text-4xl font-semibold">Oops...!</h2>
+          </div>
+          <p className="text-lg text-gray">Something Went Wrong</p>
+          <Link
+            className="px-5 py-2.5 rounded-sm text-white! bg-orange border-2 border-orange hover:bg-transparent hover:text-orange! font-semibold"
+            to={"/home"}
+          >
+            Go Back Home
+          </Link>
         </div>
       )}
     </>

@@ -135,7 +135,6 @@ const AddBlockPopup = ({ setOpenBlockPopup, addNewItem }) => {
   useEffect(() => {
     if (currentStep === 2) {
       if (selectedType === "heading" || selectedType === "paragraph") {
-        console.log('yes')
         document.getElementById("block-content-input")?.focus();
       }
     }

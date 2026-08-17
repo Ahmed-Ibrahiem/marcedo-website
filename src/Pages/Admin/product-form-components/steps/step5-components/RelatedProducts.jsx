@@ -12,6 +12,7 @@ const RelatedProducts = () => {
   const [products, setProducts] = useState([]);
   const { getValues, setValue, control } = useFormContext();
   const categoriesId = getValues("category_ids");
+  const [productLoading, setProductLoading] = useState(false);
 
   const [searchWord, setSearchWord] = useState("");
 
@@ -24,15 +25,18 @@ const RelatedProducts = () => {
   // Get Products By Category Id
   useEffect(() => {
     const getProducts = async () => {
+      setProductLoading(true);
       try {
         let finalProducts = [];
         let deepestCategory =
           categoriesId.find((cat) => cat.level === 3) ||
           categoriesId.find((cat) => cat.level === 2);
+
         if (deepestCategory === undefined)
           deepestCategory = categoriesId.find((cat) => cat.level === 1);
 
         const products = await getProductsByCategories(deepestCategory.id);
+        console.log(products);
         if (products.length >= 4) {
           finalProducts = products;
         } else if (products.length < 4 && deepestCategory.level > 1) {
@@ -44,7 +48,11 @@ const RelatedProducts = () => {
         }
 
         setProducts(finalProducts);
-      } catch (errors) {}
+      } catch (errors) {
+        console.error(errors);
+      } finally {
+        setProductLoading(true);
+      }
     };
     getProducts();
   }, [categoriesId]);
@@ -122,7 +130,7 @@ const RelatedProducts = () => {
                         </button>
                       </motion.div>
                     ))}
-                  {suggestedProducts.length === 0 &&
+                  {productLoading &&
                     Array(8)
                       .fill(0)
                       .map((_, index) => {
