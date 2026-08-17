@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from "axios";
-import { addNewUser, getUsers } from "../services/usersServices";
+import { addNewUser, getUserById, getUsers } from "../services/usersServices";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../services/firestoreConfig";
 
@@ -44,8 +44,22 @@ const Auth_provider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      set_is_loading(false);
+      const getUser = async () => {
+        try {
+          if (currentUser) {
+            const userData = await getUserById(currentUser.uid);
+
+            setUser(userData);
+          } else {
+            setUser(null);
+          }
+        } catch (error) {
+          console.error("Get user error:", error);
+        } finally {
+          set_is_loading(false);
+        }
+      };
+      getUser();
     });
 
     return unsubscribe;

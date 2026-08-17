@@ -2,14 +2,36 @@ import { SwiperSlide } from "swiper/react";
 import CustomSwiper from "../custom-swiper/CustomSwiper.jsx";
 import TestimonialCard from "../selling-speakers/TestimonialCard.jsx";
 import "./Testimonials.css";
-import { useFetch } from "../../../services/fetchData.js";
 import { motion } from "framer-motion";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Testimonials = () => {
   const data_url = "listingTestmonials.json";
 
   // Fetch testimonials data at the top level of the component
-  const testimonials = useFetch(data_url);
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const req = await axios.get(data_url);
+        if (req.status === 200) {
+          const res = req.data;
+          // Make the current quantity default 1
+          const data = res.map((data) => ({
+            ...data,
+            quantity: 1,
+          }));
+
+          setTestimonials(data);
+        }
+      } catch (err) {
+        console.error("testimoials errors: ", err);
+      }
+    };
+    getData();
+  }, [data_url]);
 
   return (
     <div className="testimonials">

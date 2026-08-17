@@ -24,9 +24,6 @@ const cardVariants = {
 };
 
 const BestSeller = ({ bestSellerProducts }) => {
-
-  console.log(bestSellerProducts)
-
   return (
     <div className="container my-15 ">
       {bestSellerProducts?.length > 0 && (

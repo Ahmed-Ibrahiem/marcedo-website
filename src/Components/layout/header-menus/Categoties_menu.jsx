@@ -15,27 +15,24 @@ const categories_options = [
     page: "/categories/dresses",
   },
   {
-    title: "Apple",
+    title: "Phone",
     img: assets.apple_img,
-    page: "/apple",
-  },
-  {
-    title: "T-shirt",
-    img: assets.t_shirt_img,
-    page: "/t-shirts",
+    page: "/categories/phone",
   },
   {
     title: "Electronic",
     img: assets.electronic_img,
-    page: "/electronic-page",
+    page: "/categories/electronics",
   },
   {
     title: "Perfume",
     img: assets.perfume_img,
+    page: "/categories/perfume",
   },
   {
-    title: "Wristwatch",
+    title: "Smart Watch",
     img: assets.wrist_Watch,
+    page: "/categories/smartwatch",
   },
 ];
 
@@ -63,24 +60,17 @@ const Categoties_menu = () => {
         {categories_options.map((option, index) => {
           return (
             <Link
-              to={option.title == "Dress" && option.page}
+              to={option.page}
               key={index}
               className="option"
               onClick={() => {
                 setCurrent_category(option.title);
-                if (option.title != "Dress") {
-                  add_message({
-                    title: "This Category Will Coming Soon",
-                    link: {
-                      url: "/categories/dresses",
-                      name: "Category Dresses",
-                    },
-                  });
-                }
               }}
             >
               <p>{option.title}</p>
-              {option.img && <img src={option.img} alt={option.title} loading="lazy"/>}
+              {option.img && (
+                <img src={option.img} alt={option.title} loading="lazy" />
+              )}
             </Link>
           );
         })}
