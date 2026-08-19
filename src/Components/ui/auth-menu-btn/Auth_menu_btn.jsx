@@ -13,7 +13,7 @@ const Auth_menu_btn = () => {
           className="flex-center gap-2.5 cursor-pointer"
           onClick={() => set_auth_open((prev) => !prev)}
         >
-          <img src={assets.user_img} loading="lazy" className="w-6.25" />
+          <img src={"/assets/images/account.png"} loading="lazy" className="w-6.25" />
           <div className="text-sm text-gray hidden! lg:block!">
             <span>Sign In</span>
             <p>Account</p>

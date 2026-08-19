@@ -4,16 +4,21 @@ import PriceSection from "./PriceSection";
 import DynamicOptionsSection from "./DynamicOptionsSection";
 import React, { memo } from "react";
 import { FaXmark } from "react-icons/fa6";
+import StockSection from "../CategoriesContent/StockSection";
+import { useCategoriesContext } from "../../context/CategoriesContext";
+import BrandSection from "./BrandSection";
 
-const CategoriesSideBar = ({
-  isSidebarOpen,
-  setIsSidebarOpen,
-  categoriesPageInfo,
-  activeFilters,
-  handleFilterChange,
-  setActiveFilters,
-}) => {
-  const price = categoriesPageInfo.price;
+const CategoriesSideBar = () => {
+  const {
+    isSidebarOpen,
+    setIsSidebarOpen,
+    handleFilterChange,
+    categoriesPageInfo,
+    activeFilters,
+    setActiveFilters,
+  } = useCategoriesContext();
+
+  const stockStatus = categoriesPageInfo.stocks;
 
   return (
     <motion.aside
@@ -38,22 +43,34 @@ const CategoriesSideBar = ({
       >
         {/* Category */}
         <CategoriesSeciton />
-        {/* Price */}
-        <PriceSection
-          max={price.max}
-          min={price.min}
+
+        {/* Stock */}
+        <StockSection
+          handleFilterChange={handleFilterChange}
+          stockStatus={stockStatus}
           activeFilters={activeFilters}
           setActiveFilters={setActiveFilters}
         />
+
+        {/* Price */}
+        <PriceSection />
+
+        {/* Brand */}
+        <BrandSection
+          categoriesPageInfo={categoriesPageInfo}
+          activeFilters={activeFilters}
+          setActiveFilters={setActiveFilters}
+        />
+
         {/* Other Options */}
-        {categoriesPageInfo.options.map((option, index) => (
+        {/* {categoriesPageInfo.options.map((option, index) => (
           <DynamicOptionsSection
             option={option}
             key={index}
             activeFilters={activeFilters}
             handleFilterChange={handleFilterChange}
           />
-        ))}
+        ))} */}
       </div>
     </motion.aside>
   );

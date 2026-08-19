@@ -15,9 +15,9 @@ const categories_options = [
     page: "/categories/dresses",
   },
   {
-    title: "Phone",
+    title: "Phones",
     img: assets.apple_img,
-    page: "/categories/phone",
+    page: "/categories/phones",
   },
   {
     title: "Electronic",

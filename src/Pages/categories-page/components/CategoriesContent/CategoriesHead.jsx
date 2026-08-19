@@ -3,15 +3,17 @@ import { motion } from "framer-motion";
 import { display_image } from "../../../../assets/assets";
 import { use_products_grid_context } from "../../../../Context/ProductsGridProvider";
 import { FaFilter } from "react-icons/fa6";
+import { useCategoriesContext } from "../../context/CategoriesContext";
 
 const CategoriesHead = ({
-  setIsSidebarOpen,
   gridMode,
   setGridMode,
   selectedSort,
   setSelectedSort,
 }) => {
   const [is_sort_open, set_is_sort_open] = useState(false);
+
+  const { setIsSidebarOpen } = useCategoriesContext();
 
   const sort_options = [
     "best selling",

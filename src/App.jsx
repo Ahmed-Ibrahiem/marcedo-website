@@ -25,6 +25,7 @@ import CategoriesPage from "./Pages/categories-page/CategoriesPage.jsx";
 import { use_auth_context } from "./Context/AuthProvider.jsx";
 import LoadingScreen from "./Components/ui/Loading/LoadingScreen.jsx";
 import UserProfilePopup from "./Components/layout/user-profile/UserProfilePopup.jsx";
+import CategoriesProvider from "./Pages/categories-page/context/CategoriesContext.jsx";
 
 const App = () => {
   const { is_loading } = use_auth_context();
@@ -56,9 +57,21 @@ const App = () => {
           <Route path="/shop" element={<Shop_page />} />
           <Route
             path="/categories/:categorySlug"
-            element={<CategoriesPage />}
+            element={
+              <CategoriesProvider>
+                <CategoriesPage />
+              </CategoriesProvider>
+            }
           />
-          <Route path="/shop/:categorySlug" element={<CategoriesPage />} />
+          <Route
+            path="/shop/:categorySlug"
+            element={
+              <CategoriesProvider>
+                <CategoriesPage />
+              </CategoriesProvider>
+            }
+          />
+
           <Route path="/order-success" element={<Order_successfull />} />
         </Route>
 

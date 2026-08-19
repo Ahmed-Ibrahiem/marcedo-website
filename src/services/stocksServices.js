@@ -21,5 +21,3 @@ export const getAllProductsStocksMap = async () => {
 
   return stockMap;
 };
-
-

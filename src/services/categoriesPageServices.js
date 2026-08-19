@@ -40,9 +40,21 @@ export const getCategoriesPageInfo = async (slug) => {
   const maxPrice = Math.max(...productsPrices);
 
   /* =====================
-  Get All variants of products
+  Get All variants of products "Coming Soon"
   ======================== */
-  const { optionsValues, allVariants } = await getVariantsOptions(products);
+
+  /* =====================
+  Get Products Stocks status
+  ======================== */
+  let stocks = { inStock: 0, outStock: 0 };
+
+  products.forEach((prod) => {
+    if (prod.stock_status === "in_stock") {
+      stocks = { ...stocks, inStock: ++stocks.inStock };
+    } else {
+      stocks = { ...stocks, outStock: ++stocks.outStock };
+    }
+  });
 
   /* =====================
   Get All Brands of products
@@ -52,9 +64,10 @@ export const getCategoriesPageInfo = async (slug) => {
   return {
     products,
     price: { min: minPrice, max: maxPrice },
-    options: optionsValues,
     brands: brandsOptions,
-    variants: allVariants,
+    stocks,
+    // options: optionsValues,
+    // variants: allVariants,
   };
 };
 
@@ -163,7 +176,46 @@ export const getFilterProducts = async (
   variantsProducts,
   products,
 ) => {
-  if (!variantsProducts || !products) return;
+  if (!products || Object.keys(activeFilter).length === 0) return products;
+
+  // get the products that's between the price range
+  const priceFiltered = products.filter((product) => {
+    const { min, max } = activeFilter.price;
+    const matchesPrice =
+      product.current_price >= min && product.current_price <= max;
+
+    if (!matchesPrice) return false; // return when products is not check price
+
+    return true;
+  });
+
+  // If no products after price filtered return
+  if (!priceFiltered.length) return [];
+
+  // get the products depends of stocks status
+  const stocksFiltered = priceFiltered.filter((product) => {
+    if (!activeFilter.stocks?.length) return true;
+
+    if (activeFilter.stocks.includes(product.stock_status)) return true;
+    else return false;
+  });
+
+  // If no products after stocks filtered return
+  if (!stocksFiltered.length) return [];
+  
+  // get the products depends of brands array
+  const brandsFiltered = stocksFiltered.filter((product) => {
+    if (!activeFilter.brands?.length) return true;
+    
+    if (activeFilter.brands.includes(product.brand_id)) return true;
+    else return false;
+  });
+  
+  
+  // If no products after Brand filtered return
+  if (!brandsFiltered.length) return [];
+
+  if (!variantsProducts) return brandsFiltered;
 
   const resetVariants = variantsProducts.map((item) => ({
     products_id: item.product_id,
@@ -176,15 +228,7 @@ export const getFilterProducts = async (
     ),
   }));
 
-  // get the products that's between the price range
-  const filteredProducts = products.filter((product) => {
-    // 1. التحقق من الـ price range الأول (منطق مختلف تمامًا)
-    const { min, max } = activeFilter.price;
-    const matchesPrice =
-      product.current_price >= min && product.current_price <= max;
-
-    if (!matchesPrice) return false; // مفيش داعي نكمل لو السعر مش مطابق أصلاً
-
+  const finallyProducts = filteredProducts.filter((product) => {
     const productVariant = resetVariants.find(
       (variant) => variant.products_id === product.id,
     );
@@ -207,7 +251,7 @@ export const getFilterProducts = async (
     } else return true;
   });
 
-  return filteredProducts;
+  return brandsFiltered;
 };
 
 export const getAttributesByCategoriesId = async (categoryId) => {

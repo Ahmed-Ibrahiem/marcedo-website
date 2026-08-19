@@ -1,14 +1,20 @@
 import React, { memo, useEffect, useRef, useState } from "react";
 import { FaAngleRight, FaAngleUp } from "react-icons/fa6";
+import { useCategoriesContext } from "../../context/CategoriesContext";
 
-const PriceSection = ({ min, max, setActiveFilters }) => {
+const PriceSection = () => {
+  const { categoriesPageInfo, setActiveFilters, activeFilters } =
+    useCategoriesContext();
+  const price = categoriesPageInfo.price;
+  const { min, max } = price;
+
   const [is_menu_open, set_is_menu_open] = useState(false);
-  const [min_price, set_min_price] = useState(0);
-  const [max_price, set_max_price] = useState(max);
   const [progress_info, set_progress_width] = useState({ left: 0, width: 100 });
   const progress_ref = useRef(null);
 
   const update_progress_UI = () => {
+    const min_price = activeFilters.price?.min ?? 0;
+    const max_price = activeFilters.price?.max ?? max;
     const left = Math.ceil((min_price / max) * 100);
     const diff = max_price - min_price;
     const width = Math.round((diff / max) * 100);
@@ -17,19 +23,13 @@ const PriceSection = ({ min, max, setActiveFilters }) => {
 
   useEffect(() => {
     update_progress_UI();
+    const min_price = activeFilters.price?.min ?? 0;
+    const max_price = activeFilters.price?.max ?? max;
     if (!progress_ref.current) return;
     if (+min_price > +max_price) {
       progress_ref.current.style.width = "0%";
     }
-
-    setActiveFilters((prev) => ({
-      ...prev,
-      price: {
-        min: min_price,
-        max: max_price,
-      },
-    }));
-  }, [min_price, max_price]);
+  }, [activeFilters.price]);
 
   return (
     <div className="flex flex-col w-full relative border-b border-border flex-wrap">
@@ -67,18 +67,28 @@ const PriceSection = ({ min, max, setActiveFilters }) => {
             {/* Min range input */}
             <input
               type="range"
-              value={min_price}
+              value={activeFilters.price?.min ?? 0}
               max={max}
-              onChange={(e) => set_min_price(+e.target.value)}
+              onChange={(e) =>
+                setActiveFilters((prev) => ({
+                  ...prev,
+                  price: { ...prev.price, min: +e.target.value },
+                }))
+              }
               className={minRangeStyle}
             />
 
             {/* Max range input */}
             <input
               type="range"
-              value={max_price}
+              value={activeFilters.price?.max ?? max}
               max={max}
-              onChange={(e) => set_max_price(+e.target.value)}
+              onChange={(e) =>
+                setActiveFilters((prev) => ({
+                  ...prev,
+                  price: { ...prev.price, max: +e.target.value },
+                }))
+              }
               className={maxRangeStyle}
             />
           </div>
@@ -92,8 +102,13 @@ const PriceSection = ({ min, max, setActiveFilters }) => {
               </span>
               <input
                 type="number"
-                value={min_price}
-                onChange={(e) => set_min_price(+e.target.value)}
+                value={activeFilters.price?.min ?? 0}
+                onChange={(e) =>
+                  setActiveFilters((prev) => ({
+                    ...prev,
+                    price: { ...prev.price, min: +e.target.value },
+                  }))
+                }
                 className="max-w-full py-3.75 px-6.25 border-none outline-none text-gray"
               />
             </div>
@@ -107,10 +122,19 @@ const PriceSection = ({ min, max, setActiveFilters }) => {
               </span>
               <input
                 type="number"
-                value={max_price}
+                value={activeFilters.price?.max ?? max}
                 onChange={(e) => {
-                  set_max_price(+e.target.value);
-                  if (+e.target.value > max) set_max_price(max);
+                  if (+e.target.value > max) {
+                    setActiveFilters((prev) => ({
+                      ...prev,
+                      price: { ...prev.price, max: max },
+                    }));
+                  }
+
+                  setActiveFilters((prev) => ({
+                    ...prev,
+                    price: { ...prev.price, max: +e.target.value },
+                  }));
                 }}
                 className="max-w-full py-3.75 px-6.25 border-none outline-none text-gray"
               />
