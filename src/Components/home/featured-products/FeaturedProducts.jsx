@@ -19,7 +19,7 @@ const FeaturedProducts = ({ bestSellerProducts }) => {
           viewport={{ amount: 0.2, once: true }}
           className="w-full sm:w-[80%] lg:w-[40%]"
         >
-          <h1 className="text-4xl w-88.75 mt-7.5 font-bold">
+          <h1 className="text-3xl md:text-4xl w-88.75 max-w-full mt-7.5 font-bold">
             Devialet Phantom II <span>Speaker</span>
           </h1>
           <div className="text-xs w-12.5 leading-[1.3] mt-5 flex gap-2.5 ">
