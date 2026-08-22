@@ -94,6 +94,7 @@ const CategoriesProvider = ({ children }) => {
         categoriesPageInfo.products,
       );
 
+
       if (products) setFilteredProducts(products);
     };
 

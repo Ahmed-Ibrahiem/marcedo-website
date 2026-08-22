@@ -66,7 +66,7 @@ export const Collection = () => {
     const recalculateGrid = () => {
       const cardHeight = cards[0]?.clientHeight || 0;
       container.style.setProperty("--cards-count", cards.length);
-      container.style.setProperty("--card-height", `${cardHeight}px`);
+      container.style.setProperty("--card-height", `520px`);
     };
 
     cards.forEach((card, index) => {
@@ -118,21 +118,24 @@ export const Collection = () => {
       update();
     };
 
-    // Initial measurement/update
-    recalculateGrid();
-    update();
-
-    // Recalculate once every image finishes loading (any card, not just the first)
-    const allImages = container.querySelectorAll("img");
-    const handleImageLoad = () => {
+    // Initial measurement — wait for fonts to be ready first
+    const init = () => {
       recalculateGrid();
       update();
     };
 
-    allImages.forEach((img) => {
-      if (img.complete) return; // image already loaded (e.g. from cache), skip
-      img.addEventListener("load", handleImageLoad);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(init);
+    } else {
+      init();
+    }
+
+    // Watch the first card for ANY size change (images, fonts, content, anything)
+    const resizeObserver = new ResizeObserver(() => {
+      recalculateGrid();
+      update();
     });
+    if (cards[0]) resizeObserver.observe(cards[0]);
 
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", handleResize);
@@ -140,9 +143,7 @@ export const Collection = () => {
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", handleResize);
-      allImages.forEach((img) =>
-        img.removeEventListener("load", handleImageLoad),
-      );
+      resizeObserver.disconnect();
     };
   }, []);
 
@@ -223,6 +224,7 @@ export const Collection = () => {
               </motion.div>
             ))}
           </div>
+          {/* <div className="h-[40vh]"></div> */}
         </div>
       </div>
     </>

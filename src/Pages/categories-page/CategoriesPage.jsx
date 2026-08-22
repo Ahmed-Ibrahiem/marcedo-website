@@ -16,6 +16,8 @@ import { useCategoriesContext } from "./context/CategoriesContext";
 const CategoriesPage = () => {
   const { isLoading, isError, categoriesPageInfo } = useCategoriesContext();
 
+  
+
   return (
     <>
       {isLoading && <LoadingScreen />}
