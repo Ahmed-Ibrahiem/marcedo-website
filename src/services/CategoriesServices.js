@@ -9,6 +9,7 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "./firestoreConfig";
+import { uploadImageToCloudinary } from "./cloudinaryServices";
 
 export const getCategoryName = async (categoryIds) => {
   const q = query(collection(db, "categories"), where("id", "in", categoryIds));
@@ -110,7 +111,7 @@ export const getLevelTwoByCategoryId = async (parentId) => {
   return snapshot.docs.map((doc) => doc.data());
 };
 
-export const addNewCategory = async (categoryName, parentId) => {
+export const addNewCategory = async (categoryName, parentId, iconFile) => {
   const collRef = collection(db, "categories");
 
   const categories = (await getDocs(collRef)).docs.map((doc) => doc.data());
@@ -129,12 +130,16 @@ export const addNewCategory = async (categoryName, parentId) => {
 
     const newDocRef = doc(collRef);
 
+    const icon = await uploadImageToCloudinary(iconFile);
+
     const categoryData = {
       id: newDocRef.id,
       name: categoryName,
+      slug: categoryName.toLowerCase().trim(),
       parent_id: parent ? parent.id : null,
       level: parent ? parent.level + 1 : 1,
       slug: categoryName.trim().toLowerCase().split(" ").join("-"),
+      icon,
     };
 
     await setDoc(newDocRef, categoryData);

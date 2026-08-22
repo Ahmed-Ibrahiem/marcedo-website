@@ -1,6 +1,7 @@
 import React, { useState, memo } from "react";
 import { motion } from "framer-motion";
 import ProductCard from "../../product/product-item/ProductCard";
+import { useNavigate } from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -24,6 +25,8 @@ const cardVariants = {
 };
 
 const BestSeller = ({ bestSellerProducts }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="container my-15 ">
       {bestSellerProducts?.length > 0 && (
@@ -55,7 +58,7 @@ const BestSeller = ({ bestSellerProducts }) => {
               );
             })}
           </motion.div>
-          <button className="px-5 py-2.5 font-semibold text-white bg-orange! mx-auto my-10 border-orange border-2 hover:text-orange hover:bg-transparent! rounded-sm">
+          <button onClick={()=> navigate("/shop/electronics")} className="px-5 py-2.5 font-semibold text-white bg-orange! mx-auto my-10 border-orange border-2 hover:text-orange hover:bg-transparent! rounded-sm">
             See All Products
           </button>
         </div>

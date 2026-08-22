@@ -149,7 +149,7 @@ export const Collection = () => {
 
   return (
     <>
-      <div className="collections-area my-20 mb-50">
+      <div className="collections-area my-20 mb-65">
         <div className="container">
           <motion.h1
             className="text-3xl text-black-lite font-semibold mb-3.5 "
@@ -186,9 +186,12 @@ export const Collection = () => {
           >
             {collections.map((item, index) => (
               <motion.div
-                initial={{ opacity: index === 0 ? 0 : 1 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ amount: 0.4, once: true }}
+                initial={{
+                  opacity: index === 0 ? 0 : 1,
+                  y: index === 0 ? 30 : 0,
+                }}
+                whileInView={{ opacity: 1 , y: 0}}
+                viewport={{ amount: 0.5, once: true }}
                 className="card sticky top-10 "
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}

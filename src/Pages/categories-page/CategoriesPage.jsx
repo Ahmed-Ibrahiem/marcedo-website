@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import Our_banner from "../../Components/ui/our-banner/Our_banner";
 import { Link, useParams } from "react-router-dom";
 import { getCategoryBySlug } from "../../services/CategoriesServices";
@@ -16,7 +16,9 @@ import { useCategoriesContext } from "./context/CategoriesContext";
 const CategoriesPage = () => {
   const { isLoading, isError, categoriesPageInfo } = useCategoriesContext();
 
-  
+  useLayoutEffect(() => {
+    window.scrollTo({top: 0});
+  }, []);
 
   return (
     <>

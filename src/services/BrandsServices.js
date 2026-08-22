@@ -1,4 +1,12 @@
-import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  query,
+  setDoc,
+  where,
+} from "firebase/firestore";
 import { db } from "./firestoreConfig";
 
 export const getBrandName = async (pro_id) => {
@@ -39,4 +47,14 @@ export const getBrandNameByBrandId = async (brand_id) => {
 
   const brandSnap = await getDoc(docRef);
   return brandSnap.data().name;
+};
+
+export const getBrandNameBySlug = async (slug) => {
+  const brandSnap = await getDocs(
+    query(collection(db, "brands"), where("slug", "==", slug)),
+  );
+
+  if (brandSnap.empty) return null;
+
+  return brandSnap.docs[0].data();
 };

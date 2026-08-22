@@ -28,6 +28,8 @@ const NewCategoryPopup = ({ setOpenCategoryPopup, setAllCategories }) => {
   const [loading, setLoading] = useState(false);
   const [confirmAdded, setConfirmAdded] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [iconFile, setIconFile] = useState(null);
+  const [iconWarning, setIconWarning] = useState(false);
 
   useEffect(() => {
     if (categoryType === "main") {
@@ -61,6 +63,8 @@ const NewCategoryPopup = ({ setOpenCategoryPopup, setAllCategories }) => {
     setCategNameWarning(false);
     setIsAlreadyExist(false);
     setParentWarning(false);
+    setIconFile(null);
+    setIconWarning(false);
   };
 
   const handleAddCategory = async () => {
@@ -73,13 +77,18 @@ const NewCategoryPopup = ({ setOpenCategoryPopup, setAllCategories }) => {
       return;
     }
 
+    if (!iconFile) {
+      setIconWarning(true);
+      return;
+    }
+
     setLoading(true);
     try {
       const parentId = selectedLevelTwo
         ? selectedLevelTwo?.id
         : selectedLevelOne?.id;
 
-      const category = await addNewCategory(categoryName, parentId);
+      const category = await addNewCategory(categoryName, parentId, iconFile);
 
       if (!category) {
         setIsAlreadyExist(true);
@@ -125,14 +134,42 @@ const NewCategoryPopup = ({ setOpenCategoryPopup, setAllCategories }) => {
           </button>
         </div>
 
-        {/* Tip */}
-        <div className="w-full flex-start gap-1.5 p-5 rounded-sm bg-blue-100 border border-blue-400 mt-5 text-blue-600">
-          <FiInfo />
-          <p className=" text-sm">
-            <strong className="text-[16px]!">Tip: </strong>
-            You can create main category or sub category under existing
-            categories.
-          </p>
+        {/* Icon */}
+        <div className={`${boxStyle} relative mt-5`}>
+          <label className={labelStyle}>Category Icon</label>
+          <div className="flex-start gap-3">
+            {/* Preview */}
+            {iconFile && (
+              <div className="w-16 h-16 rounded-sm border border-border overflow-hidden flex-center">
+                <img
+                  src={URL.createObjectURL(iconFile)}
+                  alt="icon preview"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <label
+              htmlFor="category-icon"
+              className="cursor-pointer border border-dashed border-orange p-3 rounded-sm text-xs text-orange font-semibold hover:bg-orange-lite"
+            >
+              {iconFile ? "Change Icon" : "Upload Icon"}
+              <input
+                id="category-icon"
+                type="file"
+                accept="image/*"
+                hidden
+                onChange={(e) => {
+                  const file = e.target.files[0];
+                  if (file) setIconFile(file);
+                }}
+              />
+            </label>
+          </div>
+          {iconWarning && (
+            <span className="text-red-500 absolute -bottom-5 text-xs font-semibold">
+              Category Icon Is Required
+            </span>
+          )}
         </div>
 
         {/* Category inputs */}

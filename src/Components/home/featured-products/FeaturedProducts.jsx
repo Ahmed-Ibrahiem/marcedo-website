@@ -10,7 +10,7 @@ const FeaturedProducts = ({ bestSellerProducts }) => {
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1, transition: { delay: 0.2 } }}
       viewport={{ amount: 0.2, once: true }}
-      className="mt-12.5 w-full container feature_Product"
+      className=" w-full container feature_Product"
     >
       <div className="flex items-center flex-col! lg:flex-row! w-full gap-27.5 py-8.75 px-6.25 border-2 border-border rounded-2xl overflow-hidden">
         <motion.div

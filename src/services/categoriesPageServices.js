@@ -8,8 +8,13 @@ import {
   where,
 } from "firebase/firestore";
 import { getCategoryBySlug } from "./CategoriesServices";
-import { getProductsByCategories } from "./ProductsServices";
+import {
+  getProductsByBrand,
+  getProductsByCategories,
+  getProductsByCategoryOrBrandId,
+} from "./ProductsServices";
 import { db } from "./firestoreConfig";
+import { getBrandNameBySlug } from "./BrandsServices";
 
 // Create function to chunk the products to the maximium limit of query number (becouse in operator has max limit "30")
 const chunkArray = (array, size) => {
@@ -24,12 +29,24 @@ const chunkArray = (array, size) => {
 
 export const getCategoriesPageInfo = async (slug) => {
   const category = await getCategoryBySlug(slug);
-  if (!category) return null;
+  const brand = await getBrandNameBySlug(slug);
+
+  if (!category && !brand) return null;
 
   /* ===============================
   Get Products Depend On Category Id
   ================================== */
-  const products = await getProductsByCategories(category.id);
+  let products;
+
+  const categProducts = await getProductsByCategories(category?.id);
+
+  if (categProducts.length === 0) {
+    const brandProducts = await getProductsByBrand(brand?.id);
+    products = brandProducts;
+  } else {
+    products = categProducts;
+  }
+
   if (products.length === 0) return null;
 
   /* ==============================================
@@ -202,16 +219,15 @@ export const getFilterProducts = async (
 
   // If no products after stocks filtered return
   if (!stocksFiltered.length) return [];
-  
+
   // get the products depends of brands array
   const brandsFiltered = stocksFiltered.filter((product) => {
     if (!activeFilter.brands?.length) return true;
-    
+
     if (activeFilter.brands.includes(product.brand_id)) return true;
     else return false;
   });
-  
-  
+
   // If no products after Brand filtered return
   if (!brandsFiltered.length) return [];
 

@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { popular_categories } from "../../../assets/assets";
 import "./PopularCategories.css";
-import { use_notification_context } from "../../../Context/NotificationProvider";
 import { motion } from "framer-motion";
 
 const boxVeriants = {
@@ -31,14 +29,47 @@ const containerVeriants = {
   },
 };
 
+export const popular_categories = [
+  {
+    category_name: "T-shirt",
+    img: "/assets/images/baby-boy-dress-stroke-rounded 1.png",
+    category_page: "/shop/t-shirt" ,
+  },
+  {
+    category_name: "Apple",
+    img: "/assets/images/apple-logo.png",
+    category_page: "/shop/apple" ,
+  },
+  {
+    category_name: "Dress",
+    img: "/assets/images/dress.png",
+    category_page: "/shop/dresses",
+  },
+  {
+    category_name: "Smart Watch",
+    img: "/assets/images/wristwatch.png",
+    category_page: "/shop/smartwatch" ,
+  },
+  {
+    category_name: "Parfum",
+    img: "/assets/images/perfume.png",
+    category_page: "/shop/parfum",
+  },
+  {
+    category_name: "Electronic",
+    img: "/assets/images/electronic.png",
+    category_page:"/shop/electronics" ,
+  },
+];
+
 const PopularCategories = () => {
-  const { add_message } = use_notification_context();
+  
   return (
     <section className="popular_categorais">
       <div className="container">
         <motion.h3
           initial={{ y: -30, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 , transition: {delay: 0.6} }}
+          whileInView={{ y: 0, opacity: 1, transition: { delay: 0.6 } }}
           viewport={{ amount: 0.9, once: true }}
         >
           Popular <span>Categories</span>
@@ -52,23 +83,8 @@ const PopularCategories = () => {
         >
           {popular_categories.map((category, index) => {
             return (
-              <motion.div
-                variants={boxVeriants}
-                onClick={() => {
-                  if (index != 2)
-                    add_message({
-                      title:
-                        "This Page Will Coming Soon , You Can Visit This Page",
-                      link: {
-                        url: "/categories/dresses",
-                        name: "Dresses Page",
-                      },
-                    });
-                }}
-                key={index}
-                className="box"
-              >
-                <Link to={index == 2 && "/categories/dresses"}>
+              <motion.div variants={boxVeriants} key={index} className="box">
+                <Link to={category.category_page}>
                   <div className="box-img">
                     <img src={category.img} alt="" loading="lazy" />
                   </div>

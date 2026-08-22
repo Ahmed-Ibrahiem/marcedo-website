@@ -1,8 +1,40 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { popular_categories } from "../../../../assets/assets";
 import { FaAngleUp } from "react-icons/fa6";
 import React, { memo } from "react";
+
+export const popular_categories = [
+  {
+    category_name: "T-shirt",
+    img: "/assets/images/baby-boy-dress-stroke-rounded 1.png",
+    category_page: "/shop/t-shirt",
+  },
+  {
+    category_name: "Apple",
+    img: "/assets/images/apple-logo.png",
+    category_page: "/shop/apple",
+  },
+  {
+    category_name: "Dress",
+    img: "/assets/images/dress.png",
+    category_page: "/shop/dresses",
+  },
+  {
+    category_name: "Wristwatch",
+    img: "/assets/images/wristwatch.png",
+    category_page: "/shop/wristwatch",
+  },
+  {
+    category_name: "Parfum",
+    img: "/assets/images/perfume.png",
+    category_page: "/shop/parfum",
+  },
+  {
+    category_name: "Electronic",
+    img: "/assets/images/electronic.png",
+    category_page: "/shop/electronics",
+  },
+];
 
 const CategoriesSeciton = () => {
   const [is_menu_open, set_is_menu_open] = useState(false);

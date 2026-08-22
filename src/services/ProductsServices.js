@@ -93,3 +93,29 @@ export const getProductsByCategories = async (category_id) => {
 
   return [...snapshot.docs.map((doc) => doc.data())];
 };
+
+export const getProductsByCategoryOrBrandId = async (id) => {
+  const prodColl = collection(db, "products");
+
+  const [categQuery, brandQuery] = await Promise.all([
+    getDocs(query(prodColl, where("category_ids", "array-contains", id))),
+    getDocs(query(prodColl, where("brand_id", "==", id))),
+  ]);
+
+  console.log(categQuery.docs, brandQuery.docs);
+
+  const productMap = new Map();
+
+  categQuery.docs.forEach((doc) => productMap.set(doc.id, doc.data()));
+  brandQuery.docs.forEach((doc) => productMap.set(doc.id, doc.data()));
+
+  return [...productMap.values()];
+};
+
+export const getProductsByBrand = async (id) => {
+  const prodColl = collection(db, "products");
+
+  const prodSnap = await getDocs(query(prodColl, where("brand_id", "==", id)));
+
+  return [...prodSnap.docs.map((doc) => doc.data())];
+};
