@@ -30,7 +30,7 @@ const FavoriteProvider = ({ children }) => {
     if (!item) {
       addToFavorites(data);
       toast(
-        <Success_Toast message={"The product has been added to wishlist شيسبشسيبشسيبسشيبشسسشيبشسيبشسيبشسيبشسيبشسيبشسيبشسيبشسيبشسيب"} />,
+        <Success_Toast message={"The product has been added to wishlist "} />,
       );
     }
     // Check if the product id is includes in favoriteItem menu then remove his id from favoriteItem menu

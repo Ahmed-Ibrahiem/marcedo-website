@@ -12,7 +12,7 @@ const status = [
 
 const stocks = [
   { name: "In Stock", id: "in_stock" },
-  { name: "Out Stock", id: "out_of_stock" },
+  { name: "Out Stock", id: "out_stock" },
 ];
 
 const sortList = [

@@ -89,6 +89,7 @@ const ProductsAdmin = () => {
 
     setSelectedProductsIds([]);
     getProducts();
+    console.log(filterOptions)
   }, [filterOptions]);
 
   useEffect(() => {
