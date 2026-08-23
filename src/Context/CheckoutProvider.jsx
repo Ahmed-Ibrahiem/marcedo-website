@@ -79,8 +79,7 @@ const checkout_context = createContext(null);
  **/
 const Checkout_provider = ({ children }) => {
   const [suggestions, set_suggestinos] = useState([]);
-  const { cartItemsData, SubtotalItemsPrice, clearCartItems } =
-    useCartContext();
+  const { cartItemsData, SubtotalItemsPrice } = useCartContext();
   const { user } = use_auth_context();
   const navigate = useNavigate();
 
@@ -209,10 +208,8 @@ const Checkout_provider = ({ children }) => {
     try {
       const orderId = await addNewOrder(order, user);
 
-      payment_form.reset();
-      clearCartItems();
-
       navigate(`/order-success?orderId=${orderId}`);
+      payment_form.reset();
     } catch (error) {
       console.error("Checkout Errors: ", error);
     }

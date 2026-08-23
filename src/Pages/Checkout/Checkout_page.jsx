@@ -19,7 +19,7 @@ const Checkout_page = () => {
     if (!Object.keys(cartItemsData).length) {
       navigate("/");
     }
-  }, [navigate , cartItemsData]);
+  }, [navigate, cartItemsData]);
 
   if (Object.keys(cartItemsData).length) {
     return (

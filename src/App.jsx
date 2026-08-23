@@ -26,6 +26,7 @@ import { use_auth_context } from "./Context/AuthProvider.jsx";
 import LoadingScreen from "./Components/ui/Loading/LoadingScreen.jsx";
 import UserProfilePopup from "./Components/layout/user-profile/UserProfilePopup.jsx";
 import CategoriesProvider from "./Pages/categories-page/context/CategoriesContext.jsx";
+import Checkout_provider from "./Context/CheckoutProvider.jsx";
 
 const App = () => {
   const { is_loading } = use_auth_context();
@@ -86,7 +87,14 @@ const App = () => {
           />
           <Route path="customers" element={<Customers />} />
         </Route>
-        <Route path="/checkout" element={<Checkout_page />} />
+        <Route
+          path="/checkout"
+          element={
+            <Checkout_provider>
+              <Checkout_page />
+            </Checkout_provider>
+          }
+        />
       </Routes>
 
       <Scroll_button />

@@ -1,17 +1,16 @@
-import React from "react";
 import { use_checkout_context } from "../../../Context/CheckoutProvider";
 
 const Pay_now_btn = () => {
   const {
     payment_form: {
-      formState: { isValid },
+      formState: { isValid, isSubmitting },
     },
   } = use_checkout_context();
 
   return (
     <button
       type="submit"
-      disabled={!isValid}
+      disabled={!isValid || isSubmitting}
       style={
         isValid
           ? { color: "var(--white-color)", background: "var(--blue-color)" }
@@ -23,7 +22,7 @@ const Pay_now_btn = () => {
       }
       className="pay_now"
     >
-      Pay Now
+      {isSubmitting ? "loading.." : " Pay Now"}
     </button>
   );
 };
