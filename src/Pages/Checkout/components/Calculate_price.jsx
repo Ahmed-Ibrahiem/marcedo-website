@@ -19,7 +19,7 @@ const Calculate_price = () => {
   const [shopping, set_shopping] = useState(defaultShopping);
 
   // Get payment form, address suggestions, shopping_cost setter, total, and discount info from checkout context
-  const { payment_form, suggestions, set_shopping_cost, total, discount_info } =
+  const { payment_form, suggestions, set_shipping_cost, total, discount_info } =
     use_checkout_context();
 
   // Watch the address field in real-time using react-hook-form
@@ -33,19 +33,19 @@ const Calculate_price = () => {
     if (shopping_address.trim() == "") {
       // Empty address — reset shipping display and remove shopping_cost
       set_shopping(defaultShopping);
-      set_shopping_cost(0);
+      set_shipping_cost(0);
     } else if (
       // Address matches 15% shopping_cost zone OR is not in the suggestions list (unknown address)
       address_15_shopping_cost.includes(shopping_address.toLowerCase()) ||
       !suggestions.includes(shopping_address.toLowerCase())
     ) {
-      set_shopping_cost(15);
+      set_shipping_cost(15);
       set_shopping("$15");
     } else if (
       address_20_shopping_cost.includes(shopping_address.toLowerCase())
     ) {
       // Address matches 20% shopping_cost zone
-      set_shopping_cost(20);
+      set_shipping_cost(20);
       set_shopping("$20");
     } else {
       // Address is valid and not in any shopping_cost zone — free shipping

@@ -5,66 +5,66 @@ import * as yup from "yup";
 import axios from "axios";
 import { useCartContext } from "./CartMenuContext";
 import { useNavigate } from "react-router-dom";
+import { use_auth_context } from "./AuthProvider";
+import { addNewOrder } from "../services/orderServices";
 
 /**
  * Payment form validation schema using Yup
  * Defines validation rules for all payment and delivery related fields
  * Includes conditional validation based on delivery type and payment method
  **/
-const payment_schema = yup.object({
-  contact_way: yup
-    .string()
-    .required("This Field is Required")
-    .test(
-      "email-or-phone",
-      "Enter a valid email or Egyptian phone number",
-      (value) => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const phoneRegex = /^01[0-2,5]{1}[0-9]{8}$/;
-        return emailRegex.test(value) || phoneRegex.test(value);
-      },
-    ),
-  delivery_type: yup.string().required("Select Your Delivery Way"),
-  address_info: yup.object().when("delivery_type", {
-    is: "ship",
-    then: () =>
-      yup.object({
-        country: yup.string().required("Please Select Country"),
-        first_name: yup.string().required("This Field is Required"),
-        last_name: yup.string().required("This Field is Required"),
-        address: yup.string().required("This Field is Required"),
-        city: yup.string().required("This Field is Required"),
-        state: yup.string().required("This Field is Required"),
-        zip_code: yup
+const payment_schema = (isLoggedIn) =>
+  yup.object({
+    email: isLoggedIn
+      ? yup.string().optional()
+      : yup
           .string()
-          .matches(/^\d+$/, "Zip Code must contain numbers only")
-          .required("This Field is Required"),
-      }),
-    otherwise: () => yup.object().strip(),
-  }),
-  payment_type: yup.string().required("Please Select Payment Way"),
-  credit_info: yup.object().when("payment_type", {
-    is: "credit_card",
-    then: () =>
-      yup.object({
-        card_number: yup
-          .string()
-          .required("This Filed is Required")
-          .matches(/^\d{15,16}$/, "Card number must be 15 or 16 digits"),
-        expiration_data: yup
-          .date()
-          .required("This Filed is Required")
-          .typeError("This Field is required")
-          .min(new Date(), "Please Enter expiration date valid"),
-        cvv: yup
-          .string()
-          .required("This Filed is Required")
-          .matches(/^\d{3,4}$/, "CVV must be 3 or 4 digits"),
-        card_name: yup.string().required("This Field is Required"),
-      }),
-    otherwise: () => yup.object().strip(),
-  }),
-});
+          .required("This Field is Required")
+          .test("check is a valid email", "Enter a valid email", (value) => {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(value);
+          }),
+    delivery_type: yup.string().required("Select Your Delivery Way"),
+    address_info: yup.object().when("delivery_type", {
+      is: "ship",
+      then: () =>
+        yup.object({
+          country: yup.string().required("Please Select Country"),
+          first_name: yup.string().required("This Field is Required"),
+          last_name: yup.string().required("This Field is Required"),
+          address: yup.string().required("This Field is Required"),
+          city: yup.string().required("This Field is Required"),
+          state: yup.string().required("This Field is Required"),
+          zip_code: yup
+            .string()
+            .matches(/^\d+$/, "Zip Code must contain numbers only")
+            .required("This Field is Required"),
+        }),
+      otherwise: () => yup.object().strip(),
+    }),
+    payment_type: yup.string().required("Please Select Payment Way"),
+    credit_info: yup.object().when("payment_type", {
+      is: "credit_card",
+      then: () =>
+        yup.object({
+          card_number: yup
+            .string()
+            .required("This Filed is Required")
+            .matches(/^\d{15,16}$/, "Card number must be 15 or 16 digits"),
+          expiration_data: yup
+            .date()
+            .required("This Filed is Required")
+            .typeError("This Field is required")
+            .min(new Date(), "Please Enter expiration date valid"),
+          cvv: yup
+            .string()
+            .required("This Filed is Required")
+            .matches(/^\d{3,4}$/, "CVV must be 3 or 4 digits"),
+          card_name: yup.string().required("This Field is Required"),
+        }),
+      otherwise: () => yup.object().strip(),
+    }),
+  });
 
 /**
  * Context object for checkout operations
@@ -81,6 +81,7 @@ const Checkout_provider = ({ children }) => {
   const [suggestions, set_suggestinos] = useState([]);
   const { cartItemsData, SubtotalItemsPrice, clearCartItems } =
     useCartContext();
+  const { user } = use_auth_context();
   const navigate = useNavigate();
 
   /**
@@ -105,7 +106,7 @@ const Checkout_provider = ({ children }) => {
    **/
   const payment_form = useForm({
     defaultValues: {
-      contact_way: "",
+      email: "",
       email_me: false,
       delivery_type: "ship",
       address_info: {
@@ -127,10 +128,10 @@ const Checkout_provider = ({ children }) => {
       },
     },
     mode: "onChange",
-    resolver: yupResolver(payment_schema),
+    resolver: yupResolver(payment_schema(!!user)),
   });
 
-  const [shopping_cost, set_shopping_cost] = useState(0);
+  const [shipping_cost, set_shipping_cost] = useState(0);
   const [discount_info, set_discount_info] = useState(null);
 
   /**
@@ -139,27 +140,37 @@ const Checkout_provider = ({ children }) => {
    * Combines subtotal, shipping cost, and applies discount
    **/
   const total = useMemo(() => {
-    if (!discount_info) return SubtotalItemsPrice + shopping_cost;
-    const price = SubtotalItemsPrice + shopping_cost;
+    if (!discount_info) return SubtotalItemsPrice + shipping_cost;
+    const price = SubtotalItemsPrice + shipping_cost;
 
     if (discount_info.type == "percentage") {
       return price - price * (discount_info.value / 100);
     }
-  }, [shopping_cost, SubtotalItemsPrice, discount_info]);
+  }, [shipping_cost, SubtotalItemsPrice, discount_info]);
 
   /**
    * Form submission handler
    * Creates order object with all customer, delivery, payment, and pricing information
    * Saves order to localStorage, clears cart, and navigates to success page
    **/
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const order = {
-      id: crypto.randomUUID(),
-      items: [...Object.values(cartItemsData)],
-      customer: {
-        contact: data.contact_way,
-        wantsEmailUpdates: data.email_me,
-      },
+      user_id: user?.id ?? null,
+      guest_email: user ? null : data.email,
+
+      items: [
+        ...Object.values(cartItemsData).map((item) => ({
+          product_id: item.id,
+          name: item.name,
+          thumbnail: item.thumbnail,
+          quantity: item.quantity,
+          price: item.variants ? item.variants.price : item.current_price,
+          currency: item.variants ? item.variants.currency : item.currency,
+          attributes: item.variants ? item.variants.attributes : null,
+        })),
+      ],
+
+      wantsEmailUpdates: data.email_me,
 
       delivery: {
         type: data.delivery_type,
@@ -179,31 +190,32 @@ const Checkout_provider = ({ children }) => {
 
       payment: {
         method: data.payment_type,
-        details:
+        card_last_four:
           data.payment_type === "credit_card"
-            ? {
-                cardNumber: data.credit_info.card_number,
-                expirationDate: data.credit_info.expiration_data,
-                cardHolderName: data.credit_info.card_name,
-              }
+            ? data.credit_info.card_number.slice(-4)
             : null,
       },
 
       pricing: {
         dicount: discount_info ? discount_info : null,
-        shopping_cost,
+        shipping_cost,
         total,
-        SubtotalItemsPrice,
+        subtotal: SubtotalItemsPrice,
       },
 
       status: "pending",
-      createAt: new Date().toISOString(),
     };
 
-    localStorage.setItem("last_order", JSON.stringify(order));
-    payment_form.reset();
-    clearCartItems();
-    navigate("/order-success");
+    try {
+      const orderId = await addNewOrder(order, user);
+
+      payment_form.reset();
+      clearCartItems();
+
+      navigate(`/order-success?orderId=${orderId}`);
+    } catch (error) {
+      console.error("Checkout Errors: ", error);
+    }
   };
 
   /**
@@ -214,8 +226,8 @@ const Checkout_provider = ({ children }) => {
     payment_form,
     suggestions,
     onSubmit,
-    shopping_cost,
-    set_shopping_cost,
+    shipping_cost,
+    set_shipping_cost,
     discount_info,
     set_discount_info,
     total,

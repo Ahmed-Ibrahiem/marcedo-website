@@ -6,28 +6,24 @@ import Pay_now_btn from "./components/Pay_now_btn";
 import User_items_view from "./components/User_items_view";
 import { use_checkout_context } from "../../Context/CheckoutProvider";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useCartContext } from "../../Context/CartMenuContext";
+import { useEffect } from "react";
 
 const Checkout_page = () => {
   const { payment_form, onSubmit } = use_checkout_context();
-  const { control, handleSubmit } = payment_form;
+  const { handleSubmit } = payment_form;
   const navigate = useNavigate();
-  const [there_items, set_threre_items] = useState(false);
   const { cartItemsData } = useCartContext();
 
   useEffect(() => {
-    if (Object.keys(cartItemsData).length === 0) {
-      set_threre_items(false);
-      setTimeout(() => {
-        navigate("/");
-      }, 1000);
-    } else set_threre_items(true);
-  }, [navigate]);
+    if (!Object.keys(cartItemsData).length) {
+      navigate("/");
+    }
+  }, [navigate , cartItemsData]);
 
-  return (
-    <>
-      {there_items && (
+  if (Object.keys(cartItemsData).length) {
+    return (
+      <>
         <div className="checkout_area">
           <Checkout_header />
           <div className={`checkout_content`}>
@@ -48,11 +44,11 @@ const Checkout_page = () => {
           </div>
           {/* <DevTool control={control} /> */}
         </div>
-      )}
+      </>
+    );
+  }
 
-      {!there_items && <h1>Loading...</h1>}
-    </>
-  );
+  return null;
 };
 
 export default Checkout_page;
