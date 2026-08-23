@@ -82,7 +82,7 @@ This project focuses on building a scalable and maintainable E-Commerce platform
 - [x] Edit Product
 - [x] Product Variants Management
 - [x] Variant-Level Inventory
-- [ ] Orders Management
+- [ ] Orders Management (in progress)
 - [ ] Users Management
 - [ ] Reviews Management
 
