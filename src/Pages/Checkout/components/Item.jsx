@@ -20,13 +20,13 @@ const Item = ({ data }) => {
             })}
         </div>
       </div>
-      <p className="price">
-        $
+      <div className="price flex-start gap-1.5">
+        <p>{data.currency} </p>
         {Math.round(
           +data.quantity *
             (data.variants ? +data.variants.price : +data.current_price),
         )}
-      </p>
+      </div>
     </div>
   );
 };

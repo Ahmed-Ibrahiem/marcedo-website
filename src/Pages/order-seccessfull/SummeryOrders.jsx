@@ -18,7 +18,7 @@ const SummeryOrders = ({ order }) => {
       {/* Total Paid */}
       <div className={`${boxStyle}`}>
         <h3 className={`${h1Style}`}>Total Paid</h3>
-        <p className={`${pStyle}`}>{order.pricing.total}</p>
+        <p className={`${pStyle}`}>{order.pricing.total} EGP</p>
       </div>
       {/* Status */}
       <div className={`${boxStyle} md:border-none!`}>

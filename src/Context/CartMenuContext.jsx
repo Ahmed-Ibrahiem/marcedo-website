@@ -18,16 +18,34 @@ const CartMenuProvider = ({ children }) => {
   const [cartItemsData, setCartItemsData] = useState(initialValue);
   // Adjust the cartBtn Prograss
   const [isOpenCart, setIsOpenCart] = useState(false);
+  const [exchangeRate, setExchangeRate] = useState(1);
+
+  useEffect(() => {
+    const getRate = async () => {
+      try {
+        const res = await fetch(
+          "https://api.exchangerate-api.com/v4/latest/USD",
+        );
+        const data = await res.json();
+        setExchangeRate(data.rates.EGP);
+      } catch {
+        setExchangeRate(49.5); // fallback rate
+      }
+    };
+    getRate();
+  }, []);
+
   const SubtotalItemsPrice = useMemo(() => {
     let totalPrice = 0;
     Object.values(cartItemsData).forEach((item) => {
-      totalPrice +=
-        item.quantity *
-        (item.variants ? item.variants.price : item.current_price);
+      const price = item.variants ? item.variants.price : item.current_price;
+      const currency = item.variants ? item.variants.currency : item.currency;
+      const priceInEGP = currency === "USD" ? price * exchangeRate : price;
+      totalPrice += item.quantity * priceInEGP;
     });
 
     return totalPrice;
-  }, [cartItemsData]);
+  }, [cartItemsData, exchangeRate]);
 
   // Create Function to add the number of items
   const addItem = (data, count = 1) => {

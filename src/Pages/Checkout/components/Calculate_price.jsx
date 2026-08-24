@@ -77,7 +77,7 @@ const Calculate_price = () => {
       {/* Total row — final price after applying shopping_cost and discount */}
       <div className={style.total}>
         <p>Total</p>
-        <span>USD ${total}</span>
+        <span>EGP ${total}</span>
       </div>
     </div>
   );

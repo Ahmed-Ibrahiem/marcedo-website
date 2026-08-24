@@ -28,26 +28,19 @@ const ItemOfCart = ({ item_data }) => {
         {/* Item Variants */}
         <div className="text-xs font-semibold flex-start-col gap-1.5">
           {item_data.variants &&
-            Object.entries(item_data.variants.attributes).map(
-              ([key, value], index) => {
-                return (
-                  <div key={index}>
-                    <span>{key}</span>: <span>{value}</span>
-                  </div>
-                );
-              },
-            )}
+            Object.values(item_data.variants.attributes).join(" - ")
+            }
         </div>
 
         {/* item price & actions */}
-        <div className="flex-start gap-5">
+        <div className="flex-start-col gap-2.5">
           {/* item price */}
-          <div className="text-orange font-semibold">
+          <div className="text-orange font-semibold flex-start gap-1">
             {item_data.quantity} x{" "}
             {+item_data.variants
               ? item_data.variants.price
-              : item_data.current_price}
-            $
+              : item_data.current_price} {" "}
+            {item_data.currency}
           </div>
           {/* item Actions */}
           <div className="flex-center gap-1.5">
