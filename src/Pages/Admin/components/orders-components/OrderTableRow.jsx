@@ -81,7 +81,7 @@ const OrderTableRow = ({ order }) => {
       <td className="pr-7.5">
         <div className="w-full flex justify-end">
           <Link
-            to={`/order-details/${order.id}`}
+            to={`/admin/orders/order/${order.id}`}
             className="w-8 h-8 block rounded-sm border border-border flex-center shadow-sm text-lg text-gray! hover:text-black!"
           >
             <FaRegEye />

@@ -27,6 +27,7 @@ import LoadingScreen from "./Components/ui/Loading/LoadingScreen.jsx";
 import UserProfilePopup from "./Components/layout/user-profile/UserProfilePopup.jsx";
 import CategoriesProvider from "./Pages/categories-page/context/CategoriesContext.jsx";
 import Checkout_provider from "./Context/CheckoutProvider.jsx";
+import OrderDetails from "./Pages/Admin/OrderDetails.jsx";
 
 const App = () => {
   const { is_loading } = use_auth_context();
@@ -78,6 +79,7 @@ const App = () => {
 
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="orders" element={<Orders />} />
           <Route path="products" element={<ProductsAdmin />} />
           <Route path="products/add_new_product" element={<NewProductForm />} />
@@ -86,6 +88,7 @@ const App = () => {
             element={<NewProductForm />}
           />
           <Route path="customers" element={<Customers />} />
+          <Route path="orders/order/:orderId" element={<OrderDetails />} />
         </Route>
         <Route
           path="/checkout"

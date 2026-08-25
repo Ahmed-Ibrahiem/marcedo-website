@@ -1,28 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Auth_menu_btn from "../../ui/auth-menu-btn/Auth_menu_btn";
 import CartAndFavoriteBtns from "../../ui/cart-and-fevorite-btns/CartAndFavoriteBtns";
-import React, { memo } from "react";
-
+import React from "react";
 const nav_bar_data = [
   {
     title: "Home",
-    url: "/home",
+    url: ["/home" , "/product_detials"],
   },
   {
     title: "Shop",
-    url: "/shop",
+    url: ["/shop", "/categories"],
   },
   {
     title: "Contact",
-    url: "/contact-us",
+    url: ["/contact-us"],
   },
   {
     title: "About",
-    url: "/about-us",
+    url: ["/about-us"],
   },
 ];
 
 const ResNavMenu = ({ isresNavMenuActive, menu, setMenu }) => {
+  const location = useLocation();
+
+  const isActive = (paths) =>
+    paths.some((path) => location.pathname.startsWith(path));
+
   return (
     <div
       className={`absolute top-[calc(100%+5px)] left-0 bg-white w-full flex-start-col gap-5 z-15 h-0 overflow-hidden lg:hidden! ${
@@ -40,8 +44,8 @@ const ResNavMenu = ({ isresNavMenuActive, menu, setMenu }) => {
           return (
             <li key={index} onClick={() => setMenu(m.title)} className="w-full">
               <Link
-                className={`w-full! p-1 block hover:bg-orange-lite text-sm ${m.title === menu ? "text-orange! font-bold" : ""}`}
-                to={m.url}
+                className={`w-full! p-1 block hover:bg-orange-lite text-sm ${isActive(m.url) ? "text-orange! font-bold" : ""}`}
+                to={m.url[0]}
               >
                 {m.title}
               </Link>

@@ -1,35 +1,39 @@
-import { Link } from "react-router-dom";
-import React, { useState , memo } from "react";
+import { Link, useLoaderData, useLocation } from "react-router-dom";
+import React, { useState, memo } from "react";
 
 const nav_bar_data = [
   {
     title: "Home",
-    url: "/home",
+    url: ["/home" , "/product_detials"],
   },
   {
     title: "Shop",
-    url: "/shop",
+    url: ["/shop", "/categories"],
   },
   {
     title: "Contact",
-    url: "/contact-us",
+    url: ["/contact-us"],
   },
   {
     title: "About",
-    url: "/about-us",
+    url: ["/about-us"],
   },
 ];
 
-const NavbarMenu = ({ active_class, menu, setMenu }) => {
+const NavbarMenu = () => {
+  const location = useLocation();
+
+  const isActive = (paths) =>
+    paths.some((path) => location.pathname.startsWith(path));
+
   return (
     <ul className="flex-start gap-5 hidden! lg:flex!">
       {nav_bar_data.map((data, index) => {
         return (
           <Link
-            to={data.url}
+            to={data.url[0]}
             key={index}
-            className={menu == data.title ? "text-orange! font-bold" : ""}
-            onClick={() => setMenu(data.title)}
+            className={isActive(data.url) ? "text-orange! font-bold" : ""}
           >
             {data.title}
           </Link>

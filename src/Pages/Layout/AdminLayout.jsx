@@ -8,8 +8,6 @@ import { use_auth_context } from "../../Context/AuthProvider";
 import { redirect } from "react-router-dom";
 
 const AdminLayout = () => {
-  const location = useLocation();
-  const currentPage = location.pathname;
 
   const { user } = use_auth_context();
   const navigate = useNavigate();
@@ -23,7 +21,7 @@ const AdminLayout = () => {
       <div className="admin-dashboard bg-[#f5f7f9] flex flex-col min-h-screen">
         <AdminHeader />
         <main className="lg:grid xl:grid-cols-[200px_1fr] flex-1 ">
-          <AdminSidebar currentPage={currentPage} />
+          <AdminSidebar  />
           <section className="p-2.5 ">
             <ProductsTableControl>
               <Outlet />

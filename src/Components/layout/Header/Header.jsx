@@ -14,8 +14,7 @@ import { FaBars } from "react-icons/fa";
 const Header = ({ setIsSearchOverlayOpen, isSticky }) => {
   // Controls whether the responsive (mobile) nav menu is open
   const [isResNavActive, setIsResNavActive] = useState(false);
-  const [search_content, setSearch_content] = useState("");
-  const [menu, setMenu] = useState("Home");
+  const search_content = useRef("");
 
   return (
     <>
@@ -31,7 +30,7 @@ const Header = ({ setIsSearchOverlayOpen, isSticky }) => {
             <Logo />
 
             {/* Desktop navigation menu */}
-            <NavbarMenu menu={menu} setMenu={setMenu} />
+            <NavbarMenu />
 
             {/* Search bar with category filter */}
             <div className="search_part">
@@ -41,7 +40,7 @@ const Header = ({ setIsSearchOverlayOpen, isSticky }) => {
                 onClick={() => setIsSearchOverlayOpen((prev) => !prev)}
                 type="text"
                 placeholder="Search Anything"
-                value={search_content}
+                value={search_content.current}
                 readOnly
               />
               <button
@@ -74,11 +73,7 @@ const Header = ({ setIsSearchOverlayOpen, isSticky }) => {
             </button>
 
             {/* Responsive nav menu for mobile screens */}
-            <ResNavMenu
-              menu={menu}
-              setMenu={setMenu}
-              isresNavMenuActive={isResNavActive}
-            />
+            <ResNavMenu isresNavMenuActive={isResNavActive} />
           </div>
         </motion.div>
       </header>
