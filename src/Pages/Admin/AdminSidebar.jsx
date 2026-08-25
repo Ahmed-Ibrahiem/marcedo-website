@@ -21,15 +21,15 @@ const AdminSidebar = ({ currentPage }) => {
       ],
       icon: <HiOutlineCube className="text-xl" />,
     },
+    {
+      title: "orders",
+      url: ["/admin/orders"],
+      icon: <MdOutlineShoppingCart className="text-xl" />,
+    },
     // {
     //   title: "customers",
     //   url: ["/admin/customers"],
     //   icon: <FaRegUser className="text-xl" />,
-    // },
-    // {
-    //   title: "orders",
-    //   url: ["/admin/orders"],
-    //   icon: <MdOutlineShoppingCart className="text-xl" />,
     // },
   ];
   return (

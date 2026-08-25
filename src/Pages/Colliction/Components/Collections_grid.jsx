@@ -112,14 +112,13 @@ export const Collections_grid = () => {
                       <Skeleton height="100%" width="100%" />
                     </div>
                   )}
-                  <div>
+                  <div className="flex-center">
                     <img
                       loading="lazy"
                       className="group-hover/card:scale-115"
                       onLoad={() => setLoaded(true)}
                       src={data.icon}
                       alt={`This Image Of ${data.name}`}
-                      loading="lazy"
                       style={{ opacity: loaded ? 1 : 0 }}
                     />
                   </div>

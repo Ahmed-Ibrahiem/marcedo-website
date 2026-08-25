@@ -1,8 +1,4 @@
-import ARB_flag from "/assets/images/egypt.png";
-import amr_flag from "/assets/images/america.png";
-import fra_flag from "/assets/images/france.png";
 import logo_img from "/assets/images/Group 2.png";
-import user_img from "/assets/images/account.png";
 import hero_single1_img from "/assets/images/hero_single1_img.png";
 import hero_single2_img from "/assets/images/hero_single2_img.png";
 import hero_single3_img from "/assets/images/hero_single3_img.png";
@@ -20,27 +16,9 @@ import sport_collectoin from "/assets/images/sport.png";
 import t_shirt_collection from "/assets/images/t-shirt.png";
 import blazer_collection from "/assets/images/blazer.png";
 import featur_product from "/assets/images/feature_product_image.png";
-import salling_user1 from "/assets/users/salling_user1.png";
-import display_2 from "/assets/images/display_2.png";
 import display_4 from "/assets/images/display_4.png";
 import display_6 from "/assets/images/display_6.png";
 import display_8 from "/assets/images/display_8.png";
-
-export const countries = ["EGP", "AMR", "FRE"];
-export const languages = [
-  {
-    language_flag: ARB_flag,
-    language_name: "ARB",
-  },
-  {
-    language_flag: amr_flag,
-    language_name: "AMR",
-  },
-  {
-    language_flag: fra_flag,
-    language_name: "FRE",
-  },
-];
 
 export const display_image = [
   {
@@ -59,10 +37,6 @@ export const display_image = [
 
 export const assets = {
   logo_img,
-  ARB_flag,
-  amr_flag,
-  fra_flag,
-  user_img,
   iphone_14,
   iphone_14_pro,
   iphone_15,
@@ -76,18 +50,9 @@ export const assets = {
   t_shirt_collection,
   blazer_collection,
   featur_product,
-  salling_user1,
+  emptyBox:
+    "https://res.cloudinary.com/dsqaber42/image/upload/v1787694240/22dba3b5-f90e-41d3-affd-d7e08864f82f_mlfuho.png",
 };
-
-export const dresses_brands = [
-  "Nike",
-  "Zara",
-  "H&M",
-  "Adidas",
-  "Tommy Hilfiger",
-  "Levi's",
-  "Uniqlo",
-];
 
 export const swiper_slider_info = [
   {

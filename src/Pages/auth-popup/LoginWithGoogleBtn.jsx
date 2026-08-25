@@ -4,11 +4,13 @@ import styles from "./Auth_popup.module.css";
 import { RiLoader4Line } from "react-icons/ri";
 import Form_errors_message from "../../Components/ui/Errors/Form_errors_message";
 import { use_auth_context } from "../../Context/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const LoginWithGoogleBtn = ({ formLoading, setFormLoading }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const { auth_open, set_auth_open } = use_auth_context();
+  const navigate = useNavigate();
 
   const handleClick = async () => {
     if (formLoading) return;
@@ -18,6 +20,7 @@ const LoginWithGoogleBtn = ({ formLoading, setFormLoading }) => {
     try {
       await loginWithGoogle();
       set_auth_open(false);
+      navigate("/");
     } catch (err) {
       // popup-closed-by-user is not error
       if (err.code !== "auth/popup-closed-by-user") {

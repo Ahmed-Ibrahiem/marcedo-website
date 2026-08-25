@@ -31,7 +31,7 @@ const DropDownList = ({
       onClick={() => setIsOpen((prev) => !prev)}
       ref={menuRef}
     >
-      <p>{currentSelect}</p>
+      <p className="capitalize">{currentSelect}</p>
       <FaAngleDown className={`${isOpen ? "-rotate-90!" : ""}`} />
       {isOpen && (
         <div className="options cursor-auto! h-25 max-h-25 overflow-y-auto fade-in-animate z-10 ">

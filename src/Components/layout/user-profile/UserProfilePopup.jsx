@@ -4,10 +4,12 @@ import { use_auth_context } from "../../../Context/AuthProvider";
 import { getUserById } from "../../../services/usersServices";
 import { FaRegUser, FaSignOutAlt } from "react-icons/fa";
 import { logOut } from "../../../services/authServices";
+import { useNavigate } from "react-router-dom";
 
 const UserProfilePopup = () => {
   const { profileOpen, setProfileOpen, set_auth_open, user } =
     use_auth_context();
+  const navigate = useNavigate();
 
   if (user)
     return (
@@ -49,6 +51,7 @@ const UserProfilePopup = () => {
               <button
                 onClick={() => {
                   logOut();
+                  navigate("/");
                 }}
                 type="button"
                 className="flex-start  text-gray gap-2.5  hover:bg-gray-light hover:text-orange p-2"

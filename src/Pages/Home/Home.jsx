@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import BestSeller from "../../Components/home/best-seller/BestSeller";
 import Brands from "../../Components/home/brands/Brands";
 import { Collection } from "../../Components/home/collection/Collection";
@@ -31,6 +31,10 @@ const Home = () => {
       }
     };
     fetchData();
+  }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (

@@ -236,13 +236,16 @@ const ProductCard = ({ product, cardHeight }) => {
               );
             })}
         </div>
-        <Link>
+        <Link to={`/product_detials/${product.slug}`}>
           {" "}
           <h2 className="text-sm hover:text-orange line-clamp-2 leading-6">
             {product.name}
           </h2>
         </Link>
-        <p className="text-sm font-semibold">${product.current_price}</p>
+        <div className="text-sm flex-start gap-1.5 font-semibold">
+          <p className="text-orange">${product.current_price}</p>{" "}
+          {product.currency}
+        </div>
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ const CartMenuProvider = ({ children }) => {
       totalPrice += item.quantity * priceInEGP;
     });
 
-    return totalPrice;
+    return totalPrice.toFixed(2);
   }, [cartItemsData, exchangeRate]);
 
   // Create Function to add the number of items

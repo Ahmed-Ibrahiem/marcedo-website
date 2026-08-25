@@ -48,7 +48,7 @@ const Auth_provider = ({ children }) => {
         try {
           if (currentUser) {
             const userData = await getUserById(currentUser.uid);
-
+            
             setUser(userData);
           } else {
             setUser(null);

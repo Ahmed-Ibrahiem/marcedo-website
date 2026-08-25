@@ -73,14 +73,14 @@ const Order_successfull = () => {
                   <div className="flex-start items-start! gap-2.5">
                     <FaLocationDot className="text-orange text-lg" />
                     <div>
-                      <p className="text-dark font-semibold">
+                      <p className="text-dark font-semibold text-start">
                         {order.delivery.address.firstName}{" "}
                         {order.delivery.address.lastName}
                       </p>
-                      <p className="text-gray">
+                      <p className="text-gray text-start">
                         {order.delivery.address.address}
                       </p>
-                      <p className="text-gray">
+                      <p className="text-gray text-start">
                         {order.delivery.address.city},{" "}
                         {order.delivery.address.country}
                       </p>

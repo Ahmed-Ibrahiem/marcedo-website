@@ -8,12 +8,14 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { signIn } from "../../services/authServices";
 import { use_auth_context } from "../../Context/AuthProvider";
 import { RiLoader4Line } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const SignInForm = ({ formLoading, setFormLoading }) => {
   const [show_password, set_show_password] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { getErrorMessage, set_auth_open, auth_open } = use_auth_context();
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const form = useForm({
     resolver: yupResolver(signInSchema),
@@ -39,6 +41,7 @@ const SignInForm = ({ formLoading, setFormLoading }) => {
     try {
       await signIn(email, password);
       set_auth_open(false);
+      navigate("/");
     } catch (error) {
       setError(getErrorMessage(error.code));
     } finally {

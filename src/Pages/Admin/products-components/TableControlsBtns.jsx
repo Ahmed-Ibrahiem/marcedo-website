@@ -1,7 +1,6 @@
 import React, { useState, memo, useMemo, useRef, useEffect } from "react";
 import { FaAngleDown, FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import useOutside_click from "../../../Hooks/Outside_click";
-import { getProductsWithPaginations } from "../../../services/ProductsDashboardServices";
 
 const TableControlsBtns = ({ filterProducts, setDisplayProducts }) => {
   const dorpDownListRef = useRef(null);

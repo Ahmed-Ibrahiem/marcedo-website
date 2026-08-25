@@ -12,7 +12,7 @@ const SummeryOrders = ({ order }) => {
       {/* Paymnet Method */}
       <div className={`${boxStyle} border-t-2 sm:border-t-0 md:border-r-2! `}>
         <h3 className={`${h1Style}`}>Payment Method</h3>
-        <p className={`${pStyle}`}>{order.payment.method}</p>
+        <p className={`${pStyle}`}>{order.payment.method.split("_").join(" ")}</p>
       </div>
 
       {/* Total Paid */}

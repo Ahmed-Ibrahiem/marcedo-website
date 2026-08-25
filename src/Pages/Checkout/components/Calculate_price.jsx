@@ -13,7 +13,7 @@ const Calculate_price = () => {
   const { cartItemsData, SubtotalItemsPrice } = useCartContext();
 
   // Default shipping label shown before the user enters an address
-  const defaultShopping = "enter your shopping address";
+  const defaultShopping = "enter your shipping address";
 
   // Local state to display the shipping cost label in the UI
   const [shopping, set_shopping] = useState(defaultShopping);

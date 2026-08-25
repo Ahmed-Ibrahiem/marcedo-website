@@ -139,11 +139,14 @@ const Checkout_provider = ({ children }) => {
    * Combines subtotal, shipping cost, and applies discount
    **/
   const total = useMemo(() => {
-    if (!discount_info) return SubtotalItemsPrice + shipping_cost;
+    if (!discount_info)
+      return (+SubtotalItemsPrice + +shipping_cost).toFixed(1);
+
     const price = SubtotalItemsPrice + shipping_cost;
 
     if (discount_info.type == "percentage") {
-      return price - price * (discount_info.value / 100);
+      const result = price - price * (discount_info.value / 100);
+      return result.toFixed(1);
     }
   }, [shipping_cost, SubtotalItemsPrice, discount_info]);
 
@@ -152,10 +155,17 @@ const Checkout_provider = ({ children }) => {
    * Creates order object with all customer, delivery, payment, and pricing information
    * Saves order to localStorage, clears cart, and navigates to success page
    **/
+
   const onSubmit = async (data) => {
     const order = {
-      user_id: user?.id ?? null,
-      guest_email: user ? null : data.email,
+      user: {
+        user_id: user?.id ?? null,
+        name: user
+          ? `${user.first_name} ${user.last_name}`
+          : data.email.split("@")[0],
+        user_email: user?.email ?? null,
+        guest_email: user ? null : data.email,
+      },
 
       items: [
         ...Object.values(cartItemsData).map((item) => ({
@@ -196,7 +206,7 @@ const Checkout_provider = ({ children }) => {
       },
 
       pricing: {
-        dicount: discount_info ? discount_info : null,
+        discount: discount_info ? discount_info : null,
         shipping_cost,
         total,
         subtotal: SubtotalItemsPrice,

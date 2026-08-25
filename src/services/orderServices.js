@@ -42,3 +42,11 @@ export const getOrdersByUserId = async (userId) => {
 
   return [...ordersSnap.docs.map((doc) => doc.data())];
 };
+
+export const getOrders = async (userId) => {
+  const ordersSnap = await getDocs(collection(db, "orders"));
+
+  if (ordersSnap.empty) return [];
+
+  return [...ordersSnap.docs.map((doc) => doc.data())];
+};
