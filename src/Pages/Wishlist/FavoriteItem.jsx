@@ -1,11 +1,9 @@
-import React from "react";
 import { IoTrashOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { useFavoriteContext } from "../../Context/favoriteMenuContext";
-import { useCartContext } from "../../Context/CartMenuContext";
 import { useQuickViewPopupContext } from "../../Context/QuickViewPopupsProvider";
-import { formate_date } from "../../Hooks/Format_date";
+import { formate_date } from "../../Utils/Format_date";
 
 const FavoriteItem = ({ productData }) => {
   const { setIsQuickViewOpen, setProductData } = useQuickViewPopupContext();

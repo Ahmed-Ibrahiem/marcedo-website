@@ -1,34 +1,11 @@
-import React from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { formateTimestampToDateAndTime } from "../../../../Utils/Format_date";
 
-const formatOrderDate = (timestamp) => {
-  if (!timestamp) {
-    return {
-      date: "",
-      time: "",
-    };
-  }
 
-  const date = new Date(timestamp.seconds * 1000);
-
-  return {
-    date: new Intl.DateTimeFormat("en-US", {
-      month: "short",
-      day: "2-digit",
-      year: "numeric",
-    }).format(date),
-
-    time: new Intl.DateTimeFormat("en-US", {
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true,
-    }).format(date),
-  };
-};
 
 const OrderTableRow = ({ order }) => {
-  const orderDate = formatOrderDate(order.created_at);
+  const orderDate = formateTimestampToDateAndTime(order.created_at);
 
   return (
     <tr key={order.id} className="text-xs border-b border-border">

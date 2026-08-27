@@ -3,6 +3,7 @@ import { FaCheckCircle, FaStar } from "react-icons/fa";
 import { BiLike, BiSolidLike } from "react-icons/bi";
 import { FaRegFlag, FaFlag } from "react-icons/fa6";
 import React from "react";
+import { formate_date } from "../../../Utils/Format_date";
 
 const ReviewBox = ({ review, style }) => {
   const [isReviewLike, setIsReviewLike] = useState(false);
@@ -41,7 +42,7 @@ const ReviewBox = ({ review, style }) => {
           </div>
         </div>
         {/* Review Date */}
-        <h4 className="text-gray">{review.created_at}</h4>
+        <h4 className="text-gray">{formate_date(review.created_at)}</h4>
 
         {/* Review Tags */}
         <div className="tags flex-start gap-2.5 flex-wrap">

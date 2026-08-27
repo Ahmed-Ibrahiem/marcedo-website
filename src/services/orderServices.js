@@ -6,6 +6,7 @@ import {
   query,
   serverTimestamp,
   setDoc,
+  updateDoc,
   where,
 } from "firebase/firestore";
 import { db } from "./firestoreConfig";
@@ -16,6 +17,9 @@ export const addNewOrder = async (data) => {
     ...data,
     created_at: serverTimestamp(),
     updated_at: serverTimestamp(),
+    timeline: {
+      pending: serverTimestamp(),
+    },
   };
 
   const docRef = doc(ordersColl);
@@ -49,4 +53,14 @@ export const getOrders = async (userId) => {
   if (ordersSnap.empty) return [];
 
   return [...ordersSnap.docs.map((doc) => doc.data())];
+};
+
+export const updateOrder = async (orderData) => {
+  const docRef = doc(db, "orders", orderData.id);
+
+  await updateDoc(docRef, orderData);
+
+  const orderSnap = await getDoc(docRef);
+
+  return orderSnap.data();
 };

@@ -169,7 +169,9 @@ const Checkout_provider = ({ children }) => {
 
       items: [
         ...Object.values(cartItemsData).map((item) => ({
+          variant_id: item.variants?.id ?? null,
           product_id: item.id,
+          sku: item.variants ? item.variants.sku : item.sku,
           name: item.name,
           thumbnail: item.thumbnail,
           quantity: item.quantity,
@@ -203,6 +205,8 @@ const Checkout_provider = ({ children }) => {
           data.payment_type === "credit_card"
             ? data.credit_info.card_number.slice(-4)
             : null,
+        paid:
+          data.payment_type === "credit_card" ? new Date().toISOString() : "--",
       },
 
       pricing: {

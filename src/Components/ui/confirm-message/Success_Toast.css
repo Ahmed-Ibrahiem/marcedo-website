@@ -35,4 +35,5 @@
 .Toastify__toast {
   padding: 0 !important;
   height: fit-content;
+  background: var(--orange-lite-color) !important;
 }
