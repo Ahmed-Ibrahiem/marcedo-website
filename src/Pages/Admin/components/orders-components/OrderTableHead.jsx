@@ -13,6 +13,10 @@ const statusList = [
     name: "Processing",
   },
   {
+    id: "shipping",
+    name: "Shipping",
+  },
+  {
     id: "delivered",
     name: "Delivered",
   },

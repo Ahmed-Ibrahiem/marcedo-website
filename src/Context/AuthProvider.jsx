@@ -1,9 +1,5 @@
-import { createContext, use, useContext, useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import axios from "axios";
-import { addNewUser, getUserById, getUsers } from "../services/usersServices";
+import { createContext,  useContext, useEffect, useState } from "react";
+import {  getUserById } from "../services/usersServices";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../services/firestoreConfig";
 

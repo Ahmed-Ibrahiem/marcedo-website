@@ -42,9 +42,7 @@ const OrdersTable = ({ orders }) => {
     setFilterOrders(filterFunction(orders, filterOptions, searchQuery));
   }, [orders, filterOptions, searchQuery]);
 
-  useEffect(() => {
-    setDisplayOrders(filterOrders);
-  }, [filterOrders]);
+
   return (
     <div className="w-full bg-white rounded-sm shadow-sm flex-start-col grow!">
       <OrderTableHead

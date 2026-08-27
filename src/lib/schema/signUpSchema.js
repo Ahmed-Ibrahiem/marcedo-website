@@ -1,6 +1,12 @@
 import * as yup from "yup";
 export const signUpSchema = yup.object({
-  email: yup.string().required("This Field Is Required").email("Invalid Email"),
+  email: yup
+    .string()
+    .required("This Field Is Required")
+    .test("valid-email", "Invalid Email", (value) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(value);
+    }),
   password: yup
     .string()
     .required("This Field Is Required")
