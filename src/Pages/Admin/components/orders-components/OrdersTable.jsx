@@ -5,32 +5,33 @@ import TableControlsBtns from "../../products-components/TableControlsBtns";
 import { assets } from "../../../../assets/assets";
 import { FaFilter } from "react-icons/fa6";
 
-const filterFunction = (orders, filterOptions) => {
-  if (!filterOptions.status && !filterOptions.payment) return orders;
-
-  let filterOrders = orders.filter((order) => {
-    if (filterOptions.status) {
-      if (filterOptions.status !== order.status) return false;
+const filterFunction = (orders, filterOptions, searchQuery) => {
+  return orders.filter((order) => {
+    // Search
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      const matchId = order.id.toLowerCase().includes(query);
+      const matchCustomer = order.user?.name?.toLowerCase().includes(query);
+      const matchEmail = (order.guest_email || order.user?.email)
+        ?.toLowerCase()
+        .includes(query);
+      if (!matchId && !matchCustomer && !matchEmail) return false;
     }
 
-    if (filterOptions.payment) {
-      if (order.payment.method === filterOptions.payment) {
-        return true;
-      } else {
-        return false;
-      }
-    }
+    // Filter
+    if (filterOptions.status && order.status !== filterOptions.status)
+      return false;
+    if (filterOptions.payment && order.payment.method !== filterOptions.payment)
+      return false;
 
     return true;
   });
-
-  return filterOrders;
 };
-
 
 const OrdersTable = ({ orders }) => {
   const [displayOrders, setDisplayOrders] = useState([]);
   const [filterOrders, setFilterOrders] = useState(orders);
+  const [searchQuery, setSearchQuery] = useState("");
   const defaultOptions = {
     status: null,
     payment: null,
@@ -38,17 +39,19 @@ const OrdersTable = ({ orders }) => {
   const [filterOptions, setFilterOptions] = useState(defaultOptions);
 
   useEffect(() => {
-    setFilterOrders(filterFunction(orders, filterOptions));
-  }, [orders, filterOptions]);
+    setFilterOrders(filterFunction(orders, filterOptions, searchQuery));
+  }, [orders, filterOptions, searchQuery]);
 
   useEffect(() => {
-  setDisplayOrders(filterOrders);
-}, [filterOrders]);
+    setDisplayOrders(filterOrders);
+  }, [filterOrders]);
   return (
     <div className="w-full bg-white rounded-sm shadow-sm flex-start-col grow!">
       <OrderTableHead
         setFilterOptions={setFilterOptions}
         filterOptions={filterOptions}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
       />
       {displayOrders.length > 0 ? (
         <OrdersGrid orders={displayOrders} />

@@ -38,7 +38,12 @@ const paymentMethods = [
   },
 ];
 
-const OrderTableHead = ({ setFilterOptions, filterOptions }) => {
+const OrderTableHead = ({
+  setFilterOptions,
+  filterOptions,
+  searchQuery,
+  setSearchQuery,
+}) => {
   return (
     <div className="p-2.5 w-full flex flex-col md:flex-row md:items-center md:justify-between gap-2.5">
       {/* Search Order Input */}
@@ -48,6 +53,8 @@ const OrderTableHead = ({ setFilterOptions, filterOptions }) => {
           type="text"
           placeholder="Search Order..."
           className="grow outline-none text-sm"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
 
